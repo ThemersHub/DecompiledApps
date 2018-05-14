@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/content" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingBottom="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/confirmation_greeting_section" />
+            <android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/confirmation_cards" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/photos_photobook_confirmation_divider" android:showDividers="middle">
+                    <include layout="@layout/book_confirmation_page_order_details_card" />
+                    <include layout="@layout/book_confirmation_page_shipment_info_card" />
+                    <include android:visibility="gone" layout="@layout/book_confirmation_page_estimated_delivery_card" />
+                    <include layout="@layout/book_confirmation_page_order_number_card" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/confirmation_help_section" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/scrolling_toolbar" />
+</FrameLayout>

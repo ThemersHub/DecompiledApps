@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/photos_photobook_buyflow_quantity_picker_divider" android:showDividers="end|middle">
+            <include layout="@layout/promotion_reminder_banner" />
+            <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:stretchColumns="*">
+                <TableRow android:paddingBottom="3.0dip">
+                    <TextView android:gravity="start" android:id="@id/photo_book_type" android:textDirection="locale" android:textAlignment="gravity" style="@style/quantum_text_subhead_black" />
+                    <TextView android:gravity="end" android:id="@id/base_price" android:textDirection="locale" android:textAlignment="gravity" style="@style/quantum_text_subhead_black" />
+                </TableRow>
+                <TableRow android:paddingBottom="3.0dip">
+                    <TextView android:gravity="start" android:id="@id/extra_pages_item" android:textDirection="locale" android:textAlignment="gravity" style="@style/quantum_text_menu_grey" />
+                    <TextView android:gravity="end" android:id="@id/additional_page_price" android:textDirection="locale" android:textAlignment="gravity" style="@style/quantum_text_menu_grey" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:gravity="start" android:text="@string/photos_photobook_buyflow_subtotal" android:textDirection="locale" android:textAlignment="gravity" style="@style/quantum_text_menu_grey" />
+                    <TextView android:gravity="end" android:id="@id/per_item_subtotal_price" android:textDirection="locale" android:textAlignment="gravity" style="@style/quantum_text_menu_grey" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout android:id="@id/quantity_table" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="0" android:paddingStart="16.0dip">
+                <TableRow>
+                    <TextView android:gravity="start|center" android:layout_height="fill_parent" android:text="@string/photos_photobook_buyflow_quantity" android:textDirection="locale" android:textAlignment="gravity" style="@style/quantum_text_subhead_black" />
+                    <FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <TextView android:textSize="15.0sp" android:textColor="@color/quantum_grey900" android:gravity="center" android:id="@id/quantity_selector_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fontFamily="roboto-regular" android:accessibilityTraversalBefore="@id/quantity_selector_remove" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+                            <ImageButton android:id="@id/quantity_selector_remove" android:background="@android:color/transparent" android:layout_width="55.0dip" android:layout_height="51.0dip" android:foreground="?selectableItemBackground" android:src="@drawable/quantum_ic_remove_circle_googblue_24" android:contentDescription="@string/photos_photobook_buyflow_quantity_picker_remove_content_description" />
+                            <ImageButton android:id="@id/quantity_selector_add" android:background="@android:color/transparent" android:layout_width="55.0dip" android:layout_height="51.0dip" android:foreground="?selectableItemBackground" android:src="@drawable/quantum_ic_add_circle_googblue_24" android:contentDescription="@string/photos_photobook_buyflow_quantity_picker_add_content_description" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </TableRow>
+            </TableLayout>
+            <android.support.design.widget.TextInputLayout android:id="@id/gift_message_container" android:paddingTop="@dimen/photos_photobook_buyflow_gift_message_empty_state_padding" android:paddingBottom="@dimen/photos_photobook_buyflow_gift_message_empty_state_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" app:hintEnabled="false" app:hintTextAppearance="@style/photos_photobook_gift_message_info" app:errorEnabled="false" app:counterEnabled="false" app:counterMaxLength="@integer/photos_photobook_buyflow_gift_message_char_limit" app:counterTextAppearance="@style/photos_photobook_gift_message_info">
+                <EditText android:theme="@style/photos_photobook_gift_message_input_bottom_line" android:textSize="@dimen/photos_photobook_buyflow_gift_message_empty_state_text_size" android:id="@id/gift_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/photos_photobook_buyflow_gift_message_empty_state_hint" android:maxLength="@integer/photos_photobook_buyflow_gift_message_char_limit" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="6.0dip" android:stretchColumns="*">
+            <TableRow>
+                <TextView android:textSize="18.0sp" android:gravity="start" android:text="@string/photos_photobook_buyflow_subtotal" android:textDirection="locale" android:textAlignment="gravity" style="@style/quantum_text_menu_grey" />
+                <TextView android:textSize="18.0sp" android:gravity="end" android:id="@id/subtotal_price" android:textDirection="locale" android:textAlignment="gravity" style="@style/quantum_text_menu_grey" />
+            </TableRow>
+        </TableLayout>
+        <TextView android:textColor="@color/quantum_black_hint_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/photos_photobook_buyflow_tax_and_shipping" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/quantum_text_caption_black" />
+        <FrameLayout android:id="@id/checkout_button" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="14.0dip" style="@style/photos_photobook_buyflow_checkout_button">
+            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Colored" android:gravity="center_vertical" android:layout_gravity="center" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photos_photobook_buyflow_checkout" android:drawablePadding="10.0dip" android:drawableStart="@drawable/quantum_ic_payment_white_24" />
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>

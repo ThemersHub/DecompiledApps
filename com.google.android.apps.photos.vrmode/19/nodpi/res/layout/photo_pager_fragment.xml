@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/photo_pager_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewStub android:layout_gravity="center" android:id="@id/photos_pager_tiled_image_stub" android:layout="@layout/photos_pager_tiled_image" android:inflatedId="@id/photos_pager_tiled_image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.apps.photos.pager.viewpager.PhotoViewPager android:id="@id/photo_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:layout_gravity="center" android:id="@id/photo_pager_empty_state_stub" android:layout="@layout/photo_pager_empty_state" android:inflatedId="@id/photo_pager_empty_state" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <FrameLayout android:id="@id/photo_transition_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/cast_video_controls_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:layout_gravity="top" android:id="@id/photos_pager_top_gradient" android:background="@drawable/top_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/top_gradient_height" />
+    <com.google.android.apps.photos.pager.TouchPassThroughToolbar android:layout_gravity="top" android:id="@id/toolbar" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="?attr/actionBarStyle">
+        <ViewStub android:layout_gravity="end|center|top" android:id="@id/photos_pending_save_button_stub" android:layout="@layout/photos_pending_save_button" android:inflatedId="@id/photos_pending_save_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <include layout="@layout/photos_pager_toolbartag_tag_view" />
+        <ViewStub android:layout_gravity="end|center|top" android:id="@id/photos_pager_autobackup_tag_view_stub" android:layout="@layout/photos_pager_autobackup_tag_view" android:inflatedId="@id/photos_pager_autobackup_tag_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ViewStub android:layout_gravity="end|center|top" android:id="@id/photos_pager_mv_tag_view_stub" android:layout="@layout/photos_pager_mv_tag_view" android:inflatedId="@id/photos_pager_mv_tag_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.google.android.apps.photos.pager.TouchPassThroughToolbar>
+    <ViewStub android:id="@id/tiered_backup_promo_stub" android:layout="@layout/tiered_backup_promo" android:layout_width="@dimen/photos_pager_autobackup_tiered_backup_promo_layout_width" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/photo_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/lens_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:layout_gravity="bottom|center" android:id="@id/suggested_action_view_stub" android:visibility="gone" android:layout="@layout/photos_suggestedactions_ui_chip_view" android:inflatedId="@id/suggested_action_inflated_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/suggested_actions_handler_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/cpe_crop_and_rotate_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/photos_photoeditor_crop_top_toolbar_height">
+        <ImageButton android:id="@id/cpe_aspect_ratio" android:src="@drawable/cpe_aspect_ratio" android:contentDescription="@string/photos_photoeditor_crop_a11y_aspect_ratio_menu" style="@style/Theme.CPE.CropImageButton" />
+        <com.google.android.apps.photos.photoeditor.crop.StraightenSliderView android:layout_gravity="center" android:id="@id/cpe_straighten_slider" android:paddingLeft="@dimen/photos_photoeditor_crop_straighten_slider_horizontal_padding" android:paddingTop="@dimen/photos_photoeditor_ui_toolbar_vertical_padding" android:paddingRight="@dimen/photos_photoeditor_crop_straighten_slider_horizontal_padding" android:paddingBottom="@dimen/photos_photoeditor_ui_toolbar_vertical_padding" android:clickable="true" android:layout_width="0.0dip" android:layout_height="@dimen/photos_photoeditor_crop_straighten_slider_height" android:layout_weight="1.0" android:contentDescription="@string/photos_photoeditor_commonui_a11y_image_tilt" android:paddingStart="@dimen/photos_photoeditor_crop_straighten_slider_horizontal_padding" android:paddingEnd="@dimen/photos_photoeditor_crop_straighten_slider_horizontal_padding" />
+        <ImageButton android:id="@id/cpe_rotate_90" android:src="@drawable/quantum_ic_rotate_90_degrees_ccw_white_24" android:contentDescription="@string/photos_photoeditor_crop_a11y_rotate" style="@style/Theme.CPE.CropImageButton" />
+    </LinearLayout>
+    <View style="@style/photos_photoeditor_commonui_toolbar_divider" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/cpe_crop_and_rotate_bottom_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/photos_photoeditor_crop_and_rotate_reset" android:text="@string/photos_photoeditor_crop_and_rotate_reset" android:layout_weight="1.0" style="@style/Theme.CPE.CropTextButton" />
+        <Button android:id="@id/cpe_save_button" android:text="@string/photos_photoeditor_crop_and_rotate_done" android:layout_weight="1.0" style="@style/Theme.CPE.CropTextButton" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/quantum_grey200" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="@dimen/photos_search_peoplelabeling_header_avatar_size" android:layout_height="@dimen/photos_search_peoplelabeling_header_avatar_size">
+            <ImageView android:id="@id/avatar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/photos_search_peoplelabeling_avatar_content_description" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/avatar_loading_spinner" android:visibility="gone" android:layout_width="@dimen/photos_search_peoplelabeling_header_avatar_progress_bar_size" android:layout_height="@dimen/photos_search_peoplelabeling_header_avatar_progress_bar_size" android:indeterminate="true" style="@style/Widget.Photos.ProgressBar.IndeterminateWhite" />
+        </FrameLayout>
+        <TextView android:textColor="@color/quantum_grey900" android:id="@id/photos_search_peoplelabeling_header_title" android:paddingTop="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/quantum_text_body_2_black" />
+        <TextView android:id="@id/photos_search_peoplelabeling_header_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/quantum_text_caption_black" />
+        <TextView android:id="@id/photos_search_peoplelabeling_header_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/quantum_text_caption_black" />
+    </LinearLayout>
+    <View android:id="@id/people_labeling_disable_header" android:background="@color/quantum_white_secondary_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

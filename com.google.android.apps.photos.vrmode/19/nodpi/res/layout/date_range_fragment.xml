@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip">
+        <TextView android:textSize="16.0sp" android:id="@id/feedback_question_text_view_date" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" style="@style/quantum_text_body_1_black" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginBottom="25.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:paddingRight="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_calendar_today_grey600_24" android:contentDescription="@string/photos_feedback_survey_missing_date_range_image" />
+            <android.support.design.widget.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:gravity="top" android:id="@id/date_picker_start_date" android:paddingRight="4.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/photos_feedback_survey_set_start_date" android:drawableRight="@drawable/quantum_ic_arrow_drop_down_grey600_24" android:inputType="date" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:paddingRight="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_calendar_today_grey600_24" android:contentDescription="@string/photos_feedback_survey_missing_date_range_image" />
+            <android.support.design.widget.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:id="@id/date_picker_end_date" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/photos_feedback_survey_set_end_date" android:drawableRight="@drawable/quantum_ic_arrow_drop_down_grey600_24" android:inputType="date" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/control_buttons" />
+</RelativeLayout>

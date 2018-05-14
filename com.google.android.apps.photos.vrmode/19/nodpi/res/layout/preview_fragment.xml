@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:paddingTop="?actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/book_page_list" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <android.support.design.widget.FloatingActionButton android:id="@id/next_step_fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_shopping_cart_white_24" android:contentDescription="@string/photos_photobook_preview_checkout_fab_content_description" android:layout_marginEnd="16.0dip" style="@style/photos_photobook_core_fab" />
+        <include layout="@layout/photos_emptystate_container" />
+    </FrameLayout>
+    <include layout="@layout/scrolling_toolbar" />
+    <View android:id="@id/accessibility_announcement_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</android.support.design.widget.CoordinatorLayout>

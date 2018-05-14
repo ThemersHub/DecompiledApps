@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_weight="0.0" android:elevation="2.0dip" style="?attr/actionBarStyle" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <include layout="@layout/shared_album_feed_empty_layout" />
+        <com.google.android.apps.photos.list.fastscroll.DateScrubberView android:id="@id/photos_envelope_feed_date_scrubber_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:id="@id/feeds" android:paddingLeft="@dimen/photos_envelope_feed_adapteritem_content_section_left_padding" android:paddingTop="@dimen/photos_envelope_feed_activity_sheet_top_padding" android:paddingRight="@dimen/photos_envelope_feed_adapteritem_content_section_right_padding" android:paddingBottom="@dimen/photos_envelope_feed_activity_sheet_bottom_padding" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/photos_envelope_feed_adapteritem_content_section_left_padding" android:paddingEnd="@dimen/photos_envelope_feed_adapteritem_content_section_right_padding" />
+        </com.google.android.apps.photos.list.fastscroll.DateScrubberView>
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/comment_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

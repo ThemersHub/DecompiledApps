@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.photos.album.enrichment.ui.MapEnrichmentLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.photos.album.enrichment.ui.ClippingFrameLayout android:id="@id/photos_album_enrichment_ui_enrichment_content" android:background="@drawable/enrichment_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/photos_album_enrichment_ui_map_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.photos.album.enrichment.ui.MapView android:id="@id/map_view" android:background="@color/photos_album_enrichment_ui_map_background" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.google.android.apps.photos.album.enrichment.ui.MapImageView android:id="@id/map_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <TextView android:textSize="@dimen/photos_album_enrichment_ui_map_primary_text_size" android:textColor="@color/photos_album_enrichment_ui_map_primary_text" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/map_destination_name_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:shadowColor="@color/photos_album_enrichment_ui_map_text_shadow" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="4.0" android:textIsSelectable="true" />
+                <TextView android:textSize="@dimen/photos_album_enrichment_ui_map_secondary_text_size" android:textColor="@color/photos_album_enrichment_ui_map_secondary_text" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/map_destination_name_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/photos_album_enrichment_ui_map_enrichment_destination_secondary_text_max_width" android:maxLines="2" android:shadowColor="@color/photos_album_enrichment_ui_map_text_shadow" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="4.0" android:textIsSelectable="true" />
+                <ImageView android:id="@id/map_destination_marker_image" android:background="@drawable/map_destination_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_place_grey600_18" android:tint="@color/quantum_googred500" />
+                <ImageView android:id="@id/map_origin_marker_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_origin_circle" />
+                <TextView android:textSize="@dimen/photos_album_enrichment_ui_map_secondary_text_size" android:textColor="@color/photos_album_enrichment_ui_map_secondary_text" android:ellipsize="end" android:id="@id/map_origin_name_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="@color/photos_album_enrichment_ui_map_text_shadow" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="4.0" android:textIsSelectable="true" />
+            </com.google.android.apps.photos.album.enrichment.ui.MapView>
+        </FrameLayout>
+        <include layout="@layout/enrichment_adornments_layout" />
+    </com.google.android.apps.photos.album.enrichment.ui.ClippingFrameLayout>
+    <include layout="@layout/photos_list_remove_button_white" />
+</com.google.android.apps.photos.album.enrichment.ui.MapEnrichmentLayout>
