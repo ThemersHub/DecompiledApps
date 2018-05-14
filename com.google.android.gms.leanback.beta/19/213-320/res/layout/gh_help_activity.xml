@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/gh_help_section" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/gh_help_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.gms.googlehelp.fragments.HelpConsoleScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/gh_help_console" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:id="@id/gh_sign_in_banner_card" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/gh_promoted_content_card" android:padding="@dimen/gh_padding" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/gh_whiteBackgroundStyle" />
+                <ViewStub android:id="@id/gh_search_card_view_stub" android:layout="@layout/gh_search_card" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <ViewStub android:id="@id/gh_search_card_section_divider_view_stub" android:layout="@layout/gh_section_divider" android:layout_width="fill_parent" android:layout_height="@dimen/gh_section_divider_height" />
+                <LinearLayout android:orientation="vertical" android:id="@id/gh_contact_card_top_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <LinearLayout android:orientation="vertical" android:id="@id/gh_articles_card" android:background="@drawable/gh_card_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <LinearLayout android:orientation="vertical" android:id="@id/gh_contact_card_bottom_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <FrameLayout android:id="@id/gh_account_picker_card" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.google.android.gms.googlehelp.fragments.HelpConsoleScrollView>
+        <ListView android:scrollbarStyle="outsideOverlay" android:id="@id/gh_search_results_list" android:background="@drawable/gh_card_background" android:paddingTop="@dimen/gh_search_results_container_top_padding" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/gh_search_results_divider" android:dividerHeight="@dimen/gh_search_results_divider_height" />
+    </LinearLayout>
+</FrameLayout>

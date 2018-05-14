@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/guidance_container" android:layout_width="@dimen/system_update_pano_gsf_guidance_width" android:layout_height="fill_parent" android:layout_alignParentStart="true" style="?attr/guidanceContainerStyle">
+        <Space android:id="@id/guidance_space" android:layout_width="fill_parent" android:layout_height="140.0dip" android:layout_alignParentTop="true" />
+        <TextView android:id="@id/guidance_title" android:layout_below="@id/guidance_space" android:importantForAccessibility="yes" android:textDirection="locale" android:textAlignment="viewStart" android:layout_alignParentStart="true" style="?attr/guidanceTitleStyle" />
+        <TextView android:id="@id/guidance_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/guidance_title" android:layout_alignWithParentIfMissing="true" android:importantForAccessibility="yes" android:textAlignment="viewStart" style="?attr/guidanceDescriptionStyle" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="@dimen/system_update_pano_gsf_action_width" android:layout_height="fill_parent" android:paddingStart="20.0dip" android:paddingEnd="50.0dip" android:layout_alignParentEnd="true">
+        <Space android:layout_width="fill_parent" android:layout_height="170.0dip" />
+        <TextView android:id="@id/action_button" style="@style/SystemUpdatePanoActionButtonStyle" />
+    </LinearLayout>
+</RelativeLayout>

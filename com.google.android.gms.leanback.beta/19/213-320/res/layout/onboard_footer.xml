@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.AppCompatImageButton android:id="@id/previous" android:visibility="gone" android:layout_centerVertical="true" android:contentDescription="@string/content_description_previous" android:layout_marginStart="16.0dip" android:layout_alignParentStart="true" app:srcCompat="@drawable/education_flow_prev_arrow" style="@style/NavButtonStyle" />
+    <com.google.android.libraries.view.pagingindicator.PagingIndicator android:id="@id/page_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" app:pageIndicatorColor="@color/pageindicator_page_color" app:currentPageIndicatorColor="@color/pageindicator_fill_color" />
+    <android.support.v7.widget.AppCompatImageButton android:id="@id/next" android:visibility="gone" android:layout_centerVertical="true" android:contentDescription="@string/common_next" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" app:srcCompat="@drawable/education_flow_next_arrow" style="@style/NavButtonStyle" />
+    <LinearLayout android:paddingTop="8.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <Button android:textColor="@color/activity_secondary" android:id="@id/btn_negative" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" style="@style/NavTextButtonStyle" />
+        <Button android:id="@id/btn_positive" android:visibility="gone" style="@style/NavTextButtonStyle" />
+    </LinearLayout>
+</RelativeLayout>

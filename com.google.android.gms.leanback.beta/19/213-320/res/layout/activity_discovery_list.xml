@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_refresh" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.NestedScrollView android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:clipChildren="false" android:layout_height="wrap_content" android:showDividers="middle" style="@style/ContentStyle">
+            <include layout="@layout/header_layout" />
+            <include layout="@layout/emptystate_no_beacons_welcome_screen" />
+            <include layout="@layout/emptystate_no_beacons" />
+            <include layout="@layout/emptystate_no_bluetooth" />
+            <include layout="@layout/emptystate_offline" />
+            <LinearLayout android:orientation="vertical" android:id="@id/discovery_lists" android:paddingBottom="5.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:showDividers="middle">
+                <com.google.android.gms.nearby.discovery.ui.DiscoveryItemListView android:id="@id/enabled_item_list" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CardStyle" />
+                <include layout="@layout/header_popular_here_items" />
+                <com.google.android.gms.nearby.discovery.ui.DiscoveryItemListView android:id="@id/popular_item_list" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CardStyle" />
+                <include layout="@layout/header_muted_items" />
+                <com.google.android.gms.nearby.discovery.ui.DiscoveryItemListView android:id="@id/disabled_item_list" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CardStyle" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

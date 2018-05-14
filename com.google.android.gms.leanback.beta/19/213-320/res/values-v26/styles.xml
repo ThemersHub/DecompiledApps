@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V26.Theme.AppCompat" />
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V26.Theme.AppCompat.Light" />
+    <style name="Base.Widget.AppCompat.Toolbar" parent="@style/Base.V26.Widget.AppCompat.Toolbar" />
+    <style name="PreferenceTheme" parent="@style/PreferenceThemeOverlay.v14.Material">
+        <item name="android:scrollbars">vertical</item>
+        <item name="preferenceFragmentStyle">@style/PreferenceFragmentStyle</item>
+        <item name="preferenceFragmentCompatStyle">@style/PreferenceFragmentStyle</item>
+        <item name="preferenceCategoryStyle">@style/SettingsPreferenceCategory</item>
+        <item name="preferenceStyle">@style/SettingsPreference</item>
+        <item name="dialogPreferenceStyle">@style/SettingsDialogPreference</item>
+        <item name="editTextPreferenceStyle">@style/EditTextPreference</item>
+        <item name="dropdownPreferenceStyle">@style/SettingsDropdownPreference</item>
+        <item name="switchPreferenceStyle">@style/SettingsSwitchPreference</item>
+        <item name="switchPreferenceCompatStyle">@style/SettingsSwitchPreferenceCompat</item>
+    </style>
+    <style name="common.Theme.Base.GoogleSettings" parent="@style/Theme.AppCompat.Light">
+        <item name="android:listPreferredItemHeight">72.0dip</item>
+        <item name="android:statusBarColor">@color/material_grey_300</item>
+        <item name="android:colorEdgeEffect">@android:color/black</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="actionBarTheme">@style/common.Theme.Base.ActionBar</item>
+        <item name="colorPrimary">@color/material_grey_100</item>
+        <item name="colorPrimaryDark">@color/material_grey_300</item>
+        <item name="colorAccent">@color/material_google_blue_500</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+    </style>
+    <style name="common.Widget.Base.SwitchBar.GoogleSettings" parent="@style/common.Widget.SwitchBar.Light">
+        <item name="colorPrimary">@color/material_grey_300</item>
+        <item name="colorAccent">@color/material_google_blue_400</item>
+        <item name="colorControlHighlight">@color/ripple_material_dark</item>
+    </style>
+    <style name="BackupSettingsTheme" parent="@style/common.Theme.GoogleSettings" />
+    <style name="Base.V26.Theme.AppCompat" parent="@style/Base.V23.Theme.AppCompat">
+        <item name="colorError">?android:colorError</item>
+    </style>
+    <style name="Base.V26.Theme.AppCompat.Light" parent="@style/Base.V23.Theme.AppCompat.Light">
+        <item name="colorError">?android:colorError</item>
+    </style>
+    <style name="Base.V26.Widget.AppCompat.Toolbar" parent="@style/Base.V7.Widget.AppCompat.Toolbar">
+        <item name="android:touchscreenBlocksFocus">true</item>
+        <item name="android:keyboardNavigationCluster">true</item>
+    </style>
+    <style name="EditTextPreference" parent="@style/Preference.DialogPreference.EditTextPreference.Material">
+        <item name="android:layout">@layout/preference_material_settings</item>
+    </style>
+    <style name="PreferenceFragmentStyle" parent="@style/PreferenceFragment.Material">
+        <item name="android:divider">@null</item>
+    </style>
+    <style name="SettingsDialogPreference" parent="@style/Preference.DialogPreference.Material">
+        <item name="android:layout">@layout/preference_material_settings</item>
+    </style>
+    <style name="SettingsDropdownPreference" parent="@style/Preference.DropDown.Material">
+        <item name="android:layout">@layout/preference_dropdown_material_settings</item>
+    </style>
+    <style name="SettingsPreference" parent="@style/Preference.Material">
+        <item name="android:layout">@layout/preference_material_settings</item>
+    </style>
+    <style name="SettingsPreferenceCategory" parent="@style/Preference.Category.Material">
+        <item name="android:layout">@layout/preference_category_material_settings</item>
+    </style>
+    <style name="SettingsSwitchPreference" parent="@style/Preference.SwitchPreference.Material">
+        <item name="android:layout">@layout/preference_material_settings</item>
+    </style>
+    <style name="SettingsSwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="android:layout">@layout/preference_material_settings</item>
+    </style>
+    <style name="common.Theme.Base.ActionBar" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">?colorAccent</item>
+    </style>
+</resources>

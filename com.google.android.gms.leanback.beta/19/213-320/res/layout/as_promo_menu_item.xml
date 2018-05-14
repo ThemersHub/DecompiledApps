@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.accountsettings.widget.BaseMenuView android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AsBaseMenuStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/as_promo_item_padding_top" android:layout_marginEnd="@dimen/as_promo_item_icon_padding_right">
+        <ImageView android:gravity="center" android:id="@android:id/icon" android:layout_width="@dimen/as_promo_menu_item_icon_size" android:layout_height="@dimen/as_promo_menu_item_icon_size" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="@dimen/as_promo_item_text_area_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/as_promo_item_padding_top" android:layout_marginBottom="@dimen/as_promo_item_padding_bottom" android:layout_weight="1.0">
+        <TextView android:textAppearance="@style/AsMenuItemTitleAppearance" android:ellipsize="end" android:id="@android:id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:textIsSelectable="false" style="@style/AsPromoItemStyle" />
+        <TextView android:textAppearance="@style/AsPromoMenuItemSummaryAppearance" android:id="@android:id/summary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="@integer/as_menu_item_summary_max_lines" android:layout_below="@android:id/title" android:textIsSelectable="false" android:layout_alignStart="@android:id/title" style="@style/AsPromoItemStyle" />
+        <Button android:gravity="center_vertical" android:id="@id/as_promo_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@android:id/summary" android:layout_alignStart="@android:id/title" style="@style/AsPromoButton" />
+        <TextView android:textAppearance="@style/AsPromoMenuItemStatusAppearance" android:id="@id/as_promo_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="@integer/as_menu_item_summary_max_lines" android:layout_below="@id/as_promo_button" android:textIsSelectable="false" android:layout_alignStart="@android:id/title" style="@style/AsPromoItemStyle" />
+    </RelativeLayout>
+</com.google.android.gms.accountsettings.widget.BaseMenuView>
