@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView style="@style/CommonCardView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/card_feature_host" android:divider="@color/quantum_grey500" android:showDividers="middle" style="@style/CardHostView">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/card_feature_profile" android:layout_alignParentRight="true" style="@style/ProfileImage" />
+            <TextView android:id="@id/card_feature_title" android:maxLines="@integer/single_line_fixed" android:layout_toLeftOf="@id/card_feature_profile" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/TextLine.Primary.FeatureCard" />
+            <TextView android:ellipsize="end" android:id="@id/card_feature_description" android:maxLines="@integer/longer_string_max_lines_responsive" android:layout_toLeftOf="@id/card_feature_profile" android:layout_below="@id/card_feature_title" style="@style/TextLine.Secondary.FeatureCard" />
+        </RelativeLayout>
+        <TextView android:id="@id/card_feature_color_bar" style="@style/ColorBar" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>
