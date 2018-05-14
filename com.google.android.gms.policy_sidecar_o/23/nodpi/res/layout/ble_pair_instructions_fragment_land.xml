@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/layout_buttons" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_alignParentBottom="true">
+        <Button android:layout_gravity="start|center" android:id="@id/cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fido_cancel_button" style="@style/fidoCancelButton" />
+        <LinearLayout android:gravity="end|center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:theme="@style/fidoPositiveButton" android:id="@id/begin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fido_begin_button" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/layout_buttons">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/fido_key_icon_layout" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:paddingEnd="12.0dip">
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/fido_ble_pair_instructions_title" style="@style/fidoFragmentTitle" />
+                        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/fido_ble_pair_instructions_body" style="@style/fidoFragmentBody" />
+                        <TextView android:id="@id/fido_use_nfc_instead_textview" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:text="@string/fido_use_nfc_instead" style="@style/fidoClickableText" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:paddingStart="12.0dip">
+                    <ImageView android:layout_gravity="center_horizontal" android:layout_width="360.0dip" android:layout_height="202.0dip" android:src="@drawable/fido_ic_ble_device" android:scaleType="fitXY" android:contentDescription="@null" android:importantForAccessibility="no" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

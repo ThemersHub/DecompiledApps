@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/drive_backup_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.gms.backup.settings.RestrictedSwitchPreference android:icon="@mipmap/quantum_logo_drive_launcher_color_48" android:persistent="false" android:title="@string/drive_backup_state" android:key="drive_backup_state" />
+    <com.google.android.gms.backup.settings.EnhancedSummaryPreference android:persistent="false" android:key="drive_backup_disabled_info" />
+    <PreferenceScreen android:persistent="false" android:title="@string/drive_backup_account" android:key="drive_backup_account">
+        <intent android:targetPackage="com.google.android.gms" android:action="com.google.android.gms.backup.SetBackupAccountActivity" android:targetClass="com.google.android.gms.backup.SetBackupAccountActivity" />
+    </PreferenceScreen>
+    <PreferenceCategory android:title="@string/drive_backup_content_header" android:key="drive_backup_content_group">
+        <com.google.android.gms.backup.settings.AppsBackupPreference android:persistent="false" android:title="@string/drive_backup_content_apps_title" android:key="apps" android:fragment="com.google.android.gms.backup.settings.AppsBackupFragment" />
+        <com.google.android.gms.backup.settings.DollyBackupPreference android:title="@string/drive_backup_content_callhistory_title" android:key="callhistory" android:dialogTitle="@string/drive_backup_content_callhistory_title" android:dialogMessage="@string/drive_backup_content_callhistory_dialog_message" />
+        <com.google.android.gms.backup.settings.DollyBackupPreference android:title="@string/drive_backup_content_devicesettings_title" android:key="devicesettings" android:dialogTitle="@string/drive_backup_content_devicesettings_title" android:dialogMessage="@string/drive_backup_content_devicesettings_dialog_message" />
+        <com.google.android.gms.backup.settings.SyncAdapterBackupPreference android:authorities="com.android.calendar" android:title="@string/drive_backup_content_calendar_title" android:key="calendar" android:dialogTitle="@string/drive_backup_content_calendar_title" android:dialogMessage="@string/drive_backup_content_calendar_dialog_message" />
+        <com.google.android.gms.backup.settings.SyncAdapterBackupPreference android:authorities="com.android.contacts" android:title="@string/drive_backup_content_contacts_title" android:key="contacts" android:dialogTitle="@string/drive_backup_content_contacts_title" android:dialogMessage="@string/drive_backup_content_contacts_dialog_message" />
+        <com.google.android.gms.backup.settings.PhotosBackupPreference android:title="@string/drive_backup_content_photos_title" android:key="photos" />
+        <com.google.android.gms.backup.settings.DollyBackupPreference android:title="@string/drive_backup_content_sms_title" android:key="sms" android:dialogTitle="@string/drive_backup_content_sms_title" android:dialogMessage="@string/drive_backup_content_sms_dialog_message" />
+    </PreferenceCategory>
+</PreferenceScreen>

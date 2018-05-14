@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.setupwizardlib.GlifLayout android:icon="@drawable/quantum_ic_restore_googblue_48" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SuwContentFrame">
+        <ViewStub android:id="@id/indexing_progressbar_stub" android:layout="@layout/suw_progress_bar" android:inflatedId="@id/indexing_progressbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/suw_glif_progress_bar_margin_vertical" android:layout_marginBottom="@dimen/suw_glif_progress_bar_margin_vertical" />
+        <TextView android:id="@id/transferring_time_estimation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SuwItemSummary" />
+        <TextView android:textColor="@color/quantum_googred" android:id="@id/indexing_fragment_reconnect" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/indexing_fragment_animation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+        <RelativeLayout android:orientation="vertical" android:id="@id/action_holder" android:paddingTop="@dimen/glif_button_top_margin_after_description" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="?android:textColorLink" android:gravity="center_vertical" android:id="@id/indexing_fragment_cancel_button" android:layout_width="wrap_content" android:layout_height="@dimen/minimum_touch_target_size" android:layout_marginTop="0.0dip" android:text="@string/cancel_copy_button_text" android:layout_alignParentStart="true" style="@style/SuwDescription" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.android.setupwizardlib.GlifLayout>

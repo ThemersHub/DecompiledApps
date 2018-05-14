@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <include layout="@layout/smartdevice_fullscreen_background" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/smartdevice_d2d_google_app_animation" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/smartdevice_d2d_target_instruction_title_vertical_space" android:text="@string/smartdevice_d2d_target_instruction_title" style="@style/SmartDevice.TextAppearance.HeadlineWhite" />
+            <TextView android:textSize="@dimen/smartdevice_d2d_target_instruction_subtitle_text_size" android:textColor="@color/smartdevice_text_color_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/smartdevice_d2d_target_instruction_subtitle_vertical_space" android:text="@string/smartdevice_d2d_target_instruction_description" />
+            <TextView android:textSize="@dimen/smartdevice_text_size_subhead" android:textColor="@color/smartdevice_text_color_white" android:autoLink="all" android:id="@id/description_link" android:padding="@dimen/smartdevice_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/smartdevice_d2d_target_instruction_cant_find_it" android:textAllCaps="true" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/spinner" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="@style/SmartDevice.Widget.ProgressBar.Large.Inverse" />
+        </LinearLayout>
+    </FrameLayout>
+    <com.android.setupwizardlib.view.NavigationBar android:id="@id/suw_layout_navigation_bar" android:layout_width="fill_parent" android:layout_height="@dimen/suw_navbar_height" style="@style/SuwNavBarTheme" />
+</LinearLayout>

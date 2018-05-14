@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/system_update_outer_padding_sides" android:paddingTop="@dimen/system_update_outer_padding_top" android:paddingRight="@dimen/system_update_outer_padding_sides" android:paddingBottom="@dimen/system_update_outer_padding_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/file_browser_cur_folder" android:background="@color/system_update_file_browser_highlight_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:layout_alignParentTop="true" android:animateLayoutChanges="true">
+        <ImageView android:id="@id/left_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/ic_action_back" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/file_browser_cur_folder_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:text="folder" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_below="@id/file_browser_cur_folder">
+        <ListView android:id="@id/file_browser_list_view" android:animationCache="true" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_marginTop="16.0dip" android:listSelector="@color/system_update_file_browser_highlight_color" android:scrollingCache="true" android:layout_weight="1.0" android:smoothScrollbar="true" android:animateLayoutChanges="false" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <Button android:id="@id/file_browser_ok_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100.0dip" android:text="@string/system_update_file_browser_ok_button" android:layout_toLeftOf="@id/file_browser_cancel_button" android:layout_toStartOf="@id/file_browser_cancel_button" />
+                <Button android:id="@id/file_browser_cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100.0dip" android:text="@string/common_cancel" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
