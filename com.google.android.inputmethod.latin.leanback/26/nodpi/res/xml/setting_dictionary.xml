@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/setting_advanced" android:key="@string/setting_dictionary_key"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/setting_personal_dictionary_title">
+        <intent android:action="android.settings.USER_DICTIONARY_SETTINGS" />
+    </Preference>
+    <Preference android:title="@string/dictionary_download_title" android:fragment="com.google.android.apps.inputmethod.latin.preference.AddOnDictionaryFragment" />
+    <com.google.android.apps.inputmethod.libs.framework.preference.widget.PreferenceCategoryHeader android:title="@string/setting_user_history_category_title" android:key="@string/setting_user_dictionary_category_key">
+        <com.google.android.apps.inputmethod.libs.framework.preference.widget.AutoSyncedCheckBoxPreference android:persistent="true" android:title="@string/setting_sync_enabled_title" android:key="@string/pref_key_enable_sync_user_dictionary" />
+        <Preference android:persistent="false" android:title="@string/setting_sync_now_title" android:key="@string/setting_sync_now_key" android:dependency="@string/pref_key_enable_sync_user_dictionary" />
+        <Preference android:persistent="false" android:title="@string/setting_sync_clear_title" android:key="@string/setting_sync_clear_key" android:summary="@string/setting_dialog_sync_clear_summary" />
+    </com.google.android.apps.inputmethod.libs.framework.preference.widget.PreferenceCategoryHeader>
+</PreferenceScreen>

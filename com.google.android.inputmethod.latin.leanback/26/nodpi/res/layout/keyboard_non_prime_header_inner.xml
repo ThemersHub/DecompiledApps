@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.inputmethod.libs.framework.keyboard.widget.AccessPointsBar app:overlayView="@id/access_points_overlay_view" style="@style/AccessPointsBar" />
+    <FrameLayout android:id="@id/softkey_holder_symbol_header" style="@style/HeaderInner.NonPrime">
+        <FrameLayout android:id="@id/access_points_overlay_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.apps.inputmethod.libs.framework.keyboard.widget.FixedSizeSoftKeyViewsPage android:id="@id/softkey_holder_recent_emoji_holder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/suggestions_strip_horizontal_margin" android:layout_marginRight="@dimen/suggestions_strip_horizontal_margin" column_count="7" row_count="1" softkeyview_layout="@layout/softkeyview_header_recent" />
+            <FrameLayout android:id="@id/suggestions_strip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/suggestions_strip_horizontal_margin" android:layout_marginRight="@dimen/suggestions_strip_horizontal_margin">
+                <com.google.android.apps.inputmethod.latin.keyboard.widget.LatinFixedCountCandidatesHolderView android:id="@id/softkey_holder_fixed_candidates" style="@style/CandidateBar" best_candidate_width_percentile="0.36" candidate_background="@attr/BgCandidate" candidate_layout="@layout/latin_softkey_candidate" conv2query_candidate_layout="@layout/latin_conv2query_softkey_candidate" conv2gif_candidate_layout="@layout/latin_conv2gif_softkey_candidate" last_column_candidate_background="@attr/BgCandidateLastColumn" max_candidates_count="3" />
+                <com.google.android.apps.inputmethod.libs.framework.notice.NoticeHolderView android:id="@id/key_pos_header_notice" style="@style/NoticeHolderView" />
+            </FrameLayout>
+        </FrameLayout>
+        <com.google.android.apps.inputmethod.libs.framework.keyboard.SoftKeyView android:layout_gravity="end|center" android:id="@id/key_pos_header_voice" style="@style/SuggestionStripVoiceIcon" />
+    </FrameLayout>
+    <com.google.android.apps.inputmethod.libs.framework.keyboard.SoftKeyView android:id="@id/key_pos_header_access_points_menu" style="@style/SuggestionStripAccessPointsMenuIcon" />
+</merge>
