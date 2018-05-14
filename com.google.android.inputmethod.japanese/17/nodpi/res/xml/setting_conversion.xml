@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/setting_conversion"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.inputmethod.libs.framework.preference.widget.AutoSyncedCheckBoxPreference android:persistent="true" android:title="@string/pref_space_character_form_title" android:key="@string/pref_key_japanese_space_character_form" android:summary="@string/pref_space_character_form_description" />
+    <com.google.android.apps.inputmethod.libs.framework.preference.widget.AutoSyncedCheckBoxPreference android:persistent="true" android:title="@string/pref_kana_modifier_insensitive_conversion_title" android:key="@string/pref_key_japanese_kana_modifier_insensitive_conversion" android:summary="@string/pref_kana_modifier_insensitive_conversion_description" />
+    <com.google.android.apps.inputmethod.libs.framework.preference.widget.AutoSyncedCheckBoxPreference android:persistent="true" android:title="@string/setting_intelligent_correction_title" android:key="@string/pref_key_spell_correction" android:summary="@string/setting_intelligent_correction_summary" />
+    <com.google.android.apps.inputmethod.libs.framework.preference.widget.AutoSyncedCheckBoxPreference android:persistent="true" android:title="@string/pref_other_incognito_mode_title" android:key="@string/pref_key_japanese_incognito_mode" android:summary="@string/pref_other_incognito_mode_description" />
+    <com.google.android.apps.inputmethod.libs.framework.preference.widget.AutoSyncedListPreference android:entries="@array/entries_japanese_emoji_provider_type" android:title="@string/pref_emoji_provider_type_title" android:key="@string/pref_key_japanese_emoji_provider_type" android:summary="%s" android:dialogTitle="@string/pref_emoji_provider_type_title" android:entryValues="@array/entryvalues_japanese_emoji_provider_type" />
+    <com.google.android.apps.inputmethod.libs.framework.preference.widget.AutoSyncedListPreference android:entries="@array/entries_japanese_dictionary_personalization" android:title="@string/pref_dictionary_personalization_title" android:key="@string/pref_key_japanese_dictionary_personalization" android:summary="%s" android:dialogTitle="@string/pref_dictionary_personalization_title" android:entryValues="@array/entryvalues_japanese_dictionary_personalization" />
+    <Preference android:persistent="false" android:title="@string/pref_clear_category_title" android:summary="@string/pref_clear_category_description" android:fragment="com.google.android.apps.inputmethod.libs.framework.preference.CommonPreferenceFragment">
+        <extra android:name="PREFERENCE_FRAGMENT" android:value="setting_clear_personalization" />
+    </Preference>
+</PreferenceScreen>

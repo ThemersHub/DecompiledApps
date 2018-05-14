@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.inputmethod.japanese" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:name="android.software.leanback" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="false"/>
+    <uses-feature android:name="android.hardware.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <application android:backupAgent="com.google.android.apps.inputmethod.libs.framework.core.BackupAgent" android:debuggable="false" android:icon="@mipmap/app_icon" android:killAfterRestore="false" android:label="@string/ime_name" android:name="com.google.android.apps.inputmethod.japanese.JapaneseApp" android:restoreAnyVersion="true" android:roundIcon="@mipmap/app_round_icon" android:theme="@style/AppThemeSelector" android:usesCleartextTraffic="false">
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIR1yGY_NmD4D2QDdoOqLinLhpTc8J5AAs2ANQSQ"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:directBootAware="true" android:label="@string/ime_name" android:name="com.google.android.inputmethod.japanese.MozcService" android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod"/>
+            </intent-filter>
+            <meta-data android:name="android.view.im" android:resource="@xml/method"/>
+        </service>
+        <activity android:enabled="@bool/show_launcher_icon" android:label="@string/ime_name" android:name="com.google.android.apps.inputmethod.libs.framework.core.LauncherActivity" android:theme="@style/SettingsTheme.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.apps.inputmethod.libs.framework.core.LauncherIconVisibilityInitializer">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:name="com.google.android.apps.inputmethod.libs.dataservice.download.DownloadBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="screenLayout|smallestScreenSize" android:label="@string/setting_title" android:name="com.google.android.apps.inputmethod.japanese.preference.SettingsActivity" android:theme="@style/SettingsTheme"/>
+        <activity android:clearTaskOnLaunch="true" android:exported="false" android:finishOnTaskLaunch="true" android:label="@string/ime_name" android:launchMode="singleTask" android:name="com.google.android.apps.inputmethod.japanese.firstrun.JapaneseFirstRunActivity"/>
+        <activity android:exported="false" android:label="@string/ime_name" android:launchMode="singleTask" android:name="com.google.android.apps.inputmethod.japanese.firstrun.JapaneseFeatureActivity"/>
+        <activity android:exported="false" android:name="com.google.android.apps.inputmethod.japanese.preference.JapaneseUserFeedbackActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:label="@string/user_dictionary_tool_app_name" android:name="com.google.android.apps.inputmethod.japanese.userdictionary.UserDictionaryToolActivity" android:theme="@style/SettingsTheme" android:uiOptions="splitActionBarWhenNarrow"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.google.android.apps.inputmethod.japanese.mushroom.MushroomSelectionActivity" android:taskAffinity=".mushroom" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <receiver android:name="com.google.android.apps.inputmethod.japanese.keyboard.InputDeviceReceiver">
+            <intent-filter>
+                <action android:name="android.hardware.input.action.QUERY_KEYBOARD_LAYOUTS"/>
+            </intent-filter>
+            <meta-data android:name="android.hardware.input.metadata.KEYBOARD_LAYOUTS" android:resource="@xml/keyboard_layouts"/>
+        </receiver>
+        <activity android:label="BlankActivity" android:name="com.google.android.apps.inputmethod.libs.framework.core.BlankActivity"/>
+        <provider android:authorities="com.google.android.inputmethod.japanese.userdictionary.UserDictionaryExportProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.apps.inputmethod.japanese.userdictionary.UserDictionaryExportProvider"/>
+        <activity android:launchMode="singleTask" android:name="com.google.android.apps.inputmethod.libs.tv.preference.TVSettingsActivity" android:theme="@style/TVSettingsTheme"/>
+        <activity android:launchMode="singleTop" android:name="com.google.android.apps.inputmethod.libs.tv.MiniBrowserActivity"/>
+        <activity android:launchMode="singleTop" android:name="com.google.android.apps.inputmethod.japanese.preference.ClearConversionHistoryActionActivity"/>
+        <meta-data android:name="module:com.google.android.apps.inputmethod.japanese.symbol.ISymbolKeyboardExtension" android:value="@xml/extension_symbol"/>
+        <meta-data android:name="module:com.google.android.apps.inputmethod.japanese.symbol.IDigitKeyboardExtension" android:value="@xml/extension_digit"/>
+        <meta-data android:name="module:com.google.android.apps.inputmethod.libs.search.emoji.IEmojiSearchExtension" android:value="@xml/extension_japanese_emoji_search"/>
+        <meta-data android:name="module:com.google.android.apps.inputmethod.libs.search.emoji.IEmoticonExtension" android:value="@xml/extension_japanese_emoticon"/>
+        <meta-data android:name="module:com.google.android.apps.inputmethod.libs.search.IEmojiOrGifExtension" android:value="@xml/extension_emoji_or_gif"/>
+        <activity android:name="com.google.android.apps.inputmethod.libs.crash.UserFeedbackActivity"/>
+        <activity android:label="@string/android_account_title" android:name="com.google.android.apps.inputmethod.libs.dataservice.auth.AndroidAccountActivity" android:theme="@style/SettingsTheme"/>
+        <service android:exported="false" android:name="com.google.android.apps.inputmethod.libs.dataservice.superpacks.SuperpacksTaskService">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.inputmethod.libs.experiments.PhenotypeExperimentUpdateAvailableBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.inputmethod.libs.experiments.ExperimentIntentService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="false" android:name="com.google.android.apps.inputmethod.libs.framework.core.PermissionsActivity" android:taskAffinity="" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar"/>
+        <activity android:exported="false" android:name="com.google.android.apps.inputmethod.libs.framework.preference.SubtypeSettingsActivity" android:taskAffinity="com.google.android.apps.inputmethod.latin.preference.SettingsActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:name="com.google.android.apps.inputmethod.libs.framework.core.AlarmTaskScheduler$TaskAlarmReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.inputmethod.libs.framework.core.ALARM_TASK_SCHEDULER"/>
+                <data android:scheme="taskscheduler"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.inputmethod.libs.framework.core.FirebaseJobDispatcherImpl$TaskRunnerJobService">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.inputmethod.libs.framework.core.JobSchedulerImpl$TaskRunnerJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <meta-data android:name="module:com.google.android.apps.inputmethod.libs.search.emoji.IEmojiDataExtension" android:value="@xml/extension_emoji_data"/>
+        <meta-data android:name="module:com.google.android.apps.inputmethod.libs.framework.module.IEmojiSuggestionExtension" android:value="@xml/extension_emoji_suggestion"/>
+        <meta-data android:name="module:com.google.android.apps.inputmethod.libs.search.IGifKeyboardExtension" android:value="@xml/extension_gif_search"/>
+        <activity android:exported="false" android:label="@string/theme_selector_title" android:launchMode="singleTask" android:name="com.google.android.apps.inputmethod.libs.theme.preference.ThemeSelectorActivity" android:taskAffinity="com.google.android.apps.inputmethod.libs.theme.preference.ThemeSelectorActivity" android:theme="@style/ThemeSettingsTheme"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:label="@string/theme_builder_title" android:name="com.google.android.apps.inputmethod.libs.theme.preference.ThemeBuilderActivity" android:theme="@style/ThemeSettingsTheme"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:label="@string/theme_editor_title" android:name="com.google.android.apps.inputmethod.libs.theme.preference.ThemeEditorActivity" android:theme="@style/ThemeSettingsTheme"/>
+        <activity android:exported="false" android:label="@string/primes_debug_activity_label" android:name="com.google.android.libraries.performance.primes.debug.PrimesEventActivity" android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <intent-filter>
+                <action android:name="com.google.android.primes.action.DEBUG_PRIMES_EVENTS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.UnquantumLicenseMenuActivity"/>
+        <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.UnquantumLicenseActivity"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"/>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

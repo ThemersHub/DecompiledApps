@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <keyboard id="@id/keyboard_non_prime_symbol" class=".keyboard.PageableNonPrimeRecentSubCategoryKeyboard" initial_states="LOCK_KEYBOARD+SUB_CATEGORY_2" remember_recent_key="COMMITTED_ACTION_ONLY" recent_key_type="symbol" recent_key_layout="@layout/softkey_label_medium_auto_centered">
+        <view layout="@layout/keyboard_non_prime_header_sub_category" scalable="false" type="header">
+            <softkeys href="@xml/softkeys_ja_non_prime_symbol_sub_category" />
+            <key_mapping>
+                <mapping view_id="@id/key_pos_non_prime_sub_category_8" key_id="@id/softkey_non_prime_symbol_sub_category_8_deactive" />
+            </key_mapping>
+            <key_mapping state="SUB_CATEGORY_8">
+                <mapping view_id="@id/key_pos_non_prime_sub_category_8" key_id="@id/softkey_non_prime_symbol_sub_category_8_active" />
+            </key_mapping>
+        </view>
+        <view layout="@layout/keyboard_non_prime_symbol_extension_body" type="body">
+            <softkeys id="@id/softkeys_ja_input_symbol" href="@xml/softkeys_input_symbol_templates">
+                <softkey id="@id/softkey_sub_category_separator" content_description="@string/symbol_fullwidth_content_desc">
+                    <action type="PRESS" keycode="UNKNOWN" data="SUB_CATEGORY_8" />
+                </softkey>
+                <include href="@xml/softkeys_input_symbol_sub_category_fullwidth" />
+            </softkeys>
+            <keygroup_mapping group_view_id="@id/pageable_view">
+                <keys softkeys_id="@id/softkeys_input_symbol" />
+                <keys softkeys_id="@id/softkeys_ja_input_symbol" />
+            </keygroup_mapping>
+            <softkeys href="@xml/softkeys_language_specific" />
+            <softkeys href="@xml/softkeys_card_viewer_bottom" />
+            <softkeys href="@xml/softkeys_gif" />
+            <softkeys href="@xml/softkeys_symbol_and_digit_tab" />
+            <include href="@xml/keymapping_non_prime_digit_body_right_side" />
+            <include href="@xml/keymapping_bottom_symbol_extension" />
+            <include href="@xml/keymapping_fragment_bottom_symbol_tab" />
+            <include href="@xml/keymapping_card_viewer_bottom_in_extension" />
+            <include href="@xml/keymapping_language_specific" />
+        </view>
+    </keyboard>
+</framework>

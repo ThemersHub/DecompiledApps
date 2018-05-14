@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <softkeys>
+        <softkey_list splitter=" ">
+            <softkey_template id="@+id/softkey_template_punctuation_ja_qwerty" layout="@layout/softkey_qwerty_label_character_label_header" popup_timing="@string/qwerty_popup_timing" slide_sensitivity="NORMAL" multi_touch="false" content_description="$desc$">
+                <action type="PRESS" data="$press_data$" keycode="$keycode_normal$" intention="DECODE" popup_label="$label$" />
+                <action type="SLIDE_UP" data="$slideup_data$" keycode="$keycode_slideup$" intention="DECODE" popup_label="$slideup_data$" />
+                <action type="LONG_PRESS" data="$long_press_data$" keycode="PLAIN_TEXT" intention="$long_press_intention=D D D D D D D D D D D$" popup_label="$long_press_data$" popup_layout="@attr/PopupBubbleRectangularLayout" />
+                <action type="SLIDE_LEFT" data="" keycode="0" intention="DECODE" />
+                <action type="SLIDE_RIGHT" data="" keycode="0" intention="DECODE" />
+                <action type="SLIDE_DOWN" data="" keycode="0" intention="DECODE" />
+                <label location="@id/label" value="$label$" />
+                <label location="@id/label_header" value="$slideup_data$" />
+            </softkey_template>
+        </softkey_list>
+        <softkey_list template_id="@id/softkey_template_punctuation_ja_qwerty" splitter=" ">
+            <softkey id="@id/softkey_ja_qwerty_exclamation_tablet" label="!" press_data="!" keycode_normal="PLAIN_TEXT" long_press_data="&lt;" slideup_data="&lt;" keycode_slideup="PLAIN_TEXT" />
+            <softkey id="@id/softkey_ja_qwerty_question_tablet" label="\?" press_data="\?" keycode_normal="PLAIN_TEXT" long_press_data=">" slideup_data=">" keycode_slideup="PLAIN_TEXT" />
+        </softkey_list>
+    </softkeys>
+</framework>

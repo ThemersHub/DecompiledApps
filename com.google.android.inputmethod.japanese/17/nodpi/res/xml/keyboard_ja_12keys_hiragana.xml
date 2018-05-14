@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <keyboard id="@id/keyboard_ja_12keys_hiragana" candidate_text_size_ratio="0.8" class=".japanese.keyboard.JapanesePrimeKeyboard" popup="@attr/PopupBubbleLayout">
+        <view layout="@layout/keyboard_prime_header" scalable="false" type="header">
+            <softkeys href="@xml/softkeys_header_prime" />
+            <include href="@xml/keymapping_header_ja_prime" />
+        </view>
+        <view layout="@layout/keyboard_ja_12keys_body" type="body">
+            <motion_event_handler class=".libs.framework.keyboard.handler.BasicMotionEventHandler" reverse_preference="true" preference_key="@string/pref_key_spell_correction" />
+            <motion_event_handler class=".libs.framework.keyboard.handler.SpatialModelMotionEventHandler" reverse_preference="false" preference_key="@string/pref_key_spell_correction" />
+            <softkeys href="@xml/softkeys_input_ja_12keys_hiragana" />
+            <softkeys href="@xml/softkeys_function" />
+            <softkeys href="@xml/softkeys_input_ja_common" />
+            <softkeys href="@xml/softkeys_body_candidates" />
+            <include href="@xml/keymapping_common_ja" />
+            <include href="@xml/keymapping_body_ja_12keys_hiragana" />
+            <include href="@xml/keymapping_body_candidates" />
+            <include href="@xml/keymapping_function_ime_action_ja" />
+            <include href="@xml/keymapping_fragment_function_ja" />
+        </view>
+    </keyboard>
+</framework>

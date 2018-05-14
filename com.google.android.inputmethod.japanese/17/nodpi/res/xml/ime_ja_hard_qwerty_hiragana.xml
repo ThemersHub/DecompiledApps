@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <ime string_id="@string/string_id_japanese_hard_qwerty_hiragana" class="com.google.android.apps.inputmethod.japanese.ime.JapaneseIme" language="@string/japanese_language_id" label="@string/mozc_japanese_keyboard" inline_composing="true" announce_auto_selected_candidate="true" status_icon="@drawable/ic_japanese_status_icon" prime_keyboard_type="HARD_QWERTY" unacceptable_meta_keys="">
+        <keyboard_group>
+            <keyboard type="prime" def="@xml/keyboard_ja_hard_qwerty" />
+            <keyboard type="digit" def="@xml/keyboard_non_prime_digit">
+                <merge def="@xml/keyboard_ja_non_prime_digit" />
+                <merge def="@xml/keyboard_ja_non_prime_back_key_hiragana_fragment" />
+            </keyboard>
+            <keyboard type="symbol" def="@xml/keyboard_non_prime_symbol">
+                <merge def="@xml/keyboard_ja_non_prime_symbol" />
+                <merge def="@xml/keyboard_ja_non_prime_back_key_hiragana_fragment" />
+            </keyboard>
+            <keyboard type="smiley" def="@xml/keyboard_non_prime_smiley">
+                <merge def="@xml/keyboard_ja_non_prime_smiley" />
+                <merge def="@xml/keyboard_ja_non_prime_back_key_hiragana_fragment" />
+            </keyboard>
+            <keyboard type="emoticon" def="@xml/keyboard_non_prime_emoticon">
+                <merge def="@xml/keyboard_ja_non_prime_back_key_hiragana_fragment" />
+            </keyboard>
+        </keyboard_group>
+        <extra_values>
+            <item id="@id/extra_value_prime_keyboard_specification" value="HARDWARE_QWERTY_KANA" />
+            <item id="@id/extra_value_hardware_keyboard_specification" value="HARDWARE_QWERTY_KANA" />
+            <item id="@id/extra_value_hardware_keyboard_candidates_per_page" value="@integer/floating_candidate_candidate_num" />
+        </extra_values>
+    </ime>
+</framework>

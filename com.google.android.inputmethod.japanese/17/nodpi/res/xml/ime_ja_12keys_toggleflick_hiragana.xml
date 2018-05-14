@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <ime class="com.google.android.apps.inputmethod.japanese.ime.JapaneseIme" inline_composing="true" language="@string/japanese_language_id" label="@string/mozc_japanese_keyboard" string_id="@string/string_id_japanese_12keys_toggleflick_hiragana" unacceptable_meta_keys="">
+        <keyboard_group>
+            <keyboard type="prime" def="@xml/keyboard_ja_12keys_hiragana" />
+            <keyboard type="digit" def="@xml/keyboard_non_prime_digit">
+                <merge def="@xml/keyboard_ja_non_prime_digit" />
+                <merge def="@xml/keyboard_ja_non_prime_back_key_hiragana_fragment" />
+            </keyboard>
+            <keyboard type="symbol" def="@xml/keyboard_non_prime_symbol">
+                <merge def="@xml/keyboard_ja_non_prime_symbol" />
+                <merge def="@xml/keyboard_ja_non_prime_back_key_hiragana_fragment" />
+            </keyboard>
+            <keyboard type="smiley" def="@xml/keyboard_non_prime_smiley">
+                <merge def="@xml/keyboard_ja_non_prime_smiley" />
+                <merge def="@xml/keyboard_ja_non_prime_back_key_hiragana_fragment" />
+            </keyboard>
+            <keyboard type="emoticon" def="@xml/keyboard_non_prime_emoticon">
+                <merge def="@xml/keyboard_ja_non_prime_back_key_hiragana_fragment" />
+            </keyboard>
+        </keyboard_group>
+        <extra_values>
+            <item id="@id/extra_value_prime_keyboard_specification" value="TWELVE_KEY_TOGGLE_FLICK_KANA" />
+            <item id="@id/extra_value_hardware_keyboard_specification" value="HARDWARE_QWERTY_KANA" />
+            <item id="@id/extra_value_is_language_switch_key_hidden_on_processing" value="true" />
+        </extra_values>
+    </ime>
+</framework>

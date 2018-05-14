@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <softkeys>
+        <softkey id="@id/softkey_ja_tv_japanese_active" layout="@layout/softkey_function_key_label" content_description="@string/letter_keyboard_key_content_desc">
+            <label location="@id/label" value="@string/label_back_to_japanese_prime" />
+        </softkey>
+        <softkey id="@id/softkey_ja_tv_japanese_deactive" layout="@layout/softkey_function_key_label_deactive" content_description="@string/letter_keyboard_key_content_desc">
+            <action type="ON_FOCUS" keycode="SWITCH_INPUT_BUNDLE" data="@string/string_id_japanese_tv_hiragana" />
+            <label location="@id/label" value="@string/label_back_to_japanese_prime" />
+        </softkey>
+        <softkey id="@id/softkey_ja_tv_english_deactive" layout="@layout/softkey_function_key_label_smalltext_deactive" content_description="@string/english_keyboard_key_content_desc">
+            <action type="ON_FOCUS" keycode="SWITCH_INPUT_BUNDLE" data="@string/string_id_japanese_tv_alphabet" />
+            <label location="@id/label" value="abc123" />
+        </softkey>
+    </softkeys>
+</framework>
