@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bt_snooze_dialog_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/bt_snooze_dialog_vertical_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/bt_dialog_title" />
+    <TextView android:textColor="@color/bt_light_text" android:id="@id/readonly_name" android:layout_width="fill_parent" android:maxLines="2" style="@style/bt_DialogTextView" />
+    <android.support.v7.widget.AppCompatEditText android:textColor="@color/bt_light_text" android:id="@id/editable_name" android:visibility="gone" android:layout_width="fill_parent" android:layout_marginBottom="@dimen/bt_edit_text_bottom_margin" android:singleLine="true" style="@style/bt_DialogEditTextView" />
+    <include layout="@layout/bt_place_autocomplete_input" />
+    <LinearLayout android:id="@id/button_container" android:paddingBottom="@dimen/bt_snooze_dialog_vertical_margin" style="@style/bt_SnoozeDialogButtonContainer">
+        <TextView android:id="@id/delete_location" android:text="@string/bt_location_delete" style="@style/bt_SnoozeDialogButton" />
+        <TextView android:id="@id/save_location" android:text="@string/bt_location_save" style="@style/bt_SnoozeDialogButton" />
+    </LinearLayout>
+</LinearLayout>

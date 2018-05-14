@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:theme="@style/bt_BigTopAppTheme" android:id="@id/media_item_container" android:duplicateParentState="true" android:layout_width="@dimen/bt_media_item_width" android:layout_height="@dimen/bt_media_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/chip_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/bt_SmallSmartMailCarouselTile" layout="@layout/bt_smartmail_attachment" />
+        <ImageView android:id="@id/gradient_overlay" android:layout_width="fill_parent" android:layout_height="@dimen/bt_media_item_gradient_overlay_height" app:srcCompat="@drawable/bt_media_palette_multi_select_gradient_overlay" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="start|center|top" android:id="@id/selected_overlay" android:visibility="invisible" android:layout_width="@dimen/bt_media_item_icon_size" android:layout_height="@dimen/bt_media_item_icon_size" android:layout_margin="@dimen/bt_media_item_icon_margin" android:scaleType="center" app:srcCompat="@drawable/bt_ic_media_unselected" />
+</FrameLayout>

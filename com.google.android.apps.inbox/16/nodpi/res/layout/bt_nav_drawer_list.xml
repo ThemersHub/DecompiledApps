@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/drawer_list_container" android:background="@color/bt_drawer_background" android:fitsSystemWindows="true" android:layout_width="@dimen/bt_nav_width" android:layout_height="fill_parent" android:foregroundGravity="fill_horizontal|center|top"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:layout_gravity="start" android:id="@id/drawer_list" android:background="@color/bt_drawer_background" android:paddingBottom="@dimen/bt_nav_bottom_footer_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/bt_pressed_background_selector" android:divider="@null" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/drawer_footer" android:background="@drawable/bt_bg_drawer_footer_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/drawer_list_settings" layout="@layout/bt_nav_entry" />
+        <include android:id="@id/drawer_list_help" layout="@layout/bt_nav_entry" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/bt_smartmail_one_line_layout" android:paddingRight="@dimen/bt_item_list_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/bt_smartmail_one_line_tile_top_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:baselineAligned="false">
+        <include android:id="@id/action1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/bt_smartmail_one_line_tile_template_without_dismiss_button" />
+        <include android:id="@id/action2" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/bt_smartmail_line_tile_spacing" android:layout_weight="1.0" layout="@layout/bt_smartmail_one_line_tile_template_without_dismiss_button" />
+        <include android:id="@id/smartreply_action" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/bt_threadlist_smartreply_view" />
+        <include android:layout_gravity="center_vertical" android:id="@id/dismiss_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/bt_smartmail_dismiss_button" />
+    </LinearLayout>
+</FrameLayout>

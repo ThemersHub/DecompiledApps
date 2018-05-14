@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/bt_snooze_dialog_background" android:paddingTop="@dimen/bt_snooze_grid_menu_vertical_padding" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridView android:id="@id/snooze_options" android:layout_width="@dimen/bt_snooze_grid_menu_grid_view_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/bt_snooze_grid_menu_horizontal_padding" android:layout_marginRight="@dimen/bt_snooze_grid_menu_horizontal_padding" android:layout_marginBottom="@dimen/bt_snooze_grid_menu_custom_option_footer_height" android:horizontalSpacing="@dimen/bt_snooze_grid_menu_spacing" android:verticalSpacing="@dimen/bt_snooze_grid_menu_spacing" android:numColumns="2" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <View android:background="@color/bt_stroke_grey" android:layout_width="fill_parent" android:layout_height="@dimen/bt_snooze_grid_menu_grid_elevation" />
+        <LinearLayout android:orientation="horizontal" android:background="@color/bt_light_grey" android:paddingLeft="@dimen/bt_snooze_grid_menu_horizontal_padding" android:paddingTop="@dimen/bt_snooze_grid_menu_custom_options_padding_top" android:paddingRight="@dimen/bt_snooze_grid_menu_horizontal_padding" android:paddingBottom="@dimen/bt_snooze_grid_menu_vertical_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <include android:id="@id/custom_time_option" android:layout_width="@dimen/bt_snooze_grid_menu_custom_option_width" android:layout_height="fill_parent" android:layout_marginRight="@dimen/bt_snooze_grid_menu_spacing" layout="@layout/bt_snooze_menu_grid_custom_option" />
+            <include android:id="@id/custom_location_option" layout="@layout/bt_snooze_menu_grid_custom_option" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

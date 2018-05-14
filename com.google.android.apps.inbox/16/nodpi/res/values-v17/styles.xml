@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AccountsSwitcher.AccountDetailsStyle" parent="@style/AccountsSwitcher">
+        <item name="android:textColor">@color/account_text_color</item>
+        <item name="android:layout_marginStart">@dimen/start_horiz_padding</item>
+    </style>
+    <style name="AccountsSwitcher.AccountTextStyle" parent="@style/AccountsSwitcher">
+        <item name="android:textColor">@color/add_accounts_text_color</item>
+        <item name="android:layout_marginStart">@dimen/start_horiz_padding</item>
+    </style>
+    <style name="AccountsSwitcher.AvatarStyle" parent="@style/AccountsSwitcher">
+        <item name="android:layout_width">@dimen/selected_account_avatar_size</item>
+        <item name="android:layout_height">@dimen/selected_account_avatar_size</item>
+        <item name="android:layout_marginTop">@dimen/avatar_margin_top</item>
+        <item name="android:layout_marginStart">@dimen/start_horiz_padding</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="AccountsSwitcher.ManageAccountsTextStyle" parent="@style/AccountsSwitcher">
+        <item name="android:textColor">@color/manage_accounts_text_color</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:layout_marginStart">@dimen/start_horiz_padding</item>
+    </style>
+    <style name="AccountsSwitcher.RecentsOneStyle" parent="@style/AccountsSwitcher">
+        <item name="android:layout_width">@dimen/recent_account_avatar_size</item>
+        <item name="android:layout_height">@dimen/recent_account_avatar_size</item>
+        <item name="android:layout_marginTop">@dimen/avatar_margin_top</item>
+        <item name="android:layout_marginStart">@dimen/recents_start_horiz_padding</item>
+        <item name="android:layout_marginEnd">@dimen/recents_end_horiz_padding</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+    <style name="AccountsSwitcher.RecentsTwoStyle" parent="@style/AccountsSwitcher">
+        <item name="android:layout_width">@dimen/recent_account_avatar_size</item>
+        <item name="android:layout_height">@dimen/recent_account_avatar_size</item>
+        <item name="android:layout_marginTop">@dimen/avatar_margin_top</item>
+        <item name="android:layout_toStartOf">@id/avatar_recents_one</item>
+    </style>
+    <style name="AccountsSwitcher.SelectedAccountButtonStyle" parent="@style/AccountsSwitcher">
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:layout_width">@dimen/expander_icon_width</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+    <style name="AccountsSwitcher.SelectedAccountStyle" parent="@style/AccountsSwitcher">
+        <item name="android:layout_marginStart">@dimen/start_horiz_padding</item>
+    </style>
+    <style name="ChipAutocompleteDividerStyle">
+        <item name="android:background">@color/autocomplete_divider_color</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0px</item>
+        <item name="android:layout_marginStart">@dimen/chip_wrapper_start_padding</item>
+    </style>
+    <style name="ChipAutocompleteDividerStyle.PermissionItem" parent="@style/ChipAutocompleteDividerStyle">
+        <item name="android:background">@drawable/chip_autocomplete_divider_background</item>
+        <item name="android:layout_height">3.0dip</item>
+        <item name="android:layout_marginStart">0.0dip</item>
+    </style>
+    <style name="ChipAutocompleteWrapperStyle">
+        <item name="android:paddingTop">@dimen/chip_wrapper_top_padding</item>
+        <item name="android:paddingBottom">@dimen/chip_wrapper_bottom_padding</item>
+        <item name="android:paddingStart">@dimen/chip_wrapper_start_padding</item>
+        <item name="android:paddingEnd">@dimen/chip_wrapper_end_padding</item>
+    </style>
+    <style name="ChipDeleteIconStyle" parent="@style/ChipDeleteIconBaseStyle">
+        <item name="android:paddingStart">@dimen/chip_icon_padding</item>
+    </style>
+    <style name="ChipEndIconStyle" parent="@style/ChipIconBaseStyle">
+        <item name="android:layout_marginStart">@dimen/chip_icon_margin_end</item>
+    </style>
+    <style name="ChipPermissionStyle">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/chips_dropdown_permission_text</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/chips_permission_text</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="ChipStartIconStyle" parent="@style/ChipIconBaseStyle">
+        <item name="android:layout_marginEnd">@dimen/chip_icon_margin_end</item>
+    </style>
+    <style name="ChipSubtitleStyle">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/chips_dropdown_text</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:id">@android:id/text1</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="ChipTitleStyle">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/chips_dropdown_text</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:id">@android:id/title</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="RecipientEditTextViewBase">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/chip_height</item>
+        <item name="android:popupBackground">@android:color/white</item>
+        <item name="android:inputType">textEmailAddress|textMultiLine</item>
+        <item name="android:textDirection">locale</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="RtlOverlay.DialogWindowTitle.AppCompat" parent="@style/Base.DialogWindowTitle.AppCompat">
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.ActionBar.TitleItem" parent="@android:style/Widget">
+        <item name="android:layout_gravity">start|center</item>
+        <item name="android:paddingEnd">8.0dip</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem" parent="@android:style/Widget">
+        <item name="android:paddingEnd">16.0dip</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.InternalGroup" parent="@android:style/Widget">
+        <item name="android:layout_marginStart">16.0dip</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.Text" parent="@android:style/Widget">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.Search.DropDown" parent="@android:style/Widget">
+        <item name="android:paddingStart">@dimen/abc_dropdownitem_text_padding_left</item>
+        <item name="android:paddingEnd">4.0dip</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.Search.DropDown.Icon1" parent="@android:style/Widget">
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.Search.DropDown.Icon2" parent="@android:style/Widget">
+        <item name="android:layout_toStartOf">@id/edit_query</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.Search.DropDown.Query" parent="@android:style/Widget">
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.Search.DropDown.Text" parent="@style/Base.Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:layout_toStartOf">@android:id/icon2</item>
+        <item name="android:layout_toEndOf">@android:id/icon1</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.SearchView.MagIcon" parent="@android:style/Widget">
+        <item name="android:layout_marginStart">@dimen/abc_dropdownitem_text_padding_left</item>
+    </style>
+    <style name="RtlUnderlay.Widget.AppCompat.ActionButton" parent="@android:style/Widget">
+        <item name="android:paddingStart">12.0dip</item>
+        <item name="android:paddingEnd">12.0dip</item>
+    </style>
+    <style name="RtlUnderlay.Widget.AppCompat.ActionButton.Overflow" parent="@style/Base.Widget.AppCompat.ActionButton">
+        <item name="android:paddingStart">@dimen/abc_action_bar_overflow_padding_start_material</item>
+        <item name="android:paddingEnd">@dimen/abc_action_bar_overflow_padding_end_material</item>
+    </style>
+    <style name="ToastbarTextLine_Base" parent="@style/ToastBarShadow">
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:textSize">@dimen/toastbar_message_text_size</item>
+        <item name="android:textColor">@color/toastbar_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/toastbar_horizontal_padding</item>
+        <item name="android:paddingTop">@dimen/toastbar_vertical_padding</item>
+        <item name="android:paddingRight">@dimen/toastbar_horizontal_padding</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:lineSpacingMultiplier">@dimen/toastbar_line_spacing_multiplier</item>
+        <item name="android:inputType">textMultiLine|textNoSuggestions</item>
+        <item name="android:fontFamily">sans-serif-regular</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="bt_AclFixerDetailsDialogRadioButton">
+        <item name="android:textSize">@dimen/bt_acl_fix_more_options_radio_button_label_font_size</item>
+        <item name="android:textColor">@color/bt_acl_fix_more_radio_button_label</item>
+        <item name="android:paddingLeft">@dimen/bt_acl_fix_radio_text_spacing</item>
+        <item name="android:paddingTop">@dimen/bt_acl_fix_radio_space</item>
+        <item name="android:paddingRight">0.0dip</item>
+        <item name="android:paddingBottom">@dimen/bt_acl_fix_radio_space</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/bt_acl_fix_radio_text_spacing</item>
+        <item name="android:paddingEnd">0.0dip</item>
+    </style>
+    <style name="bt_AlignParentLeft">
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="bt_AlignParentRight">
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+    <style name="bt_ClusterPreferencesLayout_ClusterNotificationsTitle">
+        <item name="android:layout_toStartOf">@id/cluster_notifications_switch</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="bt_ClusterPreferencesLayout_ClusterSkipInboxDescription">
+        <item name="android:layout_toStartOf">@id/cluster_skip_inbox_checkbox</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="bt_ClusterPreferencesLayout_ClusterSkipInboxTitle">
+        <item name="android:layout_toStartOf">@id/cluster_skip_inbox_checkbox</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="bt_ClusterPreferencesLayout_DeleteClusterTitle">
+        <item name="android:layout_toStartOf">@id/delete_cluster_icon</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="bt_ComposeMessageFragment_ComposeFrom">
+        <item name="android:layout_toEndOf">@id/compose_from_label</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+    <style name="bt_ContactsAndResponseSwitcher_ContactsBcc">
+        <item name="android:layout_toEndOf">@id/contacts_bcc_label</item>
+    </style>
+    <style name="bt_ContactsAndResponseSwitcher_ContactsCc">
+        <item name="android:layout_toEndOf">@id/contacts_cc_label</item>
+    </style>
+    <style name="bt_ContactsAndResponseSwitcher_ContactsSummaryText">
+        <item name="android:layout_toStartOf">@id/contacts_invalid_icon</item>
+        <item name="android:layout_toEndOf">@id/contacts_response_switcher_container</item>
+    </style>
+    <style name="bt_ContactsAndResponseSwitcher_ContactsTo">
+        <item name="android:layout_toStartOf">@id/contacts_cc_bcc_toggle</item>
+        <item name="android:layout_toEndOf">@id/contacts_to_label</item>
+    </style>
+    <style name="bt_CoreTlView">
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:addStatesFromChildren">true</item>
+        <item name="android:layoutDirection">locale</item>
+    </style>
+    <style name="bt_CoreTlView_Item">
+        <item name="android:layoutDirection">locale</item>
+    </style>
+    <style name="bt_CoreTlView_Item.Text" parent="@style/bt_CoreTlView_Item">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="bt_CoreTlView_Item.Text.NewBadge" parent="@style/bt_CoreTlView_Item.Text">
+        <item name="android:textSize">@dimen/bt_item_list_top_line_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/bt_megalist_item_background</item>
+        <item name="android:background">@drawable/bt_topic_badge_rounded_corners</item>
+        <item name="android:paddingLeft">@dimen/bt_topic_items_new_badge_padding</item>
+        <item name="android:paddingRight">@dimen/bt_topic_items_new_badge_padding</item>
+        <item name="android:text">@string/bt_topic_item_new</item>
+        <item name="android:paddingStart">@dimen/bt_topic_items_new_badge_padding</item>
+        <item name="android:paddingEnd">@dimen/bt_topic_items_new_badge_padding</item>
+    </style>
+    <style name="bt_DetailedConversationExpandedMessage_MessageAuthor">
+        <item name="android:layout_toStartOf">@id/message_time</item>
+        <item name="android:layout_toEndOf">@id/message_author_avatar</item>
+    </style>
+    <style name="bt_DetailedConversationExpandedMessage_MessageAuthorEmail" parent="@style/bt_AlignParentRight">
+        <item name="android:layout_toEndOf">@id/message_author_avatar</item>
+    </style>
+    <style name="bt_DetailedConversationExpandedMessage_MessageSecondLineSummary" parent="@style/bt_AlignParentRight">
+        <item name="android:layout_toEndOf">@id/message_author_avatar</item>
+    </style>
+    <style name="bt_DialogTitleTextView">
+        <item name="android:textSize">@dimen/bt_dialog_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/bt_dark_text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/bt_dialog_title_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/bt_dialog_title_horizontal_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/bt_dialog_title_top_margin</item>
+        <item name="android:minHeight">@dimen/bt_dialog_title_minimum_height</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="bt_GenericSmartMailTlCarouselView_ToRightOfSmartMailImageContainer">
+        <item name="android:layout_toEndOf">@id/smartmail_image_container</item>
+    </style>
+    <style name="bt_GenericSmartMail_CvCard_Action">
+        <item name="android:background">@color/bt_generic_smartmail_cv_card_background</item>
+        <item name="android:paddingStart">@dimen/bt_generic_smartmail_cv_action_horizontal_padding</item>
+        <item name="android:paddingEnd">@dimen/bt_generic_smartmail_cv_action_horizontal_padding</item>
+    </style>
+    <style name="bt_GenericSmartMail_CvCollapsed_Icon">
+        <item name="android:background">@color/bt_generic_smartmail_cv_card_background</item>
+        <item name="android:paddingLeft">@dimen/bt_generic_smartmail_cv_collapsed_icon_padding_start</item>
+        <item name="android:paddingRight">@dimen/bt_generic_smartmail_cv_collapsed_icon_padding_end</item>
+        <item name="android:paddingStart">@dimen/bt_generic_smartmail_cv_collapsed_icon_padding_start</item>
+        <item name="android:paddingEnd">@dimen/bt_generic_smartmail_cv_collapsed_icon_padding_end</item>
+    </style>
+    <style name="bt_GenericSmartMail_Rsvp_Button">
+        <item name="android:textSize">@dimen/bt_item_list_snippet_size</item>
+        <item name="android:textColor">@color/bt_item_list_snippet</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/bt_smartmail_event_rsvp_padding</item>
+        <item name="android:paddingRight">@dimen/bt_smartmail_event_rsvp_padding</item>
+        <item name="android:layout_marginRight">@dimen/bt_generic_smartmail_rsvp_margin</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:paddingStart">@dimen/bt_smartmail_event_rsvp_padding</item>
+        <item name="android:paddingEnd">@dimen/bt_smartmail_event_rsvp_padding</item>
+        <item name="android:layout_marginEnd">@dimen/bt_generic_smartmail_rsvp_margin</item>
+    </style>
+    <style name="bt_MediaPaletteMultiSelectActionView" parent="@style/bt_MediaPaletteMultiSelectActionViewBase">
+        <item name="android:paddingEnd">@dimen/bt_media_tray_multi_select_state_button_horizontal_padding</item>
+    </style>
+    <style name="bt_MessageDetailsLabel" parent="@style/bt_MessageDetailsLabelCommon">
+        <item name="android:paddingRight">@dimen/bt_detailed_conversation_margin</item>
+        <item name="android:paddingEnd">@dimen/bt_detailed_conversation_margin</item>
+    </style>
+    <style name="bt_MessageDetailsValue">
+        <item name="android:textSize">@dimen/bt_detailed_conversation_details_text_size</item>
+        <item name="android:textColor">@color/bt_dark_text</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="bt_PromoCardView_toRightOfAcceptAction">
+        <item name="android:layout_toEndOf">@id/accept_action</item>
+    </style>
+    <style name="bt_PromoCardView_toRightOfPromoImage">
+        <item name="android:layout_toEndOf">@id/promo_image</item>
+    </style>
+    <style name="bt_SignInActivity_LockupImageView_Land" parent="@style/bt_SignInActivity_LockupImageView">
+        <item name="android:layout_toStartOf">@id/sign_in_center_space</item>
+    </style>
+    <style name="bt_SignInActivity_LogoImageView_Land" parent="@style/bt_SignInActivity_LogoImageView">
+        <item name="android:layout_toEndOf">@id/sign_in_center_space</item>
+    </style>
+    <style name="bt_SmartMail_ActionTextView">
+        <item name="android:textColor">@color/bt_blue</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:paddingLeft">@dimen/bt_smartmail_actions_icon_margin</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/bt_smartmail_generic_actions_height</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:paddingStart">@dimen/bt_smartmail_actions_icon_margin</item>
+    </style>
+    <style name="bt_SnoozeBannerTextView">
+        <item name="android:textSize">@dimen/bt_snooze_banner_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/bt_snooze_banner_text_left_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/bt_snooze_banner_text_left_padding</item>
+    </style>
+    <style name="bt_SnoozeDialogSpinner" parent="@style/Widget.AppCompat.Spinner">
+        <item name="android:textSize">@dimen/bt_dialog_text_size</item>
+        <item name="android:textColor">@color/bt_dark_text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">@dimen/bt_snooze_dialog_spinner_right_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/bt_dialog_row_height</item>
+        <item name="android:layout_marginLeft">@dimen/bt_dialog_default_margin</item>
+        <item name="android:layout_marginRight">@dimen/bt_dialog_default_margin</item>
+        <item name="android:minHeight">@dimen/bt_dialog_row_height</item>
+        <item name="android:paddingEnd">@dimen/bt_snooze_dialog_spinner_right_padding</item>
+    </style>
+    <style name="bt_SpeedDialItemContainer" parent="@style/bt_SpeedDialItemContainer_Base">
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+    <style name="bt_SpeedDialItemContainer_Base">
+        <item name="android:gravity">end|center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/bt_speed_dial_item_height</item>
+        <item name="android:layout_marginLeft">@dimen/bt_speed_dial_item_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/bt_speed_dial_item_margin_right</item>
+        <item name="android:layout_marginStart">@dimen/bt_speed_dial_item_margin_left</item>
+        <item name="android:layout_marginEnd">@dimen/bt_speed_dial_item_margin_right</item>
+    </style>
+    <style name="bt_SpeedDialItemTitle">
+        <item name="android:textSize">@dimen/bt_speed_dial_font_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/bt_light_text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/bt_speed_dial_item_text_background</item>
+        <item name="android:paddingLeft">@dimen/bt_speed_dial_item_text_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/bt_speed_dial_item_text_padding_horizontal</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">@dimen/bt_speed_dial_item_text_height</item>
+        <item name="android:layout_marginRight">@dimen/bt_speed_dial_item_margin_left</item>
+        <item name="android:layout_marginBottom">@dimen/bt_speed_dial_item_text_margin_bottom</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:textIsSelectable">false</item>
+        <item name="android:layout_marginEnd">@dimen/bt_speed_dial_item_margin_left</item>
+    </style>
+    <style name="bt_TaskContainerInConversationView_Title">
+        <item name="android:layout_toStartOf">@id/task_remove_ghost</item>
+        <item name="android:layout_toEndOf">@id/task_icon_ghost</item>
+    </style>
+</resources>

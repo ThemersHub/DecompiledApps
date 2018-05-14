@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/heroImageContainer" android:background="@color/bt_generic_smartmail_cv_card_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.bigtop.widgets.RecyclerViewImageView android:id="@id/heroImage" android:layout_width="fill_parent" android:layout_height="@dimen/bt_generic_smartmail_cv_small_hero_image_height" android:importantForAccessibility="no" />
+        <ImageView android:layout_gravity="center" android:id="@id/hero_image_overlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
+        <include android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/bt_generic_smartmail_attribution_text_view" />
+    </FrameLayout>
+    <View android:id="@id/empty_placeholder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/bt_generic_smartmail_cv_no_hero_image_empty_space" />
+    <include layout="@layout/bt_generic_smartmail_cv_header_title_subtitle" />
+</LinearLayout>

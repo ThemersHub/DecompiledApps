@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bt_megalist_item_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bt_transparent_background_with_pressed_state" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="@dimen/bt_item_list_icon_side" android:layout_height="@dimen/bt_item_list_icon_side" android:layout_margin="@dimen/bt_item_list_padding" android:scaleType="centerInside" android:contentDescription="@string/bt_cd_draft_icon" app:srcCompat="@drawable/quantum_ic_drafts_grey600_24" />
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/bt_item_list_draft_text_top_bottom_padding" android:paddingBottom="@dimen/bt_item_list_draft_text_top_bottom_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/bt_item_list_item_spacing" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/bt_item_list_author_size" android:textStyle="bold" android:textColor="@color/bt_red" android:ellipsize="end" android:id="@id/edit_line" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bt_detailed_conversation_draft" android:singleLine="true" android:fontFamily="sans-serif" />
+            <com.google.android.apps.bigtop.widgets.MegalistTextView android:textSize="@dimen/bt_item_list_snippet_size" android:textColor="@color/bt_faint_text" android:id="@id/snippet" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="sans-serif" />
+        </LinearLayout>
+        <ImageView android:id="@id/trash" android:background="@drawable/bt_transparent_background_with_pressed_state" android:layout_width="@dimen/bt_item_list_icon_side" android:layout_height="@dimen/bt_item_list_icon_side" android:layout_margin="@dimen/bt_item_list_padding" android:scaleType="centerInside" android:contentDescription="@string/bt_cd_delete_draft_icon" app:srcCompat="@drawable/bt_ic_trash_g50_24dp" />
+    </LinearLayout>
+    <include android:id="@id/detailed_conversation_message_bottom_border" android:layout_width="fill_parent" android:layout_height="@dimen/bt_stroke_width" android:layout_alignParentBottom="true" layout="@layout/bt_divider" />
+</RelativeLayout>

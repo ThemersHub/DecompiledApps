@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/topic_trip_content" android:background="@drawable/bt_topic_trip_summary_view" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="@dimen/bt_topic_trip_summary_details_hero_image_width" android:layout_height="fill_parent">
+        <ImageView android:id="@id/topic_trip_summary_hero_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <include android:layout_gravity="bottom|center" android:id="@id/topic_trip_summmary_real_time_badge" android:layout_width="fill_parent" android:layout_height="@dimen/bt_topic_trip_summary_details_realtime_badge_height" layout="@layout/bt_generic_smartmail_status_chip" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/topic_trip_summary_details_container" android:paddingLeft="@dimen/bt_topic_trip_summary_details_horizontal_padding" android:paddingTop="@dimen/bt_topic_trip_summary_details_vertical_spacing" android:paddingRight="@dimen/bt_topic_trip_summary_details_horizontal_padding" android:paddingBottom="@dimen/bt_topic_trip_summary_details_vertical_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/bt_topic_trip_summary_min_height">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.apps.bigtop.widgets.MegalistTextView android:textSize="@dimen/bt_topic_trip_summary_details_name_text_size" android:textStyle="bold" android:textColor="@color/bt_white_text" android:layout_gravity="start" android:id="@id/topic_trip_summary_details_name" style="@style/bt_TopicTripSummaryDetails_Text" />
+            </FrameLayout>
+            <com.google.android.apps.bigtop.widgets.MegalistTextView android:textColor="@color/bt_topic_trip_summary_details_text_transparent" android:id="@id/topic_trip_summary_details_date" android:paddingTop="@dimen/bt_topic_trip_summary_details_text_spacing" style="@style/bt_TopicTripSummaryDetails_Text" />
+            <com.google.android.apps.bigtop.widgets.MegalistTextView android:textSize="@dimen/bt_topic_trip_summary_details_new_count_badge_text_size" android:gravity="center_vertical" android:id="@id/topic_trip_summary_new_count_badge" android:background="@drawable/bt_topic_badge_rounded_corners" android:paddingLeft="@dimen/bt_topic_trip_summary_details_new_count_badge_horizontal_padding" android:paddingRight="@dimen/bt_topic_trip_summary_details_new_count_badge_horizontal_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/bt_topic_trip_summary_details_new_count_badge_height" android:layout_marginTop="@dimen/bt_topic_trip_summary_details_vertical_spacing" />
+            <LinearLayout android:orientation="vertical" android:id="@id/topic_trip_summary_details_list" android:paddingTop="@dimen/bt_topic_trip_summary_details_vertical_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <com.google.android.apps.bigtop.widgets.MegalistTextView android:textSize="@dimen/bt_topic_trip_summary_action_text_size" android:textColor="@color/bt_white_button_text" android:gravity="center_vertical" android:id="@id/topic_trip_action_button" android:paddingLeft="@dimen/bt_topic_trip_summary_details_horizontal_padding" android:paddingRight="@dimen/bt_topic_trip_summary_details_horizontal_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/bt_topic_trip_summary_action_height" />
+    </LinearLayout>
+    <FrameLayout android:background="@color/bt_megalist_item_background" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:id="@id/state_icon" android:visibility="gone" android:layout_width="@dimen/bt_core_tl_layout_state_icon_width" android:layout_height="@dimen/bt_core_tl_normal_layout_first_line_height" android:layout_marginLeft="@dimen/bt_topic_trip_summary_snooze_icon_maring_left" />
+    </FrameLayout>
+</LinearLayout>

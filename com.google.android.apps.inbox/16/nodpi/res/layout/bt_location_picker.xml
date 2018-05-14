@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bt_snooze_dialog_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/bt_dialog_title" />
+    <include layout="@layout/bt_place_autocomplete_input" />
+    <android.support.v7.widget.RecyclerView android:id="@id/alias_list" android:background="@color/bt_light_grey" android:paddingBottom="@dimen/bt_snooze_dialog_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/name_the_place_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/bt_dialog_row_height" android:layout_marginRight="@dimen/bt_dialog_side_margin">
+        <android.support.v7.widget.AppCompatEditText android:textSize="@dimen/bt_dialog_text_size" android:id="@id/location_name_input" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/bt_dialog_edit_text_side_margin" android:hint="@string/bt_task_location_name_input_hint" android:singleLine="true" android:layout_weight="1.0" android:inputType="textCapSentences" />
+        <TextView android:textSize="@dimen/bt_dialog_text_size" android:gravity="center_vertical" android:id="@id/name_this_place_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/bt_dialog_side_margin" android:text="@string/bt_task_location_name_this_place" android:layout_weight="1.0" />
+        <CheckBox android:id="@id/name_this_place_checkbox" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/button_container" android:paddingBottom="@dimen/bt_snooze_dialog_vertical_margin" android:visibility="gone" style="@style/bt_SnoozeDialogButtonContainer">
+        <TextView android:id="@id/set_reminder" android:text="@string/bt_task_location_set_reminder" style="@style/bt_SnoozeDialogButton" />
+    </FrameLayout>
+</LinearLayout>

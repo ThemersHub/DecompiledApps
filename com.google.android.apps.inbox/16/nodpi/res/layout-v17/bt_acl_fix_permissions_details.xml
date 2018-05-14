@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/bt_acl_fix_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/main_toolbar" layout="@layout/bt_toolbar" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/bt_acl_fix_more_options_menu_side_padding" android:paddingRight="@dimen/bt_acl_fix_more_options_menu_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/bt_acl_fix_more_options_menu_side_padding" android:paddingEnd="@dimen/bt_acl_fix_more_options_menu_side_padding">
+            <TextView android:id="@id/share_details_title" android:text="@string/bt_acl_fix_detail_options_title" style="@style/bt_AclFixerDetailsDialogTextView" />
+            <RadioGroup android:orientation="vertical" android:id="@id/options_types" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <android.support.v7.widget.AppCompatRadioButton android:id="@id/acl_fix_add_increase_domain_visibility" android:text="@string/bt_acl_fix_option_type_domain_visibility" style="@style/bt_AclFixerDetailsDialogRadioButton" />
+                <android.support.v7.widget.AppCompatRadioButton android:id="@id/acl_fix_add_increase_public_visibility" android:text="@string/bt_acl_fix_option_type_public_visibility" style="@style/bt_AclFixerDetailsDialogRadioButton" />
+                <android.support.v7.widget.AppCompatRadioButton android:id="@id/acl_fix_add_collaborators" android:text="@string/bt_acl_fix_detail_add_collaborators" style="@style/bt_AclFixerDetailsDialogRadioButton" />
+                <android.support.v7.widget.AppCompatRadioButton android:id="@id/send_without_sharing" android:text="@string/bt_acl_fix_detail_send_without_sharing" style="@style/bt_AclFixerDetailsDialogRadioButton" />
+            </RadioGroup>
+            <TextView android:id="@id/acl_warning" android:text="@string/bt_acl_fix_warning" style="@style/bt_AclFixerDetailsDialogTextView" />
+            <TextView android:id="@id/roles_header" android:text="@string/bt_acl_fix_detail_allowed_roles_title" style="@style/bt_AclFixerDetailsDialogTextView" />
+            <RadioGroup android:orientation="vertical" android:id="@id/roles_choices" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <android.support.v7.widget.AppCompatRadioButton android:id="@id/reader" android:text="@string/bt_acl_fix_role_view" style="@style/bt_AclFixerDetailsDialogRadioButton" />
+                <android.support.v7.widget.AppCompatRadioButton android:id="@id/commenter" android:text="@string/bt_acl_fix_role_comment" style="@style/bt_AclFixerDetailsDialogRadioButton" />
+                <android.support.v7.widget.AppCompatRadioButton android:id="@id/writer" android:text="@string/bt_acl_fix_role_edit" style="@style/bt_AclFixerDetailsDialogRadioButton" />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

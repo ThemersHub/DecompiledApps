@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?android:selectableItemBackground" android:paddingLeft="@dimen/bt_task_contact_data_padding" android:paddingRight="@dimen/bt_task_contact_data_padding" android:layout_width="fill_parent" android:layout_height="@dimen/bt_task_contact_data_height" android:paddingStart="@dimen/bt_task_contact_data_padding" android:paddingEnd="@dimen/bt_task_contact_data_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.android.bitmap.view.BitmapDrawableImageView android:id="@id/contact_icon" android:background="@drawable/bt_ic_avatar_48dp" android:layout_width="@dimen/bt_task_contact_data_icon_size" android:layout_height="@dimen/bt_task_contact_data_icon_size" android:layout_marginRight="@dimen/bt_task_contact_data_cell_padding" android:layout_marginEnd="@dimen/bt_task_contact_data_cell_padding" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/bt_task_contact_data_name_text_size" android:textColor="@color/bt_dark_text" android:ellipsize="end" android:id="@id/contact_name" android:paddingBottom="@dimen/bt_task_contact_data_cell_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="@dimen/bt_task_contact_data_detail_text_size" android:textColor="@color/bt_faint_text" android:ellipsize="end" android:id="@id/contact_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <ImageView android:id="@id/contact_action" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/quantum_ic_call_grey600_24" />
+    </LinearLayout>
+</RelativeLayout>

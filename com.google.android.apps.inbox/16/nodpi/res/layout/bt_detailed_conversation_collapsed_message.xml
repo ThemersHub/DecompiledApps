@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bt_megalist_item_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/bt_visual_element_hierarchy_cv_message" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/message_header" android:background="@drawable/bt_compose_background_with_pressed_state" android:layout_width="fill_parent" android:layout_height="@dimen/bt_detailed_conversation_collapsed_header_height">
+        <com.google.android.apps.bigtop.widgets.RecyclerViewImageView android:id="@id/message_author_avatar" android:padding="@dimen/bt_detailed_conversation_margin" android:layout_width="@dimen/bt_detailed_conversation_avatar_side" android:layout_height="@dimen/bt_detailed_conversation_avatar_side" android:scaleType="centerCrop" android:importantForAccessibility="no" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/bt_detailed_conversation_margin">
+            <com.google.android.apps.bigtop.widgets.MegalistTextView android:textSize="@dimen/bt_item_list_author_size" android:textStyle="bold" android:textColor="@color/bt_dark_text" android:ellipsize="end" android:id="@id/message_author" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawablePadding="@dimen/bt_detailed_conversation_margin" android:importantForAccessibility="no" android:fontFamily="sans-serif" />
+            <com.google.android.apps.bigtop.widgets.MegalistTextView android:textSize="@dimen/bt_message_body_text_size" android:textColor="@color/bt_faint_text" android:id="@id/large_snippet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="sans-serif" />
+        </LinearLayout>
+    </LinearLayout>
+    <include android:id="@id/detailed_conversation_message_bottom_border" android:layout_width="fill_parent" android:layout_height="@dimen/bt_stroke_width" android:layout_marginLeft="@dimen/bt_detailed_conversation_divider_horizontal_margin" android:layout_marginRight="@dimen/bt_detailed_conversation_divider_horizontal_margin" layout="@layout/bt_divider" />
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/root_view" style="@style/bt_BrickActivity_RootView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/brick_image_full_width" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" />
+    <ImageView android:id="@id/brick_image" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:scaleType="center" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/bt_BrickActivity_ScrollView">
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/brick_message" style="@style/bt_BrickActivity_MessageTextView" />
+                <TextView android:id="@id/extra_link" style="@style/bt_BrickActivity_ExtraLinkTextView" />
+            </LinearLayout>
+        </ScrollView>
+        <View style="@style/bt_BrickActivity_LinkButtonSeparator" />
+        <TextView android:id="@id/brick_link" style="@style/bt_BrickActivity_LinkButton" />
+    </LinearLayout>
+</LinearLayout>

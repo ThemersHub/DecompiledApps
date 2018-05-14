@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/barcode_fragment" android:paddingTop="@dimen/bt_action_bar_height" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/barcode_image" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_margin="@dimen/bt_barcode_quiet_zone_size" android:layout_weight="1.0" android:layout_centerInParent="true" android:contentDescription="@string/bt_cd_barcode_image" />
+        <include android:id="@id/barcode_divider" android:layout_width="fill_parent" android:layout_height="@dimen/bt_stroke_width" layout="@layout/bt_divider" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/bt_barcode_title_subtitle_horizontal_padding" android:paddingTop="@dimen/bt_barcode_title_subtitle_vertical_padding" android:paddingRight="@dimen/bt_barcode_title_subtitle_horizontal_padding" android:paddingBottom="@dimen/bt_barcode_title_subtitle_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.bigtop.widgets.MegalistTextView android:textSize="@dimen/bt_generic_smartmail_cv_header_title_text_size" android:textColor="@android:color/black" android:ellipsize="end" android:id="@id/barcode_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:fontFamily="sans-serif-medium" />
+            <com.google.android.apps.bigtop.widgets.MegalistTextView android:textSize="@dimen/bt_generic_smartmail_cv_header_subtitle_text_size" android:textColor="@android:color/black" android:ellipsize="end" android:id="@id/barcode_subtitle" android:paddingTop="@dimen/bt_generic_smartmail_cv_card_subtitle_top_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif" />
+        </LinearLayout>
+        <include android:id="@id/details_divider" android:layout_width="fill_parent" android:layout_height="@dimen/bt_stroke_width" layout="@layout/bt_divider" />
+        <LinearLayout android:orientation="vertical" android:id="@id/barcode_details" android:paddingLeft="@dimen/bt_barcode_details_horizontal_padding" android:paddingRight="@dimen/bt_barcode_details_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

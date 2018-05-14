@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="@string/bt_preferences_account_specific_screen_key"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bigtop="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/bt_preferences_general_settings_title" android:key="@string/bt_preferences_general_category_key">
+        <ListPreference android:enabled="true" android:entries="@array/bt_right_swipe_actions" android:title="@string/bt_right_swipe_title" android:selectable="true" android:orderingFromXml="true" android:key="@string/bt_preferences_right_swipe_action_key" android:defaultValue="@string/bt_right_swipe_done" android:shouldDisableView="false" android:entryValues="@array/bt_right_swipe_action_values" />
+        <Preference android:title="@string/bt_preferences_snooze_settings_title" android:key="@string/bt_preferences_snooze_settings_key" android:fragment="com.google.android.apps.bigtop.prefs.SnoozePrefsFragment" />
+        <Preference android:title="@string/bt_preferences_signature_settings_title" android:key="@string/bt_preferences_signature_settings_key" android:fragment="com.google.android.apps.bigtop.prefs.SignaturePrefsFragment" />
+        <Preference android:title="@string/preferences_vacation_responder_title" android:key="@string/bt_preferences_vacation_responder_settings_key" />
+        <ListPreference android:enabled="true" android:entries="@array/bt_preferences_perfect_snippet_entries" android:title="@string/bt_preferences_snippet_title" android:selectable="true" android:orderingFromXml="true" android:key="@string/bt_preferences_perfect_snippet_key" android:defaultValue="@string/bt_preferences_enable_perfect_snippet" android:shouldDisableView="false" android:entryValues="@array/bt_preferences_perfect_snippet_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bt_preferences_timezone_changed_category_title" android:key="@string/bt_preferences_timezone_changed_category_key">
+        <ListPreference android:entries="@array/bt_timezone_reindex_options" android:title="@string/bt_preferences_timezone_reindex_options_title" android:orderingFromXml="true" android:key="@string/bt_preferences_timezone_reindex_options_key" android:entryValues="@array/bt_timezone_reindex_option_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bt_preferences_notification_settings_title" android:key="@string/bt_preferences_notification_category_key">
+        <com.google.android.apps.bigtop.prefs.BigTopSwitchPreference android:enabled="true" android:title="@string/bt_preferences_notifications_enabled_title" android:selectable="true" android:orderingFromXml="true" android:key="@string/bt_preferences_notification_enabled_key" android:shouldDisableView="false" bigtop:defaultProperty="ENABLE_NOTIFICATIONS" />
+        <com.google.android.apps.bigtop.prefs.BigTopListPreference android:enabled="true" android:entries="@array/bt_preferences_notification_level_entries" android:title="@string/bt_notification_level_preference_title" android:selectable="true" android:orderingFromXml="true" android:key="@string/bt_preferences_nl_setting_key" android:summary="%s" android:dependency="@string/bt_preferences_notification_enabled_key" android:shouldDisableView="true" android:dialogTitle="@string/bt_notification_level_preference_title" bigtop:entrySubtexts="@array/bt_preferences_notification_level_subtexts" />
+        <com.google.android.apps.bigtop.prefs.BigTopSwitchPreference android:enabled="true" android:title="@string/bt_preferences_notification_vibrations_title" android:selectable="true" android:orderingFromXml="true" android:key="@string/bt_preferences_notification_vibrations_key" android:dependency="@string/bt_preferences_notification_enabled_key" android:shouldDisableView="true" bigtop:defaultProperty="ENABLE_NOTIFICATION_VIBRATIONS" />
+        <com.google.android.apps.bigtop.prefs.BigTopSwitchPreference android:enabled="true" android:title="@string/bt_preferences_notification_lights_title" android:selectable="true" android:orderingFromXml="true" android:key="@string/bt_preferences_notification_lights_key" android:dependency="@string/bt_preferences_notification_enabled_key" android:shouldDisableView="true" bigtop:defaultProperty="ENABLE_NOTIFICATION_LIGHTS" />
+        <RingtonePreference android:enabled="true" android:title="@string/bt_preferences_notification_ringtone_title" android:orderingFromXml="true" android:key="@string/bt_preferences_notification_ringtone_key" android:dependency="@string/bt_preferences_notification_enabled_key" android:shouldDisableView="true" android:ringtoneType="notification" android:showDefault="true" android:showSilent="true" />
+        <Preference android:enabled="true" android:title="@string/bt_preferences_notification_disable_gmail_title" android:selectable="true" android:orderingFromXml="true" android:key="@string/bt_preferences_notification_disable_gmail_key" android:dependency="@string/bt_preferences_notification_enabled_key" android:shouldDisableView="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bt_preferences_clusters_section_title" android:key="@string/bt_preferences_labels_notifications_settings_category_key">
+        <com.google.android.apps.bigtop.prefs.BigTopSliderPreference android:title="@string/bt_preference_days_of_mail_to_sync_title" android:key="@string/bt_preferences_days_of_mail_to_sync_key" android:dialogTitle="@string/bt_preference_days_of_mail_to_sync_title" bigtop:minValue="1" bigtop:maxValue="30" />
+        <Preference android:title="@string/bt_preferences_labels_notifications_title" android:key="@string/bt_preferences_labels_notifications_settings_key" android:fragment="com.google.android.apps.bigtop.prefs.LabelsAndNotificationsPrefsFragment" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bt_highlights_settings_category_title" android:key="@string/bt_preferences_ash_settings_category_key">
+        <SwitchPreference android:enabled="true" android:title="@string/bt_highlights_settings_toggle_title" android:selectable="true" android:orderingFromXml="true" android:key="@string/bt_preferences_ash_settings_key" android:defaultValue="false" android:shouldDisableView="false" />
+        <Preference android:enabled="true" android:title="@string/bt_highlights_training_setting_title" android:selectable="true" android:orderingFromXml="true" android:key="@string/bt_preferences_ash_htt_settings_key" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bt_preferences_assists_category_title" android:key="@string/bt_preferences_assists_settings_category_key">
+        <Preference android:key="@string/bt_preferences_nudging_settings_key" android:fragment="com.google.android.apps.bigtop.prefs.NudgingPrefsFragment" />
+        <Preference android:title="@string/bt_preferences_inbox_tips_category_title" android:key="@string/bt_preferences_inbox_tips_key" android:fragment="com.google.android.apps.bigtop.prefs.InboxTipsPrefsFragment" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bt_preferences_locations_section_title" android:key="@string/bt_preferences_location_category_key">
+        <com.google.android.apps.bigtop.prefs.LocationServicesPreference android:title="@string/bt_preferences_locations_services_title" android:key="@string/bt_preferences_location_services_key" />
+        <com.google.android.apps.bigtop.prefs.LocationLearnMorePreference android:title="@string/bt_preferences_locations_about_title" android:key="@string/bt_preferences_location_about_key" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bt_preferences_debug_section_title" android:key="@string/bt_preferences_debug_category_key">
+        <Preference android:title="@string/bt_preferences_locations_debug_report_title" android:key="@string/bt_preferences_debug_location_report_key" />
+        <SwitchPreference android:title="@string/bt_preferences_clipboard_promotion_seen" android:key="@string/bt_preferences_debug_reset_clipboard_promotion_key" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bt_preferences_experiment_overrides_category_title" android:key="@string/bt_preferences_experiment_overrides_category_key">
+        <Preference android:title="@string/bt_preferences_experiment_overrides_title" android:key="@string/bt_preferences_experiment_overrides_key" android:fragment="com.google.android.apps.bigtop.prefs.ExperimentOverridesPreferenceFragment" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bt_preferences_privacy_title" android:key="@string/bt_preferences_privacy_category_key">
+        <Preference android:title="@string/bt_preferences_delete_search_history_title" android:key="@string/bt_preferences_delete_search_history_key" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bt_preferences_bigtop_data_account_settings_category_title" android:key="@string/bt_preferences_bigtop_data_account_settings_category_key">
+        <Preference android:enabled="true" android:title="@string/bt_preferences_bigtop_data_clear_database_title" android:selectable="true" android:orderingFromXml="true" android:key="@string/bt_preferences_bigtop_data_clear_database_key" android:shouldDisableView="false" />
+    </PreferenceCategory>
+    <com.google.android.libraries.firebase.crash1p.preferences.FirebaseCrashPreferenceView android:enabled="true" android:title="@string/bt_preferences_crash_reporting_title" android:selectable="true" android:orderingFromXml="true" android:key="@string/bt_preferences_crash_reporting_key" android:summary="@string/bt_preferences_crash_reporting_summary" android:shouldDisableView="false" />
+</PreferenceScreen>

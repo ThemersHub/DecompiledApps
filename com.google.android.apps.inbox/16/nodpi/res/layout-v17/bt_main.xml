@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.bigtop.widgets.DraggableLayout android:id="@id/fragment_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:layout_gravity="start|bottom|center" android:id="@id/method_profile_toggle_button" android:paddingLeft="@dimen/bt_sharknado_button_edge_padding" android:paddingBottom="@dimen/bt_sharknado_button_edge_padding" android:layout="@layout/bt_method_profile_toggle_button" android:inflatedId="@id/method_profile_toggle_button" android:layout_width="@dimen/bt_sharknado_button_width" android:layout_height="@dimen/bt_sharknado_button_height" android:paddingStart="@dimen/bt_sharknado_button_edge_padding" />
+        <FrameLayout android:id="@id/main_toolbar_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/main_toolbar" layout="@layout/bt_toolbar" />
+        </FrameLayout>
+        <ViewStub android:layout_gravity="end|bottom|center" android:id="@id/floating_action_buttons" android:layout="@layout/bt_floating_action_buttons" android:inflatedId="@id/floating_action_buttons" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/bt_floating_action_button_margin" android:layout_marginRight="@dimen/bt_floating_action_button_margin" android:importantForAccessibility="yes" />
+        <ViewStub android:id="@id/speed_dial_view" android:layout="@layout/bt_speed_dial_view_container" android:inflatedId="@id/speed_dial_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <ViewStub android:layout_gravity="start" android:id="@id/drawer_list_view_stub" android:layout="@layout/bt_nav_drawer_list" android:layout_width="@dimen/bt_nav_width" android:layout_height="fill_parent" />
+</android.support.v4.widget.DrawerLayout>

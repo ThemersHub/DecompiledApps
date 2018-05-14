@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/main_toolbar" layout="@layout/bt_toolbar" />
+    <android.support.v7.widget.AppCompatEditText android:textColor="@android:color/black" android:id="@id/shortcut_name_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/bt_default_margin" android:hint="@string/bt_shortcut_name_entry_hint" android:singleLine="true" android:imeOptions="actionDone|flagNoFullscreen" android:textIsSelectable="false" android:textCursorDrawable="@null" />
+    <TextView android:textStyle="bold" android:textColor="@color/bt_red" android:id="@id/shortcut_name_validation_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/bt_default_margin" android:layout_marginRight="@dimen/bt_default_margin" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@id/cancel_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="@dimen/bt_default_margin" android:text="@string/bt_action_cancel" />
+        <Button android:id="@id/accept_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="@dimen/bt_default_margin" android:text="@string/bt_action_accept" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/deep_picker" android:paddingLeft="@dimen/bt_media_palette_open_deep_picker_padding" android:paddingRight="@dimen/bt_media_palette_open_deep_picker_padding" android:layout_width="fill_parent" android:layout_height="@dimen/bt_media_palette_open_deep_picker_height">
+        <TextView android:textSize="@dimen/bt_media_palette_open_deep_picker_title_font_size" android:textColor="@color/bt_smartmail_attachment_file_type_text" android:id="@id/deep_picker_title" android:paddingLeft="@dimen/bt_media_palette_open_deep_picker_title_padding" android:paddingRight="@dimen/bt_media_palette_open_deep_picker_title_padding" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:fontFamily="roboto" style="@style/bt_AlignParentLeft" />
+        <com.google.android.apps.bigtop.widgets.RtlImageView android:id="@id/deep_picker_icon" android:background="?selectableItemBackgroundBorderless" android:layout_width="@dimen/bt_media_palette_open_deep_picker_icon_size" android:layout_height="@dimen/bt_media_palette_open_deep_picker_icon_size" android:scaleType="centerInside" android:layout_centerVertical="true" app:srcCompat="@drawable/quantum_ic_keyboard_arrow_right_grey600_24" style="@style/bt_AlignParentRight" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/zero_state_message_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/bt_media_item_height">
+        <TextView android:layout_gravity="center" android:id="@id/zero_state_message" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <com.google.android.apps.bigtop.widgets.BigTopHorizontalCarousel android:id="@id/carousel_view" android:layout_width="fill_parent" android:layout_height="@dimen/bt_media_item_height" app:layout_spaceStart="@dimen/bt_media_palette_margin_horizontal" app:layout_spaceBetween="@dimen/bt_media_item_space_horizontal" />
+    <RelativeLayout android:id="@id/spinner_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/bt_media_item_height">
+        <ProgressBar android:layout_width="@dimen/bt_media_palette_spinner_width" android:layout_height="@dimen/bt_media_palette_spinner_height" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/divider" android:layout_width="fill_parent" android:layout_height="@dimen/bt_media_palette_row_divider_height" android:layout_marginTop="@dimen/bt_media_palette_row_margin" app:srcCompat="@drawable/bt_drop_shadow_top" />
+</LinearLayout>

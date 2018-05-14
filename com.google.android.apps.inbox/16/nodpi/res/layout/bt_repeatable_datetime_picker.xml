@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bt_snooze_dialog_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/bt_dialog_title" />
+    <TextView android:id="@id/date_selector" android:paddingTop="@dimen/bt_repeatable_datetime_picker_text_vertical_padding" android:paddingBottom="@dimen/bt_repeatable_datetime_picker_text_vertical_padding" style="@style/bt_SnoozeDialogSpinner" />
+    <View style="@style/bt_SnoozeDialogSpinnerDivider" />
+    <com.google.android.apps.bigtop.widgets.AlwaysNotifyOnItemSelectedSpinner android:id="@id/time_selector" style="@style/bt_SnoozeDialogSpinner" />
+    <View style="@style/bt_SnoozeDialogSpinnerDivider" />
+    <com.google.android.apps.bigtop.widgets.AlwaysNotifyOnItemSelectedSpinner android:id="@id/recurrence_selector" android:layout_height="wrap_content" style="@style/bt_SnoozeDialogSpinner" />
+    <View android:id="@id/recurrence_selector_divider" style="@style/bt_SnoozeDialogSpinnerDivider" />
+    <LinearLayout android:paddingBottom="@dimen/bt_snooze_dialog_vertical_margin" style="@style/bt_SnoozeDialogButtonContainer">
+        <TextView android:id="@id/dialog_done_button" android:text="@string/bt_repeatable_datetime_picker_done" style="@style/bt_SnoozeDialogButton" />
+    </LinearLayout>
+</LinearLayout>

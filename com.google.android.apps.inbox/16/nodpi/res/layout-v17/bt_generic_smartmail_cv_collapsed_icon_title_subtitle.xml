@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="top" android:layout_width="fill_parent" android:layout_height="@dimen/bt_generic_smartmail_cv_collapsed_row_height" style="@style/bt_GenericSmartMail_CvCard"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="@dimen/bt_generic_smartmail_cv_collapsed_row_height">
+        <FrameLayout android:layout_width="@dimen/bt_generic_smartmail_cv_collapsed_icon_column_width" android:layout_height="fill_parent">
+            <com.google.android.apps.bigtop.widgets.RecyclerViewImageView android:layout_gravity="center" android:id="@id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/bt_GenericSmartMail_CvCollapsed_Icon">
+            <TextView android:textSize="@dimen/bt_generic_smartmail_cv_card_collapsed_title_text_size" android:textColor="@color/bt_generic_smartmail_cv_font_black" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif-medium" />
+            <TextView android:textSize="@dimen/bt_generic_smartmail_cv_card_collapsed_subtitle_text_size" android:textColor="@color/bt_generic_smartmail_cv_font_light" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bt_generic_smartmail_cv_collapsed_text_lines_margin_top" android:maxLines="1" android:fontFamily="sans-serif" />
+        </LinearLayout>
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/share_icon" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="@dimen/bt_generic_smartmail_cv_share_icon_width" android:layout_height="@dimen/bt_generic_smartmail_cv_share_icon_height" android:layout_marginLeft="@dimen/bt_generic_smartmail_cv_card_collapsed_share_icon_margin" android:layout_marginRight="@dimen/bt_generic_smartmail_cv_card_collapsed_share_icon_margin" android:contentDescription="@string/bt_share_saved_item" android:layout_marginStart="@dimen/bt_generic_smartmail_cv_card_collapsed_share_icon_margin" android:layout_marginEnd="@dimen/bt_generic_smartmail_cv_card_collapsed_share_icon_margin" app:srcCompat="@drawable/quantum_ic_googleplus_reshare_grey600_24" />
+    </LinearLayout>
+    <include android:id="@id/divider" android:layout_width="fill_parent" android:layout_height="@dimen/bt_generic_smartmail_divider_height" layout="@layout/bt_divider" />
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root_view" style="@style/bt_BrickActivity_RootView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.bigtop.widgets.FullWidthImageView android:id="@id/brick_image_full_width" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ImageView android:id="@id/brick_image" android:paddingTop="@dimen/bt_brick_regular_image_top_padding" android:paddingBottom="@dimen/bt_brick_regular_image_bottom_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/bt_BrickActivity_ScrollView">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/brick_message" style="@style/bt_BrickActivity_MessageTextView" />
+            <TextView android:id="@id/extra_link" style="@style/bt_BrickActivity_ExtraLinkTextView" />
+        </LinearLayout>
+    </ScrollView>
+    <View style="@style/bt_BrickActivity_LinkButtonSeparator" />
+    <TextView android:id="@id/brick_link" style="@style/bt_BrickActivity_LinkButton" />
+</LinearLayout>

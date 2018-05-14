@@ -1,0 +1,76 @@
+body {
+    font-family: sans-serif;
+    font-size: 80% !important;
+    line-height: 1.4;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+blockquote {
+    margin-left: 0.8ex !important;
+    margin-right: 0 !important;
+    border-left:1px #ccc solid !important;
+    padding-left: 1ex !important;
+}
+
+.elided-region-three-dots {
+    border-radius: 10px;
+    padding: 6px;
+    font-size:15px;
+    color:#8a8a8a;
+}
+
+.termHighlighted {
+    background-color: rgba(251, 246, 167, 0.5);"
+}
+
+.mail-message-content pre {
+    white-space: pre-wrap;
+}
+
+table.munged {
+    width: auto !important;
+    table-layout: auto !important;
+}
+
+td.munged {
+    width: auto !important;
+    white-space: normal !important;
+}
+
+.initial-load {
+    /* 0x0 and 1x1 may be short-circuited by WebView */
+    width: 2px;
+    height: 2px;
+    -webkit-transform: translate3d(0, 0, 1px);
+    -webkit-animation-name: initial-load-noop-animation;
+    -webkit-animation-duration: 1ms;  /* doesn't matter */
+}
+
+/* Animating the z-position is fast and does not actually change anything
+ * in the default perspective.
+ */
+@-webkit-keyframes initial-load-noop-animation {
+    from {
+        -webkit-transform: translate3d(0, 0, 1px);
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Clears any flow that is present in pasted html. */
+.gmail_extra, .gmail_quote {
+  clear: both;
+}
+
+a:link {
+    color: #3367d6;
+}
+
+.quoted-text {
+    color: #757575;
+}
