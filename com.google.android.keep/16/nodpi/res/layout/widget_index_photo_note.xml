@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/backdrop" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/photos" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/photo1" android:background="@color/image_placeholder_background" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_weight="1.0" />
+            <ImageView android:id="@id/photo2" android:background="@color/image_placeholder_background" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_weight="1.0" />
+            <ImageView android:id="@id/photo3" android:background="@color/image_placeholder_background" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/text_backdrop" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/WidgetNoteContainer">
+            <TextView android:id="@id/title" style="@style/WidgetNoteTitleStyle" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" android:layout_below="@id/title" style="@style/WidgetNoteDescriptionStyle" />
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/description" android:layout_alignParentBottom="true" layout="@layout/note_attachment_elements" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/pinned_icon" android:layout_width="18.0dip" android:layout_height="18.0dip" app:srcCompat="@drawable/ic_pin_stroke_blue_24" style="@style/IndexPinnedIcon" />
+    <include layout="@layout/widget_touch_layer" />
+</FrameLayout>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.google.android.keep" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.voicesearch.AUDIO_FILE_ACCESS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <application android:allowTaskReparenting="true" android:backupAgent="com.google.android.keep.backup.KeepBackupAgent" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="com.google.android.keep.activities.KeepApplication" android:requiredAccountType="com.google" android:restoreAnyVersion="true" android:roundIcon="@mipmap/product_logo_keep_round_launcher_color_48" android:supportsRtl="true" android:usesCleartextTraffic="false">
+        <activity android:label="@string/app_name" android:launchMode="singleTop" android:name="com.google.android.keep.activities.BrowseActivity" android:theme="@style/KeepAppTheme" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.google.memory.note"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.chromium.arc.intent.action.CREATE_NOTE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+        </activity>
+        <activity android:name="com.google.android.keep.activities.WelcomeActivity" android:theme="@style/WelcomeTheme" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.google.android.keep.activities.FullResyncActivity" android:theme="@style/WelcomeTheme" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTop" android:name="com.google.android.keep.activities.ShareReceiverActivity" android:theme="@style/KeepTransparentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="audio/wav"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.google.memory.note"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.google.android.voicesearch.SELF_NOTE"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.keep.activities.GalleryActivity" android:theme="@style/KeepPhotoViewerTheme"/>
+        <activity android:name="com.google.android.keep.activities.NoteToSelfActivity" android:permission="com.google.android.gm.permission.AUTO_SEND" android:theme="@style/KeepTransparentTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gm.action.AUTO_SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.keep.activities.VoiceActionActivity" android:taskAffinity=":VoiceActionActivity" android:theme="@style/KeepTransparentTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.CREATE_NOTE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.DELETE_NOTE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.APPEND_NOTE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.UPDATE_NOTE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.keep.activities.CreateListActivity" android:taskAffinity=":CreateListActivity" android:theme="@style/KeepTransparentTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.CREATE_ITEM_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.DELETE_ITEM_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.APPEND_ITEM_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.UPDATE_ITEM_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.keep.activities.ShortcutResolverActivity" android:theme="@style/KeepTransparentTheme">
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.SHORTCUT_NEW_NOTE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.SHORTCUT_NEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.SHORTCUT_NEW_PHOTO_NOTE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.SHORTCUT_NEW_AUDIO_NOTE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.google.android.keep.activities.WebUrlResolverActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="keep.google.com" android:pathPattern=".*" android:scheme="http"/>
+                <data android:host="keep.google.com" android:pathPattern=".*" android:scheme="https"/>
+                <data android:host="keep-sharing.google.com" android:pathPattern="/share?.*" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.google.android.keep.activities.WebUrlResolverWithMimeTypeActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="keep.google.com" android:mimeType="application/vnd.google-apps.note" android:pathPattern=".*" android:scheme="http"/>
+                <data android:host="keep.google.com" android:mimeType="application/vnd.google-apps.note" android:pathPattern=".*" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.keep.activities.SharingUrlResolverActivity" android:theme="@style/LoadingOverlayTheme"/>
+        <activity android:name="com.google.android.keep.homescreenwidget.WidgetIntentResolverActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.WIDGET_VIEW_NOTE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.WIDGET_VIEW_LIST"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.WIDGET_VIEW_MORE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.keep.homescreenwidget.WidgetConfigureActivity" android:theme="@style/WidgetConfigureTheme">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.keep.quickaddwidget.QuickWidgetConfigureActivity" android:theme="@style/WidgetConfigureTheme">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:name="com.google.android.keep.homescreenwidget.NoteTypePickerActivity" android:taskAffinity=":NoteTypePicker" android:theme="@style/NoteTypePickerTheme"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.google.android.keep.notification.CustomSnoozeActivity" android:taskAffinity=":NotificationDialog" android:theme="@style/KeepTransparentTheme"/>
+        <activity android:name="com.google.android.keep.activities.LinkResolverActivity" android:theme="@style/KeepTransparentTheme"/>
+        <activity android:name="com.google.android.keep.activities.RecentRemindersActivity" android:parentActivityName="com.google.android.keep.activities.BrowseActivity" android:theme="@style/KeepAppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".activities.BrowseActivity"/>
+        </activity>
+        <activity android:name="com.google.android.keep.debug.DebugRemindersActivity" android:theme="@style/Theme.AppCompat"/>
+        <activity android:name="com.google.android.keep.debug.DebugMainActivity" android:theme="@style/Theme.AppCompat"/>
+        <provider android:authorities="com.google.android.keep.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <provider android:authorities="com.google.android.keep" android:exported="false" android:initOrder="99" android:label="@string/app_name" android:multiprocess="false" android:name="com.google.android.keep.provider.KeepProvider" android:syncable="true">
+            <grant-uri-permission android:pathPrefix="/blob/image/"/>
+            <grant-uri-permission android:pathPrefix="/blob/audio/"/>
+            <grant-uri-permission android:pathPrefix="/blob/create/image/"/>
+        </provider>
+        <provider android:authorities="com.google.android.keeppublic" android:exported="true" android:initOrder="98" android:label="@string/keep_public_provider" android:name="com.google.android.keep.provider.KeepPublicProvider"/>
+        <provider android:authorities="com.google.android.keep.debug" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <receiver android:label="@string/app_name_full" android:name="com.google.android.keep.homescreenwidget.MemoryAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.PROVIDER_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.WIDGET_CONFIGURED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_info"/>
+        </receiver>
+        <receiver android:label="@string/app_name_full" android:name="com.google.android.keep.quickaddwidget.QuickAddWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.PROVIDER_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.WIDGET_CONFIGURED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/quick_edit_widget_info"/>
+        </receiver>
+        <receiver android:name="com.google.android.keep.notification.ReminderNotificationReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.PROVIDER_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gsf.settings.GoogleLocationSettings.UPDATE_LOCATION_SETTINGS"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.POST_LOCATION_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.keep.sharing.SharingRepostNotificationReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.keep.phenotype.PhenotypeConfigBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.keep.phenotype.PhenotypePackageChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.keep.notification.NotificationChannelReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.keep.appindexing.AppIndexingUpdateReceiver" android:permission="com.google.android.gms.permission.APPINDEXING">
+            <intent-filter>
+                <action android:name="com.google.firebase.appindexing.UPDATE_INDEX"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.keep.syncadapter.RefreshSyncReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.keep.notification.RemindersListenerBroadcastReceiver"/>
+        <receiver android:name="com.google.android.keep.microapp.DataChangedReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.keep.intent.action.PROVIDER_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.keep.syncadapter.KeepSyncAdapterService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/syncadapter"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.keep.homescreenwidget.MemoryWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <service android:name="com.google.android.keep.phenotype.PhenotypeCommitService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.google.android.keep.phenotype.PhenotypeRegisterService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.google.android.keep.notification.ReminderNotificationService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.google.android.keep.notification.DismissAlarmService"/>
+        <service android:name="com.google.android.keep.explore.GenerateSuggestionService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.google.android.keep.notification.DoneNotificationService"/>
+        <service android:name="com.google.android.keep.notification.SnoozeAlarmService"/>
+        <service android:name="com.google.android.keep.notification.WearableOpenNoteService"/>
+        <service android:name="com.google.android.keep.notification.ArchiveNoteService"/>
+        <service android:name="com.google.android.keep.service.CleanupService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.google.android.keep.provider.RemindersDBUpgradeService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.google.android.keep.provider.ImageRedecodeService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.google.android.keep.sharing.SharingDismissNotificationService"/>
+        <service android:name="com.google.android.keep.sharing.SharingNotificationService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.google.android.keep.sharing.SharingRepostNotificationService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.google.android.keep.service.DocsExportService"/>
+        <service android:name="com.google.android.keep.service.OfflineBrixDrawingMigrationService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.keep.service.AppIndexingService" android:permission="com.google.android.gms.permission.APPINDEXING">
+            <intent-filter>
+                <action android:name="com.google.firebase.appindexing.UPDATE_INDEX"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.keep.appindexing.AppIndexingUpdateService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.google.android.keep.service.ReinitializeAppIndexService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.google.android.keep.notification.RemindersListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.reminders.BIND_LISTENER"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.keep.microapp.WearableService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED"/>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED"/>
+                <data android:host="*" android:scheme="wear"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.keep.microapp.RefreshWearableDataService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/maps_api_key"/>
+        <meta-data android:name="com.google.android.backup.api_key" android:value="@string/backup_api_key"/>
+        <meta-data android:name="com.google.android.partnersetup.RLZ_BOUNTY_ACCESS_POINT" android:value="@string/rlz_access_points"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.wearable.beta.app" android:resource="@xml/micro_app_desc"/>
+        <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>

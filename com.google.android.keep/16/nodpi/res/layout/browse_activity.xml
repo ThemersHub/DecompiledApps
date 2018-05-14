@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/browse_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <android.support.design.widget.CoordinatorLayout android:id="@id/browse_snackbar_coordinator_layout" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/SnackbarContainerStyle" />
+        <FrameLayout android:id="@id/modal_scrim" android:background="@color/scrim_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/browse_explore_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/editor_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/share_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/label_editor_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/drawing_editor_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/settings_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/conflict_resolution_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/expand_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <fragment android:name="com.google.android.keep.toasts.ToastsFragment" android:id="@id/toasts_fragment" style="@style/ToastFragmentStyle" />
+    </RelativeLayout>
+    <fragment android:name="com.google.android.keep.browse.DrawerFragment" android:id="@id/drawer_fragment" android:layout_width="@dimen/drawer_width" android:layout_height="fill_parent" style="@style/DrawerFragmentStyle" />
+</android.support.v4.widget.DrawerLayout>

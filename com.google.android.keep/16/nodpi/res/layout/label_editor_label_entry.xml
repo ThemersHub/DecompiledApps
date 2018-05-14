@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_vertical" android:id="@id/label_editor_entry_root" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/label_editor_entry_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:src="@drawable/ic_label_black" style="@style/LabelEditorEntryIcon" />
+    <ImageView android:id="@id/delete" android:visibility="gone" android:src="@drawable/ic_material_trash_black" android:contentDescription="@string/menu_delete_label" style="@style/LabelEditorEntryIcon" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/label_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/label_editor_entry_min_height" style="@style/LabelEditorEntryEditText" />
+        <TextView android:layout_gravity="bottom" android:id="@id/error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/LabelEditorErrorText" />
+    </FrameLayout>
+    <ImageView android:id="@id/pencil" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_material_pencil_grey" android:contentDescription="@string/edit_label_content_description" style="@style/LabelEntryAction" />
+    <ImageView android:id="@id/confirm" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_done_blue" android:contentDescription="@string/menu_confirm" style="@style/LabelEntryAction" />
+    <View android:id="@id/divider_top" android:background="@color/default_divider_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <View android:layout_gravity="bottom" android:id="@id/divider_bottom" android:background="@color/default_divider_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</FrameLayout>

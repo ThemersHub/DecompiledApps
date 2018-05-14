@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/memory_widget" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/widget_header_condensed" />
+    <include layout="@layout/widget_header_expanded" />
+    <ListView android:id="@id/list" android:background="@color/widget_hint_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="1.0dip" android:layout_marginTop="1.0dip" android:layout_marginRight="1.0dip" android:listSelector="@android:color/transparent" android:cacheColorHint="@null" android:divider="@null" android:dividerHeight="@dimen/widget_divider_size" />
+    <TextView android:textColor="@color/widget_message_text_color" android:gravity="center" android:id="@id/empty_view" android:background="@drawable/widget_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="100.0dip" android:text="@string/empty_view_no_active_notes" />
+    <TextView android:gravity="center" android:id="@id/tap_to_reset" android:background="@drawable/widget_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="100.0dip" android:text="@string/tap_to_reset" />
+</LinearLayout>

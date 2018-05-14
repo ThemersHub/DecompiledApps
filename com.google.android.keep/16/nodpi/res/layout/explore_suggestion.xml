@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="@dimen/explore_fragment_card_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/suggestion_content_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:id="@id/suggestion_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ExploreSuggestionTitle" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/explore_suggestion_content_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/action_icon" android:layout_width="@dimen/explore_fragment_card_action_icon_size" android:layout_height="@dimen/explore_fragment_card_action_icon_size" android:layout_marginTop="@dimen/explore_fragment_card_action_icon_top_margin" android:layout_marginRight="@dimen/explore_fragment_card_action_icon_right_margin" />
+            <com.google.android.keep.ui.CircularImageView android:id="@id/avatar_icon" android:visibility="gone" android:layout_width="@dimen/explore_fragment_card_action_icon_size" android:layout_height="@dimen/explore_fragment_card_action_icon_size" android:layout_marginTop="@dimen/explore_fragment_card_action_icon_top_margin" android:layout_marginRight="@dimen/explore_fragment_card_action_icon_right_margin" />
+            <TextView android:id="@id/action_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ExploreSuggestionActionText" />
+        </LinearLayout>
+        <TextView android:id="@id/action_sub_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ExploreSuggestionActionSubText" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="0.0">
+        <ImageView android:layout_gravity="top" android:id="@id/close_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_close_grey600_24" android:contentDescription="@string/explore_dismiss_suggestion_description" />
+        <ImageView android:layout_gravity="bottom" android:id="@id/more_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_more_horiz_grey600_24" android:contentDescription="@string/explore_suggestion_options_description" />
+    </FrameLayout>
+</LinearLayout>

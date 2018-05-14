@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/conflict_timestamp" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/EditorConflictResolutionTimestampStyle" />
+    <fragment android:name="com.google.android.keep.editor.EditorContentFragment" android:id="@id/conflict_editor_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/editor_conflict_card_background_margin" android:layout_marginTop="@dimen/editor_conflict_card_background_margin" android:layout_marginRight="@dimen/editor_conflict_card_background_margin" android:layout_below="@id/conflict_timestamp" />
+    <View android:id="@id/conflict_touch_layer" android:background="@drawable/editor_conflict_resolution_touch_layer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/editor_conflict_card_background_negative_margin" android:layout_below="@id/conflict_timestamp" />
+    <ImageView android:layout_gravity="top" android:id="@id/checkmark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sync_checkmark" android:layout_below="@id/conflict_timestamp" style="@style/EditorConflictSelectionCheckmarkStyle" />
+</RelativeLayout>

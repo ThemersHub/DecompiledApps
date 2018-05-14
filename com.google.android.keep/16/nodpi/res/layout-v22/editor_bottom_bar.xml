@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_sheet_bar_height" android:keyboardNavigationCluster="true" android:nextClusterForward="@id/editor_toolbar"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bs_add_button" android:src="@drawable/ic_add_box_black" android:contentDescription="@string/add" style="@style/BottomSheetAddButtonStyle" />
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:id="@id/bs_timestamp" android:focusableInTouchMode="true" android:clickable="true" style="@style/BottomSheetTimestampText" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/bs_undo_redo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/editor_undo_button" android:background="?selectableItemBackgroundBorderless" android:src="@drawable/ic_undo" android:contentDescription="@string/undo" style="@style/BottomSheetButtonStyle" />
+            <ImageView android:id="@id/editor_redo_button" android:background="?selectableItemBackgroundBorderless" android:src="@drawable/ic_redo" android:contentDescription="@string/redo" style="@style/BottomSheetButtonStyle" />
+        </LinearLayout>
+        <View android:id="@id/undo_redo_touch_layer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <ImageView android:id="@id/bs_action_button" android:src="@drawable/ic_note_action_24dp" android:contentDescription="@string/action" style="@style/BottomSheetActionButtonStyle" />
+</LinearLayout>

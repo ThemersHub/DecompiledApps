@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/backdrop" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/widget_list_min_note_height" style="@style/WidgetNoteContainer">
+        <TextView android:id="@id/title" style="@style/WidgetNoteTitleStyle" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/WidgetNoteDescriptionStyle" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/note_attachment_elements" />
+    </LinearLayout>
+    <ImageView android:id="@id/pinned_icon" android:layout_width="18.0dip" android:layout_height="18.0dip" app:srcCompat="@drawable/ic_pin_blue_24" style="@style/IndexPinnedIcon" />
+    <include layout="@layout/widget_touch_layer" />
+</FrameLayout>

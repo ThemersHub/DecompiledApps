@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_vertical" android:id="@id/label_editor_create_label_root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/label_editor_entry_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/create_label" android:src="@drawable/ic_add_black" android:contentDescription="@string/create_new_label_edit_mode" style="@style/LabelEditorEntryIcon" />
+    <ImageView android:id="@id/cancel" android:src="@drawable/ic_cancel_dark" android:contentDescription="@string/cancel" style="@style/LabelEditorEntryIcon" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/input_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/label_editor_entry_min_height" android:hint="@string/create_new_label_edit_mode" style="@style/LabelEditorEntryEditText" />
+        <TextView android:layout_gravity="bottom" android:id="@id/error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/LabelEditorErrorText" />
+    </FrameLayout>
+    <ImageView android:id="@id/confirm_create" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_done_black_24dp" android:contentDescription="@string/menu_confirm" android:alpha="0.54" style="@style/LabelEntryAction" />
+    <View android:id="@id/divider_top" android:background="@color/default_divider_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <View android:layout_gravity="bottom" android:id="@id/divider_bottom" android:background="@color/default_divider_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</FrameLayout>

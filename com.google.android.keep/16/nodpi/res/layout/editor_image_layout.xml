@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/image_not_synced_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/photo" layout="@layout/image_view_switcher_layout" />
+    <View android:id="@id/image_layout_touch_layer" android:background="?selectableItemBackgroundBorderless" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignLeft="@id/photo" android:layout_alignTop="@id/photo" android:layout_alignRight="@id/photo" android:layout_alignBottom="@id/photo" android:contentDescription="@string/image_content_description" />
+    <ImageView android:id="@id/photo_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_photo_black_24" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/cloud_icon" android:src="@drawable/ic_cloud_24dp" style="@style/EditorImageSyncStatus" />
+    <ImageView android:id="@id/sync_icon" android:src="@drawable/ic_image_sync_24dp" style="@style/EditorImageSyncStatus" />
+    <ProgressBar android:id="@id/waiting_progress" android:layout_centerInParent="true" style="@style/EditorPhotoBusyStyle" />
+</RelativeLayout>

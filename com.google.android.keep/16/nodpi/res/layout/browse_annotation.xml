@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/annotation_background_color_translucent" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/browse_annotation_thumbnail_size"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.keep.ui.EmbedThumbnailView android:id="@id/thumbnail" android:background="@color/annotation_placeholder_background" android:layout_width="@dimen/browse_annotation_thumbnail_size" android:layout_height="@dimen/browse_annotation_thumbnail_size" />
+    <View android:id="@id/divider_top" android:background="@color/default_keep_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/divider_stroke_width" />
+    <View android:id="@id/divider_bottom" android:background="@color/default_keep_divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider_stroke_width" android:layout_marginTop="-1.0dip" android:layout_below="@id/thumbnail" />
+    <ImageButton android:id="@id/launch_url" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/embed_popout_button" style="@style/BrowseAnnotationLaunchUrl" />
+    <TextView android:id="@id/annotation_title" style="@style/BrowseAnnotationTitle" />
+    <TextView android:id="@id/base_url" style="@style/BrowseAnnotationBaseUrl" />
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ReminderEditorDialog"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/dialog_title" style="@style/ReminderDialogTitleText" />
+    <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RadioGroup android:id="@id/reminder_type_radio_group" style="@style/ReminderDialogRadioGroup">
+                <android.support.v7.widget.AppCompatRadioButton android:id="@id/radio_time" android:text="@string/type_time_reminder" style="@style/ReminderDialogRadioButton" />
+                <android.support.v7.widget.AppCompatRadioButton android:id="@id/radio_location" android:text="@string/type_location_reminder" style="@style/ReminderDialogRadioButton" />
+            </RadioGroup>
+            <include layout="@layout/time_reminder_edit_panel" />
+            <include layout="@layout/location_reminder_edit_panel" />
+            <RelativeLayout style="@style/ReminderDialogButtonContainer">
+                <TextView android:id="@id/delete" android:text="@string/menu_delete" style="@style/ReminderDialogDeleteButton" />
+                <TextView android:id="@id/save" android:text="@string/save" style="@style/ReminderDialogSaveButton" />
+                <TextView android:id="@id/cancel" android:text="@string/cancel" style="@style/ReminderDialogCancelButton" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

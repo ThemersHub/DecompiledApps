@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <view android:id="@id/content" android:background="#ff494949" android:paddingLeft="16.0dip" android:paddingTop="?android:actionBarSize" android:paddingRight="16.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" class="android.support.v4.view.ViewPager" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/dock" android:background="#cc000000" android:layout_width="fill_parent" android:layout_height="@dimen/touch_target_min_height">
+        <LinearLayout android:id="@id/keep_both" style="@style/EditorConflictResolutionButtonStyle">
+            <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_keep_both" android:scaleType="center" />
+            <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/conflict_resolution_keep_both" style="@style/EditorConflictResolutionButtonTextStyle" />
+        </LinearLayout>
+        <View android:background="#4dffffff" android:layout_width="1.0dip" android:layout_height="@dimen/editor_conflict_dock_divider_height" />
+        <LinearLayout android:id="@id/keep_selected" style="@style/EditorConflictResolutionButtonStyle">
+            <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_keep_selected" android:scaleType="center" />
+            <TextView android:enabled="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/conflict_resolution_keep_selected" style="@style/EditorConflictResolutionButtonTextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v7.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/toolbar" android:background="@color/conflict_editor_action_bar_background_color" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:title="@string/conflict_resolution_title" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" style="@style/ToolbarStyle" />
+    <ImageView android:id="@id/expand_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/drawing_fragment_container" android:background="@color/default_background_color" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:theme="@style/EditorToolbarTheme" android:gravity="center" android:id="@id/toolbar" android:background="@color/keep_default_color" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" style="@style/ToolbarStyle" />
+    <fragment android:name="com.google.research.ink.core.SEngineSupportFragment" android:id="@id/s_engine_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" />
+    <android.support.design.widget.CoordinatorLayout android:id="@id/ink_snackbar_coordinator_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <fragment android:name="com.google.research.ink.libs.tools.BottomToolbarSupportFragment" android:layout_gravity="bottom|center" android:id="@id/drawing_tools_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </android.support.design.widget.CoordinatorLayout>
+</FrameLayout>

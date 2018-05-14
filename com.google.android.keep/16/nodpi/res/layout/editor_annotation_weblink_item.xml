@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.keep.editor.WebLinkAnnotationLayout android:id="@id/weblink_annotation" android:focusable="true" android:focusableInTouchMode="true" card_view:cardBackgroundColor="@color/annotation_background_color" card_view:cardElevation="1.0dip" style="@style/WebLinkAnnotation"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.keep.ui.EmbedThumbnailView android:id="@id/thumbnail" android:background="@color/annotation_placeholder_background" android:layout_width="@dimen/weblink_annotation_thumbnail_size" android:layout_height="@dimen/weblink_annotation_thumbnail_size" />
+        <ImageButton android:id="@id/menu_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_more_vert_black_18dp" android:contentDescription="@string/embed_menu_button_description" android:alpha="0.54" style="@style/WebLinkAnnotationMenuButton" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/annotation_title_color" android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:singleLine="true" android:fontFamily="sans-serif-condensed" style="@style/WebLinkAnnotationTitle" />
+        <TextView android:textColor="@color/annotation_url_color" android:ellipsize="end" android:id="@id/base_url" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:singleLine="true" android:layout_below="@id/title" style="@style/WebLinkAnnotationBaseUrl" />
+    </RelativeLayout>
+</com.google.android.keep.editor.WebLinkAnnotationLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.research.ink.libs.tools.menudrawerlayout.TabbedSheetLayout android:orientation="vertical" android:id="@id/ink_bottom_toolbar" android:background="@drawable/ink_minimenu_bg" android:paddingLeft="@dimen/ink_toolbar_border_width" android:paddingTop="@dimen/ink_toolbar_border_width" android:paddingRight="@dimen/ink_toolbar_border_width" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true" android:elevation="@dimen/ink_toolbar_elevation"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.TabLayout android:id="@id/ink_tab_bar" android:layout_width="fill_parent" android:layout_height="@dimen/ink_menu_height" custom:tabIndicatorColor="@color/ink_tabbar_active" custom:tabIndicatorHeight="4.0dip" custom:tabMode="fixed" custom:tabGravity="fill" />
+    <FrameLayout android:id="@id/ink_first_row" android:background="@color/ink_sheet_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="0.0dip">
+        <com.google.research.ink.libs.tools.ToolConfigLayout android:orientation="vertical" android:id="@id/ink_pen_drawer" android:paddingTop="@dimen/ink_section_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+        <com.google.research.ink.libs.tools.ToolConfigLayout android:orientation="vertical" android:id="@id/ink_marker_drawer" android:paddingTop="@dimen/ink_section_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+        <com.google.research.ink.libs.tools.ToolConfigLayout android:orientation="vertical" android:id="@id/ink_highlighter_drawer" android:paddingTop="@dimen/ink_section_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+        <com.google.research.ink.libs.tools.ToolConfigLayout android:orientation="vertical" android:id="@id/ink_shape_drawer" android:paddingTop="@dimen/ink_section_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+        <com.google.research.ink.libs.tools.FixedHeightDrawer android:id="@id/ink_erase_drawer" android:layout_width="fill_parent" android:layout_height="0.0dip">
+            <TextView android:layout_gravity="top|clip_vertical" android:id="@id/ink_erase_drawer_label" android:focusable="true" android:layout_width="fill_parent" android:layout_height="@dimen/ink_menu_height" android:text="@string/ink_clear_canvas" style="@style/ink_text_drawer" />
+        </com.google.research.ink.libs.tools.FixedHeightDrawer>
+        <com.google.research.ink.libs.tools.FixedHeightDrawer android:id="@id/ink_select_drawer" android:layout_width="fill_parent" android:layout_height="0.0dip">
+            <TextView android:layout_gravity="top|clip_vertical" android:id="@id/ink_select_drawer_label" android:layout_width="fill_parent" android:layout_height="@dimen/ink_menu_height" android:text="@string/ink_clear_select" style="@style/ink_text_drawer" />
+        </com.google.research.ink.libs.tools.FixedHeightDrawer>
+    </FrameLayout>
+</com.google.research.ink.libs.tools.menudrawerlayout.TabbedSheetLayout>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomSheetActionButtonStyle" parent="@style/BottomSheetButtonStyle">
+        <item name="android:layout_gravity">center|left</item>
+    </style>
+    <style name="BottomSheetAddButtonStyle" parent="@style/BottomSheetButtonStyle">
+        <item name="android:layout_gravity">center|right</item>
+    </style>
+    <style name="BottomSheetColorPaletteStyle">
+        <item name="android:gravity">right</item>
+        <item name="android:layout_gravity">center|right</item>
+        <item name="android:paddingLeft">@dimen/bottom_sheet_color_palette_side_padding</item>
+        <item name="android:paddingRight">@dimen/bottom_sheet_color_palette_side_padding</item>
+    </style>
+    <style name="BrowseAnnotationBaseUrl" parent="@style/BrowseAnnotationBaseUrlBase">
+        <item name="android:layout_toLeftOf">@id/thumbnail</item>
+    </style>
+    <style name="BrowseAnnotationLaunchUrl" parent="@style/BrowseAnnotationLaunchUrlBase">
+        <item name="android:paddingLeft">6.0dip</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:scaleX">-1.0</item>
+    </style>
+    <style name="BrowseAnnotationTitle" parent="@style/BrowseAnnotationTitleBase">
+        <item name="android:layout_toLeftOf">@id/thumbnail</item>
+        <item name="android:layout_toRightOf">@id/launch_url</item>
+    </style>
+    <style name="BrowseIconChipStyle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/btn_label_bg</item>
+        <item name="android:paddingLeft">6.0dip</item>
+        <item name="android:paddingTop">2.0dip</item>
+        <item name="android:paddingRight">4.0dip</item>
+        <item name="android:paddingBottom">2.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/browse_meta_data_chip_height</item>
+    </style>
+    <style name="BrowseImageSyncStatus">
+        <item name="android:layout_gravity">bottom|center|left</item>
+        <item name="android:padding">2.0dip</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="DrawerFragmentStyle">
+        <item name="android:layout_gravity">start</item>
+    </style>
+    <style name="DrawerLabelHeaderActionButtonTextStyle" parent="@style/DrawerLabelHeaderTextStyle">
+        <item name="android:textColor">@color/drawer_label_edit_text_color</item>
+        <item name="android:layout_gravity">center|left</item>
+    </style>
+    <style name="DrawerLabelHeaderItemStyle">
+        <item name="android:paddingLeft">@dimen/drawer_label_header_end_padding</item>
+        <item name="android:paddingRight">@dimen/drawer_side_padding</item>
+    </style>
+    <style name="DrawerLabelHeaderTextStyle" parent="@style/DrawerTextStyle">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/material_gray</item>
+        <item name="android:layout_gravity">center|right</item>
+        <item name="android:paddingTop">12.0dip</item>
+        <item name="android:paddingBottom">12.0dip</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="DrawerLabelItemTextStyle" parent="@style/DrawerLandingPageItemTextStyle">
+        <item name="android:layout_marginRight">@dimen/drawer_label_item_text_margin</item>
+    </style>
+    <style name="DrawerLabelSwitchStyle" parent="@style/DrawerLandingPageItemTextStyle">
+        <item name="android:layout_gravity">center|left</item>
+        <item name="android:layout_marginLeft">0.0dip</item>
+    </style>
+    <style name="EditorAudioPlayerStyle">
+        <item name="android:paddingLeft">14.0dip</item>
+        <item name="android:paddingRight">20.0dip</item>
+    </style>
+    <style name="EditorConflictSelectionCheckmarkStyle">
+        <item name="android:layout_marginTop">@dimen/editor_conflict_card_checkmark_margin</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginEnd">@dimen/editor_conflict_card_checkmark_margin</item>
+    </style>
+    <style name="EditorDeleteButtonStyle">
+        <item name="android:layout_gravity">end|center|top</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:padding">4.0dip</item>
+        <item name="android:layout_width">32.0dip</item>
+        <item name="android:layout_height">32.0dip</item>
+        <item name="android:src">@drawable/ic_cancel_black_24dp</item>
+        <item name="android:contentDescription">@string/menu_delete</item>
+        <item name="android:alpha">0.54</item>
+    </style>
+    <style name="EditorFooterTextStyle">
+        <item name="android:textAppearance">@style/KeepMetadataTextAppearance</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:layout_gravity">center|left</item>
+        <item name="android:paddingTop">@dimen/editor_metadata_top_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="EditorImageSyncStatus">
+        <item name="android:padding">2.0dip</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="EditorMetadataIconChipStyle" parent="@style/EditorMetadataChipStyle">
+        <item name="android:paddingRight">4.0dip</item>
+    </style>
+    <style name="EditorTitleLayoutIconStyle">
+        <item name="android:layout_gravity">top</item>
+        <item name="android:layout_width">@dimen/editor_title_inline_icon_size</item>
+        <item name="android:layout_height">@dimen/editor_title_inline_icon_size</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+    </style>
+    <style name="EditorTitleTextStyle">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:gravity">center|right</item>
+        <item name="android:autoLink">all</item>
+        <item name="android:background">@null</item>
+        <item name="android:hint">@string/list_title_hint</item>
+        <item name="android:inputType">textAutoCorrect|textCapSentences|textMultiLine</item>
+        <item name="android:imeOptions">actionDone|flagNoExtractUi</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+    <style name="EditorViolatorFragmentStyle">
+        <item name="android:layout_gravity">bottom|center|left</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="IndexListCheckboxStyle">
+        <item name="android:paddingLeft">@dimen/index_list_item_padding</item>
+        <item name="android:layout_marginTop">1.0dip</item>
+        <item name="android:alpha">0.38</item>
+        <item name="android:paddingEnd">@dimen/index_list_item_padding</item>
+    </style>
+    <style name="IndexListItemEllipseStyle">
+        <item name="android:paddingBottom">@dimen/index_list_item_vertical_padding</item>
+        <item name="android:text">@string/ellipse</item>
+        <item name="android:layout_marginStart">24.0dip</item>
+    </style>
+    <style name="IndexListItemTextStyle">
+        <item name="android:textColor">@color/list_item_text_color</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingLeft">@dimen/index_list_item_padding</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:paddingEnd">@dimen/index_list_item_padding</item>
+    </style>
+    <style name="IndexListLayoutStyle">
+        <item name="android:paddingTop">@dimen/index_list_item_vertical_padding</item>
+        <item name="android:paddingStart">@dimen/index_list_item_padding</item>
+        <item name="android:paddingEnd">@dimen/index_list_item_padding</item>
+    </style>
+    <style name="IndexNoteAttachmentStyle">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingBottom">2.0dip</item>
+        <item name="android:paddingStart">@dimen/note_attachment_padding</item>
+        <item name="android:paddingEnd">@dimen/note_attachment_padding</item>
+    </style>
+    <style name="IndexPinnedIcon">
+        <item name="android:layout_gravity">left</item>
+        <item name="android:layout_marginLeft">4.0dip</item>
+        <item name="android:layout_marginTop">8.0dip</item>
+        <item name="android:layout_marginRight">4.0dip</item>
+        <item name="android:layout_marginBottom">8.0dip</item>
+    </style>
+    <style name="KeepMetadataIcon">
+        <item name="android:layout_width">16.0dip</item>
+        <item name="android:layout_height">16.0dip</item>
+        <item name="android:layout_marginLeft">2.0dip</item>
+        <item name="android:layout_marginTop">1.0dip</item>
+    </style>
+    <style name="Label">
+        <item name="android:background">@drawable/btn_label_bg</item>
+        <item name="android:layout_marginLeft">6.0dip</item>
+        <item name="android:layout_marginBottom">6.0dip</item>
+    </style>
+    <style name="LabelEditText.Picker" parent="@style/LabelEditText">
+        <item name="android:paddingLeft">28.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:longClickable">false</item>
+        <item name="android:imeOptions">actionDone|flagNoExtractUi</item>
+    </style>
+    <style name="LabelEditorEntryOpaqueIcon">
+        <item name="android:layout_gravity">center|right</item>
+        <item name="android:layout_width">@dimen/label_editor_icon_size</item>
+        <item name="android:layout_height">@dimen/label_editor_icon_size</item>
+        <item name="android:layout_marginLeft">12.0dip</item>
+        <item name="android:scaleType">center</item>
+    </style>
+    <style name="LabelEntryAction">
+        <item name="android:layout_gravity">center|left</item>
+        <item name="android:paddingLeft">16.0dip</item>
+    </style>
+    <style name="LabelRenameButtonBarStyle">
+        <item name="android:gravity">left</item>
+        <item name="android:layout_marginLeft">8.0dip</item>
+        <item name="android:layout_marginBottom">8.0dip</item>
+    </style>
+    <style name="LabelRow">
+        <item name="android:gravity">left</item>
+    </style>
+    <style name="MetadataIconChipTextStyle" parent="@style/MetadataChipTextStyle">
+        <item name="android:layout_marginRight">3.0dip</item>
+    </style>
+    <style name="NoteListStyle" parent="@style/ListScrollStyle">
+        <item name="android:paddingLeft">@dimen/browse_grid_start_margin</item>
+        <item name="android:paddingTop">@dimen/browse_grid_vertical_margin</item>
+        <item name="android:paddingRight">@dimen/browse_grid_end_margin</item>
+        <item name="android:paddingBottom">@dimen/qeb_bottom_height</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="ReminderDialogCancelButton" parent="@style/ReminderDialogButton">
+        <item name="android:layout_toRightOf">@id/save</item>
+    </style>
+    <style name="ReminderDialogDeleteButton" parent="@style/ReminderDialogButton">
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <style name="ReminderDialogPresetItemDetail" parent="@style/DialogListItemTextStyle">
+        <item name="android:gravity">center|left</item>
+        <item name="android:alpha">0.54</item>
+    </style>
+    <style name="ReminderDialogPresetItemTitle" parent="@style/DialogListItemTextStyle">
+        <item name="android:gravity">center|right</item>
+    </style>
+    <style name="ReminderDialogRadioButton">
+        <item name="android:gravity">center|right</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="ReminderDialogSaveButton" parent="@style/ReminderDialogButton">
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="ReminderHeaderStyle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingRight">@dimen/editor_reminder_detailed_side_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ReminderInlineRecurrenceSpinnerStyle" parent="@style/ReminderInlineSpinnerStyle">
+        <item name="android:layout_gravity">right</item>
+        <item name="android:layout_marginLeft">@dimen/reminder_recurrence_spinner_margin_end</item>
+        <item name="android:layout_marginRight">@dimen/reminder_recurrence_spinner_margin_start</item>
+    </style>
+    <style name="ReminderInlineSpinnerStyle">
+        <item name="android:gravity">top</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/reminder_inline_editor_spinner_margin</item>
+        <item name="android:minHeight">@dimen/editor_title_inline_icon_size</item>
+        <item name="android:popupBackground">@drawable/reminder_dropdown</item>
+    </style>
+    <style name="ReminderMarkAsDone">
+        <item name="android:layout_marginRight">12.0dip</item>
+    </style>
+    <style name="SearchBarBackButton">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:src">@drawable/ic_material_arrow_right_dark</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:contentDescription">@string/editor_navigate_up_content_description</item>
+    </style>
+    <style name="SearchBarQueryFrame">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_toLeftOf">@id/search_actionbar_back_button</item>
+    </style>
+    <style name="ShareActivityShareeAvatar">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8.0dip</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:contentDescription">@null</item>
+    </style>
+    <style name="ShareActivityShareeName">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_toLeftOf">@id/sharee_avatar</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="WebLinkAnnotationBaseUrl">
+        <item name="android:layout_marginLeft">0.0dip</item>
+        <item name="android:layout_marginRight">8.0dip</item>
+        <item name="android:layout_toLeftOf">@id/thumbnail</item>
+        <item name="android:layout_toRightOf">@id/menu_button</item>
+    </style>
+    <style name="WebLinkAnnotationMenuButton" parent="@style/WebLinkAnnotationBaseMenuButton">
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="WebLinkAnnotationMoreButton" parent="@style/WebLinkAnnotationButton">
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <style name="WebLinkAnnotationRemoveAllButton" parent="@style/WebLinkAnnotationButton">
+        <item name="android:layout_toLeftOf">@id/more_button</item>
+    </style>
+    <style name="WebLinkAnnotationTitle">
+        <item name="android:layout_marginLeft">0.0dip</item>
+        <item name="android:layout_marginRight">8.0dip</item>
+        <item name="android:layout_toLeftOf">@id/thumbnail</item>
+        <item name="android:layout_toRightOf">@id/menu_button</item>
+    </style>
+    <style name="WelcomeCard.GotItText" parent="@style/WelcomeCard">
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="WidgetAudioIcon">
+        <item name="android:layout_width">16.0dip</item>
+        <item name="android:layout_height">16.0dip</item>
+        <item name="android:layout_marginTop">-4.0dip</item>
+        <item name="android:src">@drawable/ic_badge_audio_light_grey</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="WidgetHeaderAddItemPickerButtonStyle">
+        <item name="android:layout_gravity">end|center</item>
+    </style>
+    <style name="WidgetHeaderTitleStyle">
+        <item name="android:layout_gravity">start|center</item>
+        <item name="android:paddingTop">6.0dip</item>
+        <item name="android:paddingBottom">6.0dip</item>
+        <item name="android:paddingStart">8.0dip</item>
+    </style>
+    <style name="WidgetListCheckboxStyle">
+        <item name="android:layout_marginTop">2.0dip</item>
+        <item name="android:alpha">0.38</item>
+        <item name="android:paddingEnd">4.0dip</item>
+    </style>
+    <style name="ZeroSearchHeaderItemTextStyle" parent="@style/ZeroSearchTextStyle">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/zero_search_header_text_color</item>
+        <item name="android:layout_gravity">center|right</item>
+        <item name="android:paddingTop">12.0dip</item>
+        <item name="android:paddingBottom">12.0dip</item>
+        <item name="android:layout_marginLeft">16.0dip</item>
+        <item name="android:layout_marginRight">16.0dip</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="ZeroSearchHeaderTextActionButtonStyle" parent="@style/ZeroSearchHeaderItemTextStyle">
+        <item name="android:textColor">@color/zero_search_more_toggle_button_color</item>
+        <item name="android:layout_gravity">center|left</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="LabelEditorEntryName">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">2.0dip</item>
+        <item name="android:paddingRight">12.0dip</item>
+        <item name="android:paddingBottom">2.0dip</item>
+        <item name="android:layout_marginLeft">60.0dip</item>
+        <item name="android:layout_marginRight">60.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+</resources>

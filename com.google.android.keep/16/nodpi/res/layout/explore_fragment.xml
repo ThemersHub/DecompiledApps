@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/explore_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/explore_fragment_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.Toolbar android:theme="@style/EditorToolbarTheme" android:gravity="center" android:id="@id/explore_toolbar" android:background="@color/primary_color" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" style="@style/ToolbarStyle" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+            <include android:layout_gravity="center" android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/explore_loading_layout" />
+            <android.support.v7.widget.RecyclerView android:id="@id/explore_suggestion_list" android:background="@color/default_fragment_background_color" android:paddingLeft="@dimen/explore_suggestion_list_padding" android:paddingRight="@dimen/explore_suggestion_list_padding" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <include android:layout_gravity="center" android:id="@id/empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/explore_empty_view_layout" />
+        </FrameLayout>
+        <android.support.design.widget.CoordinatorLayout android:id="@id/snackbar_coordinator_layout" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="@style/SnackbarContainerStyle" />
+    </RelativeLayout>
+</FrameLayout>

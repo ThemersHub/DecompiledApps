@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/editor_content_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.keep.ui.EditorRecyclerView android:id="@id/editor_list_view" android:paddingBottom="@dimen/bottom_sheet_peek_height" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" android:keyboardNavigationCluster="true" android:nextClusterForward="@id/editor_bottom_bar" />
+    <fragment android:name="com.google.android.keep.editor.ViolatorFragment" android:id="@id/violator_fragment" style="@style/EditorViolatorFragmentStyle" />
+    <View android:id="@id/editor_content_touch_layer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <fragment android:name="com.google.android.keep.bottomsheet.BottomSheetFragment" android:id="@id/bottom_sheet_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" app:behavior_peekHeight="@dimen/bottom_sheet_peek_height" app:layout_behavior="android.support.design.widget.BottomSheetBehavior" />
+    <android.support.design.widget.CoordinatorLayout android:layout_gravity="bottom|center" android:id="@id/editor_snackbar_coordinator_layout" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/bottom_sheet_bar_height" style="@style/SnackbarContainerStyle" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/editor_bottom_bar_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/bottom_sheet_hightlight_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <include android:id="@id/editor_bottom_bar" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_sheet_bar_height" layout="@layout/editor_bottom_bar" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:theme="@style/SettingsTheme" android:background="@color/default_fragment_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:theme="@style/EditorToolbarTheme" android:gravity="center" android:id="@id/toolbar" android:background="@color/primary_color" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:elevation="4.0dip" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" style="@style/ToolbarStyle" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_list_behavior" style="@style/SettingsHeaderStyle" />
+            <com.google.android.keep.ui.SwitchSetting android:id="@id/settings_add_new_items_to_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleText="@string/settings_add_new_items_to_bottom" />
+            <com.google.android.keep.ui.SwitchSetting android:id="@id/settings_move_checked_items_to_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleText="@string/settings_move_checked_items_to_bottom" app:showDivider="false" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_reminders" style="@style/SettingsHeaderStyle" />
+            <com.google.android.keep.ui.ReminderPresetSetting android:id="@id/settings_preset_morning" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleText="@string/reminder_time_morning" />
+            <com.google.android.keep.ui.ReminderPresetSetting android:id="@id/settings_preset_afternoon" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleText="@string/reminder_time_afternoon" />
+            <com.google.android.keep.ui.ReminderPresetSetting android:id="@id/settings_preset_evening" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleText="@string/reminder_time_evening" app:showDivider="false" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_sharing" style="@style/SettingsHeaderStyle" />
+            <com.google.android.keep.ui.SwitchSetting android:id="@id/settings_enable_sharing" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleText="@string/enable_sharing" app:showDivider="false" />
+            <TextView android:id="@id/assistive_settings_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/assistive_settings" style="@style/SettingsHeaderStyle" />
+            <com.google.android.keep.ui.SwitchSetting android:id="@id/settings_enable_web_embeds" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleText="@string/enable_web_embeds" app:showDivider="false" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
