@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/opacity_menu_container" android:layout_width="@dimen/value_panel_max_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SeekBar android:id="@id/alpha_value_slider" android:layout_width="fill_parent" android:layout_height="@dimen/panel_content_height_half" android:max="255" style="@style/SeekBar" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/panel_content_height_half">
+        <TextView android:gravity="start|center" android:id="@id/left_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/transparent" android:layout_weight="1.0" android:textAlignment="viewStart" style="@style/SeekBarLabels" />
+        <TextView android:gravity="end|center" android:id="@id/right_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/solid" android:layout_weight="1.0" android:textAlignment="viewEnd" style="@style/SeekBarLabels" />
+    </LinearLayout>
+    <include layout="@layout/close_button" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/qp_column_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/action_icon" android:paddingTop="@dimen/qp_large_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_action_icon" />
+    <RelativeLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingTop="@dimen/qp_large_padding" android:paddingRight="@dimen/qp_column_padding" android:paddingBottom="@dimen/qp_large_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:id="@id/android_for_work_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/qp_android_for_work_icon" />
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.EllipsizingTextView android:autoLink="web" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_toLeftOf="@id/android_for_work_icon" android:layout_alignParentLeft="true" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/android_for_work_icon" android:layout_alignParentStart="true" style="@style/qp_h3" />
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.EllipsizingTextView android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_medium_padding" android:maxLines="1" android:layout_below="@id/title" style="@style/qp_h5" />
+    </RelativeLayout>
+    <ViewStub android:id="@id/quick_action_stub" android:layout="@layout/module_quick_action" android:inflatedId="@id/quick_action_container" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

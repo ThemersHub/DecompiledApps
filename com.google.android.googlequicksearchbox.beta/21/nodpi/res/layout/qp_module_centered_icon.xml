@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:now="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.gsa.now.shared.ui.RecyclerViewStub android:id="@id/photo_stub" android:layout_width="fill_parent" android:layout_height="@dimen/qp_picker_centered_icon_height" now:layout="@layout/photo_with_attribution" now:inflatedId="@id/background_photo" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <View android:gravity="center_horizontal" android:id="@id/text_decoration" android:visibility="gone" android:layout_width="@dimen/qp_small_carousel_text_decoration_width" android:layout_height="@dimen/qp_small_carousel_text_decoration_height" android:foreground="#ffffffff" android:alpha="0.5" />
+        <FrameLayout android:id="@id/gutter_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.android.apps.gsa.now.shared.ui.RecyclerViewStub android:id="@id/gutter_icon_stub" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.MetadataLineView android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/header_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

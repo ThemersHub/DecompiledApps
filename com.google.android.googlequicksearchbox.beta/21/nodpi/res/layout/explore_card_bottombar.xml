@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/customtabs_bottom_bar" android:background="@color/explore_bottombar_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/explore_card_bottombar_padding" android:paddingRight="@dimen/explore_card_bottombar_padding" android:layout_width="fill_parent" android:layout_height="@dimen/explore_card_bottombar_header_height">
+        <ImageButton android:layout_gravity="center" android:id="@id/explore_bottombar_logo" android:background="@drawable/bottombar_button_background" android:layout_width="@dimen/explore_card_bottombar_icon_size" android:layout_height="@dimen/explore_card_bottombar_icon_size" android:src="@drawable/product_logo_googleg_color_24" android:scaleType="centerInside" android:importantForAccessibility="no" />
+        <TextView android:textSize="@dimen/explore_card_bottombar_header_text_size" android:textStyle="bold" android:textColor="@color/explore_bottombar_title_color" android:gravity="center" android:layout_gravity="center" android:id="@id/explore_bottombar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/explore_bottombar_header_title" android:maxLines="1" android:layout_weight="1.0" />
+        <ImageButton android:layout_gravity="center" android:id="@id/explore_bottombar_expand" android:background="@drawable/bottombar_button_background" android:layout_width="@dimen/explore_card_bottombar_icon_size" android:layout_height="@dimen/explore_card_bottombar_icon_size" android:src="@drawable/quantum_ic_expand_less_grey600_24" android:contentDescription="@string/explore_bottombar_expand_button_desc" />
+    </LinearLayout>
+    <FrameLayout android:paddingLeft="@dimen/explore_card_bottombar_padding" android:paddingTop="@dimen/explore_card_bottombar_card_padding_top" android:paddingRight="@dimen/explore_card_bottombar_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/explore_bottombar_card" android:background="@color/explore_bottombar_card_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/explore_card_bottombar_card_elevation">
+            <LinearLayout android:paddingLeft="@dimen/explore_card_bottombar_title_padding_left" android:paddingTop="@dimen/explore_card_bottombar_title_padding_top" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/explore_card_bottombar_title_size" android:textStyle="bold" android:textColor="@color/explore_bottombar_title_color" android:ellipsize="end" android:id="@id/explore_bottombar_card_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+            </LinearLayout>
+            <android.widget.ImageView android:layout_gravity="top" android:id="@id/explore_bottombar_card_image" android:visibility="gone" android:layout_width="@dimen/explore_card_bottombar_image_size" android:layout_height="@dimen/explore_card_bottombar_image_size" android:layout_marginLeft="@dimen/explore_card_bottombar_image_margin_left" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

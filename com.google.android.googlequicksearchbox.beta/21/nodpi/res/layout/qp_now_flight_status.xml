@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/qp_large_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/gutter_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/qp_gutter_start_margin" android:layout_marginRight="@dimen/qp_gutter_end_margin" android:layout_marginStart="@dimen/qp_gutter_start_margin" android:layout_marginEnd="@dimen/qp_gutter_end_margin">
+            <com.google.android.apps.gsa.now.shared.ui.RecyclerViewStub android:id="@id/gutter_icon_stub" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/qp_small_padding" style="@style/qp_h1" />
+            <TextView android:id="@id/subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/qp_small_padding" style="@style/qp_h5" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/qp_column_padding" android:paddingRight="@dimen/qp_column_padding" android:paddingBottom="@dimen/qp_flight_progress_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/departure_airport_code" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_flight_status_airport_code" />
+        <com.google.android.apps.gsa.staticplugins.nowcards.travel.FlightProgressBar android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/flight_progress" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/qp_small_padding" android:layout_marginRight="@dimen/qp_small_padding" android:layout_weight="1.0">
+            <ImageView android:id="@id/begin" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/flight_progress_start" android:scaleType="fitXY" android:layout_weight="0.5" android:contentDescription="@null" />
+            <ImageView android:id="@id/plane" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_plane_status" android:contentDescription="@null" />
+            <ImageView android:id="@id/end" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/flight_progress_end" android:scaleType="fitXY" android:layout_weight="0.5" android:contentDescription="@null" />
+        </com.google.android.apps.gsa.staticplugins.nowcards.travel.FlightProgressBar>
+        <TextView android:id="@id/arrival_airport_code" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_flight_status_airport_code" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/qp_column_padding" android:paddingRight="@dimen/qp_column_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_small_padding" android:baselineAligned="true">
+        <TextView android:id="@id/status" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/qp_small_padding" android:layout_marginEnd="@dimen/qp_small_padding" style="@style/qp_h5" />
+        <TextView android:id="@id/status_details_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/qp_small_padding" android:layout_marginEnd="@dimen/qp_small_padding" style="@style/qp_h5_normal" />
+    </LinearLayout>
+    <TextView android:id="@id/justification" android:paddingLeft="@dimen/qp_column_padding" android:paddingRight="@dimen/qp_column_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_small_padding" style="@style/qp_h7" />
+    <View android:background="@color/qp_card_separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/qp_large_padding" />
+    <TableLayout android:id="@id/tabular_grid" android:background="@color/expanded_module_background" android:paddingLeft="@dimen/qp_column_padding" android:paddingTop="@dimen/qp_tabular_row_padding" android:paddingRight="@dimen/qp_column_padding" android:paddingBottom="@dimen/qp_large_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="*" android:shrinkColumns="*">
+        <TableRow android:paddingBottom="@dimen/qp_tabular_row_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/departure_airport_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_span="3" style="@style/qp_h5" />
+        </TableRow>
+        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/departure_status" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h6" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/flight_gate" style="@style/qp_h6" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/flight_terminal" style="@style/qp_h6" />
+        </TableRow>
+        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/departure_time" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_flight_status_data" />
+            <TextView android:id="@id/departure_gate" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h1" />
+            <TextView android:id="@id/departure_terminal" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h1" />
+        </TableRow>
+        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/departure_extra_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_span="3" style="@style/qp_h6" />
+        </TableRow>
+        <TableRow android:paddingTop="@dimen/qp_flight_status_padding" android:paddingBottom="@dimen/qp_flight_status_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/arrival_airport_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_span="3" style="@style/qp_h5" />
+        </TableRow>
+        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/arrival_status" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h6" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/flight_gate" style="@style/qp_h6" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/flight_terminal" style="@style/qp_h6" />
+        </TableRow>
+        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/arrival_time" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_flight_status_data" />
+            <TextView android:id="@id/arrival_gate" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h1" />
+            <TextView android:id="@id/arrival_terminal" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h1" />
+        </TableRow>
+        <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/arrival_extra_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_span="3" style="@style/qp_h6" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

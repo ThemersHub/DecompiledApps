@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/quartz_padding_top" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/quartz_padding" android:layout_marginStart="@dimen/quartz_padding_start" android:layout_marginEnd="@dimen/quartz_padding_end">
+            <include android:layout_gravity="start|center" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/quartz_ganache_recipe_site_title" />
+            <LinearLayout android:layout_gravity="end|center" android:orientation="horizontal" android:id="@id/quartz_ganache_instruction_toggle_ingredients_button" android:background="@drawable/quartz_ganache_instruction_button_shape" android:paddingLeft="@dimen/quartz_default_gap_half" android:paddingRight="@dimen/quartz_default_gap_half" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <android.support.v7.widget.AppCompatImageView android:id="@id/quartz_ganache_instruction_toggle_ingredients_button_icon" android:layout_width="@dimen/quartz_44sdp" android:layout_height="@dimen/quartz_44sdp" android:layout_marginRight="@dimen/quartz_default_gap_half" android:tint="@color/quartz_blue_500" app:srcCompat="@drawable/quantum_ic_list_vd_theme_24" />
+                <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:textColor="@color/quartz_text_color_secondary" android:id="@id/quartz_ganache_instruction_toggle_ingredients_button_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Show ingredients" style="@style/Quartz.Text.T10" />
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <FrameLayout android:id="@id/quartz_ganache_instruction_main_panel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/quartz_padding_start" android:paddingEnd="@dimen/quartz_padding_end" />
+            <ScrollView android:id="@id/quartz_ganache_instruction_side_panel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingEnd="@dimen/quartz_padding_end">
+                <LinearLayout android:orientation="vertical" android:id="@id/quartz_ganache_instruction_ingredient_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

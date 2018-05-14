@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/qp_column_padding" android:paddingTop="@dimen/qp_large_padding" android:paddingRight="@dimen/qp_column_padding" android:paddingBottom="@dimen/qp_large_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.gsa.staticplugins.nowcards.ui.EllipsizingTextView android:id="@id/card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/qp_small_padding" style="@style/qp_h1" />
+    <TextView android:id="@id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/qp_xl_padding" style="@style/qp_h5" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/stock_row" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/qp_xl_padding">
+        <TextView android:textSize="@dimen/qp_xl_text_size" android:id="@id/stock_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/qp_column_padding" android:singleLine="true" android:layout_marginEnd="@dimen/qp_column_padding" style="@style/qp_h1" />
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:id="@id/price_and_percent_variation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/qp_h5" />
+        <ImageView android:layout_gravity="bottom" android:id="@id/action_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_icon_no_tint" />
+    </LinearLayout>
+    <com.google.android.apps.gsa.now.shared.ui.CrossfadingWebImageView android:layout_gravity="center" android:id="@id/stock_chart" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" android:baselineAligned="false" thegoogle:crossfadeDuration="@integer/image_crossfade_duration" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.shared.ui.header.LogoHeaderView android:id="@id/logo_header" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center|top" android:id="@id/srp_doodle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/srp_doodle_height" android:contentDescription="@string/accessibility_feed_button" />
+    <ViewStub android:layout_gravity="center|top" android:id="@id/logo_header_white_logo_stub" android:layout="@layout/logo_header_white_logo_layout" android:inflatedId="@id/logo_header_white_logo" android:layout_width="@dimen/logo_header_white_logo_width" android:layout_height="@dimen/logo_header_white_logo_height" android:layout_marginTop="@dimen/srp_google_logo_margin_top" />
+    <ViewStub android:layout_gravity="center_horizontal" android:id="@id/logo_header_logo_view_stub" android:layout="@layout/new_logo_header_logo_view_layout" android:inflatedId="@id/logo_header_logo_view" android:layout_width="@dimen/srp_logo_width" android:layout_height="@dimen/srp_logo_height" android:layout_marginLeft="@dimen/srp_logo_margin_left" android:layout_marginTop="@dimen/srp_logo_margin_top" />
+    <View android:layout_gravity="center|top" android:id="@id/srp_header_fader" android:background="@color/activity_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/srp_doodle_height" />
+    <RelativeLayout android:id="@id/srp_burger_layout" android:padding="@dimen/srp_burger_padding" android:layout_width="@dimen/srp_burger_size" android:layout_height="@dimen/srp_burger_size" android:layout_marginLeft="@dimen/srp_burger_margin_left" android:layout_marginTop="@dimen/srp_burger_margin_top" android:scaleType="centerInside" android:contentDescription="@string/accessibility_search_plate_menu_button" android:layout_marginStart="@dimen/srp_burger_margin_left">
+        <ImageView android:id="@id/burger" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_menu_black_24" android:tint="@color/quantum_grey700" />
+        <ImageView android:id="@id/srp_burger_update_badge" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/update_burger_ic_badge" />
+    </RelativeLayout>
+</com.google.android.apps.gsa.shared.ui.header.LogoHeaderView>

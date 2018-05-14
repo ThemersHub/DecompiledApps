@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:id="@id/assistant_category" android:title="@string/assistant_header_category_title" />
+    <header android:id="@id/assistant_settings_header" android:title="@string/assistant_settings_header_title">
+        <intent android:targetPackage="com.google.android.googlequicksearchbox" android:action="com.google.android.googlequicksearchbox.action.ASSISTANT_SETTINGS">
+            <extra android:name="assistant_settings_feature" android:value="main_menu" />
+            <extra android:name="assistant_surface" android:value="4" />
+            <extra android:name="com.google.android.apps.gsa.shared.util.starter.IntentStarter.START_ACTIVITY_FOR_RESULT" android:value="true" />
+        </intent>
+    </header>
+    <header android:id="@id/what_can_you_do_header" android:title="@string/assistant_settings_help_title">
+        <intent android:targetPackage="com.google.android.googlequicksearchbox" android:action="com.google.android.googlequicksearchbox.action.ASSISTANT_SETTINGS">
+            <extra android:name="assistant_settings_feature" android:value="help_menu" />
+            <extra android:name="assistant_surface" android:value="4" />
+            <extra android:name="com.google.android.apps.gsa.shared.util.starter.IntentStarter.START_ACTIVITY_FOR_RESULT" android:value="true" />
+        </intent>
+    </header>
+    <header android:id="@id/explore_header" android:title="@string/assistant_settings_hq_explore_header">
+        <intent android:targetPackage="com.google.android.googlequicksearchbox" android:targetClass="com.google.android.apps.gsa.staticplugins.opa.hq.OpaHqActivity">
+            <extra android:name="section" android:value="explore" />
+            <extra android:name="com.google.android.apps.gsa.shared.util.starter.IntentStarter.START_ACTIVITY_FOR_RESULT" android:value="true" />
+        </intent>
+    </header>
+</preference-headers>

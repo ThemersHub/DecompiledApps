@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.staticplugins.opa.homeautomationexecution.ui.HomeAutomationCard android:orientation="vertical" android:id="@id/home_automation_card_ui" android:padding="@dimen/home_automation_card_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/home_automation_card_title_style" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="32.0dip" android:layout_marginTop="@dimen/home_automation_trait_margin_top">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/trait_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/home_automation_grey_color" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/trait_title" android:paddingLeft="@dimen/home_automation_trait_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/home_automation_trait_title_style" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/seek_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:id="@id/seekbar_value" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/home_automation_seek_bar_text_style" />
+        <SeekBar android:id="@id/seek_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="4.0dip" android:minHeight="4.0dip" style="@android:style/Widget.ProgressBar.Horizontal" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="@dimen/home_automation_footer_padding" android:paddingBottom="@dimen/home_automation_footer_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/decrement_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_remove_black_24" android:tint="@color/home_automation_temperature_card_color" style="@style/home_automation_card_image_button_style" />
+        <ImageButton android:id="@id/increment_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_add_black_24" android:tint="@color/home_automation_temperature_card_color" style="@style/home_automation_card_image_button_style" />
+        <ToggleButton android:textSize="14.0sp" android:gravity="center" android:id="@id/turn_on_off_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="32.0dip" android:textOn="@string/opa_home_automation_turn_off" android:textOff="@string/opa_home_automation_turn_on" style="@style/home_automation_card_text_button_style" />
+    </LinearLayout>
+</com.google.android.apps.gsa.staticplugins.opa.homeautomationexecution.ui.HomeAutomationCard>

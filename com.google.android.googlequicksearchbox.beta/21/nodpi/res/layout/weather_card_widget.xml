@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/widget_row_height" android:baselineAligned="false" style="@style/WidgetCard"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" android:rowCount="2" android:columnCount="2">
+        <TextView android:id="@id/location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_columnSpan="2" style="@style/WidgetSmallText" />
+        <ImageView android:id="@id/current_weather_icon" android:layout_width="@dimen/weather_forecast_icon_height" android:layout_height="@dimen/weather_forecast_icon_height" android:layout_margin="4.0dip" android:contentDescription="@null" />
+        <TextView android:id="@id/current_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:includeFontPadding="false" android:layout_marginStart="4.0dip" style="@style/WidgetLargeText" />
+    </GridLayout>
+    <TextView android:id="@id/section_separator" android:background="@color/card_separator" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/card_spacer_margin" android:layout_marginTop="@dimen/card_spacer_margin" android:layout_marginRight="@dimen/card_spacer_margin" android:layout_marginBottom="@dimen/card_spacer_margin" android:layout_marginStart="@dimen/card_spacer_margin" android:layout_marginEnd="@dimen/card_spacer_margin" />
+    <LinearLayout android:orientation="vertical" android:id="@id/forecast1" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/forecast1_label" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/WidgetSmallText" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/forecast1_icon" android:layout_width="@dimen/weather_forecast_icon_height" android:layout_height="0.0dip" android:layout_weight="1.0" android:contentDescription="@null" />
+    </LinearLayout>
+    <TextView android:id="@id/forecast_separator" android:background="@color/card_separator" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/card_spacer_margin" android:layout_marginTop="@dimen/card_spacer_margin" android:layout_marginRight="@dimen/card_spacer_margin" android:layout_marginBottom="@dimen/card_spacer_margin" android:layout_marginStart="@dimen/card_spacer_margin" android:layout_marginEnd="@dimen/card_spacer_margin" />
+    <LinearLayout android:orientation="vertical" android:id="@id/forecast2" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/forecast2_label" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/WidgetSmallText" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/forecast2_icon" android:layout_width="@dimen/weather_forecast_icon_height" android:layout_height="0.0dip" android:layout_weight="1.0" android:contentDescription="@null" />
+    </LinearLayout>
+</LinearLayout>

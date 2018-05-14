@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.shared.ui.drawer.AccountNavigationDrawerLayout android:id="@id/navigation_drawer_layout" android:background="@android:color/transparent" android:fitsSystemWindows="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.gsa.staticplugins.secondscreen.BrowseModeLayout android:id="@id/outer_frame" android:background="@android:color/transparent" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.gsa.shared.ui.CoScrollContainer android:id="@id/scroll_view" android:background="@android:color/transparent" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="ifContentScrolls">
+            <FrameLayout android:id="@id/scroll_view_content" android:layout_width="fill_parent" android:layout_height="fill_parent" thegoogle:layout_fillViewport="true">
+                <FrameLayout android:layout_gravity="top" android:id="@id/progress_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.google.android.apps.gsa.shared.ui.ChildPaddingLayout android:id="@id/cards_view_container" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/qp_browse_mode_header_card_margin_height">
+                    <com.google.android.apps.gsa.shared.ui.SuggestionGridLayout android:id="@id/cards_view" android:paddingBottom="@dimen/cards_padding_inbetween_adjusted" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true" thegoogle:horizontalItemMargin="@dimen/columns_padding_inbetween" thegoogle:columnCount="@integer/cards_column_count" />
+                </com.google.android.apps.gsa.shared.ui.ChildPaddingLayout>
+            </FrameLayout>
+        </com.google.android.apps.gsa.shared.ui.CoScrollContainer>
+        <com.google.android.apps.gsa.staticplugins.secondscreen.SecondScreenContextHeader android:layout_gravity="top" android:id="@id/header" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/qp_browse_header_elevation">
+            <View android:layout_gravity="top" android:id="@id/status_bar_underlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+            <LinearLayout android:layout_gravity="top" android:orientation="horizontal" android:id="@id/header_images" android:background="@color/qp_status_none" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/qp_browse_mode_header_image_height" android:adjustViewBounds="true" />
+            <View android:id="@id/header_image_overlay" android:background="@drawable/browse_mode_header_protection" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/qp_browse_mode_header_overlay_height" android:alpha="0.5" />
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/title_bar" android:paddingRight="@dimen/qp_column_padding" android:paddingBottom="@dimen/qp_second_screen_title_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/qp_browse_mode_action_bar_height">
+                <TextView android:id="@id/title" android:paddingLeft="72.0dip" android:paddingTop="@dimen/qp_second_screen_title_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_second_screen_title" />
+                <TextView android:textColor="@color/qp_text_w2" android:id="@id/subtitle" android:paddingLeft="72.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_small_padding" style="@style/qp_h5" />
+            </LinearLayout>
+            <FrameLayout android:layout_gravity="bottom" android:id="@id/progress_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.google.android.apps.gsa.staticplugins.secondscreen.SecondScreenContextHeader>
+        <FrameLayout android:layout_gravity="center|left|top" android:id="@id/back_button_target" android:layout_width="@dimen/qp_browse_mode_action_bar_height" android:layout_height="@dimen/qp_browse_mode_action_bar_height" android:foreground="@drawable/qp_white_clickable_circle_background" android:contentDescription="@string/back" android:elevation="@dimen/qp_browse_header_elevation">
+            <ImageView android:id="@id/back_button" android:layout_width="@dimen/qp_browse_mode_back_button_width" android:layout_height="@dimen/qp_browse_mode_action_bar_height" android:layout_marginLeft="@dimen/qp_small_padding" android:src="@drawable/quantum_ic_arrow_back_white_24" android:scaleType="center" />
+        </FrameLayout>
+    </com.google.android.apps.gsa.staticplugins.secondscreen.BrowseModeLayout>
+</com.google.android.apps.gsa.shared.ui.drawer.AccountNavigationDrawerLayout>

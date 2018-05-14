@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.assist.AssistLayerContainer android:id="@id/assist_layer" android:tag="ve=18559" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/assist_layer_scrim" android:background="@color/screen_assist_search_scrim" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/assist_transition_progress" android:padding="12.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/selection_view_container_stub" android:layout="@layout/selection_view_container" android:inflatedId="@id/selection_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.gsa.assist.AssistTransitionView android:id="@id/assist_transition_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/fitted_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/assist_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <ViewStub android:id="@id/selection_fitted_container_stub" android:layout="@layout/selection_fitted_container" android:inflatedId="@id/selection_fitted_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <include layout="@layout/assist_interaction_session" />
+                    </FrameLayout>
+                </FrameLayout>
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/screen_assist_furniture" android:background="@color/go_to_google_now_background" android:padding="@dimen/screen_assist_furniture_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/search_overlay_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include layout="@layout/search_overlay" />
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
+    <View android:id="@id/selection_overscroll_mask" android:background="@color/selection_overscroll_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+    <View android:id="@id/selection_status_bar_mask" android:background="@color/selection_main_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+</com.google.android.apps.gsa.assist.AssistLayerContainer>

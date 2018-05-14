@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/now_cards" android:key="now_cards_settings_screen"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.gsa.search.core.preferences.CustomSwitchPreference android:key="@string/show_interest_feed_preference" android:defaultValue="true" />
+    <com.google.android.apps.gsa.search.core.preferences.CustomSwitchPreference android:key="@string/np_stream_preference" android:defaultValue="true" />
+    <com.google.android.apps.gsa.search.core.preferences.CustomSwitchPreference android:key="@string/feed_datasaver_preference" android:defaultValue="false" />
+    <Preference android:persistent="false" android:enabled="false" android:title="@string/manage_card_history" android:key="@string/manage_card_history_preference" android:summary="@string/manage_card_history_summary_no_account" />
+    <Preference android:persistent="false" android:title="@string/reset_now_preferences" android:key="@string/delete_card_preferences_preference" />
+    <com.google.android.apps.gsa.search.core.preferences.NotificationGroupPreference android:persistent="false" android:title="@string/notifications_enabled_header" android:key="@string/notification_override_key" thegoogle:multiline="true" />
+    <PreferenceCategory android:title="@string/priority_notifications_preferences_category" android:key="@string/priority_notifications_preference_category_key">
+        <Preference android:enabled="false" android:layout="@layout/notifications_settings_message" />
+        <com.google.android.apps.gsa.search.core.preferences.RingtonePreferenceWithDefault android:title="@string/notifications_ringtone_setting" android:key="@string/notification_sound_preference" android:ringtoneType="notification" android:showDefault="true" android:showSilent="true" />
+        <com.google.android.apps.gsa.search.core.preferences.CustomSwitchPreference android:title="@string/notifications_vibrate_title" android:key="@string/notification_vibrate_preference" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/card_category_notification_category" android:key="@string/card_category_notification_category_key" />
+</PreferenceScreen>

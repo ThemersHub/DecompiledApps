@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/progress_bar" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-7.0dip" android:indeterminate="true" android:indeterminateTint="@color/quantum_googyellow500" android:indeterminateTintMode="src_in" style="?android:attr/progressBarStyleHorizontal" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="48.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageButton android:gravity="center" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/product_logo_googleg_color_36" android:importantForAccessibility="no" />
+            <TextView android:gravity="center" android:id="@id/local_escalation_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" style="@style/TextAppearance.AppCompat.Headline" />
+            <com.google.android.apps.gsa.shared.ui.talkback.LinkTextView android:textColor="@color/quantum_grey600" android:gravity="center" android:linksClickable="true" android:id="@id/local_escalation_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" style="@style/TextAppearance.AppCompat.Subhead" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:gravity="center_horizontal" android:id="@id/profile" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/hotword_enrollment_item_parent_profile_1_line_with_image" />
+            </LinearLayout>
+        </LinearLayout>
+        <EditText android:textAppearance="?android:textAppearanceMedium" android:textSize="14.0sp" android:id="@id/password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="4.0dip" android:hint="Enter your password" android:maxLines="1" android:selectAllOnFocus="true" android:maxLength="64" android:layout_below="@id/header" android:inputType="textPassword" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+    </LinearLayout>
+    <include layout="@layout/hotword_enrollment_glif_button_bar" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/chatui_content" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/chatui_horizontal_margin" android:layout_marginTop="@dimen/chatui_item_gap_top" android:layout_marginRight="@dimen/chatui_horizontal_margin">
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/chatui_text" android:layout_alignParentLeft="true" layout="@layout/chatui_metadata" />
+        <include layout="@layout/chatui_logo_view_v2" />
+        <include android:layout_width="@dimen/chatui_thinking_indicator_width" android:layout_height="@dimen/chatui_bubble_min_height_v2" android:layout_marginLeft="@dimen/chatui_google_bubble_left_margin_v2" android:layout_toRightOf="@id/chatui_logo_container" android:layout_alignParentTop="true" layout="@layout/thinking_indicator" />
+        <TextView android:id="@id/chatui_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/chatui_google_bubble_left_margin_v2" android:layout_toRightOf="@id/chatui_logo_container" android:layout_alignParentTop="true" style="@style/ChatUi.Bubble.Google.V2" />
+    </RelativeLayout>
+</FrameLayout>

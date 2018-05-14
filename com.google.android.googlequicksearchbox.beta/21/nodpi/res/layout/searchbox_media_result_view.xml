@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:paddingTop="@dimen/ipa_media_top_padding" android:paddingBottom="@dimen/ipa_media_bottom_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ipa_media_side_padding" android:paddingEnd="@dimen/ipa_media_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:grid="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.gsa.plugins.ipa.searchboxui.views.IpaImageView android:id="@id/media_content" android:background="@color/quantum_grey300" android:layout_width="@dimen/ipa_media_suggestion_width" android:layout_height="@dimen/ipa_media_suggestion_width" android:scaleType="centerCrop" />
+    <com.google.android.apps.gsa.plugins.ipa.searchboxui.views.IpaImageView android:id="@id/media_app_icon" style="@style/MediaAppIcon" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/media_contact_detail_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.gsa.plugins.ipa.searchboxui.views.IpaImageView android:layout_gravity="bottom" android:id="@id/media_contact_thumbnail" android:scaleType="centerCrop" style="@style/MediaContactThumbnail" />
+        <TextView android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/media_contact_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/MediaContactNameText" />
+    </LinearLayout>
+</FrameLayout>

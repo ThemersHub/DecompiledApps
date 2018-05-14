@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.staticplugins.actionsui.modular.EntitySelectItem android:gravity="center_vertical" android:orientation="vertical" android:background="@drawable/stateful_colored_background_no_hairline" android:padding="0.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/immersive_actions_card_argument_heading" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/modular_action_entity_small_margin">
+        <com.google.android.apps.gsa.now.shared.ui.WebImageView android:id="@id/image" android:background="@drawable/empty" android:padding="0.0dip" android:layout_width="@dimen/modular_action_entity_large_portrait_image_width" android:layout_height="wrap_content" android:src="@drawable/empty" android:scaleType="centerCrop" android:adjustViewBounds="true" thegoogle:imageScroll="top" thegoogle:hideOnNullImage="true" />
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/text_container" android:padding="0.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <include layout="@layout/immersive_actions_card_multiline_combined_content" />
+            <include layout="@layout/action_card_message_separator" />
+            <View android:id="@id/entity_disambiguation_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/modular_action_disambig_vertical_margin" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.apps.gsa.staticplugins.actionsui.modular.EntitySelectItem>

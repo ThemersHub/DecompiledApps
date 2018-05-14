@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.plugins.images.viewer.ProductMetadataView android:orientation="vertical" android:tag="ve=17035" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/eames_horizontal_metadata_margin" android:layout_marginRight="@dimen/eames_horizontal_metadata_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/product_details_top_row" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/eames_large_vertical_padding">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.google.android.apps.gsa.plugins.images.viewer.LetterSpacingTextView android:textSize="@dimen/eames_section_heading_font_size" android:textStyle="bold" android:textColor="@color/eames_section_heading" android:id="@id/product_details_label_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_viewer_product_price_label" />
+            <TextView android:textSize="@dimen/eames_rich_metadata_font_size" android:textColor="@color/eames_rich_metadata_values" android:id="@id/product_details_value_1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <include layout="@layout/rich_metadata_divider" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.google.android.apps.gsa.plugins.images.viewer.LetterSpacingTextView android:textSize="@dimen/eames_section_heading_font_size" android:textStyle="bold" android:textColor="@color/eames_section_heading" android:id="@id/product_rating_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_viewer_rich_metadata_rating_label" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/eames_rich_metadata_font_size" android:textColor="@color/eames_rich_metadata_values" android:id="@id/product_rating_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.google.android.libraries.gsa.imageviewer.reviewstars.ReviewStarsView android:id="@id/product_review_stars" android:layout_width="wrap_content" android:layout_height="13.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" />
+                <TextView android:textSize="@dimen/eames_rich_metadata_font_size" android:textColor="@color/eames_rich_metadata_values" android:id="@id/product_review_count" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/product_details_bottom_row" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/eames_large_vertical_padding">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.google.android.apps.gsa.plugins.images.viewer.LetterSpacingTextView android:textSize="@dimen/eames_section_heading_font_size" android:textStyle="bold" android:textColor="@color/eames_section_heading" android:id="@id/product_details_label_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_viewer_product_brand_label" />
+            <TextView android:textSize="@dimen/eames_rich_metadata_font_size" android:textColor="@color/eames_rich_metadata_values" android:id="@id/product_details_value_2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <include layout="@layout/rich_metadata_divider" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.google.android.apps.gsa.plugins.images.viewer.LetterSpacingTextView android:textSize="@dimen/eames_section_heading_font_size" android:textStyle="bold" android:textColor="@color/eames_section_heading" android:id="@id/product_details_label_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_viewer_product_availability_label" />
+            <TextView android:textSize="@dimen/eames_rich_metadata_font_size" android:textColor="@color/eames_rich_metadata_values" android:id="@id/product_details_value_3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.libraries.material.baselinetextview.BaselineTextView android:textSize="@dimen/eames_rich_metadata_font_size" android:textColor="@color/eames_metadata_text" android:id="@id/product_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/eames_large_vertical_padding" app:lineSpacing="20.0dip" />
+</com.google.android.apps.gsa.plugins.images.viewer.ProductMetadataView>

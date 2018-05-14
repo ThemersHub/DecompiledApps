@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.shared.ui.FractionalLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.gsa.setupwizard.util.BottomScrollView android:id="@id/bottom_scroll_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0" android:scrollIndicators="bottom|top">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="?suwGlifHeaderGravity" android:id="@id/glif_layout_icon" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="@dimen/hotword_enrollment_glif_icon_max_height" android:src="@drawable/opa_logo" android:contentDescription="@string/opa_logo_content_desc" style="@style/HotwordEnrollmentGlifIcon" />
+            <TextView android:gravity="?suwGlifHeaderGravity" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/HotwordEnrollmentGlifHeaderTitle" />
+            <TextView android:textSize="@dimen/hotword_enrollment_header_subtitle_smaller_text_size" android:gravity="?suwGlifHeaderGravity" android:id="@id/subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/HotwordEnrollmentGlifHeaderTitle" />
+            <FrameLayout android:id="@id/setup_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/HotwordEnrollmentGlifContentFrame" />
+        </LinearLayout>
+    </com.google.android.apps.gsa.setupwizard.util.BottomScrollView>
+    <include layout="@layout/hotword_enrollment_google_home_oobe_button_bar" />
+</com.google.android.apps.gsa.shared.ui.FractionalLinearLayout>

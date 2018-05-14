@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/header_padding_container" android:paddingTop="@dimen/rounded_header_top_padding" android:paddingBottom="@dimen/rounded_header_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/search_box" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/rounded_search_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/goldbox">
+                    <ImageView android:id="@id/super_g" android:paddingLeft="@dimen/rounded_header_googleg_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/googleg_standard_color_24" android:contentDescription="@null" android:paddingStart="@dimen/rounded_header_googleg_padding" />
+                    <TextView android:id="@id/header_hint" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <ImageButton android:layout_gravity="center" android:id="@id/mic_button" android:background="@drawable/ic_mic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/rounded_header_mic_margin" android:layout_marginEnd="@dimen/rounded_header_mic_margin" />
+                </LinearLayout>
+                <ImageButton android:id="@id/goldbox" android:background="?android:selectableItemBackground" android:visibility="gone" android:layout_width="@dimen/rounded_header_action_icon_size" android:layout_height="@dimen/rounded_header_action_icon_size" android:layout_marginLeft="@dimen/rounded_header_upcoming_margin" android:scaleType="centerInside" android:layout_centerVertical="true" android:contentDescription="@string/updates_content_description" android:layout_marginStart="@dimen/rounded_header_upcoming_margin" android:layout_toStartOf="@id/snowman" />
+                <ImageButton android:id="@id/snowman" android:background="?android:selectableItemBackground" android:layout_width="@dimen/rounded_header_action_icon_size" android:layout_height="@dimen/rounded_header_action_icon_size" android:layout_marginRight="@dimen/rounded_header_snowman_margin" android:scaleType="centerInside" android:layout_centerVertical="true" android:contentDescription="@string/options_content_description" android:layout_marginEnd="@dimen/rounded_header_snowman_margin" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

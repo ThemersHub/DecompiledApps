@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/hq_suggestion_chips_side_margin" android:paddingTop="@dimen/hq_image_top_margin" android:paddingRight="@dimen/hq_suggestion_chips_side_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:now="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/primary_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.MetadataLineView android:orientation="vertical" android:id="@id/header_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/photo_stub" android:layout_toStartOf="@id/photo_stub" />
+        <com.google.android.apps.gsa.now.shared.ui.RecyclerViewStub android:id="@id/photo_stub" android:layout_width="@dimen/hq_image_size" android:layout_height="@dimen/hq_image_size" android:layout_marginLeft="@dimen/hq_image_side_padding" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_marginStart="@dimen/hq_image_side_padding" android:layout_alignParentEnd="true" now:layout="@layout/photo_with_attribution" now:inflatedId="@id/content_photo" />
+    </RelativeLayout>
+    <com.google.android.apps.gsa.staticplugins.nowcards.ui.MetadataLineView android:orientation="vertical" android:id="@id/footer_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/primary_content" android:layout_toEndOf="@id/gutter_container" />
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.launcher3.SearchDropTargetBar android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:id="@id/drag_target_bar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_weight="1.0" style="@style/DropTargetButtonContainer">
+            <com.android.launcher3.DeleteDropTarget android:id="@id/delete_target_text" android:text="@string/delete_target_label" style="@style/DropTargetButton" />
+        </FrameLayout>
+        <FrameLayout android:layout_weight="1.0" style="@style/DropTargetButtonContainer">
+            <com.android.launcher3.InfoDropTarget android:id="@id/info_target_text" android:text="@string/info_target_label" style="@style/DropTargetButton" />
+        </FrameLayout>
+        <FrameLayout android:layout_weight="1.0" style="@style/DropTargetButtonContainer">
+            <com.android.launcher3.UninstallDropTarget android:id="@id/uninstall_target_text" android:text="@string/delete_target_uninstall_label" style="@style/DropTargetButton" />
+        </FrameLayout>
+    </LinearLayout>
+</com.android.launcher3.SearchDropTargetBar>

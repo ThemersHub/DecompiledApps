@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/reminders_list_reminder_foreground" android:background="@drawable/reminders_list_reminder_selectable" android:focusable="true" android:clickable="true" style="@style/reminders_list_reminder_layer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/reminders_list_reminder_image" android:src="@drawable/quantum_ic_reminder_googblue_24" style="@style/reminders_list_reminder_image" />
+    <ImageView android:id="@id/reminders_list_reminder_right_image" android:src="@drawable/quantum_ic_cached_grey600_18" android:layout_alignParentRight="true" android:contentDescription="@string/reminders_accessibility_repeating" android:layout_alignParentEnd="true" style="@style/reminders_list_reminder_right_image" />
+    <LinearLayout android:layout_toLeftOf="@id/reminders_list_reminder_right_image" android:layout_toRightOf="@id/reminders_list_reminder_image" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/reminders_list_reminder_right_image" android:layout_toEndOf="@id/reminders_list_reminder_image" style="@style/reminders_list_reminder_info"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:id="@id/reminders_list_reminder_title" style="@style/reminders_list_reminder_title" />
+        <TextView android:id="@id/reminders_list_reminder_summary" style="@style/reminders_list_reminder_summary" />
+        <TextView android:id="@id/reminders_list_reminder_action" style="@style/reminders_list_reminder_action" />
+    </LinearLayout>
+    <include layout="@layout/reminders_list_divider" />
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/prefTitle_hotwordDetector"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference android:persistent="true" android:title="@string/hotword_pref_gsa_only" android:key="hotwordDetector" android:defaultValue="true" android:disableDependentsState="false" />
+    <SwitchPreference android:persistent="true" android:title="@string/hotword_pref_title_always_on" android:key="alwaysOnHotword" android:defaultValue="false" android:disableDependentsState="false" />
+    <SwitchPreference android:persistent="true" android:title="@string/hotword_prefs_voice_everywhere_title" android:key="voiceEverywhereEnabled" android:defaultValue="false" android:disableDependentsState="false" />
+    <SwitchPreference android:persistent="true" android:title="@string/hotword_pref_title_opa" android:key="opa_hotword_enabled" android:summary="@string/hotword_pref_summary_opa" android:defaultValue="false" android:disableDependentsState="false" />
+    <SwitchPreference android:persistent="true" android:title="@string/hotword_pref_title_locked_personal_results" android:key="hotword_from_lock_screen" android:summary="@string/hotword_pref_summary_lock_personal_results" android:defaultValue="false" />
+    <SwitchPreference android:persistent="true" android:title="@string/hotword_pref_title_lock_screen_2_opa" android:key="hotword_from_lock_screen_2" android:summary="@string/hotword_pref_summary_voice_unlock" android:defaultValue="false" />
+    <SwitchPreference android:persistent="true" android:title="@string/hotword_pref_title_during_gmm_navigation" android:key="hotwordInNav" android:defaultValue="true" android:disableDependentsState="false" />
+    <PreferenceCategory android:title="@string/hotword_enrollment_pref_category_voice_model" android:key="pref_category_voice_model">
+        <Preference android:persistent="false" android:title="@string/hotword_enrollment_retrain_voice_model" android:key="speaker_id_retrain_voice_model" />
+        <Preference android:persistent="false" android:title="@string/hotword_enrollment_delete_voice_model" android:key="speaker_id_delete_voice_model" />
+    </PreferenceCategory>
+</PreferenceScreen>

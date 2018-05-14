@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sharebear="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/sharebear_toolbar_edit_tools" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0">
+        <ImageView android:id="@id/sharebear_undo_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_undo_white_24" android:layout_weight="1.0" android:contentDescription="@string/undo" />
+        <TextView android:textSize="@dimen/sharebear_crop_and_edit_toolbar_text_height" android:textColor="@android:color/white" android:gravity="center" android:id="@id/sharebear_toolbar_edit_done" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/sharebear_done_button_description" android:layout_weight="1.0" android:textAllCaps="true" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/sharebear_color_panel" android:padding="4.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.google.android.apps.gsa.staticplugins.sharebear.ColorButton android:tag="@string/sharebear_color_black" android:layout_weight="1.0" android:contentDescription="@string/sharebear_color_black" sharebear:selection_color="@color/sharebear_annotation_black" style="@style/SharebearColorButton" />
+        <com.google.android.apps.gsa.staticplugins.sharebear.ColorButton android:tag="@string/sharebear_color_red" android:layout_weight="1.0" android:contentDescription="@string/sharebear_color_red" sharebear:selection_color="@color/sharebear_annotation_red" style="@style/SharebearColorButton" />
+        <com.google.android.apps.gsa.staticplugins.sharebear.ColorButton android:tag="@string/sharebear_color_yellow" android:layout_weight="1.0" android:contentDescription="@string/sharebear_color_yellow" sharebear:selection_color="@color/sharebear_annotation_yellow" style="@style/SharebearColorButton" />
+        <com.google.android.apps.gsa.staticplugins.sharebear.ColorButton android:tag="@string/sharebear_color_green" android:layout_weight="1.0" android:contentDescription="@string/sharebear_color_green" sharebear:selection_color="@color/sharebear_annotation_green" style="@style/SharebearColorButton" />
+        <com.google.android.apps.gsa.staticplugins.sharebear.ColorButton android:id="@id/sharebear_blue" android:tag="@string/sharebear_color_blue" android:layout_weight="1.0" android:contentDescription="@string/sharebear_color_blue" sharebear:selection_color="@color/sharebear_annotation_blue" style="@style/SharebearColorButton" />
+        <com.google.android.apps.gsa.staticplugins.sharebear.ColorButton android:tag="@string/sharebear_color_purple" android:layout_weight="1.0" android:contentDescription="@string/sharebear_color_purple" sharebear:selection_color="@color/sharebear_annotation_purple" style="@style/SharebearColorButton" />
+        <com.google.android.apps.gsa.staticplugins.sharebear.ColorButton android:tag="@string/sharebear_color_white" android:layout_weight="1.0" android:contentDescription="@string/sharebear_color_white" sharebear:selection_color="@color/sharebear_annotation_white" style="@style/SharebearColorButton" />
+    </LinearLayout>
+</LinearLayout>

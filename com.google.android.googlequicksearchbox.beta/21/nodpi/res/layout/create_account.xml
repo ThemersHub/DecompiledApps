@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/create_account_heading" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GDI.Dialog.Title" />
+        <TextView android:id="@id/create_account_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GDI.Dialog.SubHeading" />
+        <LinearLayout android:orientation="vertical" android:id="@id/claims_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/quantum_grey900" android:id="@id/phone_number_heading" android:paddingTop="6.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/gdi_dialog_margin" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/gdi_dialog_margin" android:layout_marginBottom="0.0dip" android:text="@string/gdi_phone_number" />
+            <Spinner android:id="@id/phone_number_spinner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginBottom="0.0dip" style="@style/GDI.Dialog.Spinner" />
+            <Button android:id="@id/add_phone_button" android:tag="ve=37019;track:click" android:paddingLeft="12.0dip" android:paddingTop="0.0dip" android:paddingRight="12.0dip" android:paddingBottom="0.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="0.0dip" android:layout_marginBottom="0.0dip" android:text="@string/gdi_add_phone_number" android:textAlignment="textStart" style="@style/GDI.Dialog.Button" />
+            <TextView android:id="@id/error_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/gdi_dialog_margin" android:layout_marginRight="@dimen/gdi_dialog_margin" android:text="@string/gdi_add_phone_number_error" style="@style/GDI.Dialog.BodyText.Error" />
+            <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/progress_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+            <TextView android:textColor="@color/quantum_grey900" android:id="@id/location_consent_heading" android:paddingTop="6.0dip" android:paddingBottom="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/gdi_dialog_margin" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/gdi_dialog_margin" android:layout_marginBottom="0.0dip" android:text="@string/gdi_location_consent" />
+            <TextView android:textColor="@color/quantum_grey700" android:id="@id/location_consent_text" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/gdi_dialog_margin" android:layout_marginTop="2.0dip" android:layout_marginRight="@dimen/gdi_dialog_margin" android:layout_marginBottom="0.0dip" android:text="@string/gdi_current_city_level_location" />
+        </LinearLayout>
+        <TextView android:id="@id/fine_print" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="@style/GDI.Dialog.FinePrint" />
+        <LinearLayout style="@style/GDI.Dialog.ButtonHolder">
+            <Button android:id="@id/cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gdi_cancel" style="@style/GDI.Dialog.Button" />
+            <Button android:id="@id/allow_button" android:tag="ve=37017;track:click" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gdi_create_account_button" style="@style/GDI.Dialog.Button" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

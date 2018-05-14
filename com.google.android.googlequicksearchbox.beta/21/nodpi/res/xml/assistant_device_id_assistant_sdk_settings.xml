@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.gsa.assistant.settings.shared.PreferenceHolder android:key="@string/assistant_device_id_group_holder">
+        <com.google.android.apps.gsa.assistant.settings.shared.DescriptionPreferenceCategory android:title="@string/assistant_settings_common_device_id_category" android:key="@string/assistant_device_id_assistant_sdk_preference_category">
+            <com.google.android.apps.gsa.assistant.settings.shared.DeviceNamePreference android:persistent="false" android:key="assistantSDKDeviceName" />
+            <com.google.android.apps.gsa.assistant.settings.shared.AddressPreference android:persistent="false" android:key="assistantSDKLocation" />
+            <com.google.android.apps.gsa.assistant.settings.devices.shared.PersonalInfoScreenfulSwitchPreference android:persistent="false" android:key="assistantSDKPersonalInfoPermission" android:defaultValue="true" />
+            <ListPreference android:persistent="false" android:title="@string/common_device_assistant_language_title" android:key="assistantSDKAssistantLanguage" android:summary="%s" android:widgetLayout="@layout/preference_widget_next" android:dialogTitle="@string/common_device_assistant_language_title" />
+            <Preference android:persistent="false" android:key="assistantSDKRemoveDevice" android:widgetLayout="@layout/preference_widget_clear" />
+        </com.google.android.apps.gsa.assistant.settings.shared.DescriptionPreferenceCategory>
+    </com.google.android.apps.gsa.assistant.settings.shared.PreferenceHolder>
+</PreferenceScreen>

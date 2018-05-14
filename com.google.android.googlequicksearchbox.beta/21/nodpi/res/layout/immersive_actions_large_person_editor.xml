@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/contact_pill" android:focusable="false" android:focusableInTouchMode="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:importantForAccessibility="noHideDescendants"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/contact_pill_content" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/contact_image" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/immersive_actions_large_person_image_height" android:scaleType="centerCrop" android:contentDescription="@string/a_contact" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:ellipsize="end" android:id="@id/contact_name" android:layout_width="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="0.0dip" android:singleLine="true" android:layout_marginStart="0.0dip" android:layout_marginEnd="0.0dip" style="@style/action_card_h2_immersive_actions" />
+            <TextView android:textColor="@color/immersive_actions_dark_grey" android:id="@id/contact_value" android:layout_width="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip" android:singleLine="true" android:layout_marginStart="0.0dip" android:layout_marginEnd="0.0dip" style="@style/action_card_h3_immersive_actions" />
+            <TextView android:textColor="@color/immersive_actions_dark_grey" android:id="@id/contact_pending_relationship" android:layout_width="wrap_content" android:layout_margin="0.0dip" android:singleLine="true" style="@style/action_card_h3_immersive_actions" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/contact_pill_click_catcher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/contact_pill_content" android:layout_alignTop="@id/contact_pill_content" android:layout_alignRight="@id/contact_pill_content" android:layout_alignBottom="@id/contact_pill_content" />
+</RelativeLayout>

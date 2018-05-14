@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:now="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/primary_content" android:paddingLeft="@dimen/hq_empty_cluster_card_side_margin" android:paddingTop="@dimen/hq_empty_cluster_card_top_margin" android:paddingRight="@dimen/hq_empty_cluster_card_side_margin" android:paddingBottom="@dimen/hq_empty_cluster_card_bottom_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <com.google.android.apps.gsa.now.shared.ui.RecyclerViewStub android:id="@id/photo_stub" android:layout_width="@dimen/hq_empty_cluster_image_size" android:layout_height="@dimen/hq_empty_cluster_image_size" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" now:layout="@layout/photo_with_attribution" now:inflatedId="@id/content_photo" />
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.MetadataLineView android:orientation="vertical" android:id="@id/header_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hq_empty_cluster_side_padding" android:layout_marginTop="@dimen/hq_empty_cluster_top_padding" android:layout_toRightOf="@id/photo_stub" android:layout_centerVertical="true" android:layout_toEndOf="@id/photo_stub" />
+    </RelativeLayout>
+</RelativeLayout>

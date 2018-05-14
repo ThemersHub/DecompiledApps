@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/coordinator_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/assistant_settings_uda_loading_spinner_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <com.google.android.libraries.material.progress.MaterialProgressBar android:layout_gravity="center" android:id="@id/assistant_settings_uda_loading_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="@style/Widget.GoogleLib.Progress.Circular.Indeterminate.Large" />
+            <TextView android:textSize="@dimen/assistant_setting_spinner_summary_size" android:textColor="@color/assistant_settings_spinner_summary_text_color" android:gravity="center" android:id="@id/assistant_settings_uda_loading_spinner_summary" android:paddingLeft="@dimen/assistant_setting_spinner_summary_padding" android:paddingRight="@dimen/assistant_setting_spinner_summary_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/assistant_setting_spinner_summary_margin_top" android:fontFamily="sans-serif" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/assistant_settings_uda_editor_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

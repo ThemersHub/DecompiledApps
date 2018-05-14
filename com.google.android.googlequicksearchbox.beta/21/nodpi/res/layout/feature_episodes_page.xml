@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:background="@color/quantum_white_100" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/progress_bar_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+        </FrameLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/episodes_list" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:gravity="center" android:id="@id/no_episodes" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/no_podcasts_found_text_font" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

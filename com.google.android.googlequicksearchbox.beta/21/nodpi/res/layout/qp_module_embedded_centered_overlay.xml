@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/embedded_overlay_module_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/module_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/embedded_overlay_icon_container_margin_top">
+        <com.google.android.apps.gsa.now.shared.ui.RecyclerViewStub android:layout_gravity="center" android:id="@id/icon_stub" android:layout_width="@dimen/embedded_overlay_icon_background_size" android:layout_height="@dimen/embedded_overlay_icon_background_size" android:layout_marginBottom="@dimen/embedded_overlay_icon_margin" />
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.MetadataLineView android:layout_gravity="center" android:id="@id/details_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/icon_stub" />
+    </LinearLayout>
+</FrameLayout>

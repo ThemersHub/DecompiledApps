@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/gutter_container" android:paddingTop="@dimen/qp_gutter_content_padding_top" android:paddingBottom="@dimen/qp_metadata_card_medium_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/qp_gutter_start_margin" android:layout_marginRight="@dimen/qp_gutter_end_margin" android:layout_marginStart="@dimen/qp_gutter_start_margin" android:layout_marginEnd="@dimen/qp_gutter_end_margin">
+        <com.google.android.apps.gsa.now.shared.ui.RecyclerViewStub android:id="@id/gutter_icon_stub" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/qp_metadata_card_medium_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_metadata_card_medium_padding" android:layout_weight="1.0">
+        <TextView android:textColor="?qpNormalTextColor" android:id="@id/title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/qp_h5" />
+        <TextView android:textColor="?qpLightTextColor" android:id="@id/subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_h5" />
+    </LinearLayout>
+    <ViewStub android:id="@id/quick_action_stub" android:layout="@layout/module_quick_action" android:inflatedId="@id/quick_action_container" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    <Space android:layout_width="@dimen/qp_column_padding" android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.launcher3.Folder android:orientation="vertical" android:background="@drawable/quantum_panel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/folder_content_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.android.launcher3.FocusIndicatorView android:id="@id/focus_indicator" android:layout_width="20.0dip" android:layout_height="20.0dip" />
+        <com.android.launcher3.FolderPagedView android:id="@id/folder_content" android:paddingLeft="4.0dip" android:paddingTop="8.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" launcher:pageIndicator="@id/folder_page_indicator" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/folder_footer" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.android.launcher3.ExtendedEditText android:textSize="@dimen/folder_label_text_size" android:textColor="#ff777777" android:textColorHighlight="#ffcccccc" android:textColorHint="#ff808080" android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:id="@id/folder_name" android:background="#00000000" android:paddingTop="@dimen/folder_label_padding_top" android:paddingBottom="@dimen/folder_label_padding_bottom" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/folder_hint_text" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="flagNoExtractUi" android:fontFamily="sans-serif-condensed" />
+        <include android:layout_gravity="center_vertical" android:id="@id/folder_page_indicator" android:layout_width="wrap_content" android:layout_height="12.0dip" layout="@layout/page_indicator" />
+    </LinearLayout>
+</com.android.launcher3.Folder>

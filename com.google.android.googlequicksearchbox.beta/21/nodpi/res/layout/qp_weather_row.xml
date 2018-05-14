@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow android:paddingLeft="@dimen/qp_column_padding" android:paddingTop="@dimen/qp_small_padding" android:paddingRight="@dimen/qp_column_padding" android:paddingBottom="@dimen/qp_small_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.gsa.now.shared.ui.CrossfadingWebImageView android:layout_gravity="top" android:id="@id/current_weather_icon" android:visibility="gone" android:layout_width="@dimen/qp_action_icon_size" android:layout_height="@dimen/qp_action_icon_size" android:layout_marginTop="4.0dip" android:layout_marginRight="@dimen/qp_action_button_margin" android:scaleType="centerCrop" android:adjustViewBounds="true" android:contentDescription="@null" thegoogle:crossfadeDuration="@integer/image_crossfade_duration" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_weight="1.0">
+        <TextView android:textColor="?qpDarkTextColor" android:id="@id/card_title" android:paddingBottom="@dimen/qp_small_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h4" />
+        <TextView android:textColor="?qpLightTextColor" android:id="@id/conditions" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h5" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/qp_weather_list_temperature_size" android:textColor="?qpNormalTextColor" android:layout_gravity="top" android:id="@id/temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/qp_column_padding" android:includeFontPadding="false" style="@style/qp_h1" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/high_and_low" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/qp_column_padding">
+        <TextView android:textColor="?qpNormalTextColor" android:id="@id/high_temp" android:paddingBottom="@dimen/qp_small_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h6" />
+        <TextView android:textColor="?qpLightTextColor" android:id="@id/low_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h6" />
+    </LinearLayout>
+</TableRow>

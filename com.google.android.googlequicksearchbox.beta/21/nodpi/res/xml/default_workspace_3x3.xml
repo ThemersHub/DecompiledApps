@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites
+  xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+    <resolve launcher:container="-101" launcher:screen="0" launcher:x="0" launcher:y="0">
+        <favorite launcher:uri="\#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_MESSAGING;end" />
+        <favorite launcher:uri="sms:" />
+        <favorite launcher:uri="smsto:" />
+        <favorite launcher:uri="mms:" />
+        <favorite launcher:uri="mmsto:" />
+        <favorite launcher:className="com.google.android.talk.SigningInActivity" launcher:packageName="com.google.android.talk" />
+    </resolve>
+    <resolve launcher:container="-101" launcher:screen="2" launcher:x="2" launcher:y="0">
+        <favorite launcher:uri="\#Intent;action=android.intent.action.DIAL;end" />
+        <favorite launcher:uri="tel:123" />
+        <favorite launcher:uri="\#Intent;action=android.intent.action.CALL_BUTTON;end" />
+        <favorite launcher:className="com.google.android.dialer.extensions.GoogleDialtactsActivity" launcher:packageName="com.google.android.dialer" />
+    </resolve>
+    <folder launcher:screen="0" launcher:x="0" launcher:y="-1" launcher:folderItems="@xml/dw_phone_google_folder" />
+    <folder launcher:screen="0" launcher:x="1" launcher:y="-1" launcher:folderItems="@xml/dw_create_folder" />
+    <folder launcher:screen="0" launcher:x="2" launcher:y="-1" launcher:folderItems="@xml/dw_phone_play_folder" />
+    <resolve launcher:container="-101" launcher:screen="3" launcher:x="0" launcher:y="-2">
+        <favorite launcher:uri="\#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_BROWSER;end" />
+        <favorite launcher:uri="http://www.example.com/" />
+        <favorite launcher:className="com.google.android.apps.chrome.Main" launcher:packageName="com.android.chrome" />
+    </resolve>
+    <partner-folder launcher:screen="0" launcher:x="1" launcher:y="-2" />
+    <favorite launcher:className="com.android.vending.AssetBrowserActivity" launcher:packageName="com.android.vending" launcher:screen="0" launcher:x="2" launcher:y="-2" />
+</favorites>

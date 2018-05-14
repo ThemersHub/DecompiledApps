@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="?suwGlifHeaderGravity" android:id="@id/opa_error_message_second_paragraph" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/opa_error_content_separator" style="@style/Opa.Text.Message" />
+    <TextView android:gravity="?suwGlifHeaderGravity" android:id="@id/opa_error_annotation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/opa_error_content_separator" style="@style/Opa.Text.SecondaryMessage" />
+    <FrameLayout android:id="@id/opa_error_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/opa_error_illustration" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/opa_error_content_separator" />
+        <RelativeLayout android:gravity="center" android:id="@id/opa_error_animation_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/opa_error_content_separator">
+            <com.airbnb.lottie.LottieAnimationView android:gravity="center" android:id="@id/opa_error_animation_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <WebView android:id="@id/opa_error_webview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/opa_error_content_separator" />
+        <android.support.v7.widget.RecyclerView android:id="@id/opa_error_recycler_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/opa_error_content_separator" />
+        <com.google.android.apps.gsa.shared.ui.SquareFrameLayout android:id="@id/opa_error_video_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/opa_error_video_horizontal_margin" android:layout_marginTop="@dimen/opa_error_content_separator" android:layout_marginRight="@dimen/opa_error_video_horizontal_margin">
+            <VideoView android:id="@id/opa_error_video" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <FrameLayout android:id="@id/opa_error_video_progress_overlay" android:background="@color/quantum_white_100" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.google.android.libraries.material.progress.MaterialProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+            </FrameLayout>
+        </com.google.android.apps.gsa.shared.ui.SquareFrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/opa_error_switch_container" layout="@layout/switch_container" />
+                <include android:id="@id/opa_error_sub_switch_container" layout="@layout/switch_container" />
+            </LinearLayout>
+            <TextView android:layout_gravity="?suwGlifHeaderGravity" android:id="@id/opa_error_learn_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/opa_error_content_separator" style="@style/Opa.Text.Message" />
+        </LinearLayout>
+        <TextView android:textSize="14.0sp" android:gravity="?suwGlifHeaderGravity" android:layout_gravity="bottom|center" android:id="@id/opa_error_email_supplementary_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="2.0dip" />
+        <TextView android:gravity="bottom" android:layout_gravity="bottom|center" android:id="@id/opa_error_additional_information" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/opa_error_footer_margin" style="@style/Opa.Text.SecondaryMessage" />
+    </FrameLayout>
+</LinearLayout>

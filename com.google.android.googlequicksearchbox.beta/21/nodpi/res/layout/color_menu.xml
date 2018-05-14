@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/color_menu_container" android:layout_width="@dimen/value_panel_max_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center" android:id="@id/color_panel_wrapper" android:layout_width="fill_parent" android:layout_height="@dimen/panel_content_height">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/custom_color_panel" android:visibility="invisible" android:layout_width="@dimen/value_panel_max_width" android:layout_height="@dimen/panel_content_height">
+            <SeekBar android:id="@id/hue_slider" android:layout_width="fill_parent" android:layout_height="@dimen/color_slider_height" android:layout_marginBottom="@dimen/color_slider_gap" android:max="200" android:progressDrawable="@drawable/rainbow_bar_progress" android:thumbTint="@color/velvet_blue" android:thumbTintMode="src_in" />
+            <SeekBar android:id="@id/saturation_brightness_slider" android:layout_width="fill_parent" android:layout_height="@dimen/color_slider_height" android:layout_marginTop="@dimen/color_slider_gap" android:max="100" android:thumbTint="@color/velvet_blue" android:thumbTintMode="src_in" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/theme_panel_background" android:background="@color/panel_fill" android:layout_width="@dimen/main_panel_max_width" android:layout_height="@dimen/panel_content_height">
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/theme_selections" android:layout_width="fill_parent" android:layout_height="@dimen/panel_content_height">
+                <RadioButton android:id="@id/color_theme_color" android:background="@drawable/theme_color_selector" android:layout_width="@dimen/circular_button_radius" android:layout_height="@dimen/circular_button_radius" android:button="@android:color/transparent" />
+                <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/color_theme_mono_light" android:background="@drawable/theme_mono_light_selector" android:layout_width="@dimen/circular_button_radius" android:layout_height="@dimen/circular_button_radius" android:button="@android:color/transparent" />
+                <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/color_theme_mono_dark" android:background="@drawable/theme_mono_dark_selector" android:layout_width="@dimen/circular_button_radius" android:layout_height="@dimen/circular_button_radius" android:button="@android:color/transparent" />
+                <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+                <RadioButton android:id="@id/color_theme_custom" android:background="@drawable/theme_custom_selector" android:layout_width="@dimen/circular_button_radius" android:layout_height="@dimen/circular_button_radius" android:button="@android:color/transparent" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <include layout="@layout/close_button" />
+</LinearLayout>

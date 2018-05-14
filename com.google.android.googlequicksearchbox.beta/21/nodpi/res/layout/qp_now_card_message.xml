@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/modular_answer_background" android:background="@drawable/action_card_clickable_background" android:paddingLeft="@dimen/qp_metadata_card_medium_padding" android:paddingRight="@dimen/qp_metadata_card_medium_padding" android:paddingBottom="@dimen/qp_personal_answer_bottom_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:paddingTop="@dimen/qp_personal_answer_outer_margin" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/sender_icon" android:layout_width="@dimen/qp_mini_card_icon_size" android:layout_height="@dimen/qp_mini_card_icon_size" android:layout_marginRight="@dimen/qp_personal_answer_icon_badge_offset" android:layout_marginBottom="@dimen/qp_personal_answer_icon_badge_offset" />
+            <ImageView android:layout_gravity="bottom|center|right" android:id="@id/sender_source_badge" android:layout_width="@dimen/qp_action_icon_size" android:layout_height="@dimen/qp_action_icon_size" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/qp_small_padding" android:paddingTop="@dimen/qp_large_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@id/message_sender_name" android:paddingBottom="@dimen/qp_personal_answer_small_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h3" />
+            <TextView android:id="@id/message_recipients" android:paddingBottom="@dimen/qp_large_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h6" />
+            <TextView android:id="@id/message_subject" android:paddingBottom="@dimen/qp_medium_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h5_dark" />
+            <com.google.android.apps.gsa.staticplugins.actionsui.modularanswer.CompactMultiTextLinearLayout android:orientation="vertical" android:id="@id/message_body_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:id="@id/message_overflow" android:paddingTop="@dimen/qp_medium_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ellipsis" android:singleLine="true" style="@style/qp_h5" />
+            <TextView android:textColor="@color/qp_text_b3" android:id="@id/message_timestamp" android:paddingTop="@dimen/qp_large_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h6" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/qp_card_separator" android:layout_width="fill_parent" android:layout_height="@dimen/qp_module_divider_height" />
+    <include android:id="@id/modular_answer_primary_action" layout="@layout/qp_primary_action" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:textDirection="locale" android:layoutDirection="locale" style="@style/ResultContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/small_layout_top_margin" android:paddingBottom="@dimen/regular_layout_vertical_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="0.0dip" android:paddingEnd="0.0dip">
+            <com.google.android.apps.gsa.plugins.ipa.searchboxui.views.IpaImageView android:layout_gravity="center_horizontal" android:id="@id/recents_screenshot" android:visibility="gone" android:layout_width="@dimen/recents_card_width" android:layout_height="@dimen/recents_screenshot_height" android:scaleType="centerCrop" android:tint="#08000000" />
+            <TextView android:ellipsize="end" android:id="@id/result_title" android:paddingTop="@dimen/recents_large_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" android:minLines="3" android:scrollHorizontally="false" android:paddingStart="@dimen/recents_large_margin" android:paddingEnd="@dimen/recents_large_margin" style="@style/RecentsTitle" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/result_second_line_text" android:paddingTop="@dimen/recents_small_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/recents_large_margin">
+                <com.google.android.apps.gsa.plugins.ipa.searchboxui.views.IpaImageView android:layout_gravity="center_vertical" android:id="@id/badge_app_icon" android:visibility="gone" android:layout_width="@dimen/ipa_app_icon_in_snippet_size" android:layout_height="@dimen/ipa_app_icon_in_snippet_size" android:scaleType="centerInside" android:layout_marginEnd="@dimen/ipa_app_icon_in_snippet_margin" />
+                <TextView android:ellipsize="end" android:id="@id/result_metadata_left_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/SecondLineText" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/result_third_line_text" android:paddingTop="@dimen/recents_small_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/recents_large_margin">
+                <TextView android:ellipsize="end" android:id="@id/recents_detail_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/RecentsDetailText" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

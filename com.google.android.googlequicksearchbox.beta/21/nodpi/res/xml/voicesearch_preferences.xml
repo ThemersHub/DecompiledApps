@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/voiceSearchPreferences"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.gsa.speech.settingsui.language.LanguagePreference android:entries="@array/emptyArray" android:title="@string/prefTitle_language" android:key="language" android:dialogTitle="@string/prefDialogTitle_language" />
+    <Preference android:title="@string/prefTitle_language" android:key="languageFullPage" />
+    <PreferenceScreen android:persistent="false" android:title="@string/prefTitle_hotwordDetector" android:key="hotword" android:fragment="com.google.android.apps.gsa.speech.settingsui.hotword.HotwordSettingsFragment" />
+    <PreferenceScreen android:persistent="false" android:title="@string/prefTitle_handsFree" android:key="handsFree" android:fragment="com.google.android.apps.gsa.speech.settingsui.HandsFreeSettingsFragment" />
+    <ListPreference android:entries="@array/prefEntries_ttsMode" android:title="@string/prefTitle_ttsMode" android:key="ttsMode" android:defaultValue="@string/prefDefault_ttsMode" android:dialogTitle="@string/prefDialogTitle_ttsMode" android:entryValues="@array/prefValues_ttsMode" />
+    <Preference android:persistent="false" android:title="@string/prefTitle_downloadLanguagePacks" android:key="downloadLanguagePacks" android:summary="@string/prefSummary_downloadLanguagePacks" />
+    <SwitchPreference android:persistent="true" android:title="@string/prefTitle_profanityFilter" android:key="profanityFilter" android:summary="@string/prefSummary_profanityFilter" android:defaultValue="true" />
+    <SwitchPreference android:persistent="true" android:title="@string/prefTitle_bluetoothHeadset" android:key="bluetoothHeadset" android:summary="@string/prefSummary_bluetoothHeadset" android:defaultValue="false" />
+    <SwitchPreference android:persistent="true" android:title="@string/prefTitle_embeddedTranscription" android:key="embeddedTranscription" android:summary="@string/prefSummary_embeddedTranscription" android:defaultValue="false" />
+</PreferenceScreen>

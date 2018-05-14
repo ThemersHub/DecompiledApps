@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/qp_column_padding" android:paddingTop="@dimen/qp_large_padding" android:paddingRight="@dimen/qp_column_padding" android:paddingBottom="@dimen/qp_large_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingBottom="@dimen/qp_small_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.gsa.now.shared.ui.CrossfadingWebImageView android:id="@id/first_entity_icon" android:visibility="gone" android:layout_width="@dimen/qp_sport_list_row_icon_size" android:layout_height="@dimen/qp_sport_list_row_icon_size" android:layout_marginRight="@dimen/qp_column_padding" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@null" android:layout_marginEnd="@dimen/qp_column_padding" thegoogle:crossfadeDuration="@integer/image_crossfade_duration" />
+            <com.google.android.apps.gsa.staticplugins.nowcards.ui.EllipsizingTextView android:id="@id/first_entity_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" style="@style/qp_h3" />
+            <TextView android:id="@id/first_entity_score" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h3" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.gsa.now.shared.ui.CrossfadingWebImageView android:id="@id/second_entity_icon" android:visibility="gone" android:layout_width="@dimen/qp_sport_list_row_icon_size" android:layout_height="@dimen/qp_sport_list_row_icon_size" android:layout_marginRight="@dimen/qp_column_padding" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@null" android:layout_marginEnd="@dimen/qp_column_padding" thegoogle:crossfadeDuration="@integer/image_crossfade_duration" />
+            <com.google.android.apps.gsa.staticplugins.nowcards.ui.EllipsizingTextView android:id="@id/second_entity_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" style="@style/qp_h3" />
+            <TextView android:id="@id/second_entity_score" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/qp_h3" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="#fff0f0f0" android:paddingLeft="@dimen/qp_column_padding" android:paddingTop="@dimen/qp_large_padding" android:paddingRight="@dimen/qp_column_padding" android:paddingBottom="@dimen/qp_large_padding" android:layout_width="@dimen/qp_sport_list_row_video_highlight_width" android:layout_height="fill_parent">
+        <TextView android:textStyle="bold" android:id="@id/highlight_status" android:paddingTop="@dimen/qp_small_padding" android:paddingBottom="@dimen/qp_small_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" android:fontFamily="sans-serif-condensed" style="@style/qp_h5" />
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.EllipsizingTextView android:id="@id/broadcast_station" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/qp_h6" />
+        <include android:id="@id/video_thumbnail" android:visibility="gone" android:layout_width="@dimen/qp_sport_list_row_video_highlight_width" android:layout_height="@dimen/qp_sport_list_row_video_highlight_height" layout="@layout/qp_video_thumbnail" />
+    </LinearLayout>
+</LinearLayout>

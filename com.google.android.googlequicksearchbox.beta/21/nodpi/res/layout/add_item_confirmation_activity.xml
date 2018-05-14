@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@color/widgets_cell_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+        <include android:layout_gravity="center_horizontal" android:id="@id/widget_cell" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/widget_cell" />
+    </FrameLayout>
+    <LinearLayout android:gravity="end" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:attr/buttonBarStyle">
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/cancel" android:onClick="onCancelClick" style="?android:attr/buttonBarButtonStyle" />
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/ok" android:onClick="onPlaceAutomaticallyClick" style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:paddingBottom="@dimen/assistant_setting_cast_timeout_bottom_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/assistant_setting_cast_timeout_icon_size" android:layout_marginBottom="@dimen/assistant_setting_cast_timeout_icon_margin_bottom" android:src="@drawable/quantum_ic_report_problem_grey600_48" />
+        <TextView android:textSize="@dimen/assistant_setting_cast_timeout_title_text_size" android:textColor="@color/quantum_grey900" android:gravity="center" android:id="@id/timeout_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/assistant_setting_cast_timeout_title_margin_bottom" android:text="@string/assistant_settings_cast_device_scan_time_out" />
+        <TextView android:textSize="@dimen/assistant_setting_cast_timeout_summary_text_size" android:textColor="@color/quantum_grey600" android:gravity="center" android:id="@id/timeout_summary" android:paddingLeft="@dimen/assistant_setting_cast_timeout_summary_padding" android:paddingRight="@dimen/assistant_setting_cast_timeout_summary_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/assistant_setting_cast_timeout_summary_margin_bottom" android:text="@string/assistant_settings_cast_time_out_wifi_hint" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.google.android.libraries.material.progress.MaterialProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/assistant_setting_cast_timeout_summary_text_size" android:textColor="@color/quantum_grey600" android:gravity="center" android:padding="@dimen/assistant_setting_cast_timeout_still_searching_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/assistant_settings_cast_time_out_still_scan" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

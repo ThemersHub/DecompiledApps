@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <set>
+            <objectAnimator android:duration="@android:integer/config_shortAnimTime" android:valueTo="@dimen/quartz_elevated_button_elevation_pressed" android:valueType="floatType" android:propertyName="elevation" />
+        </set>
+    </item>
+    <item android:state_enabled="false">
+        <set>
+            <objectAnimator android:duration="@android:integer/config_shortAnimTime" android:valueTo="@dimen/quartz_elevated_button_elevation_disabled" android:valueType="floatType" android:propertyName="elevation" />
+        </set>
+    </item>
+    <item>
+        <set>
+            <objectAnimator android:duration="@android:integer/config_shortAnimTime" android:valueTo="@dimen/quartz_elevated_button_elevation_default" android:valueType="floatType" android:propertyName="elevation" />
+        </set>
+    </item>
+</selector>

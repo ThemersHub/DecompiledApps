@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/agenda_calendar_event" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:id="@id/calendar_event_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:maxLines="1" android:layout_toLeftOf="@id/agenda_more_items" style="@style/ZeroStateAgendaItemText" />
+    <LinearLayout android:id="@id/agenda_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:layout_toLeftOf="@id/agenda_more_items" android:layout_below="@id/calendar_event_title">
+        <ImageView android:layout_gravity="center" android:id="@id/agenda_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/dot" android:scaleType="centerInside" />
+        <TextView android:ellipsize="end" android:id="@id/calendar_event_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:maxLines="1" style="@style/ZeroStateAgendaItemDescriptionText" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/agenda_more_items" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_keyboard_arrow_right_black_24" android:layout_alignParentRight="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/agenda_sub_items" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/agent_card_divider_margin" android:layout_below="@id/agenda_content" />
+</RelativeLayout>

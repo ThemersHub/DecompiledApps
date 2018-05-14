@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/qp_large_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/qp_column_padding" android:paddingRight="@dimen/qp_column_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/driving_mode_target" android:layout_width="@dimen/card_action_button_width" android:layout_height="@dimen/card_action_button_height" android:layout_weight="1.0" android:contentDescription="@string/time_to_leave_travel_driving">
+            <ImageView android:layout_gravity="center" android:id="@id/driving_mode" android:layout_width="@dimen/qp_action_icon_size" android:layout_height="@dimen/qp_action_icon_size" android:src="@drawable/ic_directions_car" android:tint="@android:color/black" android:alpha="0.38" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/transit_mode_target" android:layout_width="@dimen/card_action_button_width" android:layout_height="@dimen/card_action_button_height" android:layout_weight="1.0" android:contentDescription="@string/time_to_leave_travel_transit">
+            <ImageView android:layout_gravity="center" android:id="@id/transit_mode" android:layout_width="@dimen/qp_action_icon_size" android:layout_height="@dimen/qp_action_icon_size" android:src="@drawable/ic_directions_transit" android:tint="@android:color/black" android:alpha="0.38" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/walking_mode_target" android:layout_width="@dimen/card_action_button_width" android:layout_height="@dimen/card_action_button_height" android:layout_weight="1.0" android:contentDescription="@string/time_to_leave_travel_walking">
+            <ImageView android:layout_gravity="center" android:id="@id/walking_mode" android:layout_width="@dimen/qp_action_icon_size" android:layout_height="@dimen/qp_action_icon_size" android:src="@drawable/ic_directions_walk" android:tint="@android:color/black" android:alpha="0.38" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/biking_mode_target" android:layout_width="@dimen/card_action_button_width" android:layout_height="@dimen/card_action_button_height" android:layout_weight="1.0" android:contentDescription="@string/time_to_leave_travel_biking">
+            <ImageView android:layout_gravity="center" android:id="@id/biking_mode" android:layout_width="@dimen/qp_action_icon_size" android:layout_height="@dimen/qp_action_icon_size" android:src="@drawable/ic_directions_bike" android:tint="@android:color/black" android:alpha="0.38" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/qp_column_padding" android:paddingTop="@dimen/qp_large_padding" android:paddingRight="@dimen/qp_column_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/qp_text_b3" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/leave_from" android:layout_weight="1.0" style="@style/qp_h6" />
+        <Space android:layout_width="32.0dip" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/qp_text_b3" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/arrival_time" android:layout_weight="1.0" style="@style/qp_h6" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/qp_column_padding" android:paddingRight="@dimen/qp_column_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <FrameLayout android:id="@id/starting_location_trigger" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/card_action_button_height" android:layout_weight="1.0">
+            <TextView android:layout_gravity="center_vertical" android:id="@id/starting_location" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_spinner" />
+        </FrameLayout>
+        <Space android:layout_width="32.0dip" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/arrival_time_trigger" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/card_action_button_height" android:layout_weight="1.0">
+            <TextView android:layout_gravity="center_vertical" android:id="@id/arrival_time" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_spinner" />
+        </FrameLayout>
+    </LinearLayout>
+    <include android:id="@id/transit_trip_list" android:paddingLeft="@dimen/qp_column_padding" android:paddingRight="@dimen/qp_column_padding" android:visibility="gone" layout="@layout/qp_transit_trip_list" />
+    <ProgressBar android:layout_gravity="top" android:id="@id/ttl_progress_bar" android:paddingLeft="0.0dip" android:paddingTop="@dimen/qp_large_padding" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="-8.0dip" android:indeterminate="true" style="?android:attr/progressBarStyleHorizontal" />
+</LinearLayout>

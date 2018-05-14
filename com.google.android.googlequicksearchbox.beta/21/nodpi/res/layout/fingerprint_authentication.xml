@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/monet_ignore_layout" android:layout_height="@dimen/monet_ignore_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/payments_auth_container" android:tag="ve=37470" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/payments_auth_password_dialog_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:id="@id/payments_auth_fingerprint_dialog" android:tag="ve=35522;visibility:hidden" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/payments_auth_fingerprint_dialog_content" android:padding="@dimen/authDialogPadding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/authTitleTextSize" android:textColor="@color/primaryTextColor" android:id="@id/payments_auth_fingerprint_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payments_auth_dialog_title" />
+                <TextView android:textSize="18.0sp" android:textColor="@color/primaryTextColor" android:id="@id/payments_auth_fingerprint_order_summary_h1" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/secondaryTextSize" android:textColor="@color/secondaryTextColor" android:id="@id/payments_auth_fingerprint_order_summary_h2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/secondaryTextSize" android:textColor="@color/fingerprintTryAgainColor" android:gravity="center" android:id="@id/payments_auth_fingerprint_try_again_message" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/largeSpaceSize" android:text="@string/payments_auth_fingerprint_try_again_message" />
+                <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/payments_auth_fingerprint_background" android:background="@drawable/payments_auth_fingerprint_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/authDialogPadding">
+                    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="40.0dip" android:src="@drawable/quantum_ic_fingerprint_white_48" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/secondaryTextSize" android:textColor="@color/primaryTextColor" android:layout_gravity="center_horizontal" android:id="@id/payments_auth_fingerprint_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payments_auth_fingerprint_hint" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="end" android:layout_gravity="end" android:orientation="horizontal" android:padding="@dimen/smallSpaceSize" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/payments_auth_fingerprint_cancel_button" android:tag="ve=35523;track:click" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payments_auth_cancel" android:textAllCaps="true" style="@style/actionButtonStyle" />
+                <Space android:layout_width="@dimen/smallSpaceSize" android:layout_height="fill_parent" />
+                <Button android:id="@id/payments_auth_fingerprint_switch_to_password_button" android:tag="ve=35524;track:click" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payments_auth_fingerprint_switch_to_password" android:textAllCaps="true" style="@style/actionButtonStyle" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

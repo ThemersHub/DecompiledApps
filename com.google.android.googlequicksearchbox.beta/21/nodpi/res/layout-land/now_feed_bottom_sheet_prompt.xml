@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.sidekick.shared.overlay.NowFeedNotificationPrompt android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/now_feed_notification_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/now_feed_bottom_sheet_prompt_shadow_height" android:src="@drawable/now_feed_prompt_shadow" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/quantum_white_100" android:padding="@dimen/now_feed_bottom_sheet_prompt_sheet_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+            <ImageView android:id="@id/now_feed_prompt_bell_circle" android:layout_width="@dimen/now_feed_bottom_sheet_prompt_icon_size" android:layout_height="@dimen/now_feed_bottom_sheet_prompt_icon_size" android:layout_marginRight="@dimen/now_feed_bottom_sheet_prompt_icon_text_padding" style="@style/now_feed_bottom_sheet_prompt_icon" />
+            <TextView android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/now_feed_prompt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="3" style="@style/now_feed_bottom_sheet_prompt_title" />
+        </LinearLayout>
+        <LinearLayout android:gravity="end|center" android:layout_gravity="end|center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/now_feed_prompt_reject" android:paddingLeft="@dimen/now_feed_bottom_sheet_prompt_reject_padding" android:paddingRight="@dimen/now_feed_bottom_sheet_prompt_reject_padding" android:layout_width="wrap_content" android:layout_height="@dimen/now_feed_bottom_sheet_prompt_cta_height" android:layout_marginRight="@dimen/now_feed_bottom_sheet_prompt_reject_padding" style="@style/now_feed_bottom_sheet_prompt_reject" />
+            <com.google.android.apps.gsa.now.shared.ui.RoundedCornerTextView android:gravity="center" android:layout_gravity="center" android:id="@id/now_feed_prompt_accept" android:paddingLeft="@dimen/now_feed_bottom_sheet_prompt_accept_padding" android:paddingRight="@dimen/now_feed_bottom_sheet_prompt_accept_padding" android:layout_width="wrap_content" android:layout_height="@dimen/now_feed_bottom_sheet_prompt_cta_height" android:layout_alignParentRight="true" thegoogle:cornerRadius="@dimen/now_feed_bottom_sheet_prompt_accept_corner_radius" thegoogle:roundCorners="bottom|top" style="@style/now_feed_bottom_sheet_prompt_accept" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.apps.gsa.sidekick.shared.overlay.NowFeedNotificationPrompt>

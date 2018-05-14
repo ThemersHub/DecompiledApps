@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.libraries.reminders.view.toolbar.RemindersViewToolbar android:id="@id/reminders_view_toolbar" style="@style/reminders_view_toolbar">
+        <include layout="@layout/reminders_view_toolbar" />
+    </com.google.android.libraries.reminders.view.toolbar.RemindersViewToolbar>
+    <android.support.v7.widget.RecyclerView android:id="@id/reminders_list" android:layout_below="@id/reminders_view_toolbar" style="@style/reminders_list"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <include layout="@layout/reminders_list_fab" />
+    <include layout="@layout/reminders_list_undo_bar" />
+</RelativeLayout>
