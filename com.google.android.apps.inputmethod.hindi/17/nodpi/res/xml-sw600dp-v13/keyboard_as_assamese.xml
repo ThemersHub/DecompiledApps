@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <keyboard id="@id/keyboard_as_assamese" class=".hindi.keyboard.BengaliKeyboard" popup="@attr/PopupBubbleLayout">
+        <view layout="@layout/keyboard_prime_header" scalable="false" type="header">
+            <softkeys href="@xml/softkeys_header_prime" />
+            <softkeys href="@xml/softkeys_header_candidates" />
+            <include href="@xml/keymapping_header_candidates" />
+            <include href="@xml/keymapping_header_prime_lang" />
+        </view>
+        <view layout="@layout/keyboard_inscript_50key_three_symbols_on_bottom_body" type="body">
+            <motion_event_handler class=".libs.framework.keyboard.handler.BasicMotionEventHandler" reverse_preference="true" preference_key="@string/pref_key_enable_spatial_model" />
+            <motion_event_handler class=".libs.framework.keyboard.handler.SpatialModelMotionEventHandler" reverse_preference="false" preference_key="@string/pref_key_enable_spatial_model" />
+            <softkeys href="@xml/softkeys_function" />
+            <softkeys href="@xml/softkeys_function_tablet" />
+            <softkeys href="@xml/softkeys_function_in" />
+            <softkeys href="@xml/softkeys_input_bengali" />
+            <softkeys href="@xml/softkeys_input_as_assamese" />
+            <softkeys href="@xml/softkeys_body_candidates" />
+            <softkeys href="@xml/softkeys_punctuation_in" />
+            <softkeys href="@xml/softkeys_punctuation_bottom" />
+            <include href="@xml/keymapping_function_ime_action_en_prime" />
+            <include href="@xml/keymapping_body_as_assamese" />
+            <include href="@xml/keymapping_bottom_in_native_tablet" />
+            <include href="@xml/keymapping_body_candidates" />
+        </view>
+    </keyboard>
+</framework>

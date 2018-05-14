@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <softkeys>
+        <softkey_template id="@id/softkey_template_symbol_single_normal_popup" layout="@layout/softkey_one_label_en_key" popup_timing="@string/qwerty_popup_timing" multi_touch="false" content_description="$desc$">
+            <action type="PRESS" data="$param_data$" keycode="$keycode_press=PLAIN_TEXT$" intention="COMMIT" popup_label="$param_data$" />
+            <label location="@id/label" value="$param_data$" />
+        </softkey_template>
+        <softkey_list template_id="@id/softkey_template_symbol_single_normal_popup">
+            <softkey id="@id/softkey_symbol_at" param_data="\@" keycode_press="AT" />
+            <softkey id="@id/softkey_symbol_pond" param_data="\#" keycode_press="POUND" />
+            <softkey id="@id/softkey_symbol_and" param_data="&amp;" />
+            <softkey id="@id/softkey_symbol_exclamation" param_data="!" />
+            <softkey id="@id/softkey_symbol_colon" param_data=":" />
+            <softkey id="@id/softkey_symbol_semicolon" param_data=";" keycode_press="SEMICOLON" />
+            <softkey id="@id/softkey_symbol_slash" param_data="/" keycode_press="SLASH" />
+            <softkey id="@id/softkey_symbol_question" param_data="\?" />
+            <softkey id="@id/softkey_symbol_wave" param_data="~" />
+            <softkey id="@id/softkey_symbol_stop" param_data="`" />
+            <softkey id="@id/softkey_symbol_vertical_bar" param_data="|" />
+            <softkey id="@id/softkey_symbol_hook" param_data="√" />
+            <softkey id="@id/softkey_symbol_divide" param_data="÷" />
+            <softkey id="@id/softkey_symbol_multiple" param_data="×" />
+            <softkey id="@id/softkey_symbol_left_brace" param_data="{" />
+            <softkey id="@id/softkey_symbol_right_brace" param_data="}" />
+            <softkey id="@id/softkey_symbol_dollar" param_data="$" />
+            <softkey id="@id/softkey_symbol_uk_pound" param_data="£" />
+            <softkey id="@id/softkey_symbol_cent" param_data="¢" />
+            <softkey id="@id/softkey_symbol_euro" param_data="€" />
+            <softkey id="@id/softkey_symbol_under_line" param_data="_" />
+            <softkey id="@id/softkey_symbol_left_square_bracket" param_data="[" keycode_press="LEFT_BRACKET" />
+            <softkey id="@id/softkey_symbol_right_square_bracket" param_data="]" keycode_press="RIGHT_BRACKET" />
+            <softkey id="@id/softkey_symbol_left_solid_square_bracket" param_data="【" desc="@string/left_black_square_bracket_key_content_desc" />
+            <softkey id="@id/softkey_symbol_right_solid_square_bracket" param_data="】" desc="@string/right_black_square_bracket_key_content_desc" />
+            <softkey id="@id/softkey_symbol_delta" param_data="∆" />
+            <softkey id="@id/softkey_symbol_trademark" param_data="™" />
+            <softkey id="@id/softkey_symbol_care_of" param_data="℅" />
+            <softkey id="@id/softkey_symbol_copyright" param_data="©" />
+            <softkey id="@id/softkey_symbol_registered" param_data="®" />
+            <softkey id="@id/softkey_symbol_back_slash" param_data="\\" keycode_press="BACKSLASH" />
+            <softkey id="@id/softkey_symbol_two_comma" param_data="„" />
+            <softkey id="@id/softkey_symbol_ellipsis" param_data="…" />
+            <softkey id="@id/softkey_symbol_danda" param_data="।" desc="@string/danda_key_content_desc" />
+            <softkey id="@id/softkey_symbol_danda2" param_data="॥" desc="@string/double_danda_key_content_desc" />
+            <softkey id="@id/softkey_symbol_comma" param_data="," />
+            <softkey id="@id/softkey_symbol_period" param_data="." />
+            <softkey id="@id/softkey_symbol_male" param_data="♂" />
+            <softkey id="@id/softkey_symbol_female" param_data="♀" />
+            <softkey id="@id/softkey_symbol_yuan" param_data="¥" />
+            <softkey id="@id/softkey_inverted_exclamation" param_data="¡" />
+            <softkey id="@id/softkey_inverted_question" param_data="¿" />
+        </softkey_list>
+        <softkey_template id="@id/softkey_template_symbol_multi_popup" layout="@layout/softkey_label_medium" popup_timing="@string/qwerty_popup_timing" multi_touch="false" content_description="$desc$">
+            <action type="PRESS" data="$param_data$" keycode="$keycode_press=PLAIN_TEXT$" intention="COMMIT" popup_label="$param_data$" />
+            <action type="LONG_PRESS" data="$long_press_data$" keycode="PLAIN_TEXT" intention="COMMIT" popup_label="$long_press_data$" popup_layout="@attr/PopupBubbleRectangularLayout" />
+            <label location="@id/label" value="$param_data$" />
+        </softkey_template>
+        <softkey_list template_id="@id/softkey_template_symbol_multi_popup" splitter=",">
+            <softkey id="@id/softkey_symbol_rupee" param_data="₹" long_press_data="$,¢,€,£,¥" desc="@string/rupee_key_content_desc" />
+            <softkey id="@id/softkey_symbol_star" param_data="*" keycode_press="STAR" long_press_data="†,★,‡" />
+            <softkey id="@id/softkey_symbol_minus" param_data="-" long_press_data="–,_,―" />
+            <softkey id="@id/softkey_symbol_left_paren" param_data="(" long_press_data="[,{,&lt;" />
+            <softkey id="@id/softkey_symbol_right_paren" param_data=")" long_press_data="],},>" />
+            <softkey id="@id/softkey_symbol_quote" param_data="&quot;" long_press_data="”,“,«,»" />
+            <softkey id="@id/softkey_symbol_single_quote" param_data="'" long_press_data="’,‘,‛" />
+            <softkey id="@id/softkey_symbol_solid_circle" param_data="•" long_press_data="●,○,■,□" />
+            <softkey id="@id/softkey_symbol_solid_heart" param_data="♥" long_press_data="♡,★,☆" />
+            <softkey id="@id/softkey_symbol_solid_star" param_data="★" long_press_data="☆" />
+            <softkey id="@id/softkey_symbol_solid_square" param_data="■" long_press_data="□" />
+            <softkey id="@id/softkey_symbol_solid_rhombus" param_data="◆" long_press_data="◇" />
+            <softkey id="@id/softkey_symbol_solid_big_circle" param_data="●" long_press_data="○" />
+            <softkey id="@id/softkey_symbol_degree" param_data="°" long_press_data="’,”" />
+            <softkey id="@id/softkey_symbol_hat" param_data="^" long_press_data="↑,↓,←,→" />
+            <softkey id="@id/softkey_symbol_equal" param_data="=" keycode_press="EQUALS" long_press_data="≠,≈,∞" />
+            <softkey id="@id/softkey_symbol_less_than" param_data="&lt;" long_press_data="≤,≪,‹" />
+            <softkey id="@id/softkey_symbol_more_than" param_data=">" long_press_data="≥,≫,›" />
+            <softkey id="@id/softkey_symbol_degree_c" param_data="℃" long_press_data="℉" />
+            <softkey id="@id/softkey_symbol_percent" param_data="%" long_press_data="‰" />
+            <softkey id="@id/softkey_symbol_plus" param_data="+" keycode_press="PLUS" long_press_data="±" />
+            <softkey id="@id/softkey_symbol_pi" param_data="π" long_press_data="Π" />
+            <softkey id="@id/softkey_symbol_pilcrow" param_data="¶" long_press_data="§" />
+        </softkey_list>
+    </softkeys>
+</framework>

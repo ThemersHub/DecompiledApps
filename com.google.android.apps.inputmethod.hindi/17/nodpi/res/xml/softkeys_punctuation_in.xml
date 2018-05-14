@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <include href="@xml/softkey_templates_bottom_line" />
+    <softkeys>
+        <softkey_list template_id="@id/softkey_template_bottom_line_punctuation_bottom_popup_label_small" splitter="|">
+            <softkey id="@id/softkey_danda_with_period" param_data="।" param_keycode="PLAIN_TEXT" param_layout="@layout/softkey_label_medium_bottom" long_press_data=".|,|॥|?|!|:|;|_|$|₹|:P|:D|:(|:)|^_^" desc="@string/danda_key_content_desc" />
+            <softkey id="@id/softkey_period_for_tamil" param_data="." param_keycode="PERIOD" param_layout="@layout/softkey_label_medium_bottom" long_press_data="\?|!|…|:|;|_|,|$|௹|₹|:P|:D|:(|:)|^_^" />
+            <softkey id="@id/softkey_period_for_indic" param_data="." param_keycode="PERIOD" param_layout="@layout/softkey_label_medium_bottom" long_press_data="\?|!|…|:|;|_|%|₹|^|&amp;|:P|:D|:(|:)|^_^" />
+            <softkey id="@id/softkey_period_for_telugu" param_data="." param_keycode="PERIOD" param_layout="@layout/softkey_label_medium_bottom" long_press_data=",|?|!|…|:|;|_|%|₹|^|&amp;|:P|:D|:(|:)" />
+        </softkey_list>
+        <softkey_list template_id="@id/softkey_template_bottom_line_punctuation_bottom" splitter="|">
+            <softkey id="@id/softkey_danda" param_data="।" param_keycode="PLAIN_TEXT" param_layout="@layout/softkey_label_medium_bottom" desc="@string/danda_key_content_desc" />
+            <softkey id="@id/softkey_bottom_dash" param_data="-" param_keycode="PLAIN_TEXT" param_layout="@layout/softkey_label_medium_bottom" />
+        </softkey_list>
+        <softkey id="@id/softkey_center_zwnj" layout="@layout/softkey_icon" popup_timing="@string/qwerty_popup_timing" multi_touch="false">
+            <action type="PRESS" keycode="ALPHABET" data="‌" intention="D" popup_icon="@attr/IconZWNJ" popup_layout="@layout/popup_square_bubble" />
+            <action type="LONG_PRESS" keycode="ALPHABET" data="‍" intention="D" popup_icon="@attr/IconZWJ" popup_layout="@layout/popup_square_bubble" />
+            <icon location="@id/icon" value="@attr/IconZWNJ" />
+        </softkey>
+        <softkey id="@id/softkey_center_zwnj_non_decode" layout="@layout/softkey_icon" popup_timing="@string/qwerty_popup_timing" multi_touch="false">
+            <action type="PRESS" keycode="ALPHABET" data="‌" intention="C" popup_icon="@attr/IconZWNJ" popup_layout="@layout/popup_square_bubble" />
+            <action type="LONG_PRESS" keycode="ALPHABET" data="‍" intention="C" popup_icon="@attr/IconZWJ" popup_layout="@layout/popup_square_bubble" />
+            <icon location="@id/icon" value="@attr/IconZWNJ" />
+        </softkey>
+    </softkeys>
+</framework>

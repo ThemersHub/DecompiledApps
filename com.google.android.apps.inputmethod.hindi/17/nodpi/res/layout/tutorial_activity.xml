@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.inputmethod.libs.framework.keyboard.widget.BidiViewPager android:id="@id/tutorial_pager" style="@style/FirstRunViewPager" />
+    <LinearLayout style="@style/FirstRunPageFooter.TutorialPage">
+        <com.google.android.apps.inputmethod.libs.framework.keyboard.widget.AutoSizeTextView android:id="@id/navi_skip" android:text="@string/tutorial_skip" style="@style/FirstRunNavigation.Left.TutorialPage" />
+        <com.google.android.apps.inputmethod.libs.framework.keyboard.widget.PageIndicatorView android:id="@id/page_indicator" style="@style/FirstRunNavigation.Center.TutorialPage" page_indicator_image="@layout/first_run_page_indicator_image" />
+        <ImageView android:id="@id/navi_next" android:src="@drawable/ic_tutorial_next_page" android:scaleType="center" android:contentDescription="@string/next_page_content_desc" style="@style/FirstRunNavigation.Right.TutorialPage" />
+        <com.google.android.apps.inputmethod.libs.framework.keyboard.widget.AutoSizeTextView android:id="@id/navi_welcome" android:text="@string/tutorial_done" style="@style/FirstRunNavigation.Right.TutorialPage" />
+    </LinearLayout>
+    <com.google.android.apps.inputmethod.libs.framework.firstrun.TutorialOverlayView android:id="@id/tutorial_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

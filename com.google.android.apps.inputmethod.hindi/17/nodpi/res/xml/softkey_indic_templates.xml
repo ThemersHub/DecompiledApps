@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <softkeys>
+        <softkey_template id="@id/softkey_template_indic_vowel_one_label_with_conjuncts" layout="@layout/softkey_one_label_indic_vowel_auto_size_key" popup_timing="@string/qwerty_popup_timing" slide_sensitivity="NORMAL" multi_touch="false" content_description="$desc$">
+            <action type="PRESS" data="$press_data$" keycode="ALPHABET" intention="DECODE" popup_label="$press_data$" />
+            <action type="LONG_PRESS" data="$long_press_data$" keycode="ALPHABET" popup_layout="@attr/PopupBubbleRectangularLayout" intention="DECODE" popup_label="$long_press_data$" />
+            <label location="@id/label" value="$press_data$" />
+        </softkey_template>
+        <softkey_template id="@id/softkey_template_indic_consonant_one_label_with_conjuncts" layout="@layout/softkey_one_label_indic_auto_size_key" popup_timing="@string/qwerty_popup_timing" slide_sensitivity="NORMAL" multi_touch="false" content_description="$desc$">
+            <action type="PRESS" data="$press_data$" keycode="ALPHABET" intention="DECODE" popup_label="$press_data$" />
+            <action type="LONG_PRESS" data="$long_press_data$" keycode="ALPHABET" popup_layout="@attr/PopupBubbleRectangularLayout" intention="DECODE" popup_label="$long_press_data$" />
+            <label location="@id/label" value="$press_data$" />
+        </softkey_template>
+        <softkey_template id="@id/softkey_template_indic_vowel_one_label" layout="@layout/softkey_one_label_indic_vowel_auto_size_key" popup_timing="@string/qwerty_popup_timing" slide_sensitivity="NORMAL" multi_touch="false" content_description="$desc$">
+            <action type="PRESS" data="$press_data$" keycode="$keycode=ALPHABET$" intention="DECODE" popup_label="$press_data$" />
+            <label location="@id/label" value="$press_data$" />
+        </softkey_template>
+        <softkey_template id="@id/softkey_template_indic_consonant_one_label" layout="@layout/softkey_one_label_indic_auto_size_key" popup_timing="@string/qwerty_popup_timing" slide_sensitivity="NORMAL" multi_touch="false" content_description="$desc$">
+            <action type="PRESS" data="$press_data$" keycode="ALPHABET" intention="DECODE" popup_label="$press_data$" />
+            <label location="@id/label" value="$press_data$" />
+        </softkey_template>
+        <softkey_template id="@id/softkey_template_indic_more" layout="@layout/softkey_icon" popup_timing="ON_TOUCH" slide_sensitivity="NORMAL" multi_touch="false" content_description="@string/more_diacritics_key_content_desc" alpha="@attr/IconIndicMoreAlpha">
+            <action type="PRESS" data="$data$" keycode="ALPHABET" intention="DECODE" popup_label="$data$" popup_layout="@attr/PopupBubbleRectangularLayout" />
+            <icon location="@id/icon" value="@attr/IconMoreCharacters" />
+        </softkey_template>
+        <softkey_template id="@id/softkey_template_indic_consonant_with_different_label" layout="@layout/softkey_one_label_indic_auto_size_key" popup_timing="ON_TOUCH" slide_sensitivity="NORMAL" multi_touch="false">
+            <action type="PRESS" data="$data$" keycode="ALPHABET" intention="DECODE" popup_label="$label$" />
+            <label location="@id/label" value="$label$" />
+        </softkey_template>
+        <softkey_template id="@id/softkey_template_symbol_number" layout="@layout/softkey_one_label_en_key" popup_timing="@string/qwerty_popup_timing" multi_touch="false">
+            <action type="PRESS" data="$param_data$" keycode="$keycode_press=PLAIN_TEXT$" intention="COMMIT" popup_label="$param_data$" />
+            <label location="@id/label" value="$param_data$" />
+        </softkey_template>
+        <softkey_template id="@id/softkey_template_vowel_matra_turn_off_diacritics_vowel_dynamic" layout="@layout/softkey_one_label_indic_vowel_auto_size_key" popup_timing="@string/qwerty_popup_timing" slide_sensitivity="NORMAL" multi_touch="false">
+            <action type="PRESS" data="INDIC_DIACRITICS_VOWEL_DYNAMIC" keycode="KEYBOARD_STATE_OFF" />
+            <label location="@id/label" value="" />
+        </softkey_template>
+    </softkeys>
+</framework>

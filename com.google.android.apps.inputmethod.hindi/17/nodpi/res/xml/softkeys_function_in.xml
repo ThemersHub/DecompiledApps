@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <include href="@xml/softkeys_function_space" />
+    <softkeys>
+        <softkey id="@id/softkey_prev_page" layout="@layout/softkey_icon" content_description="@string/previous_page_key_content_desc" alpha="@attr/IconPageSwitchAlpha">
+            <action type="PRESS" keycode="SWITCH_SUB_CATEGORY" action_on_down="true" data="NORMAL" />
+            <icon location="@id/icon" value="@attr/IconSymbolPage2of2" />
+        </softkey>
+        <softkey id="@id/softkey_next_page" layout="@layout/softkey_icon" content_description="@string/next_page_key_content_desc" alpha="@attr/IconPageSwitchAlpha">
+            <action type="PRESS" keycode="SWITCH_SUB_CATEGORY" action_on_down="true" data="SUB_CATEGORY_1" />
+            <icon location="@id/icon" value="@attr/IconSymbolPage1of2" />
+        </softkey>
+        <softkey id="@id/softkey_switch_to_symbols" layout="@layout/softkey_label_small" content_description="@string/symbol_keyboard_key_content_desc">
+            <action type="PRESS" keycode="SWITCH_KEYBOARD" data="symbol" />
+            <label location="@id/label" value="\?12" />
+        </softkey>
+    </softkeys>
+</framework>

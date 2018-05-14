@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <softkeys>
+        <softkey id="@id/softkey_hindi_active" layout="@layout/softkey_function_key_label" content_description="@string/hi_hindi_label">
+            <label location="@id/label" value="हिंदी" />
+        </softkey>
+        <softkey id="@id/softkey_hindi_deactive" layout="@layout/softkey_function_key_label_deactive" content_description="@string/hi_hindi_label">
+            <action type="ON_FOCUS" keycode="SWITCH_INPUT_BUNDLE" data="@string/input_hi_hindi" />
+            <label location="@id/label" value="हिंदी" />
+        </softkey>
+        <softkey id="@id/softkey_t13n_active" layout="@layout/softkey_function_key_label" content_description="@string/hi_t13n_label">
+            <label location="@id/label" value="a>अ" />
+        </softkey>
+        <softkey id="@id/softkey_t13n_deactive" layout="@layout/softkey_function_key_label_deactive" content_description="@string/hi_t13n_label">
+            <action type="ON_FOCUS" keycode="SWITCH_INPUT_BUNDLE" data="@string/input_hi_t13n" />
+            <label location="@id/label" value="a>अ" />
+        </softkey>
+        <softkey id="@id/softkey_en_deactive" layout="@layout/softkey_function_key_label_smalltext_deactive" content_description="@string/english_keyboard_key_content_desc">
+            <action type="ON_FOCUS" keycode="SWITCH_INPUT_BUNDLE" data="en_abc123_for_tv" />
+            <label location="@id/label" value="abc123" />
+        </softkey>
+        <softkey id="@id/softkey_switch_to_symbols" layout="@layout/softkey_function_key_label_deactive" content_description="@string/symbol_keyboard_key_content_desc">
+            <action type="ON_FOCUS" keycode="SWITCH_INPUT_BUNDLE" data="symbol" />
+            <label location="@id/label" value="\@?#" />
+        </softkey>
+    </softkeys>
+</framework>

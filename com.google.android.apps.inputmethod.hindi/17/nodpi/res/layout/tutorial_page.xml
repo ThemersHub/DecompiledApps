@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.inputmethod.libs.framework.firstrun.TutorialPageView android:clipChildren="false" style="@style/TipsPage"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" style="@style/TipsPageHeader">
+        <include layout="@layout/tutorial_tip_page_header" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1000.0" android:layoutDirection="ltr">
+        <LinearLayout style="@style/TipsHeader">
+            <ScrollView style="@style/TipsTitleScrolling">
+                <TextView android:id="@id/tutorial_title" style="@style/TipsTitle" />
+            </ScrollView>
+            <com.google.android.apps.inputmethod.libs.framework.keyboard.widget.AutoSizeTextView android:id="@id/tutorial_detail" style="@style/TipsDetail" />
+        </LinearLayout>
+        <include layout="@layout/tutorial_keyboard" />
+    </LinearLayout>
+</com.google.android.apps.inputmethod.libs.framework.firstrun.TutorialPageView>

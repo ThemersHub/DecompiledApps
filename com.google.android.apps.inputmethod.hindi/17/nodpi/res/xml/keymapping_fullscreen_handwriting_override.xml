@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <include href="@xml/keymapping_punctuation_fullscreen_handwriting_tablet" />
+    <key_mapping>
+        <mapping view_id="@id/key_pos_space" key_id="@id/softkey_space_hi_handwriting" />
+        <mapping view_id="@id/key_pos_switch_to_smiley" key_id="@id/softkey_danda_with_period" />
+        <mapping view_id="@id/key_pos_punctuation_1" key_id="@id/softkey_question" />
+        <mapping view_id="@id/key_pos_punctuation_5" key_id="@id/softkey_bottom_comma_popup_settings" />
+    </key_mapping>
+    <key_mapping state="EMOJI_AVAILABLE">
+        <mapping view_id="@id/key_pos_switch_to_smiley" key_id="@id/softkey_danda_with_period" />
+    </key_mapping>
+    <merge_key_mapping state="EMOJI_AVAILABLE" exclude_state="INPUT_TYPE_EMAIL_ADDRESS,SHOW_EMOJI_SWITCH_KEY">
+        <merge view_id="@id/key_pos_punctuation_5" key_id="@id/softkey_fragment_bottom_popup_switch_to_emoji" />
+    </merge_key_mapping>
+    <merge_key_mapping state="EMOTICON_AVAILABLE" exclude_state="INPUT_TYPE_EMAIL_ADDRESS,EMOJI_AVAILABLE">
+        <merge view_id="@id/key_pos_punctuation_5" key_id="@id/softkey_fragment_bottom_popup_switch_to_emoticon" />
+    </merge_key_mapping>
+    <merge_key_mapping state="EMOJI_AVAILABLE" exclude_state="INPUT_TYPE_EMAIL_ADDRESS,INPUT_TYPE_URI,SHOW_EMOJI_SWITCH_KEY">
+        <merge view_id="@id/key_pos_punctuation_5" key_id="@id/softkey_fragment_bottom_icon_emoji" />
+    </merge_key_mapping>
+    <merge_key_mapping exclude_state="NO_SETTINGS_KEY">
+        <merge view_id="@id/key_pos_punctuation_5" key_id="@id/softkey_fragment_bottom_popup_settings" />
+    </merge_key_mapping>
+    <merge_key_mapping state="SHOW_ONE_HANDED_MODE_SWITCH">
+        <merge view_id="@id/key_pos_punctuation_5" key_id="@id/softkey_fragment_popup_switch_to_left_handed_mode" />
+    </merge_key_mapping>
+    <include href="@xml/keymapping_function_ime_action_popup_right_handed_mode" />
+</framework>

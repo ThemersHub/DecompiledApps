@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <keyboard id="@id/keyboard_en_indic" candidate_text_size_ratio="0.8" class=".keyboard.PrimeKeyboard" popup="@attr/PopupBubbleLayout" session_states="SHIFT_LOCK" initial_states="SHOW_LANGUAGE_SWITCH_KEY">
+        <view layout="@layout/keyboard_prime_header_no_deletable_label" scalable="false" type="header">
+            <softkeys href="@xml/softkeys_header_prime" />
+            <softkeys href="@xml/softkeys_header_candidates" />
+            <include href="@xml/keymapping_header_candidates" />
+            <include href="@xml/keymapping_header_prime_lang" />
+        </view>
+        <view layout="@layout/keyboard_qwerty_body_no_deletable_label" type="body">
+            <motion_event_handler class=".libs.framework.keyboard.handler.BasicMotionEventHandler" />
+            <motion_event_handler class=".libs.latin.handler.LatinGestureMotionEventHandler" preference_key="@string/pref_key_enable_gesture_input" />
+            <motion_event_handler class=".libs.latin.handler.LatinKeyboardLayoutHandler" />
+            <softkeys href="@xml/softkeys_function" />
+            <softkeys href="@xml/softkeys_punctuation_bottom" />
+            <softkeys href="@xml/softkeys_punctuation_in" />
+            <softkeys href="@xml/softkeys_input_t13n" />
+            <softkeys href="@xml/softkeys_input_digits" />
+            <softkeys href="@xml/softkeys_body_candidates" />
+            <softkeys href="@xml/softkeys_input_symbols" />
+            <include href="@xml/keymapping_body_t13n" />
+            <include href="@xml/keymapping_body_candidates" />
+            <include href="@xml/keymapping_bottom_en_indic" />
+        </view>
+    </keyboard>
+</framework>
