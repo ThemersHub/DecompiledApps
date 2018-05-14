@@ -1,0 +1,121 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>TRIX_TITLE</title>
+<base href="TRIX_ZIP" />
+<style type="text/css">
+body {
+font-family:arial,sans,sans-serif;
+margin:0;
+height:100%;
+}
+
+body,body td {
+font-size:13px;
+}
+
+html {
+overflow:auto;
+}
+
+a,a:visited,span.arrow {
+color:#07c;
+}
+
+#header {
+clear:both;
+background:url("trix_offline/header.png") repeat-x bottom;
+border-bottom:1px solid #ccc;
+overflow:hidden;
+margin:0;
+padding:10px 12px 2px;
+}
+
+.name {
+font-size:15px;
+font-weight:700;
+margin-right:10px;
+}
+
+#content {
+background:#fff;
+}
+
+#sheettabs {
+margin:6px 0 0;
+padding:0 0 5px;
+}
+
+#sheettabs li {
+display:inline;
+list-style-type:none;
+margin:0;
+padding:5px 8px;
+}
+
+.active {
+background-color:#fff;
+border:1px solid #999;
+border-bottom:0;
+font-weight:700;
+}
+
+li.active a {
+  color:black;
+  text-decoration:none;
+}
+</style>
+</head>
+<body>
+
+<div id="header" class="listview">
+<span class="name">TRIX_TITLE</span><br />
+<ul id="sheettabs"><li>TRIX_SHEETS</li></ul>
+</div>
+
+<div id="content" class="listview">
+</div>
+
+<script type="text/javascript">
+  window.onload = function() {
+    var sheetTabs = document.getElementById('sheettabs');
+
+    var loadIntoDiv = function(uri) {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+          document.getElementById("content").innerHTML = xmlhttp.responseText;
+        }
+      }
+      xmlhttp.open("GET", uri, true);
+      xmlhttp.send();
+    }
+
+    var select = function(element) {
+      var targetId = element.parentNode.id;
+      for (var i = 0; i < sheetTabs.childNodes.length; i++) {
+        var sheetTab = sheetTabs.childNodes[i];
+        if (sheetTab.id == targetId) {
+          sheetTab.className = 'active';
+        } else {
+          sheetTab.className = '';
+        }
+      }
+
+      loadIntoDiv(element.href);
+    };
+
+    for (var i = 0; i < sheetTabs.childNodes.length; i++) {
+      var element = sheetTabs.childNodes[i];
+      var link = element.childNodes[0];
+      link.onclick = function(event) {
+        select(event.target);
+        return false;
+      };
+    }
+    select(sheetTabs.childNodes[0].childNodes[0]);
+    var sheetTabHeight = sheetTabs.offsetHeight;
+    var frame = document.getElementById('content');
+    var frameHeight = window.innerHeight - sheetTabHeight;
+    frame.style.height = frameHeight + 'px';
+  };
+</script>
+</body></html>

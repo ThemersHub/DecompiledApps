@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/font_size_palette_layout" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/separator_horizontal" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/font_size_palette_header" android:background="@color/palette_tab_heading_background" android:layout_width="fill_parent" android:layout_height="@dimen/palette_row_height" android:elevation="@dimen/header_elevation" style="@style/KeyboardNavigationCluster" xmlns:menu="http://schemas.android.com/apk/res-auto">
+        <TextView android:gravity="center_vertical" android:id="@id/font_size_palette_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/palette_format_font_textsize_label" android:layout_weight="1.0" android:importantForAccessibility="no" android:paddingStart="@dimen/palette_row_padding_start" style="@style/PaletteSingleTabHeadingText" />
+        <com.google.android.apps.docs.editors.menu.components.Stepper android:id="@id/font_size_palette_stepper" android:layout_width="wrap_content" android:layout_height="fill_parent" menu:default_value="11.0" />
+    </LinearLayout>
+    <include layout="@layout/separator_horizontal" />
+    <com.google.android.apps.docs.editors.menu.components.PickerPaletteListView android:id="@id/font_size_palette_listview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

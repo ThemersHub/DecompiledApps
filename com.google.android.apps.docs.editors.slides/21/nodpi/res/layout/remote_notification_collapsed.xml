@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingRight="@dimen/punch_notification_collapsed_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingEnd="@dimen/punch_notification_collapsed_padding" style="@style/RemoteNotificationStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="@dimen/punch_notification_collapsed_preview_width" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:id="@id/punch_notification_slide_preview_progress_icon" android:layout_width="@dimen/punch_notification_loading_indicator_size" android:layout_height="@dimen/punch_notification_loading_indicator_size" />
+            <ImageView android:id="@id/punch_notification_slide_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:contentDescription="@string/punch_notification_slide_preview_description" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/punch_notification_collapsed_text_padding_start" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="@dimen/punch_notification_collapsed_text_padding_start">
+            <TextView android:id="@id/punch_notification_slide_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/punch_present_mode_loading" android:singleLine="true" android:fontFamily="sans-serif" />
+            <TextView android:id="@id/punch_notification_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="sans-serif" />
+        </LinearLayout>
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/punch_notification_previous_slide_button" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="14.0dip" android:src="@drawable/ic_skip_previous_white_drawable" android:contentDescription="@string/punch_notification_previous_slide_description" android:layout_marginEnd="14.0dip" />
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/punch_notification_previous_slide_button_disabled" android:background="#00000000" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="14.0dip" android:src="@drawable/ic_skip_previous_white_drawable" android:alpha="0.3" android:importantForAccessibility="no" android:layout_marginEnd="14.0dip" />
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/punch_notification_next_slide_button" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_skip_next_white_drawable" android:contentDescription="@string/punch_notification_next_slide_description" />
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/punch_notification_next_slide_button_disabled" android:background="#00000000" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_skip_next_white_drawable" android:alpha="0.3" android:importantForAccessibility="no" />
+    </LinearLayout>
+</RelativeLayout>

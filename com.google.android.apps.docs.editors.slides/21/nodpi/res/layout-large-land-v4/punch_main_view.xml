@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/discussion_holder_landscape" android:layout_width="@dimen/discussion_holder_right_width" android:layout_height="fill_parent" android:layout_alignParentEnd="true" layout="@layout/sketchy_discussion_holder_landscape" />
+    <FrameLayout android:id="@id/sketchy_contextual_toolbar_animation_container_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/discussion_holder_landscape" android:layout_alignParentStart="true">
+        <ViewStub android:layout_gravity="bottom" android:id="@id/contextual_toolbar_stub_view_top" android:layout="@layout/contextual_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <com.google.android.apps.docs.editors.punch.ui.KeyboardCapturingRelativeLayout android:orientation="horizontal" android:id="@id/outer_most_layout_nesting_level" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/sketchy_contextual_toolbar_animation_container_bottom" android:layout_below="@id/sketchy_contextual_toolbar_animation_container_top" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/discussion_holder_landscape" android:layout_alignParentStart="true">
+        <FrameLayout android:id="@id/slide_picker" android:layout_width="@dimen/punch_slide_picker_width" android:layout_height="fill_parent" android:layout_alignParentBottom="true" />
+        <com.google.android.apps.docs.editors.punch.MinimumHeightLayout android:orientation="vertical" android:id="@id/current_slide_panel" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:layout_toRightOf="@id/slide_picker" android:layout_alignParentBottom="true" android:layout_toEndOf="@id/slide_picker" punch:maximizableView="focused"
+          xmlns:punch="http://punch.google.com/com.google.android.apps.docs.editors.punch">
+            <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/punch_main_canvas_container" />
+            <include layout="@layout/speaker_notes_content" />
+        </com.google.android.apps.docs.editors.punch.MinimumHeightLayout>
+        <include layout="@layout/sketchy_snackbar_container" />
+    </com.google.android.apps.docs.editors.punch.ui.KeyboardCapturingRelativeLayout>
+    <FrameLayout android:id="@id/sketchy_contextual_toolbar_animation_container_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/discussion_holder_landscape" android:layout_alignParentStart="true">
+        <ViewStub android:layout_gravity="top" android:id="@id/contextual_toolbar_stub_view_bottom" android:layout="@layout/contextual_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+</RelativeLayout>

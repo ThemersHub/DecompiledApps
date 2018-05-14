@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cakemix="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/sketchy_contextual_toolbar_animation_container_top_legacy" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewStub android:layout_gravity="bottom" android:id="@id/contextual_toolbar_stub_view_top_legacy" android:layout="@layout/contextual_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <com.google.android.apps.docs.editors.punch.view.TouchInterceptingFrameLayout android:id="@id/main_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <FrameLayout android:id="@id/sketchy_contextual_toolbar_animation_container_bottom_legacy" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewStub android:layout_gravity="top" android:id="@id/contextual_toolbar_stub_view_bottom_legacy" android:layout="@layout/contextual_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <ViewStub style="@style/BannerParent.Sheet.Stub" />
+    <include layout="@layout/sketchy_discussion_holder_portrait" layout_weight="1" />
+    <include layout="@layout/sketchy_discussion_state" layout_weight="1" />
+</LinearLayout>

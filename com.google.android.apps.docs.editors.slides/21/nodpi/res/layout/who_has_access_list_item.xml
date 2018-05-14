@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/sharing_row" android:background="@drawable/state_selector_background" android:padding="@dimen/m_grid_2x" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="@dimen/m_grid_5x" android:layout_height="@dimen/m_grid_5x">
+            <com.google.android.apps.docs.view.RoundImageView android:id="@id/sharee_badge" android:focusable="true" android:clickable="true" android:duplicateParentState="false" android:layout_width="@dimen/m_grid_5x" android:layout_height="@dimen/m_grid_5x" />
+            <com.google.android.apps.docs.view.RoundImageView android:id="@id/sharee_badge_expiry" android:background="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_timer_black_24" android:layout_alignRight="@id/sharee_badge" android:layout_alignBottom="@id/sharee_badge" />
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/sharee_details" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:id="@id/sharee_name" android:maxLines="1" style="@style/ListText.Primary" />
+            <TextView android:ellipsize="end" android:id="@id/sharee_description" android:layout_marginBottom="0.0dip" android:maxLines="1" style="@style/ListText.Secondary" />
+        </LinearLayout>
+        <include layout="@layout/sharing_options_view" />
+    </LinearLayout>
+    <TextView android:id="@id/warning" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/m_grid_7x" style="@style/CardWarningText" />
+</LinearLayout>

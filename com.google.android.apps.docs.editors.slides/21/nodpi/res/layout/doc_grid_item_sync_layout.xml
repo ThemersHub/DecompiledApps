@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/sync_state_background" android:background="@color/grid_sync_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/sync_video_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@null" android:scaleType="center" />
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/divider" android:layout_alignWithParentIfMissing="true">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/m_touch_target_size" android:layout_weight="1.0">
+            <TextView android:textAppearance="@style/ThumbnailText" android:gravity="bottom" android:layout_gravity="center_vertical" android:id="@id/offline_status" android:padding="@dimen/m_grid_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <ImageButton android:id="@id/resume_button" android:visibility="gone" android:src="@drawable/quantum_ic_refresh_white_24" style="@style/EntryButton.Grid" />
+        <ImageButton android:id="@id/pause_button" android:visibility="visible" android:src="@drawable/quantum_ic_pause_white_24" style="@style/EntryButton.Grid" />
+    </LinearLayout>
+    <View android:id="@id/divider" android:background="@color/m_app_background" android:layout_above="@id/progress" android:layout_alignWithParentIfMissing="true" style="@style/Divider" />
+    <ProgressBar android:id="@id/progress" android:layout_width="fill_parent" android:layout_alignParentBottom="true" style="@style/EntryProgress.Grid" />
+</RelativeLayout>

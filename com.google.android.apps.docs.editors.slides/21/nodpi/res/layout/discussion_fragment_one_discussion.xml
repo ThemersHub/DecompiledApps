@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.docs.discussion.ui.pager.DefaultFocusLinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/discussion_one_discussion_fragment_container" android:background="@color/discussion_container_background_open" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/discussion_one_discussion_header_and_list" style="@style/discussion_one_discussion_background_style">
+        <include android:id="@id/discussion_one_discussion_fragment_header" layout="@layout/discussion_fragment_header_one_discussion" />
+        <ListView android:gravity="top" android:id="@id/one_discussion_comments_list" android:nextFocusUp="@id/action_comments" android:listSelector="@drawable/discussion_list_selector" android:divider="@null" android:layout_below="@id/discussion_one_discussion_fragment_header" style="@style/discussion_list_style" />
+        <com.google.android.libraries.docs.view.JellybeanProgressBar android:id="@id/discussion_loading_spinner_one_discussion_fragment" android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminate="true" android:layout_centerInParent="true" style="@android:style/Widget.Holo.ProgressBar" />
+    </RelativeLayout>
+    <FrameLayout android:background="@drawable/discussion_separator_background" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</com.google.android.apps.docs.discussion.ui.pager.DefaultFocusLinearLayout>

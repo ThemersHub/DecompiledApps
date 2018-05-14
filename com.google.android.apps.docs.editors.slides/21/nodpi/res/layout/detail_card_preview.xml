@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/detail_card_preview" android:background="@color/m_app_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cakemix="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.docs.view.FixedAspectRatioFrameLayout android:id="@id/thumbnail_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_alignParentTop="true" android:layout_alignParentStart="true" cakemix:aspectRatio="0.6">
+        <com.google.android.apps.docs.view.FixedSizeImageView android:id="@id/thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/thumbnail_open" />
+        <View android:id="@id/thumbnail_shadow" android:background="#44000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:layout_gravity="bottom" android:id="@id/thumbnail_gradient" android:background="@drawable/black_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_height" />
+    </com.google.android.apps.docs.view.FixedAspectRatioFrameLayout>
+    <LinearLayout android:gravity="bottom" android:paddingBottom="@dimen/m_grid_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/m_grid_2x" />
+        <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/m_grid_2x" android:layout_marginEnd="@dimen/m_grid_2x" style="@style/DetailPanel_Title" />
+    </LinearLayout>
+</RelativeLayout>

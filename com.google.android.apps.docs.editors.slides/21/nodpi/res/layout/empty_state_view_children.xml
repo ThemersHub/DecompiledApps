@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/empty_icon_bg" android:layout_width="@dimen/empty_circle_size" android:layout_height="@dimen/empty_circle_size" android:src="@drawable/empty_icon_bg" android:importantForAccessibility="no" />
+        <ImageView android:layout_gravity="center" android:id="@id/empty_icon" android:layout_width="@dimen/empty_icon_size" android:layout_height="@dimen/empty_icon_size" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <android.support.constraint.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_grid_2x">
+        <android.support.constraint.Guideline android:orientation="vertical" android:id="@id/left_guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.125" />
+        <android.support.constraint.Guideline android:orientation="vertical" android:id="@id/right_guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.865" />
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="@id/left_guideline" app:layout_constraintRight_toRightOf="@id/right_guideline">
+            <TextView android:textSize="@dimen/m_text_size_subhead" android:textColor="@color/quantum_black_100" android:gravity="center_horizontal" android:id="@id/empty_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_grid_2x">
+                <TextView android:enabled="true" android:textSize="@dimen/m_text_size_body" android:textColor="@color/quantum_grey600" android:textColorLink="@color/quantum_googblue500" android:gravity="center" android:id="@id/empty_message" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="480.0dip" android:lineSpacingExtra="2.0dip" />
+            </LinearLayout>
+            <Button android:id="@id/call_to_action_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_grid_3x" style="@style/Widget.GoogleMaterial.Button" />
+            <TextView android:textSize="@dimen/m_text_size_body" android:textColor="@color/quantum_googblue500" android:id="@id/empty_help_link" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</merge>

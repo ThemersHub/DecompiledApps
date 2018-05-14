@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/billing_header_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no" android:paddingStart="@dimen/billing_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/m_text_size_title" android:textColor="@color/billing_header_fg" android:paddingTop="@dimen/billing_padding" android:text="@string/purchase_dialog_title" android:layout_weight="1.0" android:fontFamily="sans-serif-medium" style="@style/Billing.Primary" />
+        <ImageButton android:id="@id/cancel_button" android:focusable="true" android:clickable="true" android:layout_width="@dimen/m_grid_6x" android:layout_height="@dimen/m_grid_6x" android:src="@drawable/quantum_ic_close_white_24" android:scaleType="center" android:tint="@color/quantum_white_100" android:layout_weight="0.0" android:contentDescription="@string/dismiss_button_content_desc" android:importantForAccessibility="yes" style="@style/FauxActionBar.Close" />
+    </LinearLayout>
+    <RelativeLayout android:paddingTop="@dimen/m_grid_1.5x" android:paddingBottom="@dimen/m_grid_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/billing_padding">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/m_grid_2x" android:layout_toStartOf="@id/file_cab" android:layout_alignParentStart="true">
+            <TextView android:textColor="@color/billing_header_fg" android:id="@id/storage_explanation" android:text="@string/purchase_dialog_how_storage_used" android:fontFamily="sans-serif-regular" style="@style/Billing.Secondary" />
+        </FrameLayout>
+        <ImageView android:id="@id/file_cab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/iap_folder" android:contentDescription="@null" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>
