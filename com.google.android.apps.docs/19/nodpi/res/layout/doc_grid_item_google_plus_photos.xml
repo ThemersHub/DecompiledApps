@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.docs.doclist.view.DocGridEntryFrameLayout android:id="@id/doc_entry_root" android:focusable="true" android:nextFocusRight="@id/more_actions_button_container" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip" android:layout_weight="1.0" android:layout_marginStart="1.0dip" android:layout_marginEnd="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.docs.view.FixedAspectRatioFrameLayout android:id="@id/thumbnail_container" android:background="@color/m_app_background" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <com.google.android.apps.docs.view.LayeredThumbnailView android:id="@id/thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/doc_grid_item_drawable" android:scaleType="centerCrop" />
+            <include layout="@layout/doc_grid_item_sync_layout" />
+        </com.google.android.apps.docs.view.FixedAspectRatioFrameLayout>
+        <FrameLayout android:id="@id/title_buttons" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" style="@style/GridFooter">
+            <ImageButton android:id="@id/cancel_button" android:background="@drawable/active_state_selector_background" android:padding="@dimen/doc_grid_internal_spacing" android:focusable="true" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@drawable/quantum_ic_clear_grey600_18" android:scaleType="center" android:lines="0" />
+        </FrameLayout>
+    </RelativeLayout>
+    <include layout="@layout/doc_plusphoto_entry_select_layout" />
+    <include layout="@layout/doc_grid_entry_folder_select_layout" />
+</com.google.android.apps.docs.doclist.view.DocGridEntryFrameLayout>

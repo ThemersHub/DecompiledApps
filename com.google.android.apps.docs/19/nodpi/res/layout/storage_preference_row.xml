@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight" android:paddingEnd="?android:scrollbarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="@dimen/preference_widget_width">
+        <ImageView android:layout_gravity="center" android:id="@android:id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/preference_main_container" android:focusable="true" android:nextFocusDown="@android:id/summary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:layout_weight="1.0" android:layout_marginStart="@dimen/preference_left_margin" android:layout_marginEnd="6.0dip">
+        <TextView android:textAppearance="@style/TextAppearancePrimary" android:ellipsize="marquee" android:id="@android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_grid_1x" android:layout_below="@android:id/title" android:layout_alignStart="@android:id/title">
+            <Button android:textColor="@android:color/white" android:id="@android:id/summary" android:nextFocusUp="@id/preference_main_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="onStorageClicked" android:textAllCaps="true" style="@style/Widget.AppCompat.Button.Colored" />
+        </FrameLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@android:id/widget_frame" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

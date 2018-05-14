@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/projector_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="10.0"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <FrameLayout android:id="@id/content_container" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <android.support.v7.widget.Toolbar android:id="@id/projector_toolbar" android:layout_width="fill_parent" android:layout_height="@dimen/viewer_action_bar_height" style="@style/OverlayActionBarStyle" />
+        <View android:id="@id/toolbar_shadow" android:background="@drawable/action_mode_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <com.google.android.libraries.material.progress.MaterialProgressBar android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="4.0dip" app:mtrlLinearBarHeight="4.0dip" style="@style/Widget.GoogleLib.Progress.Linear.Indeterminate" />
+        <android.support.design.widget.FloatingActionButton android:id="@id/edit_fab" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/viewer_edit_fab_margin_right" android:layout_marginBottom="@dimen/viewer_edit_fab_margin_bottom" android:src="@drawable/edit_fab_icon" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:contentDescription="@string/action_edit" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/discussions" android:background="@android:color/white" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.0">
+        <ProgressBar android:layout_gravity="center" android:id="@id/discussions_progress_bar" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminate="true" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/header_impressions" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/impressions_toolbar" android:background="@color/quantum_grey300" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+        <View style="@style/impressionsActionBarSeparatorTheme" />
+        <LinearLayout android:orientation="horizontal" android:background="@color/quantum_grey200" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/devimpressions_header_text_size" android:layout_gravity="start" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/devimpressions_header_title_event_string" android:layout_weight="1.0" android:paddingStart="20.0dip" />
+            <TextView android:textSize="@dimen/devimpressions_header_text_size" android:layout_gravity="end" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/devimpressions_header_title_impression_code_string" android:layout_weight="0.0" android:paddingEnd="10.0dip" />
+        </LinearLayout>
+        <View android:layout_width="fill_parent" style="@style/devImpressionsLineSeparatorTheme" />
+    </LinearLayout>
+    <com.google.android.apps.docs.drive.devimpressions.ImpressionsListView android:id="@id/impressions_list" android:background="@color/quantum_white_100" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/header_impressions" />
+</RelativeLayout>

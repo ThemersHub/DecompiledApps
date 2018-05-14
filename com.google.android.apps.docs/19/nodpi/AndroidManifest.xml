@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" package="com.google.android.apps.docs" platformBuildVersionCode="27" platformBuildVersionName="P">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission-sdk-23 android:name="com.android.vending.BILLING"/>
+    <uses-permission-sdk-23 android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE"/>
+    <uses-permission android:name="com.google.android.gm.permission.READ_GMAIL"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.OTHER_SERVICES"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.ALL_SERVICES"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.writely"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.wise"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.apps.docs.permission.READ_MY_DATA"/>
+    <uses-permission android:name="com.google.android.apps.docs.permission.SYNC_STATUS"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.google.android.apps.docs.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="false"/>
+    <permission android:description="@string/permsearch_desc" android:label="@string/permsearch" android:name="com.google.android.apps.docs.permission.READ_MY_DATA" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:protectionLevel="signature"/>
+    <permission android:description="@string/perm_sync_status_desc" android:label="@string/perm_sync_status" android:name="com.google.android.apps.docs.permission.SYNC_STATUS" android:permissionGroup="android.permission-group.PERSONAL_INFO"/>
+    <meta-data android:name="com.google.android.gms.phenotype.registration.xml" android:resource="@xml/mendel"/>
+    <permission android:name="com.google.android.apps.docs.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <application android:allowBackup="true" android:backupAgent="com.google.android.apps.docs.drive.app.backup.DriveBackupAgent" android:icon="@drawable/launcher_icon" android:label="@string/app_name" android:name="com.google.android.apps.docs.drive.DriveApplication" android:restoreAnyVersion="true" android:roundIcon="@drawable/launcher_round_icon" android:supportsRtl="true" android:usesCleartextTraffic="true">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIfbg2RFmc_uTVC6jPKaWZPCrMGUWMzx_uoaKo6g"/>
+        <meta-data android:name="firebase_analytics_collection_enabled" android:value="false"/>
+        <meta-data android:name="android.max_aspect" android:value="2.4"/>
+        <meta-data android:name="com.google.android.apps.docs.cello_enabled" android:value="false"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.google.android.apps.docs.app.NewMainProxyActivity" android:noHistory="true" android:theme="@style/CakemixTheme.SplashScreen">
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+                <action android:name="com.google.android.apps.docs.actions.SEARCH_SHORTCUT_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.drive.documentopener.OpenSafUrlActivity" android:noHistory="true" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.docs.app.OpenSafUrlActivity" android:targetActivity="com.google.android.apps.docs.drive.documentopener.OpenSafUrlActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:host="com.google.android.apps.docs.storage" android:mimeType="application/vnd.google-apps.drive-sdk.generic" android:scheme="content"/>
+                <data android:host="com.google.android.apps.docs.storage" android:mimeType="application/vnd.google-apps.drawing" android:scheme="content"/>
+                <data android:host="com.google.android.apps.docs.storage" android:mimeType="application/vnd.google-apps.form" android:scheme="content"/>
+                <data android:host="com.google.android.apps.docs.storage" android:mimeType="application/vnd.google-apps.map" android:scheme="content"/>
+                <data android:host="com.google.android.apps.docs.storage" android:mimeType="application/vnd.google-apps.site" android:scheme="content"/>
+                <data android:host="com.google.android.apps.docs.storage" android:mimeType="application/vnd.google-apps.table" android:scheme="content"/>
+            </intent-filter>
+            <intent-filter android:icon="@mipmap/product_logo_docs_color_48" android:label="@string/google_docs_long">
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:host="com.google.android.apps.docs.storage" android:mimeType="application/vnd.google-apps.document" android:scheme="content"/>
+            </intent-filter>
+            <intent-filter android:icon="@mipmap/product_logo_slides_color_48" android:label="@string/google_slides_long">
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:host="com.google.android.apps.docs.storage" android:mimeType="application/vnd.google-apps.presentation" android:scheme="content"/>
+            </intent-filter>
+            <intent-filter android:icon="@mipmap/product_logo_sheets_color_48" android:label="@string/google_sheets_long">
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:host="com.google.android.apps.docs.storage" android:mimeType="application/vnd.google-apps.spreadsheet" android:scheme="content"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.drive.doclist.documentcreation.CreateNewDocActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.drive.capture.DocScannerActivity" android:resizeableActivity="false" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.drive.filepicker.PickFilesToUploadActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <provider android:authorities="com.google.android.apps.docs.files" android:exported="true" android:name="com.google.android.apps.docs.sync.filemanager.FileProvider"/>
+        <provider android:authorities="com.google.android.apps.docs.storage" android:exported="true" android:grantUriPermissions="true" android:name="com.google.android.apps.docs.storagebackend.StorageBackendContentProvider" android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <provider android:authorities="com.google.android.apps.docs.storage.legacy" android:exported="true" android:name="com.google.android.apps.docs.storagebackend.LegacyStorageBackendContentProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.doclist.documentopener.DocumentOpenerActivity" android:noHistory="false" android:theme="@style/CakemixTheme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/account_searchable"/>
+        </activity>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.docs.GlobalSearch" android:permission="android.permission.GLOBAL_SEARCH" android:targetActivity="com.google.android.apps.docs.doclist.documentopener.DocumentOpenerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/global_searchable"/>
+        </activity-alias>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:label="@string/upload_shared_item_title" android:name="com.google.android.apps.docs.shareitem.UploadMenuActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <meta-data android:name="android.service.chooser.chooser_target_service" android:value="com.google.android.apps.docs.drive.directsharing.ChooserTargetService"/>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.docs.shareitem.UploadActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent" android:windowSoftInputMode="stateUnchanged"/>
+        <activity android:exported="false" android:label="Backups" android:name="com.google.android.apps.docs.drive.carbon.BackupEntityListActivity" android:theme="@style/CakemixTheme.AppCompatActivity.NoActionBar.Carbon"/>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.drive.carbon.BackupContentListActivity" android:theme="@style/CakemixTheme.Preferences"/>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.drive.carbon.BackupAppListActivity" android:theme="@style/CakemixTheme.Preferences"/>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.drive.carbon.DeleteBackupEntityActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.drive.carbon.TurnOffBackupEntityActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:enabled="false" android:exported="false" android:name="com.google.android.apps.docs.drive.filepicker.GetContentActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.docs.app.GetContentActivity" android:targetActivity="com.google.android.apps.docs.drive.filepicker.GetContentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.drive.filepicker.PickActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.docs.app.PickActivity" android:targetActivity="com.google.android.apps.docs.drive.filepicker.PickActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.google.bionics.scanner.CaptureActivity" android:theme="@style/CakemixTheme"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="com.google.bionics.scanner.EditorActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.bionics.scanner.PreferencesActivity" android:theme="@style/CakemixTheme.Preferences"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.docs.sharingactivity.LinkSharingActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.docs.sharingactivity.AddPeopleSharingActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.drive.documentopener.DocumentOpenerActivityProxy" android:noHistory="false" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.docs.app.DocumentOpenerActivityProxy" android:targetActivity="com.google.android.apps.docs.drive.documentopener.DocumentOpenerActivityProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:autoRemoveFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.google.android.apps.docs.drive.openurl.OpenUrlActivity" android:noHistory="true" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.docs.openurl.OpenUrlActivity" android:targetActivity="com.google.android.apps.docs.drive.openurl.OpenUrlActivity"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.docs.openurl.DriveOpenUrlActivityAlias" android:targetActivity="com.google.android.apps.docs.drive.openurl.OpenUrlActivity">
+            <meta-data android:name="notificationFeatures" android:value="comment"/>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="com.google.android.apps.docs.REQUEST_ACCESS"/>
+                <data android:host="drive.google.com" android:scheme="http"/>
+                <data android:host="drive.google.com" android:scheme="https"/>
+                <data android:host="icing.drive.google.com" android:scheme="http"/>
+                <data android:host="icing.drive.google.com" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="com.google.android.apps.docs.REQUEST_ACCESS"/>
+                <data android:host="docs.google.com" android:pathPattern="/" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/m" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/m" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/folder.*" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/folder.*" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/file/.*" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/file/.*" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/open" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/open" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/leaf" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/leaf" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/uc" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/uc" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/viewer" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/viewer" android:scheme="http"/>
+                <data android:host="docs.google.com" android:pathPattern="/" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/m" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/m" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/folder.*" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/folder.*" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/file/.*" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/file/.*" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/open" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/open" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/leaf" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/leaf" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/uc" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/uc" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/viewer" android:scheme="https"/>
+                <data android:host="docs.google.com" android:pathPattern="/a/.*/viewer" android:scheme="https"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.docs.openurl.KixOpenUrlActivityAlias" android:targetActivity="com.google.android.apps.docs.drive.openurl.OpenUrlActivity">
+            <meta-data android:name="notificationFeatures" android:value="comment,suggestion"/>
+            <intent-filter android:autoVerify="true">
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="docs.google.com"/>
+                <data android:pathPattern="/document/.*"/>
+                <data android:pathPattern="/a/.*/document/.*"/>
+                <data android:pathPattern="/Doc"/>
+                <data android:pathPattern="/a/.*/Doc"/>
+                <data android:pathPattern="/View"/>
+                <data android:pathPattern="/a/.*/View"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.docs.openurl.TrixOpenUrlActivityAlias" android:targetActivity="com.google.android.apps.docs.drive.openurl.OpenUrlActivity">
+            <meta-data android:name="notificationFeatures" android:value="comment"/>
+            <intent-filter android:autoVerify="true">
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="docs.google.com"/>
+                <data android:pathPattern="/spreadsheets/.*"/>
+                <data android:pathPattern="/spreadsheet/.*"/>
+                <data android:pathPattern="/a/.*/spreadsheet/.*"/>
+                <data android:pathPattern="/spreadsheets/d/.*"/>
+                <data android:pathPattern="/a/.*/spreadsheets/d/.*"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="spreadsheets.google.com"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.docs.openurl.PunchOpenUrlActivityAlias" android:targetActivity="com.google.android.apps.docs.drive.openurl.OpenUrlActivity">
+            <meta-data android:name="notificationFeatures" android:value="comment"/>
+            <intent-filter android:autoVerify="true">
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="docs.google.com"/>
+                <data android:pathPattern="/present/.*"/>
+                <data android:pathPattern="/a/.*/present/.*"/>
+                <data android:pathPattern="/presentation/.*"/>
+                <data android:pathPattern="/a/.*/presentation/.*"/>
+            </intent-filter>
+        </activity-alias>
+        <receiver android:exported="true" android:name="com.google.android.apps.docs.appindexing.AppIndexingReceiver" android:permission="com.google.android.gms.permission.APPINDEXING">
+            <intent-filter>
+                <action android:name="com.google.firebase.appindexing.UPDATE_INDEX"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.docs.appindexing.AppIndexingJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.billing.googleone.GoogleOneActivity" android:theme="@style/CakemixTheme.AppCompatActivity.NoActionBar.G1"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.google.android.apps.docs.cello.data.ui.PurgeTrashActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <provider android:authorities="com.google.android.apps.docs" android:exported="false" android:name="com.google.android.apps.docs.doclist.contentprovider.DocListProvider"/>
+        <provider android:authorities="com.google.android.apps.docs.doclist.search_suggest" android:exported="true" android:name="com.google.android.apps.docs.doclist.DocListGlobalSearchSuggestionProvider" android:permission="com.google.android.apps.docs.permission.READ_MY_DATA">
+            <path-permission android:pathPrefix="/search_suggest_query" android:readPermission="android.permission.GLOBAL_SEARCH"/>
+        </provider>
+        <provider android:authorities="com.google.android.apps.docs.doclist.account_suggest" android:exported="false" android:name="com.google.android.apps.docs.doclist.search.DocListAccountSuggestionProvider"/>
+        <provider android:authorities="com.google.android.apps.docs.oem.welcome.promotion" android:exported="true" android:name="com.google.android.apps.docs.welcome.PromotionEnabled"/>
+        <service android:exported="true" android:name="com.google.android.apps.docs.sync.syncadapter.DocsSyncAdapterService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/syncadapter"/>
+        </service>
+        <activity android:alwaysRetainTaskState="true" android:configChanges="keyboard|keyboardHidden" android:exported="false" android:hardwareAccelerated="true" android:name="com.google.android.apps.docs.doclist.activity.DocListActivity" android:theme="@style/CakemixTheme.DocListActivity" android:windowSoftInputMode="adjustResize">
+            <meta-data android:name="android.app.default_searchable" android:value="com.google.android.apps.docs.doclist.documentopener.DocumentOpenerActivity"/>
+        </activity>
+        <activity android:exported="false" android:label="" android:launchMode="singleTop" android:name="com.google.android.apps.docs.welcome.WelcomeActivity" android:theme="@style/CakemixTheme.Welcome" android:windowNoTitle="true">
+            <intent-filter>
+                <action android:name="com.google.android.apps.docs.WELCOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.doclist.documentopener.DocumentOpenerActivityDelegate" android:noHistory="false" android:theme="@style/CakemixTheme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.preview.DocumentPreviewActivity" android:theme="@style/CakemixTheme.Projector"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.crossapp.promo.PhoneskyApplicationInstallerActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.docs.print.PrintActivity" android:process="com.google.android.apps.docs.print" android:taskAffinity="com.google.android.apps.docs.print.PrintTask" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.google.android.apps.docs.error.ErrorNotificationActivity" android:theme="@style/CakemixTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.BUG_REPORT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.doclist.documentopener.WebViewOpenActivity" android:theme="@style/WebViewTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/prefs_title" android:name="com.google.android.apps.docs.preferences.DocsPreferencesActivity" android:theme="@style/CakemixTheme.Preferences.AppCompat">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.PREFERENCE"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.billing.PaymentsActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.docs.app.PaymentsActivity" android:targetActivity="com.google.android.apps.docs.billing.PaymentsActivity">
+            <intent-filter>
+                <action android:name="com.google.android.apps.docs.DRIVE_STORAGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.testing.TestFragmentActivity" android:theme="@style/CakemixTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.entry.pick.PickEntryActivity" android:theme="@style/CakemixTheme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.entry.move.MoveEntryActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.trash.OpenTrashedFileDialogActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.entry.remove.RemoveEntriesActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:exported="false" android:hardwareAccelerated="true" android:name="com.google.android.apps.docs.detailspanel.DetailActivityDelegate" android:theme="@style/CakemixTheme.Translucent.TranslucentStatus"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:exported="false" android:hardwareAccelerated="true" android:name="com.google.android.apps.docs.detailspanel.DetailActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.docs.app.detailpanel.DetailActivity" android:targetActivity="com.google.android.apps.docs.detailspanel.DetailActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:exported="true" android:hardwareAccelerated="true" android:name="com.google.android.apps.docs.doclist.unifiedactions.UnifiedActionsActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.download.DownloadActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:exported="true" android:name="com.google.android.apps.docs.help.HelpMenuTrampolineActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:exported="true" android:name="com.google.android.apps.docs.help.ReportAbuseActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.docs.download.DownloadRetryActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.docs.download.EnqueueDownloadsActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <service android:exported="false" android:name="com.google.android.apps.docs.sync.content.ContentSyncService"/>
+        <service android:exported="false" android:name="com.google.android.apps.docs.sync.content.ContentSyncJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.google.android.apps.docs.tracker.service.OpenerTrackerService"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.docs.doclist.statesyncer.CrossAppStateChangedEventReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.docs.statesyncer.DOCUMENT_PIN_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.docs.sync.content.notifier.ContentSyncNotificationReceiver"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.docs.sync.content.notifier.TransferNotificationActionReceiver"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.docs.download.DownloadManagerReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"/>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.docs.download.DownloadNotificationIntentService"/>
+        <provider android:authorities="com.google.android.apps.docs.statesyncer" android:exported="true" android:name="com.google.android.apps.docs.doclist.statesyncer.CrossAppStateProvider">
+            <meta-data android:name="com.google.android.apps.docs.crossAppStateSyncEnabled" android:value="true"/>
+        </provider>
+        <activity android:exported="false" android:label="@string/team_drive_settings_title" android:name="com.google.android.apps.docs.doclist.teamdrive.settings.TeamDriveSettingsActivity" android:theme="@style/CakemixTheme.Preferences.AppCompat.NoActionBar.ProtectedTeamDrives"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:icon="@drawable/quantum_ic_content_copy_grey600_48" android:label="@string/send_to_clipboard_activity_title" android:name="com.google.android.apps.docs.drive.clipboard.SendTextToClipboardActivity" android:noHistory="true" android:process=":Clipboard" android:theme="@style/CakemixTheme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.google.android.apps.docs.drive.dbdump" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/dbdump_paths"/>
+        </provider>
+        <activity android:exported="false" android:label="@string/devflags_flag_activity_title" android:name="com.google.android.apps.docs.drive.devflags.FlagActivity" android:theme="@style/DevFlagsAppTheme"/>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.drive.devflags.FlagEditingActivity" android:parentActivityName="com.google.android.apps.docs.drive.devflags.FlagActivity" android:theme="@style/DevFlagsEditingTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.docs.drive.devflags.FlagActivity"/>
+        </activity>
+        <activity android:exported="false" android:label="@string/devimpressions_activity_title" android:name="com.google.android.apps.docs.drive.devimpressions.ImpressionsActivity" android:theme="@style/DevImpressionsAppTheme"/>
+        <service android:exported="true" android:name="com.google.android.apps.docs.drive.directsharing.ChooserTargetService" android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE" android:process=":UploadToFolder">
+            <intent-filter>
+                <action android:name="android.service.chooser.ChooserTargetService"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.drive.projector.ProjectorLaunchActivity"/>
+        <activity android:exported="false" android:label="@string/spark_navigation_tab_name" android:name="com.google.android.apps.docs.driveintelligence.spark.SparkActivity" android:theme="@style/Theme.GoogleMaterial.Light.NoActionBar"/>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.driveintelligence.workspaces.details.WorkspaceDetailsActivity" android:theme="@style/Theme.GoogleMaterial.Light.NoActionBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.docs.mendel.MendelReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.apps.docs.net.glide.DocsGlideModule" android:value="GlideModule"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.docs.notification.guns.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.google.android.apps.docs"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.docs.notification.guns.GcmIntentService"/>
+        <service android:exported="false" android:name="com.google.android.apps.docs.notification.guns.GiveAccessIntentService"/>
+        <service android:exported="false" android:name="com.google.android.apps.docs.notification.guns.StorageIntentService"/>
+        <service android:exported="false" android:name="com.google.android.apps.docs.notification.guns.GcmJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:label="@string/app_name" android:name="com.google.android.apps.docs.notification.guns.GiveAccessActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/app_name" android:name="com.google.android.apps.docs.notification.guns.GiveAccessServiceActivity" android:taskAffinity="" android:theme="@android:style/Theme.NoDisplay"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:label="@string/app_name" android:name="com.google.android.apps.docs.notification.guns.DocumentAclListActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/menu_notifications" android:launchMode="singleTop" android:name="com.google.android.apps.docs.notification.impl.NotificationHomeActivity" android:theme="@style/CakemixTheme.Preferences"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/notification_settings" android:name="com.google.android.apps.docs.notification.impl.NotificationPreferencesActivity" android:theme="@style/CakemixTheme.Preferences">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/notification_settings" android:name="com.google.android.apps.docs.notification.impl.ExportedNotificationPreferencesActivity" android:theme="@style/EditorNotificationActivity">
+            <intent-filter>
+                <action android:name="com.google.android.apps.docs.notification.NOTIFICATION_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="version" android:value="1"/>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/menu_notifications" android:name="com.google.android.apps.docs.notification.impl.ExportedNotificationHomeActivity" android:theme="@style/EditorNotificationActivity">
+            <intent-filter>
+                <action android:name="com.google.android.apps.docs.notification.NOTIFICATION_HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="version" android:value="2"/>
+        </activity>
+        <service android:exported="false" android:name="com.google.android.apps.docs.notification.impl.NotificationIntentService"/>
+        <service android:exported="false" android:name="com.google.android.apps.docs.notification.impl.NotificationDisablePromptIntentService"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.docs.notification.common.NotificationChannelReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.apps.docs.security.whitelisting.WhitelistingExceptionActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:icon="@drawable/ic_shortcut_widget" android:label="@string/create_shortcut_label" android:name="com.google.android.apps.docs.shortcut.CreateShortcutActivity" android:theme="@style/CakemixTheme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:icon="@drawable/ic_scandoc_widget" android:label="@string/widget_scan_to_drive" android:name="com.google.android.apps.docs.shortcut.CreateDocumentScanShortcutActivity" android:theme="@style/CakemixTheme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:icon="@drawable/launcher_icon" android:label="@string/app_name" android:name="com.google.android.apps.docs.shortcut.ScanToDriveActivity" android:noHistory="true" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.apps.docs.storagebackend.SafLinkSharingActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:exported="false" android:label="" android:launchMode="singleTop" android:name="com.google.android.apps.docs.welcome.warmwelcome.TrackingWelcomeActivity" android:theme="@style/WelcomeTheme"/>
+        <activity android:exported="true" android:name="com.google.android.apps.docs.widget.WidgetConfigureActivity" android:theme="@style/CakemixTheme.Translucent">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="true" android:name="com.google.android.apps.docs.widget.CakemixAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/app_widget"/>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.viewer.client.ProjectorClientService">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="enableAddToDrive" android:value="true"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:name="com.google.android.apps.viewer.ProjectorActivity" android:theme="@style/OpaqueTheme" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.QUICK_VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="projector-id"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.QUICK_VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.QUICK_VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.QUICK_VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:autoRemoveFromRecents="true" android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:documentLaunchMode="intoExisting" android:exported="true" android:icon="@drawable/launcher_pdfviewer" android:logo="@drawable/file_type_small_pdf" android:name="com.google.android.apps.viewer.PdfViewerActivity" android:theme="@style/OpaqueTheme" android:windowSoftInputMode="adjustResize">
+            <intent-filter android:label="@string/manifest_intent_view_pdf_drive">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:mimeType="application/pdf"/>
+            </intent-filter>
+            <intent-filter android:label="@string/manifest_intent_view_pdf_drive">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:pathPattern=".*\\.pdf"/>
+                <data android:host="*"/>
+            </intent-filter>
+            <intent-filter android:label="@string/manifest_intent_view_pdf_drive">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+                <data android:pathPattern=".*\\.pdf"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.viewer.annotations.AnnotateActivity" android:theme="@style/OpaqueTheme"/>
+        <provider android:authorities="com.google.android.apps.docs.fetcher.FileProvider" android:enabled="true" android:exported="true" android:grantUriPermissions="true" android:name="com.google.android.apps.viewer.fetcher.FileProvider"/>
+        <activity android:exported="false" android:name="com.google.android.apps.viewer.action.print.PrintDialogActivity" android:theme="@style/PrintTheme"/>
+        <service android:exported="false" android:isolatedProcess="true" android:name="com.google.android.apps.viewer.pdflib.PdfDocumentService"/>
+        <service android:exported="false" android:name="com.google.android.apps.viewer.viewer.audio.AudioService" android:stopWithTask="true"/>
+        <activity android:exported="true" android:label="ReportAbuseActivity" android:name="com.google.android.libraries.abuse.reporting.ReportAbuseActivity"/>
+        <activity android:exported="false" android:label="" android:launchMode="singleTop" android:name="com.google.android.libraries.docs.welcome.WelcomeActivity" android:theme="@style/WelcomeTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.libraries.hats20.SurveyPromptActivity" android:theme="@style/HatsLibPromptTheme" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.hats20.ShowSurveyActivity" android:theme="@style/TransparentActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <provider android:authorities="com.google.android.apps.docs.lifecycle-trojan" android:exported="false" android:multiprocess="true" android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>

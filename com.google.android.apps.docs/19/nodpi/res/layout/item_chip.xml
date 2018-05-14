@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:background="@color/m_app_background" android:layout_width="@dimen/material_chip_width" android:layout_height="@dimen/material_chip_height" android:layout_marginTop="8.0dip" android:layout_marginEnd="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/chip_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/chip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="@drawable/active_state_selector_background">
+            <ImageView android:id="@id/thumbnail" android:layout_width="fill_parent" android:layout_height="@dimen/material_chip_image_height" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/text_container" android:background="@color/refined_reason_background" android:layout_width="fill_parent" android:layout_height="64.0dip" android:paddingStart="6.0dip" android:paddingEnd="6.0dip">
+                <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/material_title" android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:paddingEnd="10.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/refined_reason" android:ellipsize="end" android:id="@id/reason" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="end|center" android:id="@id/icon_container" android:background="@drawable/circle_icon_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginEnd="6.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/icon" android:layout_width="22.0dip" android:layout_height="22.0dip" />
+        </FrameLayout>
+    </FrameLayout>
+    <include android:id="@id/placeholder" layout="@layout/layout_placeholder" />
+</android.support.v7.widget.CardView>

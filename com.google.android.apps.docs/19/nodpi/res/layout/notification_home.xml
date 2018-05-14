@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/m_doclist_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/notification_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <RelativeLayout android:id="@id/empty_notification_background" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="312.0dip" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <TextView android:textSize="20.0sp" android:textColor="#ff4a4a4a" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/notification_home_empty_title" android:lineSpacingExtra="8.0sp" android:fontFamily="roboto-medium" />
+            <TextView android:textSize="16.0sp" android:textColor="#ff4a4a4a" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/notification_home_empty_content" android:lineSpacingExtra="8.0sp" android:fontFamily="roboto" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

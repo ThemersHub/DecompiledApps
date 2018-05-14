@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/discussion_comment_container_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/discussion_comment_header" style="@style/discussion_comment_header_style">
+        <include android:id="@id/contact_picture" layout="@layout/discussion_contact_circular_picture" />
+        <TextView android:gravity="start" android:id="@id/comment_author_date" style="@style/discussion_comment_author_date_style" />
+        <ImageView android:id="@id/comment_pencil" android:background="?android:selectableItemBackground" android:focusable="false" android:src="@drawable/quantum_ic_edit_grey600_24" android:contentDescription="@string/discussion_edit" style="@style/discussion_edit_comment_pencil" />
+    </LinearLayout>
+    <TextView android:id="@id/comment_action" style="@style/discussion_comment_action_text_style" />
+    <com.google.android.apps.docs.discussion.ui.pager.NoFocusTraversalTextView android:id="@id/comment_text" style="@style/discussion_comment_content_text_style" />
+    <TextView android:id="@id/comment_assignment_text" style="@style/discussion_comment_assignment_text_style" />
+    <TextView android:id="@id/comment_attribution_text" style="@style/discussion_comment_attribution_style" />
+</LinearLayout>

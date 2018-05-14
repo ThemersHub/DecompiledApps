@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/audio_album_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerInParent="true" android:alpha="0.25" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/audio_details" android:background="@color/audio_metadata" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/audio_album_thumbnail" android:focusable="true" android:layout_width="56.0dip" android:layout_height="fill_parent" android:contentDescription="@string/desc_album_art" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:ellipsize="marquee" android:id="@id/audio_title_view" android:padding="0.0dip" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/MediaViewerText.Title" />
+            <TextView android:textSize="14.0sp" android:ellipsize="marquee" android:id="@id/audio_info_view" android:padding="0.0dip" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/MediaViewerText.Subtitle" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.apps.viewer.viewer.media.MediaControlsView android:id="@id/controls_view" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <com.google.android.apps.viewer.viewer.audio.AudioVisualiserView android:id="@id/audio_visualiser" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_above="@id/controls_view" android:layout_centerHorizontal="true" />
+</RelativeLayout>

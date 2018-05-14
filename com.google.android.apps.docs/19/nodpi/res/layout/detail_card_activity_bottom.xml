@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/recent_activity_button_load_more" android:background="@drawable/state_selector_background_no_selection" android:focusable="true" android:clickable="true" style="@style/ListRow.TwoLine">
+        <ImageView android:src="@drawable/ic_activity_alpha" android:tint="@color/m_icon_primary_tint" style="@style/ListIcon.Left" />
+        <TextView android:textAppearance="@style/TextAppearancePrimary" android:id="@id/recent_event_target_title" android:text="@string/recent_activity_button_show_all" style="@style/ListText.Primary.MultiLine" />
+    </LinearLayout>
+    <FrameLayout android:id="@android:id/empty" android:minHeight="@dimen/m_entry_height_two_line" style="@style/DetailCard">
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminate="true" android:contentDescription="@string/loading" />
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/recents_status" style="@style/ListText.Primary.MultiLine" />
+    </FrameLayout>
+</FrameLayout>

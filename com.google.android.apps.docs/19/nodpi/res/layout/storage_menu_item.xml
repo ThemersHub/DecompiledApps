@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/storage_display" android:background="@drawable/state_selector_background" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="top" android:id="@id/group_icon" android:layout_marginTop="@dimen/m_grid_2x" android:src="@drawable/quantum_ic_cloud_queue_grey600_24" style="@style/NavigationPane.ItemImage" />
+    <LinearLayout style="@style/ListRowTextLinearLayout">
+        <TextView android:textAppearance="@style/NavigationItem.TextAppearance" android:id="@id/storage_summary" android:text="@string/storage_title" style="@style/ListText.Primary.AboveSecondary" />
+        <ProgressBar android:id="@id/storage_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_grid_1x" android:layout_marginBottom="@dimen/m_grid_1x" android:layout_marginStart="@dimen/m_grid_2x" android:layout_marginEnd="@dimen/m_grid_2x" style="?android:attr/progressBarStyleHorizontal" />
+        <TextView android:id="@id/storage_summary_additional_info" style="@style/ListText.Secondary" />
+    </LinearLayout>
+</LinearLayout>

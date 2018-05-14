@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_margin="@dimen/m_grid_1x" style="@style/HelpCardShadower"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" style="@style/HelpCardContent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/m_grid_1x">
+            <ImageView android:id="@id/photos_icon" android:layout_width="@dimen/m_grid_3x" android:layout_height="@dimen/m_grid_3x" android:src="@drawable/quantum_ic_photos_grey600_48" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/m_grid_1x" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/quantum_grey600" android:id="@id/photos_help_card_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textColor="@color/quantum_grey600" android:id="@id/primary_button" android:background="?android:selectableItemBackground" android:layout_height="@dimen/m_dialog_button_height" android:text="@string/button_settings" style="@style/PhotosHelpCardButton" />
+            <Button android:textColor="@color/quantum_googblue500" android:id="@id/secondary_button" android:background="?android:selectableItemBackground" android:layout_height="@dimen/m_dialog_button_height" android:text="@string/help_card_button_label_got_it" style="@style/PhotosHelpCardButton" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

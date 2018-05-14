@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:layout_gravity="start" android:orientation="vertical" android:id="@id/nav_drawer" android:focusable="false" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.CoordinatorLayout android:id="@id/doclist_coordinator_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <fragment android:name="com.google.android.apps.docs.doclist.fragment.DocListFragment" android:id="@id/doc_list_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <com.google.android.apps.docs.doclist.appbar.ThemingAppBarLayout android:id="@id/app_bar_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip" />
+        <FrameLayout android:id="@id/hats_survey_parent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </android.support.design.widget.CoordinatorLayout>
+    <com.google.android.libraries.docs.navigation.NavigationView android:layout_gravity="start" android:id="@id/navigation_fragment_frame" android:background="@android:color/white" android:fitsSystemWindows="true" android:layout_width="@dimen/navigation_panel_width" android:layout_height="fill_parent" />
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/quantum_white_100" android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="0">
+            <TableRow>
+                <LinearLayout android:id="@id/flag_location_row" style="@style/selectableRow">
+                    <TextView android:id="@id/flag_location_title" android:text="@string/devflags_flag_location_title_string" style="@style/categoryHeadingWithSubtextTheme" />
+                    <TextView android:id="@id/flag_location_value" android:labelFor="@id/flag_location_title" style="@style/appliedValueTheme" />
+                </LinearLayout>
+            </TableRow>
+            <TableRow>
+                <TextView android:id="@id/current_account_title" android:text="@string/devflags_curr_account_title_string" style="@style/categoryHeadingTheme" />
+            </TableRow>
+            <TableRow>
+                <LinearLayout android:id="@id/curr_account_row" style="@style/selectableRow">
+                    <TextView android:textSize="17.0sp" android:textColor="@color/quantum_grey800" android:gravity="center_vertical" android:id="@id/current_account_id" android:paddingTop="10.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" android:labelFor="@id/current_account_title" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/quantum_grey500" android:id="@id/current_account_value" android:paddingTop="2.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:fontFamily="roboto" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" android:labelFor="@id/current_account_id" />
+                </LinearLayout>
+            </TableRow>
+            <TableRow>
+                <LinearLayout android:id="@id/other_accounts_row" style="@style/selectableRow">
+                    <TextView android:id="@id/other_accounts_title" android:text="@string/devflags_other_accounts_title_string" style="@style/categoryHeadingTheme" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/other_accounts_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </TableRow>
+            <TableRow>
+                <LinearLayout android:orientation="vertical" android:id="@id/override_row" style="@style/selectableRow">
+                    <TextView android:id="@id/override_title" android:text="@string/devflags_override_title_string" style="@style/categoryHeadingWithSubtextTheme" />
+                    <TextView android:id="@id/override_value" android:labelFor="@id/override_title" style="@style/appliedValueTheme" />
+                </LinearLayout>
+            </TableRow>
+            <ImageView style="@style/lineSeparatorTheme" />
+            <TableRow android:id="@id/feature_is_enabled_row">
+                <TextView android:textSize="17.0sp" android:textColor="@color/quantum_grey800" android:id="@id/feature_is_enabled_title" android:padding="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/devflags_feature_is_enabled_title_string" />
+                <ImageView android:id="@id/featured_is_enabled_icon" android:padding="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:labelFor="@id/feature_is_enabled_title" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

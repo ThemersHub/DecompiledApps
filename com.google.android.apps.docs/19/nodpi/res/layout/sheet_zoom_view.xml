@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.viewer.viewer.spreadsheet.sheetswitcher.SheetSectionsView android:id="@id/sheet_sections_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/sheet_frozen_view" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.google.android.apps.viewer.widget.MosaicView android:id="@id/sheet_frozen_column_header_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/sheet_frozen_horizontal_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.viewer.widget.MosaicView android:id="@id/sheet_frozen_row_header_view" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.apps.viewer.viewer.spreadsheet.sheetswitcher.ObservableHorizontalScrollView android:id="@id/sheet_horizontal_frozen_view" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no">
+        <LinearLayout android:orientation="vertical" android:id="@id/sheet_horizontal_frozen_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.google.android.apps.viewer.widget.MosaicView android:id="@id/sheet_column_header_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.google.android.apps.viewer.viewer.spreadsheet.sheetswitcher.ObservableHorizontalScrollView>
+    <com.google.android.apps.viewer.viewer.spreadsheet.sheetswitcher.ObservableScrollView android:id="@id/sheet_vertical_frozen_view" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no">
+        <LinearLayout android:orientation="horizontal" android:id="@id/sheet_vertical_frozen_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.viewer.widget.MosaicView android:id="@id/sheet_row_header_view" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </com.google.android.apps.viewer.viewer.spreadsheet.sheetswitcher.ObservableScrollView>
+    <com.google.android.apps.viewer.widget.ZoomView android:id="@id/sheet_unfrozen_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0dip" app:saveState="false" xmlns:app="http://schemas.android.com/apk/res-auto" />
+</com.google.android.apps.viewer.viewer.spreadsheet.sheetswitcher.SheetSectionsView>

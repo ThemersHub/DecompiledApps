@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.android.apps.docs.view.emptystate.EmptyStateView android:id="@id/empty_state_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <android.support.v7.widget.RecyclerView android:id="@id/entity_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View style="@style/ToolbarShadow" />
+        </FrameLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/loading_spinner" android:layout_width="@dimen/m_grid_8x" android:layout_height="@dimen/m_grid_5x" />
+    <android.support.design.widget.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:id="@id/header_divider" android:background="@color/quantum_grey200" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <include android:visibility="gone" layout="@layout/backup_entity_section" />
+    </android.support.design.widget.AppBarLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/app_root" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/ds_camera_preview" />
+        <include layout="@layout/ds_camera_controls" />
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/ds_progess_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ds_progress_bar_spinner" />
+    <com.google.bionics.scanner.unveil.ui.DebugView android:id="@id/ds_nonstop_debug_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

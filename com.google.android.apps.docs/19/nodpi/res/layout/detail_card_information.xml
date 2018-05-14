@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusable="false" android:contentDescription="@string/detail_preview_information_content_description" android:importantForAccessibility="no" style="@style/DetailCard"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/type_row" android:duplicateParentState="false" android:importantForAccessibility="yes" style="@style/DetailInfoCard_Row">
+        <TextView android:text="@string/detail_preview_kind" style="@style/DetailInfoCard_Text.Label" />
+        <TextView android:id="@id/kind" style="@style/DetailInfoCard_Text.Value" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/size_row" android:visibility="gone" android:duplicateParentState="false" android:importantForAccessibility="yes" style="@style/DetailInfoCard_Row">
+        <TextView android:text="@string/detail_preview_size" style="@style/DetailInfoCard_Text.Label" />
+        <TextView android:id="@id/size" style="@style/DetailInfoCard_Text.Value" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/quota_row" android:visibility="gone" android:duplicateParentState="false" android:importantForAccessibility="yes" style="@style/DetailInfoCard_Row">
+        <TextView android:text="@string/detail_preview_quota" style="@style/DetailInfoCard_Text.Label" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.65">
+            <TextView android:id="@id/quota" android:layout_weight="0.3" style="@style/DetailInfoCard_Text.Value" />
+            <TextView android:id="@id/quota_description" android:layout_weight="0.7" style="@style/DetailInfoCard_Text.Secondary" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/location_trashed_row" android:layout_marginTop="0.0dip" android:layout_marginBottom="0.0dip" style="@style/DetailInfoCard_Row">
+        <TextView android:id="@id/location_trashed_label" android:text="@string/detail_preview_folder_location" style="@style/DetailInfoCard_Text.Label" />
+        <TableLayout android:id="@id/location_trashed_table" android:duplicateParentState="false" android:importantForAccessibility="yes" style="@style/DetailInfoCard_Text.Value" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/location_row" android:layout_marginTop="0.0dip" android:layout_marginBottom="0.0dip" style="@style/DetailInfoCard_Row">
+        <TextView android:id="@id/location_label" android:text="@string/detail_preview_folder_location" style="@style/DetailInfoCard_Text.Label" />
+        <TableLayout android:id="@id/location_table" android:duplicateParentState="false" android:importantForAccessibility="yes" style="@style/DetailInfoCard_Text.Value" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/location_row_docs" android:focusable="true" android:visibility="gone" android:importantForAccessibility="yes" style="@style/DetailInfoCard_Row">
+        <TextView android:text="@string/detail_preview_folder_location" style="@style/DetailInfoCard_Text.Label" />
+        <TextView android:id="@id/location_value" style="@style/DetailInfoCard_Text.Value" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/move_row" android:focusable="true" android:visibility="gone" android:duplicateParentState="false" android:layout_marginTop="0.0dip" android:layout_marginBottom="@dimen/m_grid_1x" android:importantForAccessibility="yes" style="@style/DetailInfoCard_Row">
+        <View android:visibility="invisible" style="@style/DetailInfoCard_Text.Label" />
+        <Button android:id="@id/move_value" android:text="@string/action_card_move" style="@style/DetailInfoCard_Text.Value.Clickable" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/created_row" android:duplicateParentState="false" android:importantForAccessibility="yes" style="@style/DetailInfoCard_Row">
+        <TextView android:text="@string/detail_preview_created_time" style="@style/DetailInfoCard_Text.Label" />
+        <TextView android:id="@id/created" style="@style/DetailInfoCard_Text.Value" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/modified_row" android:duplicateParentState="false" android:importantForAccessibility="yes" style="@style/DetailInfoCard_Row">
+        <TextView android:text="@string/detail_preview_last_modified_date" style="@style/DetailInfoCard_Text.Label" />
+        <TextView android:id="@id/modified" style="@style/DetailInfoCard_Text.Value" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/is_integrated_row" android:duplicateParentState="false" android:importantForAccessibility="yes" style="@style/DetailInfoCard_Row">
+        <TextView android:text="@string/detail_preview_integrated_js_binary" style="@style/DetailInfoCard_Text.Label" />
+        <TextView android:id="@id/is_integrated" style="@style/DetailInfoCard_Text.Value" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/opened_row" android:duplicateParentState="false" android:importantForAccessibility="yes" style="@style/DetailInfoCard_Row">
+        <TextView android:text="@string/detail_preview_last_opened_date" style="@style/DetailInfoCard_Text.Label" />
+        <TextView android:id="@id/opened" style="@style/DetailInfoCard_Text.Value" />
+    </LinearLayout>
+</LinearLayout>

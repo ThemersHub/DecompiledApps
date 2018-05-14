@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/m_entry" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:foreground="?android:selectableItemBackground" android:minHeight="@dimen/m_grid_9x" android:paddingStart="@dimen/m_grid_3x" android:paddingEnd="@dimen/m_grid_1.5x"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:layout_width="@dimen/m_grid_3x" android:layout_height="@dimen/m_grid_3x" android:src="@drawable/quantum_ic_cloud_grey600_24" android:layout_centerVertical="true" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/m_grid_3x" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/menu_button" android:layout_toEndOf="@id/icon">
+        <TextView android:textSize="@dimen/m_grid_2x" android:textColor="@color/quantum_grey900" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/backup_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textSize="@dimen/m_grid_1.75x" android:textColor="@color/material_grey_600" android:ellipsize="middle" android:id="@id/backup_subtitle" android:layout_width="wrap_content" android:layout_height="@dimen/m_grid_3x" android:maxLines="1" />
+    </LinearLayout>
+    <ImageView android:id="@id/menu_button" android:background="?android:selectableItemBackground" android:padding="@dimen/m_grid_1x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_more_vert_white_24" android:scaleType="center" android:minWidth="@dimen/m_grid_6x" android:minHeight="@dimen/m_grid_6x" android:layout_centerVertical="true" android:contentDescription="@string/more_actions_content_description" android:layout_alignParentEnd="true" style="@style/TintableIcon.Secondary" />
+</RelativeLayout>

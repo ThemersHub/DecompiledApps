@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.viewer.widget.FastScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.viewer.widget.ZoomView android:id="@id/zoom_view" android:paddingLeft="@dimen/viewer_doc_padding_x" android:paddingTop="@dimen/viewer_doc_padding_y" android:paddingRight="@dimen/viewer_doc_padding_x" android:paddingBottom="@dimen/viewer_doc_padding_y" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_gravity="left" android:id="@id/zoomed_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.apps.viewer.viewer.pdf.PaginatedView android:orientation="vertical" android:id="@id/pdf_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </com.google.android.apps.viewer.widget.ZoomView>
+</com.google.android.apps.viewer.widget.FastScrollView>

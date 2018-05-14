@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/widget" style="@style/Widget.Container">
+        <ImageButton android:id="@id/widget_newdoc" android:src="@drawable/widget_newdoc" android:layout_centerVertical="true" android:contentDescription="@string/menu_create_new_doc" android:layout_alignParentEnd="true" style="@style/Widget.Action.Right" />
+        <ImageButton android:id="@id/widget_newdocfromcamera" android:src="@drawable/widget_newdocfromcamera" android:contentDescription="@string/create_new_ocr_doc" android:layout_toStartOf="@id/widget_newdoc" style="@style/Widget.Action.Center" />
+        <ImageButton android:id="@id/widget_upload" android:src="@drawable/widget_upload" android:contentDescription="@string/widget_upload" android:layout_toStartOf="@id/widget_newdocfromcamera" style="@style/Widget.Action.Center" />
+        <RelativeLayout android:id="@id/widget_home" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toStartOf="@id/widget_upload" android:layout_alignParentStart="true" style="@style/Widget.Action.Left">
+            <ImageView android:id="@id/widget_app_logo" android:src="@drawable/widget_app_logo" android:layout_centerVertical="true" android:contentDescription="@string/app_name" android:layout_alignParentStart="true" style="@style/Widget.Logo" />
+            <TextView android:id="@id/widget_app_title_only" android:visibility="gone" android:text="@string/app_name" android:layout_centerVertical="true" android:layout_toEndOf="@id/widget_app_logo" style="@style/Widget.Text.AppTitle.Only" />
+            <LinearLayout android:orientation="vertical" android:id="@id/widget_app_title_account_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toEndOf="@id/widget_app_logo">
+                <TextView android:id="@id/widget_app_title" android:text="@string/app_name" style="@style/Widget.Text.AppTitle" />
+                <TextView android:id="@id/widget_account_name" android:text="@string/widget_initializing" style="@style/Widget.Text.AccountName" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
