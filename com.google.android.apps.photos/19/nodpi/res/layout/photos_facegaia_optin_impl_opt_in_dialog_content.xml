@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/sheet_page" android:background="@android:color/white" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="end" android:id="@id/close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/quantum_ic_close_grey600_24" android:contentDescription="@string/photos_facegaia_optin_impl_dismiss" />
+    <TextView android:textColor="@color/text_black_87_percent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/photos_facegaia_optin_impl_opt_in_sheet_margin" android:text="@string/photos_facegaia_optin_impl_title" android:textAlignment="center" style="@style/quantum_text_title_black" />
+    <FrameLayout android:id="@id/avatar_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/detailed_description" android:layout_width="280.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="16.0dip">
+        <TextView android:textColor="@color/quantum_black_secondary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/photos_facegaia_optin_impl_detailed_desc" style="@style/quantum_text_body_1_black" />
+        <include android:id="@id/detailed_desc0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" layout="@layout/photos_facegaia_optin_impl_detailed_desc" />
+        <include android:id="@id/detailed_desc1" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/photos_facegaia_optin_impl_detailed_desc" />
+    </LinearLayout>
+</LinearLayout>

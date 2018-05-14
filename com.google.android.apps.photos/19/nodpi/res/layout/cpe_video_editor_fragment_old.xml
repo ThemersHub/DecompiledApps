@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:support="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ViewStub android:id="@id/cpe_video_player_fragment_stubview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ImageView android:layout_gravity="center" android:id="@id/cpe_play_pause_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/play_button" android:contentDescription="@string/photos_videoplayer_play_video" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.photos.videoeditor.trimview.OldVideoTrimView android:id="@id/cpe_video_trim" android:paddingLeft="@dimen/photos_videoeditor_editor_horizontal_padding_old" android:paddingRight="@dimen/photos_videoeditor_editor_horizontal_padding_old" android:layout_width="fill_parent" android:layout_height="@dimen/photos_videoeditor_trim_view_height_new" android:layout_marginTop="4.0dip" android:layout_marginBottom="0.0dip" support:alignBoundsToThumbnails="true" support:handleDrawable="@drawable/cpe_video_trim_handle" support:borderColor="@color/photos_videoeditor_video_trim_fg_color" support:animateTrimHandles="true" support:snapTrimHandles="false" />
+            <ViewStub android:id="@id/cpe_video_buttons_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/photos_photoeditor_commonui_nav_bar_space" android:background="@color/photos_photoeditor_commonui_toolbar_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    <FrameLayout android:layout_gravity="top" android:id="@id/photos_photoeditor_commonui_status_bar_space" android:background="@color/photos_photoeditor_commonui_toolbar_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+</FrameLayout>

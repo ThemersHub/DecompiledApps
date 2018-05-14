@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom|center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/cpe_toolbar_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/cpe_toolbar_fragment_tool_frame" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="top" android:id="@id/cpe_tool_presets" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:layout_gravity="top" android:id="@id/cpe_tool_adjustments" android:visibility="gone" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0" />
+    </FrameLayout>
+    <View android:id="@id/horizontal_divider_line" android:background="@color/photos_photoeditor_commonui_toolbar_opaque_divider_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="bottom|center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/cpe_toolbar_bottom" android:background="@color/photos_photoeditor_commonui_toolbar_background" android:layout_width="fill_parent" android:layout_height="@dimen/photos_photoeditor_fragments_toolbar_bottom_height">
+        <Space android:layout_width="21.0dip" android:layout_height="wrap_content" />
+        <ImageView android:layout_gravity="center" android:id="@id/cpe_looks_tool" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_photo_filter_white_24" android:layout_weight="1.0" android:contentDescription="@string/photos_photoeditor_fragments_a11y_view_filters" style="@style/ToolbarIcon" />
+        <Space android:layout_width="21.0dip" android:layout_height="wrap_content" />
+        <ImageView android:layout_gravity="center" android:id="@id/cpe_adjustments_tool" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_tune_white_24" android:layout_weight="1.0" android:contentDescription="@string/photos_photoeditor_fragments_a11y_enhance_photo" style="@style/ToolbarIcon" />
+        <Space android:layout_width="21.0dip" android:layout_height="wrap_content" />
+        <ImageView android:layout_gravity="center" android:id="@id/cpe_crop_tool" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_crop_rotate_white_24" android:layout_weight="1.0" android:contentDescription="@string/photos_photoeditor_fragments_a11y_crop_photo" style="@style/ToolbarIcon" />
+        <Space android:id="@id/cpe_crop_tool_space" android:layout_width="21.0dip" android:layout_height="wrap_content" />
+        <View android:gravity="center" android:layout_gravity="center" android:id="@id/vertical_divider_line" android:background="@android:color/white" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:scaleType="center" android:alpha="0.3" />
+        <Space android:id="@id/cpe_oem_editor_before_space" android:visibility="gone" android:layout_width="21.0dip" android:layout_height="wrap_content" />
+        <ImageView android:layout_gravity="center" android:id="@id/cpe_oem_editor" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@null" android:layout_weight="1.0" android:contentDescription="@string/photos_photoeditor_fragments_a11y_select_editor" style="@style/ToolbarIcon" />
+        <Space android:id="@id/cpe_oem_editor_after_space" android:visibility="gone" android:layout_width="21.0dip" android:layout_height="wrap_content" />
+        <ImageView android:layout_gravity="center" android:id="@id/cpe_more_editors" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_apps_white_24" android:layout_weight="1.0" android:contentDescription="@string/photos_photoeditor_fragments_a11y_select_editor" style="@style/ToolbarIcon" />
+        <Space android:id="@id/cpe_more_editors_space" android:visibility="gone" android:layout_width="21.0dip" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

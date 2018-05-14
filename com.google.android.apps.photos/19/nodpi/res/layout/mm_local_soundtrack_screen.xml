@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/mm_music_page_color" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/mm_local_soundtrack_search_bar_height" android:layout_weight="0.0">
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/mm_local_soundtrack_search_icon_size" android:layout_height="@dimen/mm_local_soundtrack_search_icon_size" android:src="@drawable/quantum_ic_search_grey600_24" android:layout_weight="0.0" android:layout_marginStart="@dimen/mm_local_soundtrack_icon_margin" />
+        <com.google.android.apps.moviemaker.ui.ImeDismissalReportingEditText android:textColorHint="@color/quantum_grey600" android:id="@id/mm_local_search_edit_text" android:background="@color/mm_transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/mm_local_soundtrack_search_hint" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="actionDone" android:layout_marginStart="@dimen/mm_local_soundtrack_search_edit_text_margin" style="@style/quantum_text_subhead_white" />
+        <ImageView android:layout_gravity="center" android:id="@id/mm_local_search_clear_button" android:visibility="gone" android:layout_width="@dimen/mm_local_soundtrack_search_icon_size" android:layout_height="@dimen/mm_local_soundtrack_search_icon_size" android:src="@drawable/quantum_ic_clear_white_24" android:layout_weight="0.0" android:layout_marginEnd="@dimen/mm_local_soundtrack_icon_margin" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:id="@id/mm_local_soundtrack_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <include android:id="@id/mm_original_audio" layout="@layout/mm_original_audio_section" />
+        </LinearLayout>
+        <View android:id="@id/mm_local_music_overlay" android:background="@color/mm_black_50_percent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

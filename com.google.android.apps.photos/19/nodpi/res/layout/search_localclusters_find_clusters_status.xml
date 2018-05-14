@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.photos.touchcapture.TouchCaptureView android:id="@id/touch_capture_view" android:background="@color/photos_search_localclusters_ui_sync_status_background" android:layout_width="fill_parent" android:layout_height="@dimen/photos_search_localclusters_ui_sync_status_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingBottom="@dimen/photos_search_localclusters_ui_sync_status_bottom_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="@style/quantum_text_body_1_black" android:textColor="@color/quantum_black_secondary_text" android:layout_gravity="center_vertical" android:id="@id/status" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ViewSwitcher android:layout_gravity="center_vertical" android:id="@id/photo_view_switcher" android:layout_width="@dimen/photos_search_localclusters_ui_sync_finding_status_photo_thumbnail_size" android:layout_height="@dimen/photos_search_localclusters_ui_sync_finding_status_photo_thumbnail_size" android:inAnimation="@android:anim/fade_in" android:outAnimation="@android:anim/fade_out" android:layout_weight="0.0" android:contentDescription="@null" android:layout_marginEnd="10.0dip">
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" />
+        </ViewSwitcher>
+    </LinearLayout>
+    <include android:layout_gravity="bottom" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="3.0dip" layout="@layout/status_progress_bar" />
+</com.google.android.apps.photos.touchcapture.TouchCaptureView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.photos.insetview.WindowInsetsView android:id="@id/root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/share_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.Toolbar android:layout_gravity="top" android:id="@id/toolbar" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="?attr/actionBarStyle" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/sharousel_fragment_container" android:paddingTop="@dimen/photos_share_sharousel_vertical_padding" android:paddingBottom="@dimen/photos_share_sharousel_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.google.android.libraries.social.ui.views.expandingscrollview.ExpandingScrollView android:id="@id/share_expander" android:background="@color/transparent_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:id="@id/fragment_container" android:background="@color/transparent_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.google.android.libraries.social.ui.views.expandingscrollview.ExpandingScrollView>
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/people_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.google.android.apps.photos.insetview.WindowInsetsView>

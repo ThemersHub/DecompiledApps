@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/content_container" android:background="@color/quantum_white_100" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:divider="@drawable/book_product_vertical_divider" android:showDividers="middle">
+        <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" android:layout_weight="1.0" android:importantForAccessibility="noHideDescendants" />
+        <ScrollView android:layout_width="0.0dip" android:layout_height="fill_parent" android:fillViewport="true" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:background="@color/quantum_white_100" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/promotion_reminder_banner" />
+                <LinearLayout android:orientation="vertical" android:id="@id/book_product_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/book_product_horizontal_divider" android:showDividers="middle" />
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <Button android:textSize="14.0sp" android:layout_gravity="bottom" android:id="@id/select_button" android:background="@drawable/photos_theme_material_button_dark" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="12.0dip" android:layout_marginTop="11.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="14.0dip" android:text="@string/photos_photobook_product_select_button_text" android:textAllCaps="true" style="@style/Theme.Photos.Button.Dark" />
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <include layout="@layout/photos_emptystate_container" />
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@null" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="?attr/actionBarStyle" />
+</FrameLayout>

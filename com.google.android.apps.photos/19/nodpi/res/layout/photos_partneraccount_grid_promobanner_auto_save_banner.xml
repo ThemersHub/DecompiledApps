@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/auto_save_banner" android:layout_width="fill_parent" android:layout_height="72.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+        <TextView android:id="@id/turn_on_auto_save_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photos_partneraccount_grid_promobanner_autosave_turn_on_auto_save" android:layout_centerVertical="true" android:layout_toStartOf="@id/auto_save_status_icon" android:layout_alignParentStart="true" style="@style/TextAppearance.AppCompat.Subhead" />
+        <LinearLayout android:orientation="vertical" android:id="@id/auto_save_status_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/auto_save_status_icon" android:layout_alignParentStart="true">
+            <TextView android:id="@id/auto_save_status_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photos_partneraccount_grid_promobanner_autosave_auto_save_on" style="@style/TextAppearance.AppCompat.Subhead" />
+            <TextView android:id="@id/auto_save_status_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.AppCompat.Small" />
+        </LinearLayout>
+        <ImageView android:id="@id/auto_save_status_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:contentDescription="@null" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <include android:visibility="gone" layout="@layout/photos_partneraccount_grid_promobanner_promo_banner" />
+    <View android:layout_gravity="bottom" android:background="@color/quantum_grey200" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</FrameLayout>

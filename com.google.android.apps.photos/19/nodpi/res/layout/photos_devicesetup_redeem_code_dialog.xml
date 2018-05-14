@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="24.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/title" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" android:textAlignment="viewStart" style="@style/quantum_text_title_black" />
+    <TextView android:textSize="16.0sp" android:textColorLink="@color/quantum_black_secondary_text" android:id="@id/info_text" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="6.0sp" android:textAlignment="viewStart" style="@style/quantum_text_black_medium" />
+    <RelativeLayout android:id="@id/code_input_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="20.0dip">
+        <EditText android:id="@id/code_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/photos_devicesetup_redeem_code_dialog_hint" android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" android:inputType="textVisiblePassword|textCapCharacters|textNoSuggestions" android:textAlignment="viewStart" style="@style/quantum_text_subhead_black" />
+        <ProgressBar android:id="@id/loading_indicator" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_centerVertical="true" android:layout_marginEnd="2.0dip" android:layout_alignParentEnd="true" style="@style/Widget.Photos.ProgressBar.IndeterminateBlue" />
+        <ImageView android:id="@id/clear_button" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/quantum_ic_cancel_black_24" android:layout_centerVertical="true" android:contentDescription="@string/clear" android:alpha="0.38" android:layout_marginEnd="2.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

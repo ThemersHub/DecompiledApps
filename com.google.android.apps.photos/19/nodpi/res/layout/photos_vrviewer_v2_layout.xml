@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.photos.insetview.WindowInsetsView android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.opengl.GLSurfaceView android:id="@id/photos_vrviewer_v2_gl_surface" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <fragment android:name="com.google.android.apps.photos.videoplayer.VideoPlayerControllerFragment" android:layout_gravity="bottom" android:id="@id/photos_vrviewer_v2_controller_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/photos_vrviewer_v2_loading_spinner" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.54" style="@style/Widget.Photos.ProgressBar.IndeterminateWhite" />
+    <RelativeLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/photos_vrviewer_v2_extra_buttons_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageButton android:id="@id/photos_vrviewer_v2_magicwindow_button" android:background="@android:color/transparent" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/quantum_ic_explore_white_24" android:layout_alignParentLeft="true" android:contentDescription="@string/photos_vrviewer_v2_shared_compass_on_description" />
+        <ImageButton android:id="@id/photos_vrviewer_v2_cardboard_button" android:background="@android:color/transparent" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/quantum_ic_cardboard_white_24" android:layout_alignParentRight="true" android:contentDescription="@string/photos_vrviewer_v2_shared_cardboard_description" />
+    </RelativeLayout>
+</com.google.android.apps.photos.insetview.WindowInsetsView>

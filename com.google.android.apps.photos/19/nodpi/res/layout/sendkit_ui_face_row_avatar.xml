@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="@dimen/sendkit_ui_contact_row_avatar_size" android:layout_height="@dimen/sendkit_ui_contact_row_avatar_size"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.libraries.social.sendkit.ui.avatars.AvatarView android:id="@id/avatar" android:visibility="gone" android:layout_width="@dimen/sendkit_ui_contact_row_avatar_size" android:layout_height="@dimen/sendkit_ui_contact_row_avatar_size" android:contentDescription="@null" selectable="false" shape="round" size="small" />
+    <RelativeLayout android:gravity="center" android:id="@id/selected_avatar" android:background="@drawable/solid_circle_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.AppCompatImageView android:theme="@style/sendkit_ui_white_tint" android:id="@id/selected_avatar_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@null" app:srcCompat="@drawable/quantum_ic_check_vd_theme_24" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/sendkit_ui_face_row_show_more" android:background="@drawable/outline_circle_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.AppCompatImageView android:id="@id/sendkit_ui_face_row_show_more_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@null" app:srcCompat="@drawable/quantum_ic_more_horiz_vd_theme_24" />
+    </RelativeLayout>
+    <ImageView android:id="@id/in_app_indicator" android:background="@drawable/in_app_indicator_background" android:layout_width="@dimen/sendkit_ui_contact_in_app_indicator_size" android:layout_height="@dimen/sendkit_ui_contact_in_app_indicator_size" android:contentDescription="@null" style="@style/SendkitInAppIndicator" />
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/cpe_presets_container" android:background="@color/photos_photoeditor_presets_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <HorizontalScrollView android:gravity="center" android:layout_gravity="top" android:id="@id/cpe_presets_list_scroll_view" android:paddingLeft="@dimen/photos_photoeditor_presets_list_padding_left" android:paddingTop="@dimen/photos_photoeditor_presets_list_padding_top" android:paddingRight="@dimen/photos_photoeditor_presets_list_padding_right" android:scrollbars="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="@dimen/photos_photoeditor_presets_toolbar_height" android:paddingStart="@dimen/photos_photoeditor_presets_list_padding_left" android:paddingEnd="@dimen/photos_photoeditor_presets_list_padding_right">
+        <com.google.android.apps.photos.photoeditor.presets.PresetsLinearLayout android:gravity="center_vertical" android:layout_gravity="top" android:orientation="horizontal" android:id="@id/cpe_presets_list" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </HorizontalScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/cpe_preset_strength" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0">
+        <com.google.android.apps.photos.photoeditor.slider.Slider android:id="@id/cpe_preset_strength_slider" android:contentDescription="@string/photos_photoeditor_presets_a11y_presets_strength_slider" style="@style/CPE.PresetsStrengthSlider" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/photos_photoeditor_presets_strength_cancel" android:layout_width="0.0dip" android:layout_height="@dimen/photos_photoeditor_presets_strength_button_height" android:text="@string/photos_photoeditor_presets_strength_cancel" android:layout_weight="1.0" android:contentDescription="@string/photos_photoeditor_presets_a11y_presets_strength_cancel" style="@style/Widget.AppCompat.Button.Borderless" />
+            <Button android:id="@id/photos_photoeditor_presets_strength_done" android:layout_width="0.0dip" android:layout_height="@dimen/photos_photoeditor_presets_strength_button_height" android:text="@string/photos_photoeditor_presets_strength_done" android:layout_weight="1.0" android:contentDescription="@string/photos_photoeditor_presets_a11y_presets_strength_done" style="@style/Widget.AppCompat.Button.Borderless" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
