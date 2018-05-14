@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/insert_tool_search_background" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Palette"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@android:color/white" android:keyboardNavigationCluster="true" style="@style/insert_tool_heading">
+        <ImageButton android:id="@id/insert_tool_back_button" android:src="@drawable/quantum_ic_arrow_back_grey600_24" android:contentDescription="@string/context_menu_back" style="@style/insert_tool_search_actionbar_icon" />
+        <EditText android:id="@id/insert_tool_search" android:layout_marginLeft="@dimen/insert_tool_actionbar_text_margin_left_right" android:inputType="textNoSuggestions" android:privateImeOptions="nm" android:imeOptions="actionSearch|flagNoExtractUi" android:textCursorDrawable="@null" style="@style/insert_tool_search_bar" />
+        <ImageButton android:id="@id/insert_tool_voice_button" android:visibility="gone" android:src="@drawable/quantum_ic_mic_grey600_24" android:contentDescription="@string/insert_tool_search_voice" style="@style/insert_tool_search_actionbar_icon" />
+        <ImageButton android:id="@id/insert_tool_clear_button" android:visibility="gone" android:src="@drawable/quantum_ic_cancel_grey600_24" android:contentDescription="@string/menu_search_clear" style="@style/insert_tool_search_actionbar_icon" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/insert_tool_suggestions_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keyboardNavigationCluster="true">
+        <RelativeLayout android:id="@id/insert_tool_online_holder" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/insert_tool_recycler_view" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <include layout="@layout/insert_tool_splash_message" />
+        </RelativeLayout>
+        <include layout="@layout/insert_tool_retry_message" />
+        <FrameLayout android:layout_alignParentTop="true" style="@style/insert_tool_heading_shadow" />
+    </RelativeLayout>
+</LinearLayout>

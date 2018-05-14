@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/legacy_reflow_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.docs.editors.kix.view.KixFastScrollView android:orientation="vertical" android:id="@id/kix_editor_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.google.android.apps.docs.editors.kix.view.KixEditText android:scrollbarAlwaysDrawVerticalTrack="true" android:textSize="22.0sp" android:id="@id/editor" android:paddingLeft="@dimen/kix_edit_left_padding" android:paddingTop="@dimen/collaborator_padding_top" android:paddingRight="@dimen/kix_edit_right_padding" android:paddingBottom="@dimen/kix_edit_bottom_padding" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cursorVisible="true" android:inputType="textCapSentences|textMultiLine" android:isScrollContainer="true" />
+        <FrameLayout android:id="@id/custom_selection" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" />
+    </com.google.android.apps.docs.editors.kix.view.KixFastScrollView>
+    <View android:id="@id/editor_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/insert_tool_enter_doc" />
+</RelativeLayout>

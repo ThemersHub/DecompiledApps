@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/insert_tool_search_background" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Palette">
+        <LinearLayout android:id="@id/insert_tool_actionbar" android:background="@color/insert_tool_actionbar" android:paddingBottom="1.0px" android:keyboardNavigationCluster="true" style="@style/insert_tool_heading">
+            <include layout="@layout/insert_tool_actionbar_back_white" />
+            <TextView android:text="@string/insert_tool_images_title" style="@style/insert_tool_actionbar_zero_search_title" />
+            <include layout="@layout/insert_tool_actionbar_close_white" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/offline_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/insert_tool_actionbar" android:keyboardNavigationCluster="true">
+            <include android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/insert_tool_retry_message" />
+        </FrameLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/insert_tool_image_grid_items" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/insert_tool_actionbar" android:keyboardNavigationCluster="true" />
+        <ProgressBar android:layout_below="@id/insert_tool_actionbar" style="@style/insert_tool_progress_bar" />
+        <FrameLayout android:layout_below="@id/insert_tool_actionbar" style="@style/insert_tool_heading_shadow" />
+    </RelativeLayout>
+    <FrameLayout android:layout_gravity="bottom|center|left" android:id="@id/insert_tool_snackbar_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

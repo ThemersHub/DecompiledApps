@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:gravity="center_horizontal" android:id="@id/overlay" android:background="#88000000" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+    <com.google.android.libraries.docs.view.TopPeekingScrollView android:id="@id/panel" style="@style/ActionSheetContainer">
+        <LinearLayout android:orientation="vertical" style="@style/ActionSheet">
+            <android.support.v4.widget.NestedScrollView android:id="@id/header" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </com.google.android.libraries.docs.view.TopPeekingScrollView>
+</FrameLayout>

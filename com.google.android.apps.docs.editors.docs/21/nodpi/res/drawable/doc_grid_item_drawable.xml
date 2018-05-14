@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:docs="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/size_adjust">
+        <shape android:shape="rectangle" />
+    </item>
+    <item>
+        <selector>
+            <item android:drawable="@color/doc_grid_entry_background" docs:has_background="true" />
+        </selector>
+    </item>
+    <item android:id="@id/thumbnail">
+        <color android:color="@android:color/transparent" />
+    </item>
+    <item>
+        <selector>
+            <item docs:has_gif_animation="true">
+                <bitmap android:gravity="center" android:src="@drawable/ic_gif_overlay" />
+            </item>
+        </selector>
+    </item>
+    <item>
+        <selector>
+            <item docs:has_video_animation="true">
+                <bitmap android:gravity="center" android:src="@drawable/ic_video_overlay" />
+            </item>
+        </selector>
+    </item>
+    <item>
+        <selector>
+            <item android:state_focused="true">
+                <color android:color="@color/doc_grid_focus" />
+            </item>
+        </selector>
+    </item>
+</layer-list>

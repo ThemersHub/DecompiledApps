@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/select_folder_button_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/select_folder_button" android:padding="@dimen/selection_gridview_button_padding" android:layout_width="@dimen/selection_title_button_width" android:layout_height="fill_parent" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+            <com.google.android.apps.docs.view.RoundImageView android:id="@id/select_folder_button_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/select_list_unselected" android:contentDescription="@string/selection_item_select_button" android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/unselect_folder_button_background" android:background="@color/selection_selected_file_mask" android:focusable="true" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/unselect_folder_button" android:padding="@dimen/selection_gridview_button_padding" android:focusable="true" android:layout_width="@dimen/selection_title_button_width" android:layout_height="fill_parent" android:src="@drawable/select_list_selected" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</merge>

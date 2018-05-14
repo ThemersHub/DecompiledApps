@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/acl_list_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView android:id="@id/acl_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+    <LinearLayout android:orientation="vertical" android:id="@id/access_sticky_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <TextView android:id="@id/access_sticky_header_title" style="@style/DetailCard.Header.TeamDrive" />
+        <View android:id="@id/doclist_sticky_header_shadow" style="@style/StickyHeaderShadow" />
+    </LinearLayout>
+    <android.support.design.widget.CoordinatorLayout android:id="@id/coordinator_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.design.widget.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/fab_margin" android:src="@drawable/quantum_ic_person_add_white_24" android:contentDescription="@string/add_collaborators" style="@style/Fab" />
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.docs.doclist.view.DocGridEntryFrameLayout android:id="@id/doc_entry_root" android:background="@color/m_entry" android:focusable="true" android:nextFocusRight="@id/more_actions_button" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/GridTile"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.docs.view.FixedAspectRatioFrameLayout android:id="@id/thumbnail_container" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip">
+        <com.google.android.apps.docs.view.SimpleThumbnailView android:id="@id/thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include layout="@layout/doc_grid_item_sync_layout" />
+    </com.google.android.apps.docs.view.FixedAspectRatioFrameLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/title_container" android:background="@drawable/state_selector_background_no_selection" android:duplicateParentState="true" android:layout_width="fill_parent" style="@style/GridFolder">
+        <include android:id="@id/doc_grid_selector" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentStart="true" layout="@layout/doc_grid_entry_select_layout" />
+        <include android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentStart="true" layout="@layout/doc_grid_entry_folder_select_layout" />
+        <com.google.android.apps.docs.view.FixedSizeImageView android:id="@id/doc_icon" android:layout_width="@dimen/selection_title_button_width" android:layout_height="fill_parent" android:scaleType="center" android:layout_alignParentStart="true" />
+        <com.google.android.apps.docs.view.FixedSizeTextView android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:maxLines="2" android:layout_marginEnd="@dimen/m_grid_footer_title_end_margin" android:layout_toEndOf="@id/doc_icon" android:layout_alignParentEnd="true" style="@style/GridText.Primary.Multiline" />
+        <FrameLayout android:id="@id/more_actions_button_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
+            <ImageButton android:id="@id/cancel_button" android:background="@drawable/active_state_selector_background" android:visibility="gone" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_clear_grey600_18" android:nextFocusForward="@id/doc_entry_root" style="@style/GridButton" />
+        </FrameLayout>
+    </RelativeLayout>
+</com.google.android.apps.docs.doclist.view.DocGridEntryFrameLayout>

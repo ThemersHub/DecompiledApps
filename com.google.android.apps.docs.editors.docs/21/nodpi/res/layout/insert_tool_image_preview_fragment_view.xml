@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/insert_tool_preview_image_holder" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.docs.editors.shared.inserttool.view.ZoomableView android:id="@id/insert_tool_zoomable_preview_image_holder" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/insert_tool_image_left_edge" android:background="@android:color/transparent" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/insert_tool_preview_image" android:layout_toStartOf="@id/insert_tool_preview_image" />
+            <ImageView android:id="@id/insert_tool_preview_image" android:background="@android:color/black" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_margin="0.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_centerInParent="true" android:contentDescription="@string/insert_tool_image_description" />
+            <FrameLayout android:id="@id/insert_tool_image_right_edge" android:background="@android:color/transparent" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toRightOf="@id/insert_tool_preview_image" android:layout_toEndOf="@id/insert_tool_preview_image" />
+        </RelativeLayout>
+    </com.google.android.apps.docs.editors.shared.inserttool.view.ZoomableView>
+    <com.google.android.libraries.docs.view.JellybeanProgressBar android:id="@id/insert_tool_loading_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true" style="@android:style/Widget.Holo.ProgressBar" />
+    <LinearLayout android:orientation="vertical" android:id="@id/insert_tool_image_metadata" android:background="@drawable/insert_tool_image_metadata_background" android:paddingLeft="16.0dip" android:paddingTop="10.0dip" android:paddingRight="16.0dip" android:paddingBottom="10.0dip" android:focusable="true" android:nextFocusUp="@id/insert_tool_back_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/insert_tool_image_url" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerVertical="true" android:fontFamily="sans-serif-medium" />
+        <TextView android:textSize="12.0sp" android:textColor="#8affffff" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/insert_tool_images_copyright" android:layout_centerVertical="true" />
+    </LinearLayout>
+    <FrameLayout android:layout_alignParentTop="true" style="@style/insert_tool_heading_shadow" />
+</RelativeLayout>

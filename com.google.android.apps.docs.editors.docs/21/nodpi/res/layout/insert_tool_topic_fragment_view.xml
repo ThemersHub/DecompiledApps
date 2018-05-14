@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/insert_tool_search_background" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Palette"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/insert_tool_actionbar" android:background="@color/insert_tool_actionbar" style="@style/insert_tool_heading">
+        <include layout="@layout/insert_tool_actionbar_back_white" />
+        <TextView android:text="@string/insert_tool_topics_title" style="@style/insert_tool_actionbar_zero_search_title" />
+        <include layout="@layout/insert_tool_actionbar_close_white" />
+    </LinearLayout>
+    <ScrollView android:scrollbarStyle="insideOverlay" android:id="@id/insert_tool_snippets_card_holder" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_below="@id/insert_tool_actionbar">
+        <FrameLayout android:paddingTop="@dimen/insert_tool_cards_holder_padding_top" android:paddingBottom="@dimen/insert_tool_cards_holder_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView android:layout_marginBottom="0.0dip" card_view:cardCornerRadius="0.0dip" card_view:cardElevation="0.0dip" card_view:cardUseCompatPadding="true" style="@style/insert_tool_zero_search_card" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+                <LinearLayout android:orientation="vertical" android:id="@id/insert_tool_topics_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+    </ScrollView>
+    <FrameLayout android:layout_below="@id/insert_tool_actionbar" style="@style/insert_tool_heading_shadow" />
+</RelativeLayout>

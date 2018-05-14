@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="top" android:orientation="vertical" android:background="@color/discussion_container_background_open" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/discussion_fragment_pager_container" android:background="@color/discussion_container_background_open" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.google.android.libraries.docs.view.rtl.RtlAwareViewPager android:id="@id/discussion_pager_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.libraries.docs.view.JellybeanProgressBar android:id="@id/discussion_pager_loading" android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminate="true" android:layout_centerInParent="true" style="@android:style/Widget.Holo.ProgressBar" />
+        <TextView android:id="@id/discussion_error_loading" android:text="@string/discussion_sync_error" style="@style/discussion_message_style" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/action_one_discussion_context_reply" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:background="@drawable/discussion_separator_background" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <include android:id="@id/one_discussion_pager_bar" layout="@layout/discussion_fragment_pager_bar" />
+</LinearLayout>

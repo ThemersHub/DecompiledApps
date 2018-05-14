@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/navwidget_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:importantForAccessibility="yes"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View style="@style/BottomPopupOverlapShadow" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/quantum_googblue500" android:layout_width="fill_parent" android:layout_height="@dimen/navwidget_toolbar_height" android:keyboardNavigationCluster="true">
+        <ImageButton android:id="@id/nav_widget_close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_close_white_24" android:contentDescription="@string/close_document_outline" style="@style/NavWidget.CloseButtonStyle" />
+        <TextView android:textAppearance="@style/NavWidget.ActionBarTitleText" android:id="@id/document_outline_heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/document_outline" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/navwidget_recycler_view" android:paddingTop="@dimen/navwidget_recyclerview_padding_vertical" android:paddingBottom="@dimen/navwidget_recyclerview_padding_vertical" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="@dimen/navwidget_recyclerview_height" android:keyboardNavigationCluster="true" />
+    <include android:visibility="gone" layout="@layout/navwidget_empty_state" />
+</LinearLayout>
