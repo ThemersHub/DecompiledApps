@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.google.android.ims" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.ADD_VOICEMAIL"/>
+    <uses-permission android:name="android.permission.USE_SIP"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="com.google.android.apps.messaging.services.ACCESS_JIBESERVICE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.PACKET_KEEPALIVE_OFFLOAD"/>
+    <uses-permission android:name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS"/>
+    <permission android:name="com.google.android.ims.providers.ACCESS_DATA" android:protectionLevel="signatureOrSystem"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <application android:allowBackup="false" android:extractNativeLibs="false" android:icon="@drawable/common_ic_googleplayservices" android:label="Carrier Services" android:name="com.google.android.ims.CarrierServicesReleaseApp">
+        <meta-data android:name="ProvisioningManagerApiVersions" android:value="1,"/>
+        <meta-data android:name="CallComposerManagerApiVersions" android:value="1,"/>
+        <meta-data android:name="PostCallManagerApiVersions" android:value="1,"/>
+        <meta-data android:name="CapabilitiesManagerApiVersions" android:value="1,"/>
+        <meta-data android:name="WakeLockManagerApiVersions" android:value="1,"/>
+        <meta-data android:name="ConnectionFactoryApiVersions" android:value="1,"/>
+        <meta-data android:name="JibeServiceApiVersions" android:value="1,"/>
+        <meta-data android:name="forwardConnectivityEvents" android:value="1,2"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="ChatSessionServiceVersions" android:value="1,"/>
+        <meta-data android:name="EventServiceVersions" android:value="1,"/>
+        <meta-data android:name="ContactsServiceVersions" android:value="1,"/>
+        <meta-data android:name="FileTransferServiceVersions" android:value="1,"/>
+        <meta-data android:name="LocationSharingServiceVersions" android:value="1,"/>
+        <meta-data android:name="ImsConnectionTrackerServiceVersions" android:value="1,"/>
+        <meta-data android:name="ProfileServiceVersions" android:value="1,"/>
+        <meta-data android:name="BusinessInfoServiceVersions" android:value="1,2,3,"/>
+        <meta-data android:name="ChatServiceVersions" android:value="1,"/>
+        <meta-data android:name="EnrichedCallServiceVersions" android:value="1,"/>
+        <meta-data android:name="PresenceServiceVersions" android:value="1,"/>
+        <meta-data android:name="SignupServiceVersions" android:value="1,2,"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:label="@string/settings_label" android:name="com.google.android.ims.ui.WifiCallingSettingsActivity" android:theme="@style/DialerLibSettingsStyle">
+            <intent-filter>
+                <action android:name="android.telecom.action.CONNECTION_SERVICE_CONFIGURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:autoRemoveFromRecents="true" android:exported="false" android:name="com.google.android.ims.ui.DebugUiActivity"/>
+        <activity android:autoRemoveFromRecents="true" android:exported="false" android:name="com.google.android.ims.ui.AudioUiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:name="com.google.android.ims.call.feedback.FeedbackActivity" android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar.MinWidth"/>
+        <service android:exported="true" android:name="com.google.android.ims.services.NetworkConnectionsService"/>
+        <service android:exported="true" android:name="com.google.android.ims.services.WakeLockService"/>
+        <service android:exported="true" android:name="com.google.android.ims.call.DialerConnectionService" android:permission="android.permission.BIND_CONNECTION_SERVICE">
+            <meta-data android:name="SupportsVoip" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.telecom.ConnectionService"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.android.ims.receivers.PhoneStateChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.ims.receivers.CarrierConfigChangedReceiver">
+            <intent-filter>
+                <action android:name="android.telephony.action.CARRIER_CONFIG_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.ims.receivers.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.ims.receivers.BugleUpgradeReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.ims.BugleUpgradeComplete"/>
+                <action android:name="com.google.android.ims.JibeServiceBase"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.ims.library.phenotype.PhenotypeConfigurationReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.ims.library.rcs.RcsPhenotypeConfigurationReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.ims.services.ProvisioningService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.ims.ipc.AccountSettingsService">
+            <intent-filter>
+                <action android:name="com.google.android.ims.ipc.IAccountSettingsService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.ims.services.CarrierServicesImsService" android:permission="android.permission.BIND_IMS_SERVICE">
+            <meta-data android:name="android.telephony.ims.RCS_FEATURE" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.telephony.ims.ImsService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.ims.services.MessagingService" android:permission="android.permission.BIND_CARRIER_SERVICES">
+            <intent-filter>
+                <action android:name="android.service.carrier.CarrierMessagingService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.ims.services.RcsService">
+            <intent-filter>
+                <action android:name="com.google.android.ims.START_RCS_ENGINE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.android.ims.action.ActionService"/>
+        <receiver android:name="com.google.android.ims.receivers.RcsAutoStartReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.gservices.intent.action.GSERVICES_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.gservices.intent.action.GSERVICES_OVERRIDE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.ims.action.ActionService$PendingActionReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.rcs.service.action.PENDING_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.google.android.ims.rcsfileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/rcs_file_transfer_paths"/>
+        </provider>
+        <provider android:authorities="com.google.android.ims.rcs.contacts" android:exported="true" android:name="com.google.android.ims.database.ImsContactsProvider"/>
+        <provider android:authorities="com.google.android.ims.rcs.client.businessinfo" android:exported="true" android:name="com.google.android.rcs.client.businessinfo.BusinessInfoContentProvider"/>
+        <provider android:authorities="com.google.android.ims.providers" android:exported="true" android:label="Carrier Services" android:name="com.google.android.ims.providers.CarrierServicesContentProvider" android:permission="com.google.android.ims.providers.ACCESS_DATA"/>
+        <receiver android:exported="false" android:name="com.google.android.libraries.social.silentfeedback.nobinder.SilentFeedbackReceiver" android:process=":crash_report"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>
