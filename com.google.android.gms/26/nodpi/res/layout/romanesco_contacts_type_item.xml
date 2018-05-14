@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/common_settings_margin_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/common_setting_widget_width"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/info_section" android:paddingBottom="@dimen/common_settings_margin_vertical" android:focusable="true" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" style="@style/common.Widget.Setting">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textAppearance="?textAppearanceListItem" android:id="@android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+            <TextView android:textAppearance="?android:textAppearanceListItemSecondary" android:textColor="?android:textColorSecondary" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@android:id/title" android:layout_alignStart="@android:id/title" />
+        </RelativeLayout>
+        <View android:background="#ffdddddd" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="end|center" android:orientation="vertical" android:id="@android:id/widget_frame" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="48.0dip" android:minHeight="48.0dip">
+            <CheckBox android:id="@id/toggle" android:background="@null" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ffdddddd" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

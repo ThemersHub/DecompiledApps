@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="horizontal" android:paddingLeft="@dimen/message_item_view_padding" android:paddingRight="@dimen/message_item_view_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/message_item_view_padding" android:paddingEnd="@dimen/message_item_view_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/ms_message_avatar" />
+    <LinearLayout android:orientation="vertical" android:id="@id/image_message_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/message_image_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/message_image_view" android:background="@android:color/transparent" android:layout_width="@dimen/image_message_dimen" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxHeight="@dimen/image_message_dimen" android:contentDescription="@string/ms_image" />
+            <include layout="@layout/ms_download_image" />
+        </FrameLayout>
+        <include layout="@layout/ms_message_sender_timestamp" />
+    </LinearLayout>
+</LinearLayout>

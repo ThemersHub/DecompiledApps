@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="horizontal" android:paddingLeft="@dimen/message_item_view_padding" android:paddingRight="@dimen/message_item_view_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/message_item_view_padding" android:paddingEnd="@dimen/message_item_view_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/ms_message_avatar" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ms_unsupported_message_container" android:background="@drawable/ms_unsupported_message_bg" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textStyle="bold" android:textColor="@color/ms_default_app_theme_color" android:id="@id/unsupported_message_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="@string/unsupported_message_text" android:layout_marginEnd="8.0dip" />
+                <TextView android:textStyle="bold" android:textColor="@color/ms_default_app_theme_color" android:id="@id/unsupported_message_text_secondary_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="@string/unsupported_message_text" android:layout_marginEnd="8.0dip" />
+            </LinearLayout>
+            <Button android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/ms_default_app_theme_color" android:id="@id/install_button" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_install" android:textAllCaps="true" />
+        </LinearLayout>
+        <include layout="@layout/ms_message_sender_timestamp" />
+    </LinearLayout>
+</LinearLayout>

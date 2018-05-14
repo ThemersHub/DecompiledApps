@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/smartdevice_fullscreen_dark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/smartdevice_setupwizard_padding_horizontal" android:paddingRight="@dimen/smartdevice_setupwizard_padding_horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextureView android:id="@id/animation" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/smartdevice_setupwizard_padding_horizontal" android:paddingRight="@dimen/smartdevice_setupwizard_padding_horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textAppearance="@style/SmartDevice.TextAppearance.Body1Inverse" android:textSize="@dimen/smartdevice_d2d_image_step_text_size" android:gravity="center" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/smartdevice_setup_info_spacing_between_text" />
+            <TextView android:textAppearance="@style/SmartDevice.TextAppearance.ButtonInverse" android:gravity="center" android:id="@id/help_needed_link" android:paddingTop="@dimen/smartdevice_text_padding" android:paddingBottom="@dimen/smartdevice_text_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/smartdevice_d2d_target_help_text" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.android.setupwizardlib.view.NavigationBar android:id="@id/suw_layout_navigation_bar" android:layout_width="fill_parent" android:layout_height="@dimen/suw_navbar_height" android:layout_marginTop="@dimen/smartdevice_d2d_target_navigationbar_margin" style="@style/SuwNavBarTheme" />
+</LinearLayout>

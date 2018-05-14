@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/SettingContainer" android:background="@drawable/tp_bounded_rippleable" android:padding="@dimen/tp_default_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.SwitchCompat android:id="@id/Switch" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_centerVertical="true" android:paddingStart="@dimen/tp_default_spacing" android:layout_alignParentEnd="true" />
+        <TextView android:id="@id/SettingTitle" android:paddingBottom="@dimen/tp_narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tp_transaction_notification_setting_label" android:layout_toStartOf="@id/Switch" style="@style/Tp_Text_Header" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tp_transaction_notification_setting_description" android:layout_below="@id/SettingTitle" android:layout_toStartOf="@id/Switch" style="@style/Tp_Text_Subhead" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/EmailsSettingContainer" android:background="@drawable/tp_bounded_rippleable" android:padding="@dimen/tp_default_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.SwitchCompat android:id="@id/EmailsSwitch" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_centerVertical="true" android:paddingStart="@dimen/tp_default_spacing" android:layout_alignParentEnd="true" />
+        <TextView android:id="@id/EmailsTitle" android:paddingBottom="@dimen/tp_narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tp_emails_notification_setting_label" android:layout_toStartOf="@id/EmailsSwitch" style="@style/Tp_Text_Header" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tp_emails_notification_setting_description" android:layout_below="@id/EmailsTitle" android:layout_toStartOf="@id/EmailsSwitch" style="@style/Tp_Text_Subhead" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/NotificationSettingContainer" android:background="@drawable/tp_bounded_rippleable" android:padding="@dimen/tp_default_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/EmailsSettingContainer">
+        <android.support.v7.widget.SwitchCompat android:id="@id/NotificationSwitch" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_centerVertical="true" android:paddingStart="@dimen/tp_default_spacing" android:layout_alignParentEnd="true" />
+        <TextView android:id="@id/NotificationTitle" android:paddingBottom="@dimen/tp_narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tp_notifications_setting_label" android:layout_toStartOf="@id/NotificationSwitch" style="@style/Tp_Text_Header" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tp_notifications_setting_description" android:layout_below="@id/NotificationSwitch" android:layout_toStartOf="@id/NotificationSwitch" style="@style/Tp_Text_Subhead" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/NonGooglePayTransactions" android:background="@drawable/tp_bounded_rippleable" android:padding="@dimen/tp_default_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:paddingBottom="@dimen/tp_narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tp_payment_card_setting_heading" style="@style/Tp_Text_Header" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tp_payment_card_setting_subheading" style="@style/Tp_Text_Subhead" />
+        <LinearLayout android:orientation="vertical" android:id="@id/PaymentCardContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/SpinnerContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.libraries.material.progress.MaterialProgressBar android:layout_gravity="center" android:id="@id/Spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    </FrameLayout>
+</LinearLayout>

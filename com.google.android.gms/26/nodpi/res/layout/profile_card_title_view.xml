@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/title_container" android:padding="@dimen/profile_card_title_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toStartOf="@id/title_icon_container" android:layout_alignParentStart="true" style="@style/common.Widget.SelectableItem">
+        <TextView android:textSize="@dimen/profile_card_title_text_size" android:textColor="@color/profile_card_title" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+        <TextView android:textSize="@dimen/profile_card_subtitle_text_size" android:ellipsize="end" android:id="@id/subtitle" android:paddingTop="@dimen/profile_card_subtitle_top_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:layout_below="@id/title" android:color="@color/profile_card_expanding_entry_metadata_color" android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/title_icon_container" android:padding="@dimen/profile_card_title_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/common.Widget.SelectableItem">
+        <ImageView android:id="@id/title_icon" android:layout_width="@dimen/profile_card_expanding_entry_image_height" android:layout_height="@dimen/profile_card_expanding_entry_image_width" android:scaleType="centerCrop" />
+    </FrameLayout>
+</RelativeLayout>

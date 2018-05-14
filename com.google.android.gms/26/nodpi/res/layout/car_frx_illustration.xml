@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/illustration_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/car_frx_margin" android:layout_marginRight="@dimen/car_frx_margin" android:layout_marginBottom="@dimen/car_frx_illustration_margin_bottom">
+        <ImageView android:id="@id/illustration" android:background="@android:color/transparent" android:layout_width="@dimen/car_frx_illustration_size" android:layout_height="@dimen/car_frx_illustration_size" android:scaleType="center" android:contentDescription="@null" android:importantForAccessibility="no" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/spinner" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="@dimen/car_frx_spinner_size" android:layout_height="@dimen/car_frx_spinner_size" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/text_container" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/car_frx_margin_edge" android:layout_marginRight="@dimen/car_frx_margin_edge" android:layout_marginBottom="@dimen/car_frx_margin" android:layout_below="@id/illustration_wrapper">
+        <TextView android:gravity="center" android:id="@id/title" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/car_frx_title_margin_bottom" style="@style/TextAppearance.FrxTitle" />
+        <TextView android:textColorLink="@color/frx_link_color" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/body" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="448.0dip" style="@style/TextAppearance.FrxBody" />
+    </LinearLayout>
+    <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="2.0" />
+</LinearLayout>

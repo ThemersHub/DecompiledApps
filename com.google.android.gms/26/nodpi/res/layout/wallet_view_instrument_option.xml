@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?uicFormStartEndMargin" android:layout_marginRight="?uicFormStartEndMargin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/wallet_selector_item_height">
+        <FrameLayout android:layout_gravity="center_vertical" android:paddingLeft="?internalUicNonFormFieldTextStartMargin" android:layout_width="@dimen/wallet_page_left_column_width" android:layout_height="wrap_content">
+            <com.google.android.wallet.ui.common.ImageWithCaptionView android:id="@id/instrument_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/wallet_spacing_instrument_image_material_side" android:adjustViewBounds="true" android:contentDescription="@string/wallet_empty_string" wallet:internalUicDefaultImage="?drawableWalletAdd" />
+            <RadioButton android:id="@id/radio_button" android:background="@drawable/wallet_ic_radio_button" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="?internalUicNonFormFieldTextStartMargin" android:paddingTop="@dimen/wallet_margin_nontouchable" android:paddingBottom="@dimen/wallet_margin_nontouchable" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:id="@id/instrument_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/WalletMaterialInputText" />
+            <TextView android:ellipsize="end" android:id="@id/instrument_additional_label_collapsed" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/WalletInfoMessageText" />
+            <TextView android:id="@id/instrument_additional_label_expanded" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/WalletInfoMessageText" />
+            <TextView android:ellipsize="end" android:id="@id/warning_message" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/WalletWarningDetailsText" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/end_icons_holder" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/expand_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="?internalUicNonFormFieldTextStartMargin" android:src="?drawableWalletExpand" android:contentDescription="@string/wallet_expand_instrument_selector" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/instrument_divider_line" android:layout_width="fill_parent" android:layout_height="@dimen/wallet_dialog_divider_height" android:layout_marginLeft="?internalUicNonFormFieldTextStartMargin" android:layout_marginRight="?internalUicNonFormFieldTextStartMargin" style="@style/WalletDividerHorizontal" />
+</LinearLayout>

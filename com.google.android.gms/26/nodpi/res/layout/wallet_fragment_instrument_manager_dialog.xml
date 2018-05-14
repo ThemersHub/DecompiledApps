@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uic="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.gms.wallet.ui.component.pageheader.PageHeaderView android:id="@id/page_header_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.google.android.wallet.ui.common.InfoMessageView android:id="@id/top_info_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="24.0dip" uic:internalUicInfoMessageTextAppearance="?android:textAppearanceMedium" />
+            <FrameLayout android:id="@id/fragment_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@id/cancel_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="8.0dip" android:text="@android:string/cancel" style="?attr/buttonBarNegativeButtonStyle" />
+        <com.google.android.wallet.ui.common.ButtonComponent android:id="@id/submit_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="8.0dip" style="?attr/buttonBarPositiveButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

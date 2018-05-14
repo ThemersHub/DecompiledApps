@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/audio_call_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <RelativeLayout android:id="@id/call_root_container" android:background="@color/outgoing_call_background" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:id="@id/outgoing_call_header_container" style="@style/IncomingOutgoingOtherCallerHeader">
+            <include layout="@layout/fragment_call_header" />
+        </LinearLayout>
+        <RelativeLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="36.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/button_outgoing_call_hangup_shadow" android:visibility="gone" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginTop="2.0dip" android:src="@drawable/ms_circular_background_shadow" android:layout_below="@id/send_message_button" android:layout_centerHorizontal="true" />
+            <ImageButton android:id="@id/button_outgoing_call_hangup" android:background="@drawable/call_decline_background_selector" android:padding="16.0dip" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/quantum_ic_call_end_white_24" android:scaleType="fitCenter" android:layout_below="@id/send_message_button" android:layout_centerHorizontal="true" android:contentDescription="@string/button_disconnect_call" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
