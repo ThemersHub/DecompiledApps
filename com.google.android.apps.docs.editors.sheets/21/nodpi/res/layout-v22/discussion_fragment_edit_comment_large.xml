@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@color/discussion_edit_comment_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keyboardNavigationCluster="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ScrollView style="@style/discussion_edit_comment_scroll_view">
+            <LinearLayout style="@style/discussion_edit_comment_container_style">
+                <LinearLayout style="@style/discussion_comment_header_style">
+                    <include android:id="@id/contact_picture" android:layout_width="@dimen/discussion_contact_picture_size" android:layout_height="@dimen/discussion_contact_picture_size" android:layout_margin="@dimen/discussion_spacing_large" layout="@layout/discussion_contact_circular_picture" />
+                    <TextView android:id="@id/comment_author_date" style="@style/discussion_comment_author_date_style" />
+                    <ImageView android:id="@id/action_edit_trash" android:background="?android:selectableItemBackground" android:src="@drawable/quantum_ic_delete_grey600_24" android:contentDescription="@string/discussion_delete_comment_title" style="@style/discussion_edit_comment_trash_style" />
+                </LinearLayout>
+                <FrameLayout android:background="@drawable/discussion_separator_background" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <com.google.android.apps.docs.discussion.ui.edit.LargeDiscussionTextView android:id="@id/comment_text" android:contentDescription="@string/comment_text_content_description" style="@style/discussion_edit_comment_text_style" />
+                <CheckBox android:id="@id/comment_mark_as_resolved" android:text="@string/discussion_mark_as_resolved" style="@style/discussion_mark_as_resolved_checkbox" />
+            </LinearLayout>
+        </ScrollView>
+        <com.google.android.libraries.docs.view.JellybeanProgressBar android:id="@id/discussion_loading_spinner_edit_comment_fragment" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminate="true" android:layout_centerInParent="true" style="@android:style/Widget.Holo.ProgressBar" />
+    </RelativeLayout>
+    <View android:id="@id/edit_assignment_view_top_separator" android:background="@drawable/discussion_separator_background" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <include android:layout_width="fill_parent" android:layout_height="@dimen/discussion_options_section_height" android:layout_marginStart="@dimen/discussion_spacing_small" android:layout_marginEnd="@dimen/discussion_spacing_small" layout="@layout/discussion_edit_assignment_view" />
+    <FrameLayout android:background="@drawable/discussion_separator_background" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <include layout="@layout/discussion_fragment_edit_comment_buttons" />
+    <FrameLayout android:id="@id/discussion_edit_snackbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

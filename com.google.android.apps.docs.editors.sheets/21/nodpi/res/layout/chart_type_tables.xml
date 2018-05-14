@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="1,3" android:layout_weight="1.0">
+        <TableRow android:id="@id/recommended_charts_title" android:visibility="gone">
+            <TextView android:text="@string/ritz_chart_type_category_recommended" style="@style/ChartTypeCategoryHeading" />
+        </TableRow>
+        <TableRow android:id="@id/recommended_charts_tablerow" android:visibility="gone" />
+        <TableRow>
+            <TextView android:text="@string/ritz_chart_type_category_line" style="@style/ChartTypeCategoryHeading" />
+        </TableRow>
+        <TableRow>
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_line" android:src="@drawable/ic_chart_type_line" android:layout_column="0" style="@style/ChartTypeButton" />
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_smooth_line" android:src="@drawable/ic_chart_type_smooth_line" android:layout_column="2" style="@style/ChartTypeButton" />
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_combo" android:src="@drawable/ic_chart_type_combo" android:layout_column="4" style="@style/ChartTypeButton" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/ritz_chart_type_category_area" style="@style/ChartTypeCategoryHeading" />
+        </TableRow>
+        <TableRow>
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_area" android:src="@drawable/ic_chart_type_area" android:layout_column="0" style="@style/ChartTypeButton" />
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_stacked_area" android:src="@drawable/ic_chart_type_stacked_area" android:layout_column="2" style="@style/ChartTypeButton" />
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_stepped_area" android:src="@drawable/ic_chart_type_stepped_area" android:layout_column="4" style="@style/ChartTypeButton" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/ritz_chart_type_category_column" style="@style/ChartTypeCategoryHeading" />
+        </TableRow>
+        <TableRow>
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_column" android:src="@drawable/ic_chart_type_column" android:layout_column="0" style="@style/ChartTypeButton" />
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_stacked_column" android:src="@drawable/ic_chart_type_stacked_column" android:layout_column="2" style="@style/ChartTypeButton" />
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_histogram" android:src="@drawable/ic_chart_type_histogram" android:layout_column="4" style="@style/ChartTypeButton" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="1,3" android:layout_weight="1.0">
+        <TableRow>
+            <TextView android:text="@string/ritz_chart_type_category_bar" style="@style/ChartTypeCategoryHeading" />
+        </TableRow>
+        <TableRow>
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_bar" android:src="@drawable/ic_chart_type_bar" android:layout_column="0" style="@style/ChartTypeButton" />
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_stacked_bar" android:src="@drawable/ic_chart_type_stacked_bar" android:layout_column="2" style="@style/ChartTypeButton" />
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@id/padding" android:focusable="false" android:visibility="gone" android:clickable="false" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/ritz_chart_type_category_pie" style="@style/ChartTypeCategoryHeading" />
+        </TableRow>
+        <TableRow>
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_pie" android:src="@drawable/ic_chart_type_pie" android:layout_column="0" style="@style/ChartTypeButton" />
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_donut" android:src="@drawable/ic_chart_type_donut" android:layout_column="2" style="@style/ChartTypeButton" />
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_3d_pie" android:src="@drawable/ic_chart_type_3d_pie" android:layout_column="4" style="@style/ChartTypeButton" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/ritz_chart_type_category_scatter" style="@style/ChartTypeCategoryHeading" />
+        </TableRow>
+        <TableRow>
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_scatter" android:src="@drawable/ic_chart_type_scatter" android:layout_column="0" style="@style/ChartTypeButton" />
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_bubble" android:src="@drawable/ic_chart_type_bubble" android:layout_column="2" style="@style/ChartTypeButton" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/ritz_chart_type_category_trend" style="@style/ChartTypeCategoryHeading" />
+        </TableRow>
+        <TableRow>
+            <com.google.android.apps.docs.editors.ritz.charts.palettes.ChartTypeImageButton android:id="@id/chart_type_candlestick" android:src="@drawable/ic_chart_type_candlestick" android:layout_column="0" style="@style/ChartTypeButton" />
+        </TableRow>
+    </TableLayout>
+</merge>

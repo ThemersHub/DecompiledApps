@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.docs.welcome.HighlightsViewPager android:id="@id/welcome_pager" android:focusable="true" android:nextFocusLeft="@id/welcome_button_continue" android:nextFocusRight="@id/welcome_button_close" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="0.0dip" android:layout_weight="1.0" />
+    <ProgressBar android:id="@id/welcome_page_indicator" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="2.0dip" android:max="5" android:progress="1" style="@style/ProgressBar.Horizontal" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/m_app_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/welcome_button_close" android:focusable="true" android:nextFocusLeft="@id/welcome_pager" android:nextFocusRight="@id/welcome_button_continue" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" style="@style/DialogButton" />
+        <Button android:id="@id/welcome_button_continue" android:focusable="true" android:nextFocusLeft="@id/welcome_button_close" android:nextFocusRight="@id/welcome_pager" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" style="@style/DialogButton" />
+        <Button android:id="@id/welcome_button_positive" android:focusable="true" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" style="@style/DialogButton.Affirmative" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root_node" android:paddingTop="@dimen/m_dialog_title_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="300.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearanceSecondary" android:id="@id/first_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/enter_new_name" android:layout_marginStart="@dimen/m_dialog_content_margin" android:layout_marginEnd="@dimen/m_dialog_content_margin" />
+    <TextView android:textAppearance="@style/TextAppearancePrimary" android:ellipsize="middle" android:id="@id/item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginStart="@dimen/m_dialog_content_margin" android:layout_marginEnd="@dimen/m_dialog_content_margin" />
+    <EditText android:textAppearance="@style/TextAppearancePrimary" android:id="@id/new_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/m_grid_6x" android:inputType="textAutoCorrect|textCapSentences" android:layout_marginStart="@dimen/m_dialog_edit_text_margin" android:layout_marginEnd="@dimen/m_dialog_edit_text_margin" />
+    <TextView android:textColor="@color/operation_dialog_error" android:id="@id/error_status_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/m_dialog_content_margin" android:layout_marginEnd="@dimen/m_dialog_content_margin" />
+    <RelativeLayout android:id="@id/sync_in_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/m_dialog_content_margin" android:layout_marginEnd="@dimen/m_dialog_content_margin">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

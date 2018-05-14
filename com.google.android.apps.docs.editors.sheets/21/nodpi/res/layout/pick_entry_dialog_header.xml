@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/m_app_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:minHeight="@dimen/pick_entry_title_height" style="@style/FauxActionBar">
+        <ImageButton android:id="@id/up_affordance" android:layout_width="@dimen/pick_entry_title_height" android:layout_height="@dimen/pick_entry_title_height" android:src="@drawable/quantum_ic_arrow_back_white_24" android:contentDescription="@string/pick_entry_navigate_up" style="@style/FauxActionBar_TintIcon" />
+        <LinearLayout android:id="@id/text_box" android:focusable="false" android:importantForAccessibility="yes" style="@style/ListRowTextLinearLayout">
+            <TextView android:textAppearance="@style/TextAppearanceSecondary" android:textColor="@color/m_actionbar_text" android:id="@id/action" android:layout_margin="0.0dip" android:singleLine="true" style="@style/ListText" />
+            <com.google.android.apps.docs.view.TalkbackFriendlyTextView android:ellipsize="middle" android:id="@id/title" android:layout_margin="0.0dip" android:singleLine="true" style="@style/FauxActionBar.Title" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/arrangement_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/icon_list" android:visibility="gone" android:layout_width="@dimen/pick_entry_title_button_width" android:layout_height="@dimen/pick_entry_title_height" android:src="@drawable/ic_list_toggle" android:contentDescription="@string/menu_doc_view_list_mode" style="@style/FauxActionBar_TintIcon" />
+            <ImageButton android:id="@id/icon_grid" android:visibility="gone" android:layout_width="@dimen/pick_entry_title_button_width" android:layout_height="@dimen/pick_entry_title_height" android:src="@drawable/quantum_ic_view_module_white_24" android:contentDescription="@string/menu_doc_view_grid_mode" style="@style/FauxActionBar_TintIcon" />
+        </FrameLayout>
+        <ImageButton android:id="@id/icon_new" android:layout_width="@dimen/pick_entry_title_button_width" android:layout_height="@dimen/pick_entry_title_height" android:src="@drawable/quantum_ic_create_new_folder_white_24" android:contentDescription="@string/pick_entry_create_new_folder" android:layout_marginEnd="@dimen/m_grid_2x" style="@style/FauxActionBar_TintIcon" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="@dimen/default_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/m_grid_2x" android:paddingEnd="@dimen/m_grid_2x"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/text_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:paddingEnd="@dimen/m_grid_2x">
+            <TextView android:textSize="@dimen/option_row_text_size_primary" android:textColor="@color/m_entry_text_primary" android:ellipsize="none" android:id="@id/sharing_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif-medium" />
+            <TextView android:textSize="@dimen/option_row_text_size_secondary" android:textColor="@color/m_entry_text_secondary" android:id="@id/sharing_expiration" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ImageView android:id="@id/sharing_icon" android:layout_width="@dimen/m_grid_3x" android:layout_height="fill_parent" android:layout_weight="0.0" android:importantForAccessibility="no" />
+    </LinearLayout>
+</FrameLayout>

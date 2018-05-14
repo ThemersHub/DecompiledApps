@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.docs.editors.ritz.view.celleditor.RichTextEditingView android:id="@id/rich_text_editing_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyboardNavigationCluster="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/rich_text_overflow_menu" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/rich_text_normal_bar" android:background="@color/formula_editor_shortcut_bar_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.docs.editors.menu.components.CheckableImageButton android:id="@id/rich_text_bold_button" android:nextFocusUp="@id/cell_content_editor" android:src="@drawable/ic_format_bold" android:contentDescription="@string/palette_format_font_bold" style="@style/RichTextButton" />
+        <com.google.android.apps.docs.editors.menu.components.CheckableImageButton android:id="@id/rich_text_italic_button" android:nextFocusUp="@id/cell_content_editor" android:src="@drawable/ic_format_italics" android:contentDescription="@string/palette_format_font_italics" style="@style/RichTextButton" />
+        <com.google.android.apps.docs.editors.menu.components.CheckableImageButton android:id="@id/rich_text_underline_button" android:nextFocusUp="@id/cell_content_editor" android:src="@drawable/ic_format_underline" android:contentDescription="@string/palette_format_font_underline" style="@style/RichTextButton" />
+        <com.google.android.apps.docs.editors.menu.components.CheckableImageButton android:id="@id/rich_text_strikethrough_button" android:nextFocusUp="@id/cell_content_editor" android:src="@drawable/ic_format_strikethrough" android:contentDescription="@string/palette_format_font_strikethrough" style="@style/RichTextButton" />
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageButton android:id="@id/rich_text_overflow_button" android:nextFocusUp="@id/cell_content_editor" android:layout_width="@dimen/ritz_icon_size" android:src="@drawable/quantum_ic_more_vert_grey600_24" android:layout_alignParentRight="true" android:contentDescription="@string/ritz_partial_text_overflow_description" android:layout_alignParentEnd="true" style="@style/RichTextButton" />
+        </RelativeLayout>
+    </LinearLayout>
+    <com.google.android.apps.docs.editors.ritz.view.celleditor.RichTextTypefacePaletteView android:id="@id/rich_text_font_palette" android:background="@color/palette_tab_heading_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/rich_text_palette" />
+    </com.google.android.apps.docs.editors.ritz.view.celleditor.RichTextTypefacePaletteView>
+    <com.google.android.apps.docs.editors.ritz.view.celleditor.RichTextColorPaletteView android:id="@id/rich_text_color_palette" android:background="@color/palette_tab_heading_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/rich_text_palette" />
+    </com.google.android.apps.docs.editors.ritz.view.celleditor.RichTextColorPaletteView>
+</com.google.android.apps.docs.editors.ritz.view.celleditor.RichTextEditingView>

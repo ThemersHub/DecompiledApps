@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/RitzFullscreenDialog" android:orientation="vertical" android:id="@id/explore_main_fragment" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/explore_toolbar" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_height" card_view:titleTextAppearance="@style/RitzFullscreenDialogToolbar.Title" card_view:navigationIcon="@drawable/quantum_ic_assistant_white_24" card_view:navigationContentDescription="@string/ritz_explore_autovis" style="@style/RitzFullscreenDialogToolbar" />
+    <FrameLayout android:id="@id/explore_loading_spinner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+        <com.google.android.libraries.docs.view.JellybeanProgressBar android:layout_gravity="center" android:background="@android:color/white" android:layout_width="@dimen/ritz_progressbar_size" android:layout_height="@dimen/ritz_progressbar_size" android:indeterminate="true" android:layout_centerInParent="true" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/explore_card_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:background="@color/quantum_grey200" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ritz_explore_card_margin_outer" android:layout_marginBottom="@dimen/ritz_explore_card_margin_outer">
+            <FrameLayout android:id="@id/explore_answers_card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyboardNavigationCluster="true" />
+            <FrameLayout android:id="@id/explore_formatting_card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyboardNavigationCluster="true" />
+            <FrameLayout android:id="@id/explore_analysis_card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyboardNavigationCluster="true" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/autovis_no_data_message" android:visibility="gone" android:layout_width="@dimen/ritz_autovis_no_data_container_width" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/ritz_explore_splash_margin_left_right" android:layout_marginRight="@dimen/ritz_explore_splash_margin_left_right" android:keyboardNavigationCluster="true">
+        <ImageView android:clickable="false" android:layout_width="@dimen/ritz_explore_no_data_icon_size" android:layout_height="@dimen/ritz_explore_no_data_icon_size" android:layout_marginBottom="@dimen/ritz_explore_no_data_icon_margin_bottom" android:src="@drawable/quantum_ic_assistant_black_48" android:contentDescription="@string/ritz_explore_no_data_snippet" android:alpha="0.54" />
+        <TextView android:text="@string/ritz_explore_no_data_title" style="@style/RitzExploreNoData.Title" />
+        <TextView android:text="@string/ritz_explore_no_data_snippet" style="@style/RitzExploreNoData" />
+        <LinearLayout android:orientation="vertical" android:id="@id/autovis_no_data_link_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/autovis_no_data_learn_more" style="@style/RitzExploreNoData.Link" />
+            <TextView android:id="@id/autovis_no_data_try_an_example" android:text="@string/ritz_explore_autovis_no_data_try_an_example" style="@style/RitzExploreNoData.Link" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

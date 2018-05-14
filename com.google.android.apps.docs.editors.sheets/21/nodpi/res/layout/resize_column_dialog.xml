@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridLayout android:orientation="horizontal" android:paddingTop="@dimen/dialog_contents_margin" android:paddingBottom="@dimen/dialog_contents_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:rowCount="3" android:columnCount="2">
+        <RadioButton android:layout_gravity="center|left|top" android:id="@id/resize_column_fit_to_data_radio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/resize_column_fit_to_data_label" />
+        <TextView android:gravity="center_vertical" android:layout_gravity="fill" android:id="@id/resize_column_fit_to_data_label" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/resize_column_fit_to_data_label" android:width="0.0dip" android:importantForAccessibility="yes" />
+        <RadioButton android:layout_gravity="center|left|top" android:id="@id/resize_column_pixels_radio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/resize_column_pixels_label" />
+        <TextView android:gravity="center_vertical" android:layout_gravity="fill" android:id="@id/resize_column_pixels_label" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/resize_column_pixels_label" android:width="0.0dip" android:importantForAccessibility="yes" android:labelFor="@id/resize_column_dialog_width" />
+        <Space android:id="@id/resize_pixels_space" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <EditText android:layout_gravity="fill_horizontal" android:id="@id/resize_column_dialog_width" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:inputType="number" />
+    </GridLayout>
+</ScrollView>

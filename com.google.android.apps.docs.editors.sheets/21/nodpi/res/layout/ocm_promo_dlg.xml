@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/ocm_image_container" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="0.5">
+        <ImageView android:id="@id/ocm_banner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <ImageButton android:id="@id/ocm_close_button" android:background="@null" android:paddingTop="@dimen/ocm_img_close" android:paddingRight="@dimen/ocm_img_close" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ocm_close_button_selector" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/accessibility_ocm_confirm_close_btn" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ocm_heading_top_margin" android:fillViewport="true" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/ocm_heading_text_size" android:textStyle="bold" android:textColor="@color/ocm_header" android:gravity="center" android:id="@id/ocm_heading" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:text="@string/ocm_heading" android:fontFamily="sans-serif" />
+                <TextView android:textSize="@dimen/ocm_desc_text_size" android:textStyle="normal" android:textColor="@color/ocm_desc" android:gravity="center" android:id="@id/ocm_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ocm_desc_left_margin" android:layout_marginTop="@dimen/ocm_desc_top_margin" android:layout_marginRight="@dimen/ocm_desc_left_margin" android:fontFamily="sans-serif" />
+            </LinearLayout>
+        </ScrollView>
+        <Button android:textSize="@dimen/ocm_desc_text_size" android:textColor="@android:color/white" android:layout_gravity="bottom|center" android:id="@id/ocm_convert_gdocs_btn" android:background="@drawable/ocm_convert_button_selector" android:paddingLeft="@dimen/ocm_convert_btn_padding" android:paddingRight="@dimen/ocm_convert_btn_padding" android:layout_width="wrap_content" android:layout_height="@dimen/ocm_convert_btn_height" android:layout_marginTop="@dimen/ocm_gdoc_convert_margin" android:layout_marginBottom="@dimen/ocm_gdoc_convert_margin" android:fontFamily="sans-serif" />
+    </LinearLayout>
+</LinearLayout>

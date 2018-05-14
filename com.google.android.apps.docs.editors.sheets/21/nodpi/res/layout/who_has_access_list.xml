@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.docs.sharing.addcollaborator.DynamicContactListView android:id="@id/acl_list" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/shared_acl" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/owner_badge" android:layout_width="@dimen/m_grid_5x" android:layout_height="wrap_content" />
+        <View android:background="@color/default_list_divider" android:layout_width="@dimen/default_list_divider_height" android:layout_height="fill_parent" android:layout_marginStart="@dimen/m_grid_1x" android:layout_marginEnd="@dimen/m_grid_1x" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/collaborator_badges" android:layout_width="0.0dip" android:layout_height="@dimen/m_grid_5x" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:id="@id/private_acl" android:paddingTop="@dimen/m_grid_1x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.google.android.apps.docs.view.RoundImageView android:background="@drawable/round_image_border_bg_grey" android:layout_width="@dimen/m_grid_5x" android:layout_height="@dimen/m_grid_5x" android:src="@drawable/quantum_ic_lock_grey600_24" android:scaleType="centerInside" android:layout_marginStart="@dimen/m_grid_1x" />
+        <TextView android:textSize="@dimen/m_text_size_subhead" android:textColor="@color/m_entry_text_secondary" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/sharing_option_private_acl_message" android:layout_marginStart="@dimen/m_grid_2x" />
+    </LinearLayout>
+</com.google.android.apps.docs.sharing.addcollaborator.DynamicContactListView>

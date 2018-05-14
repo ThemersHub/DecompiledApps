@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:theme="@style/RitzFullscreenDialogWithGreyEdgeEffect" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:theme="@style/RitzFullscreenDialogWithGreyEdgeEffect" android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@color/uif_actionbar_color" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar android:id="@id/conditional_formatting_toolbar" android:paddingRight="@dimen/ritz_conditional_formatting_toolbar_right_padding" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_height" android:layout_marginBottom="1.0px" app:title="@string/ritz_conditional_formatting_dialog_title" app:titleTextAppearance="@style/RitzFullscreenDialogToolbarGrey.Title" app:navigationIcon="@drawable/quantum_ic_done_grey600_24" app:navigationContentDescription="@string/done" style="@style/RitzFullscreenDialogToolbarGrey" />
+            <android.support.design.widget.TabLayout android:id="@id/conditional_formatting_tablayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabBackground="@color/uif_actionbar_color" app:tabMode="fixed" app:tabGravity="fill" app:tabMaxWidth="0.0dip" app:tabSelectedTextColor="@android:color/black" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/conditional_formatting_fragment_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <View android:background="@drawable/action_bar_drop_shadow" android:layout_width="fill_parent" android:layout_height="5.0dip" />
+        </FrameLayout>
+    </LinearLayout>
+    <include layout="@layout/conditional_formatting_snackbar_container" />
+</FrameLayout>

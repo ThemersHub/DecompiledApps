@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.docs.doclist.selection.view.SelectionOverlayLayout android:id="@id/selection_floating_overlay_layout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/selection_upper_scroll_region" android:layout_width="fill_parent" android:layout_height="@dimen/m_grid_folder_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <View android:id="@id/selection_lower_scroll_region" android:layout_width="fill_parent" android:layout_height="@dimen/m_grid_folder_height" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <View android:gravity="center_vertical" android:id="@id/selection_floating_visual" android:background="@drawable/selection_floating_bg_visual" android:layout_width="fill_parent" android:layout_height="@dimen/selection_release_zone_height" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <View android:id="@id/drop_to_current_folder_highlight" android:background="@drawable/doc_list_drop_to_current_folder_highlight" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/floating_handle_all" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.docs.doclist.selection.view.AnimationOverlayLayout android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/drag_shadow_double" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@null" android:scaleType="centerCrop" android:contentDescription="@null" />
+        <include android:visibility="invisible" layout="@layout/selection_floating_handle" />
+    </RelativeLayout>
+</com.google.android.apps.docs.doclist.selection.view.SelectionOverlayLayout>

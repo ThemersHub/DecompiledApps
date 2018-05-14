@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/mutually_exclusive_bottom_bars" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewStub android:id="@id/ritz_quicksum_result_stub" android:layout="@layout/ritz_quicksum_result" android:layout_width="fill_parent" android:layout_height="@dimen/formula_bar_height" />
+        <ViewStub android:id="@id/ritz_quicksum_cancel_stub" android:layout="@layout/ritz_quicksum_cancel" android:layout_width="fill_parent" android:layout_height="@dimen/formula_bar_height" />
+        <ViewStub android:id="@id/ritz_formula_bar_stub" android:layout="@layout/ritz_formula_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include layout="@layout/ritz_sheets_tab_bar" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/ritz_contextual_toolbar_animation_container_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewStub android:id="@id/contextual_toolbar_stub_view_bottom" android:layout="@layout/contextual_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <ViewStub style="@style/BannerParent.Sheet.Stub" />
+</LinearLayout>

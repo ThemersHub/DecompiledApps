@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.docs.doclist.selection.view.TouchTrackingFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/selection_overlay" />
+    <FrameLayout android:id="@id/doc_list_body" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/zero_state_search_view" />
+        <android.support.v4.widget.SwipeRefreshLayout android:id="@id/list_view_refresh_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <view android:orientation="vertical" android:id="@id/doc_list_view" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.apps.docs.doclist.view.legacy.DocListView" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </FrameLayout>
+    <include android:visibility="gone" layout="@layout/selection_floating_overlay" />
+    <FrameLayout android:id="@id/suggestion_overlay_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.google.android.apps.docs.doclist.selection.view.TouchTrackingFrameLayout>

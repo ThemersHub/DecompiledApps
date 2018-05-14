@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/formula_help_search" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/formula_editor_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/function_help_search_action_bar" android:background="@color/formula_help_title_bg" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyboardNavigationCluster="true">
+            <ImageButton android:id="@id/formula_help_back_button" android:background="@drawable/no_ripple_button_bg" android:layout_width="@dimen/ritz_icon_size" android:layout_height="@dimen/ritz_icon_size" android:src="@drawable/formula_help_back_button_bg" android:contentDescription="@string/ritz_back_description" />
+            <EditText android:textSize="20.0sp" android:textColor="@color/formula_help_main_text" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/formula_help_search_input" android:background="@null" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/ritz_search_hint" android:singleLine="true" android:layout_weight="1.0" />
+            <ImageButton android:id="@id/search_cancel_button" android:background="@drawable/no_ripple_button_bg" android:visibility="gone" android:layout_width="@dimen/ritz_icon_size" android:layout_height="@dimen/ritz_icon_size" android:src="@drawable/dialog_dismiss_button_bg" android:contentDescription="@string/ritz_cancel_search_description" />
+        </LinearLayout>
+        <ScrollView android:id="@id/scrollable_formula_search_results" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyboardNavigationCluster="true">
+            <LinearLayout android:orientation="vertical" android:id="@id/formula_help_search_results" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </ScrollView>
+    </LinearLayout>
+    <View android:id="@id/grey_modal_area" android:background="@color/formula_help_modal_bg" android:nextFocusRight="@null" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/ritz_cancel_search_description" />
+</LinearLayout>
