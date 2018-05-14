@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.messaging.ui.AudioAttachmentPlayPauseButton android:layout_gravity="center" android:id="@id/play_pause_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AudioAttachmentViewPlayPauseButtonStyle">
+        <ImageView android:id="@id/play_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_audio_play" android:minWidth="@dimen/min_touch_target_size" android:minHeight="@dimen/min_touch_target_size" android:contentDescription="@string/audio_play_content_description" />
+        <ImageView android:id="@id/pause_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_audio_pause" android:minWidth="@dimen/min_touch_target_size" android:minHeight="@dimen/min_touch_target_size" android:contentDescription="@string/audio_pause_content_description" />
+    </com.google.android.apps.messaging.ui.AudioAttachmentPlayPauseButton>
+    <com.google.android.apps.messaging.ui.mediapicker.PausableChronometer android:layout_gravity="center" android:id="@id/timer" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AudioAttachmentTimerText" />
+    <com.google.android.apps.messaging.ui.AudioPlaybackProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="0.0dip" android:layout_height="@dimen/audio_progress_bar_height" android:layout_weight="1.0" style="@android:style/Widget.ProgressBar.Horizontal" />
+</merge>

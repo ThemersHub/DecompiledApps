@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/promo_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingBottom="@dimen/promo_terms_and_conditions_text_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/promo_terms_and_conditions_text_padding" android:paddingEnd="@dimen/promo_terms_and_conditions_text_padding">
+            <ImageView android:layout_width="@dimen/promo_terms_and_conditions_illustration_size" android:layout_height="@dimen/promo_terms_and_conditions_illustration_size" android:layout_margin="@dimen/promo_terms_and_conditions_illustration_margin" android:layout_marginTop="@dimen/promo_terms_and_conditions_illustration_margin" android:src="@drawable/default_sms_app_promo_illustration" android:scaleType="fitCenter" android:importantForAccessibility="no" />
+            <TextView android:id="@id/terms_and_conditions_title" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PromoLearnMoreTextStyle" />
+            <TextView android:id="@id/terms_and_conditions_message" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/BoewPromoLegalTextStyle" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:background="@color/promo_button_background" android:layout_width="fill_parent" android:layout_height="@dimen/promo_button_bar_height">
+        <TextView android:id="@id/reject_button" android:layout_width="wrap_content" android:text="@string/rcs_setup_reject" android:layout_marginStart="@dimen/promo_button_margin_horizontal" style="@style/TermsAndConditionsButtonStyle" />
+        <View android:background="@android:color/transparent" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:importantForAccessibility="no" />
+        <TextView android:id="@id/accept_button" android:layout_width="wrap_content" android:text="@string/rcs_setup_accept" android:layout_marginEnd="@dimen/promo_button_margin_horizontal" style="@style/TermsAndConditionsButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

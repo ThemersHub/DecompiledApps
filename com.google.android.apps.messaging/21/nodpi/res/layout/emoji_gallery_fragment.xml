@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="top" android:orientation="vertical" android:id="@id/emoji_gallery_fragment" android:background="@drawable/emoji_ime_bg" android:layout_width="fill_parent" android:layout_height="@dimen/emoji_gallery_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TabHost android:id="@id/emoji_category_tabhost" android:layout_width="@dimen/emoji_gallery_min_width" android:layout_height="wrap_content" android:layout_weight="6.0">
+            <TabWidget android:id="@android:id/tabs" android:background="@drawable/tab_selected" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:tabStripLeft="@drawable/tab_unselected" android:tabStripRight="@drawable/tab_unselected" android:tabStripEnabled="true" />
+            <FrameLayout android:id="@android:id/tabcontent" android:layout_width="0.0dip" android:layout_height="0.0dip">
+                <View android:id="@id/recentEmojiFakeGrid" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                <View android:id="@id/facesEmojiFakeGrid" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                <View android:id="@id/objectsEmojiFakeGrid" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                <View android:id="@id/natureEmojiFakeGrid" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                <View android:id="@id/placesEmojiFakeGrid" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                <View android:id="@id/symbolsEmojiFakeGrid" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            </FrameLayout>
+        </TabHost>
+        <ImageButton android:id="@id/emoji_keyboard_backspace" android:background="@drawable/tab_btn_bg" android:layout_width="@dimen/min_touch_target_size" android:layout_height="fill_parent" android:src="@drawable/sym_keyboard_delete_holo" android:layout_weight="1.0" android:contentDescription="@string/emoji_keyboard_backspace_content_description" />
+    </LinearLayout>
+    <android.support.v4.view.ViewPager android:id="@id/emoji_pager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.google.android.apps.messaging.ui.conversation.EmojiCategoryPageIndicatorView android:id="@id/emoji_category_page_id_view" android:background="@android:color/transparent" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/emoji_key_bar" android:layout_width="fill_parent" android:layout_height="@dimen/min_touch_target_size">
+        <TextView android:textSize="@dimen/emoji_keyboard_key_btn_text_size" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@id/emoji_keyboard_alphabet_left" android:background="@drawable/emoji_keyboard_key_btn" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:text="@string/emoji_keyboard_key_btn_label" android:layout_weight="0.15" />
+        <ImageButton android:id="@id/emoji_keyboard_space" android:background="@drawable/emoji_keyboard_key_btn_light" android:layout_width="@dimen/emoji_space_min_width" android:layout_height="@dimen/min_touch_target_size" android:layout_weight="0.7" android:contentDescription="@string/emoji_space_bar_description" />
+        <TextView android:textSize="@dimen/emoji_keyboard_key_btn_text_size" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@id/emoji_keyboard_alphabet_right" android:background="@drawable/emoji_keyboard_key_btn" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:text="@string/emoji_keyboard_key_btn_label" android:layout_weight="0.15" />
+    </LinearLayout>
+</LinearLayout>

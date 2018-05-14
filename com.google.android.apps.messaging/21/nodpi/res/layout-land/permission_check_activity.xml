@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/promo_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/permission_promo_illustration" android:layout_weight="1.0" android:importantForAccessibility="no" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginEnd="@dimen/promo_landscape_margin_end">
+            <TextView android:id="@id/enable_permission_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/required_permissions_promptable_title" style="@style/PromoTitleTextStyle" />
+            <TextView android:id="@id/enable_permission_procedure" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/promo_landscape_text_margin_top" android:text="@string/required_permissions_promptable_promo" style="@style/PromoTextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@color/promo_button_background" android:layout_width="fill_parent" android:layout_height="@dimen/promo_button_bar_height">
+        <TextView android:id="@id/exit" android:layout_width="wrap_content" android:text="@string/permission_promo_negative_button_text" android:layout_marginStart="@dimen/promo_landscape_button_margin_horizontal" style="@style/PromoNegativeButtonStyle" />
+        <View android:background="@android:color/transparent" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:importantForAccessibility="no" />
+        <TextView android:id="@id/next" android:layout_width="wrap_content" android:text="@string/permission_promo_positive_button_text" android:layout_marginEnd="@dimen/promo_landscape_button_margin_horizontal" style="@style/PromoPositiveButtonStyle" />
+        <TextView android:id="@id/settings" android:visibility="gone" android:layout_width="wrap_content" android:text="@string/permission_promo_alt_positive_button_text" android:layout_marginEnd="@dimen/promo_landscape_button_margin_horizontal" style="@style/PromoPositiveButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

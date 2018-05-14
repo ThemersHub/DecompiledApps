@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.messaging.ui.appsettings.MultiLineSwitchPreference android:title="@string/enable_rcs_title" android:key="@string/enable_rcs_pref_key" android:summary="@string/enable_rcs_summary_off" android:defaultValue="@bool/enable_rcs_pref_default" />
+    <com.google.android.apps.messaging.ui.appsettings.MultiLineSwitchPreference android:title="@string/send_seen_report_rcs_title" android:key="@string/send_seen_report_rcs_pref_key" android:summary="@string/send_seen_report_rcs_summary" android:dependency="@string/enable_rcs_pref_key" android:defaultValue="@bool/send_seen_report_rcs_pref_default" />
+    <com.google.android.apps.messaging.ui.appsettings.MultiLineSwitchPreference android:title="@string/share_typing_status_rcs_title" android:key="@string/share_typing_status_rcs_pref_key" android:summary="@string/share_typing_status_rcs_summary" android:dependency="@string/enable_rcs_pref_key" android:defaultValue="@bool/share_typing_status_rcs_pref_default" />
+    <com.google.android.apps.messaging.ui.appsettings.MultiLinePreference android:title="@string/enable_rcs_fallback_to_xms_title" android:key="@string/rcs_fallback_type_pref_key" android:dependency="@string/enable_rcs_pref_key" />
+    <com.google.android.apps.messaging.ui.appsettings.MultiLinePreference android:title="@string/rcs_default_sharing_method_title" android:key="@string/rcs_default_sharing_method_key" android:dependency="@string/enable_rcs_pref_key" />
+    <com.google.android.apps.messaging.ui.appsettings.MultiLineListPreference android:entries="@array/rcs_mobile_data_auto_download_limit_entries" android:title="@string/set_rcs_mobile_data_auto_download_limit_title" android:key="@string/rcs_mobile_data_auto_download_limit_pref_key" android:dependency="@string/enable_rcs_pref_key" android:defaultValue="@string/rcs_mobile_data_auto_download_limit_default_entry" android:entryValues="@array/rcs_mobile_data_auto_download_limit_entries" />
+    <com.google.android.apps.messaging.ui.appsettings.MultiLinePreference android:title="@string/rcs_learn_more_title" android:key="@string/rcs_learn_more_pref_key" />
+</PreferenceScreen>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@drawable/ic_new_message_shortcut" android:enabled="true" android:shortcutId="manifest-shortcut-new_message" android:shortcutShortLabel="@string/shortcut_new_message_text" android:shortcutLongLabel="@string/shortcut_new_message_text" android:shortcutDisabledMessage="@string/shortcut_disabled_text">
+        <intent android:targetPackage="com.google.android.apps.messaging" android:action="android.intent.action.VIEW" android:targetClass="com.google.android.apps.messaging.ui.conversationlist.ConversationListActivity">
+            <extra android:name="via_shortcut" android:value="true" />
+        </intent>
+        <intent android:targetPackage="com.google.android.apps.messaging" android:action="android.intent.action.VIEW" android:targetClass="com.google.android.apps.messaging.ui.conversation.ConversationActivity">
+            <extra android:name="via_shortcut" android:value="true" />
+        </intent>
+        <categories android:name="android.shortcut.conversation" />
+        <categories android:name="android.shortcut.media" />
+    </shortcut>
+</shortcuts>

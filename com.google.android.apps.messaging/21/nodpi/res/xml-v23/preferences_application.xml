@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:persistent="false" android:title="@string/sms_disabled_pref_title" android:key="@string/sms_disabled_pref_key">
+        <intent android:action="android.provider.Telephony.ACTION_CHANGE_DEFAULT">
+            <extra android:name="package" android:value="com.google.android.apps.messaging" />
+        </intent>
+    </PreferenceScreen>
+    <PreferenceScreen android:persistent="false" android:title="@string/sms_enabled_pref_title" android:key="@string/sms_enabled_pref_key">
+        <intent android:action="android.provider.Telephony.ACTION_CHANGE_DEFAULT" />
+    </PreferenceScreen>
+    <com.google.android.apps.messaging.ui.appsettings.MultiLineSwitchPreference android:persistent="true" android:title="@string/notifications_enabled_pref_title" android:key="@string/notifications_enabled_pref_key" android:defaultValue="@bool/notifications_enabled_pref_default" android:disableDependentsState="false" />
+    <com.google.android.apps.messaging.ui.appsettings.MultiLineRingtonePreference android:persistent="true" android:title="@string/notification_sound_pref_title" android:key="@string/notification_sound_pref_key" android:dependency="@string/notifications_enabled_pref_key" android:defaultValue="" android:ringtoneType="notification" android:showDefault="true" android:showSilent="true" />
+    <com.google.android.apps.messaging.ui.appsettings.MultiLineSwitchPreference android:persistent="true" android:title="@string/send_sound_pref_title" android:key="@string/send_sound_pref_key" android:dependency="@string/notifications_enabled_pref_key" android:defaultValue="@bool/send_sound_pref_default" />
+    <com.google.android.apps.messaging.ui.appsettings.MultiLineSwitchPreference android:persistent="true" android:title="@string/notification_vibrate_pref_title" android:key="@string/notification_vibration_pref_key" android:dependency="@string/notifications_enabled_pref_key" android:defaultValue="@bool/notification_vibration_pref_default" />
+    <com.google.android.apps.messaging.ui.appsettings.MultiLinePreference android:title="@string/current_country_pref_title" android:key="@string/current_country_pref_key" />
+    <PreferenceScreen android:title="@string/p2p_conversation_suggestions_preference_title" android:key="@string/p2p_conversation_suggestions_settings_screen_launcher_pref" android:summary="@string/p2p_conversation_suggestions_enabled_pref_summary" />
+    <PreferenceScreen android:title="@string/advanced_settings" android:key="@string/advanced_pref_key" />
+    <PreferenceCategory android:title="@string/debug_category_pref_title" android:key="@string/debug_pref_key">
+        <com.google.android.apps.messaging.ui.appsettings.MultiLineSwitchPreference android:title="@string/dump_sms_pref_title" android:key="@string/dump_sms_pref_key" android:summary="@string/dump_sms_pref_summary" android:defaultValue="@bool/dump_sms_pref_default" />
+        <com.google.android.apps.messaging.ui.appsettings.MultiLineSwitchPreference android:title="@string/dump_mms_pref_title" android:key="@string/dump_mms_pref_key" android:summary="@string/dump_mms_pref_summary" android:defaultValue="@bool/dump_mms_pref_default" />
+    </PreferenceCategory>
+</PreferenceScreen>

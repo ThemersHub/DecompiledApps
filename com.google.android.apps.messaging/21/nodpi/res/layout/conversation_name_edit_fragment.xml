@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/contact_picker_background" android:paddingTop="@dimen/tombstone_icon_size" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/action_bar_height" android:paddingStart="8.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/conversation_name_avatars" android:padding="@dimen/tombstone_icon_size" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/tombstone_text_size" android:textColor="@color/conversation_tombstone_text_color" android:id="@id/conversation_name_additional_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/tombstone_additional_count_padding" />
+    </LinearLayout>
+    <TextView android:textColor="@color/conversation_name_edit_label" android:id="@id/conversation_name_instructions" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/conversation_name_edit_label" />
+    <EditText android:layout_gravity="center_vertical" android:id="@id/conversation_name_edit" android:background="@drawable/ic_textedit_underline" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_target_size" android:hint="@string/conversation_name_edit_hint" style="@style/ContactPickerRecipientEditTextView" colorAccent="@color/primary_color">
+        <requestFocus />
+    </EditText>
+</LinearLayout>

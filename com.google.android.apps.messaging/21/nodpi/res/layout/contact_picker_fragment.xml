@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/contact_picker_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/action_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="top" android:id="@id/recipient_container" android:background="@color/contact_picker_search_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/picker_recipients_elevation">
+        <TextView android:layout_width="wrap_content" android:layout_height="48.0dip" android:minWidth="72.0dip" android:text="@string/recipient_label" android:textAlignment="viewStart" android:paddingEnd="8.0dip" style="@style/ContactPickerRecipientToLabelTextView" />
+        <com.google.android.apps.messaging.ui.MaxHeightScrollView android:layout_gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxHeight="@dimen/compose_message_chips_view_max_height" android:layout_weight="1.0">
+            <com.google.android.apps.messaging.ui.contact.ContactRecipientAutoCompleteView android:id="@id/recipient_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/compose_message_contacts_height" android:hint="@string/recipient_hint" android:popupBackground="@color/contact_picker_background" android:dropDownWidth="fill_parent" app:avatarPosition="start" app:chipHeight="@dimen/compose_message_chip_height" app:chipPadding="@dimen/compose_message_chip_padding" app:imageSpanAlignment="baseline" app:unselectedChipBackgroundColor="@color/chips_background_color" app:unselectedChipTextColor="@color/chips_text_color" style="@style/ContactPickerRecipientEditTextView">
+                <requestFocus />
+            </com.google.android.apps.messaging.ui.contact.ContactRecipientAutoCompleteView>
+        </com.google.android.apps.messaging.ui.MaxHeightScrollView>
+        <ImageView android:id="@id/action_ime_dialpad_toggle" android:src="@drawable/ic_numeric_dialpad" android:contentDescription="@string/numeric_text_keyboard_toggle_button_content_description" style="@style/ContactPickerButton" />
+        <ImageView android:id="@id/action_add_more_people" android:visibility="gone" android:src="@drawable/ic_people_add_light" android:contentDescription="@string/add_more_participants_button_content_description" style="@style/ContactPickerButton" />
+    </LinearLayout>
+    <View android:id="@id/top_margin" android:background="@drawable/compose_chips_divider_gradient" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/picker_recipients_elevation" />
+    <FrameLayout android:id="@id/contact_list_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:id="@id/contact_list_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/contact_separator_color" android:dividerHeight="@dimen/const_list_separator_height" android:fastScrollEnabled="true" />
+        <View android:layout_gravity="top" android:id="@id/compose_contact_divider" android:background="@drawable/compose_chips_divider_gradient" android:layout_width="fill_parent" android:layout_height="4.0dip" />
+        <include android:id="@id/empty_view" android:visibility="gone" layout="@layout/list_empty_view" />
+    </FrameLayout>
+</LinearLayout>

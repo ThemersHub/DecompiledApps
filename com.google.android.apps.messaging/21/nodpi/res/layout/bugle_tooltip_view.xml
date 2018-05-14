@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.messaging.ui.BugleTooltipView android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/BugleTooltipStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="start" android:id="@id/tooltip_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bugle_tooltip_margin" android:layout_marginBottom="@dimen/bugle_tooltip_title_bottom_margin" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/bugle_tooltip_margin" android:layout_alignParentStart="true" style="@style/BugleTooltipTitleStyle" />
+    <FrameLayout android:id="@id/tooltip_dismiss_button" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:layout_alignParentTop="true" android:contentDescription="@string/dismiss_button" android:layout_alignParentEnd="true">
+        <ImageView android:layout_gravity="end|center|top" android:background="@drawable/ic_tooltip_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/bugle_tooltip_dismiss_margin" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <TextView android:id="@id/tooltip_content" android:paddingBottom="@dimen/bugle_tooltip_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="0.0dip" android:layout_below="@id/tooltip_title" android:lineSpacingExtra="@dimen/bugle_tooltip_line_spacing" android:layout_marginStart="@dimen/bugle_tooltip_margin" android:layout_marginEnd="@dimen/bugle_tooltip_margin" style="@style/BugleTooltipContentStyle" />
+</com.google.android.apps.messaging.ui.BugleTooltipView>

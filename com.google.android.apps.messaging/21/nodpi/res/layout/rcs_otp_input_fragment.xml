@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/primary_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/rcs_setup_weight_huge" />
+    <TextView android:id="@id/rcs_otp_input_heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/rcs_setup_margin_horizontal" android:layout_marginRight="@dimen/rcs_setup_margin_horizontal" android:text="@string/rcs_setup_otp_title" style="@style/RcsSetupTextStyle.Heading1" />
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/rcs_setup_weight_small" />
+    <TextView android:id="@id/rcs_otp_input_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/rcs_setup_margin_horizontal" android:layout_marginRight="@dimen/rcs_setup_margin_horizontal" style="@style/RcsSetupTextStyle.Heading2" />
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/rcs_setup_weight_medium" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layoutDirection="ltr">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/otp_prefix" style="@style/RcsSetupOtpDigit" />
+        <com.google.android.apps.messaging.ui.rcs.setup.manual.RcsOtpGridView android:id="@id/rcs_otp_input_otp_grid" android:layout_width="wrap_content" android:layout_height="@dimen/otp_grid_item_size" android:horizontalSpacing="@dimen/otp_grid_horizontal_spacing" android:stretchMode="none" android:columnWidth="@dimen/otp_grid_item_size" />
+    </LinearLayout>
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/rcs_setup_weight_small" />
+    <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/rcs_otp_input_error" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/RcsSetupTextStyle.Error" />
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/rcs_setup_weight_small" />
+    <TextView android:id="@id/rcs_otp_verification_trouble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/rcs_setup_margin_horizontal" android:layout_marginRight="@dimen/rcs_setup_margin_horizontal" android:text="@string/rcs_setup_otp_trouble" style="@style/RcsSetupTextStyle" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/rcs_setup_button_margin_horizontal">
+        <Button android:textColor="@color/rcs_setup_resend_text" android:id="@id/rcs_otp_input_resend_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="@string/rcs_setup_resend_otp" style="@style/RcsSetupBordlessButtonStyle" />
+        <Button android:textColor="@color/rcs_setup_cancel_text" android:id="@id/rcs_otp_input_cancel_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/cancel" style="@style/RcsSetupBordlessButtonStyle" />
+    </LinearLayout>
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/rcs_setup_weight_medium" />
+    <include android:id="@id/rcs_otp_input_keypad" style="@style/SoftNumKeyPad" layout="@layout/soft_num_key_pad" />
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/rcs_setup_weight_large" />
+</LinearLayout>

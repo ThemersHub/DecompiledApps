@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher android:id="@id/sticker_grid_view_switcher" android:layout_width="fill_parent" android:layout_height="fill_parent" android:inAnimation="@android:anim/fade_in" android:outAnimation="@android:anim/fade_out"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:enabled="false" android:gravity="center_vertical" android:orientation="vertical" android:id="@id/stickers_downloading_progress_view" android:background="@color/google_gray" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:indeterminate="true">
+        <ProgressBar android:enabled="false" android:layout_gravity="center" android:id="@id/stickers_downloading_progress_view_spinner" android:layout_width="fill_parent" android:layout_height="40.0dip" android:indeterminate="true" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/stickers_downloaded_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <include android:id="@id/gridView" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/sticker_grid_view" />
+            <ProgressBar android:enabled="false" android:layout_gravity="center" android:id="@id/localDownloadingSpinner" android:layout_width="fill_parent" android:layout_height="40.0dip" android:indeterminate="true" />
+            <View android:layout_gravity="bottom" android:background="@drawable/sticker_grid_view_bottom_bar_shadow" android:layout_width="fill_parent" android:layout_height="3.0dip" android:alpha="0.7" android:importantForAccessibility="no" />
+        </FrameLayout>
+        <ViewSwitcher android:layout_gravity="bottom" android:id="@id/promo_and_credit_artist_view_switcher" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inAnimation="@android:anim/fade_in" android:outAnimation="@android:anim/fade_out">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="#deffffff" android:ellipsize="end" android:gravity="center" android:id="@id/downloadTip" android:background="#ff333333" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="42.0dip" android:text="@string/sticker_grid_view_holder_promo_more_tooltip" android:maxLines="1" android:singleLine="true" android:importantForAccessibility="yes" />
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/downloadTipPointer" android:background="@drawable/ic_tooltip_arrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/defaultSetDownloadPromo" android:background="@color/sticker_grid_view_holder_credit_artist_view_background_color" android:layout_width="fill_parent" android:layout_height="@dimen/sticker_grid_view_holder_default_set_promo_height">
+                    <com.google.android.apps.messaging.shared.ui.AsyncImageView android:layout_gravity="top" android:id="@id/defaultSetImage" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_marginTop="@dimen/sticker_set_overview_icon_margin_top" style="@style/StickerGridViewHolderDefaultSetImageStyle" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:ellipsize="end" android:id="@id/moreTaglineTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sticker_set_overview_sticker_name_margin_top" android:text="@string/sticker_grid_view_holder_promo_more_tagline" android:maxLines="1" android:singleLine="true" style="@style/StickerSetListItemViewStickerNameTextStyle" />
+                        <TextView android:ellipsize="end" android:id="@id/downloadTaglineTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sticker_set_overview_text_view_margin" android:text="@string/sticker_set_overview_download_tagline" android:maxLines="3" style="@style/StickerSetListItemViewStickerCreatorTextStyle" />
+                        <TextView android:id="@id/download" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/sticker_set_grid_view_download_button_margin_bottom" android:text="@string/sticker_set_download" android:layout_weight="1.0" style="@style/StickerSetOverviewDownloadButtonStyle" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/creditArtistView" android:background="@color/sticker_grid_view_holder_credit_artist_view_background_color" android:layout_width="fill_parent" android:layout_height="@dimen/sticker_set_list_item_view_height">
+                <com.google.android.apps.messaging.shared.ui.AsyncImageView android:id="@id/setImage" android:layout_width="@dimen/sticker_set_list_item_icon_width" android:layout_height="wrap_content" android:layout_margin="@dimen/sticker_set_list_item_view_padding" android:scaleType="centerInside" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:ellipsize="end" android:id="@id/stickerNameTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sticker_set_list_item_view_padding" android:maxLines="1" android:singleLine="true" style="@style/StickerSetListItemViewStickerNameTextStyle" />
+                    <TextView android:ellipsize="end" android:id="@id/authorTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/StickerSetListItemViewStickerCreatorTextStyle" />
+                </LinearLayout>
+            </LinearLayout>
+        </ViewSwitcher>
+    </LinearLayout>
+</ViewSwitcher>

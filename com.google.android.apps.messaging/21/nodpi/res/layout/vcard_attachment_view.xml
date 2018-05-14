@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.messaging.shared.ui.ContactIconView android:layout_gravity="center_vertical" android:id="@id/contact_icon" android:layout_width="@dimen/contact_list_row_icon_size" android:layout_height="@dimen/contact_list_row_icon_size" android:importantForAccessibility="no" app:iconSize="normal" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/details_container" android:background="@android:color/transparent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/ContactCardLinearLayoutStyle">
+        <TextView android:ellipsize="end" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/ParticipantListItem" />
+        <TextView android:ellipsize="end" android:id="@id/details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/ContactListItemDetail" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/drawable_indicator" android:background="?android:selectableItemBackground" android:padding="@dimen/contact_list_indicator_min_padding" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:contentDescription="@string/edit_contact_color" />
+</merge>

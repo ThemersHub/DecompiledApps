@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/rcs_overrides_category_pref_title">
+        <Preference android:persistent="false" android:enabled="true" android:title="@string/rcs_availability" android:selectable="false" android:key="@string/rcs_availability_key" />
+        <com.google.android.apps.messaging.ui.appsettings.MultiLineListPreference android:entries="@array/rcs_provisioning_flow_list_entries" android:title="@string/rcs_provisioning_flow_title" android:key="@string/rcs_provisioning_flow_key" android:summary="@string/rcs_provisioning_flow_summary_format" android:defaultValue="@string/rcs_provisioning_flow_default_value" android:entryValues="@array/rcs_provisioning_flow_list_values" />
+        <com.google.android.apps.messaging.ui.appsettings.MultiLineEditTextPreference android:title="@string/rcs_acs_url_override_title" android:key="@string/rcs_acs_url_override_key" android:summary="@string/rcs_acs_url_override_summary" android:dependency="@string/enable_rcs_pref_key" />
+        <com.google.android.apps.messaging.ui.appsettings.MultiLineEditTextPreference android:maxLength="5" android:numeric="integer" android:title="@string/rcs_provisioning_sms_port_title" android:key="@string/rcs_provisioning_sms_port_key" />
+    </PreferenceCategory>
+</PreferenceScreen>

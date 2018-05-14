@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.messaging.ui.ImeDetectFrameLayout android:id="@id/reply_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:background="#d9000000" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/message_compose_view_container" android:paddingTop="@dimen/widget_compose_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/reply_to" layout="@layout/compose_message_view_with_c2o" style="@style/QuickReplyGoToStyle" />
+        <Button android:textColor="@color/widget_reply_to_color" android:id="@id/goto_messenger" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/widget_reply_open" android:layout_below="@id/message_compose_view_container" android:alpha="0.56" style="@style/QuickReplyGoToStyle" />
+        <ImageButton android:id="@id/exit" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/ic_arrow_back_light" android:layout_alignParentTop="true" android:contentDescription="@string/widget_reply_exit_content_description" style="@style/QuickReplyExitButtonStyle" />
+        <com.google.android.apps.messaging.ui.conversation.SimSelectorView android:id="@id/sim_selector" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/message_compose_view_container" android:importantForAccessibility="no" style="@style/QuickReplySimSelectorStyle">
+            <ListView android:layout_gravity="bottom" android:id="@id/sim_list" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="0.0px" />
+        </com.google.android.apps.messaging.ui.conversation.SimSelectorView>
+        <TextView android:textSize="16.0sp" android:textColor="@color/widget_reply_title_color" android:id="@id/reply_to" android:background="@null" android:paddingTop="@dimen/widget_reply_text_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/QuickReplyReplyToStyle" />
+    </RelativeLayout>
+</com.google.android.apps.messaging.ui.ImeDetectFrameLayout>

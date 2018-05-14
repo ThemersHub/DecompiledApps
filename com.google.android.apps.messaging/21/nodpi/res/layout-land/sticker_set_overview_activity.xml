@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.messaging.shared.ui.AsyncImageView android:layout_gravity="center" android:id="@id/preview" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/sticker_set_overview_hero_pic_margin" android:scaleType="centerInside" android:layout_weight="1.0" />
+    <View android:id="@id/divider" android:background="@color/sticker_set_overview_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/detail" android:background="@color/sticker_set_overview_detail_background_color" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/StickerSetOverviewDetailStyle">
+        <com.google.android.apps.messaging.shared.ui.AsyncImageView android:id="@id/setImage" android:visibility="gone" android:layout_width="70.0dip" android:layout_height="70.0dip" />
+        <TextView android:ellipsize="end" android:id="@id/stickerNameTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sticker_set_overview_detail_element_margin_top" android:maxLines="1" android:singleLine="true" style="@style/StickerSetListItemViewStickerNameTextStyle" />
+        <TextView android:ellipsize="end" android:id="@id/authorTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/StickerSetListItemViewStickerCreatorTextStyle" />
+        <TextView android:ellipsize="end" android:id="@id/downloadTaglineTextView" android:layout_width="@dimen/sticker_set_overview_download_tagline_textview_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sticker_set_overview_detail_element_margin_top" android:text="@string/sticker_set_overview_download_tagline" android:maxLines="3" style="@style/StickerSetListItemViewStickerCreatorTextStyle" />
+        <TextView android:id="@id/status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sticker_set_overview_detail_element_margin_top" style="@style/StickerSetOverviewDownloadStatusStyle" />
+        <TextView android:id="@id/download" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/sticker_download_textview_height" android:layout_marginTop="@dimen/sticker_set_overview_detail_element_margin_top" android:text="@string/sticker_set_download" style="@style/StickerSetOverviewDownloadButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

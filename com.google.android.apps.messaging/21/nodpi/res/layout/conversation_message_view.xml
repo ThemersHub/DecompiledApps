@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.messaging.ui.conversation.ConversationMessageView android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ConversationMessageViewStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_gravity="center|top" android:id="@id/message_separator" android:paddingBottom="@dimen/message_padding_default" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" style="@style/ConversationMessageStatus" />
+    <com.google.android.apps.messaging.shared.ui.ContactIconView android:id="@id/contact_icon" android:clickable="true" android:layout_width="@dimen/conversation_message_contact_icon_size" android:layout_height="@dimen/conversation_message_contact_icon_size" android:importantForAccessibility="no" app:iconSize="large" />
+    <com.google.android.apps.messaging.ui.conversation.ConversationMessageBubbleView android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/message_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/message_margin_default" android:layout_marginEnd="@dimen/message_margin_default">
+        <FrameLayout android:id="@id/message_attachments" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.android.apps.messaging.shared.ui.attachment.MessageAttachmentContainer android:orientation="vertical" android:id="@id/message_attachments_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.google.android.apps.messaging.ui.conversation.ConversationMessageTransferView android:id="@id/transfer_state" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/message_text_and_info" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@id/urgent_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/urgent_indicator" style="@style/UrgentIndicator" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/subject_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="noHideDescendants">
+                <android.support.text.emoji.widget.EmojiTextView android:textStyle="bold" android:id="@id/subject_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/conversation_message_view_subject_text" style="@style/ConversationMessage" />
+                <android.support.text.emoji.widget.EmojiTextView android:textStyle="bold" android:id="@id/subject_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ConversationMessage" />
+            </LinearLayout>
+            <android.support.text.emoji.widget.EmojiTextView android:id="@id/message_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" style="@style/ConversationMessage" />
+        </LinearLayout>
+        <com.google.android.apps.messaging.ui.conversation.ConversationMessageMetadataView android:gravity="top" android:orientation="horizontal" android:id="@id/message_metadata" android:layout_width="wrap_content" android:layout_height="0.0dip" android:importantForAccessibility="noHideDescendants" />
+    </com.google.android.apps.messaging.ui.conversation.ConversationMessageBubbleView>
+</com.google.android.apps.messaging.ui.conversation.ConversationMessageView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:gravity="center_horizontal" android:orientation="vertical" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" class="com.google.android.apps.messaging.ui.contact.ContactListItemView$ContactItemViewTop"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:gravity="center_horizontal" android:paddingTop="@dimen/contact_list_favorite_item_paddingTop" android:layout_width="@dimen/contact_list_favorite_item_width" android:layout_height="@dimen/contact_list_favorite_item_height">
+        <com.google.android.apps.messaging.shared.ui.ContactIconView android:id="@id/contact_icon" android:clickable="true" android:layout_width="@dimen/contact_list_favorite_icon_size" android:layout_height="@dimen/contact_list_favorite_icon_size" android:importantForAccessibility="no" app:reveal="true" app:iconSize="normal" />
+        <ImageView android:id="@id/contact_checkmark" android:visibility="gone" android:layout_width="@dimen/contact_list_favorite_icon_size" android:layout_height="@dimen/contact_list_favorite_icon_size" android:src="@drawable/ic_checkmark_circle_blue" android:contentDescription="@null" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@id/contact_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:height="32.0dip" android:singleLine="true" android:layout_weight="1.0" style="@style/TopContactsListItem" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/work_profile_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" app:srcCompat="@drawable/ic_work_profile" />
+    </LinearLayout>
+    <TextView android:id="@id/contact_details" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <TextView android:id="@id/contact_detail_type" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+</view>
