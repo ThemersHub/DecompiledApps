@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <include href="@xml/keymapping_fragment_punctuation_bottom_popup_without_settings" />
+    <if device="phone">
+        <include href="@xml/keymapping_bottom_symbol_1_popup_switch_to_emoji" />
+        <include href="@xml/keymapping_bottom_symbol_1_popup_settings" />
+        <include href="@xml/keymapping_bottom_symbol_1_popup_left_handed_mode" />
+    </if>
+    <else>
+        <if language="ar|az-IR|bal|dcc|doi-Arab|dv|fa|glk|khw|ks-Arab|ms|mzn|pa-PK|sd-Arab|trw|ug|ur-IN|ur-PK">
+            <include href="@xml/keymapping_fragment_bottom_symbol_1_popup_settings_with_symbols" />
+        </if>
+        <else>
+            <include href="@xml/keymapping_bottom_symbol_1_popup_settings" />
+        </else>
+    </else>
+</framework>
