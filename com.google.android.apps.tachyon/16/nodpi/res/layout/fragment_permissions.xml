@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/common_light_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/permission_text_content" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/permission_activity_title" style="@style/TachyonFontSignUp01a" />
+        <TextView android:id="@id/permission_activity_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/permission_activity_intro" style="@style/TachyonFontSignUp02" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/permission_button" android:layout_below="@id/permission_text_content">
+        <com.google.android.apps.tachyon.SquareImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/illu_permissions_overview" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <Button android:textColor="@color/common_light_background" android:gravity="center" android:id="@id/permission_button" android:background="@color/google_blue_500" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="25.0dip" android:text="@string/permission_activity_give_access" android:layout_alignParentBottom="true" android:hapticFeedbackEnabled="true" android:fontFamily="@string/font_fontFamily_roboto_medium" />
+</RelativeLayout>

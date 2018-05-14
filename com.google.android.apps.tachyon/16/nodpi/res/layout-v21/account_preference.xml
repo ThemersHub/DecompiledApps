@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:paddingRight="?android:scrollbarSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight" android:paddingEnd="?android:scrollbarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@android:id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <RelativeLayout android:paddingLeft="15.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="15.0dip" android:paddingEnd="6.0dip">
+        <TextView android:ellipsize="marquee" android:id="@android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TachyonFontPreferenceTitle" />
+        <FrameLayout android:id="@id/summary_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@android:id/title" android:layout_alignLeft="@android:id/title" android:layout_alignStart="@android:id/title">
+            <TextView android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="4" style="@style/TachyonFontPreferenceSummary" />
+        </FrameLayout>
+        <Button android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/sign_in_button" android:background="@drawable/round_blue_rect" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginTop="8.0dip" android:text="@string/sign_in_with_goog" android:layout_below="@android:id/title" android:layout_alignLeft="@android:id/title" android:fontFamily="@string/font_fontFamily_roboto_medium" android:layout_alignStart="@android:id/title" android:elevation="2.0dip" />
+        <Button android:textSize="14.0sp" android:textColor="@color/google_blue_500" android:id="@id/remove_account_button" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginTop="8.0dip" android:text="@string/link_gaia_remove_account" android:layout_below="@id/summary_wrapper" android:layout_alignLeft="@android:id/title" android:fontFamily="@string/font_fontFamily_roboto_medium" android:layout_alignStart="@android:id/title" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@android:id/widget_frame" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

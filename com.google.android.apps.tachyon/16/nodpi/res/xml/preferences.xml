@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/settings_name" android:fragment="com.google.android.apps.tachyon.SettingsFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference android:layout="@layout/settings_preference" android:title="@string/pref_vibrate_title" android:key="@string/pref_vibrate_key" android:defaultValue="@string/pref_vibrate_default" />
+    <Preference android:layout="@layout/settings_preference" android:title="@string/pref_live_ring_title" android:key="@string/pref_live_ring_parent_key" />
+    <SwitchPreference android:layout="@layout/settings_preference" android:title="@string/pref_limit_mobile_data_title" android:key="@string/pref_limit_mobile_data_key" android:defaultValue="@string/pref_limit_mobile_data_default" />
+    <SwitchPreference android:layout="@layout/settings_preference" android:title="@string/pref_contacts_notifications_enabled_title" android:key="@string/pref_contacts_notifications_enabled_key" android:summary="@string/pref_contacts_notifications_enabled_summary" android:defaultValue="true" />
+    <SwitchPreference android:layout="@layout/settings_preference" android:title="@string/pref_new_features_notifications_enabled_title" android:key="@string/pref_new_features_notifications_enabled_key" android:summary="@string/pref_new_features_notifications_enabled_summary" android:defaultValue="true" />
+    <SwitchPreference android:layout="@layout/settings_preference" android:title="@string/pref_special_event_notifications_enabled_title" android:key="@string/pref_special_event_notifications_enabled_key" android:summary="@string/pref_special_event_notifications_enabled_summary" android:defaultValue="true" />
+    <Preference android:layout="@layout/settings_preference" android:title="@string/pref_notifications_title" android:key="@string/pref_notifications_key" />
+    <Preference android:layout="@layout/settings_preference" android:title="@string/pref_blocked_numbers_title" android:key="@string/pref_blocked_numbers_key" />
+    <Preference android:layout="@layout/settings_preference" android:title="@string/pref_registered_number_title" android:selectable="false" android:key="@string/pref_registered_number_key" />
+    <com.google.android.apps.tachyon.settings.AccountPreference android:layout="@layout/account_preference" android:title="@string/pref_linked_gaia_account_title" android:key="@string/pref_linked_gaia_account_key" android:defaultValue="@string/pref_linked_gaia_account_none" />
+    <com.google.android.apps.tachyon.UnregisterDialogPreference android:enabled="false" android:layout="@layout/settings_preference" android:title="@string/pref_unregister_header" android:key="@string/pref_unregister_key" android:dialogLayout="@layout/dialog_unregister" />
+    <com.google.android.apps.tachyon.UnregisterDialogPreference android:layout="@layout/settings_preference" android:title="@string/pref_delete_account_header" android:key="@string/pref_delete_account_key" android:dialogLayout="@layout/dialog_unregister" />
+    <PreferenceScreen android:persistent="false" android:layout="@layout/settings_preference" android:title="@string/pref_debug_settings" android:key="@string/pref_debug_settings_key" android:fragment="com.google.android.apps.tachyon.SettingsFragment" />
+    <PreferenceScreen android:persistent="false" android:layout="@layout/settings_preference" android:title="@string/pref_voicecalltest_settings_title" android:key="@string/pref_voicecalltest_settings_key" android:fragment="com.google.android.apps.tachyon.SettingsFragment">
+        <EditTextPreference android:layout="@layout/settings_preference" android:title="@string/pref_startaudiobitratevalue_title" android:key="@string/pref_startaudiobitratevalue_key" android:defaultValue="@string/pref_startaudiobitratevalue_default" android:dialogTitle="@string/pref_startaudiobitratevalue_dlg" android:inputType="number" />
+    </PreferenceScreen>
+</PreferenceScreen>

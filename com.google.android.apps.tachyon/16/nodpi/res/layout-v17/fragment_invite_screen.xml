@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/invite_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/contacts_card_status_bar_filler" android:background="@color/card_background_v2" android:layout_width="fill_parent" android:layout_height="0.0dip">
+        <View android:id="@id/contacts_card_blue_status_bar_filler" android:background="@color/google_blue_500" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/contacts_card" android:background="@color/card_background_v2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginBottom="0.0dip" android:layout_alignParentTop="true" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@id/blue_bar" android:background="@color/google_blue_500" android:layout_width="fill_parent" android:layout_height="@dimen/av_toggle_2_height">
+            <ImageButton android:id="@id/invite_screen_back_button" android:background="?selectableItemBackground" android:layout_width="@dimen/av_toggle_2_icon_width" android:layout_height="@dimen/av_toggle_2_icon_height" android:src="@drawable/quantum_ic_arrow_back_white_24" android:scaleType="center" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:contentDescription="@string/contacts_list_back" android:layout_alignParentStart="true" />
+            <TextView android:gravity="center" android:paddingRight="@dimen/av_toggle_2_icon_width" android:layout_width="wrap_content" android:layout_height="@dimen/av_toggle_2_height" android:text="@string/contacts_invite_action" android:layout_toRightOf="@id/invite_screen_back_button" android:layout_alignParentRight="true" android:paddingEnd="@dimen/av_toggle_2_icon_width" android:layout_toEndOf="@id/invite_screen_back_button" android:layout_alignParentEnd="true" style="@style/TachyonFontInviteScreenHeader" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/contacts_card_search_header" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_alignParentTop="true">
+                <View android:id="@id/contacts_card_search_header_inner_view" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/round_search_bar_height" />
+                <View android:id="@id/contacts_card_search_header_shadow" android:background="@drawable/contacts_card_header_dropshadow" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/contacts_card_search_header_v2_shadow_height" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <include android:layout_width="fill_parent" android:layout_height="@dimen/round_search_bar_height" android:layout_marginTop="0.0dip" layout="@layout/round_search_bar" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/contacts_card_scroll_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.apps.tachyon.ui.contactscardlist.ContactsCardListView android:id="@id/contacts_card_scroll" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="#00000000" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:overScrollMode="never" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_alignParentTop="true" android:layout_alignParentBottom="true">
+                <include layout="@layout/list_item_permission_prompt" />
+            </FrameLayout>
+            <ScrollView android:id="@id/no_invitable_contacts_placeholder" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/common_light_background" android:paddingLeft="@dimen/large_margin" android:paddingRight="@dimen/large_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center" android:layout_width="@dimen/perm_icon_size" android:layout_height="@dimen/perm_icon_size" android:src="@drawable/illu_permissions_contacts" android:importantForAccessibility="no" />
+                    <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/invite_screen_no_contacts_placeholder_title" style="@style/Tachyon_Permission_Camera_Font_01" />
+                    <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:text="@string/invite_screen_no_contacts_placeholder_subtitle" style="@style/Tachyon_Permission_Camera_Font_02" />
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

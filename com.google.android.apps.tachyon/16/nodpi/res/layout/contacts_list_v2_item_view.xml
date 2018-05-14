@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fav_grid_wrapper" android:paddingBottom="4.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/round_search_bar_placeholder" android:paddingBottom="@dimen/round_search_bar_margin" android:layout_width="fill_parent" android:layout_height="@dimen/round_search_bar_outer_height" android:contentDescription="@string/contacts_search_hint" />
+    <include layout="@layout/invite_action_list_item" />
+    <include layout="@layout/list_item_contact" />
+    <com.google.android.apps.tachyon.ui.contactscardlist.ContactsCardListPaddingView android:id="@id/padding_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.google.android.apps.tachyon.ui.contactscardlist.ContactsRowView android:id="@id/contacts_row_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

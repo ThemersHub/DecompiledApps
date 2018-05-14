@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.tachyon.ui.MainView android:id="@id/main_view" android:background="@color/google_blue_500" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:id="@id/knock_knock_layout_wrapper" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.ActionBar" android:id="@id/settings_toolbar" android:background="@color/google_blue_500" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationIcon="?homeAsUpIndicator" app:titleTextColor="@android:color/white" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_above="@id/divider" android:layout_below="@id/settings_toolbar">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="215.0dip" android:layout_height="215.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/illu_edu_knock_knock" />
+                <TextView android:layout_gravity="center_horizontal" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pref_live_ring_summary" style="@style/TachyonFontSettings04" />
+                <TextView android:layout_gravity="center_horizontal" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="24.0dip" android:text="@string/pref_live_ring_detail" style="@style/TachyonFontSettings05" />
+            </LinearLayout>
+        </ScrollView>
+        <View android:id="@id/divider" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/bottom_section" android:alpha="0.12" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/bottom_section" android:paddingLeft="16.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="72.0dip" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pref_live_ring_title" style="@style/TachyonFontSettings02" />
+                <TextView android:id="@id/knock_knock_setting_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pref_value_enabled" style="@style/TachyonFontSettings03" />
+            </LinearLayout>
+            <Switch android:id="@id/knock_knock_setting_switch" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.google.android.apps.tachyon.ui.MainView>

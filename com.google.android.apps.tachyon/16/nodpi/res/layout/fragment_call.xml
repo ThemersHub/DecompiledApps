@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/call_fragment_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/audio_call_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <RelativeLayout android:id="@id/in_call_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/in_call_audio_mode_header" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="76.0dip" android:layout_marginBottom="6.0dip" android:text="@string/in_call_audio_calling" style="@style/TachyonInCallCallingMode" />
+            <TextView android:gravity="center" android:id="@id/contact_name_call" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TachyonInCallContactName" />
+            <TextView android:layout_gravity="center" android:id="@id/in_call_timer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/in_call_timer_desc" style="@style/TachyonInCallTimerText" />
+        </LinearLayout>
+        <com.google.android.apps.tachyon.ui.views.MoveableLayout android:id="@id/watermark_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/watermark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/duo_watermark" android:alpha="0.54" />
+        </com.google.android.apps.tachyon.ui.views.MoveableLayout>
+        <include android:id="@id/in_call_avatar_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/avatar_in_call" />
+        <RelativeLayout android:id="@id/call_indicator_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/call_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" layout="@layout/call_indicator" />
+        </RelativeLayout>
+        <ProgressBar android:id="@id/remote_video_waiting_progress" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="80.0dip" android:progressDrawable="@drawable/circular_progress_bar" android:layout_centerInParent="true" />
+        <FrameLayout android:id="@id/call_controls_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <RelativeLayout android:id="@id/circle_call_disconnect" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="88.0dip" android:layout_marginBottom="24.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/button_call_disconnect_shadow" android:visibility="gone" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginTop="2.0dip" android:src="@drawable/circular_background_shadow" android:scaleType="centerInside" android:layout_centerInParent="true" />
+            <ImageButton android:id="@id/button_call_disconnect" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/quantum_ic_call_end_white_24" android:layout_centerInParent="true" android:contentDescription="@string/button_disconnect_call" style="@style/TachyonHangupButton" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/power_save_prompt_layout" android:background="@color/blue_grey_900" android:paddingLeft="24.0dip" android:paddingTop="20.0dip" android:paddingRight="24.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/power_save_prompt_image" android:background="@drawable/circular_background_alert" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginRight="16.0dip" />
+                <TextView android:layout_gravity="center_vertical" android:id="@id/power_save_prompt_description" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TachyonErrNotify02" />
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip">
+                <TextView android:id="@id/power_save_prompt_ignore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="32.0dip" android:text="@string/power_save_prompt_ignore" style="@style/TachyonErrNotify01" />
+                <TextView android:id="@id/power_save_prompt_toggle_camera" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TachyonErrNotify01" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@id/switch_call_prompt" android:background="@drawable/dialog_background" android:paddingLeft="24.0dip" android:paddingTop="24.0dip" android:paddingRight="24.0dip" android:visibility="gone" android:layout_width="280.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:id="@id/switch_call_title" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Tachyon_Feedback_Font_02_Title" />
+            <TextView android:id="@id/switch_call_description" android:paddingTop="0.0dip" android:paddingBottom="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/switch_call_title" style="@style/Tachyon_Feedback_Font_03_Callee" />
+            <RelativeLayout android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/switch_call_description">
+                <Button android:id="@id/switch_call_cancel" android:text="@string/switch_call_no" android:layout_toLeftOf="@id/switch_call_continue" android:layout_alignParentTop="true" style="@style/TachyonStyleDialogOptionButtonHorizontal" />
+                <Button android:id="@id/switch_call_continue" android:text="@string/switch_call_yes" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/TachyonStyleDialogOptionButtonHorizontalEnd" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <View android:id="@id/textureview_blink_workaround_view" android:background="@color/registration_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:alpha="0.001" />
+        <View android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</FrameLayout>

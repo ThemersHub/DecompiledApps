@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/call_rating_activity_primary" android:paddingLeft="24.0dip" android:paddingTop="18.0dip" android:paddingRight="24.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <RelativeLayout android:id="@id/top_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <TextView android:id="@id/title" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/call_rating_feedback_option_list_header" android:layout_alignParentTop="true" style="@style/Tachyon_Feedback_Font_02_Title" />
+            <android.support.v7.widget.AppCompatCheckBox android:id="@id/checkbox_feedback_bad_audio" android:text="@string/call_rating_feedback_option_bad_audio" android:layout_below="@id/title" style="@style/Tachyon_Feedback_Font_04_Checkbox" />
+            <android.support.v7.widget.AppCompatCheckBox android:id="@id/checkbox_feedback_echo" android:text="@string/call_rating_feedback_option_echo" android:layout_below="@id/checkbox_feedback_bad_audio" style="@style/Tachyon_Feedback_Font_04_Checkbox" />
+            <android.support.v7.widget.AppCompatCheckBox android:id="@id/checkbox_feedback_bad_video" android:text="@string/call_rating_feedback_option_bad_video" android:layout_below="@id/checkbox_feedback_echo" style="@style/Tachyon_Feedback_Font_04_Checkbox" />
+            <android.support.v7.widget.AppCompatCheckBox android:id="@id/checkbox_feedback_disconnect" android:text="@string/call_rating_feedback_option_disconnect" android:layout_below="@id/checkbox_feedback_bad_video" style="@style/Tachyon_Feedback_Font_04_Checkbox" />
+            <android.support.v7.widget.AppCompatCheckBox android:id="@id/checkbox_feedback_detailed" android:text="@string/call_rating_feedback_option_detailed" android:layout_below="@id/checkbox_feedback_disconnect" style="@style/Tachyon_Feedback_Font_04_Checkbox" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/divider_line" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/bottom_panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/call_diag_checkbox_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <android.support.v7.widget.AppCompatCheckBox android:id="@id/checkbox_call_log" android:text="@string/call_rating_feedback_include_call_diagnostics" style="@style/Tachyon_Feedback_Font_04_Checkbox" />
+                <Button android:gravity="start|center" android:id="@id/call_rating_preview" android:paddingLeft="0.0dip" android:minWidth="0.0dip" android:text="@string/call_rating_feedback_preview" style="@style/TachyonStyleDialogOptionButtonHorizontal" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/button_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <Button android:id="@id/call_rating_feedback_skip" android:minWidth="0.0dip" android:text="@string/call_rating_feedback_skip" android:layout_toLeftOf="@id/call_rating_feedback_submit" style="@style/TachyonStyleDialogOptionButtonHorizontal" />
+                <Button android:id="@id/call_rating_feedback_submit" android:minWidth="0.0dip" android:text="@string/call_rating_feedback_submit" android:layout_alignParentRight="true" style="@style/TachyonStyleDialogOptionButtonHorizontalEnd" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageButton android:id="@id/button_toggle_debug" android:background="@android:drawable/ic_menu_info_details" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:contentDescription="@string/toggle_debug" />
+    <TextView android:textSize="12.0dip" android:textColor="#c000ff00" android:id="@id/hudview_summary_stats" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:alpha="0.6" />
+    <ImageButton android:id="@id/button_toggle_audio_recording" android:background="@drawable/ic_action_mic" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginBottom="20.0dip" android:layout_above="@id/button_toggle_debug" android:layout_alignParentLeft="true" />
+    <ImageView android:id="@id/hudview_audio_recording" android:background="@drawable/ic_action_stop" android:visibility="invisible" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="9.0dip" android:layout_marginBottom="20.0dip" android:layout_above="@id/button_toggle_audio_recording" android:layout_alignParentLeft="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/hudview_charts_container" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.6">
+        <RelativeLayout android:id="@id/hudview_charts_bwe" android:layout_width="fill_parent" android:layout_height="150.0dip">
+            <ImageButton android:id="@id/bwe_chart_button" android:background="@android:drawable/ic_menu_close_clear_cancel" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="12.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/hudview_charts_framerate" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_marginTop="8.0dip">
+            <ImageButton android:id="@id/framerate_chart_button" android:background="@android:drawable/ic_menu_close_clear_cancel" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="12.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/hudview_charts_delay" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_marginTop="8.0dip">
+            <ImageButton android:id="@id/delay_chart_button" android:background="@android:drawable/ic_menu_close_clear_cancel" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="12.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/hudview_charts_bitrate" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_marginTop="8.0dip">
+            <ImageButton android:id="@id/bitrate_chart_button" android:background="@android:drawable/ic_menu_close_clear_cancel" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="12.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <com.google.android.apps.tachyon.ui.views.CountdownView android:id="@id/audio_dump_countdown" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="24.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" custom:remainingColor="@color/white_60_percent" custom:elapsedColor="@android:color/white" custom:strokeWidth="2.0dip">
+        <ImageButton android:layout_gravity="center" android:id="@id/button_record_audio_dump" android:background="@drawable/quantum_ic_fiber_manual_record_white_24" android:layout_width="42.0dip" android:layout_height="42.0dip" android:scaleType="centerInside" android:contentDescription="@string/record_audio_dump_button_description" />
+    </com.google.android.apps.tachyon.ui.views.CountdownView>
+</RelativeLayout>

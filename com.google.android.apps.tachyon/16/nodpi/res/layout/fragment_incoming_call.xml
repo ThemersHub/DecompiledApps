@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/audio_call_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <RelativeLayout android:id="@id/call_root_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:id="@id/incoming_call_header" android:layout_alignParentTop="true" style="@style/IncomingOutgoingOtherCallerHeader">
+            <include layout="@layout/fragment_call_header" />
+        </LinearLayout>
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/avatar_in_call" />
+        <RelativeLayout android:id="@id/incoming_swipe_to_answer_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:gravity="center" android:id="@id/incoming_swipe_to_answer_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="136.0dip" android:text="@string/call_incoming_swipe_to_answer" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/TachyonIncomingOutgoingTextStyle3" />
+            <RelativeLayout android:id="@id/incoming_call_puck_container" android:layout_width="90.0dip" android:layout_height="90.0dip" android:layout_marginBottom="43.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+                <View android:id="@id/incoming_call_puck_bg" android:background="@drawable/circular_background" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_centerInParent="true" />
+                <ImageView android:id="@id/incoming_call_puck_icon" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/quantum_ic_videocam_white_24" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <TextView android:gravity="center" android:id="@id/incoming_swipe_down_decline_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/call_incoming_swipe_down_to_decline" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:alpha="0.0" style="@style/TachyonIncomingOutgoingTextStyle3" />
+            <ProgressBar android:id="@id/incoming_lock_waiting_connection" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="80.0dip" android:progressDrawable="@drawable/circular_progress_bar" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <View android:id="@id/incoming_optional_buttons_anchor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/incoming_locked_anchor" android:layout_alignParentBottom="true" />
+        <ImageButton android:id="@id/incoming_message_button" android:padding="10.0dip" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="34.0dip" android:src="@drawable/ic_message" android:layout_alignBottom="@id/incoming_optional_buttons_anchor" android:layout_alignParentLeft="true" style="@style/TransparentImageButton" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.tachyon.ui.views.PlaybackView android:id="@id/video_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <RelativeLayout android:orientation="vertical" android:id="@id/audio_view" android:focusable="false" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <TextView android:gravity="center" android:id="@id/contact_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="150.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="@style/TachyonInCallContactName" />
+        <com.google.android.apps.tachyon.ui.ContactAvatar android:id="@id/conatct_avatar" android:layout_width="144.0dip" android:layout_height="144.0dip" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/placeholder_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_centerInParent="true" android:scaleX="-1.0" />
+    <FrameLayout android:id="@id/paused_video_overlay_bg" android:background="@color/video_clip_pause_overlay_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/play_icon" android:background="@drawable/ring_anim_inner_bg" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/quantum_ic_play_arrow_white_24" android:scaleType="center" android:layout_centerInParent="true" android:contentDescription="@string/play_clip_button_text" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/time_stamp_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:layout_alignParentBottom="true">
+        <TextView android:textSize="13.0dip" android:textColor="@color/white" android:id="@id/expire_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="13.0dip" android:textColor="@color/white" android:id="@id/received_timestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

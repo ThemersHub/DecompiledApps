@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.tachyon.ui.WelcomeView android:id="@id/welcome_scroll" android:background="@color/common_light_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="1.0dip">
+            <ImageView android:id="@id/header_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/d2_mountain_06260" android:scaleType="centerCrop" android:layout_alignParentTop="true" />
+            <ImageView android:id="@id/welcome_watermark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="26.0dip" android:src="@drawable/duo_watermark" android:scaleType="matrix" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/body_container" android:background="@color/common_light_background" android:padding="@dimen/intro_thick_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/welcome_activity_intro_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/intro_text_vertical_spacing" android:text="@string/welcome_pre_reg_title_variation_1" style="@style/TachyonFontSignUp01a" />
+            <TextView android:id="@id/welcome_activity_silent_reg_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/welcome_pre_reg_your_number_prompt" style="@style/TachyonFontSignUp02" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip">
+                <Button android:layout_gravity="center" android:id="@id/welcome_agree_button" android:background="@color/google_blue_500" android:layout_width="fill_parent" android:layout_height="@dimen/intro_thick_margin" android:text="@string/welcome_pre_reg_accept_button_variation_1_3" style="@style/TachyonFontSignupButtonText" />
+                <Button android:layout_gravity="center" android:id="@id/welcome_unregister_button" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/welcome_pre_reg_update_number_variation_all" style="@style/TachyonWelcomeSubmitText" />
+            </LinearLayout>
+            <TextView android:id="@id/welcome_activity_intro_agreements" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/intro_thick_margin" style="@style/TachyonFontSignUp02" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.apps.tachyon.ui.WelcomeView>

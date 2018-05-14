@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.view.ViewPager android:id="@id/clip_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/close_button" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:layout_marginLeft="12.0dip" android:src="@drawable/close_button" android:scaleType="center" android:layout_alignParentLeft="true" android:contentDescription="@string/close_clip_button_text" />
+        <TextView android:textColor="@color/white" android:id="@id/progress_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/delete_button" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:layout_marginRight="12.0dip" android:src="@drawable/ic_delete_24px" android:scaleType="center" android:layout_alignParentRight="true" android:contentDescription="@string/delete_clip_button_text" />
+        <ImageView android:id="@id/save_button" android:visibility="gone" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:src="@drawable/save" android:scaleType="center" android:layout_toLeftOf="@id/delete_button" android:contentDescription="@string/save_clip_button_text" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/call_button" android:background="@drawable/round_white_rect_20" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginLeft="40.0dip" android:layout_marginBottom="50.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/call_button_fade_out_image" android:layout_width="48.0dip" android:layout_height="40.0dip" android:src="@drawable/quantum_ic_videocam_googblue_24" android:scaleType="center" />
+        <TextView android:textColor="@color/google_blue_500" android:id="@id/call_button_fade_out_text" android:paddingRight="15.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/call_back_button_text" android:maxLines="1" android:contentDescription="@string/call_back_button_text" style="@style/TachyonFontMessageButton" />
+    </LinearLayout>
+</RelativeLayout>

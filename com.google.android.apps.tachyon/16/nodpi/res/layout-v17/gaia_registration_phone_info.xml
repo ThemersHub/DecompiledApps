@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/gaia_onboarding_content_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/gaia_reg_country_code_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/gaia_onboarding_description_text_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/registration_country_code_description" style="@style/TachyonGaiaRegPhoneInfoHeader" />
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <View android:background="@color/black_alpha_12_percent" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_marginBottom="2.0dip" android:layout_alignLeft="@id/registration_country_code_text_wrapper" android:layout_alignRight="@id/registration_country_code_text_wrapper" android:layout_alignBottom="@id/registration_country_code_text_wrapper" />
+                <LinearLayout android:id="@id/registration_country_code_text_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:id="@id/registration_country_code_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/registration_country_code_description" style="@style/TachyonGaiaRegPhoneInfoEditText" />
+                    <ImageView android:layout_gravity="center_vertical" android:clickable="false" android:layout_width="@dimen/small_button_icon_size" android:layout_height="@dimen/small_button_icon_size" android:src="@drawable/quantum_ic_arrow_drop_down_black_24" android:tint="@color/gaia_reg_gray" android:importantForAccessibility="no" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/gaia_reg_phone_number_wrapper" android:paddingLeft="@dimen/default_margin" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="@dimen/default_margin">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gaia_reg_phone_number_label" style="@style/TachyonGaiaRegPhoneInfoHeader" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="@color/black_alpha_12_percent" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="2.0dip" android:layout_alignBottom="@id/registration_phone_edittext" />
+                <EditText android:id="@id/registration_phone_edittext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/registration_phone_title" android:inputType="phone" android:textDirection="ltr" android:textAlignment="viewStart" style="@style/TachyonGaiaRegPhoneInfoEditText" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
