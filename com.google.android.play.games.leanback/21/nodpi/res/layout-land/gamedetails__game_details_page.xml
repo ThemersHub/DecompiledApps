@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.play.games.lib.widgets.conductor.ConductorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="?actionBarSize" android:layout_marginRight="24.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:layout_conductor_behavior="floating|offset" app:layout_conductor_maxOffset="?actionBarSize">
+        <com.google.android.apps.play.games.lib.widgets.gamesimage.GamesImageView android:id="@id/game_icon_image" android:layout_width="168.0dip" android:layout_height="168.0dip" android:layout_marginTop="-16.0dip" app:minImageElevation="16.0dip" app:maxImageElevation="16.0dip" app:imagePadding="24.0dip" app:imageAspectRatio="1.0" app:imageAspectRatioResize="height" />
+    </FrameLayout>
+    <com.google.android.apps.play.games.lib.widgets.scrolllock.HorizontalScrollingAwareRecyclerView android:orientation="vertical" android:id="@id/game_details_page_recycler_view" android:paddingTop="?actionBarSize" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="216.0dip" android:layout_marginRight="0.0dip" android:layout_marginStart="216.0dip" android:layout_marginEnd="0.0dip" app:layout_conductor_behavior="topRecyclerView" app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+    <include layout="@layout/gamedetails__toolbar" />
+</com.google.android.apps.play.games.lib.widgets.conductor.ConductorLayout>

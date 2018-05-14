@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="?attr/guidanceContainerStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.gms.common.images.internal.LoadingImageView android:id="@id/guidance_icon" style="@style/ProfileGuidanceIconStyle" />
+    <TextView android:id="@id/guidance_breadcrumb" style="@style/ProfileGuidanceBreadcrumbStyle" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/guidance_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toEndOf="@id/guidance_icon">
+        <TextView android:textColor="@android:color/holo_red_light" android:id="@id/guidance_error" style="@style/ProfileGuidanceDescriptionStyle" />
+        <com.google.android.gms.games.pano.ui.profile.PreImeEditText android:id="@id/guidance_title" android:layout_width="fill_parent" android:maxLines="1" android:singleLine="true" style="@style/ProfileGuidanceTitleStyle" />
+        <TextView android:id="@id/guidance_description" style="@style/ProfileGuidanceDescriptionStyle" />
+    </LinearLayout>
+</RelativeLayout>

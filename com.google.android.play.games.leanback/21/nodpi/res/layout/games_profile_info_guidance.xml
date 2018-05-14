@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="55.0dip" style="?attr/guidanceContainerStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.gms.common.images.internal.LoadingImageView android:id="@id/guidance_icon" style="@style/ProfileGuidanceSummaryIconStyle" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textColor="@android:color/holo_red_light" android:id="@id/guidance_error" style="@style/ProfileGuidanceSummaryDescriptionStyle" />
+        <TextView android:id="@id/guidance_title" android:layout_width="fill_parent" style="@style/ProfileGuidanceSummaryTitleStyle" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/guidance_info_one_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/guidance_info_one_icon" android:layout_width="@dimen/games_pano_create_profile_intro_icon_size" android:layout_height="@dimen/games_pano_create_profile_intro_icon_size" android:src="@drawable/quantum_ic_play_games_white_36" />
+            <TextView android:id="@id/guidance_info_one_text" android:padding="16.0dip" android:text="@string/games_profile_info_message_1" style="@style/ProfileGuidanceSummaryDescriptionStyle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/guidance_info_two_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/guidance_info_two_icon" android:layout_width="@dimen/games_pano_create_profile_intro_icon_size" android:layout_height="@dimen/games_pano_create_profile_intro_icon_size" android:src="@drawable/games_ic_leaderboards_white" />
+            <TextView android:id="@id/guidance_info_two_text" android:padding="16.0dip" android:text="@string/games_profile_info_message_2" style="@style/ProfileGuidanceSummaryDescriptionStyle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/guidance_info_three_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/guidance_info_three_icon" android:layout_width="@dimen/games_pano_create_profile_intro_icon_size" android:layout_height="@dimen/games_pano_create_profile_intro_icon_size" android:src="@drawable/quantum_ic_trophy_white_36" />
+            <TextView android:id="@id/guidance_info_three_text" android:padding="16.0dip" android:text="@string/games_profile_info_message_3" style="@style/ProfileGuidanceSummaryDescriptionStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@id/guidance_breadcrumb" style="@style/ProfileGuidanceSummaryBreadcrumbStyle" />
+</RelativeLayout>

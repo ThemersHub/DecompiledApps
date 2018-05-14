@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/loaderboard_list_container" android:layout_width="852.0dip" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/games_pano_text" android:ellipsize="end" android:gravity="center|left" android:id="@id/leaderboard_list_description" android:background="@color/games_pano_list_title" android:paddingLeft="44.0dip" android:paddingRight="44.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:singleLine="true" />
+    <FrameLayout android:gravity="center" android:background="@color/games_pano_list_background" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <android.support.v17.leanback.widget.VerticalGridView android:id="@id/leaderboard_list_listview" android:focusable="true" android:clipChildren="false" android:clipToPadding="false" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/empty_view_no_results_text" android:layout_gravity="center" android:id="@id/empty_view" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_invitation_list_null_state" android:drawableTop="@drawable/games_pano_null_leaderboards" android:drawablePadding="16.0dip" style="@style/Games.EmptyViewText" />
+        <include android:visibility="gone" layout="@layout/games_network_error_message" />
+        <FrameLayout android:id="@id/loading_view" android:visibility="gone" style="@style/Games.LoadingViewContainer">
+            <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Games.ProgressBar.Large" />
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

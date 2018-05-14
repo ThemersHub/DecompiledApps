@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/games_pano_select_player_padding_top" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/games_pano_select_player_padding_left" android:layout_marginRight="@dimen/games_pano_select_player_padding_right">
+        <ImageView android:id="@id/google_play_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/google_play_lockup" android:layout_alignParentRight="true" />
+        <TextView android:id="@id/games_pano_select_players_header_title" android:layout_toLeftOf="@id/google_play_logo" android:layout_toRightOf="@id/item_icon" android:layout_alignWithParentIfMissing="true" style="@style/Games.PanoUi.MultiPlayersTitle" />
+        <TextView android:id="@id/games_pano_select_players_header_subtitle" android:layout_marginBottom="12.0dip" android:layout_toRightOf="@id/item_icon" android:layout_below="@id/games_pano_select_players_header_title" android:layout_alignWithParentIfMissing="true" style="@style/Games.PanoUi.MultiPlayersSubTitle" />
+        <com.google.android.gms.common.images.internal.LoadingImageView android:id="@id/item_icon" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="96.0dip" android:layout_height="96.0dip" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

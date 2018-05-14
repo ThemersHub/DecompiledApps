@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/tile_header_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/games_tile_header_wrapper_top_margin" android:layout_marginBottom="@dimen/games_tile_header_wrapper_bottom_margin" android:minHeight="@dimen/games_tile_header_height" other:layoutSlotContainer="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:other="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/content" android:background="@drawable/games_highlight_overlay" android:paddingLeft="@dimen/games_onyx_header_edge_padding" android:paddingRight="@dimen/games_onyx_header_edge_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/header_title" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" other:layoutSlot="title" other:layoutSubSlot="title" style="?attr/gamesOnyxClusterTitleStyle" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/header_subtitle" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" other:layoutSlot="subtitle" other:layoutSubSlot="title" style="?attr/gamesOnyxClusterSubtitleStyle" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/header_button" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:id="@id/header_button_text" android:background="?gamesMoreButtonBackgroundDrawable" android:layout_marginLeft="@dimen/games_tile_header_button_left_margin" other:layoutSlot="large_primary_label" other:layoutSubSlot="title" style="@style/PlayClusterMore" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

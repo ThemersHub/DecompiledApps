@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PlayCardAction" parent="@style/PlayMediumPlainText">
+        <item name="android:textSize">@dimen/play_card_action_size</item>
+    </style>
+    <style name="PlayCardLabel" parent="@style/PlayPlainText">
+        <item name="android:textSize">@dimen/play_medium_size</item>
+        <item name="android:textColor">@color/play_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:minHeight">0.0dip</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">4.0dip</item>
+    </style>
+    <style name="PlayCardOverflow">
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/play_overflow_menu</item>
+    </style>
+    <style name="PlayCardReason" parent="@style/PlayCardSnippet" />
+    <style name="PlayCardSnippet" parent="@style/PlayCondensedText">
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="PlayCardSubtitle" parent="@style/PlayPlainText">
+        <item name="android:textSize">@dimen/play_medium_size</item>
+        <item name="android:textColor">@color/play_secondary_text</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">4.0dip</item>
+        <item name="android:lineSpacingExtra">0.0sp</item>
+    </style>
+    <style name="PlayCardTitle" parent="@style/PlayPlainText">
+        <item name="android:textSize">@dimen/play_title_size</item>
+        <item name="android:textColor">@color/play_primary_text</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:lineSpacingExtra">0.0sp</item>
+        <item name="allowsCompactLineSpacing">true</item>
+    </style>
+    <style name="PlayCardTitle.Big" parent="@style/PlayCardTitle">
+        <item name="android:textSize">@dimen/play_large_title_size</item>
+    </style>
+    <style name="PlayCardTitle.Mini" parent="@style/PlayCardTitle">
+        <item name="android:textSize">@dimen/play_small_title_size</item>
+    </style>
+    <style name="PlayCardViewGroup">
+        <item name="android:paddingTop">@dimen/play_card_default_inset</item>
+        <item name="android:paddingBottom">@dimen/play_card_default_inset</item>
+        <item name="android:paddingStart">@dimen/play_card_default_inset</item>
+        <item name="android:paddingEnd">@dimen/play_card_default_inset</item>
+        <item name="playCardBackgroundColor">@color/play_card_light_background</item>
+        <item name="playCardCornerRadius">@dimen/play_card_default_radius</item>
+        <item name="playCardElevation">@dimen/play_card_default_elevation</item>
+        <item name="playCardInset">@dimen/play_card_default_inset</item>
+        <item name="playCardClipToOutline">true</item>
+    </style>
+    <style name="PlayClusterMore" parent="@style/PlayMediumBoldText">
+        <item name="android:textSize">@dimen/play_cluster_header_more_size</item>
+        <item name="android:textColor">@color/play_white</item>
+        <item name="android:paddingTop">@dimen/play_cluster_header_more_top_padding</item>
+        <item name="android:paddingBottom">@dimen/play_cluster_header_more_bottom_padding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">@dimen/play_cluster_header_more_xpadding</item>
+        <item name="android:paddingEnd">@dimen/play_cluster_header_more_xpadding</item>
+        <item name="playCardBackgroundColor">@color/play_card_light_background</item>
+        <item name="playCardCornerRadius">@dimen/play_action_button_corner</item>
+        <item name="playCardElevation">1.0dip</item>
+        <item name="playCardInset">0.0dip</item>
+        <item name="playCardClipToOutline">true</item>
+    </style>
+    <style name="PlayClusterSubtitle" parent="@style/PlayPlainText">
+        <item name="android:textSize">@dimen/play_cluster_header_subtitle_size</item>
+        <item name="android:textColor">@color/play_fg_secondary</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="PlayClusterTitle" parent="@style/PlayMediumPlainText">
+        <item name="android:textSize">@dimen/play_cluster_header_title_size</item>
+        <item name="android:textColor">@color/play_primary_text</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="PlayCondensedText">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+    <style name="PlayDetailDescription" parent="@style/PlayPlainText">
+        <item name="android:textSize">@dimen/play_description_size</item>
+        <item name="android:textColor">@color/play_fg_primary</item>
+        <item name="android:gravity">start</item>
+        <item name="android:lineSpacingExtra">6.0sp</item>
+    </style>
+    <style name="PlayDetailTitle" parent="@style/PlayMediumPlainText">
+        <item name="android:textSize">@dimen/play_details_title_size</item>
+        <item name="android:textColor">@color/play_primary_text</item>
+    </style>
+    <style name="PlayEduCardDescription" parent="@style/PlayPlainText">
+        <item name="android:textSize">@dimen/play_edu_body_size</item>
+        <item name="android:textColor">@color/play_fg_secondary</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:paddingStart">@dimen/play_edu_main_content_padding</item>
+        <item name="android:paddingEnd">@dimen/play_edu_main_content_padding</item>
+        <item name="allowsCompactLineSpacing">true</item>
+    </style>
+    <style name="PlayEduCardTitle" parent="@style/PlayMediumPlainText">
+        <item name="android:textSize">@dimen/play_edu_title_size</item>
+        <item name="android:textColor">@color/play_fg_primary</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingMultiplier">1.05</item>
+        <item name="android:paddingStart">@dimen/play_edu_main_content_padding</item>
+        <item name="android:paddingEnd">@dimen/play_edu_main_content_padding</item>
+    </style>
+    <style name="PlayGridBoldText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="PlayHeaderListBannerText" parent="@style/PlayMediumPlainText">
+        <item name="android:textSize">@dimen/play_header_list_banner_text_size</item>
+        <item name="android:textColor">@color/play_header_list_banner_text_color</item>
+    </style>
+    <style name="PlayHeaderListTabScrollview">
+        <item name="android:layoutDirection">ltr</item>
+    </style>
+    <style name="PlayHeaderListTabText" parent="@style/PlayMediumBoldText">
+        <item name="android:textSize">@dimen/play_header_list_text_size</item>
+        <item name="android:textColor">@color/play_header_list_tab_text_color</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">@dimen/play_header_list_tab_padding_side</item>
+        <item name="android:paddingEnd">@dimen/play_header_list_tab_padding_side</item>
+    </style>
+    <style name="PlayMediumBoldText" parent="@style/PlayGridBoldText" />
+    <style name="PlayMediumPlainText" parent="@style/PlayPlainText">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="PlayOnboardNavFooterButton">
+        <item name="android:textAppearance">@style/PlayCardAction</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/play_action_button_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/play_onboard_dark_button_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:maxHeight">48.0dip</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingStart">@dimen/play_onboard__onboard_nav_footer_button_padding</item>
+        <item name="android:paddingEnd">@dimen/play_onboard__onboard_nav_footer_button_padding</item>
+    </style>
+    <style name="PlayOnboardTutorialPageBody" parent="@style/PlayEduCardDescription">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="PlayOnboardTutorialPageDisk">
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="PlayOnboardTutorialPageTitle" parent="@style/PlayEduCardTitle">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="PlayPlainText">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="PlaySearchSuggestionText">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/play_fg_primary</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="PlaySearchSuggestionText.Query" parent="@style/PlaySearchSuggestionText">
+        <item name="android:textColor">@color/play_fg_tertiary</item>
+    </style>
+    <style name="PlaySearchSuggestionText.Suggested" parent="@style/PlaySearchSuggestionText">
+        <item name="android:textColor">@color/play_fg_primary</item>
+    </style>
+</resources>

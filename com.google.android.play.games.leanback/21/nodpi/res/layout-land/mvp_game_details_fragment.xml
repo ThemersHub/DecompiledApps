@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/game_details_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:navigationIcon="@drawable/quantum_ic_arrow_back_grey600_24" />
+        <View android:id="@id/toolbar_divider" android:visibility="invisible" style="@style/GamesCommon.Divider" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+            <Space android:layout_width="@dimen/games_mvp_landscape_column_horizontal_margin_minus_left_icon_padding" android:layout_height="fill_parent" />
+            <com.google.android.apps.play.games.lib.widgets.gamesimage.GamesImageView android:id="@id/game_icon_image" android:layout_width="@dimen/games_mvp_landscape_left_icon_width_plus_twice_left_icon_padding" android:layout_height="@dimen/games_mvp_landscape_left_icon_width_plus_twice_left_icon_padding" app:minImageElevation="@dimen/games_mvp_game_details_icon_elevation" app:maxImageElevation="@dimen/games_mvp_game_details_icon_elevation" app:imagePadding="@dimen/games_mvp_landscape_left_icon_padding" app:imageRoundRectCornerRadius="@dimen/games_mvp_card_corner_radius" app:imageAspectRatio="1.0" app:imageAspectRatioResize="height" />
+            <Space android:layout_width="@dimen/games_mvp_landscape_column_horizontal_margin_minus_left_icon_padding" android:layout_height="fill_parent" />
+            <ScrollView android:id="@id/scroll_view" android:scrollbars="none" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <include layout="@layout/mvp_game_details_content" />
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/bottom_sheet_scrim" android:background="@color/games_mvp_bottom_sheet_scrim_color" android:focusable="false" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+    <FrameLayout android:orientation="vertical" android:id="@id/bottom_sheet" android:layout_width="fill_parent" android:layout_height="fill_parent" app:behavior_peekHeight="0.0dip" app:layout_behavior="@string/bottom_sheet_behavior">
+        <FrameLayout android:id="@id/bottom_sheet_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

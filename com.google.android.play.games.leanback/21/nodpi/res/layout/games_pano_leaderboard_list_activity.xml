@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="top" android:orientation="vertical" android:id="@id/root" android:clipChildren="false" android:clipToPadding="false" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:lb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center|left|top" android:id="@id/top_bar" android:paddingLeft="@dimen/games_pano_client_ui_horizontal_margin" android:paddingTop="@dimen/games_pano_client_ui_vertical_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/google_play_logo">
+        <ImageView android:id="@id/leaderboard_list_title_badge" android:src="@drawable/pano_ic_leaderboard_dark" style="@style/Games.Pano.ClientUI.TitleIcon" />
+        <TextView android:id="@id/leaderboard_list_title" android:text="@string/games_leaderboard_list_title" style="@style/Games.Pano.ClientUI.Title" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center|top" android:orientation="horizontal" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="167.0dip">
+        <fragment android:gravity="center_horizontal" android:id="@id/listview" android:paddingLeft="@dimen/games_pano_client_ui_horizontal_margin" android:paddingRight="@dimen/games_pano_client_ui_horizontal_margin" android:focusable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutMode="opticalBounds" lb:horizontalMargin="-4.0dip" class="android.support.v17.leanback.app.RowsFragment" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center|right|top" android:id="@id/google_play_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/games_pano_client_ui_vertical_margin" android:layout_marginRight="@dimen/games_pano_client_ui_horizontal_margin" android:src="@drawable/google_play_lockup" />
+</FrameLayout>

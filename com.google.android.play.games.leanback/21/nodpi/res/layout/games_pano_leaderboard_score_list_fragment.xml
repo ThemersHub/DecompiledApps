@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:lb="http://schemas.android.com/apk/res-auto" xmlns:pano="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/games_pano_client_ui_horizontal_margin" android:layout_marginTop="@dimen/games_pano_client_ui_vertical_margin" android:layout_toLeftOf="@id/google_play_logo" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <com.google.android.gms.common.images.internal.LoadingImageView android:id="@id/leaderboard_icon" style="@style/Games.Pano.ClientUI.TitleIcon" />
+        <TextView android:id="@id/leaderboard_name" style="@style/Games.Pano.ClientUI.Title" />
+    </LinearLayout>
+    <android.support.v17.leanback.widget.HorizontalGridView android:id="@id/listview" android:paddingLeft="@dimen/games_pano_client_ui_horizontal_margin" android:paddingRight="@dimen/games_pano_client_ui_horizontal_margin" android:focusable="true" android:clipChildren="false" android:clipToPadding="false" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="296.0dip" android:layout_alignParentBottom="true" android:layout_centerVertical="true" android:layoutMode="opticalBounds" pano:horizontalMargin="27.0dip" />
+    <ImageView android:id="@id/google_play_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/games_pano_client_ui_vertical_margin" android:layout_marginRight="@dimen/games_pano_client_ui_horizontal_margin" android:src="@drawable/google_play_lockup" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <LinearLayout android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="130.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="415.0dip">
+            <com.google.android.gms.common.images.internal.LoadingImageView android:id="@id/player_icon" android:background="@drawable/games_pano_thick_white_circle_border" android:layout_width="130.0dip" android:layout_height="130.0dip" />
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="20.0sp" android:textColor="@color/games_pano_text" android:id="@id/social_ranking" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:singleLine="true" />
+                <TextView android:textSize="20.0sp" android:textColor="@color/games_pano_text" android:id="@id/public_ranking" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:singleLine="true" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
