@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.libraries.social.ui.views.FullSizeLinearLayout android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:maxHeight="@dimen/max_list_dialog_height" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/event_theme_container" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/event_change_theme">
+                <com.google.android.apps.plus.views.EventThemeView android:id="@id/event_theme_image" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" android:importantForAccessibility="no" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffffffff" android:gravity="end|center" android:layout_gravity="bottom" android:id="@id/select_theme_text" android:background="#99000000" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:importantForAccessibility="no" android:paddingEnd="8.0dip" />
+                <View android:id="@id/select_theme_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" style="@style/ListItemAction" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/event_theme_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:attr/progressBarStyleSmall" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="4.0dip" android:paddingEnd="4.0dip">
+                <EditText android:textSize="@dimen/text_size_16" android:textColor="@color/text_black_87_percent" android:textColorHint="@color/text_hint" android:id="@id/event_name" android:paddingLeft="@dimen/create_event_padding_start" android:paddingTop="@dimen/create_event_padding_top" android:layout_width="fill_parent" android:layout_height="48.0dip" android:hint="@string/event_name_hint" android:inputType="textCapWords" android:paddingStart="@dimen/create_event_padding_start" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <Button android:id="@id/start_date" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_weight="1.0" style="@style/DateTimePickerButton" />
+                    <Button android:textColorHint="@color/text_hint" android:id="@id/start_time" android:layout_width="110.0dip" android:layout_height="48.0dip" android:hint="@string/event_start_time_hint" style="@style/DateTimePickerButton" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <Button android:textColorHint="@color/text_hint" android:id="@id/end_date" android:layout_width="0.0dip" android:layout_height="48.0dip" android:hint="@string/event_end_date_hint" android:layout_weight="1.0" style="@style/DateTimePickerButton" />
+                    <Button android:textColorHint="@color/text_hint" android:id="@id/end_time" android:layout_width="110.0dip" android:layout_height="48.0dip" android:hint="@string/event_end_time_hint" style="@style/DateTimePickerButton" />
+                </LinearLayout>
+                <Spinner android:id="@id/time_zone" android:layout_width="fill_parent" android:layout_height="48.0dip" style="@style/DateTimePickerButton" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/hangout_check_container" android:background="?editLocationBackground" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                    <CheckBox android:textAppearance="?android:textAppearanceSmall" android:id="@id/hangout_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/event_hangout_checkbox_label" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/location_container" android:background="?editLocationBackground" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                    <ImageView android:layout_gravity="center" android:id="@id/location_marker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/ic_location_active" android:layout_marginEnd="5.0dip" />
+                    <Button android:textAppearance="?android:textAppearanceSmall" android:textColorHint="@color/text_hint" android:ellipsize="end" android:gravity="start|center" android:id="@id/location_text" android:background="?listSelector" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/event_location_hint" android:singleLine="true" android:drawableRight="@drawable/more" android:layout_weight="1.0" android:drawableEnd="@drawable/more" android:textAlignment="viewStart" />
+                </LinearLayout>
+                <com.google.android.apps.plus.views.TypeableAudienceView android:id="@id/audience_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" />
+                <com.google.android.libraries.social.sharekit.comments.MentionMultiAutoCompleteTextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/text_normal" android:textColorHint="@color/text_hint" android:gravity="top" android:id="@id/description" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/event_description_hint" android:minLines="7" android:inputType="textLongMessage|textAutoCorrect|textCapSentences|textMultiLine" android:imeOptions="actionDone" android:imeActionLabel="@string/sharebox_send_content_description" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <TextView android:textSize="@dimen/text_size_20" android:gravity="center" android:id="@id/server_error" android:padding="24.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/empty_layout" />
+</com.google.android.libraries.social.ui.views.FullSizeLinearLayout>

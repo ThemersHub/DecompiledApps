@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@drawable/shortcut_new_post_icon" android:enabled="true" android:shortcutId="createPost" android:shortcutShortLabel="@string/share_post_shortcut_short_title" android:shortcutLongLabel="@string/share_post_shortcut_title" android:shortcutDisabledMessage="@string/share_post_shortcut_title">
+        <intent android:targetPackage="com.google.android.apps.plus" android:action="android.intent.action.SEND" android:targetClass="com.google.android.apps.plus.GatewayActivityAlias">
+            <extra android:name="extra_from_shortcut" android:value="true" />
+        </intent>
+    </shortcut>
+    <shortcut android:icon="@drawable/shortcut_new_photo_post_icon" android:enabled="true" android:shortcutId="createPhotoPost" android:shortcutShortLabel="@string/share_photo_shortcut_short_title" android:shortcutLongLabel="@string/share_photo_shortcut_title" android:shortcutDisabledMessage="@string/share_photo_shortcut_title">
+        <intent android:targetPackage="com.google.android.apps.plus" android:action="android.intent.action.SEND" android:targetClass="com.google.android.apps.plus.GatewayActivityAlias">
+            <extra android:name="extra_media_picker_opened" android:value="true" />
+            <extra android:name="extra_from_shortcut" android:value="true" />
+        </intent>
+    </shortcut>
+    <shortcut android:icon="@drawable/shortcut_new_poll_post_icon" android:enabled="true" android:shortcutId="createPoll" android:shortcutShortLabel="@string/share_poll_shortcut_short_title" android:shortcutLongLabel="@string/share_poll_shortcut_title" android:shortcutDisabledMessage="@string/share_photo_shortcut_title">
+        <intent android:targetPackage="com.google.android.apps.plus" android:action="android.intent.action.SEND" android:targetClass="com.google.android.apps.plus.GatewayActivityAlias">
+            <extra android:name="extra_poll_opened" android:value="true" />
+            <extra android:name="extra_from_shortcut" android:value="true" />
+        </intent>
+    </shortcut>
+</shortcuts>

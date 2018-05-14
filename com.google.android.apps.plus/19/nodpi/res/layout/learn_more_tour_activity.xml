@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.view.ViewPager android:id="@id/pager" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/controls" android:layout_width="fill_parent" android:layout_height="@dimen/learn_more_nav_panel_height">
+        <Button android:layout_gravity="start|center" android:id="@id/skip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/learn_more_skip_button" style="@style/LearnMoreTourButtonStyle" />
+        <com.google.android.libraries.social.help.impl.PageIndicatorView android:layout_gravity="center" android:id="@id/indicators" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Button android:layout_gravity="end|center" android:id="@id/next" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/learn_more_next_button" style="@style/LearnMoreTourButtonStyle" />
+        <Button android:layout_gravity="end|center" android:id="@id/done" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/learn_more_done_button" style="@style/LearnMoreTourButtonStyle" />
+    </FrameLayout>
+    <View android:layout_gravity="bottom" android:background="@color/quantum_black_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/learn_more_nav_panel_height" />
+</FrameLayout>

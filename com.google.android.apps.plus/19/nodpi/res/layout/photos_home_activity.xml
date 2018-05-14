@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.photos.views.PhotosHostLayout android:id="@id/host" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.plus.views.EsDrawerLayout android:id="@id/drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+        <FrameLayout android:id="@id/fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.apps.photos.views.NavigationBarLayout android:layout_gravity="start" android:id="@id/navigation_bar" android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/selected_account" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <ListView android:id="@id/navigation_item_list" android:background="@color/switcher_background" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/switcher_background" android:divider="@null" android:dividerHeight="0.0dip" />
+                <ListView android:id="@id/account_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/text_white" android:divider="@drawable/divider" />
+            </FrameLayout>
+        </com.google.android.apps.photos.views.NavigationBarLayout>
+    </com.google.android.apps.plus.views.EsDrawerLayout>
+</com.google.android.apps.photos.views.PhotosHostLayout>

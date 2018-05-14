@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/poll_creation_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/accessibility_description_poll_creation"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.libraries.social.sharekit.comments.MentionMultiAutoCompleteTextView android:textSize="@dimen/text_size_14" android:textColorHint="@color/text_hint" android:id="@id/polls_question" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/poll_ask_question" android:minLines="@integer/poll_question_min_lines" android:inputType="textLongMessage|textAutoCorrect|textCapSentences|textMultiLine" android:imeOptions="actionDone" />
+    <include layout="@layout/poll_two_option" />
+    <LinearLayout android:orientation="vertical" android:id="@id/polls_n_option_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/poll_option_list_header" />
+    </LinearLayout>
+</LinearLayout>

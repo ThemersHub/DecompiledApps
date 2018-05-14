@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/tab_container" android:layout_width="fill_parent" android:layout_height="@dimen/play_tab_strip_height" layout="@layout/photos_home_tab_container" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tab_container">
+        <com.google.android.apps.photos.allphotos.ui.ScaleGestureTouchCaptureView android:id="@id/scale_gesture_touch_capture_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.google.android.apps.photos.allphotos.ui.ScaleGestureTouchCaptureView>
+    </FrameLayout>
+    <include android:layout_width="fill_parent" android:layout_height="@dimen/photos_fake_shadow_height" android:layout_below="@id/tab_container" layout="@layout/promo_fake_shadow" />
+</RelativeLayout>

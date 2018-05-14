@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.libraries.social.discovery.views.PeopleListRowView android:id="@id/compact_people_list_row_view_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.libraries.social.discovery.views.PeopleListSwipeableRowView android:id="@id/swipeable_content" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="72.0dip">
+        <FrameLayout android:id="@id/avatar_area" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="16.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_marginStart="16.0dip" android:layout_alignParentStart="true">
+            <com.google.android.libraries.social.avatars.ui.AvatarView android:id="@id/avatar" android:layout_width="fill_parent" android:layout_height="fill_parent" shape="round" />
+            <ImageView android:id="@id/icon" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerInside" />
+        </FrameLayout>
+        <RelativeLayout android:id="@id/circles_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginEnd="8.0dip" android:layout_alignParentEnd="true">
+            <com.google.android.libraries.social.circlemembership.ui.CirclesButton android:id="@id/in_circles_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48.0dip" android:minHeight="48.0dip" />
+            <com.google.android.libraries.social.circlemembership.ui.CirclesButton android:id="@id/add_to_circles_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48.0dip" android:minHeight="48.0dip" />
+        </RelativeLayout>
+        <com.google.android.libraries.social.people.ui.PeopleListRowNameView android:id="@id/name_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="8.0dip" android:layout_toLeftOf="@id/circles_button" android:layout_toRightOf="@id/avatar_area" android:layout_centerVertical="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="8.0dip" android:layout_toStartOf="@id/circles_button" android:layout_toEndOf="@id/avatar_area" />
+    </com.google.android.libraries.social.discovery.views.PeopleListSwipeableRowView>
+    <View android:id="@id/divider" android:background="@color/quantum_black_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="80.0dip" android:layout_alignParentTop="true" android:layout_marginStart="80.0dip" />
+</com.google.android.libraries.social.discovery.views.PeopleListRowView>

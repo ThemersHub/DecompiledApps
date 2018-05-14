@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/details" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/about_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/square_card_padding">
+        <View android:id="@id/divider" android:layout_marginBottom="@dimen/square_card_padding" style="@style/Divider" />
+        <TextView android:textColor="@color/text_normal" android:id="@id/description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/square_card_padding" android:layout_marginRight="@dimen/square_card_padding" />
+        <com.google.android.libraries.social.squares.stream.relatedlinksview.RelatedLinksView android:id="@id/related_links" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/square_card_padding" android:layout_marginRight="@dimen/square_card_padding" />
+        <TextView android:textColor="@color/text_normal" android:id="@id/location" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/square_card_padding" android:layout_marginTop="@dimen/square_card_padding" android:layout_marginRight="@dimen/square_card_padding" android:drawableLeft="@drawable/quantum_ic_location_on_white_18" android:drawablePadding="6.0dip" android:drawableStart="@drawable/quantum_ic_location_on_white_18" android:textAlignment="viewStart" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/text_gray" android:gravity="center" android:id="@id/blocking_explanation" android:background="@color/square_blocking_explanation_background" android:padding="@dimen/square_card_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

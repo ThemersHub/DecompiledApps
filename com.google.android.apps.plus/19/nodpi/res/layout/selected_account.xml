@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.photos.views.SelectedAccountNavigationView android:id="@id/selected_account" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.plus.views.CoverPhotoImageView android:id="@id/cover_photo" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.google.android.libraries.social.avatars.ui.AvatarView android:id="@id/avatar" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_margin="16.0dip" android:layout_centerVertical="true" size="small" shape="round" />
+    <RelativeLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <RelativeLayout android:id="@id/account_list_buttons" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+            <ImageButton android:id="@id/show_account_list_button" android:background="?buttonSelectableBackground" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_arrow_drop_down_white_24" android:scaleType="center" android:contentDescription="@string/accessibility_show_account_list_button" />
+            <ImageButton android:id="@id/hide_account_list_button" android:background="?buttonSelectableBackground" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_arrow_drop_up_white_24" android:scaleType="center" android:layout_toLeftOf="@id/show_account_list_button" android:contentDescription="@string/accessibility_hide_account_list_button" android:layout_toStartOf="@id/show_account_list_button" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_toLeftOf="@id/account_list_buttons" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/account_list_buttons">
+            <TextView android:ellipsize="end" android:id="@id/display_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:shadowColor="#ff333333" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="2.0" style="@style/quantum_text_title_white" />
+            <TextView android:ellipsize="end" android:id="@id/account_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/quantum_text_body_1_white" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.google.android.apps.photos.views.SelectedAccountNavigationView>

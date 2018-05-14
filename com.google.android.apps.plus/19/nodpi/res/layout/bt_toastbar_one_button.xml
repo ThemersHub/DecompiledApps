@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:id="@id/toastbar_container" android:paddingLeft="@dimen/bt_toastbar_padding_side" android:paddingRight="@dimen/bt_toastbar_padding_side" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/toastbar" style="@style/bt_ToastBar">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/bt_toastbar_marginLeft" android:layout_marginRight="@dimen/bt_toastbar_marginRight" android:layout_weight="1.0">
+            <TextView android:id="@id/toastbar_message" style="@style/bt_ToastbarTextLine" />
+            <TextView android:id="@id/toastbar_message2" android:layout_marginTop="@dimen/bt_toastbar_textview_marginTop" style="@style/bt_ToastbarTextLine" />
+        </LinearLayout>
+        <View style="@style/bt_ToastbarDivider" />
+        <Button android:gravity="fill_vertical" android:id="@id/toastbar_button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/bt_toastbar_button_margin_side" android:layout_marginRight="@dimen/bt_toastbar_button_margin_side" android:drawableRight="@drawable/revert_holo_dark" android:drawablePadding="16.0dip" style="@style/bt_ToastbarButton" />
+        <Button android:id="@id/toastbar_button2" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    </LinearLayout>
+</FrameLayout>

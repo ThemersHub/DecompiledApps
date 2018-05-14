@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/photos_host_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <view android:orientation="vertical" android:id="@id/tiles_container" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.apps.plus.views.FastScrollContainer">
+        <com.google.android.libraries.social.ui.swiperefresh.SwipeRefreshLayoutWithUpScroll android:id="@id/pull_to_refresh" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.apps.plus.views.FastScrollListView android:id="@id/tiles" android:background="@null" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+        </com.google.android.libraries.social.ui.swiperefresh.SwipeRefreshLayoutWithUpScroll>
+    </view>
+    <include layout="@layout/empty_view_layout" />
+    <include android:layout_gravity="top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/transient_server_error" />
+</FrameLayout>

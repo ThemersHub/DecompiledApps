@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/notification_item_background_read" android:paddingLeft="@dimen/notifications_header_padding_x" android:paddingRight="@dimen/notifications_header_padding_x" android:layout_width="fill_parent" android:layout_height="@dimen/notification_item_height" android:paddingStart="@dimen/notifications_header_padding_x" android:paddingEnd="@dimen/notifications_header_padding_x"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/text_gray" android:gravity="start" android:id="@id/heading" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/text_gray" android:gravity="start" android:id="@id/description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:maxLines="1" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/header_icon_down" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_down" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/header_icon_up" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_up" />
+    <ProgressBar android:layout_gravity="center_vertical" android:id="@id/progress_indicator" android:visibility="gone" android:layout_width="@dimen/notifications_header_progress_size" android:layout_height="@dimen/notifications_header_progress_size" />
+</LinearLayout>

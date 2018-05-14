@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/edit_comment_toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/comment_edit_text_view" />
+            <FrameLayout android:id="@id/link_preview_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <com.google.android.libraries.social.cardkit.basiccard.BasicCardView android:id="@id/basic_card_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.google.android.libraries.social.cardkit.mediacard.MediaCardView android:id="@id/media_card_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <ImageButton android:layout_gravity="end|center|top" android:id="@id/link_clear_preview" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_cancel_grey600_24" android:contentDescription="@string/embed_remove_preview_content_description" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

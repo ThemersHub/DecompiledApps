@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.libraries.social.media.ui.MediaView android:id="@id/story_cover_photo" android:layout_width="wrap_content" android:layout_height="wrap_content" size="large" />
+    <ImageView android:layout_gravity="start|center|top" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_auto_stories_white_24" android:importantForAccessibility="no" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_width="1.0dip" android:layout_height="0.0dip" android:layout_weight="50.0" />
+        <View android:layout_gravity="bottom" android:background="@drawable/story_card_hero_drop_shadow" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="50.0" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/quantum_text_title_white" android:textStyle="normal" android:ellipsize="end" android:id="@id/story_title_text" android:paddingBottom="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="@integer/story_card_hero_title_lines" android:includeFontPadding="false" android:layout_weight="@integer/story_card_hero_title_weight" />
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="@integer/story_card_hero_title_buffer_weight" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/quantum_text_body_1_white" android:textStyle="normal" android:id="@id/story_metadata_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

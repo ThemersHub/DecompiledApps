@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/content" android:background="@drawable/card_blueborder" android:padding="@dimen/profile_about_default_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_size_20" android:textStyle="bold" android:id="@id/show_in_your_circles_heading" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_about_people_in_your_circles" />
+    <CheckBox android:id="@id/show_in_your_circles" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_edit_people_show_added_people" />
+    <RadioGroup android:id="@id/all_or_select" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/profile_about_default_2x_padding" android:layout_marginStart="@dimen/profile_about_default_2x_padding">
+        <RadioButton android:id="@id/all_circles" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_edit_people_show_added_people_all" />
+        <RadioButton android:id="@id/select_circles" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_edit_people_show_added_people_select" />
+    </RadioGroup>
+    <LinearLayout android:orientation="vertical" android:id="@id/circles_list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/profile_about_default_4x_padding" android:layout_marginStart="@dimen/profile_about_default_4x_padding" />
+    <TextView android:textSize="@dimen/text_size_20" android:id="@id/who_can_see_this_heading" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/profile_about_default_padding" android:text="@string/profile_edit_people_who_can_see_this" />
+    <RadioGroup android:id="@id/who_can_see_this" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton android:id="@id/public_can_see" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/acl_public" />
+        <RadioButton android:id="@id/your_circles_can_see" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/acl_your_circles" />
+    </RadioGroup>
+    <View android:id="@id/employment_divider" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/profile_about_default_padding" />
+    <TextView android:textSize="@dimen/text_size_20" android:textStyle="bold" android:id="@id/have_you_in_circles_heading" android:paddingTop="@dimen/profile_about_default_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_about_people_have_you" />
+    <CheckBox android:id="@id/have_you_in_circles" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_edit_people_show_people_who_have_you" />
+</LinearLayout>

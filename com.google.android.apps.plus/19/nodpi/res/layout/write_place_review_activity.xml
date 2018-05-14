@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.libraries.social.ui.views.FullSizeLinearLayout android:orientation="vertical" android:background="@color/write_place_review_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" plus:maxHeightPercentage="0.9"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:plus="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/focus_override" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <LinearLayout android:orientation="horizontal" style="@style/FlatButtonBar">
+        <com.google.android.libraries.social.ui.views.imagetextbutton.ImageTextButton android:id="@id/cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" plus:text="@string/write_place_review_cancel" plus:image="@drawable/ic_close_cancel_grey" style="@style/FlatButton" />
+        <View style="@style/FlatButtonSeparator" />
+        <com.google.android.libraries.social.ui.views.imagetextbutton.ImageTextButton android:enabled="false" android:id="@id/publish" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" plus:text="@string/write_place_review_publish" plus:image="@drawable/ic_cab_done_holo_light" style="@style/FlatButton" />
+    </LinearLayout>
+    <View style="@style/FlatButtonBorder" />
+    <View style="@style/FlatButtonShadow" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/compose_item_background" android:paddingBottom="@dimen/share_ui_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="7.0dip">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="24.0dip">
+            <ImageView android:id="@id/star_1" android:layout_width="70.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_star_grey_32" android:scaleType="center" android:contentDescription="@string/star_one_rating_content_description" />
+            <ImageView android:id="@id/star_2" android:layout_width="70.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_star_grey_32" android:scaleType="center" android:contentDescription="@string/star_two_rating_content_description" />
+            <ImageView android:id="@id/star_3" android:layout_width="70.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_star_grey_32" android:scaleType="center" android:contentDescription="@string/star_three_rating_content_description" />
+            <ImageView android:id="@id/star_4" android:layout_width="70.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_star_grey_32" android:scaleType="center" android:contentDescription="@string/star_four_rating_content_description" />
+            <ImageView android:id="@id/star_5" android:layout_width="70.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_star_grey_32" android:scaleType="center" android:contentDescription="@string/star_five_rating_content_description" />
+        </LinearLayout>
+        <MultiAutoCompleteTextView android:textSize="@dimen/text_size_20" android:textColorHint="@color/compose_empty_fg" android:id="@id/write_review" android:paddingBottom="@dimen/share_ui_margin" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/share_ui_margin" android:layout_marginTop="@dimen/share_ui_margin" android:layout_marginRight="@dimen/share_ui_margin" android:hint="@string/write_place_review_hint_text" android:minLines="3" android:imeOptions="actionDone" android:layout_marginStart="@dimen/share_ui_margin" android:layout_marginEnd="@dimen/share_ui_margin" style="@style/ComposeUpdate.Editor" />
+    </LinearLayout>
+    <TextView android:textColorHint="@color/text_hint" android:id="@id/information_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="24.0dip" android:hint="@string/write_place_review_information_text" />
+</com.google.android.libraries.social.ui.views.FullSizeLinearLayout>

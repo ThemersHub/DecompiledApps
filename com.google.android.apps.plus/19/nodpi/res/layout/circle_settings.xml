@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.libraries.social.ui.views.FullSizeLinearLayout android:orientation="vertical" android:background="@color/profile_edit_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="@dimen/max_list_dialog_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:plus="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" style="@style/FlatButtonBar">
+        <com.google.android.libraries.social.ui.views.imagetextbutton.ImageTextButton android:id="@id/cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" plus:text="@string/profile_edit_cancel" plus:image="@drawable/ic_close_cancel" style="@style/FlatButton" />
+        <View style="@style/FlatButtonSeparator" />
+        <com.google.android.libraries.social.ui.views.imagetextbutton.ImageTextButton android:enabled="false" android:id="@id/save" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" plus:text="@string/profile_edit_save" plus:image="@drawable/ic_cab_done_holo_light" style="@style/FlatButton" />
+    </LinearLayout>
+    <View style="@style/FlatButtonBorder" />
+    <View style="@style/FlatButtonShadow" />
+    <ScrollView android:id="@id/scroller" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:animateLayoutChanges="true" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+            <RelativeLayout android:id="@id/name_item" android:background="?buttonSelectableBackground" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" style="@style/CircleSettingsItemText">
+                <TextView android:id="@id/name_label" android:text="@string/circle_settings_name" style="@style/CircleSettingsItemLabel" />
+                <TextView android:id="@id/name_value" android:layout_below="@id/name_label" style="@style/CircleSettingsItemDescription" />
+            </RelativeLayout>
+            <View android:id="@id/name_divider" style="@style/Divider" />
+            <View android:id="@id/name_section_gap" android:layout_width="fill_parent" android:layout_height="18.0dip" />
+            <TextView android:id="@id/posts_section" android:text="@string/circle_settings_posts_section" style="@style/CircleSettingsSectionHeader" />
+            <View android:id="@id/posts_section_divider" style="@style/CircleSettingsSectionHeaderDivider" />
+            <RelativeLayout android:id="@id/amount_item" android:background="?buttonSelectableBackground" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+                <RelativeLayout style="@style/CircleSettingsItemText">
+                    <TextView android:id="@id/amount_label" android:text="@string/circle_settings_amount" style="@style/CircleSettingsItemLabel" />
+                    <TextView android:id="@id/amount_value" android:layout_below="@id/amount_label" style="@style/CircleSettingsItemDescription" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <View android:id="@id/amount_divider" style="@style/Divider" />
+            <View android:layout_width="fill_parent" android:layout_height="18.0dip" />
+            <TextView android:id="@id/subscription_section_title" style="@style/CircleSettingsSectionHeader" />
+            <View android:id="@id/subscription_title_divider" style="@style/CircleSettingsSectionHeaderDivider" />
+            <RelativeLayout android:id="@id/subscription_section" android:background="?buttonSelectableBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+                <ImageView android:id="@id/subscribed_icon" android:paddingLeft="16.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:importantForAccessibility="no" android:paddingStart="16.0dip" android:paddingEnd="8.0dip" android:layout_alignParentStart="true" />
+                <CheckBox android:id="@id/subscribed" style="@style/CircleSettingsItemCheckbox" />
+                <RelativeLayout android:layout_toLeftOf="@id/subscribed" android:layout_toRightOf="@id/subscribed_icon" android:layout_toStartOf="@id/subscribed" android:layout_toEndOf="@id/subscribed_icon" style="@style/CircleSettingsItemText">
+                    <TextView android:id="@id/subscribe_label" android:text="@string/circle_settings_subscribe" style="@style/CircleSettingsItemLabel" />
+                    <TextView android:id="@id/subscribe_value" android:text="@string/circle_settings_get_notified" android:layout_below="@id/subscribe_label" style="@style/CircleSettingsItemDescription" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <TextView android:gravity="center" android:id="@id/subscription_disabled" android:paddingTop="4.0dip" android:paddingBottom="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/square_subscriptions_disabled" />
+            <View android:id="@id/subscription_divider" style="@style/Divider" />
+            <View android:id="@id/your_circles_section_gap" android:layout_width="fill_parent" android:layout_height="18.0dip" />
+            <TextView android:id="@id/your_circles_section_title" android:text="@string/circle_settings_your_circles_section_header" style="@style/CircleSettingsSectionHeader" />
+            <View android:id="@id/your_circles_title_divider" style="@style/CircleSettingsSectionHeaderDivider" />
+            <RelativeLayout android:id="@id/your_circles_section" android:background="?buttonSelectableBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+                <ImageView android:id="@id/your_circles_icon" android:paddingLeft="16.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_circles_grey600_24" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:importantForAccessibility="no" android:paddingStart="16.0dip" android:paddingEnd="8.0dip" android:layout_alignParentStart="true" />
+                <CheckBox android:id="@id/your_circles" style="@style/CircleSettingsItemCheckbox" />
+                <RelativeLayout android:layout_toLeftOf="@id/your_circles" android:layout_toRightOf="@id/your_circles_icon" android:layout_toStartOf="@id/your_circles" android:layout_toEndOf="@id/your_circles_icon" style="@style/CircleSettingsItemText">
+                    <TextView android:id="@id/your_circles_label" android:text="@string/circle_settings_your_circles" style="@style/CircleSettingsItemLabel" />
+                    <TextView android:id="@id/your_circles_value" android:layout_below="@id/your_circles_label" style="@style/CircleSettingsItemDescription" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <View android:id="@id/your_circles_divider" style="@style/Divider" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/empty_layout" />
+</com.google.android.libraries.social.ui.views.FullSizeLinearLayout>

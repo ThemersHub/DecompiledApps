@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/quantum_white_100" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/space_header" />
+    <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/profile_follow_button_container" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/profile_follow_button_margin_12">
+        <FrameLayout android:orientation="horizontal" android:id="@id/profile_follow_button_body" android:paddingLeft="@dimen/profile_follow_button_padding_24" android:paddingRight="@dimen/profile_follow_button_padding_24" android:layout_width="wrap_content" android:layout_height="@dimen/profile_follow_button_height_36" android:layout_marginBottom="@dimen/profile_follow_button_margin_12" android:maxWidth="@dimen/profile_follow_button_max_width">
+            <ProgressBar android:layout_gravity="center" android:id="@id/profile_follow_button_progress" android:visibility="gone" android:layout_width="@dimen/profile_follow_button_progress_size" android:layout_height="@dimen/profile_follow_button_progress_size" android:indeterminate="true" />
+            <TextView android:textSize="@dimen/space_header_follow_button_text_size" android:textStyle="normal" android:ellipsize="end" android:gravity="center" android:id="@id/profile_follow_button" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:textAllCaps="true" />
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

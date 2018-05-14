@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/toastbar_container" android:paddingLeft="@dimen/bt_toastbar_padding_side" android:paddingRight="@dimen/bt_toastbar_padding_side" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/toastbar" style="@style/bt_ToastBar">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bt_toastbar_two_button_marginTop" android:layout_marginBottom="@dimen/bt_toastbar_two_button_marginBottom">
+            <TextView android:layout_gravity="center_horizontal" android:id="@id/toastbar_message" android:paddingBottom="@dimen/bt_toastbar_two_button_paddingBottom" style="@style/bt_ToastbarTextLine" />
+            <TextView android:layout_gravity="center_horizontal" android:id="@id/toastbar_message2" style="@style/bt_ToastbarTextLine" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/toastbar_buttons" android:layout_width="fill_parent" android:layout_height="@dimen/bt_toastbar_two_button_height">
+            <Button android:id="@id/toastbar_button1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/bt_ToastbarButton" />
+            <View style="@style/bt_ToastbarDivider" />
+            <Button android:id="@id/toastbar_button2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/bt_ToastbarButton" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

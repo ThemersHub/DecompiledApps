@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/create_comment_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ScrollView android:id="@id/create_comment_scroll_view" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="2.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/comment_footer_margin_12" android:layout_marginBottom="@dimen/comment_footer_margin_12" android:minHeight="@dimen/comment_footer_min_height" android:layout_marginStart="@dimen/comment_footer_margin_8" android:layout_marginEnd="@dimen/comment_footer_margin_16">
+                    <com.google.android.libraries.social.avatars.ui.AvatarView android:id="@id/comment_footer_my_account_avatar" android:padding="@dimen/comment_footer_margin_12" android:clickable="false" android:layout_width="@dimen/comment_footer_min_height" android:layout_height="@dimen/comment_footer_min_height" shape="round" />
+                    <include layout="@layout/comment_edit_text_view" />
+                </LinearLayout>
+                <RelativeLayout android:id="@id/embed_media_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:layout_marginStart="@dimen/comment_footer_margin_8" android:layout_marginEnd="@dimen/comment_footer_margin_8">
+                    <include android:id="@id/loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_toStartOf="@id/embed_clear_preview" layout="@layout/comment_loading_layout" />
+                    <com.google.android.libraries.social.cardkit.basiccard.BasicCardView android:id="@id/basic_card_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toStartOf="@id/embed_clear_preview" app:refreshIconEnabled="true" />
+                    <com.google.android.libraries.toolkit.mediaview.MediaView android:id="@id/embed_media" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toStartOf="@id/embed_clear_preview" />
+                    <ImageButton android:id="@id/embed_clear_preview" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_cancel_grey600_24" android:contentDescription="@string/embed_remove_preview_content_description" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+        <View android:layout_gravity="top" android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        <include android:layout_gravity="bottom" android:id="@id/comment_footer_bar_buttons" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/comment_footer_min_height" android:layout_marginLeft="@dimen/comment_footer_margin_8" android:layout_marginRight="@dimen/comment_footer_margin_8" layout="@layout/comment_footer_bar_buttons" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="bottom" android:id="@id/join_square_view" android:background="#ffffffff" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="2.0dip">
+        <TextView android:layout_gravity="center_vertical" android:padding="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/square_post_join_to_comment" android:layout_weight="1.0" />
+        <Button android:textSize="14.0sp" android:textColor="@color/quantum_white_100" android:layout_gravity="center_vertical" android:id="@id/join_square_button" android:background="@color/quantum_googgreen500" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:paddingStart="24.0dip" android:paddingEnd="24.0dip" />
+    </LinearLayout>
+</FrameLayout>

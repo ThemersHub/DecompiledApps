@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.plus.views.PhotoAlbumView android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/transient_server_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" layout="@layout/transient_server_error" />
+    <com.google.android.libraries.social.ui.swiperefresh.SwipeRefreshLayoutWithUpScroll android:id="@id/pull_to_refresh" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/transient_server_error" android:layout_alignWithParentIfMissing="true">
+        <GridView android:id="@id/grid" android:background="@color/quantum_white_100" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.google.android.libraries.social.ui.swiperefresh.SwipeRefreshLayoutWithUpScroll>
+    <include layout="@layout/empty_view_layout" />
+</com.google.android.apps.plus.views.PhotoAlbumView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/dismiss_all_header" android:background="@drawable/notification_item_background_read" android:paddingLeft="@dimen/notifications_header_padding_x" android:paddingRight="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/notifications_header_height" android:paddingStart="@dimen/notifications_header_padding_x" android:paddingEnd="0.0dip">
+        <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/text_gray" android:gravity="start|center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/notifications_legacy_dismiss_all" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/dismiss_all_header_icon" android:paddingLeft="@dimen/notifications_header_padding_x" android:paddingRight="@dimen/notifications_header_padding_x" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_clear_all_grey600_24" android:contentDescription="@string/menu_notifications_sweep" />
+    </LinearLayout>
+    <com.google.android.libraries.social.ui.swiperefresh.SwipeRefreshLayoutWithUpScroll android:layout_gravity="end" android:id="@id/pull_to_refresh" android:background="@color/notification_bar_background" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.apps.plus.views.UnreadNotificationListView android:id="@id/unread_notification_bar" android:background="@color/notification_bar_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/switcher_background" android:divider="@color/notification_divider" android:dividerHeight="@dimen/plusone_notification_divider_height" />
+            <com.google.android.apps.plus.views.ReadNotificationListView android:id="@id/read_notification_bar" android:background="@color/notification_bar_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/switcher_background" android:divider="@color/notification_divider" android:dividerHeight="@dimen/notification_divider_height" />
+        </FrameLayout>
+    </com.google.android.libraries.social.ui.swiperefresh.SwipeRefreshLayoutWithUpScroll>
+</LinearLayout>

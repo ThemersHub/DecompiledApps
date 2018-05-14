@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" package="com.google.android.apps.plus" platformBuildVersionCode="27" platformBuildVersionName="P">
+    <permission android:name="com.google.android.apps.plus.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <permission android:name="com.android.gallery3d.filtershow.permission.READ" android:protectionLevel="signature"/>
+    <permission android:name="com.android.gallery3d.filtershow.permission.WRITE" android:protectionLevel="signature"/>
+    <permission android:name="com.google.android.gallery3d.permission.GALLERY_PROVIDER" android:protectionLevel="signature"/>
+    <permission android:description="@string/permdesc_googlephotos" android:label="@string/permlab_googlephotos" android:name="com.google.android.apps.photos.permission.GOOGLE_PHOTOS" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:protectionLevel="dangerous"/>
+    <permission android:name="com.google.android.apps.plus.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.apps.plus.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.android.gallery3d.filtershow.permission.READ"/>
+    <uses-permission android:name="com.android.gallery3d.filtershow.permission.WRITE"/>
+    <uses-permission android:name="com.google.android.gallery3d.permission.GALLERY_PROVIDER"/>
+    <uses-permission android:name="com.google.android.apps.photos.permission.GOOGLE_PHOTOS"/>
+    <uses-permission android:name="com.google.android.apps.plus.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_SOCIAL_STREAM"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_PROFILE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SOCIAL_STREAM"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.hangouts.START_HANGOUT"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.googlenav.friend.permission.OPT_IN"/>
+    <uses-permission-sdk-23 android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <permission android:description="@string/permdesc_picasastore" android:label="@string/permlab_picasastore" android:name="com.google.android.apps.plus.permission.PICASA_STORE" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:protectionLevel="dangerous"/>
+    <application android:backupAgent="com.google.android.apps.plus.backup.PlusBackupAgent" android:hardwareAccelerated="true" android:icon="@mipmap/google_plus_launcher" android:label="@string/app_name" android:largeHeap="true" android:logo="@mipmap/google_plus_launcher" android:name="com.google.android.apps.plus.Gplus_Application" android:requiredAccountType="com.google" android:supportsRtl="@bool/supports_rtl">
+        <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTop" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.HomeActivity" android:taskAffinity="@string/plus_affinity" android:theme="@style/Theme.Plus.Launcher.NoActionBar" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.INFO"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.widget.CIRCLE_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.phone.AddProfilePhotoSpringboardActivity" android:theme="@style/Theme.Host.NoActionBar"/>
+        <activity android:exported="true" android:name="com.google.android.apps.photos.phone.PhotosLauncherActivity" android:taskAffinity="@string/photos_affinity" android:theme="@style/Theme.NoDisplay.NoActionBar"/>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.phone.PhotosAppPromoActivity" android:theme="@style/Theme.Host.NoActionBar"/>
+        <activity android:exported="false" android:name="com.google.android.apps.photos.backuppromo.BackupPromoActivity" android:theme="@style/Theme.Host.NoActionBar"/>
+        <activity android:exported="false" android:icon="@mipmap/quantum_logo_photos_launcher_color_48" android:label="@string/photos_app_name" android:launchMode="singleTop" android:name="com.google.android.apps.photos.phone.PhotosHomeActivity" android:taskAffinity="@string/photos_affinity" android:theme="@style/Theme.Photos.Material"/>
+        <activity android:exported="false" android:icon="@mipmap/quantum_logo_photos_launcher_color_48" android:label="@string/photos_app_name" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.photos.phone.GetContentActivity" android:theme="@style/Theme.Photos.Material"/>
+        <activity android:exported="false" android:icon="@mipmap/quantum_logo_photos_launcher_color_48" android:label="@string/photos_app_name" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.photos.phone.SendContentActivity" android:theme="@style/Theme.Host.FullScreenTransparent.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:enabled="@bool/at_least_v11" android:exported="false" android:icon="@mipmap/quantum_logo_photos_launcher_color_48" android:label="@string/photos_app_name" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.photos.phone.SetWallpaperActivity" android:theme="@style/Theme.Translucent.NoTitleBar.NoActionBar"/>
+        <activity android:exported="false" android:label="@string/home_screen_people_label" android:name="com.google.android.apps.plus.phone.PeopleHomePageActivity" android:theme="@style/Theme.Arkham.NormalWhiteActionBar.WithTabs"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.CircleSettingsActivity" android:theme="@style/TabletCircleBrowserTheme.NoActionBar.Accent"/>
+        <activity android:exported="false" android:label="@string/people_list_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.PeopleListActivity" android:theme="@style/Theme.Arkham.DismissibleTabletCircleBrowserTheme"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.EventsActivity" android:theme="@style/Theme.Arkham"/>
+        <activity android:exported="false" android:label="@string/app_name" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.EventActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Arkham">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.social.showtimerefresh.VIEW_HOA_EVENT_DETAILS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/stream_one_up_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.HostStreamOneUpActivity" android:theme="@style/StreamOneUp" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.widget.ACTIVITY_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.PhotoStreamOneUpActivity" android:taskAffinity="@string/photos_affinity" android:theme="@style/PhotoStreamOneUp" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.EditCommentActivity" android:theme="@style/Theme.Arkham.TabletCircleBrowserTheme" android:windowSoftInputMode="stateVisible"/>
+        <activity android:exported="false" android:label="@string/edit_post" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.EditPostActivity" android:theme="@style/Theme.Arkham.TabletCircleBrowserTheme" android:windowSoftInputMode="stateVisible"/>
+        <activity android:exported="false" android:label="@string/event_activity_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.HostEventInviteeListActivity" android:parentActivityName="com.google.android.apps.plus.phone.EventActivity" android:theme="@style/Theme.Arkham.TabletCircleBrowserTheme"/>
+        <activity android:exported="false" android:label="@string/create_event_activity_title" android:launchMode="singleTop" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.NewEventActivity" android:theme="@style/TabletCircleBrowserTheme.NoActionBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:exported="false" android:label="@string/event_picker_activity_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.HostEventThemePickerActivity" android:theme="@style/Theme.Arkham"/>
+        <activity android:exported="false" android:label="@string/event_location_activity_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.EventLocationActivity" android:theme="@style/Theme.Arkham.TabletCircleBrowserTheme.Dark"/>
+        <activity android:exported="false" android:label="@string/edit_event_activity_title" android:launchMode="singleTop" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.EditEventActivity" android:theme="@style/TabletCircleBrowserTheme.NoActionBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:exported="false" android:label="@string/topic_stream_activity" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.TopicStreamActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Arkham" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/search_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.UnifiedSearchActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Arkham.NormalWhiteActionBarWithShadow" android:windowSoftInputMode="stateHidden"/>
+        <activity android:exported="false" android:label="@string/search_activity_label" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.PhotoTileSearchActivity" android:parentActivityName="com.google.android.apps.photos.phone.PhotosHomeActivity" android:theme="@style/Theme.Photos.Material" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:exported="false" android:label="@string/home_screen_profile_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.OneProfileActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:taskAffinity="@string/plus_affinity" android:theme="@style/Theme.Arkham.Transparent.Accent" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.phone.ProfileEditActivity" android:theme="@style/TabletCircleBrowserTheme.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.phone.ProfileActionGatewayActivity" android:theme="@style/Theme.Translucent.NoTitleBar.NoActionBar"/>
+        <activity android:exported="true" android:name="com.google.android.apps.plus.phone.ViewCircleActivity" android:theme="@style/Theme.Translucent.NoTitleBar.NoActionBar"/>
+        <activity android:exported="true" android:name="com.google.android.apps.plus.phone.InviteContactSpringboardActivity" android:theme="@style/Theme.Translucent.NoTitleBar.NoActionBar"/>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.phone.InviteContactActivity" android:theme="@style/Theme.Translucent.NoTitleBar.NoActionBar"/>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.phone.PeopleSearchActivity" android:theme="@style/TabletCircleBrowserTheme" android:windowSoftInputMode="stateVisible"/>
+        <activity android:exported="false" android:label="@string/photo_pager_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.HostStreamPhotoPagerActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Photos.Material.TransparentActionBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:exported="true" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.photos.viewer.pager.HostPhotoPagerActivity" android:parentActivityName="com.google.android.apps.photos.phone.PhotosHomeActivity" android:taskAffinity="@string/photos_affinity" android:theme="@style/Theme.Photos.Material.TransparentActionBar" android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.photos.phone.PhotosHomeActivity"/>
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.widget.PHOTO_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:icon="@mipmap/quantum_logo_photos_launcher_color_48" android:label="@string/photos_app_name" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.HostPhotoViewIntentActivity" android:theme="@style/Theme.Host.NoActionBar" android:windowSoftInputMode="stateUnchanged"/>
+        <activity android:exported="false" android:icon="@mipmap/quantum_logo_photos_launcher_color_48" android:label="@string/photos_app_name" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.HostPhotoViewIntentPhotoOneUpActivity" android:theme="@style/Theme.Photos.Material.TransparentActionBar" android:windowSoftInputMode="stateUnchanged"/>
+        <activity android:exported="false" android:icon="@mipmap/quantum_logo_photos_launcher_color_48" android:label="@string/photos_app_name" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.HostPhotoViewIntentPhotoTileSearchActivity" android:theme="@style/Theme.Photos.Material" android:windowSoftInputMode="stateUnchanged"/>
+        <activity android:exported="false" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.AddToAlbumActivity" android:parentActivityName="com.google.android.apps.plus.phone.HostStreamPhotoPagerActivity" android:theme="@style/Theme.Photos.Material.ActionMode">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".phone.HomeActivity"/>
+        </activity>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.HostStreamSingleAlbumTileActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Arkham" android:windowSoftInputMode="stateHidden"/>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.phone.HostSingleAlbumTileActivity" android:theme="@style/Theme.Photos.Material" android:windowSoftInputMode="stateHidden"/>
+        <activity android:exported="false" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.HostAllAlbumsTileActivity" android:theme="@style/Theme.Photos.Material"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.HostStreamAllFoldersTileActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Arkham"/>
+        <activity android:exported="false" android:icon="@mipmap/quantum_logo_photos_launcher_color_48" android:label="@string/photos_app_name" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.HostAllFoldersTileActivity" android:taskAffinity="@string/photos_affinity" android:theme="@style/Theme.Photos.Material"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.HostStreamPhotosHomeTileActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Arkham"/>
+        <activity android:exported="false" android:icon="@mipmap/quantum_logo_photos_launcher_color_48" android:label="@string/photos_app_name" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.SelectFromHomePhotosActivity" android:taskAffinity="@string/photos_affinity" android:theme="@style/Theme.Photos.Material.ActionMode"/>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.phone.HostLocalCollectionTileActivity" android:theme="@style/Theme.Photos.Material"/>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.phone.PhotoTilePickerFacadeActivity" android:theme="@style/Theme.Translucent.NoTitleBar.NoActionBar"/>
+        <activity android:exported="false" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.PhotoTilePickerActivity" android:theme="@style/Theme.Photos.Material"/>
+        <activity android:exported="false" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.TileCropActivity" android:theme="@style/Theme.Photos.Material.WithDarkTextButton"/>
+        <activity android:exported="false" android:label="@string/album_share_dialog_title" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.AlbumShareActivity" android:theme="@style/Theme.EmeraldSeaCompat.AlertDialog"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:icon="@mipmap/quantum_logo_photos_launcher_color_48" android:label="@string/photos_app_name" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.VideoViewActivity" android:theme="@style/VideoViewTheme.NoActionBar"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.settings.SettingsActivity" android:theme="@style/Theme.Settings.Preferences.Arkham"/>
+        <activity android:exported="false" android:label="@string/preferences_account_status_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.AccountStatusActivity" android:theme="@style/Theme.Arkham"/>
+        <activity android:exported="false" android:label="@string/preferences_network_transactions_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.NetworkTransactionsActivity" android:theme="@style/Theme.Arkham"/>
+        <activity android:exported="false" android:label="Network Logs" android:name="com.google.android.apps.plus.phone.NetworkLogsActivity" android:theme="@style/Theme.EmeraldSea.NoActionBar"/>
+        <activity android:exported="false" android:label="@string/preferences_network_bandwidth_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.NetworkStatisticsActivity" android:theme="@style/Theme.Arkham"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.UploadStatisticsActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Arkham"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:label="@string/photo_preference_instant_upload_button" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.settings.InstantUploadSettingsActivity" android:theme="@style/Theme.Photos.Material.Settings.Preferences">
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.INSTANT_UPLOAD_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.settings.InstantUploadSettingsLauncherActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="orientation" android:exported="false" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.AutoBackupPromoActivity" android:theme="@style/Theme.EmeraldSeaCompat.Dialog"/>
+        <activity android:exported="false" android:label="@string/photos_preference_title" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.settings.PhotosSettingsActivity" android:theme="@style/Theme.Photos.Material.Settings.Preferences"/>
+        <activity android:exported="false" android:label="@string/preferences_about_button_photos" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.settings.PhotosAboutSettingsActivity" android:theme="@style/Theme.Photos.Material.Settings.Preferences"/>
+        <activity android:exported="false" android:label="@string/photos_preference_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.settings.googlephotos.PhotosDebugActivity" android:theme="@style/Theme.Settings.Preferences.Arkham"/>
+        <activity android:exported="false" android:label="@string/communication_preference_notifications_button" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.settings.NotificationSettingsActivity" android:theme="@style/Theme.Settings.Preferences.Arkham">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.social.settings.NOTIFICATION_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="@string/sharing_preference_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.settings.SharingSettingsActivity" android:theme="@style/Theme.Settings.Preferences.Arkham"/>
+        <activity android:exported="false" android:label="@string/contacts_preference_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.settings.ContactsSettingsActivity" android:theme="@style/Theme.Settings.Preferences.Arkham"/>
+        <activity android:exported="false" android:label="@string/privacy_settings_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.settings.PrivacySettingsActivity" android:theme="@style/Theme.Settings.Preferences.Arkham"/>
+        <activity android:exported="false" android:label="@string/preferences_tracing_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.settings.GplusTracingSettingsActivity" android:theme="@style/Theme.Settings.Preferences.Arkham"/>
+        <activity android:exported="false" android:label="@string/account_management_preference_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.settings.MainSettingsPlusActivity" android:theme="@style/Theme.Settings.Preferences.Arkham"/>
+        <activity android:exported="false" android:label="@string/account_management_preference_title" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.settings.MainSettingsPhotosActivity" android:theme="@style/Theme.Photos.Material.Settings.Preferences"/>
+        <activity android:exported="false" android:label="@string/preferences_developer_button" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.settings.GplusDeveloperSettingsActivity" android:theme="@style/Theme.Settings.Preferences.Arkham"/>
+        <activity android:exported="false" android:label="@string/stream_settings_category" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.settings.StreamSettingsActivity" android:theme="@style/Theme.Settings.Preferences.Arkham"/>
+        <activity android:enabled="false" android:exported="true" android:icon="@mipmap/quantum_logo_photos_launcher_color_48" android:label="@string/photos_app_name" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.PhotosLegacyLauncherActivity" android:taskAffinity="@string/photos_affinity" android:theme="@style/Theme.Host.Transparent.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.APP_GALLERY"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.phone.PanoramaViewerActivity" android:theme="@style/Theme.Translucent.NoTitleBar.NoActionBar"/>
+        <activity android:exported="true" android:name="com.google.android.apps.plus.widget.EsWidgetConfigurationActivity" android:theme="@style/TabletCircleBrowserTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.photos.phone.ManualAwesomeActivity" android:taskAffinity="@string/photos_affinity" android:theme="@style/Theme.Host.FullScreenTransparent.NoActionBar"/>
+        <activity android:exported="false" android:label="Home" android:launchMode="singleTop" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.BinderHomeActivity" android:theme="@style/Theme.Arkham.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.plus.service.PhotosAppTransitionMonitor">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.plus.service.PicasaNetworkReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.picasasync.op_report"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:exported="true" android:name="com.google.android.apps.plus.service.PackageAddedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.registerlistener"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.plus.service.EsSyncAdapterServiceAlarmReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.essyncadapter"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.plus.service.MandatorySyncAlarmReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.mandatorysync"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.plus.service.BatteryReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="@bool/display_widgets" android:exported="true" android:label="@string/widget_posts_title" android:name="com.google.android.apps.plus.widget.EsWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/es_widget"/>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.plus.notifications.actions.CommentActionReceiver"/>
+        <service android:exported="false" android:name="com.google.android.apps.plus.service.PicasaNetworkService"/>
+        <service android:exported="true" android:name="com.google.android.apps.photos.service.PhotosService"/>
+        <service android:exported="false" android:name="com.google.android.apps.plus.service.EsService"/>
+        <service android:exported="true" android:name="com.google.android.apps.plus.service.EsSyncAdapterService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/es_sync_adapter"/>
+            <meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@xml/es_contacts"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.plus.service.EsSyncAdapterService$MandatorySyncJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.google.android.apps.plus.service.EsSyncAdapterService$MandatorySyncService"/>
+        <service android:exported="true" android:name="com.google.android.libraries.social.autobackup.AutoBackupSyncService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/google_photos_upsync_adapter"/>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.photos.service.GooglePhotoDownsyncService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/google_photos_downsync_adapter"/>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.plus.service.AndroidContactsNotificationService"/>
+        <service android:exported="false" android:name="com.google.android.apps.plus.widget.EsWidgetService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.google.android.apps.plus.service.SkyjamPlaybackService"/>
+        <service android:exported="false" android:name="com.google.android.apps.plus.service.SlideshowService"/>
+        <meta-data android:name="gcore_cp2_sync_supported" android:value="true"/>
+        <meta-data android:name="com.google.android.social.reviews.version" android:value="1"/>
+        <meta-data android:name="com.google.android.apps.vega.version" android:value="2"/>
+        <meta-data android:name="com.google.android.youtube.API_KEY" android:value="AIzaSyAYfoSs86LzFMXNWJhyeGtZp0ijdZb_uGU"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAYfoSs86LzFMXNWJhyeGtZp0ijdZb_uGU"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:exported="false" android:label="@string/activity_log_action_bar_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.activitylog.impl.ActivityLogActivity" android:theme="@style/Theme.ActivityLog"/>
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIpRNtrYcYv4AgSUNCoVKX7GUXJyYeKOyav-3C3A"/>
+        <activity android:exported="false" android:label="@string/collexions_home_activity_label" android:launchMode="singleTop" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.collexions.home.CollexionsHomePageActivity" android:theme="@style/Theme.CollexionsHomePage.Nav.NoActionBar"/>
+        <activity android:exported="false" android:label="@string/collexion_stream_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.collexions.impl.CollectionStreamActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Arkham.Transparent.Accent" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/collexion_follower_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.collexions.impl.CollectionFollowerListActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Arkham.EditAudienceTheme" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:exported="false" android:label="@string/collexion_home_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.collexions.impl.CollexionHomePageActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Collexion"/>
+        <activity android:exported="false" android:label="@string/collexions_from_circles_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.collexions.impl.CollexionsFromCirclesActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Collexion"/>
+        <activity android:exported="false" android:label="@string/featured_collexions_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.collexions.impl.FeaturedCollexionsActivity" android:theme="@style/Theme.Collexion"/>
+        <activity android:exported="false" android:label="@string/featured_collexions_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.collexions.lists.featured.FeaturedCollexionsActivity" android:theme="@style/Theme.Collexion"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.collexions.lists.search.SearchCollexionsActivity" android:theme="@style/Theme.Collexion"/>
+        <activity android:exported="false" android:label="@string/collexion_activity_label" android:name="com.google.android.apps.plus.collexions.stream.CollexionActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Collexion.NoActionBar"/>
+        <activity android:exported="false" android:label="@string/edit_comment_activity_label" android:name="com.google.android.apps.plus.comments.tiktok.EditCommentActivity" android:theme="@style/Theme.Arkham.Transparent.Accent.NoActionBar"/>
+        <activity android:exported="false" android:label="@string/comment_plus_one_list_activity_label" android:launchMode="singleTop" android:name="com.google.android.apps.plus.comments.tiktok.CommentPlusOneListActivity" android:theme="@style/Theme.CommentPlusOneListActivity"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.plus.customtabs.impl.CustomTabsShareButtonReceiver"/>
+        <activity android:exported="false" android:label="" android:launchMode="singleTop" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.home.TikTokHomeActivity" android:theme="@style/Theme.Plus" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/lightbox_activity_label" android:name="com.google.android.apps.plus.lightbox.LightBoxActivity" android:theme="@style/Theme.Plus.Transparent"/>
+        <activity android:exported="false" android:label="@string/album_stream_activity_label" android:launchMode="singleTop" android:name="com.google.android.apps.plus.lightbox.AlbumStreamActivity" android:theme="@style/Theme.Plus.Transparent"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.plus.locale.LocaleChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.plus.locale.LocaleChangeJobIntentService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="false" android:label="@string/label_plus_media_picker" android:name="com.google.android.apps.plus.mediapicker.MediaPickerActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.navigation.common.MapsLocationSharingRedirectActivity" android:theme="@style/Theme.Arkham.NoActionBar"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.plus.notifications.channels.ChannelsUpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:label="@string/highlights_stream_title" android:name="com.google.android.apps.plus.notifications.highlights.HighlightsStreamActivity" android:theme="@style/Theme.Arkham.NormalWhiteActionBarWithShadow"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.people.lists.search.SearchPeopleActivity" android:theme="@style/Theme.Arkham.NormalWhiteActionBarWithShadow"/>
+        <activity android:exported="false" android:label="@string/profile_editor_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.profile.impl.EditProfileActivity" android:theme="@style/Theme.EditProfile" android:windowSoftInputMode="stateHidden"/>
+        <activity android:exported="false" android:label="@string/edit_profile_flairs_settings_communities_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.profile.impl.EditProfileFlairSettingsCommunitiesActivity" android:theme="@style/Theme.EditProfileSubPage"/>
+        <activity android:exported="false" android:label="@string/edit_profile_pinned_flairs_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.profile.impl.EditProfilePinnedFlairsActivity" android:theme="@style/Theme.EditProfileSubPage"/>
+        <activity android:exported="false" android:label="@string/profile_activity_label" android:name="com.google.android.apps.plus.profile.stream.ProfileActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Plus"/>
+        <activity android:exported="false" android:label="@string/profile_flair_title" android:name="com.google.android.apps.plus.profile.stream.ProfileFlairHomeTikTokActivity" android:parentActivityName="com.google.android.apps.plus.profile.stream.ProfileActivity" android:theme="@style/Theme.Arkham.Transparent.Accent.NoActionBar"/>
+        <activity android:exported="false" android:label="@string/profile_communities_and_collections_title" android:name="com.google.android.apps.plus.profile.stream.ProfilePaletteActivity" android:parentActivityName="com.google.android.apps.plus.profile.stream.ProfileActivity" android:theme="@style/Theme.Arkham.NormalWhiteActionBarWithShadow"/>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.profile.stream.ProfileVanityTransitionalActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Arkham.Transparent.Accent.NoActionBar"/>
+        <activity android:exported="false" android:label="@string/recommended_posts" android:name="com.google.android.apps.plus.recommendations.stream.RecommendedActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Plus"/>
+        <activity android:exported="false" android:label="@string/search_stream_label" android:name="com.google.android.apps.plus.search.stream.SearchStreamActivity" android:theme="@style/Theme.Arkham.NormalWhiteActionBarWithShadow"/>
+        <activity android:exported="false" android:label="@string/preferences_about_button" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.settings.about.GplusAboutSettingsActivity" android:theme="@style/Theme.Settings.Preferences.Arkham"/>
+        <activity android:exported="false" android:label="@string/account_management_preference_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.settings.impl.GstsSettingsActivity" android:theme="@style/Theme.Settings.Preferences.Arkham"/>
+        <activity android:exported="false" android:label="@string/sharebox_activity_name" android:name="com.google.android.apps.plus.sharebox.impl.PlusShareboxActivity" android:theme="@style/Theme.Sharekit"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="com.google.android.apps.plus.sharebox.reshare.ReshareChooserActivity" android:theme="@style/Theme.SharekitReshare.BottomSheet"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.sharesheet.impl.StreamMiniShareActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Host.FullScreenTransparent" android:windowSoftInputMode="stateHidden"/>
+        <activity android:exported="false" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.sharesheet.impl.MiniShareActivity" android:parentActivityName="com.google.android.apps.photos.phone.PhotosHomeActivity" android:theme="@style/Theme.Host.FullScreenTransparent" android:windowSoftInputMode="stateHidden"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="com.google.android.apps.plus.squares.authormoderation.ModeratePostAuthorBottomSheetActivity" android:theme="@style/Theme.Social.Transparent"/>
+        <activity android:exported="false" android:label="@string/squares_home_activity_label" android:launchMode="singleTop" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.squares.home.SquaresHomePageActivity" android:theme="@style/Theme.Squares.HomePage.Nav.NoActionBar"/>
+        <activity android:exported="false" android:label="@string/square_members" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.squares.impl.SquareMemberListActivity" android:theme="@style/Theme.Square"/>
+        <activity android:exported="false" android:label="@string/square_member_search_hint" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.squares.impl.HostSquareMemberSearchActivity" android:theme="@style/Theme.Square" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:exported="false" android:label="@string/square_stream_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.squares.impl.HostSquareStreamActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Arkham.Overlay.Accent" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/square_moderator_tools_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.squares.impl.SquareModeratorToolsActivity" android:theme="@style/Theme.Square"/>
+        <activity android:exported="false" android:label="@string/square_settings_menu_entry" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.squares.impl.SquareStreamSettingsActivity" android:theme="@style/Theme.Square.Settings"/>
+        <activity android:exported="false" android:label="@string/squares_invite_by_link_title" android:launchMode="singleTop" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.squares.invitebylink.SquareInviteByLinkActivity" android:theme="@style/Theme.Squares.InviteByLink"/>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.squares.leaverestriction.SynchronizedMemberLeaveActivity" android:parentActivityName="com.google.android.apps.plus.squares.stream.SquareActivity" android:theme="@style/Theme.Plus"/>
+        <activity android:exported="false" android:label="@string/squares_listitem_suggestions_header" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.squares.lists.recommended.RecommendedSquaresActivity" android:theme="@style/Theme.Square"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.squares.lists.search.SearchSquaresActivity" android:theme="@style/Theme.Square"/>
+        <activity android:exported="false" android:label="@string/square_activity_label" android:name="com.google.android.apps.plus.squares.stream.SquareActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Square.NoActionBar"/>
+        <activity android:exported="false" android:label="@string/oneup_stream_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.stream.oneup.OneUpStreamActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Plus"/>
+        <activity android:exported="false" android:name="com.google.android.apps.plus.stream.oneup.OneUpVanityTransitionalActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.OneUp.Stream"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="com.google.android.apps.plus.stream.postactivities.PostActivitiesActivity" android:theme="@style/Theme.PostActivities"/>
+        <provider android:authorities="com.google.android.apps.plus.content.EsProvider;com.google.android.apps.plus" android:exported="false" android:label="@string/es_data" android:name="com.google.android.apps.plus.content.EsProvider">
+            <path-permission android:path="/search_suggest_query" android:readPermission="android.permission.GLOBAL_SEARCH"/>
+            <grant-uri-permission android:pathPattern=".*"/>
+        </provider>
+        <provider android:authorities="com.google.android.apps.photos.GooglePhotoDownsyncProvider" android:exported="false" android:label="@string/es_google_photos_downsync_provider" android:name="com.google.android.apps.photos.content.GooglePhotoDownsyncProvider" android:syncable="true"/>
+        <provider android:authorities="com.google.android.apps.plus.contentprovider" android:exported="true" android:grantUriPermissions="true" android:label="@string/es_google_photo_share_provider" android:name="com.google.android.apps.photos.content.GooglePhotosImageProvider" android:permission="com.google.android.apps.photos.permission.GOOGLE_PHOTOS" android:syncable="false"/>
+        <provider android:authorities="com.google.android.apps.plus.iu.EsGoogleIuProvider" android:exported="false" android:label="@string/google_plus_uploads" android:name="com.google.android.libraries.social.autobackup.AutoBackupProvider" android:syncable="true"/>
+        <provider android:authorities="com.google.android.apps.plus.mediapicker" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.apps.plus.mediapicker.MediaProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepaths"/>
+        </provider>
+        <provider android:authorities="com.google.android.apps.plus.lightbox" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.apps.plus.lightbox.LightboxPanoramaProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/media_filepaths"/>
+        </provider>
+        <activity android:exported="true" android:label="ReportAbuseActivity" android:name="com.google.android.libraries.abuse.reporting.ReportAbuseActivity"/>
+        <receiver android:exported="true" android:name="com.google.android.libraries.social.account.refresh.receiver.tiktok.TikTokAccountsChangedReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:label="@string/acl_picker_activity_label" android:name="com.google.android.libraries.social.acl2.AclPickerActivity" android:theme="@style/Theme.AclPickerTheme"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.libraries.social.albumupload.impl.UploadSchedulerService"/>
+        <service android:exported="false" android:name="com.google.android.libraries.social.async.BackgroundTaskService"/>
+        <service android:exported="false" android:name="com.google.android.libraries.social.async.BackgroundTaskJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.libraries.social.autobackup.AutoBackupEnvironment$BatteryReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.libraries.social.autobackup.AutoBackupEnvironment$ConnectivityReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.net.conn.BACKGROUND_DATA_SETTING_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.libraries.social.autobackup.PicasaQuotaChangedReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.social.autobackup.QUOTA_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.libraries.social.autobackup.AutoBackupStalledReceiver"/>
+        <receiver android:exported="false" android:name="com.google.android.libraries.social.autobackup.FolderAutoBackupReceiver"/>
+        <service android:exported="false" android:name="com.google.android.libraries.social.autobackup.FingerprintScannerIntentService"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.circlemembership.impl.CirclesMembershipActivity" android:theme="@style/Theme.CircleSelector"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.collexions.impl.abuse.CollexionAbuseAppealActivity" android:theme="@style/Theme.CollexionAbuse" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/clx_edit_label_edit_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.collexions.impl.EditCollexionActivity" android:theme="@style/Theme.CollexionEdit"/>
+        <activity android:exported="false" android:label="@string/collexion_banner_photo_edit_text" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.collexions.impl.CollexionBannerPhotoPickerActivity" android:theme="@style/Theme.CollexionBannerPhotoPicker"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.collexions.impl.search.CollexionSearchActivity" android:theme="@style/Theme.Collexion"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.collexions.impl.share.MovePostToCollexionActivity" android:theme="@style/CollectionSelectDialog"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.collexions.impl.share.RemovePostFromCollexionActivity" android:theme="@style/CollectionSelectDialog"/>
+        <activity android:exported="false" android:label="@string/clx_create_label_create_title" android:name="com.google.android.libraries.social.collexions.impl.share.CreateCollexionActivity" android:theme="@style/Theme.CollexionCreate" android:windowSoftInputMode="stateVisible"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.cropper.standaloneactivity.StandaloneCropActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <receiver android:exported="true" android:name="com.google.android.libraries.social.datacleanup.impl.LowStorageMonitor">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:label="@string/preferences_app_info_dump_title" android:name="com.google.android.libraries.social.debug.dump.settings.ApplicationInfoDumpActivity" android:theme="@style/Theme.AppCompat"/>
+        <activity android:exported="false" android:label="@string/developer_title" android:name="com.google.android.libraries.social.debug.settings.DeveloperSettingsActivity" android:theme="@style/Theme.Settings.Preferences"/>
+        <activity android:exported="false" android:label="@string/tracing_title" android:name="com.google.android.libraries.social.debug.settings.TracingSettingsActivity" android:theme="@style/Theme.Settings.Preferences"/>
+        <activity android:exported="true" android:name="com.google.android.libraries.social.debug.settings.TracingTokenQrCodeActivity" android:theme="@android:style/Theme.Holo.Light">
+            <meta-data android:name="native_handler" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="app" android:path="/apiaryTrace" android:scheme="gplus"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="@string/experiments_browser_title" android:name="com.google.android.libraries.social.experiments.debug.ExperimentsBrowserActivity" android:theme="@style/Theme.Arkham" android:windowSoftInputMode="stateHidden"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.gateway.GatewayActivity"/>
+        <receiver android:exported="true" android:name="com.google.android.libraries.social.gcm.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.google.android.apps.plus"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.gcoreclient.upgrade.UpgradeGooglePlayServicesActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.help.impl.LearnMoreTourActivity" android:theme="@style/Theme.Arkham.Overlay"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="true" android:label="@string/ingest_label" android:launchMode="singleInstance" android:name="com.google.android.libraries.social.ingest.IngestActivity" android:taskAffinity="com.google.android.libraries.social.ingest.IngestActivity" android:theme="@style/Theme.Ingest">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+            </intent-filter>
+            <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@xml/ingest_device_filter"/>
+        </activity>
+        <service android:exported="false" android:name="com.google.android.libraries.social.ingest.IngestService"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.jni.crashreporter.NativeCrashReporterActivity" android:process=":native_crash_reporter"/>
+        <receiver android:enabled="@bool/social_jobscheduler_enabled" android:exported="true" android:name="com.google.android.libraries.social.jobscheduler.JobSchedulerOnPackageUpgrade">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="@bool/social_jobscheduler_enabled" android:exported="true" android:name="com.google.android.libraries.social.jobscheduler.JobSchedulerOnBootComplete">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.login.LoginActivity" android:theme="@style/Oob.Transparent"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.login.settings.LoginSettingsActivity" android:theme="@style/Theme.Settings.Preferences"/>
+        <activity android:exported="false" android:label="@string/media_settings_activity" android:name="com.google.android.libraries.social.media.settings.DeveloperMediaQualitySettingsActivity" android:theme="@style/Theme.Settings.Preferences"/>
+        <receiver android:exported="true" android:name="com.google.android.libraries.social.mediamonitor.MediaMonitor">
+            <intent-filter>
+                <action android:name="com.android.camera.NEW_PICTURE"/>
+                <action android:name="android.hardware.action.NEW_PICTURE"/>
+                <action android:name="android.hardware.action.NEW_VIDEO"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.libraries.social.mediamonitor.AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.social.mediamonitor.FIRE_ALARM"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.libraries.social.mediamonitor.BackgroundThreadNotifierIntentService"/>
+        <service android:exported="false" android:name="com.google.android.libraries.social.mediamonitor.MediaMonitorJobSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="false" android:label="@string/label_media_picker" android:name="com.google.android.libraries.social.mediapicker.MediaPickerActivity" android:theme="@style/Theme.MediaPicker.NoActionBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.libraries.social.networkqueue.impl.NetworkQueueAlarmReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.networkqueueprocess"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:exported="false" android:name="com.google.android.libraries.social.networkqueue.impl.ConnectivityReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.libraries.social.networkqueue.impl.MediaMountedReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.libraries.social.networkqueue.impl.NetworkQueueService"/>
+        <service android:exported="false" android:name="com.google.android.libraries.social.networkqueue.impl.NetworkQueueJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.networkqueue.plusnotification.PendingItemsActivity" android:theme="@style/Theme.Arkham"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="com.google.android.libraries.social.networkqueue.plusnotification.PendingNetworkRequestBottomSheetActivity" android:theme="@style/Theme.Social.Transparent"/>
+        <activity android:exported="false" android:label="@string/guns_stats_title" android:name="com.google.android.libraries.social.notifications.debug.GunsStatisticsActivity" android:theme="@style/Theme.Arkham"/>
+        <receiver android:exported="true" android:name="com.google.android.libraries.social.notifications.impl.gcm.receiver.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.libraries.social.notifications.impl.AppUpgradeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.libraries.social.notifications.impl.LocaleChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.libraries.social.notifications.impl.TimezoneChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.libraries.social.notifications.impl.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:enabled="false" android:exported="true" android:name="com.google.android.libraries.social.notifications.impl.systemtray.NotificationSettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:name="com.google.android.libraries.social.notifications.scheduled.GunsScheduledTaskService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.libraries.social.notifications.service.GunsService">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.social.notifications.impl.NOTIFICATION_SELECTED"/>
+                <action android:name="com.google.android.libraries.social.notifications.impl.ACTOR_SELECTED"/>
+                <action android:name="com.google.android.libraries.social.notifications.impl.SYSTEM_NOTIFICATION_DISMISSED"/>
+                <action android:name="com.google.android.libraries.social.notifications.impl.SYNC_REGISTRATION_STATUS"/>
+                <action android:name="com.google.android.libraries.social.notifications.installation.ANDROID_ACCOUNT_CHANGED"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.onboarding.InterstitialsActivity" android:theme="@style/OnboardingTheme"/>
+        <provider android:authorities="@string/authority_name" android:exported="true" android:name="com.google.android.libraries.social.picasalegacy.PicasaPhotoContentProvider" android:permission="com.google.android.apps.plus.permission.PICASA_STORE"/>
+        <service android:exported="true" android:name="com.google.android.libraries.social.picasalegacy.PicasaStoreFacade$DummyService">
+            <intent-filter>
+                <action android:name="com.google.android.picasastore.PACKAGE_METADATA_LOOKUP"/>
+            </intent-filter>
+            <meta-data android:name="com.google.android.picasastore.priority" android:value="48"/>
+            <meta-data android:name="com.google.android.picasastore.authority" android:value="@string/authority_name"/>
+        </service>
+        <activity android:exported="false" android:launchMode="singleTop" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.poll.impl.PollOptionVoterListPagerActivity" android:theme="@style/Theme.Poll"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="com.google.android.libraries.social.profile.suspension.impl.ProfileSuspensionActivity" android:theme="@style/Theme.Social.NoTitleBar.NoActionBar"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.profile.viewer.flair.ProfileFlairHomeActivity" android:theme="@style/Theme.Arkham.WithNavigationTab"/>
+        <activity android:exported="false" android:label="@string/about_preference_category" android:name="com.google.android.libraries.social.settings.about.AboutSettingsActivity" android:theme="@style/Theme.Settings.Preferences"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.sharekit.impl.drafts.DraftsActivity" android:theme="@style/Theme.Arkham"/>
+        <receiver android:exported="false" android:name="com.google.android.libraries.social.silentfeedback.impl.SilentFeedbackReceiver" android:process=":crash_report"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.squares.impl.categories.SquareCategoryPickerActivity" android:theme="@style/Theme.Social.Transparent"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.squares.impl.create.CreateSquareActivity" android:theme="@style/Theme.Arkham.WithWhiteActionBar.Accent"/>
+        <activity android:exported="false" android:label="@string/squares_edit_activity_label" android:launchMode="singleTop" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.squares.impl.edit.EditSquareActivity" android:theme="@style/Theme.Square.Edit"/>
+        <activity android:exported="false" android:label="@string/squares_edit_categories_edit_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.squares.impl.edit.EditCategoriesActivity" android:theme="@style/Theme.Square.Edit" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="false" android:label="@string/squares_edit_links_edit_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.squares.impl.edit.EditLinksActivity" android:theme="@style/Theme.Square.Edit" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.squares.impl.homepage.SquareHomePageActivity" android:theme="@style/Theme.Square"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.squares.impl.homepage.DiscoverSquaresActivity" android:theme="@style/Theme.Square"/>
+        <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.squares.impl.search.SquareSearchActivity" android:theme="@style/Theme.Square"/>
+        <activity android:exported="false" android:label="@string/preferences_timing_breakdown_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.libraries.social.timingbreakdown.ui.TimingBreakdownActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Arkham">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.plus.phone.HomeActivity"/>
+        </activity>
+        <activity android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.libraries.stitch.incompat.PlatformBugActivity" android:process=":corrupted_install" android:stateNotNeeded="true" android:theme="@android:style/Theme.DeviceDefault"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.google.android.libraries.toolkit.videoplayer.VideoActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <service android:exported="false" android:name="com.google.apps.tiktok.concurrent.AndroidFutures$RefCountedService"/>
+        <service android:exported="false" android:name="com.google.apps.tiktok.concurrent.AndroidFutures$ForegroundService"/>
+        <receiver android:enabled="false" android:exported="false" android:name="com.google.apps.tiktok.delayedtasks.constraints.oncharger.OnChargerConstraintReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:exported="false" android:name="com.google.apps.tiktok.delayedtasks.constraints.onnetworkconnected.OnNetworkConnectedConstraintReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:exported="false" android:name="com.google.apps.tiktok.delayedtasks.constraints.onnetworkunmetered.OnNetworkUnmeteredConstraintReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.apps.tiktok.logging.backends.clientlogging.ClientLoggingReceiver_Receiver" android:process=":client_logging"/>
+        <receiver android:enabled="false" android:exported="false" android:name="com.google.apps.tiktok.sync.constraints.onbatteryokay.OnBatteryOkayConstraintReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:exported="true" android:name="com.google.apps.tiktok.sync.impl.gcm.SyncGmsPackageUpdatedReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.apps.tiktok.sync.impl.gcm.SyncGcoreGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.apps.tiktok.sync.impl.gcm.SyncFirebaseJobService">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.google.apps.tiktok.sync.impl.SyncReceiver_Receiver"/>
+        <receiver android:enabled="false" android:exported="true" android:name="com.google.apps.tiktok.sync.impl.SyncBootReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@style/Theme.AppInvite.Preview">
+            <intent-filter>
+                <action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.photos.phone.GetContentActivityAlias" android:targetActivity="com.google.android.apps.photos.phone.GetContentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.dir/image"/>
+                <data android:mimeType="vnd.android.cursor.dir/video"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.photos.phone.SendContentActivityAlias" android:targetActivity="com.google.android.apps.photos.phone.SendContentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/vnd.google.panorama360+jpg"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/vnd.google.panorama360+jpg"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.photos.phone.SetWallpaperActivityAlias" android:targetActivity="com.google.android.apps.photos.phone.SetWallpaperActivity">
+            <intent-filter android:label="@string/photos_setas_wallpaper">
+                <action android:name="android.intent.action.ATTACH_DATA"/>
+                <data android:mimeType="image/*"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:label="@string/photos_app_name">
+                <action android:name="android.intent.action.SET_WALLPAPER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.plus.ProfileActionSpringboard" android:targetActivity="com.google.android.libraries.social.gateway.GatewayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.googleplus.profile"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.plus.phone.HostPhotoViewIntentActivityAlias" android:targetActivity="com.google.android.apps.plus.phone.HostPhotoViewIntentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.dir/image"/>
+                <data android:mimeType="vnd.android.cursor.dir/video"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="com.android.camera.action.REVIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme=""/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="file"/>
+                <data android:mimeType="image/bmp"/>
+                <data android:mimeType="image/jpeg"/>
+                <data android:mimeType="image/gif"/>
+                <data android:mimeType="image/png"/>
+                <data android:mimeType="image/webp"/>
+                <data android:mimeType="image/x-ms-bmp"/>
+                <data android:mimeType="image/vnd.wap.wbmp"/>
+                <data android:mimeType="application/vnd.google.panorama360+jpg"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.plus.phone.VideoViewActivityAlias" android:targetActivity="com.google.android.apps.plus.phone.VideoViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="rtsp"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="file"/>
+                <data android:mimeType="video/mpeg"/>
+                <data android:mimeType="video/mpeg4"/>
+                <data android:mimeType="video/mp4"/>
+                <data android:mimeType="video/3gp"/>
+                <data android:mimeType="video/3gpp"/>
+                <data android:mimeType="video/3gpp2"/>
+                <data android:mimeType="video/webm"/>
+                <data android:mimeType="video/avi"/>
+                <data android:mimeType="application/sdp"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.camera.action.REVIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="file"/>
+                <data android:mimeType="video/mpeg4"/>
+                <data android:mimeType="video/mp4"/>
+                <data android:mimeType="video/3gp"/>
+                <data android:mimeType="video/3gpp"/>
+                <data android:mimeType="video/3gpp2"/>
+                <data android:mimeType="application/sdp"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:mimeType="audio/x-mpegurl"/>
+                <data android:mimeType="audio/mpegurl"/>
+                <data android:mimeType="application/vnd.apple.mpegurl"/>
+                <data android:mimeType="application/x-mpegurl"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.plus.trampoline.PhotosHomeLauncher" android:targetActivity="com.google.android.apps.photos.phone.PhotosLauncherActivity">
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.trampoline.PHOTOS_HOME_ACTION"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.plus.GatewayActivityAlias" android:targetActivity="com.google.android.libraries.social.gateway.GatewayActivity" android:theme="@style/Theme.Host.Transparent.NoActionBar">
+            <meta-data android:name="native_handler" android:value="true"/>
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="plus.google.com" android:pathPrefix="/photos" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/photos" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/photos" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/photos/.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/photos/.*" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="plus.google.com" android:path="/" android:scheme="http"/>
+                <data android:host="plus.google.com" android:path="/" android:scheme="https"/>
+                <data android:host="plus.google.com" android:path="/" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/stream" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/stream" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/stream" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/share" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/share" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/share" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/me" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/me" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/me" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/circles" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/circles" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/circles" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/communities" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/communities" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/communities" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/hot" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/hot" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/hot" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/events" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/events" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/events" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/0" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/0" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/0" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/app/basic/0" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/1" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/1" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/1" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/app/basic/1" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/2" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/2" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/2" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/app/basic/2" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/3" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/3" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/3" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/app/basic/2" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/4" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/4" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/4" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/app/basic/4" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/5" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/5" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/5" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/app/basic/5" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/6" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/6" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/6" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/app/basic/6" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/7" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/7" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/7" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/app/basic/7" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/8" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/8" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/8" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/app/basic/8" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/9" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/9" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/9" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPrefix="/app/basic/9" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/_/" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/_/" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/1.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/2.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/3.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/4.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/5.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/6.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/7.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/8.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/9.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/0.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/collections" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/posts" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/stream" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/about" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/photos" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/photos" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/photos/.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/photos/.*/stories" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/stories/.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/reviews" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/digest" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/op" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/stream" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/me" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/circles" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/hot" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/explore" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/share" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/+" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/+.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/people" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/events" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/events/.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/s/.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/s/.*/posts" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/notifications/all" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/communities/.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/1.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/2.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/3.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/4.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/5.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/6.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/7.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/8.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/9.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/0.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/collections" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/posts" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/stream" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/about" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/photos" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/photos" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/photos/.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/photos/.*/stories" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/stories/.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/reviews" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/digest" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/.*/op" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/stream" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/me" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/circles" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/hot" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/explore" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/share" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/+" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/+*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/people" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/events" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/events/.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/s/.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/s/.*/posts" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/notifications/all/.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/communities/.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/s/" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/people/" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="plus.google.com" android:pathPrefix="/+" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/+" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/app/basic/+" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/app/basic/+" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/+" android:scheme="content"/>
+                <data android:host="google.com" android:pathPrefix="/+" android:scheme="http"/>
+                <data android:host="google.com" android:pathPrefix="/+" android:scheme="https"/>
+                <data android:host="google.com" android:pathPrefix="/+" android:scheme="content"/>
+                <data android:host="www.google.com" android:pathPrefix="/+" android:scheme="http"/>
+                <data android:host="www.google.com" android:pathPrefix="/+" android:scheme="https"/>
+                <data android:host="www.google.com" android:pathPrefix="/+" android:scheme="content"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.provider.calendar.action.HANDLE_CUSTOM_EVENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/event"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.action.VIEW_LOCAL_PLUS_PAGE_ABOUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="plus.google.com" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.LOCATION_PLUS_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.PICK_PHOTO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.LOCATION_PLUS_MAP"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.SHARE_GOOGLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/vnd.google.panorama360+jpg"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.GOOGLE_PLUS_SHARE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/vnd.google.panorama360+jpg"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.SHARE_GOOGLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.SHARE_GOOGLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.plus.action.PLUSONE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.libraries.social.gateway.GatewayActivityCollexionsAlias" android:targetActivity="com.google.android.libraries.social.gateway.GatewayActivity">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="plus.google.com" android:pathPrefix="/collection" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/collection" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/collection" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/collection/.*" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/collection/.*" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/collection/.*" android:scheme="content"/>
+                <data android:host="plus.google.com" android:path="/collections" android:scheme="http"/>
+                <data android:host="plus.google.com" android:path="/collections" android:scheme="https"/>
+                <data android:host="plus.google.com" android:path="/collections" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/collections" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/collections" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/collections" android:scheme="content"/>
+                <data android:host="plus.google.com" android:path="/collections/featured" android:scheme="http"/>
+                <data android:host="plus.google.com" android:path="/collections/featured" android:scheme="https"/>
+                <data android:host="plus.google.com" android:path="/collections/featured" android:scheme="content"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/collections/featured" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/collections/featured" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPattern="/u/.*/collections/featured" android:scheme="content"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.libraries.social.cropper.standaloneactivity.StandaloneCropActivityAlias" android:targetActivity="com.google.android.libraries.social.cropper.standaloneactivity.StandaloneCropActivity">
+            <intent-filter>
+                <action android:name="com.android.camera.action.CROP"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.libraries.social.notificationslegacy.settings.NotificationSettingsActivityAlias" android:targetActivity="com.google.android.libraries.social.gateway.GatewayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.libraries.social.stream.legacy.GatewayActivityStreamAlias" android:targetActivity="com.google.android.libraries.social.gateway.GatewayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="plus.google.com" android:pathPrefix="/nearby" android:scheme="http"/>
+                <data android:host="plus.google.com" android:pathPrefix="/nearby" android:scheme="https"/>
+                <data android:host="plus.google.com" android:pathPrefix="/nearby" android:scheme="content"/>
+            </intent-filter>
+        </activity-alias>
+    </application>
+</manifest>

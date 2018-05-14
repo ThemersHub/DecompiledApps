@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/media_drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/media_pager" android:background="@color/quantum_black_100" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <android.support.v7.widget.Toolbar android:id="@id/lightbox_toolbar" android:background="@drawable/stream_elevation_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:popupTheme="@style/Theme.Arkham.Transparent.Accent" app:layout_scrollFlags="enterAlways|scroll" app:titleTextAppearance="@style/Theme.Arkham.ActionBar.Text" app:theme="@style/Theme.Arkham.Transparent.Accent" />
+        <com.google.android.libraries.social.media.ui.MediaView android:id="@id/media_view" android:layout_width="wrap_content" android:layout_height="wrap_content" size="custom" scale="zoom" />
+        <include android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/empty_view_layout" />
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/tmp_social_action_bar_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="end" android:id="@id/media_details_fragment_container" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.libraries.social.discovery.views.CelebrityCategoryCardView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/wrapper" android:background="@color/quantum_white_100" android:paddingLeft="@dimen/card_border_top_padding" android:paddingTop="@dimen/card_border_top_padding" android:paddingRight="@dimen/card_border_top_padding" android:paddingBottom="@dimen/card_border_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sul_card_margin_bottom" android:paddingStart="@dimen/card_border_top_padding" android:paddingEnd="@dimen/card_border_top_padding"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <FrameLayout android:id="@id/header" android:layout_width="fill_parent" android:layout_height="@dimen/sul_card_header_height" android:layout_marginLeft="@dimen/sul_card_header_margin" android:layout_marginRight="@dimen/sul_card_header_margin" android:layout_marginStart="@dimen/sul_card_header_margin" android:layout_marginEnd="@dimen/sul_card_header_margin">
+            <TextView android:textSize="@dimen/sul_card_title_text_size" android:textStyle="bold" android:textColor="@color/quantum_white_100" android:id="@id/category_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/sul_card_default_padding" android:layout_marginTop="@dimen/sul_card_default_padding" android:layout_marginStart="@dimen/sul_card_default_padding" />
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/avatars" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/sul_card_default_padding" android:layout_marginTop="@dimen/sul_card_avatars_margin_top" android:layout_marginStart="@dimen/sul_card_default_padding" />
+        <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/header">
+            <TextView android:textColor="@color/quantum_black_100" android:id="@id/celebrity_names" android:paddingLeft="@dimen/sul_card_default_padding" android:paddingTop="@dimen/sul_card_large_padding" android:paddingRight="@dimen/sul_card_default_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/sul_card_default_padding" android:paddingEnd="@dimen/sul_card_default_padding" />
+        </FrameLayout>
+        <RelativeLayout android:id="@id/footer" android:padding="@dimen/sul_card_default_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/content">
+            <com.google.android.libraries.social.circlemembership.ui.CirclesButton android:layout_gravity="center" android:id="@id/follow_all_button" android:layout_width="@dimen/sul_card_follow_all_width" android:layout_height="@dimen/sul_card_minimum_tap_target_size" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+            <TextView android:textColor="@color/quantum_googblue500" android:gravity="center_vertical" android:id="@id/view_all_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/sul_card_minimum_tap_target_size" android:text="@string/find_people_view_all" android:layout_toLeftOf="@id/follow_all_button" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.google.android.libraries.social.discovery.views.CelebrityCategoryCardView>

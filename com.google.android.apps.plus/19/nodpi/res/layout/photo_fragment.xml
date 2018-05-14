@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.photos.viewer.pager.core.PhotoFragmentTouchHandler android:id="@id/touch_handler" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/photo_background_fragment_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.google.android.apps.photos.viewer.pager.core.PhotoFragmentTouchHandler>
+    <FrameLayout android:id="@id/photo_shapes_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/empty_view_layout" />
+    <FrameLayout android:layout_gravity="center" android:id="@id/media_player_fragment_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_gravity="top" android:id="@id/photo_selection_fragment_container" android:padding="@dimen/photo_selection_one_up_check_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/host_action_bar_height" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/photo_action_bar_parent" android:background="@drawable/photo_action_bar_parent_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/promo_bar_fragment_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/cloud_aam_editing_promo_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <FrameLayout android:id="@id/caption_bar_fragment_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View android:id="@id/photo_action_bar_layout_divider" android:background="@color/photo_action_bar_layout_divider_background" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <FrameLayout android:id="@id/photo_bar_fragment_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.google.android.apps.plus.views.TouchInterceptParent android:layout_gravity="center_horizontal" android:id="@id/touch_intercept_parent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewStub android:id="@id/expanding_scroll_view_stub" android:layout="@layout/photo_fragment_expanding_scroll_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/host_action_bar_height" />
+    </com.google.android.apps.plus.views.TouchInterceptParent>
+</FrameLayout>

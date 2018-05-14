@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/loading" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="56.0dip" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:attr/progressBarStyleSmall" />
+        </FrameLayout>
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center_vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/loading" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/not_found" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center_vertical" android:paddingLeft="66.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/people_search_public_not_found" android:paddingStart="66.0dip" android:paddingEnd="10.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="56.0dip" android:layout_height="wrap_content" android:src="@android:drawable/ic_dialog_alert" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center_vertical" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/people_search_public_error" android:paddingEnd="10.0dip" />
+    </LinearLayout>
+</FrameLayout>

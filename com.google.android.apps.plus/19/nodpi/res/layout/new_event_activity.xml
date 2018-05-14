@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.libraries.social.ui.views.FullSizeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxHeight="@dimen/max_list_dialog_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:plus="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" style="@style/FlatButtonBar">
+        <com.google.android.libraries.social.ui.views.imagetextbutton.ImageTextButton android:id="@id/cancel_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" plus:text="@android:string/cancel" plus:image="@drawable/ic_close_cancel" style="@style/FlatButton" />
+        <View style="@style/FlatButtonSeparator" />
+        <com.google.android.libraries.social.ui.views.imagetextbutton.ImageTextButton android:enabled="false" android:id="@id/share_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/post_share_button_text" android:layout_weight="1.0" plus:text="@string/invite" plus:image="@drawable/ic_menu_send_holo_light" style="@style/FlatButton" />
+    </LinearLayout>
+    <fragment android:id="@id/edit_comment_fragment" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" class="com.google.android.apps.plus.fragments.EditEventFragment" />
+</com.google.android.libraries.social.ui.views.FullSizeLinearLayout>

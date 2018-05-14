@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@android:id/empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/text_size_20" android:textColor="@color/text_white" android:layout_gravity="center" android:id="@id/list_empty_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/list_empty_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:indeterminate="true" style="?android:attr/progressBarStyleLarge" />
+    </FrameLayout>
+    <include layout="@layout/mini_share_expander_host" />
+    <com.google.android.apps.plus.sharesheet.impl.MiniShareTouchHandler android:id="@id/touch_handler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

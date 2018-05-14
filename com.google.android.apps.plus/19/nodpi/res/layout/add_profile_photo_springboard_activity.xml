@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/oob_background_layout" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/oob_page_padding_x" android:paddingTop="@dimen/oob_page_padding_top" android:paddingRight="@dimen/oob_page_padding_x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/oob_page_padding_x" android:paddingEnd="@dimen/oob_page_padding_x">
+            <TextView android:id="@id/info_title" android:paddingBottom="60.0dip" android:text="@string/oob_profile_photo_title" style="@style/Oob.Title" />
+            <com.google.android.libraries.social.ui.views.BoundedLinearLayout android:layout_gravity="center_horizontal" android:id="@id/bounded_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/oob_page_max_width">
+                <fragment android:id="@id/oob_profile_photo_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" class="com.google.android.apps.plus.fragments.AddProfilePhotoSpringboardFragment" />
+            </com.google.android.libraries.social.ui.views.BoundedLinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.apps.plus.views.ClientOobActionBar android:id="@id/oob_action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+</RelativeLayout>

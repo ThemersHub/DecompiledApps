@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:support="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@null" android:id="@id/progress" android:title="@string/menu_refresh" support:showAsAction="always" support:actionLayout="@layout/action_bar_progress_indicator" />
+    <item android:icon="@drawable/quantum_ic_refresh_grey600_24" android:id="@id/refresh" android:title="@string/menu_refresh" android:showAsAction="never" support:showAsAction="never" />
+    <group android:id="@id/action_button_group">
+        <item android:icon="@drawable/quantum_ic_camera_alt_white_24" android:id="@id/action_add_photo" android:title="@string/menu_add_photos" support:showAsAction="ifRoom" />
+        <item android:icon="@drawable/quantum_ic_comment_white_24" android:id="@id/action_add_comment" android:title="@string/event_button_add_comment_label" support:showAsAction="always" />
+        <item android:icon="@drawable/icn_events_create_event" android:id="@id/action_add_event" android:title="@string/event_button_add_event_label" support:showAsAction="always" />
+        <item android:icon="@drawable/quantum_ic_search_white_24" android:id="@id/action_search_white" android:title="@string/menu_search" support:showAsAction="always" />
+        <item android:icon="@drawable/quantum_ic_search_grey600_24" android:id="@id/action_search_black" android:title="@string/menu_search" support:showAsAction="always" />
+        <item android:icon="@drawable/quantum_ic_auto_awesome_grey600_24" android:id="@id/action_manual_awesome" android:title="@string/create_manual_awesome" support:showAsAction="always" />
+        <item android:icon="@drawable/quantum_ic_add_white_24" android:id="@id/action_manual_awesome_white" android:title="@string/create_manual_awesome" support:showAsAction="always" />
+        <item android:icon="@drawable/quantum_ic_search_white_24" android:id="@id/action_search_photos" android:title="@string/search_photos_hint_text" support:showAsAction="always" />
+        <item android:icon="@drawable/icn_events_add_photo" android:id="@id/action_button_take_photo" android:title="@string/menu_take_photo" support:showAsAction="always" />
+        <item android:icon="@drawable/icn_add_video" android:id="@id/action_button_take_video" android:title="@string/menu_record_video" support:showAsAction="always" />
+        <item android:icon="@drawable/quantum_ic_camera_alt_white_24" android:id="@id/action_button_take_photo_white" android:title="@string/menu_take_photo" support:showAsAction="always" />
+        <item android:icon="@drawable/quantum_ic_videocam_white_24" android:id="@id/action_button_take_video_white" android:title="@string/menu_record_video" support:showAsAction="always" />
+        <item android:icon="@drawable/quantum_ic_share_white_24" android:id="@id/action_reshare" android:title="@string/menu_reshare_post" support:showAsAction="always" />
+        <item android:icon="@drawable/quantum_ic_person_add_white_24" android:id="@id/action_invite_more" android:title="@string/event_button_invite_more_label" support:showAsAction="always" />
+        <item android:icon="@drawable/quantum_ic_person_add_white_24" android:id="@id/action_button_invite" android:title="@string/menu_square_invite" support:showAsAction="always" />
+        <item android:icon="@drawable/quantum_ic_share_white_24" android:id="@id/action_button_share" android:title="@string/menu_square_share" support:showAsAction="always" />
+        <item android:icon="@null" android:id="@id/picker_action_done" android:title="@string/photo_picker_one_up_done_button_label" support:showAsAction="always" />
+        <item android:icon="@null" android:id="@id/action_button_view_post" android:title="@string/people_involved_one_up_view_post_label" support:showAsAction="always" />
+        <item android:icon="@null" android:id="@id/action_button_done" android:title="@string/done_button_text" support:showAsAction="always" />
+        <item android:icon="@null" android:id="@id/action_button_reset" android:title="@string/reset_button_text" support:showAsAction="always" />
+    </group>
+    <item android:icon="@drawable/quantum_ic_clear_all_white_24" android:id="@id/dismiss_all_button" android:title="@string/menu_dismiss_all" support:showAsAction="always" />
+    <item android:icon="@drawable/quantum_ic_sweep_white_24" android:id="@id/notifications_sweep_button" android:title="@string/menu_notifications_sweep" support:showAsAction="always" />
+    <group android:id="@id/fragment_menu_items" android:orderInCategory="1">
+        <item android:icon="@null" android:id="@id/view_poll_results" android:title="@string/menu_view_poll_results" support:showAsAction="never" />
+        <item android:icon="@null" android:id="@id/view_poll_photos" android:title="@string/menu_view_poll_photos" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_selection_dark_grey_20" android:id="@id/select_photos" android:title="@string/home_menu_select_photos" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_trash_dark_grey_20" android:id="@id/empty_trash" android:title="@string/empty_trash" support:showAsAction="never" />
+        <item android:id="@id/move_post_to_clx" android:title="" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_search_grey600_24" android:id="@id/show_photo_details" android:title="@string/menu_show_photo_details" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_plus_white_20" android:id="@id/join_square" android:title="@string/menu_square_join" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_plus_white_20" android:id="@id/request_to_join_square" android:title="@string/menu_square_request_to_join" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_checkmark_white_20" android:id="@id/accept_invitation_to_square" android:title="@string/menu_square_accept_invitation" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_remove_white_20" android:id="@id/cancel_square_join_request" android:title="@string/menu_square_cancel_join_request" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_person_add_white_24" android:id="@id/invite_to_square" android:title="@string/menu_square_invite" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_share_white_24" android:id="@id/share_square" android:title="@string/menu_square_share" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_remove_white_20" android:id="@id/decline_invitation" android:title="@string/square_menu_decline" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_notifications_off_white_24" android:id="@id/enable_notifications" android:title="@string/square_turn_notifications_on" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_notifications_on_white_24" android:id="@id/disable_notifications" android:title="@string/square_turn_notifications_off" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_settings_white_20" android:id="@id/square_settings" android:title="@string/square_settings_menu_entry" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_gallery" android:id="@id/add_to_album" android:title="@string/copy_to_album" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_print" android:id="@id/menu_print_photo" android:title="@string/print_photo" support:showAsAction="never" />
+        <item android:icon="@null" android:id="@id/apply_auto_enhance" android:title="@string/menu_autoenhance" support:showAsAction="never" />
+        <item android:icon="@null" android:id="@id/revert_auto_enhance" android:title="@string/menu_restore_original" support:showAsAction="never" />
+        <item android:icon="@null" android:id="@id/slideshow" android:title="@string/start_slideshow" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_mute_conversation" android:id="@id/mute" android:title="@string/menu_item_mute_person" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_unmute_conversation" android:id="@id/unmute" android:title="@string/menu_item_unmute_person" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_blocked_user" android:id="@id/block" android:title="@string/menu_item_block_person" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_blocked_user" android:id="@id/unblock" android:title="@string/menu_item_unblock_person" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/remove_post" android:title="@string/menu_item_remove_post" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_blocked_user" android:id="@id/ban_user" android:title="@string/menu_item_ban_user" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_pushpin_grey_20" android:id="@id/pin_square_post" android:title="@string/menu_item_pin_square_post" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_pushpin_grey_20" android:id="@id/pin_collexion_post" android:title="@string/menu_item_pin_collexion_post" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_pushpin_grey_20" android:id="@id/pin_profile_post" android:title="@string/menu_item_pin_profile_post" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_pushpin_grey_20" android:id="@id/unpin_square_post" android:title="@string/menu_item_unpin_square_post" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_pushpin_grey_20" android:id="@id/unpin_collexion_post" android:title="@string/menu_item_unpin_collexion_post" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_pushpin_grey_20" android:id="@id/unpin_profile_post" android:title="@string/menu_item_unpin_profile_post" support:showAsAction="never" />
+        <item android:icon="@drawable/iconic_ic_close_grey_20" android:id="@id/reject_inferred_post" android:title="@string/menu_item_reject_inferred_post" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_circles_grey600_24" android:id="@id/circle_stream" android:title="@string/menu_circle_stream" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/delete_circle" android:title="@string/menu_delete_circle" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_settings_grey600_24" android:id="@id/circle_settings" android:title="@string/menu_circle_settings" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_settings_grey600_24" android:id="@id/blocked_circle" android:title="@string/menu_blocked_circle" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_edit" android:id="@id/edit" android:title="@string/menu_edit" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_map" android:id="@id/show_location" android:title="@string/menu_show_post_location" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_mute" android:id="@id/mute_post" android:title="@string/menu_mute_post" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_mute" android:id="@id/unmute_post" android:title="@string/menu_unmute_post" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/delete_post" android:title="@string/menu_item_delete_post" support:showAsAction="never" />
+        <item android:id="@id/adjust_volume" android:title="@string/menu_item_adjust_volume" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_share_link" android:id="@id/share_link" android:title="@string/menu_share_link" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_share_link" android:id="@id/share_external" android:title="@string/menu_share_link_external" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_clipboard" android:id="@id/copy_text" android:title="@string/menu_copy_text" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_edit_event" android:id="@id/edit_event" android:title="@string/menu_edit_event" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_disable_comments" android:id="@id/disable_comments" android:title="@string/menu_disable_comments" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_enable_comments" android:id="@id/enable_comments" android:title="@string/menu_enable_comments" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_disable_reshares" android:id="@id/disable_reshares" android:title="@string/menu_disable_reshares" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_enable_reshares" android:id="@id/enable_reshares" android:title="@string/menu_enable_reshares" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_enable_reshares" android:id="@id/menu_share" android:title="@string/share" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_delete_event" android:id="@id/delete_event" android:title="@string/menu_delete_event" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_events_grey_24" android:id="@id/view_event" android:title="@string/menu_view_event" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_person_add_white_24" android:id="@id/invite_more" android:title="@string/menu_invite_more" support:showAsAction="always" />
+        <item android:icon="@null" android:id="@id/select_item" android:title="@string/menu_select_item" support:showAsAction="always" />
+        <item android:icon="@drawable/ic_menu_wallpaper" android:id="@id/set_as" android:title="@string/set_as_option" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_download" android:id="@id/download" android:title="@string/menu_download_photo" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/delete_photos" android:title="@string/menu_delete_photo" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_addphotos" android:id="@id/restore_photo" android:title="@string/menu_restore_photo" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/permanent_delete_photo" android:title="@string/menu_permanent_delete_photo" support:showAsAction="never" />
+        <item android:icon="@null" android:id="@id/remove_deleted_media" android:title="@string/menu_remove_deleted_media" support:showAsAction="never" />
+        <item android:icon="@null" android:id="@id/rescan_media" android:title="@string/menu_rescan_media" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_edit" android:id="@id/rename_album" android:title="@string/menu_rename_album" support:showAsAction="never" />
+        <item android:icon="@null" android:id="@id/sharing_details" android:title="@string/menu_sharing_details" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_star" android:id="@id/hide_from_highlights" android:title="@string/menu_hide_from_highlights" android:checkable="true" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_edit" android:id="@id/album_details" android:title="@string/menu_album_details" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/delete_album" android:title="@string/menu_delete_album" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/delete_folder" android:title="@string/menu_delete_folder" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_drive_grey_16" android:id="@id/view_on_drive" android:title="@string/menu_view_on_drive" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_checkin" android:id="@id/filter_friends_on_map" android:title="@string/menu_filter_friends_on_map" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_map" android:id="@id/set_satellite_view" android:title="@string/menu_satellite_view" support:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_map" android:id="@id/set_map_view" android:title="@string/menu_map_view" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_settings_grey600_24" android:id="@id/location_settings" android:title="@string/menu_location_settings" support:showAsAction="never" />
+        <item android:id="@id/leave_square" android:title="@string/square_leave" support:showAsAction="never" />
+        <item android:icon="@null" android:id="@id/show_all_photos" android:title="@string/show_all_photos" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_flag_grey600_24" android:id="@id/report_abuse" android:title="@string/menu_report_abuse" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_refresh_grey600_24" android:id="@id/menu_refresh" android:title="@string/menu_refresh" support:showAsAction="never" />
+        <item android:id="@id/see_all_comments" android:title="@string/menu_see_all_comments" support:showAsAction="never" />
+    </group>
+    <group android:id="@id/general_menu_items" android:orderInCategory="2">
+        <item android:icon="@drawable/quantum_ic_settings_grey600_24" android:id="@id/settings" android:title="@string/home_menu_settings" android:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_translate_grey600_24" android:id="@id/translate" android:title="@string/menu_translate" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_translate_grey600_24" android:id="@id/show_original_text" android:title="@string/menu_show_original_text" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_help_grey600_24" android:id="@id/feedback" android:title="@string/menu_feedback" support:showAsAction="never" />
+        <item android:icon="@drawable/quantum_ic_help_grey600_24" android:id="@id/help" android:title="@string/menu_help" support:showAsAction="never" />
+        <item android:id="@id/about_google_photos" android:title="@string/preferences_about_button_photos" support:showAsAction="never" />
+    </group>
+    <group android:id="@id/search_items" android:orderInCategory="3">
+        <item android:icon="@drawable/quantum_ic_search_white_24" android:id="@id/action_search" android:title="@string/search_hint_text" support:showAsAction="collapseActionView|ifRoom" support:actionViewClass="android.support.v7.widget.SearchView" />
+    </group>
+</menu>

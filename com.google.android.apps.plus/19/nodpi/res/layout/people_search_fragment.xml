@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/search_bar" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:id="@android:id/list" android:background="@color/search_opaque_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/padded_list_divider" />
+        <View android:id="@id/shim" android:background="@color/search_opaque_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include layout="@layout/empty_layout" />
+    </FrameLayout>
+</LinearLayout>

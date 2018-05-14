@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_to_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.CoordinatorLayout android:id="@id/square_stream" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <android.support.design.widget.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/square_stream_app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.design.widget.CollapsingToolbarLayout android:id="@id/square_stream_collapsing_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="exitUntilCollapsed|scroll" app:contentScrim="?colorPrimary">
+                <com.google.android.apps.plus.entity.header.EntityHeaderView android:id="@id/square_header_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="pin" />
+                <View android:background="@drawable/text_scrim" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_collapseMode="pin" />
+                <android.support.v7.widget.Toolbar android:id="@id/square_stream_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/Theme.ArkhamLight" app:layout_collapseMode="pin" />
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+        <FrameLayout android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <include layout="@layout/empty_view_layout" />
+            <include layout="@layout/stream_fragment_no_swipe_for_refresh" />
+            <View android:background="@drawable/stream_elevation_shadow" android:layout_width="fill_parent" android:layout_height="4.0dip" />
+        </FrameLayout>
+        <include layout="@layout/new_post_button" />
+        <android.support.design.widget.FloatingActionButton android:id="@id/plus_fab" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_behavior="com.google.android.apps.plus.navigation.tiktok.bottombar.FabBehavior" app:layout_anchor="@id/scroll_view" app:layout_anchorGravity="end|center|bottom" app:backgroundTint="@color/quantum_googgreen500" style="@style/PlusFab" />
+    </android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/media_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.plus.lightbox.MediaViewParentTouchHandler android:id="@id/media_view_parent_touch_handler" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.libraries.toolkit.mediaview.MediaView android:id="@id/zoom_media_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:layout_gravity="bottom|center" android:id="@id/media_overlay_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.google.android.apps.plus.lightbox.MediaViewParentTouchHandler>
+    <com.google.android.apps.plus.lightbox.TouchInterceptParent android:layout_gravity="center_horizontal" android:id="@id/esv_touch_intercept_parent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.libraries.social.ui.views.expandingscrollview.ExpandingScrollView android:id="@id/media_overlay_expanding_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/host_action_bar_height">
+            <FrameLayout android:id="@id/media_post_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.google.android.libraries.social.ui.views.expandingscrollview.ExpandingScrollView>
+    </com.google.android.apps.plus.lightbox.TouchInterceptParent>
+    <include layout="@layout/empty_view_layout" />
+</FrameLayout>

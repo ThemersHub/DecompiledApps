@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.libraries.social.collexions.impl.alert.CollexionAlertView android:orientation="vertical" android:id="@id/collexion_alert_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="3.0" />
+    <ScrollView android:paddingLeft="@dimen/collexion_alert_view_padding" android:paddingRight="@dimen/collexion_alert_view_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/collexion_alert_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/collexion_privacy_alert_message_body_part2" android:layout_marginEnd="8.0dip" style="@style/quantum_text_body_1_black" />
+            <TextView android:textColor="@color/quantum_googblue500" android:gravity="center" android:id="@id/collexion_change_visibility_consent_link" android:background="?android:selectableItemBackground" android:clickable="true" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginBottom="8.0dip" android:minWidth="48.0dip" android:text="@string/collexion_privacy_preference_change_link" android:layout_below="@id/collexion_alert_text" android:textAllCaps="false" />
+            <CheckBox android:orientation="vertical" android:id="@id/show_followed_collexions_on_profile_about_tab_card_checkbox" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:minHeight="@dimen/collexion_minimum_tap_target_size" android:text="@string/collexion_privacy_preference_checkbox_text" android:layout_below="@id/collexion_change_visibility_consent_link" />
+        </RelativeLayout>
+    </ScrollView>
+</merge>

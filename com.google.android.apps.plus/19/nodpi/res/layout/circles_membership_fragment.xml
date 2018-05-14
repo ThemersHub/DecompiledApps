@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextStyle.PlusOne.TitleText.Normal" android:id="@id/title" android:paddingLeft="@dimen/circles_membership_dialog_title_padding_side" android:paddingTop="24.0dip" android:paddingRight="@dimen/circles_membership_dialog_title_padding_side" android:paddingBottom="@dimen/circles_membership_dialog_title_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/circles_membership_dialog_choose_circle_title" />
+    <TextView android:id="@id/subtitle" android:paddingLeft="@dimen/circles_membership_dialog_title_padding_side" android:paddingRight="@dimen/circles_membership_dialog_title_padding_side" android:paddingBottom="@dimen/circles_membership_dialog_title_padding_bottom" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <View android:id="@id/top_divider" android:background="@color/quantum_black_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:id="@id/circles_membership_list_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="0.0dip" />
+        <include layout="@layout/empty_layout" />
+    </FrameLayout>
+    <View android:id="@id/bottom_divider" android:background="@color/quantum_black_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

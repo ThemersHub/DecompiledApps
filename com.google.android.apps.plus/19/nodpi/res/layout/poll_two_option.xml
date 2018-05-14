@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/poll_two_option_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/polls_2up_empty_header" android:background="@drawable/poll_image_selector" android:layout_width="fill_parent" android:layout_height="@dimen/poll_option_empty_header_height">
+        <View android:background="@drawable/vertical_dotted_line" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layerType="software" />
+        <ImageView android:layout_gravity="center" android:background="@drawable/poll_image_selector" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:src="@drawable/quantum_ic_camera_alt_grey600_24" android:contentDescription="@string/poll_add_image" />
+        <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/quantum_grey600" android:layout_gravity="center" android:id="@id/polls_2up_photo_is_optional_textview" android:background="@drawable/poll_image_selector" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/poll_photo_is_optional" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/polls_2up_header_img_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.libraries.social.media.ui.MediaView android:id="@id/polls_2up_header_img" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/poll_photo_content_description" size="custom" />
+        <ImageView android:layout_gravity="end" android:id="@id/polls_2up_header_img_gradient" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ov_horz_gradient_160" android:scaleType="fitXY" />
+        <TextView android:textColor="@color/quantum_white_text" android:layout_gravity="end|center" android:id="@id/polls_2up_header_img_camera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="58.0dip" android:scaleType="fitXY" android:text="@string/poll_add_more_photo" android:drawableTop="@drawable/quantum_ic_camera_alt_white_24" android:drawablePadding="4.0dip" android:contentDescription="@string/poll_add_second_photo" android:layout_marginEnd="58.0dip" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/polls_2up_imgs_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <com.google.android.libraries.social.media.ui.MediaView android:id="@id/polls_2up_img1" android:background="@drawable/poll_image_selector" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" size="custom" />
+        <View android:background="@color/poll_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <com.google.android.libraries.social.media.ui.MediaView android:id="@id/polls_2up_img2" android:background="@drawable/poll_image_selector" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" size="custom" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+        <EditText android:textSize="@dimen/text_size_12" android:textColorHint="@color/text_hint" android:id="@id/polls_2up_option_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/poll_answer1" android:maxLength="@integer/poll_option_max_length_in_creation" android:layout_weight="1.0" android:inputType="textCapSentences|textNoSuggestions" android:imeOptions="actionNext" />
+        <EditText android:textSize="@dimen/text_size_12" android:textColorHint="@color/text_hint" android:id="@id/polls_2up_option_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/poll_answer2" android:maxLength="@integer/poll_option_max_length_in_creation" android:layout_weight="1.0" android:inputType="textCapSentences|textNoSuggestions" android:imeOptions="actionDone" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/autobackup_promo_view" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip">
+        <TextView android:textSize="@dimen/text_size_24" android:textColor="@color/text_normal" android:gravity="top" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/promo_auto_backup_title" android:fontFamily="sans-serif-light" />
+        <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/text_gray" android:textColorLink="@color/text_blue" android:id="@id/more_details" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/promo_auto_backup_dialog_description" android:lineSpacingExtra="6.0dip" />
+        <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/text_gray" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/promo_auto_backup_cost_warning" android:lineSpacingExtra="4.0dip" />
+        <RadioGroup android:id="@id/auto_backup_upload_options" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RadioButton android:textColor="@color/text_gray" android:id="@id/auto_backup_wifi_or_mobile" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="2.0dip" android:checked="true" android:text="@string/promo_auto_backup_opt_wifi_or_mobile" />
+            <View android:background="@color/promo_divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <RadioButton android:textColor="@color/text_gray" android:id="@id/auto_backup_wifi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/promo_auto_backup_opt_wifi_only" />
+        </RadioGroup>
+    </LinearLayout>
+    <View android:background="@color/promo_divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <Button android:textColor="@color/text_gray" android:id="@id/promo_auto_backup_dismiss" android:background="@drawable/promo_dialog_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/promo_default_opt_out" android:layout_weight="1.0" />
+        <View android:background="@color/promo_divider_color" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <Button android:textColor="@color/text_gray" android:id="@id/promo_auto_backup_enable" android:background="@drawable/promo_dialog_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/promo_default_opt_in" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

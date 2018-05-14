@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.libraries.social.ui.swiperefresh.SwipeRefreshLayoutWithUpScroll android:id="@id/pull_to_refresh" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.libraries.social.ui.views.columngridview.ColumnGridView android:id="@id/grid" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.google.android.libraries.social.ui.swiperefresh.SwipeRefreshLayoutWithUpScroll>
+    <include layout="@layout/empty_layout" />
+    <TextView android:textSize="@dimen/text_size_20" android:gravity="center" android:id="@id/createText" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/event_create_text" android:layout_centerInParent="true" />
+    <Button android:id="@id/createButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/event_button_create_event_label" android:drawableLeft="@drawable/icn_events_create_event" android:layout_below="@id/createText" android:layout_centerInParent="true" android:drawableStart="@drawable/icn_events_create_event" />
+    <include layout="@layout/bottom_fab" />
+</RelativeLayout>

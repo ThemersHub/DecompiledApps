@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_card_white" android:paddingLeft="@dimen/card_border_left_padding" android:paddingTop="@dimen/card_border_top_padding" android:paddingRight="@dimen/card_border_right_padding" android:paddingBottom="@dimen/card_border_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/card_border_left_padding" android:paddingEnd="@dimen/card_border_right_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/people_suggestions_category" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/row_1" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/people_suggestions_row_height" android:layout_alignParentTop="true" layout="@layout/people_suggestions_row" />
+        <include android:id="@id/row_2" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/people_suggestions_row_height" android:layout_below="@id/row_1" layout="@layout/people_suggestions_row" />
+        <include android:id="@id/row_3" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/people_suggestions_row_height" android:layout_below="@id/row_2" layout="@layout/people_suggestions_row" />
+    </RelativeLayout>
+    <include layout="@layout/people_suggestions_view_all" />
+</LinearLayout>

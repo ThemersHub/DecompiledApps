@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="vertical" android:id="@id/root_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.plus.polls.StandardPollView android:id="@id/standard" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.google.android.apps.plus.polls.ImageAndVerticalOptionsPollView android:id="@id/image_and_vertical_options" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.google.android.apps.plus.polls.ImageAndHorizontalOptionsPollView android:id="@id/image_and_horizontal_options" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.google.android.apps.plus.polls.MultiImageAndHorizontalOptionsPollView android:id="@id/multi_image_and_horizontal_options" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.google.android.apps.plus.polls.MultiImageAndVerticalOptionsPollView android:id="@id/multi_image_and_vertical_options" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textColor="@color/poll_status_text_color" android:id="@id/poll_not_available" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="@dimen/card_y_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/poll_is_not_available" />
+    <FrameLayout android:id="@id/poll_card_spinner" android:background="@color/background_material_dark" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.5">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateOnly="true" />
+    </FrameLayout>
+</merge>
