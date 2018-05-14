@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+        <ImageView android:id="@id/icon" style="@style/DiscoveryIconStyle" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/DiscoveryItemStyle">
+            <TextView android:textSize="@dimen/discovery_list_text_title_size" android:textColor="@color/discovery_list_title" android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:textAlignment="viewStart" />
+            <TextView android:textSize="@dimen/discovery_list_text_subtitle_size" android:textColor="@color/discovery_list_sub_text" android:ellipsize="end" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" android:textAlignment="viewStart" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:textColor="@color/discovery_list_url_text" android:id="@id/action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="yes" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:layout_marginStart="60.0dip" android:layout_marginEnd="@dimen/discovery_list_item_margin" style="?android:attr/borderlessButtonStyle" />
+</merge>

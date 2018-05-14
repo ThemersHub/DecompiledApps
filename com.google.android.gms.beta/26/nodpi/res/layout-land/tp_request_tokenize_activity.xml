@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/tp_owner_row" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tp_default_spacing" android:layout_marginBottom="@dimen/tp_default_spacing" android:layout_marginStart="@dimen/tp_medium_spacing" android:layout_marginEnd="@dimen/tp_medium_spacing">
+        <ImageView android:id="@id/tp_owner_image" android:layout_width="@dimen/tp_avatar_icon_size" android:layout_height="@dimen/tp_avatar_icon_size" android:layout_marginEnd="@dimen/tp_icon_text_spacing" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/tp_owner_name" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Tp_Text_Header" />
+            <TextView android:id="@id/tp_owner_address" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Tp_Text_Subhead" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/request_tokenize_title" android:paddingTop="@dimen/tp_default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tp_request_tokenize_title" android:textAlignment="center" style="@style/Tp_Text_Headline" />
+            <TextView android:id="@id/request_tokenize_display_name" android:paddingTop="@dimen/tp_default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" style="@style/Tp_Text_Body" />
+            <TextView android:layout_gravity="center_horizontal" android:id="@id/request_tokenize_body" android:padding="@dimen/tp_default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tp_request_tokenize_body" android:textAlignment="center" style="@style/Tp_Text_Body" />
+            <CheckBox android:gravity="top" android:id="@id/request_tokenize_email_optin" android:paddingTop="@dimen/tp_narrow_spacing" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tp_request_tokenize_email_opt_in" android:drawablePadding="@dimen/tp_narrow_spacing" android:layout_marginStart="@dimen/tp_medium_spacing" android:layout_marginEnd="@dimen/tp_medium_spacing" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tp_18_dp" android:layout_marginStart="@dimen/tp_medium_spacing" android:layout_marginEnd="@dimen/tp_medium_spacing" style="?android:attr/buttonBarStyle">
+        <android.support.design.button.MaterialButton android:id="@id/cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_cancel" android:maxLines="2" style="@style/Widget.GoogleMaterial.TextButton" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <android.support.design.button.MaterialButton android:id="@id/continue_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_continue" android:maxLines="2" android:paddingStart="@dimen/tp_medium_spacing" android:paddingEnd="@dimen/tp_medium_spacing" />
+    </LinearLayout>
+</LinearLayout>

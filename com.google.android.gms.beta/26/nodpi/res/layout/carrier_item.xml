@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/header" android:background="@color/top_entry_grey" android:paddingLeft="72.0dip" android:paddingTop="40.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="112.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/carrier_logo" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="58.0dip" android:layout_height="48.0dip" android:scaleType="fitXY" />
+        <TextView android:textAppearance="?textAppearanceListItem" android:ellipsize="marquee" android:id="@id/carrier_text" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="center" android:singleLine="true" android:layout_toRightOf="@id/carrier_logo" />
+        <TextView android:textAppearance="?android:textAppearanceListItemSecondary" android:textColor="?android:textColorSecondary" android:ellipsize="marquee" android:id="@id/expired_time" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" android:singleLine="true" android:layout_toRightOf="@id/carrier_logo" android:layout_below="@id/carrier_text" />
+    </RelativeLayout>
+    <FrameLayout android:background="@color/top_entry_grey" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_below="@id/header">
+        <ProgressBar android:layout_gravity="center" android:id="@id/progressbar" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="64.0dip" android:indeterminateOnly="true" android:progressTint="@color/google_blue_500" android:progressBackgroundTint="@color/google_blue_700" style="?android:attr/progressBarStyleHorizontal" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/card_container" android:paddingTop="@dimen/card_content_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CardViewStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/composite_entry_title" />
+    <LinearLayout android:orientation="vertical" android:id="@id/card_content" android:paddingBottom="@dimen/card_content_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/group_divider" android:showDividers="middle" />
+    <LinearLayout android:orientation="vertical" android:id="@id/button_container" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Theme.Profile.CardButton">
+        <View android:layout_gravity="bottom" android:id="@id/separator" android:background="@color/profile_card_separator_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/profile_card_separator_height" />
+        <android.support.v7.widget.AppCompatButton android:textSize="@dimen/card_see_all_text_size" android:textColor="@color/card_bottom_button_color" android:gravity="center" android:layout_gravity="center" android:id="@id/bottom_button" android:focusable="true" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="@dimen/card_button_height" android:drawablePadding="@dimen/card_button_icon_padding" style="@style/sp.SelectableItemDark" />
+    </LinearLayout>
+</LinearLayout>

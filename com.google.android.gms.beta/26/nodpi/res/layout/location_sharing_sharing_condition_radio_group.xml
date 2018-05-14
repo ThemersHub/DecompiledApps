@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/temporary_share_container" android:layout_marginRight="@dimen/location_sharing_icon_right_margin" android:layout_marginEnd="@dimen/location_sharing_icon_right_margin" style="@style/LocationSharingRadioButtonContainer">
+        <RadioButton android:id="@id/temporary_share_radio_button" style="@style/LocationSharingRadioButton" />
+        <LinearLayout android:orientation="vertical" android:id="@id/temporary_share_time_info_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/location_sharing_text_size_14" android:textColor="@color/material_grey_900" android:id="@id/duration_text" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/location_sharing_text_size_13" android:textColor="@color/material_grey_600" android:id="@id/end_time_text" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <com.google.android.gms.locationsharing.common.ui.DisableableFrameLayout android:id="@id/decrement_time_icon_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/decrement_time_icon" android:background="?selectableItemBackgroundBorderless" android:layout_width="@dimen/location_sharing_radiobutton_height" android:layout_height="@dimen/location_sharing_radiobutton_height" android:src="@drawable/quantum_ic_remove_circle_black_24" android:scaleType="center" android:contentDescription="@string/location_sharing_decrement_time_description" />
+        </com.google.android.gms.locationsharing.common.ui.DisableableFrameLayout>
+        <com.google.android.gms.locationsharing.common.ui.DisableableFrameLayout android:id="@id/increment_time_icon_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/increment_time_icon" android:background="?selectableItemBackgroundBorderless" android:layout_width="@dimen/location_sharing_radiobutton_height" android:layout_height="@dimen/location_sharing_radiobutton_height" android:src="@drawable/quantum_ic_add_circle_black_24" android:scaleType="center" android:contentDescription="@string/location_sharing_increment_time_description" />
+        </com.google.android.gms.locationsharing.common.ui.DisableableFrameLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/destination_share_container" android:visibility="gone" android:layout_marginRight="@dimen/location_sharing_large_padding" android:layout_marginEnd="@dimen/location_sharing_large_padding" style="@style/LocationSharingRadioButtonContainer">
+        <RadioButton android:id="@id/destination_share_radio_button" style="@style/LocationSharingRadioButton" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/location_sharing_text_size_14" android:textColor="@color/material_grey_900" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/location_sharing_destination_share" />
+            <TextView android:textSize="@dimen/location_sharing_text_size_13" android:textColor="@color/material_grey_600" android:ellipsize="end" android:id="@id/destination_text" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/persistent_share_container" android:layout_marginRight="@dimen/location_sharing_large_padding" android:layout_marginEnd="@dimen/location_sharing_large_padding" style="@style/LocationSharingRadioButtonContainer">
+        <RadioButton android:id="@id/persistent_share_radio_button" style="@style/LocationSharingRadioButton" />
+        <TextView android:textSize="@dimen/location_sharing_text_size_14" android:textColor="@color/material_grey_900" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/location_sharing_persistent_share" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/stop_sharing_container" android:visibility="gone" android:layout_marginRight="@dimen/location_sharing_large_padding" android:layout_marginEnd="@dimen/location_sharing_large_padding" style="@style/LocationSharingRadioButtonContainer">
+        <RadioButton android:id="@id/stop_sharing_radio_button" style="@style/LocationSharingRadioButton" />
+        <TextView android:textSize="@dimen/location_sharing_text_size_14" android:textColor="@color/material_grey_900" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/location_sharing_stop_sharing" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+</merge>

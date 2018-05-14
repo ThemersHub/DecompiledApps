@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="@dimen/wallet_spacing_dialog_side" android:paddingRight="@dimen/wallet_spacing_dialog_side" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?internalUicHeaderDisplayType" android:id="@id/filter_category_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?internalUicNonFormFieldTextStartMargin" android:layout_marginTop="@dimen/wallet_filter_category_dialog_title_top_bottom_margin" android:layout_marginBottom="@dimen/wallet_filter_category_dialog_title_top_bottom_margin" android:layout_alignParentTop="true" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/filter_category_title">
+            <LinearLayout android:orientation="vertical" android:id="@id/simple_form_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </ScrollView>
+    </RelativeLayout>
+    <include android:layout_gravity="center" android:id="@id/overlay_color_prog_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/wallet_color_progress_spinner_large" />
+</FrameLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:paddingTop="@dimen/walletp2p_medium_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.gms.walletp2p.feature.widgets.brand.BrandLogo android:layout_gravity="center" android:layout_width="@dimen/walletp2p_ic_lockup_width" android:layout_height="@dimen/walletp2p_ic_lockup_height" />
+        <ViewSwitcher android:id="@id/progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="280.0dip" android:inAnimation="@android:anim/fade_in">
+            <com.google.android.gms.walletp2p.feature.widgets.checkmarkprogressbar.CheckmarkProgressBar android:layout_gravity="center" android:id="@id/loading_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_gravity="left" android:id="@id/title" android:paddingLeft="@dimen/walletp2p_medium_spacing" android:paddingRight="@dimen/walletp2p_medium_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/walletp2p_default_spacing" style="@style/TextAppearance.AppCompat.Title" />
+                <LinearLayout android:orientation="vertical" android:id="@id/bullet_points" android:paddingLeft="@dimen/walletp2p_medium_spacing" android:paddingTop="@dimen/walletp2p_default_spacing" android:paddingRight="@dimen/walletp2p_medium_spacing" android:paddingBottom="@dimen/walletp2p_medium_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/walletp2p_narrow_spacing" />
+                <View android:id="@id/marketing_opt_in_divider" android:background="@color/walletp2p_grey" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <android.support.v7.widget.AppCompatCheckBox android:layout_gravity="center_vertical" android:id="@id/marketing_opt_in" android:paddingLeft="11.0dip" android:paddingRight="@dimen/walletp2p_medium_spacing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="19.0dip" android:layout_marginTop="@dimen/walletp2p_narrow_spacing" android:layout_marginBottom="@dimen/walletp2p_narrow_spacing" android:minHeight="@dimen/walletp2p_minimum_touch_target" app:buttonTint="@color/walletp2p_primary" style="@style/TextAppearance.AppCompat.Body1" />
+                <View android:background="@color/walletp2p_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <Button android:id="@id/continue_button" android:background="@drawable/walletp2p_bounded_rippleable" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_continue" style="@style/walletp2p_flat_button" />
+            </LinearLayout>
+        </ViewSwitcher>
+    </LinearLayout>
+</ScrollView>

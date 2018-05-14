@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.wallet.common.ui.CardHeaderView android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/wallet_card_view_margin" android:layout_marginTop="@dimen/wallet_card_view_header_margin_top_bottom" android:layout_marginRight="@dimen/wallet_card_view_margin" android:layout_marginBottom="@dimen/wallet_card_view_header_margin_top_bottom"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/Wallet_CardView_TitleText" android:id="@id/title" android:clipChildren="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/collapsed_image_container" android:visibility="gone" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/expanded_image_container" android:visibility="gone" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.wallet.ui.common.ImageWithCaptionView android:id="@id/tooltip_view" android:visibility="gone" android:layout_width="@dimen/wallet_card_header_tooltip_icon_size" android:layout_height="@dimen/wallet_card_header_tooltip_icon_size" android:layout_marginLeft="@dimen/wallet_card_header_image_start_margin" android:contentDescription="@string/wallet_empty_string" />
+        <ImageView android:id="@id/expand_collapse_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/wallet_card_header_image_start_margin" android:src="?drawableWalletCollapse" android:contentDescription="@string/wallet_empty_string" />
+    </LinearLayout>
+    <TextView android:textAppearance="@style/Wallet_CardView_SubTitleText" android:id="@id/subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/wallet_card_header_subtitle_top_margin" />
+</com.google.android.gms.wallet.common.ui.CardHeaderView>

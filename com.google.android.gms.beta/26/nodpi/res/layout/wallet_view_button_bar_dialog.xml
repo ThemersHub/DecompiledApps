@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <Button android:layout_gravity="center_vertical" android:id="@id/close_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/wallet_material_button_min_width" android:text="@string/common_cancel" android:textAllCaps="true" style="?attr/buttonBarButtonStyle" />
+    <FrameLayout android:layout_gravity="center_vertical" android:id="@id/positive_btn_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:layout_gravity="center_vertical" android:id="@id/positive_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_save" android:textAllCaps="true" style="@style/WalletButton" />
+        <com.google.android.gms.wallet.common.ui.IndeterminateMultiColorSpinner android:layout_gravity="center" android:id="@id/button_progress_spinner" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" wallet:size="normal" wallet:progressColors="@array/wallet_progress_spinner_colors" />
+    </FrameLayout>
+</merge>

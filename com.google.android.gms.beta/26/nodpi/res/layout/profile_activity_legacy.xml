@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.smart_profile.legacy.LegacySmartProfileContainerView android:id="@id/smart_profile_container" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/shell" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/sp_background" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.gms.smart_profile.legacy.LegacyHeaderView android:id="@id/header_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.google.android.gms.smart_profile.InterceptableFrameLayout android:orientation="vertical" android:id="@id/card_container" android:background="@color/profile_card_margin" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <com.google.android.gms.smart_profile.InterceptableScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never">
+                    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/profile_card_paddingTop" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:id="@id/sp_card_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                        <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/content_progress_container" android:padding="@dimen/profile_card_progress_container_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ProgressBar android:layout_width="@dimen/profile_card_progress_size" android:layout_height="@dimen/profile_card_progress_size" android:indeterminate="true" style="?android:attr/progressBarStyle" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.gms.smart_profile.InterceptableScrollView>
+                <LinearLayout android:orientation="horizontal" android:id="@id/header_shadow" android:background="@drawable/header_shadow_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/profile_card_paddingTop" />
+            </com.google.android.gms.smart_profile.InterceptableFrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+</com.google.android.gms.smart_profile.legacy.LegacySmartProfileContainerView>

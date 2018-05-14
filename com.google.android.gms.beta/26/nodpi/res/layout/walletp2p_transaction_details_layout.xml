@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/walletp2p_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <RelativeLayout android:paddingLeft="@dimen/walletp2p_medium_spacing" android:paddingTop="@dimen/walletp2p_medium_spacing" android:paddingRight="@dimen/walletp2p_medium_spacing" android:paddingBottom="@dimen/walletp2p_medium_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.gms.walletp2p.feature.widgets.fifenetworkimageview.FifeNetworkImageView android:id="@id/avatar_view" android:paddingTop="@dimen/walletp2p_very_narrow_spacing" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginRight="@dimen/walletp2p_default_spacing" android:src="@drawable/walletp2p_circle" />
+        <TextView android:id="@id/directional_counter_party_label" android:paddingBottom="@dimen/walletp2p_very_narrow_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/avatar_view" style="@style/TextAppearance.AppCompat.Body2" />
+        <TextView android:textColor="@color/quantum_black_secondary_text" android:id="@id/memo_label" android:paddingBottom="@dimen/walletp2p_very_narrow_spacing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/avatar_view" android:layout_below="@id/directional_counter_party_label" android:lineSpacingExtra="2.0dip" style="@style/TextAppearance.AppCompat.Body1" />
+        <TextView android:textColor="@color/quantum_black_secondary_text" android:id="@id/date_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/avatar_view" android:layout_below="@id/memo_label" style="@style/TextAppearance.AppCompat.Body1" />
+    </RelativeLayout>
+</merge>
