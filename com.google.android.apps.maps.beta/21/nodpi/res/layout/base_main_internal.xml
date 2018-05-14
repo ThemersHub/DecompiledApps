@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.gmm.base.views.map.MapViewContainer android:id="@id/map_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.gmm.base.views.scalebar.ScalebarView android:id="@id/scalebar_widget" android:visibility="invisible" android:layout_height="@dimen/layers_scalebar_height" style="@style/WrapContentContainer" />
+    <TextView android:textSize="@dimen/map_copyright_text_size" android:id="@id/map_copyright_content" android:visibility="invisible" android:contentDescription="" android:importantForAccessibility="no" android:paddingStart="@dimen/map_copyright_padding" style="@style/WrapContentContainer" />
+    <FrameLayout android:id="@id/satellite_button" style="@style/WrapContentContainer" />
+    <FrameLayout android:id="@id/qu_sv_entrypoint_container" android:visibility="gone" style="@style/WrapContentContainer" />
+    <ImageView android:id="@id/watermark_image" android:src="@drawable/mapslogo_61x21_with_2_stroke_color_66x25" style="@style/WrapContentContainer" />
+    <ImageView android:id="@id/floating_crosshairs" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_location_searching_black_24" />
+    <FrameLayout android:id="@id/bottom_shortcuts_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/on_map_secondary_action_button_container" style="@style/WrapContentContainer">
+        <FrameLayout android:id="@id/sharing_fablet_container" android:top="13.0dip" android:layout_marginEnd="12.0dip" style="@style/HorizontalWrapContentContainer" />
+        <FrameLayout android:id="@id/mod_sharing_fablet_container" android:visibility="gone" android:layout_marginBottom="10.0dip" android:top="13.0dip" android:layout_marginEnd="4.0dip" style="@style/HorizontalWrapContentContainer" />
+        <FrameLayout android:id="@id/qu_mylocation_container" android:layout_marginBottom="5.0dip" style="@style/HorizontalWrapContentContainer" />
+    </LinearLayout>
+    <ViewStub android:id="@id/indoor_content_stub" android:layout="@layout/indoor_content_layout" android:inflatedId="@id/indoor_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/compass_container" android:focusableInTouchMode="false" android:clipChildren="false" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.gmm.map.ui.CompassButtonView android:id="@id/base_compass_button" android:visibility="invisible" android:layout_width="@dimen/compass_button_size" android:layout_height="@dimen/compass_button_size" android:contentDescription="@string/ACCESSIBILITY_COMPASS" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/bottommapoverlay_container" android:focusableInTouchMode="true" android:visibility="gone" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/on_map_action_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <View android:id="@id/mapmask_image" android:background="@color/map_tablet_mask" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+    <FrameLayout android:id="@id/map_overlay" android:background="@color/map_overlay" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/side_panel_shadow" android:background="@drawable/generic_right_shadow" android:visibility="gone" android:layout_width="@dimen/shadow_height" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/below_search_omnibox_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/on_map_refresh_action_container" android:visibility="gone" style="@style/WrapContentContainer" />
+    <FrameLayout android:id="@id/home_bottom_sheet_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/side_panel_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/search_omnibox_container" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" style="@style/WrapContentContainer" />
+    <com.google.android.apps.gmm.base.views.expandingscrollview.ExpandingScrollView android:id="@id/expandingscrollview_container" style="@style/MatchParentContainer" />
+    <FrameLayout android:id="@id/custom_slider_container" style="@style/MatchParentContainer" />
+    <FrameLayout android:id="@id/fullscreens_group" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:visibility="invisible" layout="@layout/base_fullscreencontainer_internal" />
+        <include android:visibility="invisible" layout="@layout/base_fullscreencontainer_internal" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/custom_header_container" android:focusable="false" android:focusableInTouchMode="false" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/header_container" android:focusable="false" android:focusableInTouchMode="false" android:visibility="invisible" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/footer_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/footer_container_above_shadow" style="@style/AboveShadow" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/footer_fab_container" android:visibility="gone" style="@style/WrapContentContainer" />
+    <FrameLayout android:id="@id/tutorial_container" android:visibility="invisible" style="@style/MatchParentContainer">
+        <ViewStub android:id="@id/layerstutorial_stub" android:layout="@layout/qu_tutorial_layers_internal" android:inflatedId="@id/layerstutorial_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/layerstutorialtablet_stub" android:layout="@layout/qu_tutorial_layerstablet_internal" android:inflatedId="@id/layerstutorial_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/pulluptutorial_stub" android:layout="@layout/qu_tutorial_pullup_internal" android:inflatedId="@id/pulluptutorial_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/pulluptutorialtablet_stub" android:layout="@layout/qu_tutorial_pulluptablet_internal" android:inflatedId="@id/pulluptutorial_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/pulluptutoriallandscape_stub" android:layout="@layout/qu_tutorial_pullup_internal_landscape" android:inflatedId="@id/pulluptutorial_overlay_landscape" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/personalsearchtutorial_stub" android:layout="@layout/qu_tutorial_personalsearch_internal" android:inflatedId="@id/personalsearchtutorial_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/personalsearchtutorialtablet_stub" android:layout="@layout/qu_tutorial_personalsearchtablet_internal" android:inflatedId="@id/personalsearchtutorial_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/ugctaskssearchbuttontutorial_stub" android:layout="@layout/qu_tutorial_ugctaskssearchbutton_internal" android:inflatedId="@id/ugctaskssearchbuttontutorial_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</merge>

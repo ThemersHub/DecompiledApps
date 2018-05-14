@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_toLeftOf="@id/departure_first_chip" android:layout_alignParentLeft="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/transit_station_disruption_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" />
+            <TextView android:ellipsize="end" android:id="@id/transit_station_departures_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TransitNotificationText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/transit_state_icon" android:visibility="gone" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginRight="6.0dip" android:alpha="0.54" />
+            <TextView android:layout_gravity="bottom" android:id="@id/transit_station_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" style="@style/TransitNotificationText.Info" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/departure_first_chip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_toLeftOf="@id/departure_second_chip">
+        <ImageView android:id="@id/transit_line_1_icon" style="@style/TransitLineNameOrIcon" />
+        <LinearLayout android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/transit_line_1_disruption_icon" android:visibility="gone" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_marginRight="4.0dip" />
+            <TextView android:id="@id/transit_line_1_info" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TransitNotificationText.Info" />
+            <ImageView android:gravity="center_vertical" android:id="@id/transit_line_1_crowdedness_icon" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/departure_second_chip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/transit_line_2_icon" style="@style/TransitLineNameOrIcon" />
+        <LinearLayout android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/transit_line_2_disruption_icon" android:visibility="gone" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_marginRight="4.0dip" />
+            <TextView android:id="@id/transit_line_2_info" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TransitNotificationText.Info" />
+            <ImageView android:gravity="center_vertical" android:id="@id/transit_line_2_crowdedness_icon" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
