@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:camera="http://schemas.android.com/apk/res/com.android.camera2">
+    <FrameLayout android:id="@id/bottombar_capture" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.android.camera.ui.ShutterButtonHolder android:layout_gravity="center" android:id="@id/shutter_button" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/bottombar_cancel" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.android.camera.widget.DarkLightImageButton android:layout_gravity="center" android:id="@id/shutter_cancel_button" android:background="@color/camera_button_background" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_cancel" android:scaleType="center" android:contentDescription="@string/accessibility_cancel_button" camera:lightBackground="@color/selfie_flash_color" camera:lightSrc="@drawable/ic_cancel_dark" />
+    </FrameLayout>
+    <include layout="@layout/retake_done_layout" />
+</merge>
