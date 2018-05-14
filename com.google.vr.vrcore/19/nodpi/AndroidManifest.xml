@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" package="com.google.vr.vrcore" platformBuildVersionCode="27" platformBuildVersionName="P">
+    <protected-broadcast android:name="com.google.vr.vrcore.daydream.action.ACTION_IDLE"/>
+    <permission android:name="com.google.vr.vrcore.permission.VRCORE_INTERNAL" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.vr.vrcore.permission.VRCORE_INTERNAL"/>
+    <uses-permission android:name="android.permission.ACCESS_VR_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-feature android:name="android.software.vr.mode" android:required="false"/>
+    <uses-permission android:name="android.permission.RESTRICTED_VR_ACCESS"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true"/>
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="true"/>
+    <uses-feature android:name="android.hardware.vr.high_performance" android:required="false"/>
+    <uses-feature android:name="android.hardware.vr.headtracking" android:required="false" android:version="1"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="true" android:backupAgent="com.google.vr.vrcore.backup.BackupAgent" android:directBootAware="true" android:fullBackupOnly="false" android:icon="@mipmap/product_logo_vr_core_launcher_color_48" android:label="@string/app_name" android:multiArch="true" android:name="com.google.vr.vrcore.application.VrCoreApplication" android:roundIcon="@mipmap/product_logo_vrcore_round_launcher_color_48">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.vr.vrcore.ClientApiVersion" android:value="23"/>
+        <provider android:authorities="com.google.vr.vrcore.appinfo" android:enabled="@bool/is_n_or_above" android:exported="@bool/is_n_or_above" android:name="com.google.vr.vrcore.appinfo.AppInfoProvider"/>
+        <service android:enabled="@bool/is_n_or_above" android:exported="false" android:name="com.google.vr.vrcore.capture.CaptureLifecycleService" android:process=":sysui"/>
+        <service android:enabled="@bool/is_n_or_above" android:exported="true" android:name="com.google.vr.vrcore.capture.VrScreenCaptureService" android:process=":sysui">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.BIND_CAPTURE_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.vr.vrcore.capture.cast.CastPresentationService" android:process=":sysui"/>
+        <service android:enabled="@bool/is_n_or_above" android:exported="true" android:name="com.google.vr.vrcore.capture.cast.CastSessionManager" android:process=":sysui">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.capture.cast.BIND_CAST_SERVICE"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="true" android:name="com.google.vr.vrcore.capture.record.VrScreencapInterstitialActivity" android:noHistory="true" android:theme="@style/VrCoreSettingsActivityTheme"/>
+        <activity android:configChanges="orientation|uiMode" android:exported="false" android:name="com.google.vr.vrcore.capture.record.PermissionsActivity" android:noHistory="true" android:theme="@style/VrActivityTheme"/>
+        <service android:enabled="@bool/is_n_or_above" android:exported="true" android:name="com.google.vr.vrcore.capture.record.RecorderService" android:process=":sysui"/>
+        <service android:enabled="@bool/is_n_or_above" android:exported="@bool/is_n_or_above" android:name="com.google.vr.vrcore.common.VrCoreListenerService" android:permission="android.permission.BIND_VR_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.vr.VrListenerService"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="@bool/is_n_or_above" android:exported="@bool/is_n_or_above" android:name="com.google.vr.vrcore.common.VrCoreZenConditionProvider" android:permission="android.permission.BIND_CONDITION_PROVIDER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.ConditionProviderService"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.google.vr.vrcore.common.VrCoreSdkService">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.BIND_SDK_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="@bool/is_o_or_above" android:exported="false" android:name="com.google.vr.vrcore.compositor.VrCoreCompositorService" android:process=":compositor"/>
+        <service android:enabled="@bool/is_o_or_above" android:exported="true" android:name="com.google.vr.vrcore.compositor.CompositorKeepaliveService" android:permission="android.permission.BIND_VR_LISTENER_SERVICE" android:process=":compositor"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.vr.vrcore.controller.ControllerIssueActivity" android:theme="@android:style/Theme.NoDisplay"/>
+        <service android:enabled="@bool/is_n_or_above" android:exported="@bool/is_n_or_above" android:name="com.google.vr.vrcore.controller.ControllerService">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.controller.BIND"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.vr.vrcore.daydream.PrepareActivity" android:screenOrientation="sensor" android:theme="@style/VrCoreSysUiActivityNoPreviewTheme">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.PREPARE_VR"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.vr.vrcore.daydream.DonPrepareActivity" android:resizeableActivity="false" android:screenOrientation="sensor" android:theme="@style/VrCoreSysUiActivityNoPreviewTheme">
+            <intent-filter android:priority="100">
+                <action android:name="com.google.vr.vrcore.PREPARE_VR"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:exported="false" android:label="@string/checklist_title" android:name="com.google.vr.vrcore.daydream.VrDaydreamTroubleshootingActivity" android:theme="@style/VrCoreSettingsActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.intent.action.vr.DAYDREAM_PERMISSIONS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:exported="true" android:label="@string/pairing_title" android:launchMode="singleTask" android:name="com.google.vr.vrcore.daydream.ControllerTurnOnActivity" android:noHistory="true" android:theme="@style/VrCorePairingActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.intent.action.vr.CONTROLLER_TURN_ON"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:exported="true" android:label="@string/pairing_title" android:launchMode="singleTask" android:name="com.google.vr.vrcore.daydream.PairingActivity" android:noHistory="true" android:theme="@style/VrCorePairingActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.intent.action.vr.controller.PAIR_NEW"/>
+                <action android:name="com.google.intent.action.vr.controller.UNPAIR"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.vr.vrcore.daydream.DaydreamSetupWizardActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.vr.vrcore.daydream.StartSetupActivity" android:noHistory="true" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.daydream.REQUEST_SETUP"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:exported="true" android:label="@string/pairing_title" android:launchMode="singleTask" android:name="com.google.vr.vrcore.daydream.DonPairingActivity" android:noHistory="true" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/VrCoreDonDefaultActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.intent.action.vr.controller.PAIR_DON"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:enableVrMode="com.google.vr.vrcore/com.google.vr.vrcore.common.VrCoreListenerService" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.vr.vrcore.daydream.MetaworldActivity" android:noHistory="true" android:resizeableActivity="false" android:screenOrientation="landscape" android:theme="@style/VrActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.ACTION_NONE"/>
+                <category android:name="com.google.intent.category.DAYDREAM"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:exported="false" android:launchMode="singleTask" android:name="com.google.vr.vrcore.daydream.OtaActivity" android:theme="@style/VrCorePairingActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:exported="false" android:label="@string/enabling_bluetooth_title" android:name="com.google.vr.vrcore.daydream.InitBluetoothActivity" android:resizeableActivity="false" android:theme="@style/VrCoreDonDefaultActivityTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.vr.vrcore.daydream.UpdatePromptActivity" android:noHistory="true" android:theme="@style/VrCoreDialogActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.intent.action.vr.CLIENT_NEEDS_SYSTEM_UPDATE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:name="com.google.vr.vrcore.daydream.OtaService"/>
+        <meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@xml/app_restrictions"/>
+        <meta-data android:name="com.google.vr.vrcore.SdkLibraryVersion" android:value="v1.140.0"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:enableVrMode="@string/gvr_vr_mode_component" android:excludeFromRecents="true" android:exported="false" android:name="com.google.vr.vrcore.modules.calibration.CalibrationActivity" android:process="@string/calibration_process_name" android:resizeableActivity="false" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.ACTION_NONE"/>
+                <category android:name="com.google.intent.category.DAYDREAM"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:enableVrMode="@string/gvr_vr_mode_component" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.vr.vrcore.modules.sysui.dashboard.DashboardActivity" android:process="@string/sysui_process_name" android:resizeableActivity="false" android:screenOrientation="landscape" android:taskAffinity="" android:theme="@style/DashboardActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.ACTION_NONE"/>
+                <category android:name="com.google.intent.category.DAYDREAM"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.vr.vrcore.modules.sysui.dashboard.BackToDashboardFrom2dActivity" android:process="@string/sysui_process_name" android:taskAffinity="" android:theme="@style/NoStartScreen"/>
+        <activity android:exported="false" android:name="com.google.vr.vrcore.modules.sysui.headsup.HeadsUpOverlayActivity" android:process="@string/sysui_process_name">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.ACTION_NONE"/>
+                <category android:name="com.google.intent.category.DAYDREAM"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.vr.vrcore.modules.sysui.critical.CriticalOverlayActivity" android:process="@string/sysui_process_name">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.ACTION_NONE"/>
+                <category android:name="com.google.intent.category.DAYDREAM"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:enableVrMode="@string/gvr_vr_mode_component" android:exported="false" android:launchMode="singleInstance" android:name="com.google.vr.vrcore.modules.sysui.util.SwitchToPrimaryDisplayActivity" android:noHistory="true" android:process="@string/sysui_process_name" android:taskAffinity="" android:theme="@style/NoStartScreen"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:enableVrMode="@string/gvr_vr_mode_component" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleInstance" android:name="com.google.vr.vrcore.modules.sysui.compatibilityui.SystemOverlayDummyActivity" android:noHistory="true" android:process="@string/sysui_process_name" android:resizeableActivity="false" android:screenOrientation="landscape" android:taskAffinity="" android:theme="@style/NoStartScreen"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleInstance" android:name="com.google.vr.vrcore.modules.sysui.compatibilityui.BackToVrActivity" android:process="@string/sysui_process_name" android:taskAffinity="" android:theme="@style/NoStartScreen"/>
+        <service android:enabled="@bool/is_n_or_above" android:exported="false" android:name="com.google.vr.vrcore.modules.sysui.VrSysUiService" android:process="@string/sysui_process_name"/>
+        <service android:enabled="@bool/is_n_or_above" android:exported="false" android:name="com.google.vr.vrcore.modules.sysui.notification.SysUiNotificationService" android:process="@string/sysui_process_name">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.BIND_SYS_UI_NOTIFICATION_SERVICE_ACTION"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.vr.internal.lullaby.keyboard.ime.ImeService" android:process="@string/sysui_process_name">
+            <intent-filter>
+                <action android:name="com.google.vr.internal.lullaby.keyboard.ime.BIND"/>
+            </intent-filter>
+        </service>
+        <activity android:enabled="@bool/is_m_or_above" android:exported="@bool/is_m_or_above" android:name="com.google.vr.vrcore.nfc.ViewerDetectionActivity" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="google.vr/rsvd"/>
+                <data android:mimeType="google.vr/ver"/>
+                <data android:mimeType="google.vr/data"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.SIM_NFC_SCANNED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:enabled="@bool/is_n_or_above" android:exported="@bool/is_n_or_above" android:name="com.google.vr.vrcore.notification.VrNotificationService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.vr.vrcore.PaymentsVersion" android:value="v188840474"/>
+        <service android:enabled="@bool/is_o_or_above" android:exported="true" android:name="com.google.vr.vrcore.compositor.performance.PerformanceOverlayService" android:process=":compositor">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.compositor.performance.BIND_SDK_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="@bool/is_n_or_above" android:exported="@bool/is_n_or_above" android:name="com.google.vr.vrcore.performance.service.PerformanceService">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.performance.service.BIND"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="orientation|screenSize" android:exported="true" android:hardwareAccelerated="true" android:label="@string/register_headset_button" android:name="com.google.vr.libraries.qrcode.QrCodeScanner" android:screenOrientation="portrait" android:theme="@style/QrCodeScannerTheme">
+            <intent-filter>
+                <action android:name="com.google.intent.action.vr.mono.SCAN_VIEWER_QR_CODE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:label="@string/settings_title" android:name="com.google.vr.vrcore.settings.VrSettingsActivity" android:theme="@style/VrCoreSettingsActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.google.vrtoolkit.cardboard.CONFIGURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.intent.action.vr.VR_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.intent.action.vr.SWITCH_HEADSET"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:exported="false" android:label="@string/permissions_title" android:name="com.google.vr.vrcore.settings.VrPermissionsActivity" android:theme="@style/VrCoreSettingsActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.intent.action.vr.VR_PERMISSIONS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:exported="false" android:name="com.google.vr.vrcore.settings.PermissionsHelperActivity" android:theme="@style/VrCoreDialogActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:exported="false" android:name="com.google.vr.vrcore.settings.SpecialPermissionsHelperActivity" android:theme="@style/VrCoreDialogActivityTheme"/>
+        <provider android:authorities="com.google.vr.vrcore.settings" android:enabled="true" android:exported="true" android:name="com.google.vr.vrcore.settings.VrSettingsProvider">
+            <intent-filter android:priority="100">
+                <action android:name="android.content.action.VR_SETTINGS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <provider android:authorities="com.google.vr.vrcore.settings_internal" android:enabled="true" android:exported="true" android:name="com.google.vr.vrcore.settings.VrSettingsProviderInternal" android:permission="com.google.vr.vrcore.permission.VRCORE_INTERNAL"/>
+        <service android:enabled="@bool/is_n_or_above" android:exported="@bool/is_n_or_above" android:name="com.google.vr.vrcore.tracking.HeadTrackingService">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.BIND_HEAD_TRACKING_SERVICE"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="navigation|uiMode" android:enabled="@bool/is_n_or_above" android:exported="@bool/is_n_or_above" android:hardwareAccelerated="false" android:name="com.google.vr.vrcore.transition.TransitionViewActivity" android:resizeableActivity="false" android:screenOrientation="landscape" android:theme="@style/VrCoreTransitionActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.intent.action.vr.mono.TRANSITION_VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:enabled="@bool/is_n_or_above" android:excludeFromRecents="true" android:exported="false" android:name="com.google.vr.vrcore.uiutils.StereoTextActivity" android:noHistory="true" android:resizeableActivity="false" android:screenOrientation="landscape" android:theme="@style/VrActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.vr.vrcore.ACTION_NONE"/>
+                <category android:name="com.google.intent.category.CARDBOARD"/>
+                <category android:name="com.google.intent.category.DAYDREAM"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"/>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

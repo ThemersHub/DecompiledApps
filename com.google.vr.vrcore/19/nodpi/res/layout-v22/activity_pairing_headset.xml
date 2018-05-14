@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/body" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/pairing_bg" android:layout_width="fill_parent" android:layout_height="304.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/card_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+            <FrameLayout android:id="@id/instructions" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textColor="@color/controller_pairing_main_text_vrheadset" android:gravity="center" android:id="@id/text_pairing_instructions" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="24.0dip" android:text="@string/calibrate_intro" />
+            </FrameLayout>
+            <ProgressBar android:layout_gravity="center" android:id="@id/please_wait" android:visibility="gone" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginTop="40.0dip" android:layout_marginBottom="24.0dip" android:indeterminate="true" android:indeterminateTint="@color/controller_pairing_spinner_vrheadset" style="?android:attr/progressBarStyleLarge" />
+            <FrameLayout android:id="@id/success" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageButton android:layout_gravity="center" android:id="@id/okButton" android:background="@drawable/round_btn_bg" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="36.0dip" android:layout_marginBottom="40.0dip" android:src="@drawable/quantum_ic_arrow_forward_white_24" android:tint="@color/light_grey" android:contentDescription="@string/ota_complete_button" android:stateListAnimator="@animator/round_btn_states" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="@dimen/don_controller_outline_width_vrheadset" android:layout_height="@dimen/don_controller_outline_height_vrheadset">
+                <ImageView android:id="@id/controller_outline" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/controller_outline" android:contentDescription="@null" />
+                <com.google.vr.vrcore.uiutils.LoopingAnimatedVectorImageView android:id="@id/controller_pulsing_home_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" />
+                <com.google.vr.vrcore.uiutils.LoopingAnimatedVectorImageView android:id="@id/controller_pulsing_next_button" android:layout_width="@dimen/don_controller_outline_width_vrheadset" android:layout_height="@dimen/don_controller_outline_height_vrheadset" android:contentDescription="@null" />
+            </FrameLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@id/error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/don_text_size_small" android:layout_height="@dimen/don_text_size_small" android:src="@drawable/ic_help_red" android:contentDescription="@null" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/controller_pairing_main_text_vrheadset" android:gravity="center" android:layout_gravity="center|top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="22.0dip" android:text="@string/ota_connection_error_text" />
+        </FrameLayout>
+    </FrameLayout>
+    <TextView android:textSize="12.0sp" android:textColor="@color/controller_pairing_error_text_vrheadset" android:gravity="center" android:id="@id/pairing_error_hint" android:background="@drawable/pairing_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="72.0dip" android:layout_marginTop="10.0dip" android:text="@string/controller_issue_in_headset" android:drawablePadding="8.0dip" android:drawableStart="@drawable/quantum_ic_error_outline_black_36" android:paddingStart="16.0dip" android:paddingEnd="24.0dip" android:drawableTint="@color/controller_pairing_error_text_vrheadset" />
+    <TextView android:textColor="#ff808080" android:layout_gravity="bottom|center" android:id="@id/debug_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" />
+</LinearLayout>

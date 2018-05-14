@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/pref_title_controller" android:key="@string/pref_key_controller" />
+    <Preference android:title="@string/pref_title_controller_pair" android:key="@string/pref_key_controller_pair" />
+    <Preference android:title="@string/pref_title_controller_unpair" android:key="@string/pref_key_controller_unpair">
+        <intent android:targetPackage="com.google.vr.vrcore" android:action="com.google.intent.action.vr.controller.UNPAIR" />
+    </Preference>
+    <ListPreference android:entries="@array/handedness_options" android:title="@string/pref_title_controller_handedness" android:key="@string/pref_key_controller_handedness_string" android:summary="%s" android:defaultValue="0" android:entryValues="@array/handedness_values" />
+</PreferenceScreen>

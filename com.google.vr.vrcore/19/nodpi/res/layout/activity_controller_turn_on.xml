@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/body" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/instructions" android:background="@drawable/pairing_bg" android:layout_width="fill_parent" android:layout_height="304.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="@color/controller_pairing_main_text_vrheadset" android:gravity="center" android:id="@id/text_turn_on_controller_instructions" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="24.0dip" android:text="@string/turn_on_controller_instructions" />
+        <FrameLayout android:layout_width="@dimen/don_controller_outline_width_vrheadset" android:layout_height="@dimen/don_controller_outline_height_vrheadset">
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/controller_outline" android:contentDescription="@string/turn_on_controller_instructions" />
+            <ImageView android:id="@id/controller_pulsing_home_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" />
+        </FrameLayout>
+    </LinearLayout>
+    <TextView android:textColor="#ff808080" android:layout_gravity="bottom|center" android:id="@id/debug_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" />
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:orientation="vertical" android:id="@id/camera_frame_container" android:background="@color/camera_preview_light_gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_above="@id/bottom">
+            <view android:layout_gravity="center" android:id="@id/camera_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/tick_marks" class="com.google.vr.libraries.qrcode.CameraOverlayUI$CameraOverlayView" />
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ProgressBar android:id="@id/progress_bar" android:layout_width="36.0dip" android:layout_height="36.0dip" android:indeterminate="true" android:indeterminateTint="@color/quantum_white_text" android:indeterminateTintMode="src_in" />
+                <TextView android:textColor="@color/quantum_white_text" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/processing" style="@style/text_16sp_sans_serif" />
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/camera_permission_rational" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textStyle="bold" android:textColor="#de000000" android:gravity="center" android:paddingLeft="56.0dip" android:paddingRight="56.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/camera_permission_title" style="@style/text_16sp_sans_serif" />
+                <TextView android:textColor="#8a000000" android:gravity="center" android:paddingLeft="56.0dip" android:paddingRight="56.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/camera_permission_message" android:lineSpacingExtra="4.0dip" style="@style/text_14sp_sans_serif" />
+                <TextView android:textStyle="bold" android:textColor="#ffff6e40" android:layout_gravity="center_horizontal" android:id="@id/turn_on" android:paddingLeft="20.0dip" android:paddingTop="8.0dip" android:paddingRight="20.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/camera_permission_turn_on" style="@style/text_14sp_sans_serif" />
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/instructions" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:background="@color/footer_light_grey" android:paddingLeft="24.0dip" android:paddingTop="32.0dip" android:paddingRight="24.0dip" android:paddingBottom="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/qr_sample" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/qr_sample" android:layout_weight="0.0" />
+                    <TextView android:textColor="#de000000" android:paddingLeft="24.0dip" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/scanner_instructions" android:lineSpacingExtra="4.0dip" style="@style/text_16sp_sans_serif" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:background="@color/footer_medium_grey" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                    <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                    <TextView android:textColor="@color/darker_gray" android:gravity="center_vertical" android:id="@id/tips" android:background="?android:selectableItemBackground" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/troubleshooting_tips" style="@style/text_14sp_sans_serif_medium" />
+                    <View android:id="@id/divider" android:background="#1f000000" android:layout_width="1.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" style="@style/VerticalDivider" />
+                    <TextView android:textColor="@color/darker_gray" android:gravity="center_vertical" android:id="@id/skip" android:background="?android:selectableItemBackground" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/skip_scanning" style="@style/text_14sp_sans_serif_medium" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/confirmation" android:background="@color/footer_light_grey" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="184.0dip" android:layout_below="@id/instructions" android:layout_alignParentBottom="true">
+                <TextView android:textColor="#de000000" android:id="@id/header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="24.0dip" android:text="@string/viewer_identified" style="@style/text_20sp_sans_serif_medium" />
+                <TextView android:textColor="#8a000000" android:id="@id/cardboard_configured" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="16.0dip" android:text="@string/cardboard_configured" android:layout_below="@id/header_text" android:lineSpacingExtra="4.0dip" style="@style/text_16sp_sans_serif" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton android:id="@id/next" android:visibility="gone" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/quantum_ic_arrow_forward_white_24" android:layout_marginEnd="24.0dip" app:layout_anchor="@id/camera_frame_container" app:layout_anchorGravity="bottom|center|right" app:fabSize="normal" app:borderWidth="0.0dip" app:backgroundTint="@color/color_accent" />
+</android.support.design.widget.CoordinatorLayout>
