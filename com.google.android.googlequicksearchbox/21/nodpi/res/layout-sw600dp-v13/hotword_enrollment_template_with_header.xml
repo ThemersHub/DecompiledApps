@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.shared.ui.FractionalLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.gsa.staticplugins.hotwordenrollment.SetupWizardIllustration android:id="@id/illustration_tablet" android:background="@color/hotword_enrollment_primary_color" android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="@drawable/hotword_header_tablet_bg" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/hotword_enrollment_tablet_illustration_height" style="@style/HotwordEnrollmentHeader">
+            <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/hotword_enrollment_header_text_vertical_padding" android:paddingBottom="@dimen/hotword_enrollment_header_text_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/title" style="@style/HotwordEnrollmentHeaderText.Title" />
+                <TextView android:id="@id/subtitle" android:visibility="gone" style="@style/HotwordEnrollmentHeaderText.Subtitle" />
+            </LinearLayout>
+            <com.google.android.apps.gsa.setupwizard.util.BottomScrollView android:id="@id/bottom_scroll_view" android:background="@drawable/setupwizard_card_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/setup_wizard_bottom_scroll_view">
+                <FrameLayout android:id="@id/setup_content" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/HotwordEnrollmentContentFrame" />
+            </com.google.android.apps.gsa.setupwizard.util.BottomScrollView>
+        </LinearLayout>
+    </com.google.android.apps.gsa.staticplugins.hotwordenrollment.SetupWizardIllustration>
+    <include layout="@layout/hotword_enrollment_button_bar" />
+</com.google.android.apps.gsa.shared.ui.FractionalLinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:background="@drawable/ime_background_holo" android:layout_width="fill_parent" android:layout_height="@dimen/ime_port_height">
+        <Space android:layout_width="10.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:id="@id/ime_usage_hint" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="24.0dip">
+                <TextView android:textSize="@dimen/ime_state_text_size" android:gravity="center" android:id="@id/ime_state" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ime_start_speaking" android:layout_centerInParent="true" />
+                <TextView android:textSize="@dimen/ime_title_text_size" android:gravity="center" android:id="@id/title" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ime_working" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/ime_retry_text_size" android:textColor="@color/ime_retry_text" android:gravity="center" android:id="@id/retry_text" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/try_action_again" />
+        <RelativeLayout android:orientation="horizontal" android:id="@id/ime_mic_layer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/clickable_mic_levels" android:layout_width="@dimen/ime_mic_size" android:layout_height="@dimen/ime_mic_size" android:layout_centerInParent="true">
+                <include layout="@layout/ime_mic_indicator" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/ime_settings_button_layer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ime_secondary_button_margin" android:layout_toLeftOf="@id/clickable_mic_levels" android:layout_centerVertical="true" />
+            <RelativeLayout android:id="@id/ime_undo_button_layer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ime_secondary_button_margin" android:layout_toRightOf="@id/clickable_mic_levels" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/clickable_label" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/google_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_google_logo_ime" android:scaleType="center" android:layout_centerHorizontal="true" android:contentDescription="@string/common_google_logo" />
+        </RelativeLayout>
+        <Space android:layout_width="10.0dip" android:layout_height="0.0dip" android:layout_weight="2.0" />
+    </LinearLayout>
+</LinearLayout>

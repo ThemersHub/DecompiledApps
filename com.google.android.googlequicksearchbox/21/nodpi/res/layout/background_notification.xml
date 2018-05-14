@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/background_notification_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/TextAppearance.Compat.Notification.Title" />
+    <TextView android:ellipsize="end" android:id="@id/background_notification_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/TextAppearance.Compat.Notification" />
+    <RelativeLayout android:id="@id/notification_answer_template" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/notification_answer_margin_top">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/notification_answer_icon" android:visibility="gone" android:layout_width="@dimen/universal_suggestion_icon_size" android:layout_height="@dimen/universal_suggestion_icon_size" android:layout_marginRight="@dimen/universal_suggestion_icon_margin_width" android:layout_marginEnd="@dimen/universal_suggestion_icon_margin_width" android:layout_alignParentStart="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/notification_answer_content" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toEndOf="@id/notification_answer_icon">
+            <LinearLayout android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/notification_answer_image_line_icon_1" android:visibility="gone" android:layout_width="@dimen/universal_suggestion_image_line_width" android:layout_height="@dimen/universal_suggestion_image_line_height" android:layout_marginRight="@dimen/universal_suggestion_image_line_right_margin" />
+                <TextView android:id="@id/notification_answer_image_line_text_1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/notification_answer_image_line_icon_2" android:visibility="gone" android:layout_width="@dimen/universal_suggestion_image_line_width" android:layout_height="@dimen/universal_suggestion_image_line_height" android:layout_marginRight="@dimen/universal_suggestion_image_line_right_margin" />
+                <TextView android:ellipsize="end" android:id="@id/notification_answer_image_line_text_2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

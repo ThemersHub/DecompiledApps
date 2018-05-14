@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.gsa.assistant.settings.shared.ImageHeader android:key="bistoImageHeader" />
+    <com.google.android.apps.gsa.assistant.settings.shared.DescriptionPreferenceCategory android:title="@string/assistant_settings_common_device_id_category" />
+    <Preference android:persistent="false" android:title="@string/bisto_device_tutorial_pref_title" android:key="bistoTutorials" android:summary="@string/bisto_device_tutorial_pref_summary" android:widgetLayout="@layout/preference_widget_next" />
+    <SwitchPreferenceCompat android:persistent="false" android:title="@string/bisto_device_notifications_pref_title" android:key="bistoNotifications" android:summary="@string/bisto_device_notifications_pref_summary" />
+    <Preference android:persistent="false" android:title="@string/bisto_device_notifications_pref_title" android:key="bistoNotificationsExtended" android:widgetLayout="@layout/preference_widget_next" />
+    <Preference android:persistent="false" android:title="@string/bisto_device_notification_access_pref_title" android:key="bistoNotificationAccess" android:summary="@string/bisto_device_notification_access_pref_summary" android:widgetLayout="@layout/preference_widget_warning" />
+    <Preference android:persistent="false" android:title="@string/bisto_device_double_tap_pref_title" android:key="bistoDoubleTap" android:widgetLayout="@layout/preference_widget_next" />
+    <SwitchPreferenceCompat android:persistent="false" android:title="" android:key="bistoPii" android:summary="" />
+    <Preference android:persistent="false" android:title="@string/bisto_device_oem_partner_app_title" android:key="oemPartnerApp" android:summary="@string/bisto_device_oem_partner_app_summary" android:widgetLayout="@layout/preference_widget_launch" />
+    <Preference android:persistent="false" android:title="@string/bisto_device_remove_device_pref_title" android:key="bistoRemoveDevice" android:widgetLayout="@layout/preference_widget_clear" />
+    <PreferenceCategory android:title="@string/bisto_information_preference_category" android:key="bistoInformationCategory">
+        <Preference android:persistent="false" android:title="@string/bisto_device_battery" android:key="bistoBattery" />
+        <Preference android:persistent="false" android:title="@string/bisto_device_connection_status" android:key="bistoConnectionStatus" />
+        <Preference android:persistent="false" android:title="@string/bisto_device_make_and_model" android:key="bistoMakeAndModel" />
+        <Preference android:persistent="false" android:title="@string/bisto_device_firmware_version_title" android:key="bistoFirmwareVersion" />
+        <Preference android:persistent="false" android:title="@string/bisto_device_serial" android:key="bistoSerialNumber" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bisto_support_preference_category" android:key="bistoSupportCategory">
+        <Preference android:persistent="false" android:title="@string/bisto_device_help_pref" android:key="bistoHelp" android:widgetLayout="@layout/preference_widget_next" />
+        <Preference android:persistent="false" android:title="@string/bisto_device_send_feedback" android:key="bistoLeaveFeedback" android:widgetLayout="@layout/preference_widget_next" />
+        <Preference android:persistent="false" android:title="@string/bisto_device_open_source_licenses" android:key="bistoOpenSourceLicenses" android:widgetLayout="@layout/preference_widget_next" />
+        <Preference android:persistent="false" android:title="@string/bisto_device_safety_info" android:key="bistoSafetyInfo" android:widgetLayout="@layout/preference_widget_next" />
+        <SwitchPreferenceCompat android:persistent="false" android:title="@string/bisto_device_send_diagnostics_pref_title" android:key="bistoDiagnostics" android:summary="@string/bisto_device_send_diagnostics_pref_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

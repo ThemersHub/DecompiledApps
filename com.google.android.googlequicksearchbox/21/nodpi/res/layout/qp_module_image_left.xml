@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingLeft="@dimen/qp_column_padding" android:paddingTop="@dimen/qp_metadata_card_large_padding" android:paddingRight="@dimen/qp_column_padding" android:paddingBottom="@dimen/qp_metadata_card_large_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:now="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/action_icon" android:contentDescription="@null" style="@style/qp_action_icon_top" />
+    <RelativeLayout android:id="@id/content_area" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.MetadataLineView android:orientation="vertical" android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <Space android:id="@id/details_padding" android:layout_width="fill_parent" android:layout_height="@dimen/qp_metadata_card_extra_padding" android:layout_below="@id/header_container" />
+        <com.google.android.apps.gsa.now.shared.ui.RecyclerViewStub android:id="@id/photo_stub" android:layout_width="@dimen/qp_square_small_image_size" android:layout_height="@dimen/qp_square_small_image_size" android:layout_marginTop="@dimen/qp_small_padding" android:layout_marginRight="@dimen/qp_metadata_card_medium_padding" android:layout_below="@id/details_padding" android:layout_alignParentLeft="true" android:layout_marginEnd="@dimen/qp_metadata_card_medium_padding" android:layout_alignParentStart="true" now:layout="@layout/photo_with_attribution" now:inflatedId="@id/content_photo" />
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.MetadataLineView android:orientation="vertical" android:id="@id/details_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/photo_stub" android:layout_below="@id/details_padding" android:layout_alignWithParentIfMissing="true" android:layout_toEndOf="@id/photo_stub" />
+    </RelativeLayout>
+</LinearLayout>

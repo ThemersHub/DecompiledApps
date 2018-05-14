@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/image_frame" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.gsa.now.shared.ui.CrossfadingWebImageView android:id="@id/photo" android:layout_width="fill_parent" android:layout_height="@dimen/qp_image_module_height" android:scaleType="centerCrop" android:adjustViewBounds="true" thegoogle:cornerRadius="@dimen/rounded_corner_radius" thegoogle:hideOnNullImage="true" style="@style/qp_card_module" />
+        <ImageView android:layout_gravity="center" android:id="@id/media_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="#33000000" android:scaleType="fitXY" />
+        <View android:layout_gravity="center" android:id="@id/media_icon" android:background="@drawable/quantum_ic_play_circle_fill_white_48" android:visibility="gone" android:layout_width="@dimen/qp_full_image_view_play_icon_size" android:layout_height="@dimen/qp_full_image_view_play_icon_size" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.gsa.staticplugins.nowcards.ui.EllipsizingTextView android:id="@id/photo_attribution_primary" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PhotoAttribution" />
+            <com.google.android.apps.gsa.staticplugins.nowcards.ui.EllipsizingTextView android:id="@id/photo_attribution_secondary" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/PhotoAttribution" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

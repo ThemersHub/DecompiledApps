@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/message_result_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/message_card_min_height" android:textDirection="locale" android:layoutDirection="locale" style="@style/ResultContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.gsa.plugins.ipa.searchboxui.views.IpaImageView android:layout_gravity="center_vertical" android:id="@id/center_thumbnail" android:layout_width="@dimen/ipa_thumbnail_width" android:layout_height="@dimen/ipa_thumbnail_height" android:layout_marginTop="@dimen/ipa_thumbnail_vertical_margin" android:layout_marginBottom="@dimen/ipa_thumbnail_vertical_margin" android:scaleType="centerCrop" android:layout_marginStart="@dimen/ipa_thumbnail_horizontal_margin" android:layout_marginEnd="@dimen/ipa_thumbnail_horizontal_margin" />
+        <LinearLayout android:orientation="vertical" android:id="@id/message_details_container" android:paddingTop="@dimen/regular_layout_vertical_margin" android:paddingBottom="@dimen/regular_layout_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:paddingStart="0.0dip" android:paddingEnd="@dimen/layout_end_margin">
+            <TextView android:ellipsize="end" android:id="@id/message_sender" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginEnd="@dimen/first_line_margin_end" style="@style/PrimaryText" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/result_second_line_text" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.google.android.apps.gsa.plugins.ipa.searchboxui.views.IpaImageView android:layout_gravity="center_vertical" android:id="@id/badge_app_icon" android:layout_width="@dimen/ipa_app_icon_in_snippet_size" android:layout_height="@dimen/ipa_app_icon_in_snippet_size" android:scaleType="centerInside" android:layout_marginEnd="@dimen/ipa_app_icon_in_snippet_margin" />
+                <TextView android:ellipsize="end" android:id="@id/message_subject" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/SecondLineText" />
+            </LinearLayout>
+            <TextView android:ellipsize="end" android:id="@id/message_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" style="@style/SnippetText" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:layout_gravity="end|center|top" android:id="@id/message_timestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/regular_layout_vertical_margin" android:layout_marginEnd="@dimen/layout_end_margin" style="@style/TimestampText" />
+</FrameLayout>

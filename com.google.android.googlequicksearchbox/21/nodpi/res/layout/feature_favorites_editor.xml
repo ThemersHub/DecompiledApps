@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/favorites_editor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/quantum_white_100" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/editor_title_container" android:background="@color/quantum_white_100" android:layout_width="fill_parent" android:layout_height="60.0dip">
+            <ImageView android:id="@id/back_button" android:padding="@dimen/icon_extra_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/quantum_ic_arrow_back_grey600_24" android:contentDescription="@string/back" android:layout_marginStart="8.0dip" />
+            <TextView android:id="@id/edit_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/edit_favorites_title" android:layout_weight="1.0" android:layout_marginStart="8.0dip" style="@style/homebase_section_title" />
+            <ImageView android:id="@id/delete_button" android:padding="@dimen/icon_extra_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/quantum_ic_delete_white_24" android:contentDescription="@string/delete_favorites" android:layout_marginEnd="8.0dip" />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/show_grid" android:clickable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

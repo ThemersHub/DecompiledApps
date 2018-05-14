@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="4.0dip">
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/quartz_webview_header_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:textSize="@dimen/quartz_webview_header_text_size" android:textColor="@android:color/black" android:ellipsize="end" android:id="@id/quartz_webview_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="Loading..." android:maxLines="1" />
+            <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:textSize="@dimen/quartz_webview_header_text_size" android:textColor="@android:color/black" android:ellipsize="end" android:id="@id/quartz_webview_url" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:alpha="0.5" />
+        </LinearLayout>
+        <android.support.v7.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/quartz_webview_close" android:layout_width="@dimen/quartz_webview_header_close_size" android:layout_height="@dimen/quartz_webview_header_close_size" android:layout_margin="@dimen/quartz_webview_header_padding" android:src="@drawable/quartz_webview_close" android:contentDescription="@string/quartz_close_button_description" app:tint="@color/quartz_grey_800" />
+    </LinearLayout>
+    <android.webkit.WebView android:id="@id/quartz_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

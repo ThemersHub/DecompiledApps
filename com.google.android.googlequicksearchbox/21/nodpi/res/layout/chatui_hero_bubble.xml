@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/chatui_hero_bubble_container" android:background="@android:color/transparent" android:paddingLeft="@dimen/chatui_horizontal_margin" android:paddingRight="@dimen/chatui_horizontal_margin" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/chatui_logo_container" android:background="@android:color/transparent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="@dimen/chatui_hero_bubble_logo_width" android:layout_height="@dimen/chatui_hero_bubble_logo_height">
+            <com.google.android.libraries.gsa.logoview.LogoView android:id="@id/chatui_logo" android:layout_width="@dimen/chatui_hero_bubble_logo_width" android:layout_height="@dimen/chatui_hero_bubble_logo_height" android:layout_marginLeft="@dimen/chatui_hero_bubble_left_margin" style="@style/ChatUi.Hero.Bubble.Logo" />
+        </FrameLayout>
+        <TextView android:id="@id/chatui_text" android:layout_marginTop="@dimen/chatui_hero_bubble_text_top_margin" android:text="@string/opa_greeting_bubble_text" style="@style/ChatUi.Hero.Bubble.Text" />
+    </LinearLayout>
+</FrameLayout>

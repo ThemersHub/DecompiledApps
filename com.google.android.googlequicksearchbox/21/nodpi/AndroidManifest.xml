@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.google.android.googlequicksearchbox" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <permission android:description="@string/audio_file_access_desc" android:label="@string/audio_file_access" android:name="com.google.android.voicesearch.AUDIO_FILE_ACCESS" android:protectionLevel="signature"/>
+    <permission android:name="com.google.android.googlequicksearchbox.permission.FINISH_GEL_ACTIVITY" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.googlequicksearchbox.permission.FINISH_GEL_ACTIVITY"/>
+    <permission android:name="com.google.android.apps.now.CURRENT_ACCOUNT_ACCESS" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.apps.now.CURRENT_ACCOUNT_ACCESS"/>
+    <permission android:description="@string/permission_launch_voice_description" android:label="@string/permission_launch_voice_label" android:name="com.google.android.googlequicksearchbox.LAUNCH_WITH_RECORDED_AUDIO" android:protectionLevel="signatureOrSystem"/>
+    <permission android:description="@string/permission_launch_dsp_hotword_description" android:label="@string/permission_launch_dsp_hotword_label" android:name="com.google.android.googlequicksearchbox.LAUNCH_FROM_DSP_HOTWORD" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.google.android.apps.now.OPT_IN_WIZARD" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.google.android.googlequicksearchbox.permission.PAUSE_HOTWORD" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.google.android.googlequicksearchbox.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.googlequicksearchbox.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GLOBAL_SEARCH"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.launcher.permission.CONTENT_REDIRECT"/>
+    <uses-permission android:name="com.google.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.google.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.google.android.launcher.permission.RECEIVE_LAUNCH_BROADCASTS"/>
+    <uses-permission android:name="com.google.android.launcher.permission.RECEIVE_FIRST_LOAD_BROADCAST"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.google.android.providers.settings.permission.READ_GSETTINGS"/>
+    <uses-permission android:name="com.google.android.providers.settings.permission.WRITE_GSETTINGS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.voicesearch.SHORTCUTS_ACCESS"/>
+    <uses-permission android:name="com.google.android.voicesearch.ACCESS_SETTINGS"/>
+    <uses-permission android:name="com.android.browser.permission.PRELOAD"/>
+    <uses-permission android:name="com.google.android.ears.permission.WRITE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="com.google.android.googlequicksearchbox.permission.PAUSE_HOTWORD"/>
+    <permission android:name="com.google.android.googlequicksearchbox.permission.FLUSH_LOGS" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.fingerprint" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="com.google.googlenav.friend.permission.OPT_IN"/>
+    <uses-permission android:name="com.google.android.apps.maps.permission.PREFETCH"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission-sdk-23 android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.REAL_GET_TASKS"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="com.google.android.apps.googlevoice.permission.AUTO_SEND"/>
+    <uses-permission android:name="com.google.android.gm.permission.AUTO_SEND"/>
+    <uses-permission android:name="com.google.android.gm.permission.READ_GMAIL"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.cp"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH"/>
+    <uses-permission android:name="com.google.android.hangouts.START_HANGOUT"/>
+    <uses-permission android:name="com.google.android.voicesearch.AUDIO_FILE_ACCESS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.MANAGE_VOICE_KEYPHRASES"/>
+    <uses-permission android:name="com.android.chrome.PRERENDER_URL"/>
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_HOTWORD"/>
+    <uses-permission android:name="android.permission.STOP_APP_SWITCHES"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
+    <uses-permission android:name="android.permission.BIND_APPWIDGET"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission-sdk-23 android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission-sdk-23 android:name="android.permission.SET_MEDIA_KEY_LISTENER"/>
+    <uses-permission-sdk-23 android:name="android.permission.SET_VOLUME_KEY_LONG_PRESS_LISTENER"/>
+    <permission android:description="@string/permdesc_read_settings" android:label="@string/permlab_read_settings" android:name="com.google.android.launcher.permission.READ_SETTINGS" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
+    <permission android:description="@string/permdesc_write_settings" android:label="@string/permlab_write_settings" android:name="com.google.android.launcher.permission.WRITE_SETTINGS" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.google.android.launcher.permission.RECEIVE_LAUNCH_BROADCASTS" android:protectionLevel="signature"/>
+    <permission android:name="com.google.android.launcher.permission.RECEIVE_FIRST_LOAD_BROADCAST" android:protectionLevel="signatureOrSystem"/>
+    <permission android:description="@string/permdesc_install_shortcut" android:label="@string/permlab_install_shortcut" android:name="com.android.launcher.permission.INSTALL_SHORTCUT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="dangerous"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <application android:backupAgent="com.google.android.apps.gsa.staticplugins.backup.AgsaBackupAgentHelper" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher_google_search" android:label="@string/agsa_app_name" android:largeHeap="true" android:manageSpaceActivity="@string/manage_space_activity" android:name="com.google.android.apps.gsa.binaries.velvet.app.VelvetApplication" android:networkSecurityConfig="@xml/network_security_config" android:requiredForAllUsers="true" android:resizeableActivity="true" android:restoreAnyVersion="true" android:roundIcon="@mipmap/product_logo_google_search_round_launcher_color_48" android:supportsRtl="@bool/supports_rtl" android:theme="@style/Theme.Shim.Light">
+        <service android:name="com.google.android.apps.gsa.assist.GsaVoiceInteractionSessionService" android:permission="android.permission.BIND_VOICE_INTERACTION" android:process=":search"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.google.android.apps.gsa.assistant.handoff.BrowserReturnActivity" android:process=":search" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="complete" android:scheme="assistant-handoff"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.google.android.apps.gsa.assistant.handoff.AssistantHandoffActivity" android:process=":search" android:theme="@style/Translucent">
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.action.ASSISTANT_HANDOFF_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="" android:scheme="assistant-handoff"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.apps.gsa.assistant.handoff.BrowserControlActivity" android:process=":search" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize" android:excludeFromRecents="true" android:name="com.google.android.apps.gsa.assistant.settings.features.aboutme.pronunciation.PronunciationLearningActivity" android:process=":search" android:theme="@style/Theme.Shim.Dialog.NoActionBar.MinWidth"/>
+        <activity android:exported="true" android:icon="@drawable/product_logo_assistant_color_48" android:label="@string/agent_directory_title" android:name="com.google.android.apps.gsa.assistant.settings.hq.agentdirectory.AgentDirectoryActivity" android:process=":search" android:theme="@style/AgentDirectoryActivityTheme" android:windowSoftInputMode="adjustResize">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="assistant.google.com"/>
+                <data android:pathPrefix="/explore/c/"/>
+                <data android:pathPrefix="/services/a/"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.gsa.assistant.settings.services.hq.agentdirectory.AgentDirectoryActivity" android:targetActivity="com.google.android.apps.gsa.assistant.settings.hq.agentdirectory.AgentDirectoryActivity"/>
+        <activity android:exported="false" android:icon="@drawable/product_logo_assistant_color_48" android:label="@string/agent_directory_title" android:name="com.google.android.apps.gsa.assistant.settings.hq.agentdirectory.ResizeableAgentDirectoryActivity" android:process=":search" android:resizeableActivity="true" android:screenOrientation="portrait" android:taskAffinity="" android:theme="@style/AgentDirectoryActivityTheme" android:windowSoftInputMode="adjustNothing">
+            <meta-data android:name="WindowManagerPreference:AppControlled" android:value="true"/>
+        </activity>
+        <activity android:exported="false" android:label="ReportAbuseActivity" android:name="com.google.android.libraries.abuse.reporting.ReportAbuseActivity" android:process=":search"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:label="@string/assistant_settings" android:name="com.google.android.apps.gsa.assistant.settings.AssistantSettingsActivity" android:process=":search" android:theme="@style/Theme.AssistantSettings">
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.action.ASSISTANT_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="assistant-settings"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/assistant_settings" android:name="com.google.android.apps.gsa.assistant.settings.AssistantSettingsActivityInternal" android:process=":search" android:theme="@style/Theme.AssistantSettings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/assistant_settings" android:name="com.google.android.apps.gsa.assistant.settings.ResizeableAssistantSettingsActivity" android:process=":search" android:resizeableActivity="true" android:theme="@style/Theme.AssistantSettings">
+            <meta-data android:name="WindowManagerPreference:AppControlled" android:value="true"/>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/assistant_settings" android:name="com.google.android.apps.gsa.assistant.settings.ResizeableAssistantSettingsActivityInternal" android:process=":search" android:resizeableActivity="true" android:theme="@style/Theme.AssistantSettings">
+            <meta-data android:name="WindowManagerPreference:AppControlled" android:value="true"/>
+        </activity>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.gms.appdatasearch" android:resource="@xml/flagged_appdatasearch"/>
+        <meta-data android:name="com.google.android.partnersetup.RLZ_ACCESS_POINT" android:value="@string/rlz_access_point"/>
+        <meta-data android:name="android.nfc.disable_beam_default" android:value="true"/>
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIOn3yyJ1XOLzrFMx2NpYgpqbyAc_ZfouYEJmJYQ"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCrL02dcxHD0ynSx2kkzhUhPVRn8ag5dfc"/>
+        <meta-data android:name="com.google.android.nearby.messages.API_KEY" android:value="AIzaSyCrL02dcxHD0ynSx2kkzhUhPVRn8ag5dfc"/>
+        <receiver android:name="com.google.android.apps.gsa.bloblobber.receiver.BlobDownloadedReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.broadcastreceiver.CommonBroadcastReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.notificationlistener.NOTIFICATION_LISTENER_SERVICE_CONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.gsa.broadcastreceiver.external.ExternalCommonBroadcastReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.bisto.MAGIC_PAIR"/>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED"/>
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED"/>
+                <action android:name="android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED"/>
+                <action android:name="android.bluetooth.device.action.UUID"/>
+                <action android:name="android.bluetooth.device.action.BOND_STATE_CHANGED"/>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+                <action android:name="android.location.PROVIDERS_CHANGED"/>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED"/>
+                <action android:name="org.chromium.chrome.browser.offlinepages.OFFLINE_PAGES_CHANGED"/>
+                <action android:name="com.google.android.apps.gsa.qsbplacement.LAYOUT_ACTIVATED"/>
+                <action android:name="com.google.android.apps.gsa.nowoverlayservice.PIXEL_DOODLE_QSB_SETTINGS"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.bluetooth.headset.action.VENDOR_SPECIFIC_HEADSET_EVENT"/>
+                <category android:name="android.bluetooth.headset.intent.category.companyid.224"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.gsa.broadcastreceiver.external.PixelLauncherBroadcastReceiver" android:permission="com.google.android.apps.nexuslauncher.permission.QSB" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.smartspace.ENABLE_UPDATE"/>
+                <action android:name="com.google.android.apps.gsa.smartspace.CLICK_EVENT"/>
+                <action android:name="com.google.android.apps.gsa.smartspace.EXPIRE_EVENT"/>
+                <action android:name="com.google.android.apps.gsa.smartspace.SETTINGS"/>
+                <action android:name="com.google.android.apps.gsa.weatherwidget.ENABLE_UPDATE"/>
+                <action android:name="com.google.android.apps.gsa.weatherwidget.WEATHER_CLICK"/>
+                <action android:name="com.google.android.systemui.smartspace.CLICK_EVENT"/>
+                <action android:name="com.google.android.systemui.smartspace.EXPIRE_EVENT"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.apps.gsa.clockwork.services.DispatchingWearableListenerService" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.CAPABILITY_CHANGED"/>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED"/>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED"/>
+                <data android:scheme="wear"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.android.wearable.beta.app" android:resource="@xml/wear_app_desc"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.gsa.configuration.PhenotypeBroadcastReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.google.android.googlequicksearchbox.CommonContentProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.apps.gsa.contentprovider.CommonContentProvider" android:process=":search"/>
+        <provider android:authorities="com.google.android.apps.gsa.contentprovider.initializer.DefaultInitializer" android:exported="false" android:initOrder="10000" android:name="com.google.android.apps.gsa.contentprovider.initializer.DefaultInitializer" android:process="com.google.android.googlequicksearchbox"/>
+        <provider android:authorities="com.google.android.apps.gsa.contentprovider.initializer.SearchInitializer" android:exported="false" android:initOrder="10000" android:name="com.google.android.apps.gsa.contentprovider.initializer.SearchInitializer" android:process=":search"/>
+        <provider android:authorities="com.google.android.apps.gsa.contentprovider.initializer.InteractorInitializer" android:exported="false" android:initOrder="10000" android:name="com.google.android.apps.gsa.contentprovider.initializer.InteractorInitializer" android:process=":interactor"/>
+        <provider android:authorities="com.google.android.apps.gsa.contentprovider.initializer.WallpaperChooserInitializer" android:exported="false" android:initOrder="10000" android:name="com.google.android.apps.gsa.contentprovider.initializer.WallpaperChooserInitializer" android:process=":wallpaper_chooser"/>
+        <provider android:authorities="com.google.android.apps.gsa.contentprovider.initializer.CrashReportInitializer" android:exported="false" android:initOrder="10000" android:name="com.google.android.apps.gsa.contentprovider.initializer.CrashReportInitializer" android:process=":crash_report"/>
+        <provider android:authorities="com.google.android.apps.gsa.contentprovider.initializer.ManageSpaceInitializer" android:exported="false" android:initOrder="10000" android:name="com.google.android.apps.gsa.contentprovider.initializer.ManageSpaceInitializer" android:process=":managespace"/>
+        <provider android:authorities="com.google.android.apps.gsa.contentprovider.initializer.DevInitializer" android:exported="false" android:initOrder="10000" android:name="com.google.android.apps.gsa.contentprovider.initializer.DevInitializer" android:process=":dev"/>
+        <provider android:authorities="com.google.android.apps.gsa.contentprovider.initializer.UiInitializer" android:exported="false" android:initOrder="10000" android:name="com.google.android.apps.gsa.contentprovider.initializer.UiInitializer" android:process=":ui"/>
+        <provider android:authorities="com.google.android.apps.gsa.contentprovider.initializer.AfwInitializer" android:exported="false" android:initOrder="10000" android:name="com.google.android.apps.gsa.contentprovider.initializer.AfwInitializer" android:process=":afw"/>
+        <service android:name="com.google.android.apps.gsa.eventlogger.EventLoggerService" android:permission="com.google.android.googlequicksearchbox.permission.FLUSH_LOGS" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.GSA_FLUSH_LOGS"/>
+                <action android:name="com.google.android.apps.gsa.ACTION_RECORD_GSA_CLIENT_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.gsa.gcm.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.google.android.googlequicksearchbox"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.apps.gsa.gdi.GdiControlActivity" android:process=":search" android:theme="@style/Translucent"/>
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="net.openid.appauth.RedirectUriReceiverActivity" android:process=":search" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:path="oauth2redirect" android:scheme="com.google.android.apps.gsa.gdi"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher" android:process=":search">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.PRE_BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_INITIALIZE"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_FIRST_LAUNCH"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:name="com.google.android.voicesearch.handsfree.HandsFreeActivity" android:noHistory="true" android:process=":search" android:resizeableActivity="true" android:taskAffinity="com.google.android.voicesearch.handsfree" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VOICE_COMMAND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.speech.action.VOICE_SEARCH_HANDS_FREE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.search.core.action.PROXY_VOICE_BUTTON"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.search.core.action.PROXY_VOICE_CANCEL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:name="com.google.android.apps.gsa.handsfree.components.HeadsetQueryCommitService" android:process=":search"/>
+        <service android:exported="false" android:name="com.google.android.apps.gsa.languagepack.ZipDownloadProcessorService" android:process=":search"/>
+        <receiver android:name="com.google.android.apps.gsa.languagepack.ZipDownloadReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.google.android.launcher.settings" android:enabled="true" android:exported="true" android:name="com.android.launcher3.LauncherProvider" android:process="" android:readPermission="com.google.android.launcher.permission.READ_SETTINGS" android:writePermission="com.google.android.launcher.permission.WRITE_SETTINGS"/>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|navigation" android:enabled="@bool/launcher_default_enabled" android:icon="@mipmap/ic_launcher_google_home" android:label="@string/launcher_name" android:launchMode="singleTask" android:name="com.google.android.launcher.GEL" android:process="" android:resizeableActivity="@bool/is_at_least_o" android:resumeWhilePausing="true" android:screenOrientation="nosensor" android:stateNotNeeded="true" android:taskAffinity="" android:theme="@style/Theme" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.MONKEY"/>
+            </intent-filter>
+            <meta-data android:name="android.app.home.alternate" android:value="com.google.android.launcher"/>
+        </activity>
+        <activity android:enabled="@bool/launcher_default_enabled" android:finishOnCloseSystemDialogs="true" android:icon="@mipmap/ic_launcher_google_home" android:label="@string/launcher_name" android:name="com.google.android.apps.gsa.launcher.GelWallpaperPickerActivity" android:process=":wallpaper_chooser" android:resizeableActivity="false" android:theme="@style/Theme.WallpaperPicker">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_WALLPAPER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:enabled="@bool/launcher_default_enabled" android:finishOnCloseSystemDialogs="true" android:icon="@mipmap/ic_launcher_wallpaper" android:label="@string/crop_wallpaper" android:name="com.android.launcher3.WallpaperCropActivity" android:process=":wallpaper_chooser" android:resizeableActivity="false" android:theme="@style/Theme.WallpaperCropper">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.CROP_AND_SET_WALLPAPER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <receiver android:enabled="@bool/launcher_default_enabled" android:name="com.android.launcher3.InstallShortcutReceiver" android:permission="com.android.launcher.permission.INSTALL_SHORTCUT" android:process="">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.INSTALL_SHORTCUT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:name="com.android.launcher3.AppWidgetsRestoredReceiver" android:process="">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_HOST_RESTORED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="@bool/launcher_default_enabled" android:name="com.android.launcher3.StartupReceiver" android:process="">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="@bool/launcher_default_enabled" android:name="com.android.launcher3.PackageSessionCommitReceiver" android:process="">
+            <intent-filter>
+                <action android:name="android.content.pm.action.SESSION_COMMITTED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:autoRemoveFromRecents="true" android:enabled="@bool/launcher_default_enabled" android:excludeFromRecents="true" android:label="@string/action_add_to_workspace" android:name="com.android.launcher3.AddItemActivity" android:process="" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.Alert">
+            <intent-filter>
+                <action android:name="android.content.pm.action.CONFIRM_PIN_SHORTCUT"/>
+                <action android:name="android.content.pm.action.CONFIRM_PIN_APPWIDGET"/>
+            </intent-filter>
+        </activity>
+        <activity android:allowTaskReparenting="@string/velvet_activity_allow_task_reparenting" android:exported="false" android:label="@string/search_activity_name" android:launchMode="singleTop" android:name="com.google.android.apps.gsa.legacyui.VelvetActivity" android:process=":search" android:taskAffinity="@string/velvet_activity_task_affinity" android:theme="@style/Theme.Velvet"/>
+        <activity android:exported="false" android:label="@string/search_activity_name" android:launchMode="standard" android:name="com.google.android.apps.gsa.legacyui.VelvetLockscreenActivity" android:process=":search" android:theme="@style/Theme.Velvet"/>
+        <activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.gsa.lockscreenentry.LockscreenEntryActivity" android:process=":search" android:taskAffinity="" android:theme="@style/Theme.Velvet"/>
+        <activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.gsa.lockscreenentry.LockscreenUnlockPausedActivity" android:noHistory="true" android:process=":search" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.gsa.lockscreensearch.LockscreenSearchActivity" android:process=":search" android:taskAffinity="" android:theme="@style/Theme.Velvet"/>
+        <activity android:icon="@mipmap/ic_launcher_google_search" android:label="@string/search_storage_label" android:name="com.google.android.apps.gsa.managespace.VelvetManageSpaceActivity" android:process=":managespace" android:theme="@style/Theme.Gsa"/>
+        <activity android:exported="false" android:label="@string/agsa_app_name" android:name="com.google.android.apps.gsa.monet.appcompat.AppCompatActivity" android:process=":search" android:taskAffinity="" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:label="@string/app_name" android:name="com.google.android.apps.gsa.monet.configchanges.ConfigChangesActivity" android:process=":search" android:theme="@style/Theme.Velvet.BlackStatusBarAndNavBar"/>
+        <activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.android.apps.gsa.monet.customization.WidgetCustomizationActivity" android:process=":search" android:resizeableActivity="false" android:screenOrientation="portrait" android:taskAffinity="" android:theme="@style/WidgetMaterial"/>
+        <activity android:autoRemoveFromRecents="true" android:configChanges="orientation|screenSize" android:documentLaunchMode="always" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.android.apps.gsa.monet.customization.WidgetCustomizationMenuOverlayActivity" android:noHistory="true" android:process=":search" android:theme="@style/Theme.Transparent"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:finishOnTaskLaunch="true" android:name="com.google.android.apps.gsa.monet.dialog.DialogMonetActivity" android:noHistory="true" android:process=":search" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.Alert"/>
+        <activity android:exported="false" android:label="@string/agsa_app_name" android:name="com.google.android.apps.gsa.monet.MonetActivity" android:process=":search" android:taskAffinity="" android:theme="@style/Theme.Velvet"/>
+        <activity android:exported="false" android:label="@string/agsa_app_name" android:name="com.google.android.apps.gsa.monet.TransparentMonetActivity" android:process=":search" android:taskAffinity="" android:theme="@style/TransparentMonetActivity"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.gsa.monet.paymentsauth.PaymentsAuthActivity" android:process=":search" android:theme="@style/Theme.AppCompat.Dialog.Alert"/>
+        <activity android:exported="false" android:name="com.google.android.apps.gsa.monet.quartz.QuartzMonetActivity" android:process=":search" android:resizeableActivity="false" android:taskAffinity="" android:theme="@style/Quartz.TransparentNavBar"/>
+        <service android:enabled="false" android:exported="true" android:name="com.google.android.apps.gsa.notificationlistener.GsaNotificationListenerService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" android:process=":interactor">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.gsa.notificationlistener.NotificationListenerBroadcastReceiver" android:process=":interactor"/>
+        <service android:exported="true" android:name="com.google.android.apps.gsa.nowoverlayservice.DrawerOverlayService" android:process=":search">
+            <intent-filter>
+                <action android:name="com.android.launcher3.WINDOW_OVERLAY"/>
+                <data android:scheme="app"/>
+            </intent-filter>
+            <meta-data android:name="service.api.version" android:value="9"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.gsa.proactive.RequestScheduleEvaluatorService" android:process=":search"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.proactive.RequestScheduleEvaluatorReceiver" android:process=":search"/>
+        <service android:exported="true" android:name="com.google.android.apps.gsa.proactive.ScheduledTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.android.gms.car.application" android:resource="@xml/automotive_app_desc"/>
+        <service android:exported="true" android:name="com.google.android.apps.gsa.projection.CarAssistantService" android:process=":search">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.car.category.CAR_ASSISTANT"/>
+            </intent-filter>
+        </service>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.google.android.apps.gsa.projection.OpaAutoOptInActivity" android:process=":search" android:theme="@style/Theme.Transparent">
+            <intent-filter>
+                <action android:name="com.google.android.apps.opa.OPT_IN_1P"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:label="@string/publicServiceLabel" android:name="com.google.android.apps.gsa.publicsearch.PublicSearchService" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.publicsearch.IPublicSearchService"/>
+            </intent-filter>
+        </service>
+        <activity android:excludeFromRecents="true" android:name="com.google.android.apps.gsa.queryentry.QueryEntryActivity" android:process=":search" android:resizeableActivity="false" android:taskAffinity="" android:theme="@style/Theme.Velvet.Assistant.QueryEntry">
+            <intent-filter>
+                <action android:name="android.intent.action.VOICE_ASSIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.google.android.googlequicksearchbox.category.SEARCH_WIDGET"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.TEXT_ASSIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.google.android.googlequicksearchbox.category.SEARCH_WIDGET"/>
+            </intent-filter>
+        </activity>
+        <receiver android:enabled="@bool/launcher_default_enabled" android:name="com.google.android.apps.gsa.reflection.ReflectionReceiver" android:permission="com.google.android.launcher.permission.RECEIVE_LAUNCH_BROADCASTS" android:process="">
+            <intent-filter>
+                <action android:name="com.android.launcher3.action.LAUNCH"/>
+                <action android:name="com.google.android.googlequicksearchbox.UPDATE_PREDICTIONS"/>
+                <action android:name="com.google.android.apps.gsa.reflection.APP_LAUNCH"/>
+                <action android:name="com.google.android.apps.gsa.reflection.CLEAR_DATA"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.reminders.RemindersBroadcastReceiver" android:process=":search"/>
+        <service android:name="com.google.android.apps.gsa.reminders.RemindersListenerService" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.gms.reminders.BIND_LISTENER"/>
+            </intent-filter>
+        </service>
+        <activity android:excludeFromRecents="true" android:launchMode="singleTop" android:name="com.google.android.search.calypso.AppIndexingActivity" android:noHistory="true" android:process=":search" android:taskAffinity="" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="android-app"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:icon="@mipmap/ic_launcher_voicesearch" android:label="@string/voice_search_app_name" android:name="com.google.android.googlequicksearchbox.VoiceSearchActivity" android:noHistory="true" android:process=":search" android:taskAffinity="" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="com.google.android.pano.data.launcher_info" android:resource="@xml/canvas_info_voice_search"/>
+        </activity>
+        <service android:exported="true" android:name="com.google.android.hotword.service.HotwordService" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.HOTWORD_SERVICE"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize" android:excludeFromRecents="true" android:name="com.google.android.voicesearch.intentapi.IntentApiActivity" android:process=":search" android:taskAffinity="com.google.android.voicesearch.intentapi" android:theme="@style/Theme.Shim.Dialog.NoActionBar.MinWidth">
+            <intent-filter>
+                <action android:name="android.speech.action.RECOGNIZE_SPEECH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize" android:excludeFromRecents="true" android:name="com.google.android.voicesearch.intentapi.VoiceCommandActivity" android:process=":search" android:taskAffinity="com.google.android.voicesearch.intentapi" android:theme="@style/Theme.Shim.Dialog.NoActionBar.MinWidth">
+            <intent-filter>
+                <action android:name="android.speech.action.RECOGNIZE_VOICE_COMMAND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.voicesearch.intentapi.IntentApiReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="android.speech.action.GET_LANGUAGE_DETAILS"/>
+            </intent-filter>
+        </receiver>
+        <activity android:launchMode="singleTop" android:name="com.google.android.voicesearch.greco3.languagepack.InstallActivity" android:process=":search">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.google.android.speech.embedded.MANAGE_LANGUAGES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.gsa.settingsui.VoiceSearchPreferences"/>
+        </activity>
+        <service android:exported="true" android:name="com.google.android.nowdev.TrustedTestService" android:process=":search"/>
+        <service android:label="@string/serviceLabel" android:name="com.google.android.remotesearch.RemoteSearchService" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.remotesearch.IRemoteSearchService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <activity android:documentLaunchMode="always" android:excludeFromRecents="true" android:label="@string/agsa_app_name" android:name="com.google.android.search.core.google.GoogleSearch" android:process=":search" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.WEB_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/google_searchable"/>
+        </activity>
+        <provider android:authorities="com.google.android.googlequicksearchbox.google" android:exported="true" android:label="@string/agsa_app_name" android:name="com.google.android.search.core.google.GoogleSuggestionProvider" android:permission="android.permission.INTERNET" android:process=":search"/>
+        <service android:exported="true" android:name="com.google.android.search.verification.api.SearchActionVerificationService" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.SEARCH_ACTION_VERIFICATION_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.sidekick.main.remoteservice.GoogleNowRemoteService" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.sidekick.shared.remoteapi.IGoogleNowRemoteService"/>
+            </intent-filter>
+        </service>
+        <receiver android:label="@string/widget_name" android:name="com.google.android.apps.sidekick.widget.PredictiveCardsWidgetProvider" android:process=":search">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/predictive_cards_widget_info"/>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.ssb.service.SsbService" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.ssb.action.SSB_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:label="@string/recognizer_service_label" android:name="com.google.android.voicesearch.serviceapi.GoogleRecognitionService" android:process=":search">
+            <intent-filter>
+                <action android:name="android.speech.RecognitionService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.speech" android:resource="@xml/recognizer"/>
+        </service>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.search.core.backgroundretry.BackgroundRetryNotificationReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.backgroundretry.NOTIFICATION_TAPPED_ACTION"/>
+                <action android:name="com.google.android.apps.gsa.backgroundretry.NOTIFICATION_DISMISS_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.search.core.GelTermsAcceptedReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.action.ACCEPT_GEL_TERMS"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.gsa.search.core.GservicesBroadcastReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.gservices.intent.action.GSERVICES_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.gsa.search.core.LocaleChangedReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.gsa.search.core.BroadcastListenerService" android:process=":search"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.search.core.GmsPackageWatcher" android:process=":search">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED"/>
+                <data android:scheme="package" android:ssp="com.google.android.gms"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.gsa.search.core.google.gaia.changed.AccountsChangedReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+                <action android:name="com.google.android.googlequicksearchbox.ACCOUNT_CREDENTIAL_UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.apps.gsa.search.core.google.gaia.changed.AccountsChangedService" android:process=":search"/>
+        <receiver android:name="com.google.android.apps.gsa.search.core.location.LocationReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.apps.sidekick.VEHICLE_EXIT_LOCATION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.search.core.location.ActivityDetectionReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.search.core.location.ACTIVITY_DETECTION"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.sidekick.main.location.GPS_TIMEOUT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.gsa.search.core.logging.eventprocessor.googletagmanager.ReferrerTrackingReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.gsa.search.core.service.SearchService" android:process=":search"/>
+        <receiver android:name="com.google.android.apps.gsa.search.core.udc.UdcSettingBroadcastReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.gms.udc.action.SETTING_CHANGED"/>
+                <action android:name="com.google.android.gms.location.reporting.SETTINGS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.gsa.search.dismisskeyguard.DismissKeyguardActivity" android:process=":search" android:taskAffinity=""/>
+        <service android:exported="false" android:name="com.google.android.apps.gsa.search.shared.multiuser.WorkDataService" android:process=":afw"/>
+        <activity android:excludeFromRecents="true" android:label="@string/search_activity_name" android:name="com.google.android.googlequicksearchbox.SearchActivity" android:noHistory="true" android:process=":search" android:taskAffinity="" android:theme="@android:style/Theme.NoDisplay" android:visibleToInstantApps="true">
+            <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.intent.action.ASSIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.search.action.GLOBAL_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.google.android.googlequicksearchbox.category.SEARCH_WIDGET"/>
+                <category android:name="com.google.android.googlequicksearchbox.category.RECENTS_SEARCH_WIDGET"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MONKEY"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.INFO"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH_LONG_PRESS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.speech.action.WEB_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="com.google.android.googlequicksearchbox.category.SEARCH_WIDGET"/>
+                <category android:name="com.google.android.googlequicksearchbox.category.RECENTS_SEARCH_WIDGET"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.action.CLASSIC_GSA_VOICE_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="com.google.android.googlequicksearchbox.category.SEARCH_WIDGET"/>
+                <category android:name="com.google.android.googlequicksearchbox.category.RECENTS_SEARCH_WIDGET"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.GOOGLE_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.LAUNCH_GSA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.MUSIC_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.VIEW_TERMS_OF_SERVICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.VIEW_PRIVACY_POLICY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="search" android:path="/" android:scheme="agsa"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="googlequicksearchbox"/>
+            </intent-filter>
+            <meta-data android:name="android.speech.DETAILS" android:value="com.google.android.voicesearch.intentapi.IntentApiReceiver"/>
+            <meta-data android:name="com.android.launcher.toolbar_icon" android:resource="@drawable/ic_google_logo_homescreen_default_ics"/>
+            <meta-data android:name="com.android.launcher.toolbar_search_icon" android:resource="@drawable/ic_google_logo_homescreen_default"/>
+            <meta-data android:name="com.android.launcher.toolbar_voice_search_icon" android:resource="@drawable/ic_action_mic_out_light_selector"/>
+            <meta-data android:name="com.android.systemui.action_assist_icon" android:resource="@drawable/ic_action_assist"/>
+            <meta-data android:name="com.android.systemui.action_assist_icon_google" android:resource="@drawable/ic_action_assist_google"/>
+            <meta-data android:name="com.google.android.pano.data.launcher_info" android:resource="@xml/canvas_info_search"/>
+        </activity>
+        <activity-alias android:exported="true" android:icon="@mipmap/ic_launcher_voicesearch" android:label="@string/voice_search_app_name" android:name="com.google.android.googlequicksearchbox.RecordedVoiceSearchActivity" android:permission="com.google.android.googlequicksearchbox.LAUNCH_WITH_RECORDED_AUDIO" android:process=":search" android:targetActivity="com.google.android.googlequicksearchbox.SearchActivity">
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.VOICE_SEARCH_RECORDED_AUDIO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="audio/l16"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:icon="@mipmap/ic_launcher_voicesearch" android:label="@string/voice_search_app_name" android:name="com.google.android.googlequicksearchbox.DspHotwordVoiceSearchActivity" android:permission="com.google.android.googlequicksearchbox.LAUNCH_FROM_DSP_HOTWORD" android:process=":search" android:targetActivity="com.google.android.googlequicksearchbox.SearchActivity">
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.VOICE_SEARCH_DSP_HOTWORD"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.gsa.search_gesture.GestureActivity" android:process=":search" android:targetActivity="com.google.android.googlequicksearchbox.SearchActivity">
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.SEARCH_GESTURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:excludeFromRecents="true" android:label="@string/search_activity_name" android:name="com.google.android.googlequicksearchbox.SearchActivityFromAssist" android:noHistory="true" android:process=":search" android:targetActivity="com.google.android.googlequicksearchbox.SearchActivity" android:taskAffinity="" android:theme="@android:style/Theme.NoDisplay"/>
+        <activity android:exported="false" android:label="@string/agsa_app_name" android:name="com.google.android.apps.gsa.searchmonet.SearchMonetActivity" android:process=":search" android:taskAffinity="" android:theme="@style/Theme.Velvet"/>
+        <activity android:exported="false" android:label="@string/agsa_app_name" android:name="com.google.android.apps.gsa.searchmonet.SearchAppCompatMonetActivity" android:process=":search" android:taskAffinity="" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:allowTaskReparenting="@string/search_now_activity_allow_task_reparenting" android:exported="false" android:launchMode="singleTask" android:name="com.google.android.apps.gsa.searchnow.SearchNowActivity" android:process=":search" android:taskAffinity="@string/search_now_activity_task_affinity" android:theme="@style/Theme.SearchNow"/>
+        <receiver android:label="@string/agsa_app_name" android:name="com.google.android.googlequicksearchbox.SearchWidgetProvider" android:process=":search">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE_OPTIONS"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/search_widget_info"/>
+            <meta-data android:name="com.google.android.gsa.searchwidget.alt_initial_layout_cqsb" android:resource="@layout/search_widget_circular_initial_layout"/>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:name="com.google.android.apps.gsa.settingsui.VoiceSearchPreferences" android:noHistory="true" android:process=":search" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.apps.gsa.shared.search.RestrictedProfileBroadcastReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_RESTRICTION_ENTRIES"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.google.android.nowdev.trustedtestprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.apps.gsa.shared.util.debug.SelfDestructFileProvider" android:process=":dev">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths_dump"/>
+            <grant-uri-permission android:pathPrefix="/dump/"/>
+        </provider>
+        <activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.gsa.shared.util.permissions.ProxyActivity" android:process=":search" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.sidekick.main.calendar.CalendarReceiver" android:process=":search"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:name="com.google.android.apps.gsa.sidekick.main.endpoints.GoogleServiceWebviewWrapper" android:process=":search" android:theme="@style/Theme.Gsa.ActionBar"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.sidekick.main.endpoints.AccountsUpdateReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.apps.now.account_update_broadcast"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.sidekick.main.endpoints.SwitchAccountReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.apps.now.switch_account_broadcast"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.gsa.sidekick.main.entry.EntriesRefreshIntentService" android:process=":search"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.sidekick.main.notifications.NotificationRefreshReceiver" android:process=":search"/>
+        <service android:name="com.google.android.apps.gsa.sidekick.main.notifications.NotificationRefreshService" android:process=":search"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.gsa.sidekick.main.optin.OptInActivity" android:process=":search" android:taskAffinity="com.google.android.sidekick.optin" android:theme="@style/Theme.OptIn.UOS">
+            <intent-filter>
+                <action android:name="com.google.android.apps.now.OPT_IN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:exported="true" android:name="com.google.android.sidekick.main.optin.NowOptInFirstPartyActivity" android:targetActivity="com.google.android.apps.gsa.sidekick.main.optin.OptInActivity">
+            <intent-filter>
+                <action android:name="com.google.android.apps.now.OPT_IN_1P"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <service android:exported="false" android:name="com.google.android.apps.gsa.sidekick.main.remoteservice.NowService" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.sidekick.shared.remoteapi.INowService"/>
+            </intent-filter>
+        </service>
+        <activity android:excludeFromRecents="true" android:name="com.google.android.apps.gsa.sidekick.main.remoteservice.CurrentAccountActivity" android:permission="com.google.android.apps.now.CURRENT_ACCOUNT_ACCESS" android:process=":search" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="com.google.android.apps.now.GET_CURRENT_ACCOUNT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.sidekick.main.trigger.service.TriggerConditionReceiver" android:process=":search"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.gsa.silentfeedback.SilentFeedbackReceiver" android:process=":crash_report"/>
+        <activity android:exported="true" android:name="com.google.android.apps.gsa.soundsearchwidget.WidgetResultActivity" android:process=":search" android:theme="@style/StubTheme"/>
+        <receiver android:icon="@drawable/sound_id_widget_normal" android:label="@string/soundsearch_widget_name" android:name="com.google.android.apps.gsa.soundsearchwidget.IntentWidgetProvider" android:process=":search">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/soundsearch_intent_appwidget"/>
+        </receiver>
+        <provider android:authorities="com.google.android.googlequicksearchbox.AudioProvider" android:exported="true" android:grantUriPermissions="true" android:name="com.google.android.apps.gsa.speech.audio.AudioProvider" android:permission="com.google.android.voicesearch.AUDIO_FILE_ACCESS" android:process=":search"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:icon="@drawable/ic_setup_wizard_mic" android:name="com.google.android.apps.gsa.speech.setupwizard.HotwordSetupWizardActivity" android:process=":search" android:theme="@style/Theme.Transparent"/>
+        <activity-alias android:name="com.google.android.apps.gsa.speech.setupwizard.HotwordOptionalStep" android:targetActivity="com.google.android.apps.gsa.speech.setupwizard.HotwordSetupWizardActivity">
+            <intent-filter android:priority="10">
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.android.settings.suggested.category.HOTWORD"/>
+            </intent-filter>
+            <meta-data android:name="com.android.settings.title" android:resource="@string/hotword_setup_wizard_title"/>
+            <meta-data android:name="com.android.settings.summary" android:resource="@string/hotword_setup_wizard_summary"/>
+            <meta-data android:name="com.android.settings.require_account" android:value="com.google"/>
+            <meta-data android:name="com.android.settings.is_supported" android:resource="@bool/hotword_setup_wizard_enabled"/>
+        </activity-alias>
+        <receiver android:name="com.google.android.apps.gsa.startup.StartUpReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.gsa.staticplugins.bisto.BistoRealService" android:process=":interactor"/>
+        <provider android:authorities="com.google.android.apps.gsa.staticplugins.bisto.util.StreamedMessageContentProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.apps.gsa.staticplugins.bisto.util.StreamedMessageContentProvider" android:process=":search"/>
+        <activity android:enabled="false" android:exported="false" android:name="com.google.android.apps.gsa.staticplugins.bisto.ui.oobe.OobeActivity" android:process=":search" android:screenOrientation="portrait"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.google.android.apps.gsa.staticplugins.deeplink.activity.DeeplinkActivity" android:noHistory="true" android:process=":search" android:taskAffinity="" android:theme="@style/DeeplinkActivityInvisible"/>
+        <activity-alias android:enabled="false" android:name="com.google.android.apps.gsa.deeplink.DeeplinkActivityEntrypoint" android:targetActivity="com.google.android.apps.gsa.staticplugins.deeplink.activity.DeeplinkActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="deeplink" android:path="/" android:scheme="googleapp"/>
+                <data android:host="lens" android:path="" android:scheme="googleapp"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="assistant.google.com" android:pathPrefix="/services/invoke"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:pathPrefix="/podcasts?"/>
+                <data android:path="/podcasts"/>
+                <data android:host="www.google.com"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+        </activity-alias>
+        <provider android:authorities="com.google.android.apps.gsa.staticplugins.opa.audio.OpaAudioProvider" android:exported="false" android:name="com.google.android.apps.gsa.staticplugins.opa.audio.OpaAudioProvider" android:process=":search"/>
+        <activity android:exported="true" android:icon="@drawable/hq_recent_icon" android:label="@string/hq_title" android:launchMode="singleTop" android:name="com.google.android.apps.gsa.staticplugins.opa.hq.OpaHqActivity" android:process=":search" android:resizeableActivity="false" android:taskAffinity="" android:theme="@style/OpaHQActivity.Theme" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="assistant.google.com"/>
+                <data android:path="/explore/"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:icon="@drawable/hq_recent_icon" android:label="@string/hq_title" android:launchMode="singleTop" android:name="com.google.android.apps.gsa.staticplugins.opa.hq.ResizableOpaHqActivity" android:process=":search" android:resizeableActivity="true" android:taskAffinity="" android:theme="@style/OpaHQActivity.Theme" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden">
+            <meta-data android:name="WindowManagerPreference:AppControlled" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:label="@string/opa_title" android:launchMode="singleTask" android:name="com.google.android.apps.gsa.staticplugins.opa.promo.UpgradePromoTooltipActivity" android:process=":search" android:resizeableActivity="false" android:taskAffinity="" android:theme="@style/Opa.Activity.Theme" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="android" android:path="/app/link/promo/tooltip" android:scheme="googleassistant"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/opa_title" android:launchMode="singleTask" android:name="com.google.android.apps.gsa.staticplugins.opa.errorui.OpaErrorActivity" android:process=":search" android:resizeableActivity="false" android:taskAffinity="" android:theme="@style/Opa.Activity.Theme" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/opa_title" android:name="com.google.android.apps.gsa.staticplugins.opa.errorui.UdcPuntCardActivity" android:process=":search" android:resizeableActivity="false" android:taskAffinity="" android:theme="@style/Opa.Activity.Theme" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.assistant.actions.GET_UDC_CONSENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:icon="@drawable/opa_app_icon" android:label="@string/opa_title" android:launchMode="singleTask" android:name="com.google.android.apps.gsa.staticplugins.opa.OpaActivity" android:process=":search" android:resizeableActivity="false" android:taskAffinity="" android:theme="@style/Opa.Activity.Theme" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden"/>
+        <activity android:autoRemoveFromRecents="true" android:configChanges="orientation|screenSize" android:exported="false" android:label="@string/opa_title" android:launchMode="singleTask" android:name="com.google.android.apps.gsa.staticplugins.opa.youtube.YouTubePlayerActivity" android:process=":search" android:taskAffinity="" android:theme="@android:style/Theme.Black.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="false" android:icon="@drawable/opa_app_icon" android:label="@string/opa_title" android:launchMode="singleTask" android:name="com.google.android.apps.gsa.staticplugins.opa.ResizableOpaActivity" android:process=":search" android:resizeableActivity="true" android:screenOrientation="behind" android:taskAffinity="" android:theme="@style/Opa.Activity.Theme" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden">
+            <meta-data android:name="WindowManagerPreference:AppControlled" android:value="true"/>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/opa_title" android:launchMode="singleTask" android:name="com.google.android.apps.gsa.staticplugins.opa.errorui.ResizeableOpaErrorActivity" android:process=":search" android:resizeableActivity="true" android:screenOrientation="behind" android:taskAffinity="" android:theme="@style/Opa.Activity.Theme" android:windowSoftInputMode="adjustNothing|stateAlwaysHidden">
+            <meta-data android:name="WindowManagerPreference:AppControlled" android:value="true"/>
+        </activity>
+        <uses-library android:name="com.google.android.chromeos" android:required="false"/>
+        <activity android:icon="@drawable/opa_app_icon" android:label="@string/opa_title" android:name="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivity" android:process=":search" android:taskAffinity="" android:theme="@style/Theme.Transparent"/>
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@drawable/opa_app_icon" android:label="@string/opa_title" android:name="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivityEyesLauncher" android:process=":search" android:targetActivity="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivity"/>
+        <activity-alias android:enabled="false" android:icon="@drawable/opa_app_icon" android:label="@string/opa_launcher_icon_text" android:name="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivityFromLauncher" android:process=":search" android:targetActivity="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:icon="@drawable/opa_app_icon" android:label="@string/opa_title" android:name="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivityFromDeeplink" android:process=":search" android:targetActivity="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="android" android:path="/app/link/main" android:scheme="googleassistant"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="false" android:icon="@drawable/opa_app_icon" android:label="@string/opa_title" android:name="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivityFromHoldback" android:process=":search" android:targetActivity="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivity"/>
+        <activity-alias android:enabled="false" android:icon="@drawable/opa_app_icon" android:label="@string/opa_title" android:name="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivityFromAssist" android:process=":search" android:targetActivity="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.ASSIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <meta-data android:name="com.android.systemui.action_assist_icon" android:resource="@drawable/opa_assistant_logo"/>
+        </activity-alias>
+        <activity android:exported="false" android:name="com.google.android.apps.gsa.staticplugins.opa.setupwizard.SuwActivity" android:process=":search" android:theme="@style/Theme.Transparent"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.gsa.staticplugins.opa.setupwizard.SetupWizardActivity" android:permission="com.google.android.apps.now.OPT_IN_WIZARD" android:targetActivity="com.google.android.apps.gsa.staticplugins.opa.setupwizard.SuwActivity">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.opa.OPA_OPT_IN_WRAPPED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="true" android:exported="true" android:name="com.google.android.apps.gsa.staticplugins.opa.setupwizard.SetupWizardDeferredUdc" android:permission="com.google.android.apps.now.OPT_IN_WIZARD" android:targetActivity="com.google.android.apps.gsa.staticplugins.opa.setupwizard.SuwActivity">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.opa.OPA_DEFERRED_UDC"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="true" android:exported="true" android:name="com.google.android.apps.gsa.staticplugins.opa.setupwizard.SetupWizardDeferredHotword" android:permission="com.google.android.apps.now.OPT_IN_WIZARD" android:targetActivity="com.google.android.apps.gsa.staticplugins.opa.setupwizard.SuwActivity">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.opa.OPA_DEFERRED_HOTWORD"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:exported="false" android:name="com.google.android.apps.gsa.staticplugins.opa.setupwizard.ResizeableSuwActivity" android:process=":search" android:theme="@style/Theme.Transparent">
+            <meta-data android:name="WindowManagerPreference:AppControlled" android:value="true"/>
+        </activity>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.gsa.staticplugins.opa.setupwizard.ResizeableSetupWizardActivity" android:permission="com.google.android.apps.now.OPT_IN_WIZARD" android:targetActivity="com.google.android.apps.gsa.staticplugins.opa.setupwizard.ResizeableSuwActivity">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.opa.OPA_RESIZEABLE_OPT_IN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/assistant_settings_payments_title" android:name="com.google.android.apps.gsa.staticplugins.opapayments.AssistantPaymentsSetupActivity" android:process=":search" android:theme="@style/Theme.AssistantSettings">
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.action.ASSISTANT_PAYMENTS_SETUP"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.google.android.apps.gsa.staticplugins.placedetails.GEO_API_KEY" android:value="AIzaSyAqBlSVepj6YwUH5835uKnLw2NWIQoYVI8"/>
+        <provider android:authorities="com.google.android.googlequicksearchbox.GsaPublicContentProvider;com.google.android.googlequicksearchbox.ExternalExperimentInfoProvider" android:exported="true" android:name="com.google.android.apps.gsa.staticplugins.publiccontent.GsaPublicContentProvider" android:process=":search"/>
+        <activity android:finishOnCloseSystemDialogs="true" android:name="com.android.launcher3.WallpaperPickerActivity" android:process=":wallpaper_chooser" android:resizeableActivity="false" android:theme="@style/Theme.WallpaperPicker"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:label="@string/sharebear_screenshotter_activity_label" android:name="com.google.android.apps.gsa.staticplugins.sharebear.ScreenshotterActivity" android:process=":search" android:taskAffinity="" android:theme="@style/ScreenshotterActivityTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:label="@string/sharebear_crop_and_edit_screenshot_activity_label" android:name="com.google.android.apps.gsa.staticplugins.sharebear.CropAndEditScreenshotActivity" android:process=":search" android:taskAffinity="" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:label="Storage permission explanation" android:name="com.google.android.apps.gsa.staticplugins.sharebear.StoragePermissionDialogActivity" android:process=":search" android:taskAffinity="" android:theme="@style/Theme.Velvet.Popup"/>
+        <receiver android:enabled="@bool/enable_smartspace_widget" android:label="@string/smartspacewidget_beta_name" android:name="com.google.android.apps.gsa.staticplugins.smartspace.widget.SmartspaceWidgetProvider" android:process=":search">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/smartspacewidget_info"/>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.apps.gsa.tasks.BackgroundTasksGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.gsa.tasks.BackgroundTasksJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":search"/>
+        <service android:exported="false" android:name="com.google.android.apps.gsa.tasks.BackgroundTasksAlarmService" android:process=":search"/>
+        <receiver android:name="com.google.android.apps.gsa.tasks.AlarmWakefulBroadcastReceiver" android:process=":search"/>
+        <service android:exported="true" android:name="com.google.android.apps.gsa.unifiedime.UnifiedImeService" android:process=":search">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gsa.UNIFIED_IME_SERVICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="false" android:label="@string/agsa_app_name" android:name="com.google.android.apps.gsa.velour.dynamichosts.VelvetDynamicHostActivity" android:process=":search" android:theme="@style/Theme.DynamicHost"/>
+        <activity android:exported="false" android:label="@string/agsa_app_name" android:name="com.google.android.apps.gsa.velour.dynamichosts.NoAffinityTransparentVelvetDynamicHostActivity" android:process=":search" android:taskAffinity="" android:theme="@style/Theme.Transparent"/>
+        <activity android:exported="false" android:label="@string/agsa_app_name" android:name="com.google.android.apps.gsa.velour.dynamichosts.TransparentVelvetDynamicHostActivity" android:process=":search" android:theme="@style/Theme.Transparent"/>
+        <activity android:exported="false" android:label="@string/agsa_app_name" android:name="com.google.android.apps.gsa.velour.dynamichosts.TranslucentVelvetDynamicHostActivity" android:process=":search" android:theme="@style/Theme.DynamicHost.Translucent"/>
+        <activity android:exported="false" android:label="@string/agsa_app_name" android:name="com.google.android.apps.gsa.velour.dynamichosts.VelvetThemedDynamicHostActivity" android:process=":search" android:theme="@style/Theme.Velvet"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:label="@string/agsa_app_name" android:name="com.google.android.apps.gsa.velour.dynamichosts.NoOrientationConfigVelvetDynamicHostActivity" android:process=":search" android:theme="@style/Theme.DynamicHost"/>
+        <activity android:exported="false" android:label="@string/agsa_app_name" android:name="com.google.android.apps.gsa.velour.dynamichosts.VelvetDynamicHostFragmentActivity" android:process=":search"/>
+        <service android:exported="false" android:name="com.google.android.apps.gsa.velour.dynamichosts.VelvetDynamicHostService" android:process=":search"/>
+        <service android:exported="@bool/velour_service_exported" android:name="com.google.android.apps.gsa.velour.services.VelourService" android:process=":search"/>
+        <activity android:exported="true" android:name="com.google.android.apps.gsa.velour.DynamicActivityTrampoline" android:noHistory="true" android:process=":search" android:taskAffinity="" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="dynact"/>
+            </intent-filter>
+        </activity>
+        <service android:label="@string/full_voice_interaction_service_label" android:name="com.google.android.voiceinteraction.GsaVoiceInteractionService" android:permission="android.permission.BIND_VOICE_INTERACTION" android:process=":interactor">
+            <meta-data android:name="android.voice_interaction" android:resource="@xml/voice_interaction_service"/>
+            <intent-filter>
+                <action android:name="android.service.voice.VoiceInteractionService"/>
+            </intent-filter>
+            <meta-data android:name="com.android.systemui.action_assist_icon" android:resource="@drawable/google_logo"/>
+        </service>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/search_settings" android:name="com.google.android.apps.gsa.velvet.ui.settings.SettingsActivity" android:process=":search" android:theme="@style/Theme.Settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:name="com.google.android.apps.gsa.velvet.ui.settings.PublicSettingsActivity" android:noHistory="true" android:process=":search" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.search.action.SEARCH_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.action.PRIVACY_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.action.HOTWORD_DETECTION_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.action.VOICE_IME_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.apps.gsa.velvet.ui.settings.legal.LicensesActivity" android:process=":search" android:theme="@style/Theme.Settings"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.gsa.velvet.ui.VelvetIntentDispatcher" android:process=":search" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.MY_REMINDERS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.TRAINING_CLOSET"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.MY_PLACES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.googlequicksearchbox.TRAFFIC_CARD_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.google.android.velvet.util.statedumpprovider" android:exported="false" android:name="com.google.android.apps.gsa.velvet.util.StateDumpProvider" android:process=":search"/>
+        <receiver android:enabled="true" android:name="com.google.android.apps.gsa.voiceime.alternates.SuggestionSpanBroadcastReceiver" android:process=":search">
+            <intent-filter>
+                <action android:name="android.text.style.SUGGESTION_PICKED"/>
+            </intent-filter>
+        </receiver>
+        <service android:label="@string/ime_service_label" android:name="com.google.android.voicesearch.ime.VoiceInputMethodService" android:permission="android.permission.BIND_INPUT_METHOD" android:process=":search">
+            <intent-filter>
+                <action android:name="android.view.InputMethod"/>
+            </intent-filter>
+            <meta-data android:name="android.view.im" android:resource="@xml/ime_method"/>
+        </service>
+        <provider android:authorities="com.google.android.apps.gsa.voiceinteraction.dump.StateDumpProvider" android:exported="false" android:name="com.google.android.apps.gsa.voiceinteraction.dump.StateDumpProvider" android:process=":interactor"/>
+        <provider android:authorities="com.google.android.apps.gsa.voiceinteraction.hotword.HotwordAudioProvider" android:exported="false" android:name="com.google.android.apps.gsa.voiceinteraction.hotword.HotwordAudioProvider" android:process=":interactor"/>
+        <activity android:name="com.google.android.libraries.deepauth.appauth.AppAuthReceiverActivity" android:process=":search" android:theme="@style/GDI.AppAuthReceiver"/>
+        <activity android:name="com.google.android.libraries.deepauth.appauth.AppAuthCancellationReceiverActivity" android:process=":search" android:theme="@style/GDI.AppAuthReceiver"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="net.openid.appauth.AuthorizationManagementActivity" android:process=":search" android:theme="@style/GDI.Invisible"/>
+        <activity android:name="com.google.android.libraries.deepauth.ConsentActivity" android:process=":search" android:theme="@style/GDI.Consent"/>
+        <activity android:name="com.google.android.libraries.deepauth.ActivityController" android:process=":search" android:theme="@style/GDI.Invisible"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.AccountChooserActivity" android:process=":search" android:theme="@style/GDI.AccountChooser"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.CreateAccountActivity" android:process=":search" android:theme="@style/GDI.CreateAccount"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.EnterPhoneNumberActivity" android:process=":search" android:theme="@style/GDI.EnterPhoneNumber"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.EnterSmsCodeActivity" android:process=":search" android:theme="@style/GDI.EnterSMSCode"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.VerificationErrorActivity" android:process=":search" android:theme="@style/GDI.VerificationError"/>
+        <receiver android:enabled="false" android:exported="false" android:name="com.google.android.libraries.flashmanagement.cleardatadetector.DummyReceiver" android:process=""/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.libraries.hats20.SurveyPromptActivity" android:theme="@style/HatsLibPromptTheme" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.hats20.ShowSurveyActivity" android:theme="@style/TransparentActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.UnquantumLicenseMenuActivity"/>
+        <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.UnquantumLicenseActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>

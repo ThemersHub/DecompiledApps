@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.shared.ui.TouchInterceptingFrameLayout android:id="@id/carousel_root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.gsa.staticplugins.nowcards.carousel.CarouselRecyclerView android:id="@id/carousel" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module" />
+    <FrameLayout android:layout_gravity="center|left" android:id="@id/scroll_left" android:visibility="gone" android:contentDescription="@null" android:elevation="@dimen/qp_fab_small_elevation" style="@style/qp_fab">
+        <com.google.android.apps.gsa.shared.ui.CircleImageView android:src="@drawable/quantum_ic_keyboard_arrow_left_grey600_24" android:contentDescription="@string/scroll_left" thegoogle:radius="@dimen/qp_fab_circle_small_radius" thegoogle:backgroundColor="@color/carousel_arrow_background" style="@style/qp_fab_circle_small" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="center|right" android:id="@id/scroll_right" android:visibility="gone" android:contentDescription="@null" android:elevation="@dimen/qp_fab_small_elevation" style="@style/qp_fab">
+        <com.google.android.apps.gsa.shared.ui.CircleImageView android:src="@drawable/quantum_ic_keyboard_arrow_right_grey600_24" android:contentDescription="@string/scroll_right" thegoogle:radius="@dimen/qp_fab_circle_small_radius" thegoogle:backgroundColor="@color/carousel_arrow_background" style="@style/qp_fab_circle_small" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="end|center" android:id="@id/breaker" android:paddingLeft="@dimen/carousel_horizontal_lock_padding" android:paddingTop="@dimen/carousel_vertical_lock_padding" android:paddingBottom="@dimen/carousel_vertical_lock_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" android:paddingStart="@dimen/carousel_horizontal_lock_padding" android:elevation="@dimen/qp_fab_small_elevation">
+        <ImageView android:id="@id/breaker_icon" android:paddingRight="@dimen/carousel_breaker_edge_offset_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/breaker" android:contentDescription="@string/scroll_right" android:paddingEnd="@dimen/carousel_breaker_edge_offset_padding" />
+    </FrameLayout>
+</com.google.android.apps.gsa.shared.ui.TouchInterceptingFrameLayout>

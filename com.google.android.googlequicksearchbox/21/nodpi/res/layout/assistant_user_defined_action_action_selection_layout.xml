@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/custom_command" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/assistant_settings_shortcut_item_title_text_size" android:textColor="@color/quantum_black_secondary_text" android:id="@id/custom_command_title" android:background="@color/assistant_settings_screen_dark_background" android:padding="@dimen/assistant_settings_uda_description_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Custom command" />
+        <ImageView android:id="@id/custom_command_add_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_add_googblue_24" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/assistant_settings_uda_shortcuts_description_text_size_small" android:textStyle="bold" android:textColor="@color/quantum_black_secondary_text" android:id="@id/popular_actions_title" android:background="@color/assistant_settings_screen_dark_background" android:padding="@dimen/assistant_settings_uda_description_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/user_defined_action_popular_shortcuts_title" />
+    <android.support.v7.widget.RecyclerView android:id="@id/popular_actions_list" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

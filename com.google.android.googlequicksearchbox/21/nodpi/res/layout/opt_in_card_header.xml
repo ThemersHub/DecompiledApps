@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="?optinHeaderBackgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/header" android:paddingTop="28.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/optin_phone_logo" android:layout_width="@dimen/qp_opt_in_logo_width" android:layout_height="@dimen/qp_opt_in_logo_height" android:src="@drawable/optin_phone_logo" android:contentDescription="@null" />
+        <FrameLayout android:layout_marginTop="@dimen/qp_opt_in_header_card_spacing" style="@style/opt_in_mini_card">
+            <include android:visibility="visible" layout="@layout/opt_in_mini_card_transport" />
+        </FrameLayout>
+        <FrameLayout android:layout_marginTop="@dimen/qp_opt_in_sample_card_spacing" android:layout_marginBottom="@dimen/qp_opt_in_header_card_spacing" style="@style/opt_in_mini_card">
+            <include android:visibility="visible" layout="@layout/opt_in_mini_card_parking" />
+        </FrameLayout>
+        <TextView android:textColor="?optinHeaderTextColor" android:gravity="center" android:id="@id/header_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_opt_in_text_spacer" style="@style/opt_in_wizard_header_headline" />
+        <TextView android:textColor="?optinHeaderTextColor" android:textColorLink="?optinHeaderTextColorLink" android:gravity="center" android:id="@id/header_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_opt_in_header_text_spacing" android:layout_marginBottom="@dimen/qp_opt_in_header_text_spacing" style="@style/opt_in_wizard_header_subheader" />
+        <TextView android:textColor="?optinHeaderTextColor" android:textColorLink="?optinHeaderTextColorLink" android:gravity="center" android:id="@id/header_tutorial" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/qp_opt_in_header_text_spacing" style="@style/opt_in_wizard_header_subheader" />
+    </LinearLayout>
+</ScrollView>

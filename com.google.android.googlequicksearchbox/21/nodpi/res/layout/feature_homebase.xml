@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/feature_homebase" android:background="@color/quantum_white_100" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/progress_bar_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    </FrameLayout>
+    <com.google.android.apps.gsa.plugins.podcastplayer.ui.NestedScrollCarouselContainer android:id="@id/homebase_scroll_view" android:background="@color/episodes_background" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingTop="0.0dip" android:paddingBottom="@dimen/activity_vertical_margin" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" xmlns:custom="http://schemas.android.com/apk/res-auto">
+            <com.google.android.apps.gsa.plugins.podcastplayer.PromotionCard android:id="@id/sign_in_promotion_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" custom:promotionType="signIn" />
+            <com.google.android.apps.gsa.plugins.podcastplayer.PromotionCard android:id="@id/waa_promotion_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" custom:promotionType="waa" />
+            <com.google.android.apps.gsa.plugins.podcastplayer.PromotionCard android:id="@id/shortcut_promotion_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/card_margin" android:layout_marginTop="@dimen/card_margin" android:layout_marginRight="@dimen/card_margin" android:layout_marginBottom="@dimen/card_margin" custom:promotionType="shortcut" />
+            <FrameLayout android:id="@id/favorite_shows" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/newest_episodes" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/recent_episodes" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/download_episodes" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/recommendation_topics" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </FrameLayout>
+        </LinearLayout>
+    </com.google.android.apps.gsa.plugins.podcastplayer.ui.NestedScrollCarouselContainer>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/hq_suggestion_chips_side_margin" android:paddingTop="@dimen/hq_suggestion_chips_top_margin" android:paddingRight="@dimen/hq_suggestion_chips_side_margin" android:paddingBottom="@dimen/hq_suggestion_chips_bottom_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/primary_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.MetadataLineView android:orientation="vertical" android:id="@id/header_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.MetadataLineView android:gravity="end" android:orientation="vertical" android:id="@id/details_container" android:paddingTop="?scmContentPaddingTop" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hq_suggestion_chips_chip_top_margin" android:layout_below="@id/primary_content" android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+        <LinearLayout android:id="@id/chip_one_container" android:paddingTop="@dimen/hq_action_chip_top_padding" android:paddingBottom="@dimen/hq_action_chip_bottom_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/hq_action_chip_height" android:paddingStart="@dimen/hq_action_chip_side_padding" android:paddingEnd="@dimen/hq_action_chip_side_padding" android:layout_marginEnd="@dimen/hq_action_chip_end_margin" style="@style/hq_suggestion_container">
+            <TextView android:layout_gravity="center_vertical" android:id="@id/chip_label" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/hq_suggestion_text" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/chip_two_container" android:paddingTop="@dimen/hq_action_chip_top_padding" android:paddingBottom="@dimen/hq_action_chip_bottom_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/hq_action_chip_height" android:paddingStart="@dimen/hq_action_chip_side_padding" android:paddingEnd="@dimen/hq_action_chip_side_padding" android:layout_marginEnd="@dimen/hq_action_chip_end_margin" style="@style/hq_suggestion_container">
+            <TextView android:layout_gravity="center_vertical" android:id="@id/chip_label" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/hq_suggestion_text" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

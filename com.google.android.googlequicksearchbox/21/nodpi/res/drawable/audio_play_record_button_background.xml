@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list>
+    <item>
+        <shape android:shape="oval"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+    <item android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <selector xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+            <item android:drawable="@drawable/quantum_ic_fiber_manual_record_grey600_18" thegoogle:state_audioEmpty="true" />
+            <item thegoogle:state_audioRecording="true">
+                <bitmap android:src="@drawable/quantum_ic_stop_black_24" android:tint="@color/immersive_actions_bright_red" />
+            </item>
+            <item android:drawable="@drawable/quantum_ic_play_arrow_googblue_24" thegoogle:state_audioFilled="true" />
+            <item android:drawable="@drawable/quantum_ic_pause_googblue_24" thegoogle:state_audioPlaying="true" />
+            <item android:drawable="@drawable/quantum_ic_play_arrow_googblue_24" thegoogle:state_audioPaused="true" />
+        </selector>
+    </item>
+</layer-list>

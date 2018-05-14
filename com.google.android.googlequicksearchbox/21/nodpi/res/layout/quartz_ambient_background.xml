@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.Guideline android:orientation="vertical" android:id="@id/quartz_ambient_background_attribution_guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="@dimen/quartz_ambient_attribution_width_guideline_percent" />
+    <com.google.android.apps.gsa.staticplugins.quartz.monet.ambient.renderer.CrossFadeImageView android:id="@id/quartz_ambient_background_transition_view" android:background="@color/quartz_ambient_background_color" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <android.support.v4.view.ViewPager android:id="@id/quartz_ambient_background_view_pager" android:background="@color/quartz_ambient_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="noHideDescendants" />
+    <include layout="@layout/quartz_ambient_background_gradient_mask" />
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/quartz_40sdp" android:layout_marginEnd="@dimen/quartz_40sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/quartz_ambient_background_attribution_guideline">
+        <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:layout_gravity="end" android:id="@id/quartz_ambient_background_attr" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Quartz.Text.Ambient.Attribution" />
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

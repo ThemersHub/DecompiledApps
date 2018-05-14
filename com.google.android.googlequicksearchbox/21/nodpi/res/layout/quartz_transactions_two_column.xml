@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/quartz_transactions_default_padding" android:paddingBottom="@dimen/quartz_transactions_screen_margin" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/quartz_transactions_screen_margin" android:paddingEnd="@dimen/quartz_transactions_screen_margin">
+        <ScrollView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:overScrollMode="never">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/quartz_transactions_spacer_default" android:showDividers="middle">
+                <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:textColor="@color/quartz_text_color_primary" android:id="@id/quartz_transactions_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Quartz.Text.T2" />
+                <LinearLayout android:orientation="vertical" android:id="@id/quartz_text_controls" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/quartz_transactions_spacer_default" android:showDividers="middle" />
+                <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:textSize="@dimen/quartz_20sdp" android:textColor="@color/quartz_text_color_secondary" android:textColorLink="@color/quartz_blue_600" android:id="@id/quartz_transactions_disclaimer" android:layout_width="fill_parent" android:layout_height="wrap_content" app:lineSpacing="@dimen/quartz_32sdp" />
+            </LinearLayout>
+        </ScrollView>
+        <Space android:layout_width="@dimen/quartz_56sdp" android:layout_height="fill_parent" />
+        <ScrollView android:clipChildren="false" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:overScrollMode="never">
+            <LinearLayout android:orientation="vertical" android:id="@id/quartz_order_fulfillment_details" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/quartz_transactions_spacer_default" android:showDividers="end|middle" />
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="start|bottom|center" android:orientation="horizontal" android:id="@id/quartz_action_buttons" android:padding="@dimen/quartz_56sdp" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/quartz_transactions_spacer_24dp" android:showDividers="middle" />
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/quartz_transactions_web_view_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

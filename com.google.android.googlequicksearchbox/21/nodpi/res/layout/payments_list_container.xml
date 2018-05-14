@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/assistant_settings_payments_card_layout" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/assistant_setting_payments_elevation">
+        <LinearLayout android:orientation="vertical" android:id="@id/assistant_settings_payments_card_collapsed" android:paddingLeft="?assistant_setting_payments_list_item_left_right_padding" android:paddingTop="@dimen/assistant_setting_payments_list_container_padding" android:paddingRight="?assistant_setting_payments_list_item_left_right_padding" android:paddingBottom="@dimen/assistant_setting_payments_list_container_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:id="@id/assistant_settings_payments_collapsed_card_title" android:paddingBottom="@dimen/assistant_setting_payments_list_collapsed_title_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:id="@id/assistant_settings_payments_collapsed_title_icon" android:layout_width="@dimen/assistant_setting_payments_icon_size" android:layout_height="fill_parent">
+                        <ImageView android:layout_gravity="start|center" android:id="@id/assistant_settings_payments_collapsed_title_icon_image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <TextView android:textSize="@dimen/assistant_setting_payments_text_size_small" android:layout_gravity="start|center" android:id="@id/assistant_settings_payments_collapsed_title_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="end|center" android:id="@id/expand_more_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_expand_more_grey600_24" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/assistant_setting_payments_text_size_medium" android:textColor="@color/quantum_black_text" android:id="@id/assistant_settings_payments_default_item" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/WithPaddingStartPaymentsIconSize" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/assistant_settings_payments_card_expanded" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="top" android:orientation="vertical" android:id="@id/assistant_settings_payments_expanded_card_title" android:paddingLeft="?assistant_setting_payments_list_item_left_right_padding" android:paddingTop="@dimen/assistant_setting_payments_list_container_padding" android:paddingRight="?assistant_setting_payments_list_item_left_right_padding" android:paddingBottom="@dimen/assistant_setting_payments_list_container_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:id="@id/assistant_settings_payments_expanded_title_icon" android:layout_width="@dimen/assistant_setting_payments_icon_size" android:layout_height="fill_parent">
+                        <ImageView android:layout_gravity="start|center" android:id="@id/assistant_settings_payments_expanded_title_icon_image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <TextView android:textSize="@dimen/assistant_setting_payments_list_title_text_size" android:layout_gravity="start|center" android:id="@id/assistant_settings_payments_expanded_title_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="end|center" android:id="@id/expand_less_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_expand_less_grey600_24" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/assistant_settings_payments_expanded_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/assistant_settings_shadow_view" android:background="@color/assistant_setting_payments_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/assistant_setting_payments_shadow_size" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/assistant_setting_payments_list_separator_size" />
+</LinearLayout>

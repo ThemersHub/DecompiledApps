@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_row_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.gsa.now.shared.ui.RoundedCornerWebImageView android:id="@id/icon" android:layout_width="@dimen/closet_interest_icon_width" android:layout_height="@dimen/closet_interest_icon_width" android:layout_marginLeft="@dimen/qp_medium_padding" android:layout_marginTop="@dimen/qp_medium_padding" android:layout_marginBottom="@dimen/qp_medium_padding" android:layout_marginStart="@dimen/qp_medium_padding" app:showPlaceholderBackground="false" />
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/interest_picker_text_box_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.EllipsizingTextView android:textSize="@dimen/qp_h4_text_size" android:textColor="@color/interest_picker_search_title" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.EllipsizingTextView android:textSize="@dimen/qp_h5_text_size" android:textColor="@color/interest_picker_search_subtitle" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="@dimen/interest_picker_search_icon_width" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/toggle_action_unchecked" android:layout_width="@dimen/interest_picker_toggle_width" android:layout_height="@dimen/interest_picker_toggle_width" android:src="@drawable/quantum_ic_add_black_24" android:scaleType="fitCenter" android:tint="@color/interest_picker_search_unchecked_tint" />
+        <ImageView android:layout_gravity="center" android:id="@id/toggle_action_checked" android:background="@drawable/ip_toggle_state_check_bg" android:layout_width="@dimen/interest_picker_toggle_width" android:layout_height="@dimen/interest_picker_toggle_width" android:src="@drawable/ic_check" android:scaleType="fitCenter" />
+    </FrameLayout>
+</LinearLayout>

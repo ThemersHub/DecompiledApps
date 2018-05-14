@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.gsa.staticplugins.nowstream.shared.renderers.ui.HeaderGradientView android:id="@id/light_theme_gradient_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/header_padding_container" android:paddingTop="@dimen/minus_one_header_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:orientation="vertical" android:paddingTop="@dimen/no_searchbar_logo_actions_vertical_margin" android:paddingBottom="@dimen/no_searchbar_logo_bottom_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center|top" android:id="@id/logo" android:layout_width="@dimen/no_searchbar_logo_width" android:layout_height="@dimen/no_searchbar_logo_height" android:layout_marginTop="@dimen/no_searchbar_logo_top_margin" android:src="@drawable/ic_logo_color" android:scaleType="centerInside" android:contentDescription="@string/updates_content_description" />
+                    <LinearLayout android:layout_gravity="end" android:paddingTop="@dimen/no_searchbar_icons_top_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/no_searchbar_action_menu_icon_short_horizontal_margin">
+                        <ImageButton android:id="@id/goldbox" android:background="?android:selectableItemBackground" android:visibility="gone" android:layout_width="@dimen/minus_one_header_action_width" android:layout_height="@dimen/minus_one_header_action_height" android:scaleType="centerInside" android:contentDescription="@string/updates_content_description" />
+                        <ImageButton android:id="@id/snowman" android:background="?android:selectableItemBackground" android:layout_width="@dimen/minus_one_header_action_width" android:layout_height="@dimen/minus_one_header_action_height" android:scaleType="centerInside" android:contentDescription="@string/options_content_description" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+</FrameLayout>

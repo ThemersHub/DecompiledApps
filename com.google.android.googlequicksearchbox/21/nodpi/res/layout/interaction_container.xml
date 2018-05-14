@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="bottom|center" android:id="@id/interaction_container" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/interaction_container_min_height"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.google.android.apps.gsa.searchplate.widget.StreamingTextView android:layout_gravity="center|right" android:id="@id/transcription_streaming_text" android:paddingLeft="@dimen/chatui_horizontal_margin_v2" android:paddingRight="@dimen/chatui_horizontal_margin_v2" android:focusable="false" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" style="@style/ChatUi.transcription" />
+        <android.support.v7.widget.RecyclerView android:layout_gravity="bottom|center" android:id="@id/suggestion_container" android:paddingLeft="@dimen/chatui_horizontal_margin_v2" android:paddingTop="@dimen/chatui_suggestion_gap" android:paddingRight="@dimen/chatui_horizontal_margin_v2" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

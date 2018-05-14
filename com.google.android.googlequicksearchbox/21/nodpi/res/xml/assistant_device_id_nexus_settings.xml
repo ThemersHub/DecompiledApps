@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.gsa.assistant.settings.shared.DescriptionPreferenceCategory android:title="@string/assistant_settings_common_device_id_category" android:key="@string/assistant_device_id_nexus_preference_category">
+        <SwitchPreferenceCompat android:persistent="false" android:title="@string/nexus_device_google_assistant_title" android:key="opaEnabled" android:summary="@string/nexus_device_google_assistant_summary" android:defaultValue="true" />
+    </com.google.android.apps.gsa.assistant.settings.shared.DescriptionPreferenceCategory>
+    <PreferenceCategory android:title="@string/nexus_device_hotword_category_title" android:key="@string/assistant_device_id_nexus_hotword_preference_category" android:dependency="opaEnabled">
+        <SwitchPreferenceCompat android:persistent="true" android:title="@string/nexus_device_hotword_preference_title" android:key="opa_hotword_enabled" android:summary="@string/nexus_device_hotword_preference_alwayson_summary" android:defaultValue="false" />
+        <SwitchPreferenceCompat android:persistent="true" android:title="@string/voice_unlock_shared_title" android:key="hotword_from_lock_screen_2" android:summary="@string/nexus_device_voice_unlock_preference_summary" android:dependency="opa_hotword_enabled" android:defaultValue="false" />
+        <PreferenceScreen android:persistent="false" android:title="@string/nexus_device_voice_model_preference_title" android:key="opaVoiceModelSettings" android:widgetLayout="@layout/preference_widget_next" android:dependency="opa_hotword_enabled" android:fragment="com.google.android.apps.gsa.assistant.settings.devices.nexus.VoiceModelSettingsFragment" />
+        <PreferenceScreen android:persistent="false" android:title="@string/nexus_device_hands_free_preference_title" android:key="opaHandsFreeSettings" android:widgetLayout="@layout/preference_widget_next" android:fragment="com.google.android.apps.gsa.speech.settingsui.HandsFreeSettingsFragment" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/nexus_device_voice_category_title" android:key="@string/assistant_device_id_nexus_voice_preference_category" android:dependency="opaEnabled">
+        <Preference android:persistent="false" android:title="@string/common_device_assistant_language_title" android:key="opaAssistantLanguage" android:widgetLayout="@layout/preference_widget_next" />
+        <ListPreference android:persistent="false" android:entries="@array/nexus_device_pref_entries_input_mode" android:title="@string/nexus_device_default_input_mode_pref_title" android:key="inputMode" android:widgetLayout="@layout/preference_widget_next" android:defaultValue="@string/nexus_device_default_input_mode" android:dialogTitle="@string/nexus_device_default_input_mode_dialog_title" android:entryValues="@array/nexus_device_pref_values_input_mode" />
+        <ListPreference android:persistent="false" android:entries="@array/prefEntries_ttsMode" android:title="@string/prefTitle_ttsMode" android:key="ttsMode" android:widgetLayout="@layout/preference_widget_next" android:defaultValue="@string/prefDefault_ttsMode" android:dialogTitle="@string/prefDialogTitle_ttsMode" android:entryValues="@array/prefValues_ttsMode" />
+        <Preference android:persistent="false" android:title="@string/nexus_device_voice_settings_title" android:key="opaVoiceSettings" android:widgetLayout="@layout/preference_widget_next" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/nexus_device_general_category_title" android:key="@string/assistant_device_id_nexus_general_preference_category" android:dependency="opaEnabled">
+        <SwitchPreferenceCompat android:persistent="false" android:title="@string/nexus_device_use_screen_context_title" android:key="opaUseScreenContext" android:summary="@string/nexus_device_use_screen_context_summary" android:dependency="opaEnabled" android:defaultValue="true" />
+        <SwitchPreferenceCompat android:persistent="false" android:title="@string/common_device_notification_permission_title" android:key="opaNotificationPermission" android:summary="@string/common_device_notification_permission_summary" android:defaultValue="true" />
+        <Preference android:persistent="false" android:title="@string/nexus_active_edge_settings_title" android:key="opaActiveEdgeSettings" android:widgetLayout="@layout/preference_widget_next" />
+        <SwitchPreferenceCompat android:persistent="false" android:title="@string/nexus_device_donate_lens_data_title" android:key="opaDonateLensData" android:summary="@string/nexus_device_donate_lens_data_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

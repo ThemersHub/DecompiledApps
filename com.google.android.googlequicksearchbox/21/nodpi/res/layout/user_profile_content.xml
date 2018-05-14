@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/user_profile_toolbar" app:navigationIcon="@drawable/quantum_ic_arrow_back_grey600_24" style="@style/HqToolbar" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ScrollView android:id="@id/user_profile_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/user_profile_data" android:layout_marginTop="24.0dip" android:textIsSelectable="true" style="@style/HqSubtitle" />
+        </ScrollView>
+        <TextView android:gravity="center" android:id="@id/user_profile_no_data_text" android:padding="@dimen/v2_empty_result_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/agent_incognito_mode_disable_user_profile_no_data" android:fontFamily="@string/headline_font_family" />
+    </FrameLayout>
+</LinearLayout>

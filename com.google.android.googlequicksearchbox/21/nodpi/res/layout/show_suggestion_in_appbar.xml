@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/show_suggestion_icon" android:layout_width="@dimen/searchbar_icon_size" android:layout_height="@dimen/searchbar_icon_size" android:layout_marginLeft="24.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="12.0dip" android:src="@drawable/quantum_ic_search_grey600_24" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" />
+    <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/suggestion_title" android:layout_width="fill_parent" android:layout_height="@dimen/show_suggestion_height" android:layout_marginRight="@dimen/suggestion_side_padding" android:singleLine="true" android:layout_toRightOf="@id/show_suggestion_icon" android:layout_alignParentRight="true" android:layout_marginEnd="@dimen/suggestion_side_padding" android:layout_toEndOf="@id/show_suggestion_icon" android:layout_alignParentEnd="true" style="@style/show_suggestion_font" />
+    <View android:id="@id/indented_width_divider" android:visibility="gone" android:layout_marginLeft="@dimen/suggestion_side_padding" android:layout_below="@id/suggestion_title" android:layout_marginStart="@dimen/suggestion_side_padding" style="@style/horizontal_bar" />
+    <View android:id="@id/full_width_divider" android:visibility="gone" android:layout_below="@id/suggestion_title" style="@style/horizontal_bar" />
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/quartz_background_gradient" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.gsa.staticplugins.quartz.framework.canvas.impl.renderer.OversizedLinearLayout android:orientation="horizontal" android:id="@id/quartz_canvas_main_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+        <com.google.android.apps.gsa.shared.ui.TouchInterceptingFrameLayout android:id="@id/quartz_canvas_main_child" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+        <com.google.android.apps.gsa.shared.ui.TouchInterceptingFrameLayout android:id="@id/quartz_canvas_side_interruption_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/quartz_canvas_side_interruption_child" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.google.android.apps.gsa.shared.ui.TouchInterceptingFrameLayout>
+    </com.google.android.apps.gsa.staticplugins.quartz.framework.canvas.impl.renderer.OversizedLinearLayout>
+    <ImageView android:id="@id/quartz_canvas_muted_mic_plate" android:background="@android:color/black" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/quartz_muted_mic_plate_height" android:src="@drawable/quartz_canvas_ic_mic_muted" android:scaleType="centerInside" android:contentDescription="@string/quartz_muted_mic_plate_description" />
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/quartz_canvas_voice_plate" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.google.android.apps.gsa.shared.ui.TouchInterceptingFrameLayout android:id="@id/quartz_canvas_suggestion_touch_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_gravity="bottom" android:id="@id/quartz_canvas_rich_suggestions_child" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_gravity="bottom" android:id="@id/quartz_canvas_suggestions_child" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.google.android.apps.gsa.shared.ui.TouchInterceptingFrameLayout>
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_gravity="bottom" android:id="@id/quartz_canvas_closed_captions_child" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

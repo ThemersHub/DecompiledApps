@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/minus_one_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewStub android:id="@id/tabs_stub" android:visibility="gone" android:layout="@layout/shared_minus_one_tabs" android:inflatedId="@id/parent_tabs" android:layout_width="fill_parent" android:layout_height="@dimen/parent_tabs_height" />
+        <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/momo_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/pomo_stub" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/loading_ui_container" android:paddingTop="@dimen/loading_ui_padding_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/loading_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+        </FrameLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/error_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/error_no_connection_text_size" android:id="@id/error_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/error_no_connection_text" android:fontFamily="sans-serif" android:textAlignment="center" />
+            <Button android:textSize="@dimen/retry_button_text_size" android:textColor="@android:color/white" android:id="@id/retry_button" android:background="@drawable/retry_button_background" android:paddingLeft="@dimen/retry_button_text_padding" android:paddingRight="@dimen/retry_button_text_padding" android:layout_width="wrap_content" android:layout_height="@dimen/retry_button_height" android:layout_marginTop="@dimen/retry_button_margin_top" android:text="@string/retry_button_text" android:fontFamily="sans-serif-medium" android:paddingStart="@dimen/retry_button_text_padding" android:paddingEnd="@dimen/retry_button_text_padding" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

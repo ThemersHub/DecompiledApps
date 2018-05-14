@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/animation_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.gsa.shared.ui.CoScrollContainer android:id="@id/scroll_view" android:background="@android:color/transparent" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="ifContentScrolls">
+        <FrameLayout android:id="@id/scroll_view_content" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_fillViewport="true">
+            <com.google.android.apps.gsa.shared.ui.ChildPaddingLayout android:id="@id/cards_view_container" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/interest_picker_layout_child_padding_top_margin">
+                <com.google.android.apps.gsa.shared.ui.SuggestionGridLayout android:id="@id/cards_view" android:paddingBottom="@dimen/closet_cards_padding_inbetween_adjusted" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true" app:verticalItemMargin="@dimen/closet_cards_padding_inbetween_adjusted" app:columnCount="@integer/interest_picker_cards_column_count" />
+                <FrameLayout android:layout_gravity="top" android:id="@id/progress_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.google.android.apps.gsa.shared.ui.ChildPaddingLayout>
+        </FrameLayout>
+    </com.google.android.apps.gsa.shared.ui.CoScrollContainer>
+    <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/breadcrumb_decoration_container" android:background="@color/breadcrumb_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/qp_app_bar_header_elevation">
+        <View android:background="@color/breadcrumb_top_border_background" android:layout_width="fill_parent" android:layout_height="@dimen/breadcrumb_top_decoration_height" />
+        <com.google.android.apps.gsa.staticplugins.training.v2.BreadCrumbView android:gravity="center_vertical" android:id="@id/breadcrumb_view" android:paddingLeft="@dimen/breadcrumb_start_padding" android:paddingRight="@dimen/breadcrumb_end_padding" android:layout_width="fill_parent" android:layout_height="@dimen/breadcrumb_container_height" android:paddingStart="@dimen/breadcrumb_start_padding" android:paddingEnd="@dimen/breadcrumb_end_padding" android:elevation="4.0dip" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/add_interest" android:visibility="gone" style="@style/qp_fab">
+        <com.google.android.apps.gsa.shared.ui.CircleImageView android:src="@drawable/ic_plus" app:radius="@dimen/qp_fab_circle_radius" style="@style/qp_fab_circle" />
+    </FrameLayout>
+    <ListView android:id="@id/search_layer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textSize="@dimen/interest_picker_no_results_text_size" android:textColor="@color/qp_text_b2" android:layout_gravity="center_horizontal" android:id="@id/search_layer_no_results" android:paddingTop="@dimen/interest_picker_no_results_top_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_results_interest" />
+</FrameLayout>

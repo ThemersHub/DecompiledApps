@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center_horizontal" android:layout_width="@dimen/value_panel_max_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/main_menu_container" android:layout_width="@dimen/main_panel_max_width" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/panel_content_height">
+            <FrameLayout android:layout_gravity="center" android:layout_width="@dimen/circular_button_radius" android:layout_height="@dimen/circular_button_radius">
+                <ImageButton android:id="@id/logo_button" android:src="@drawable/quantum_ic_google_white_24" android:tint="@color/circular_button_icon_tint" style="@style/CircularButton" />
+            </FrameLayout>
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+            <FrameLayout android:layout_gravity="center" android:layout_width="@dimen/circular_button_radius" android:layout_height="@dimen/circular_button_radius">
+                <ImageButton android:layout_gravity="center" android:id="@id/shape_button" android:src="@drawable/bar_shape" android:tint="@color/circular_button_icon_tint" style="@style/CircularButton" />
+            </FrameLayout>
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+            <FrameLayout android:layout_gravity="center" android:layout_width="@dimen/circular_button_radius" android:layout_height="@dimen/circular_button_radius">
+                <ImageButton android:layout_gravity="center" android:id="@id/color_button" android:src="@drawable/quantum_ic_color_lens_white_24" android:tint="@color/circular_button_icon_tint" style="@style/CircularButton" />
+            </FrameLayout>
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+            <FrameLayout android:layout_gravity="center" android:layout_width="@dimen/circular_button_radius" android:layout_height="@dimen/circular_button_radius">
+                <ImageButton android:id="@id/opacity_button" android:src="@drawable/quantum_ic_opacity_white_24" android:tint="@color/circular_button_icon_tint" style="@style/CircularButton" />
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:id="@id/reset_button" android:layout_width="fill_parent" android:layout_height="@dimen/reset_text_height" android:layout_marginTop="@dimen/reset_margin_top" android:text="@string/reset_text" style="@style/ResetText" />
+    </LinearLayout>
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_gravity="center" android:id="@id/color_menu" android:visibility="gone" android:layout_width="@dimen/value_panel_max_width" android:layout_height="fill_parent" />
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_gravity="center" android:id="@id/shape_menu" android:visibility="gone" android:layout_width="@dimen/value_panel_max_width" android:layout_height="fill_parent" />
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_gravity="center" android:id="@id/opacity_menu" android:visibility="gone" android:layout_width="@dimen/value_panel_max_width" android:layout_height="fill_parent" />
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_gravity="center" android:id="@id/logo_menu" android:visibility="gone" android:layout_width="@dimen/value_panel_max_width" android:layout_height="fill_parent" />
+</FrameLayout>

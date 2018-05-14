@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.search.gel.GelSearchOverlayLayout android:id="@id/search_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <ViewStub android:layout_gravity="left" android:id="@id/vertical_search_bar_stub" android:layout="@layout/vertical_search_bar" android:inflatedId="@id/vertical_search_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.google.android.apps.gsa.search.shared.ui.ReverseDrawRestrictedLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/search_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.gsa.search.shared.overlay.OverlaySearchPlateContainer android:layout_gravity="center|top" android:id="@id/search_plate_container" android:clipChildren="@bool/clip_children_and_to_padding" android:clipToPadding="@bool/clip_children_and_to_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/search_plate" layout="@layout/search_plate" />
+        </com.google.android.apps.gsa.search.shared.overlay.OverlaySearchPlateContainer>
+        <include android:layout_width="fill_parent" android:layout_height="@dimen/top_nav_bar_height" android:layout_marginTop="@dimen/search_bg_content_inset" layout="@layout/corpus_bar_view_stub" />
+        <ScrollView android:id="@id/search_suggestions_container_scroll_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/web_suggestion_list_top_margin" android:overScrollMode="never">
+            <ViewStub android:id="@id/search_suggestions_container_stub" android:layout="@layout/search_suggestions_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </ScrollView>
+    </com.google.android.apps.gsa.search.shared.ui.ReverseDrawRestrictedLayout>
+</com.google.android.apps.gsa.search.gel.GelSearchOverlayLayout>

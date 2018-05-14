@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.libraries.canvas.Paginator android:focusable="false" android:layout_width="fill_parent" android:layout_height="@dimen/paginator_height" android:contentDescription="@string/paginator_next_page" card_view:cardBackgroundColor="@android:color/white" card_view:cardElevation="@dimen/paginator_elevation"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_gravity="fill" android:id="@id/paginator_first_page_button" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:contentDescription="@string/paginator_first_page">
+            <ImageView android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_chevron_left_white_24" android:tint="@color/quantum_grey600" android:layout_marginEnd="@dimen/paginator_double_left_chevron_offset" />
+            <ImageView android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_chevron_left_white_24" android:tint="@color/quantum_grey600" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="fill" android:id="@id/paginator_previous_page_button" android:focusable="true" android:visibility="invisible" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" android:contentDescription="@string/paginator_previous_page">
+            <ImageView android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_chevron_left_white_24" android:tint="@color/quantum_grey600" />
+        </FrameLayout>
+        <TextView android:textColor="@color/quantum_grey600" android:gravity="center" android:layout_gravity="fill" android:id="@id/paginator_page_number_text_view" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/paginator_next" android:layout_weight="2.0" />
+        <FrameLayout android:gravity="start|center" android:layout_gravity="fill" android:id="@id/paginator_next_page_button" android:focusable="true" android:visibility="invisible" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" android:contentDescription="@string/paginator_next_page">
+            <ImageView android:layout_gravity="start|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_chevron_right_white_24" android:tint="@color/quantum_grey600" />
+        </FrameLayout>
+    </LinearLayout>
+</com.google.android.libraries.canvas.Paginator>

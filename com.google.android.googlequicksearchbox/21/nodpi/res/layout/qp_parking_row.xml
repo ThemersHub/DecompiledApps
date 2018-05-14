@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/qp_column_padding" android:paddingTop="@dimen/qp_small_padding" android:paddingRight="@dimen/qp_column_padding" android:paddingBottom="@dimen/qp_small_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_h2" />
+        <TextView android:id="@id/subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_h4" />
+        <TextView android:id="@id/metadata" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_h5" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="@dimen/qp_tall_list_image_width" android:layout_height="@dimen/qp_tall_list_image_height">
+        <com.google.android.apps.gsa.now.shared.ui.CrossfadingWebImageView android:id="@id/image" android:duplicateParentState="true" android:layout_width="@dimen/qp_tall_list_image_width" android:layout_height="@dimen/qp_tall_list_image_height" android:scaleType="centerCrop" android:contentDescription="@null" thegoogle:crossfadeDuration="@integer/image_crossfade_duration" thegoogle:pressedHighlightColor="@color/image_pressed_highlight" thegoogle:cornerRadius="@dimen/rounded_corner_radius" />
+        <ImageView android:layout_gravity="center" android:id="@id/custom_pin" android:duplicateParentState="true" android:layout_width="@dimen/qp_list_custom_pin_size" android:layout_height="@dimen/qp_list_custom_pin_size" android:layout_marginBottom="@dimen/qp_list_custom_pin_offset" android:src="@drawable/ic_pin_parking" android:contentDescription="@null" />
+    </FrameLayout>
+</LinearLayout>

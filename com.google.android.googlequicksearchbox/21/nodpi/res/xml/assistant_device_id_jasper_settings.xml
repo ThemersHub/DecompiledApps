@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.gsa.assistant.settings.shared.PreferenceHolder android:key="@string/assistant_device_id_group_holder">
+        <com.google.android.apps.gsa.assistant.settings.shared.DescriptionPreferenceCategory android:title="@string/assistant_settings_common_device_id_category" android:key="@string/assistant_device_id_jasper_preference_category">
+            <com.google.android.apps.gsa.assistant.settings.shared.DeviceNamePreference android:persistent="false" android:key="jasperDeviceName" />
+            <com.google.android.apps.gsa.assistant.settings.shared.AddressPreference android:persistent="false" android:key="jasperLocation" />
+            <com.google.android.apps.gsa.assistant.settings.devices.shared.PersonalInfoScreenfulSwitchPreference android:persistent="false" android:key="jasperPersonalInfoPermission" android:defaultValue="true" />
+            <com.google.android.apps.gsa.assistant.settings.devices.shared.PersonalSuggestionSwitchPreference android:persistent="false" android:key="jasperPersonalSuggestionsPermission" android:defaultValue="true" />
+            <SwitchPreferenceCompat android:persistent="false" android:title="@string/common_device_youtube_restricted_mode_title" android:key="jasperYoutubeRestrictedMode" android:summary="@string/common_device_youtube_restricted_mode_summary" android:defaultValue="true" />
+            <PreferenceScreen android:persistent="false" android:title="@string/duo_preference_title" android:key="jasperDuo" />
+            <ListPreference android:persistent="false" android:title="@string/common_device_assistant_language_title" android:key="jasperAssistantLanguage" android:summary="%s" android:widgetLayout="@layout/preference_widget_next" android:dialogTitle="@string/common_device_assistant_language_title" />
+            <Preference android:persistent="false" android:key="jasperRemoveDevice" android:widgetLayout="@layout/preference_widget_clear" />
+        </com.google.android.apps.gsa.assistant.settings.shared.DescriptionPreferenceCategory>
+    </com.google.android.apps.gsa.assistant.settings.shared.PreferenceHolder>
+</PreferenceScreen>

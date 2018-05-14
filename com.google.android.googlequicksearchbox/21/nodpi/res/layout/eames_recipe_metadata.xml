@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.plugins.images.viewer.RecipeMetadataView android:orientation="vertical" android:tag="ve=16600" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/eames_horizontal_metadata_margin" android:layout_marginTop="@dimen/eames_large_vertical_padding" android:layout_marginRight="@dimen/eames_horizontal_metadata_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/recipe_details_row" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/eames_large_vertical_padding">
+        <LinearLayout android:orientation="vertical" android:id="@id/recipe_rating_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.android.apps.gsa.plugins.images.viewer.LetterSpacingTextView android:textSize="@dimen/eames_section_heading_font_size" android:textStyle="bold" android:textColor="@color/eames_section_heading" android:id="@id/recipe_rating_heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_viewer_rich_metadata_rating_label" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/eames_rich_metadata_font_size" android:textColor="@color/eames_rich_metadata_values" android:id="@id/recipe_rating_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.google.android.libraries.gsa.imageviewer.reviewstars.ReviewStarsView android:id="@id/recipe_review_stars" android:layout_width="wrap_content" android:layout_height="13.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" />
+                <TextView android:textSize="@dimen/eames_rich_metadata_font_size" android:textColor="@color/eames_rich_metadata_values" android:id="@id/recipe_vote_count_message" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/rich_metadata_divider" />
+        <LinearLayout android:orientation="vertical" android:id="@id/recipe_time_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.android.apps.gsa.plugins.images.viewer.LetterSpacingTextView android:textSize="@dimen/eames_section_heading_font_size" android:textStyle="bold" android:textColor="@color/eames_section_heading" android:id="@id/recipe_cook_time_heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_viewer_recipe_cook_time_label" />
+            <TextView android:textSize="@dimen/eames_rich_metadata_font_size" android:textColor="@color/eames_rich_metadata_values" android:id="@id/recipe_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <include layout="@layout/rich_metadata_divider" />
+        <LinearLayout android:orientation="vertical" android:id="@id/recipe_yield_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.android.apps.gsa.plugins.images.viewer.LetterSpacingTextView android:textSize="@dimen/eames_section_heading_font_size" android:textStyle="bold" android:textColor="@color/eames_section_heading" android:id="@id/recipe_yield_heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_viewer_recipe_yield" />
+            <TextView android:textSize="@dimen/eames_rich_metadata_font_size" android:textColor="@color/eames_rich_metadata_values" android:ellipsize="end" android:id="@id/recipe_yield" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.libraries.material.baselinetextview.BaselineTextView android:textSize="14.0sp" android:textColor="@color/eames_metadata_text" android:id="@id/recipe_description" android:paddingBottom="@dimen/eames_large_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" app:lineSpacing="20.0dip" />
+    <com.google.android.apps.gsa.plugins.images.viewer.LetterSpacingTextView android:textSize="@dimen/eames_section_heading_font_size" android:textStyle="bold" android:textColor="@color/eames_section_heading" android:id="@id/recipe_ingredients_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="@string/image_viewer_recipe_ingredients" />
+    <LinearLayout android:orientation="vertical" android:id="@id/recipe_ingredients_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.google.android.apps.gsa.plugins.images.viewer.RecipeMetadataView>

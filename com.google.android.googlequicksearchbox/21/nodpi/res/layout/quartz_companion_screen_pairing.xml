@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:paddingTop="@dimen/quartz_padding_top" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:paddingStart="@dimen/quartz_padding_start" android:paddingEnd="@dimen/quartz_padding_end">
+        <ImageView android:id="@id/quartz_companion_screen_pairing_assistant_icon" android:layout_width="@dimen/quartz_assistant_icon_width" android:layout_height="@dimen/quartz_assistant_icon_height" android:src="@drawable/opa_assistant_logo_large" />
+        <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:textColor="@color/quartz_text_color_large" android:id="@id/quartz_companion_screen_pairing_welcome_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-5.0sp" style="@style/Quartz.Text.T2" />
+        <android.support.v7.widget.CardView android:id="@id/quartz_companion_screen_pairing_device_selection_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/quartz_padding_top" android:layout_marginBottom="@dimen/quartz_padding_bottom" app:cardBackgroundColor="@color/quartz_soft_grey_03" app:cardCornerRadius="16.0dip" app:cardElevation="0.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/quartz_padding_to_image" android:paddingBottom="@dimen/quartz_padding_bottom" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/quartz_padding_to_image" android:paddingEnd="@dimen/quartz_padding_to_image">
+                <ListView android:id="@id/quartz_companion_screen_pairing_devices_list" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:textColor="@color/quartz_text_color_secondary" android:layout_gravity="center" android:id="@id/quartz_companion_screen_pairing_scanning_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quartz_pairing_scanning_for_devices" style="@style/Quartz.Text.T12" />
+            <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:textColor="@color/quartz_text_color_secondary" android:gravity="center" android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="@dimen/quartz_padding_bottom" android:text="@string/quartz_pairing_same_network_tip" style="@style/Quartz.Text.T15" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <FrameLayout android:id="@id/quartz_companion_screen_pairing_image_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:id="@id/quartz_companion_screen_pairing_chirp_active_image" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <ImageView android:id="@id/quartz_companion_screen_pairing_assistant_connect_image" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    </FrameLayout>
+</LinearLayout>

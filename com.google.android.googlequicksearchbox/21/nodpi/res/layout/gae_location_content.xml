@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/qp_large_padding" android:paddingBottom="@dimen/qp_large_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/places_autocomplete_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/street_address_label" style="@style/RegularFontFamily.Small" />
+    <AutoCompleteTextView android:layout_gravity="center_horizontal" android:id="@id/places_autocomplete" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/qp_min_touch_target_size" android:hint="@string/address_hint" android:maxLines="1" android:inputType="textPostalAddress" android:imeOptions="actionDone" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/location_error_warning" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_small_padding" android:layout_marginBottom="@dimen/location_warning_margin_bottom">
+        <TextView android:textColor="@color/google_red" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/address_error" />
+        <ImageView android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_warning_googred_24" android:layout_weight="1.0" android:contentDescription="@null" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/address_line2_wrapper" android:paddingTop="@dimen/qp_small_padding" android:paddingBottom="@dimen/qp_small_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/place_icon" android:paddingLeft="0.0dip" android:paddingRight="@dimen/qp_medium_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_place_grey600_24" android:contentDescription="@null" android:paddingStart="0.0dip" android:paddingEnd="@dimen/qp_medium_padding" />
+        <TextView android:id="@id/address_line2" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/RegularFontFamily.Medium" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="ve=20369;track:click" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" android:layoutDirection="locale" style="@style/ResultContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ipa_thumbnail_vertical_margin" android:layout_marginBottom="@dimen/ipa_thumbnail_vertical_margin" android:layout_weight="0.0" android:layout_marginStart="@dimen/ipa_thumbnail_horizontal_margin" android:layout_marginEnd="@dimen/ipa_thumbnail_horizontal_margin">
+            <com.google.android.apps.gsa.plugins.ipa.searchboxui.views.IpaImageView android:id="@id/center_thumbnail" android:visibility="gone" android:layout_width="@dimen/ipa_thumbnail_width" android:layout_height="@dimen/ipa_thumbnail_height" android:scaleType="centerCrop" />
+            <com.google.android.apps.gsa.plugins.ipa.searchboxui.views.IpaImageView android:layout_gravity="center_vertical" android:id="@id/center_app_icon_thumbnail" android:visibility="gone" android:layout_width="@dimen/ipa_thumbnail_app_icon_width" android:layout_height="@dimen/ipa_thumbnail_app_icon_height" android:layout_margin="@dimen/ipa_thumbnail_app_icon_extra_margin" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/small_layout_top_margin" android:paddingBottom="@dimen/regular_layout_vertical_margin" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="0.0dip" android:paddingEnd="@dimen/layout_end_margin">
+            <TextView android:ellipsize="end" android:id="@id/result_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/PrimaryText" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/result_second_line_text" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.google.android.apps.gsa.plugins.ipa.searchboxui.views.IpaImageView android:layout_gravity="center_vertical" android:id="@id/badge_app_icon" android:visibility="gone" android:layout_width="@dimen/ipa_app_icon_in_snippet_size" android:layout_height="@dimen/ipa_app_icon_in_snippet_size" android:scaleType="centerInside" android:layout_marginEnd="@dimen/ipa_app_icon_in_snippet_margin" />
+                <TextView android:ellipsize="end" android:id="@id/result_metadata_left_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/SnippetText" />
+                <ImageView android:id="@id/result_metadata_image" android:padding="3.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:ellipsize="end" android:id="@id/result_metadata_right_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/SnippetText" />
+            </LinearLayout>
+            <TextView android:ellipsize="end" android:id="@id/third_line_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/SnippetText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:layout_gravity="end|center|top" android:id="@id/timestamp_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/small_layout_top_margin" android:layout_marginEnd="@dimen/layout_end_margin" style="@style/TimestampText" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

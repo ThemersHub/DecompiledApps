@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V22.Theme.AppCompat" />
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V22.Theme.AppCompat.Light" />
+    <style name="BottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="OpaHQActivity.Theme.Base" parent="@style/Theme.AppCompat.Light">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_bottom_hq</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_bottom_hq</item>
+        <item name="android:statusBarColor">@color/status_bar_color</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="OpaValuePropScrollContainer">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:scrollIndicators">bottom|top</item>
+    </style>
+    <style name="SuwAlertDialogTheme" parent="@android:style/Theme.DeviceDefault.Dialog.Alert" />
+    <style name="SuwAlertDialogTheme.Light" parent="@android:style/Theme.DeviceDefault.Light.Dialog.Alert" />
+    <style name="SuwGlifButton.Primary" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:theme">@style/SuwGlifButton.Primary</item>
+        <item name="android:buttonStyle">@style/SuwGlifButton.Primary</item>
+        <item name="android:paddingLeft">@dimen/suw_glif_button_padding</item>
+        <item name="android:paddingRight">@dimen/suw_glif_button_padding</item>
+        <item name="android:textAllCaps">?suwButtonAllCaps</item>
+        <item name="android:fontFamily">?suwButtonFontFamily</item>
+        <item name="android:buttonCornerRadius">?suwButtonCornerRadius</item>
+        <item name="textAllCaps">?suwButtonAllCaps</item>
+        <item name="buttonStyle">@style/SuwGlifButton.Primary</item>
+    </style>
+    <style name="SuwGlifButton.Secondary" parent="@style/Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:theme">@style/SuwGlifButton.Secondary</item>
+        <item name="android:buttonStyle">@style/SuwGlifButton.Secondary</item>
+        <item name="android:paddingLeft">@dimen/suw_glif_button_padding</item>
+        <item name="android:paddingRight">@dimen/suw_glif_button_padding</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:textAllCaps">?suwButtonAllCaps</item>
+        <item name="android:fontFamily">?suwButtonFontFamily</item>
+        <item name="android:colorControlHighlight">@color/suw_flat_button_highlight</item>
+        <item name="android:buttonCornerRadius">?suwButtonCornerRadius</item>
+        <item name="textAllCaps">?suwButtonAllCaps</item>
+        <item name="colorControlHighlight">@color/suw_flat_button_highlight</item>
+        <item name="buttonStyle">@style/SuwGlifButton.Secondary</item>
+    </style>
+    <style name="SuwThemeGlifV2" parent="@style/SuwThemeGlif">
+        <item name="android:colorBackground">@color/suw_glif_background_color_dark</item>
+        <item name="android:editTextStyle">@style/SuwEditText</item>
+        <item name="android:alertDialogTheme">@style/SuwAlertDialogTheme</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="suwDividerInsetEnd">?suwMarginSides</item>
+        <item name="suwDividerInsetStart">?suwMarginSides</item>
+        <item name="suwDividerInsetStartNoIcon">?suwMarginSides</item>
+        <item name="suwEditTextBackgroundColor">@color/suw_glif_edit_text_bg_light_color</item>
+        <item name="suwGlifHeaderGravity">center_horizontal</item>
+        <item name="suwScrollIndicators">bottom|top</item>
+        <item name="suwBackgroundPatterned">false</item>
+        <item name="suwBackgroundBaseColor">?android:colorBackground</item>
+    </style>
+    <style name="SuwThemeGlifV2.Light" parent="@style/SuwThemeGlif.Light">
+        <item name="android:colorBackground">@color/suw_glif_background_color_light</item>
+        <item name="android:editTextStyle">@style/SuwEditText</item>
+        <item name="android:alertDialogTheme">@style/SuwAlertDialogTheme.Light</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="suwDividerInsetEnd">?suwMarginSides</item>
+        <item name="suwDividerInsetStart">?suwMarginSides</item>
+        <item name="suwDividerInsetStartNoIcon">?suwMarginSides</item>
+        <item name="suwEditTextBackgroundColor">@color/suw_glif_edit_text_bg_light_color</item>
+        <item name="suwGlifHeaderGravity">center_horizontal</item>
+        <item name="suwScrollIndicators">bottom|top</item>
+        <item name="suwBackgroundPatterned">false</item>
+        <item name="suwBackgroundBaseColor">?android:colorBackground</item>
+    </style>
+    <style name="Widget.Design.AppBarLayout" parent="@android:style/Widget">
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:stateListAnimator">@animator/design_appbar_state_list_animator</item>
+        <item name="android:touchscreenBlocksFocus">true</item>
+        <item name="android:keyboardNavigationCluster">true</item>
+    </style>
+    <style name="Base.V22.Theme.AppCompat" parent="@style/Base.V21.Theme.AppCompat">
+        <item name="actionModeShareDrawable">?android:actionModeShareDrawable</item>
+        <item name="editTextBackground">?android:editTextBackground</item>
+    </style>
+    <style name="Base.V22.Theme.AppCompat.Light" parent="@style/Base.V21.Theme.AppCompat.Light">
+        <item name="actionModeShareDrawable">?android:actionModeShareDrawable</item>
+        <item name="editTextBackground">?android:editTextBackground</item>
+    </style>
+</resources>

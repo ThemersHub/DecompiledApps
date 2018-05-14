@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/show_title" android:layout_width="fill_parent" android:layout_height="@dimen/activity_header_thumbnail_size">
+        <com.google.android.apps.gsa.plugins.podcastplayer.ThumbnailView android:id="@id/podcast_thumbnail" android:layout_width="@dimen/activity_header_thumbnail_size" android:layout_height="@dimen/activity_header_thumbnail_size" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:layout_toLeftOf="@id/podcast_thumbnail" android:layout_alignParentLeft="true" android:layout_marginStart="24.0dip" android:layout_toStartOf="@id/podcast_thumbnail" android:layout_alignParentStart="true">
+            <TextView android:ellipsize="end" android:id="@id/podcast_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="6.0dip" android:maxLines="1" android:layout_alignParentLeft="true" android:textDirection="locale" android:layout_alignParentStart="true" style="@style/podcast_title" />
+            <TextView android:ellipsize="end" android:id="@id/podcast_author" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/podcast_title" android:layout_alignParentLeft="true" android:textDirection="locale" android:layout_alignParentStart="true" style="@style/podcast_subtitle" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View style="@style/horizontal_bar" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip">
+        <TextView android:id="@id/add_to_home_screen_button" android:background="@drawable/button_border" android:paddingTop="7.0dip" android:paddingBottom="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" style="@style/highlighted_button" />
+        <TextView android:id="@id/add_to_home_screen_explanation" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" style="@style/add_to_homescreen_explanation" />
+    </LinearLayout>
+    <View android:id="@id/add_to_home_screen_separator" style="@style/horizontal_bar" />
+    <TextView android:ellipsize="end" android:id="@id/podcast_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="14.0dip" android:maxLines="@integer/podcast_description_default_lines" style="@style/podcast_description" />
+    <ImageView android:id="@id/podcast_description_more" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="36.0dip" android:src="@drawable/quantum_ic_expand_more_grey600_24" android:scaleType="center" android:contentDescription="@string/more_description" />
+    <View android:id="@id/podcast_description_separator" style="@style/horizontal_bar" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:id="@id/quartz_photo_list_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:transitionName="@string/quartz_list_transition_corresponding_view" />
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/quartz_photo_list_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/quartz_photo_list_slideshow_overlay" android:background="@color/quartz_photo_list_slideshow_overlay" android:padding="@dimen/quartz_56sdp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.AppCompatImageView android:id="@id/quartz_photo_list_slideshow_play" android:layout_centerInParent="true" android:contentDescription="@string/quartz_photo_list_slideshow_button_play_content_description" app:srcCompat="@drawable/ic_play_24dp" style="@style/QuartzPhotoListSlideshowButton" />
+        <android.support.v7.widget.AppCompatImageView android:id="@id/quartz_photo_list_slideshow_grid" android:layout_width="@dimen/quartz_photo_list_slideshow_grid_button_size" android:layout_height="@dimen/quartz_photo_list_slideshow_grid_button_size" android:layout_alignParentBottom="true" android:contentDescription="@string/quartz_photo_list_slideshow_button_grid_content_description" android:layout_alignParentEnd="true" app:srcCompat="@drawable/ic_gallery_grid" style="@style/QuartzPhotoListSlideshowButton" />
+        <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:textColor="@android:color/white" android:id="@id/quartz_photo_list_slideshow_date_and_location" android:layout_width="wrap_content" android:layout_height="wrap_content" app:fontFamily="@font/google_sans_medium" style="@style/Quartz.Text.T11" />
+    </RelativeLayout>
+</FrameLayout>

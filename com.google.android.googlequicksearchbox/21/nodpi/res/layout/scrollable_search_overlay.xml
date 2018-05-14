@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.search.gel.GelSearchOverlayLayout android:id="@id/search_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <ViewStub android:layout_gravity="left" android:id="@id/vertical_search_bar_stub" android:layout="@layout/vertical_search_bar" android:inflatedId="@id/vertical_search_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.google.android.apps.gsa.search.shared.ui.ReverseDrawRestrictedLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/search_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.gsa.search.shared.overlay.OverlaySearchPlateContainer android:layout_gravity="center|top" android:id="@id/search_plate_container" android:clipChildren="@bool/clip_children_and_to_padding" android:clipToPadding="@bool/clip_children_and_to_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/search_plate" layout="@layout/search_plate" />
+        </com.google.android.apps.gsa.search.shared.overlay.OverlaySearchPlateContainer>
+        <include layout="@layout/scrollable_suggestions_container" />
+    </com.google.android.apps.gsa.search.shared.ui.ReverseDrawRestrictedLayout>
+</com.google.android.apps.gsa.search.gel.GelSearchOverlayLayout>

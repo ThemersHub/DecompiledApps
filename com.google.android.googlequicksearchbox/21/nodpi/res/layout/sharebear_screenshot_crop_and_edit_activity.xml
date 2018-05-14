@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/sharebear_crop_and_edit_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/sharebear_background_image" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/sharebear_crop_and_edit_toolbar_height" android:scaleType="centerInside" />
+    <com.google.android.apps.gsa.staticplugins.sharebear.CropScreenshotView android:id="@id/sharebear_crop_screenshot_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/sharebear_crop_and_edit_toolbar_height" android:scaleType="centerInside" />
+    <com.google.android.apps.gsa.staticplugins.sharebear.DrawingView android:id="@id/sharebear_edit_screenshot_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/sharebear_crop_and_edit_toolbar_height" android:scaleType="centerInside" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:background="@color/sharebear_toolbar_background" android:layout_width="fill_parent" android:layout_height="@dimen/sharebear_crop_and_edit_toolbar_height">
+        <ImageView android:id="@id/sharebear_toolbar_crop" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_crop_white_24" android:layout_weight="1.0" />
+        <ImageView android:id="@id/sharebear_toolbar_checkmark" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_done_white_24" android:layout_weight="1.0" />
+        <ImageView android:id="@id/sharebear_toolbar_edit" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_mode_edit_white_24" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/sharebear_crop_and_edit_toolbar_text_height" android:textColor="@android:color/white" android:gravity="center" android:id="@id/sharebear_toolbar_crop_done" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/sharebear_done_button_description" android:layout_weight="1.0" android:textAllCaps="true" />
+        <fragment android:id="@id/sharebear_toolbar_edit_fragment" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" class="com.google.android.apps.gsa.staticplugins.sharebear.EditToolbar" />
+    </LinearLayout>
+</FrameLayout>

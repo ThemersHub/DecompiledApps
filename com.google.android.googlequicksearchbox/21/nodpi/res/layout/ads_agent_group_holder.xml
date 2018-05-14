@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/group_header" android:paddingLeft="@dimen/agent_group_holder_horizontal_padding" android:paddingTop="@dimen/agent_group_holder_header_top_padding" android:paddingRight="@dimen/agent_group_holder_horizontal_padding" android:paddingBottom="@dimen/agent_group_holder_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12.0sp" android:textColor="@color/quantum_googgreen700" android:id="@id/ads_badge" android:background="@drawable/ads_badge_background" android:paddingLeft="4.0dip" android:paddingTop="2.0dip" android:paddingRight="4.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/ads_badge" android:radius="2.0dip" android:fontFamily="google-sans" />
+            <TextView android:textSize="@dimen/agent_group_holder_header_text_size" android:textStyle="bold" android:textColor="@color/gmgrey900" android:id="@id/group_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:textAllCaps="true" android:fontFamily="google-sans" app:layout_constraintStart_toEndOf="@id/ads_badge" />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/agent_carousel" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:textColor="@color/gmgrey600" android:layout_gravity="center" android:id="@id/empty_error_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hq_header_margin" android:layout_marginBottom="54.0dip" android:layout_marginStart="@dimen/hq_header_margin" />
+</FrameLayout>

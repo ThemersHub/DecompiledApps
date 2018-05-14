@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/filter_bar" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="@dimen/filterbar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="@dimen/filterbar_height">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_alignLeft="@id/filterbar_corpus_spinner" android:layout_alignRight="@id/filterbar_corpus_spinner" android:layout_alignStart="@id/filterbar_corpus_spinner" android:layout_alignEnd="@id/filterbar_corpus_spinner">
+            <ImageView android:layout_gravity="end|center" android:id="@id/filterbar_corpus_spinner_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <Spinner android:gravity="center" android:id="@id/filterbar_corpus_spinner" android:background="@android:color/transparent" android:paddingLeft="0.0dip" android:paddingRight="@dimen/spinner_arrow_space" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="@dimen/corpus_spinner_min_width" android:paddingStart="0.0dip" android:paddingEnd="@dimen/spinner_arrow_space" />
+    </RelativeLayout>
+    <LinearLayout android:background="@color/corpus_bar_separator_color" android:layout_width="1.0px" android:layout_height="fill_parent" />
+    <HorizontalScrollView android:id="@id/filterbar_filters_scrollview" android:scrollbars="none" android:fadingEdgeLength="@dimen/filters_fading_edge" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:requiresFadingEdge="horizontal">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/filterbar_filters_container" android:padding="@dimen/filters_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </HorizontalScrollView>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.sidekick.gel.GelNavigationDrawerLayout android:id="@id/navigation_drawer_layout" android:background="@color/activity_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.gsa.sidekick.gel.GelNowCardsView android:id="@id/now_client_cards_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.gsa.shared.ui.CoScrollContainer android:id="@id/velvet_scrollview" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:overScrollMode="ifContentScrolls" android:layout_alignParentStart="true" android:layout_alignParentEnd="true">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" thegoogle:layout_fillViewport="true">
+                <include layout="@layout/now_doodle_themed_header" />
+                <FrameLayout android:layout_gravity="top" android:id="@id/progress_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <FrameLayout android:layout_gravity="bottom" android:id="@id/progressive_spinner_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.google.android.apps.gsa.shared.ui.ChildPaddingLayout android:id="@id/cards_view_container" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.google.android.apps.gsa.shared.ui.SuggestionGridLayout android:id="@id/cards_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/cards_padding_inbetween_adjusted" android:animateLayoutChanges="true" thegoogle:horizontalItemMargin="@dimen/columns_padding_inbetween" thegoogle:verticalItemMargin="@dimen/cards_padding_inbetween_adjusted" thegoogle:columnCount="@integer/cards_column_count" />
+                </com.google.android.apps.gsa.shared.ui.ChildPaddingLayout>
+            </FrameLayout>
+        </com.google.android.apps.gsa.shared.ui.CoScrollContainer>
+    </com.google.android.apps.gsa.sidekick.gel.GelNowCardsView>
+</com.google.android.apps.gsa.sidekick.gel.GelNavigationDrawerLayout>

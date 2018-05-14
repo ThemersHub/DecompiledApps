@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/qp_gutter_small_padding_top" android:paddingBottom="@dimen/qp_large_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/gutter_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/qp_gutter_start_margin" android:layout_marginRight="@dimen/qp_gutter_end_margin" android:layout_marginStart="@dimen/qp_gutter_start_margin" android:layout_marginEnd="@dimen/qp_gutter_end_margin">
+        <com.google.android.apps.gsa.now.shared.ui.RecyclerViewStub android:id="@id/gutter_icon_stub" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_gutter_content_padding_top">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <TextView android:ellipsize="end" android:id="@id/bill_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="3" android:layout_weight="3.0" style="@style/qp_h1" />
+            <TextView android:ellipsize="end" android:gravity="right" android:id="@id/amount_due" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/qp_small_padding" android:maxLines="1" android:singleLine="true" android:layout_weight="2.0" style="@style/qp_h1" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true">
+            <TextView android:id="@id/due_status" android:paddingTop="@dimen/qp_tabular_row_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/qp_small_padding" style="@style/qp_h5" />
+            <TextView android:textColor="@color/qp_text_b2" android:ellipsize="end" android:id="@id/due_date" android:paddingTop="@dimen/qp_tabular_row_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/qp_h5" />
+        </LinearLayout>
+    </LinearLayout>
+    <Space android:layout_width="@dimen/qp_column_padding" android:layout_height="fill_parent" />
+</LinearLayout>

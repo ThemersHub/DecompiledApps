@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/search_results_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.gsa.plugins.nativeresults.activity.SearchResultsCoScrollContainer android:id="@id/webview_co_scroll" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/SraCoScrollContainer"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+        <com.google.android.apps.gsa.shared.ui.ChildPaddingLayout android:id="@id/cards_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/SraChildContainer">
+            <com.google.android.apps.gsa.plugins.nativeresults.activity.SearchResultsSuggestionGridLayout android:id="@id/hybrid_native_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true" thegoogle:searchresults_columnCount="1" thegoogle:searchresults_horizontalItemMargin="@dimen/native_columns_padding_inbetween" thegoogle:searchresults_verticalItemMargin="@dimen/native_search_results_padding_inbetween" />
+        </com.google.android.apps.gsa.shared.ui.ChildPaddingLayout>
+    </com.google.android.apps.gsa.plugins.nativeresults.activity.SearchResultsCoScrollContainer>
+    <ViewStub android:id="@id/card_scroll_view_stub" android:layout="@layout/card_scroll_view" android:inflatedId="@id/card_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/message_cards_co_scroll_stub" android:layout="@layout/message_cards_scroll_view" android:inflatedId="@id/message_cards_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

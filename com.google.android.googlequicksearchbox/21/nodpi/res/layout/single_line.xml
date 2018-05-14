@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/smartspace_content" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextClock android:layout_gravity="center" android:id="@id/date_text" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:format12Hour="EEEE, MMM d" android:format24Hour="EEEE, MMM d" style="@style/TextTitle" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/title_weather_content" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/title_separator" android:background="@color/text_color" android:layout_width="1.0dip" android:layout_height="20.0dip" android:layout_marginLeft="@dimen/horizontal_margin" android:layout_marginRight="@dimen/horizontal_margin" android:layout_marginStart="@dimen/horizontal_margin" android:layout_marginEnd="@dimen/horizontal_margin" />
+            <ImageView android:layout_gravity="center" android:id="@id/title_weather_icon" android:layout_width="@dimen/large_icon_size" android:layout_height="@dimen/large_icon_size" android:layout_marginLeft="@dimen/title_weather_icon_right_margin" android:scaleType="fitXY" />
+            <TextView android:layout_gravity="center" android:id="@id/title_weather_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextTitle" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

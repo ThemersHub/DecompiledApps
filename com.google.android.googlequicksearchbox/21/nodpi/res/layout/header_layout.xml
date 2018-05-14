@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/header_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/suggestions_and_srp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/header_main_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <android.support.v4.widget.NestedScrollView android:id="@id/search_suggestions_and_scrim_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/web_suggestion_list_top_margin">
+            <com.google.android.apps.gsa.search.shared.ui.RestrictedWidthLayout android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ViewStub android:id="@id/search_suggestions_container_stub" android:layout="@layout/header_search_suggestions_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.google.android.apps.gsa.search.shared.ui.RestrictedWidthLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </FrameLayout>
+    <ViewStub android:id="@id/header_background_stub" android:layout="@layout/header_background" android:inflatedId="@id/header_background" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/google_logo_header_stub" android:layout="@layout/google_logo_or_doodle" android:inflatedId="@id/google_logo_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/monet_corpus_bar_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:layout_gravity="center_horizontal" android:id="@id/top_nav_container_stub" android:layout="@layout/top_nav_parent_container" android:inflatedId="@id/top_nav_parent_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.gsa.search.shared.overlay.SearchOverlayLayout android:id="@id/search_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.gsa.search.shared.ui.ReverseDrawRestrictedLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/search_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.gsa.search.shared.overlay.OverlaySearchPlateContainer android:layout_gravity="center|top" android:id="@id/search_plate_container" android:clipChildren="@bool/clip_children_and_to_padding" android:clipToPadding="@bool/clip_children_and_to_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_gravity="center|top" android:id="@id/text_search_plate_stub" android:layout_width="fill_parent" android:layout_height="@dimen/text_search_plate_height" />
+                <include android:layout_gravity="center|top" android:id="@id/search_plate" layout="@layout/search_plate" />
+            </com.google.android.apps.gsa.search.shared.overlay.OverlaySearchPlateContainer>
+        </com.google.android.apps.gsa.search.shared.ui.ReverseDrawRestrictedLayout>
+    </com.google.android.apps.gsa.search.shared.overlay.SearchOverlayLayout>
+</FrameLayout>

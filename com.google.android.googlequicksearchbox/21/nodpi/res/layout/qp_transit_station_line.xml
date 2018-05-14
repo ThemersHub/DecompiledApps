@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/qp_transit_station_line_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.gsa.now.shared.ui.WebImageView android:id="@id/line_icon" android:visibility="gone" android:layout_width="@dimen/qp_small_icon_size" android:layout_height="@dimen/qp_small_icon_size" android:layout_marginRight="@dimen/qp_small_padding" android:scaleType="fitCenter" android:layout_marginEnd="@dimen/qp_small_padding" />
+        <TextView android:id="@id/color_box" android:visibility="gone" android:layout_width="@dimen/qp_transit_station_color_box_width" android:layout_height="@dimen/qp_transit_station_color_box_height" android:layout_marginRight="@dimen/qp_nano_padding" android:layout_marginEnd="@dimen/qp_nano_padding" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/name_box" android:paddingLeft="@dimen/qp_nano_padding" android:paddingRight="@dimen/qp_nano_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/qp_nano_padding" android:paddingEnd="@dimen/qp_nano_padding">
+            <TextView android:textColor="@color/qp_text_b1" android:ellipsize="end" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/qp_h5" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/line_alerts" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/departure_groups" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textColor="@color/qp_text_b3" android:ellipsize="end" android:id="@id/more_departure_groups" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_tabular_header_row_padding" android:maxLines="2" style="@style/qp_h6" />
+</LinearLayout>

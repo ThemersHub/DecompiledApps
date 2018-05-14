@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="#ffffffff" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/collection_detail_recycler_view" android:paddingTop="@dimen/collections_detail_recycler_view_top_padding_without_desc" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="4.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/collection_detail_header" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/collection_detail_image" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="@dimen/collections_detail_header_image_margin_top" android:layout_marginBottom="@dimen/collections_detail_header_image_margin" android:foreground="@drawable/collections_collection_image_outline_foreground" android:scaleType="centerCrop" android:importantForAccessibility="no" android:layout_marginStart="@dimen/collections_detail_header_image_margin" android:layout_marginEnd="@dimen/collections_detail_header_image_margin" />
+                <include android:id="@id/collection_detail_action_bar" layout="@layout/collections_action_bar" />
+                <LinearLayout android:orientation="vertical" android:id="@id/collection_detail_title_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/collection_detail_image" android:layout_toEndOf="@id/collection_detail_image">
+                    <TextView android:textSize="18.0sp" android:textColor="@color/collections_google_grey900" android:ellipsize="end" android:id="@id/collection_detail_title" android:clipToPadding="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_marginEnd="16.0dip" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/collections_google_grey500" android:ellipsize="end" android:id="@id/collection_detail_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+                    <TextView android:textSize="14.0sp" android:textStyle="italic" android:textColor="@color/collections_google_grey500" android:ellipsize="end" android:id="@id/collection_detail_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:maxLines="1" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/collections_empty_state" />
+        </LinearLayout>
+    </FrameLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

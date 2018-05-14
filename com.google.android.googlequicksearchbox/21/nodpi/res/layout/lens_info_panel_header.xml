@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.staticplugins.opa.eyes.client.onelens.LensInfoPanelHeader android:id="@id/panel_header" android:paddingTop="@dimen/lens_info_panel_shadow_blur_size" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="center|top" android:id="@id/panel_handle" android:background="@drawable/lens_info_panel_handle" android:layout_width="@dimen/lens_info_panel_handle_width" android:layout_height="@dimen/lens_info_panel_handle_height" android:layout_marginTop="8.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Space android:layout_width="@dimen/lens_info_panel_header_margin" android:layout_height="fill_parent" />
+        <ImageView android:layout_width="@dimen/lens_info_panel_logo_size" android:layout_height="@dimen/lens_info_panel_logo_size" android:layout_marginTop="@dimen/lens_info_panel_header_margin" android:layout_marginBottom="@dimen/lens_info_panel_header_margin" android:src="@drawable/googlesystem_google_lens_color_24" />
+        <Space android:layout_width="@dimen/lens_info_panel_logo_title_space_size" android:layout_height="fill_parent" />
+        <FrameLayout android:gravity="start|center" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lens_info_panel_header_margin" android:layout_marginBottom="@dimen/lens_info_panel_header_margin" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/lens_info_panel_title_text_size" android:textColor="@color/lens_info_panel_title_color" android:id="@id/header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/lens_info_panel_live_camera_title" android:fontFamily="google-sans" />
+            <ImageView android:id="@id/header_logo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/lens_info_panel_logo_size" android:src="@drawable/lens_header_logo" android:scaleType="fitStart" />
+        </FrameLayout>
+        <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/microphone_view_child_stub" android:layout_width="@dimen/lens_info_panel_mic_size" android:layout_height="@dimen/lens_info_panel_mic_size" />
+        <Space android:layout_width="@dimen/lens_info_panel_mic_right_margin" android:layout_height="fill_parent" />
+    </LinearLayout>
+</com.google.android.apps.gsa.staticplugins.opa.eyes.client.onelens.LensInfoPanelHeader>

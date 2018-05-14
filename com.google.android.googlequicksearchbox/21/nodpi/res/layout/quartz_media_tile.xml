@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/quartz_media_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="@drawable/media_tile_gradient_layer" android:scaleType="centerCrop" android:contentDescription="@string/quartz_media_image_description" />
+    <LinearLayout android:gravity="start|bottom|center" android:orientation="vertical" android:padding="@dimen/quartz_media_home_tile_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/quartz_media_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/quartz_media_provider_icon" android:visibility="gone" android:layout_width="@dimen/quartz_media_home_provider_icon_size" android:layout_height="@dimen/quartz_media_home_provider_icon_size" android:scaleType="centerInside" android:contentDescription="@string/quartz_media_image_description" android:layout_marginEnd="@dimen/quartz_media_provider_icon_margin" />
+            <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:id="@id/quartz_media_controls_text_artist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quartz_media_loading" style="@style/Quartz.Media.Home.Text" />
+            <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:id="@id/quartz_media_controls_text_dash" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quartz_media_controls_text_dash" style="@style/Quartz.Media.Home.Text" />
+            <com.google.android.apps.gsa.staticplugins.quartz.monet.shared.ui.baselinetextview.BaselineTextView android:id="@id/quartz_media_controls_text_song" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Quartz.Media.Home.Text" />
+        </LinearLayout>
+        <SeekBar android:id="@id/quartz_media_home_seek_bar" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/quartz_media_home_seekbar_height" android:layout_marginTop="@dimen/quartz_media_home_controls_padding" android:indeterminate="true" android:thumb="@null" android:progressTint="@android:color/white" android:progressBackgroundTint="@color/quartz_white_80p" android:indeterminateTint="@color/quantum_white_100" android:indeterminateTintMode="src_in" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="24.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="16.0dip">
+        <com.google.android.apps.gsa.plugins.podcastplayer.ThumbnailView android:id="@id/podcast_thumbnail" android:layout_width="@dimen/activity_header_with_homebase_thumbnail_size" android:layout_height="@dimen/activity_header_with_homebase_thumbnail_size" android:layout_marginLeft="12.0dip" android:layout_alignParentRight="true" android:layout_marginStart="12.0dip" android:layout_alignParentEnd="true" />
+        <RelativeLayout android:gravity="start|bottom|center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/podcast_thumbnail" android:layout_alignParentLeft="true" android:layout_toStartOf="@id/podcast_thumbnail" android:layout_alignParentStart="true">
+            <TextView android:ellipsize="end" android:id="@id/podcast_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="6" android:textDirection="locale" style="@style/podcast_show_title" />
+            <TextView android:ellipsize="end" android:id="@id/podcast_author" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="4" android:layout_below="@id/podcast_title" android:textDirection="locale" style="@style/podcast_show_subtitle" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View style="@style/horizontal_bar" />
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="56.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <Button android:id="@id/subscribe_disabled_button" style="@style/show_subscribe_disabled_button" />
+        <Button android:id="@id/subscribe_button" android:visibility="gone" style="@style/show_subscribe_button" />
+        <Button android:id="@id/unsubscribe_button" android:visibility="gone" android:drawableRight="@drawable/quantum_ic_done_googblue_18" style="@style/show_unsubscribe_button" />
+        <TextView android:gravity="center_vertical" android:id="@id/donate_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/donate_button" />
+    </RelativeLayout>
+    <View style="@style/horizontal_bar" />
+    <TextView android:ellipsize="end" android:id="@id/podcast_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="14.0dip" android:maxLines="@integer/podcast_description_default_lines" style="@style/podcast_description" />
+    <ImageView android:id="@id/podcast_description_more" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="36.0dip" android:src="@drawable/quantum_ic_expand_more_grey600_24" android:scaleType="center" android:contentDescription="@string/more_description" />
+    <View android:id="@id/podcast_description_separator" style="@style/horizontal_bar" />
+</LinearLayout>

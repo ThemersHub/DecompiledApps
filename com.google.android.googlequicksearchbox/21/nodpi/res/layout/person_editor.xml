@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/contact_pill" android:focusable="false" android:focusableInTouchMode="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="noHideDescendants"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/contact_pill_content" android:background="@drawable/person_argument_contact_pill" android:paddingRight="@dimen/unit" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/unit">
+        <ImageView android:id="@id/contact_image" android:duplicateParentState="true" android:layout_width="@dimen/modular_action_contact_image_size" android:layout_height="@dimen/modular_action_contact_image_size" android:scaleType="centerCrop" android:contentDescription="@string/a_contact" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="8.0dip">
+            <TextView android:ellipsize="end" android:id="@id/contact_name" android:layout_width="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="0.0dip" android:layout_marginBottom="0.0dip" android:singleLine="true" android:layout_marginStart="0.0dip" android:layout_marginEnd="0.0dip" style="@style/action_card_h2" />
+            <TextView android:id="@id/contact_value" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip" android:layout_marginBottom="2.0dip" android:singleLine="true" android:layout_marginStart="0.0dip" android:layout_marginEnd="0.0dip" style="@style/action_card_h3" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/contact_pill_click_catcher" android:background="@drawable/person_argument_contact_pill_catcher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/contact_pill_content" android:layout_alignTop="@id/contact_pill_content" android:layout_alignRight="@id/contact_pill_content" android:layout_alignBottom="@id/contact_pill_content" />
+</RelativeLayout>

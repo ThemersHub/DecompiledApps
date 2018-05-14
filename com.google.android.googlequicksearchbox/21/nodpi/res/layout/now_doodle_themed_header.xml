@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/header" android:layout_width="fill_parent" android:layout_height="@dimen/now_header_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/logo_and_doodle_container" android:tag="ve=20990" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/google_logo" android:tag="ve=53" android:background="@null" android:layout_width="fill_parent" android:layout_height="@dimen/now_header_google_logo_height_resized_small" android:layout_marginBottom="@dimen/now_header_google_logo_bottom_margin_resized_small" android:scaleType="centerInside" android:contentDescription="@string/common_google_logo" />
+        <FrameLayout android:id="@id/doodle_container" android:layout_width="fill_parent" android:layout_height="@dimen/now_header_doodle_layout_height_resized_small" />
+        <com.google.android.apps.gsa.search.shared.ui.RestrictedWidthLayout android:layout_gravity="bottom|center" android:id="@id/doodle_container_resized_wrapper" android:paddingLeft="@dimen/now_header_doodle_padding_resized" android:paddingRight="@dimen/now_header_doodle_padding_resized" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/doodle_container_resized" android:layout_width="fill_parent" android:layout_height="@dimen/now_header_doodle_layout_height_resized_small" />
+        </com.google.android.apps.gsa.search.shared.ui.RestrictedWidthLayout>
+    </FrameLayout>
+    <LinearLayout android:id="@id/now_title_bar" android:layout_width="fill_parent" android:layout_height="@dimen/now_header_hamburger_size" android:layout_marginLeft="@dimen/now_header_title_bar_margin_start" android:layout_marginTop="@dimen/now_header_title_bar_margin_top" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/now_header_title_bar_margin_start" android:layout_alignParentStart="true">
+        <RelativeLayout android:id="@id/now_header_hamburger_layout" android:padding="@dimen/now_header_hamburger_padding" android:layout_width="@dimen/now_header_hamburger_size" android:layout_height="@dimen/now_header_hamburger_size" android:scaleType="centerInside" android:contentDescription="@string/accessibility_drawer_menu_button">
+            <ImageView android:id="@id/now_header_hamburger" android:background="@drawable/qp_clickable_circle_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_menu_black_24" android:tint="@color/quantum_grey700" android:contentDescription="@string/accessibility_drawer_menu_button" />
+            <ImageView android:id="@id/now_header_update_burger_badge" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/update_burger_ic_badge" />
+            <ImageView android:id="@id/now_header_fixed_hamburger" android:background="@drawable/qp_clickable_circle_background" android:visibility="gone" android:layout_width="@dimen/now_header_hamburger_size" android:layout_height="@dimen/now_header_hamburger_size" android:src="@drawable/quantum_ic_menu_black_24" android:scaleType="centerInside" android:tint="@color/quantum_grey700" android:contentDescription="@string/accessibility_drawer_menu_button" />
+        </RelativeLayout>
+        <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/now_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/now_header_title_margin_bottom" android:text="@string/now_update_tab" android:maxLines="1" android:layout_marginStart="@dimen/now_header_title_margin_start" style="@style/now_header_title" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/search_widget_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/searchwidget_default_margin_left" android:layout_marginRight="@dimen/searchwidget_default_margin_right" android:layout_marginStart="@dimen/searchwidget_default_margin_left" android:layout_marginEnd="@dimen/searchwidget_default_margin_right"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_vertical" android:id="@id/search_widget_container_frame_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+        <include layout="@layout/topdeck" />
+        <FrameLayout android:id="@id/search_widget_border" android:background="@drawable/search_widget_border_2dp" android:padding="@dimen/searchbox_border_width" android:layout_width="fill_parent" android:layout_height="@dimen/searchwidget_searchbox_height">
+            <include layout="@layout/search_widget_plate" />
+        </FrameLayout>
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_card_module"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/gutter_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/qp_gutter_start_margin" android:layout_marginRight="@dimen/qp_gutter_end_margin" android:layout_marginStart="@dimen/qp_gutter_start_margin" android:layout_marginEnd="@dimen/qp_gutter_end_margin">
+        <com.google.android.apps.gsa.now.shared.ui.RecyclerViewStub android:id="@id/gutter_icon_stub" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.google.android.apps.gsa.staticplugins.nowcards.ui.MetadataLineView android:orientation="vertical" android:id="@id/content_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:id="@id/selector_trigger" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/card_action_button_height">
+            <TextView android:layout_gravity="center_vertical" android:id="@id/selector_value" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/qp_spinner" />
+        </FrameLayout>
+        <ProgressBar android:layout_gravity="top" android:id="@id/ttl_progress_bar" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="-8.0dip" android:indeterminate="true" style="?android:attr/progressBarStyleHorizontal" />
+    </LinearLayout>
+    <Space android:layout_width="@dimen/qp_column_padding" android:layout_height="fill_parent" />
+</LinearLayout>

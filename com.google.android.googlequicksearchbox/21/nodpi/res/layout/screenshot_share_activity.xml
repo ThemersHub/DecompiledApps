@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:tag="ve=18553" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background_image" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+    <View android:id="@id/shade" android:background="@color/screen_assist_search_scrim" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/scrim_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:alpha="0.0" />
+    <ImageView android:id="@id/foreground_image" android:background="@android:color/white" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_centerHorizontal="true" android:alpha="0.0" />
+    <com.google.android.apps.gsa.assist.CropScreenshotView android:id="@id/crop_screenshot_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="bottom" android:id="@id/crop_action_button_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/save_screenshot_button" android:background="@drawable/screenie_to_now_ripple" android:padding="@dimen/screen_assist_crop_screenshot_button_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_save_alt_white_36" android:layout_weight="1.0" android:contentDescription="@string/accessibility_save" />
+            <ImageButton android:id="@id/share_screenshot_button" android:background="@drawable/screenie_to_now_ripple" android:padding="@dimen/screen_assist_crop_screenshot_button_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_share_white_36" android:layout_weight="1.0" android:contentDescription="@string/accessibility_share" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

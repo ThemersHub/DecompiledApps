@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" android:layoutDirection="locale" style="@style/ResultContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/three_lines_result_container" android:paddingTop="@dimen/regular_layout_vertical_margin" android:paddingBottom="@dimen/regular_layout_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ipa_thumbnail_horizontal_margin" android:paddingEnd="@dimen/layout_end_margin">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/event_date_container" android:background="@drawable/event_result_left_date_container_background" android:layout_width="@dimen/event_result_left_date_container_size" android:layout_height="@dimen/event_result_left_date_container_size" android:layout_centerVertical="true">
+            <TextView android:layout_gravity="center" android:id="@id/event_date_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/event_result_left_date_text_margin" android:includeFontPadding="false" style="@style/EventDateDayText" />
+            <TextView android:layout_gravity="center" android:id="@id/event_date_month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/EventDateMonthText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/result_details_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/ipa_thumbnail_horizontal_margin" android:layout_toEndOf="@id/event_date_container">
+            <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/ipa_app_icon_in_snippet_margin" android:layout_toStartOf="@id/result_time_year" android:layout_alignParentStart="true">
+                    <TextView android:ellipsize="end" android:id="@id/result_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginEnd="@dimen/ipa_app_icon_in_snippet_margin" style="@style/PrimaryText" />
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/result_type_icon" android:visibility="gone" android:layout_width="@dimen/ipa_app_icon_in_snippet_size" android:layout_height="@dimen/ipa_app_icon_in_snippet_size" android:scaleType="centerInside" android:alpha="0.2" />
+                </LinearLayout>
+                <TextView android:id="@id/result_time_year" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" style="@style/TimestampText" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.google.android.apps.gsa.plugins.ipa.searchboxui.views.IpaImageView android:layout_gravity="center_vertical" android:id="@id/result_app_icon" android:visibility="gone" android:layout_width="@dimen/ipa_app_icon_in_snippet_size" android:layout_height="@dimen/ipa_app_icon_in_snippet_size" android:scaleType="centerInside" android:layout_marginEnd="@dimen/ipa_app_icon_in_snippet_margin" />
+                <TextView android:ellipsize="end" android:id="@id/result_second_line" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/SecondLineText" />
+            </LinearLayout>
+            <TextView android:ellipsize="end" android:id="@id/result_third_line" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/SnippetText" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

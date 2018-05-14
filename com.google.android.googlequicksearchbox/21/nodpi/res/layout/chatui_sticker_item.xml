@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/chatui_content" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/chatui_horizontal_margin" android:layout_marginTop="@dimen/chatui_item_gap_top" android:layout_marginRight="@dimen/chatui_horizontal_margin">
+        <include layout="@layout/chatui_logo_view" />
+        <com.google.android.apps.gsa.now.shared.ui.WebImageView android:id="@id/chatui_sticker" android:background="@android:color/transparent" android:layout_width="@dimen/chatui_image_bubble_height" android:layout_height="@dimen/chatui_image_bubble_width" android:layout_marginLeft="@dimen/chatui_google_bubble_left_margin" android:layout_toRightOf="@id/chatui_logo_container" />
+        <FrameLayout android:id="@id/chatui_loading_spinner_container" android:visibility="gone" android:layout_width="@dimen/chatui_image_bubble_height" android:layout_height="@dimen/chatui_image_bubble_width">
+            <com.google.android.libraries.material.progress.MaterialProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.GoogleLib.Progress.Circular.Indeterminate.Large" />
+        </FrameLayout>
+    </RelativeLayout>
+</FrameLayout>

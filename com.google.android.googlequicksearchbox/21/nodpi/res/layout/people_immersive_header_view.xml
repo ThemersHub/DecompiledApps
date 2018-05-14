@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/header_card_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/people_immersive_card_bottom_margin" style="@style/ResultContainer"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="end" android:id="@id/edit_icon" android:padding="@dimen/edit_icon_padding" android:layout_width="@dimen/edit_icon_size" android:layout_height="@dimen/edit_icon_size" android:src="@drawable/quantum_ic_edit_grey600_24" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+                <com.google.android.apps.gsa.plugins.ipa.searchboxui.views.IpaImageView android:id="@id/people_immersive_icon" android:layout_width="84.0dip" android:layout_height="84.0dip" android:scaleType="centerCrop" />
+                <TextView android:ellipsize="end" android:id="@id/people_immersive_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" style="@style/PeopleImmersiveAvatarName" />
+                <HorizontalScrollView android:id="@id/contact_app_chip_carousel" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:id="@id/contact_app_chip_container" android:paddingTop="@dimen/contact_app_chip_container_top_bottom_padding" android:paddingBottom="@dimen/contact_app_chip_container_top_bottom_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="8.0dip" />
+                </HorizontalScrollView>
+                <View android:id="@id/divider_between_contact_chip_and_search_on_web" style="@style/Divider" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/search_on_web_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip" android:paddingStart="24.0dip" android:paddingEnd="24.0dip">
+                    <ImageView android:id="@id/search_on_web_icon" android:src="@drawable/quantum_ic_search_grey600_24" style="@style/PeopleImmersiveSearchWebIcon" />
+                    <TextView android:id="@id/search_on_web_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PeopleImmersiveSearchWebLink" />
+                </LinearLayout>
+                <View android:id="@id/divider_between_search_on_web_and_contact_info" style="@style/Divider" />
+                <LinearLayout android:orientation="vertical" android:id="@id/profile_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" />
+                <View android:id="@id/padding_between_profile_and_card_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/padding_between_profile_and_card_bottom_height" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout android:gravity="center" android:layout_gravity="bottom" android:id="@id/more_less_footer" android:layout_width="fill_parent" android:layout_height="@dimen/more_less_footer_height">
+        <ImageView android:id="@id/show_more" android:src="@drawable/quantum_ic_expand_more_grey600_24" style="@style/ExpandIcon" />
+        <ImageView android:id="@id/show_less" android:src="@drawable/quantum_ic_expand_less_grey600_24" style="@style/ExpandIcon" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.gsa.assistant.settings.shared.DescriptionPreferenceCategory android:title="@string/assistant_settings_languages_header" android:key="assistantLanguageHeader">
+        <ListPreference android:persistent="false" android:key="assistantPrimaryLanguage" android:widgetLayout="@layout/preference_widget_next" android:dialogTitle="@string/assistant_settings_languages_dialog_title" />
+        <com.google.android.apps.gsa.assistant.settings.features.preferences.language.DynamicWidgetListPreference android:persistent="false" android:key="assistantSecondaryLanguage" android:dialogTitle="@string/assistant_settings_languages_dialog_title" />
+    </com.google.android.apps.gsa.assistant.settings.shared.DescriptionPreferenceCategory>
+    <com.google.android.apps.gsa.assistant.settings.features.preferences.language.ClickableDescriptionPreferenceCategory android:title="@string/assistant_settings_language_availability_text" android:key="assistantLanguageAvailability" app:allowDividerBelow="false" />
+</PreferenceScreen>

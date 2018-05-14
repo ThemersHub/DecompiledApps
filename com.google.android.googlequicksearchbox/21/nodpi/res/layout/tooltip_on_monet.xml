@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.shared.ui.TouchInterceptingFrameLayout android:id="@id/tooltip_root" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="@dimen/monet_ignore_layout" android:layout_height="@dimen/monet_ignore_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="end" android:orientation="vertical" android:id="@id/tooltip" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tooltip_top_offset">
+        <ImageView android:layout_gravity="end" android:id="@id/tooltip_arrow_top_end" android:layout_width="@dimen/tooltip_arrow_width" android:layout_height="@dimen/tooltip_arrow_width" android:src="@drawable/tooltip_arrow_up" android:layout_marginEnd="@dimen/tooltip_arrow_offset" android:elevation="@dimen/tooltip_elevation" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/tooltip_content" android:background="@drawable/tooltip_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="@dimen/tooltip_elevation">
+            <TextView android:textColor="@color/tooltip_text_color" android:gravity="center" android:id="@id/content_container" android:paddingTop="@dimen/tooltip_padding_horizontal" android:paddingBottom="@dimen/tooltip_padding_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/tooltip_padding_vertical" />
+            <ImageView android:layout_gravity="center" android:id="@id/button" android:layout_width="@dimen/tooltip_button_size" android:layout_height="@dimen/tooltip_button_size" android:layout_marginLeft="@dimen/tooltip_button_padding" android:layout_marginRight="@dimen/tooltip_button_padding" android:src="@drawable/quantum_ic_close_black_24" android:scaleType="fitCenter" android:tint="#ffffffff" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.apps.gsa.shared.ui.TouchInterceptingFrameLayout>

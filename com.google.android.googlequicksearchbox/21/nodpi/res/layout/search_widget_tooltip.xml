@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="bottom|center" android:id="@id/default_search_widget" android:background="@drawable/search_widget_shadow_2dp" android:layout_width="fill_parent" android:layout_height="@dimen/searchwidget_searchbox_height_with_shadow">
+        <include layout="@layout/search_widget_plate" />
+    </FrameLayout>
+    <FrameLayout android:gravity="center" android:layout_gravity="bottom" android:id="@id/tooltip_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/searchwidget_default_margin_left" android:layout_marginRight="@dimen/searchwidget_default_margin_right" android:layout_marginBottom="52.0dip" android:layout_marginStart="@dimen/searchwidget_default_margin_left" android:layout_marginEnd="@dimen/searchwidget_default_margin_right">
+        <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:id="@id/tooltip" android:background="@drawable/tooltip_rounded" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:gravity="start|center" android:layout_gravity="center" android:id="@id/tooltip_education_msg" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/customize_widget" android:layout_weight="1.0" style="@style/ToolTip" />
+            <ImageButton android:gravity="center" android:orientation="horizontal" android:id="@id/small_tooltip_dismiss_btn" android:background="@drawable/search_box_click" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="30.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_close_topdeck" android:scaleType="centerInside" android:contentDescription="@string/accessibility_tooltip_done_button" android:alpha="0.54" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="top" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/assistant_settings_payments_item_content" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <LinearLayout android:gravity="start|center" android:orientation="vertical" android:id="@id/assistant_settings_payments_radio_widget_frame" android:paddingLeft="?assistant_setting_payments_list_item_left_right_padding" android:layout_width="@dimen/assistant_setting_payments_item_icon_size" android:layout_height="fill_parent">
+                <RadioButton android:layout_gravity="start|center" android:id="@id/assistant_settings_payments_phone_authentication_item_radio_button" android:background="@null" android:focusable="false" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/assistant_setting_payments_list_item_radio_diff" />
+                <ImageView android:layout_gravity="start|center" android:id="@id/assistant_settings_payments_icon_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/assistant_setting_payments_list_item_padding" android:paddingBottom="@dimen/assistant_setting_payments_list_item_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/assistant_settings_payments_item_title" android:paddingRight="@dimen/assistant_setting_payments_list_item_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/assistant_setting_payments_text_size_medium" android:textColor="@color/quantum_black_text" android:ellipsize="marquee" android:id="@id/assistant_settings_payments_phone_authentication_item_title_text" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/assistant_setting_payments_text_size_medium" android:textColor="@color/assistant_setting_payments_error_status" android:ellipsize="marquee" android:id="@id/assistant_settings_payments_phone_authentication_item_status_text" android:visibility="gone" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="end" android:layout_gravity="end|center" android:orientation="vertical" android:id="@id/assistant_settings_payments_edit_widget_frame" android:paddingLeft="@dimen/assistant_setting_payments_list_item_padding_right" android:paddingRight="?assistant_setting_payments_list_item_left_right_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:layout_gravity="end|center" android:id="@id/assistant_settings_payments_menu_button" android:background="?android:selectableItemBackground" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_more_vert_black_24" android:contentDescription="@string/accessibility_menu_button" />
+            <Switch android:layout_gravity="end|center" android:id="@id/assistant_settings_payments_switch_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/assistant_settings_payments_item_divider" android:background="@color/assistant_setting_payments_divider" android:layout_width="fill_parent" android:layout_height="@dimen/assistant_setting_payments_divider" android:layout_marginLeft="@dimen/assistant_setting_payments_item_icon_size" android:layout_marginRight="?assistant_setting_payments_list_divider_right_padding" />
+</LinearLayout>

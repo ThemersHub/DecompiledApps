@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/default_search_widget" android:background="@drawable/search_widget_shadow_2dp" android:layout_width="fill_parent" android:layout_height="@dimen/searchwidget_searchbox_height_with_shadow"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/search_widget_background_protection" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/gradient_protection_2dp" android:scaleType="fitXY" />
+    <ImageView android:id="@id/search_widget_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/search_widget_bg_2dp" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/search_plate" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/search_widget_google_logo" android:background="@drawable/search_box_click_on_transparent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="center" android:contentDescription="@string/accessibility_google_search_button">
+            <ImageView android:gravity="center" android:id="@id/search_widget_super_g" android:layout_width="@dimen/searchwidget_super_g_width" android:layout_height="fill_parent" android:src="@drawable/super_g" android:scaleType="center" />
+        </FrameLayout>
+        <include layout="@layout/search_widget_text_box" />
+        <ImageButton android:gravity="center" android:orientation="horizontal" android:id="@id/search_widget_voice_btn" android:background="@drawable/search_box_click_on_transparent" android:layout_width="@dimen/searchwidget_mic_width" android:layout_height="fill_parent" android:src="@drawable/ic_mic" android:scaleType="center" android:contentDescription="@string/accessibility_voice_search_button" android:layoutDirection="locale" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/collections_list_action_bar" layout="@layout/collections_action_bar" />
+            <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <include layout="@layout/collections_empty_state" />
+        <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/collections_snackbar" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
