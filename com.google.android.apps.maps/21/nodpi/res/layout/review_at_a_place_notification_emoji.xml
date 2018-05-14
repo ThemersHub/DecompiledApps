@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/review_at_a_place_notification_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ReviewAtAPlaceNotificationTitle" />
+    <TextView android:id="@id/review_at_a_place_notification_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ReviewAtAPlaceNotificationSubtitle" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/review_at_a_place_notification_row_of_buttons" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="vertical" android:id="@id/review_at_a_place_notification_not_recommend_button" android:focusable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="4.0">
+            <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center" android:id="@id/review_at_a_place_notification_not_recommend_button_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/emoji_1f612" style="@style/ReviewAtAPlaceNotificationButtonImage" />
+            </FrameLayout>
+            <TextView android:layout_gravity="center" android:id="@id/review_at_a_place_notification_not_recommend_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/REVIEW_AT_A_PLACE_NOTIFICATION_RECOMMEND_NOT_RECOMMEND_BUTTON" style="@style/ReviewAtAPlaceNotificationButtonText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/review_at_a_place_notification_recommend_button" android:paddingLeft="10.0dip" android:focusable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="4.0">
+            <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center" android:id="@id/review_at_a_place_notification_recommend_button_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/emoji_1f60d" style="@style/ReviewAtAPlaceNotificationButtonImage" />
+            </FrameLayout>
+            <TextView android:layout_gravity="center" android:id="@id/review_at_a_place_notification_recommend_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/REVIEW_AT_A_PLACE_NOTIFICATION_RECOMMEND_RECOMMEND_BUTTON" style="@style/ReviewAtAPlaceNotificationButtonText" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:gravity="center_horizontal" android:id="@id/review_at_a_place_notification_instructions_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ReviewAtAPlaceNotificationInstructionsLine" />
+    <LinearLayout android:id="@id/review_at_a_place_notification_bottom_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="8.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</LinearLayout>

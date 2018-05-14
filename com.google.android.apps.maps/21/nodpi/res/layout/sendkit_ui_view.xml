@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/sendkit_ui_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/sendkit_ui_contacts_list_ghost" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sendkit_ui_default_vertical_padding">
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/sendkit_ui_content_elevation" />
+        <include layout="@layout/sendkit_ui_contact_loading_row" />
+        <include layout="@layout/sendkit_ui_contact_loading_row" />
+        <include layout="@layout/sendkit_ui_contact_loading_row" />
+        <include layout="@layout/sendkit_ui_contact_loading_row" />
+        <include layout="@layout/sendkit_ui_contact_loading_row" />
+        <include layout="@layout/sendkit_ui_contact_loading_row" />
+        <include layout="@layout/sendkit_ui_contact_loading_row" />
+        <include layout="@layout/sendkit_ui_contact_loading_row" />
+    </LinearLayout>
+    <com.google.android.libraries.social.sendkit.ui.ContactListView android:id="@id/contacts_list" android:visibility="gone" android:scrollbars="none" android:animationCache="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollingCache="false" android:groupIndicator="@null" android:divider="@null" android:dividerHeight="0.0dip" />
+    <RelativeLayout android:id="@id/sendkit_ui_contacts_list_mask" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/sendkit_ui_contacts_list_autocomplete_mask" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.libraries.social.sendkit.ui.autocomplete.AutocompleteView android:id="@id/auto_complete_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/sendkit_ui_ghost_face_rows" android:paddingTop="@dimen/sendkit_ui_face_row_padding" android:paddingBottom="@dimen/sendkit_ui_face_row_padding" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/auto_complete_view" />
+    <LinearLayout android:orientation="vertical" android:id="@id/sendkit_ui_face_rows" android:paddingTop="@dimen/sendkit_ui_face_row_padding" android:paddingBottom="@dimen/sendkit_ui_face_row_padding" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/auto_complete_view" />
+</RelativeLayout>

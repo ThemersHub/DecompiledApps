@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" flag="TRANSIT_TRIP_NOTIFICATION"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/icon" android:layout_width="@dimen/notification_large_icon_height" android:layout_height="@dimen/notification_large_icon_height" android:scaleType="center" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/notification_content_margin_top" android:layout_weight="1.0">
+            <include layout="@layout/transit_guidance_content" />
+        </LinearLayout>
+        <include layout="@layout/transit_guidance_next_previous" />
+    </LinearLayout>
+    <include layout="@layout/transit_guidance_actions" />
+</LinearLayout>

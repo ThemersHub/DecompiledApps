@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+        <TextView android:id="@id/bbb_add_phone_heading" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/gdi_add_phone_number" style="@style/GDI.Dialog.BbbTitle" />
+        <TextView android:id="@id/bbb_add_phone_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GDI.Dialog.BbbSubtitle" />
+        <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/bbb_enter_phone_progress_spinner" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip" android:indeterminate="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/bbb_enter_phone_content_wrapper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="false">
+            <TextView android:gravity="bottom|center|left" android:id="@id/bbb_phone_number_field_desc" android:layout_width="fill_parent" android:layout_height="24.0dip" android:text="@string/gdi_phone_entry_field_label" style="@style/GDI.Dialog.BbbInputLabel" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/bbb_enter_phone_number_holder" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/gdi_dialog_margin" android:layout_marginTop="0.0dip" style="@style/GDI.Dialog.MarginedLayout">
+                <EditText android:theme="@style/GDI.Dialog.BbbEditText" android:textSize="@dimen/gdi_bbb_input_text_size" android:id="@id/bbb_country_code_edit_text" android:paddingTop="6.0dip" android:paddingBottom="8.0dip" android:layout_width="64.0dip" android:layout_height="fill_parent" android:minEms="2" android:maxLength="4" android:inputType="number" android:imeOptions="flagNoExtractUi" android:textAlignment="textEnd" />
+                <EditText android:theme="@style/GDI.Dialog.BbbEditText" android:textSize="@dimen/gdi_bbb_input_text_size" android:id="@id/bbb_phone_number_edit_text" android:paddingLeft="4.0dip" android:paddingTop="6.0dip" android:paddingRight="4.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:hint="@string/gdi_bbb_phone_number_hint" android:minEms="6" android:maxLength="30" android:layout_weight="1.0" android:inputType="number" android:imeOptions="flagNoExtractUi">
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+            <TextView android:textSize="12.0sp" android:id="@id/bbb_phone_number_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/gdi_invalid_number_error" style="@style/GDI.Dialog.BbbErrorText" />
+            <TextView android:textColor="@color/quantum_grey600" android:id="@id/bbb_enter_phone_consent_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="8.0dip" android:text="@string/gdi_add_phone_number_disclaimer" style="@style/GDI.Dialog.BbbFinePrint" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GDI.Dialog.BbbButtonHolder">
+                <Button android:id="@id/bbb_enter_phone_back_button" android:tag="ve=37021;track:click" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="@string/gdi_back" style="@style/GDI.Dialog.BbbDialogButton" />
+                <Button android:id="@id/bbb_enter_phone_continue_button" android:tag="ve=37021;track:click" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gdi_send" style="@style/GDI.Dialog.BbbDialogButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

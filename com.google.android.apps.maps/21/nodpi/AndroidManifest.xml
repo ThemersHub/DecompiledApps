@@ -1,0 +1,1678 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:sharedUserId="com.google.android.apps.maps" package="com.google.android.apps.maps" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.google.android.apps.maps.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.apps.maps.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="com.google.android.gms.permission.CAR_SPEED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA"/>
+    <uses-permission-sdk-23 android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <permission android:name="com.google.android.apps.maps.permission.PREFETCH" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.apps.maps.permission.PREFETCH"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission-sdk-23 android:name="android.permission.BLUETOOTH"/>
+    <uses-permission-sdk-23 android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+    <uses-permission-sdk-23 android:name="android.permission.CALL_PHONE"/>
+    <uses-permission-sdk-23 android:name="android.permission.SEND_SMS"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <application android:allowBackup="true" android:backupAgent="com.google.android.apps.gmm.backup.GmmPersistentBackupAgentHelper" android:fullBackupOnly="false" android:hardwareAccelerated="true" android:icon="@mipmap/adaptiveproduct_maps" android:label="@LEMON_transformed_from_string/MAPS_APP_NAME" android:largeHeap="true" android:name="com.google.android.apps.gmm.base.app.GoogleMapsApplication" android:restoreAnyVersion="true" android:roundIcon="@mipmap/ic_round_launcher_2016" android:supportsRtl="true" android:theme="@style/GmmAppTheme" android:usesCleartextTraffic="true" android:vmSafeMode="false">
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIPs3BaQfy5Tf-MpSUTIGwUD0sg0TJROQ_khXebw"/>
+        <meta-data android:name="com.google.android.wearable.beta.app" android:resource="@xml/wearable_description"/>
+        <meta-data android:name="com.google.android.gms.car.application" android:resource="@xml/automotive_description"/>
+        <meta-data android:name="com.google.location.beacon.ENV" android:value="PRODUCTION"/>
+        <meta-data android:name="com.google.location.beacon.API_KEY" android:value="AIzaSyAbPUTxeDTnaihCKmLXCMKrrUT3HNLQW6w"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAbPUTxeDTnaihCKmLXCMKrrUT3HNLQW6w"/>
+        <meta-data android:name="com.google.android.apps.gmm.map.internal.store.resource.GmmGlideModule" android:value="GlideModule"/>
+        <meta-data android:name="firebase_analytics_collection_enabled" android:value="false"/>
+        <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true"/>
+        <meta-data android:name="android.max_aspect" android:value="2.4"/>
+        <activity android:name="com.google.android.apps.gmm.taxi.androidpay.BraintreeActivity" android:screenOrientation="behind" android:theme="@style/GmmTheme.Transparent"/>
+        <activity android:exported="false" android:name="com.google.android.apps.gmm.taxi.auth.deepauth.GdiCallbackActivity" android:theme="@style/GmmTheme.Transparent"/>
+        <activity android:launchMode="singleInstance" android:name="net.openid.appauth.RedirectUriReceiverActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:pathPrefix="/oauth2redirect" android:scheme="google.maps.taxi"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="oauth2redirect" android:scheme="googlemapstaxi"/>
+            </intent-filter>
+        </activity>
+        <activity android:alwaysRetainTaskState="true" android:configChanges="fontScale|mcc|mnc|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:launchMode="singleTask" android:name="com.google.android.maps.MapsActivity" android:resizeableActivity="true" android:screenOrientation="user" android:supportsPictureInPicture="true" android:theme="@style/GmmTheme.SplashScreen">
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.APP_MAPS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:label="@LEMON_transformed_from_string/MAPS_APP_NAME">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="peterparker"/>
+            </intent-filter>
+            <intent-filter android:label="@LEMON_transformed_from_string/MAPS_APP_NAME">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="geo.replay"/>
+            </intent-filter>
+            <intent-filter android:label="@LEMON_transformed_from_string/MAPS_APP_NAME">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="google.navigation"/>
+            </intent-filter>
+            <intent-filter android:label="@LEMON_transformed_from_string/MAPS_APP_NAME">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="geo"/>
+            </intent-filter>
+            <intent-filter android:label="@LEMON_transformed_from_string/MAPS_APP_NAME">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="google.maps"/>
+            </intent-filter>
+            <intent-filter android:label="@LEMON_transformed_from_string/UGC_SHARE_TO_GMM_INTENT_TITLE">
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/vnd.google.panorama360+jpg"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="gmm-settings" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter FLAG="AAP_DEBUG_INTENT">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="gmm-notification.google.com" android:path="/aap" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="addpayment" android:scheme="googlemapstaxi"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:path="/"/>
+                <data android:pathPrefix="/locationhistory"/>
+                <data android:pathPrefix="/maps"/>
+                <data android:pathPrefix="/maps/me"/>
+                <data android:pathPrefix="/localguides/signup"/>
+                <data android:host="ditu.google.cn"/>
+                <data android:host="ditu.google.com"/>
+                <data android:host="local.google.com"/>
+                <data android:host="maps.google.ad"/>
+                <data android:host="maps.google.ae"/>
+                <data android:host="maps.google.as"/>
+                <data android:host="maps.google.at"/>
+                <data android:host="maps.google.ba"/>
+                <data android:host="maps.google.be"/>
+                <data android:host="maps.google.bf"/>
+                <data android:host="maps.google.bg"/>
+                <data android:host="maps.google.bi"/>
+                <data android:host="maps.google.bj"/>
+                <data android:host="maps.google.bs"/>
+                <data android:host="maps.google.bt"/>
+                <data android:host="maps.google.by"/>
+                <data android:host="maps.google.ca"/>
+                <data android:host="maps.google.cat"/>
+                <data android:host="maps.google.cd"/>
+                <data android:host="maps.google.cf"/>
+                <data android:host="maps.google.cg"/>
+                <data android:host="maps.google.ch"/>
+                <data android:host="maps.google.ci"/>
+                <data android:host="maps.google.cl"/>
+                <data android:host="maps.google.cm"/>
+                <data android:host="maps.google.cn"/>
+                <data android:host="maps.google.co.ao"/>
+                <data android:host="maps.google.co.bw"/>
+                <data android:host="maps.google.co.ck"/>
+                <data android:host="maps.google.co.cr"/>
+                <data android:host="maps.google.co.id"/>
+                <data android:host="maps.google.co.il"/>
+                <data android:host="maps.google.co.in"/>
+                <data android:host="maps.google.co.jp"/>
+                <data android:host="maps.google.co.ke"/>
+                <data android:host="maps.google.co.kr"/>
+                <data android:host="maps.google.co.ls"/>
+                <data android:host="maps.google.co.ma"/>
+                <data android:host="maps.google.co.mz"/>
+                <data android:host="maps.google.co.nz"/>
+                <data android:host="maps.google.co.th"/>
+                <data android:host="maps.google.co.tz"/>
+                <data android:host="maps.google.co.ug"/>
+                <data android:host="maps.google.co.uk"/>
+                <data android:host="maps.google.co.ve"/>
+                <data android:host="maps.google.co.vi"/>
+                <data android:host="maps.google.co.za"/>
+                <data android:host="maps.google.co.zm"/>
+                <data android:host="maps.google.co.zw"/>
+                <data android:host="maps.google.com"/>
+                <data android:host="maps.google.com.ag"/>
+                <data android:host="maps.google.com.ai"/>
+                <data android:host="maps.google.com.ar"/>
+                <data android:host="maps.google.com.au"/>
+                <data android:host="maps.google.com.bd"/>
+                <data android:host="maps.google.com.bh"/>
+                <data android:host="maps.google.com.bn"/>
+                <data android:host="maps.google.com.bo"/>
+                <data android:host="maps.google.com.br"/>
+                <data android:host="maps.google.com.bz"/>
+                <data android:host="maps.google.com.co"/>
+                <data android:host="maps.google.com.cu"/>
+                <data android:host="maps.google.com.do"/>
+                <data android:host="maps.google.com.ec"/>
+                <data android:host="maps.google.com.eg"/>
+                <data android:host="maps.google.com.et"/>
+                <data android:host="maps.google.com.fj"/>
+                <data android:host="maps.google.com.gh"/>
+                <data android:host="maps.google.com.gi"/>
+                <data android:host="maps.google.com.gt"/>
+                <data android:host="maps.google.com.hk"/>
+                <data android:host="maps.google.com.iq"/>
+                <data android:host="maps.google.com.jm"/>
+                <data android:host="maps.google.com.kh"/>
+                <data android:host="maps.google.com.kw"/>
+                <data android:host="maps.google.com.lb"/>
+                <data android:host="maps.google.com.ly"/>
+                <data android:host="maps.google.com.mm"/>
+                <data android:host="maps.google.com.mt"/>
+                <data android:host="maps.google.com.mx"/>
+                <data android:host="maps.google.com.my"/>
+                <data android:host="maps.google.com.na"/>
+                <data android:host="maps.google.com.ng"/>
+                <data android:host="maps.google.com.ni"/>
+                <data android:host="maps.google.com.np"/>
+                <data android:host="maps.google.com.om"/>
+                <data android:host="maps.google.com.pa"/>
+                <data android:host="maps.google.com.pe"/>
+                <data android:host="maps.google.com.pg"/>
+                <data android:host="maps.google.com.ph"/>
+                <data android:host="maps.google.com.pr"/>
+                <data android:host="maps.google.com.py"/>
+                <data android:host="maps.google.com.qa"/>
+                <data android:host="maps.google.com.sa"/>
+                <data android:host="maps.google.com.sb"/>
+                <data android:host="maps.google.com.sg"/>
+                <data android:host="maps.google.com.sl"/>
+                <data android:host="maps.google.com.sv"/>
+                <data android:host="maps.google.com.tr"/>
+                <data android:host="maps.google.com.tw"/>
+                <data android:host="maps.google.com.ua"/>
+                <data android:host="maps.google.com.uy"/>
+                <data android:host="maps.google.com.vc"/>
+                <data android:host="maps.google.cv"/>
+                <data android:host="maps.google.cz"/>
+                <data android:host="maps.google.de"/>
+                <data android:host="maps.google.dj"/>
+                <data android:host="maps.google.dk"/>
+                <data android:host="maps.google.dm"/>
+                <data android:host="maps.google.dz"/>
+                <data android:host="maps.google.ee"/>
+                <data android:host="maps.google.es"/>
+                <data android:host="maps.google.fi"/>
+                <data android:host="maps.google.fm"/>
+                <data android:host="maps.google.fr"/>
+                <data android:host="maps.google.ga"/>
+                <data android:host="maps.google.ge"/>
+                <data android:host="maps.google.gg"/>
+                <data android:host="maps.google.gl"/>
+                <data android:host="maps.google.gm"/>
+                <data android:host="maps.google.gp"/>
+                <data android:host="maps.google.gr"/>
+                <data android:host="maps.google.gy"/>
+                <data android:host="maps.google.hk"/>
+                <data android:host="maps.google.hn"/>
+                <data android:host="maps.google.hr"/>
+                <data android:host="maps.google.ht"/>
+                <data android:host="maps.google.hu"/>
+                <data android:host="maps.google.ie"/>
+                <data android:host="maps.google.im"/>
+                <data android:host="maps.google.iq"/>
+                <data android:host="maps.google.is"/>
+                <data android:host="maps.google.it"/>
+                <data android:host="maps.google.it.ao"/>
+                <data android:host="maps.google.je"/>
+                <data android:host="maps.google.jo"/>
+                <data android:host="maps.google.jp"/>
+                <data android:host="maps.google.kg"/>
+                <data android:host="maps.google.ki"/>
+                <data android:host="maps.google.kz"/>
+                <data android:host="maps.google.la"/>
+                <data android:host="maps.google.li"/>
+                <data android:host="maps.google.lk"/>
+                <data android:host="maps.google.lt"/>
+                <data android:host="maps.google.lu"/>
+                <data android:host="maps.google.lv"/>
+                <data android:host="maps.google.mg"/>
+                <data android:host="maps.google.mk"/>
+                <data android:host="maps.google.ml"/>
+                <data android:host="maps.google.mn"/>
+                <data android:host="maps.google.ms"/>
+                <data android:host="maps.google.mu"/>
+                <data android:host="maps.google.mv"/>
+                <data android:host="maps.google.mw"/>
+                <data android:host="maps.google.ne"/>
+                <data android:host="maps.google.nf"/>
+                <data android:host="maps.google.ng"/>
+                <data android:host="maps.google.nl"/>
+                <data android:host="maps.google.no"/>
+                <data android:host="maps.google.nr"/>
+                <data android:host="maps.google.nu"/>
+                <data android:host="maps.google.pl"/>
+                <data android:host="maps.google.pn"/>
+                <data android:host="maps.google.pt"/>
+                <data android:host="maps.google.ro"/>
+                <data android:host="maps.google.rs"/>
+                <data android:host="maps.google.ru"/>
+                <data android:host="maps.google.rw"/>
+                <data android:host="maps.google.sc"/>
+                <data android:host="maps.google.se"/>
+                <data android:host="maps.google.sh"/>
+                <data android:host="maps.google.si"/>
+                <data android:host="maps.google.sk"/>
+                <data android:host="maps.google.sm"/>
+                <data android:host="maps.google.sn"/>
+                <data android:host="maps.google.so"/>
+                <data android:host="maps.google.st"/>
+                <data android:host="maps.google.td"/>
+                <data android:host="maps.google.tg"/>
+                <data android:host="maps.google.tk"/>
+                <data android:host="maps.google.tl"/>
+                <data android:host="maps.google.tn"/>
+                <data android:host="maps.google.to"/>
+                <data android:host="maps.google.tt"/>
+                <data android:host="maps.google.vg"/>
+                <data android:host="maps.google.vu"/>
+                <data android:host="maps.google.ws"/>
+                <data android:host="mapy.google.pl"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="mapsengine.google.com" android:pathPrefix="/map/viewer"/>
+                <data android:host="mapsengine.google.com" android:pathPrefix="/map/u/.*/viewer"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:path="/"/>
+                <data android:host="ditu.google.cn"/>
+                <data android:host="ditu.google.com"/>
+                <data android:host="local.google.com"/>
+                <data android:host="maps.google.ad"/>
+                <data android:host="maps.google.ae"/>
+                <data android:host="maps.google.as"/>
+                <data android:host="maps.google.at"/>
+                <data android:host="maps.google.ba"/>
+                <data android:host="maps.google.be"/>
+                <data android:host="maps.google.bf"/>
+                <data android:host="maps.google.bg"/>
+                <data android:host="maps.google.bi"/>
+                <data android:host="maps.google.bj"/>
+                <data android:host="maps.google.bs"/>
+                <data android:host="maps.google.bt"/>
+                <data android:host="maps.google.by"/>
+                <data android:host="maps.google.ca"/>
+                <data android:host="maps.google.cat"/>
+                <data android:host="maps.google.cd"/>
+                <data android:host="maps.google.cf"/>
+                <data android:host="maps.google.cg"/>
+                <data android:host="maps.google.ch"/>
+                <data android:host="maps.google.ci"/>
+                <data android:host="maps.google.cl"/>
+                <data android:host="maps.google.cm"/>
+                <data android:host="maps.google.cn"/>
+                <data android:host="maps.google.co.ao"/>
+                <data android:host="maps.google.co.bw"/>
+                <data android:host="maps.google.co.ck"/>
+                <data android:host="maps.google.co.cr"/>
+                <data android:host="maps.google.co.id"/>
+                <data android:host="maps.google.co.il"/>
+                <data android:host="maps.google.co.in"/>
+                <data android:host="maps.google.co.jp"/>
+                <data android:host="maps.google.co.ke"/>
+                <data android:host="maps.google.co.kr"/>
+                <data android:host="maps.google.co.ls"/>
+                <data android:host="maps.google.co.ma"/>
+                <data android:host="maps.google.co.mz"/>
+                <data android:host="maps.google.co.nz"/>
+                <data android:host="maps.google.co.th"/>
+                <data android:host="maps.google.co.tz"/>
+                <data android:host="maps.google.co.ug"/>
+                <data android:host="maps.google.co.uk"/>
+                <data android:host="maps.google.co.ve"/>
+                <data android:host="maps.google.co.vi"/>
+                <data android:host="maps.google.co.za"/>
+                <data android:host="maps.google.co.zm"/>
+                <data android:host="maps.google.co.zw"/>
+                <data android:host="maps.google.com"/>
+                <data android:host="maps.google.com.ag"/>
+                <data android:host="maps.google.com.ai"/>
+                <data android:host="maps.google.com.ar"/>
+                <data android:host="maps.google.com.au"/>
+                <data android:host="maps.google.com.bd"/>
+                <data android:host="maps.google.com.bh"/>
+                <data android:host="maps.google.com.bn"/>
+                <data android:host="maps.google.com.bo"/>
+                <data android:host="maps.google.com.br"/>
+                <data android:host="maps.google.com.bz"/>
+                <data android:host="maps.google.com.co"/>
+                <data android:host="maps.google.com.cu"/>
+                <data android:host="maps.google.com.do"/>
+                <data android:host="maps.google.com.ec"/>
+                <data android:host="maps.google.com.eg"/>
+                <data android:host="maps.google.com.et"/>
+                <data android:host="maps.google.com.fj"/>
+                <data android:host="maps.google.com.gh"/>
+                <data android:host="maps.google.com.gi"/>
+                <data android:host="maps.google.com.gt"/>
+                <data android:host="maps.google.com.hk"/>
+                <data android:host="maps.google.com.iq"/>
+                <data android:host="maps.google.com.jm"/>
+                <data android:host="maps.google.com.kh"/>
+                <data android:host="maps.google.com.kw"/>
+                <data android:host="maps.google.com.lb"/>
+                <data android:host="maps.google.com.ly"/>
+                <data android:host="maps.google.com.mm"/>
+                <data android:host="maps.google.com.mt"/>
+                <data android:host="maps.google.com.mx"/>
+                <data android:host="maps.google.com.my"/>
+                <data android:host="maps.google.com.na"/>
+                <data android:host="maps.google.com.ng"/>
+                <data android:host="maps.google.com.ni"/>
+                <data android:host="maps.google.com.np"/>
+                <data android:host="maps.google.com.om"/>
+                <data android:host="maps.google.com.pa"/>
+                <data android:host="maps.google.com.pe"/>
+                <data android:host="maps.google.com.pg"/>
+                <data android:host="maps.google.com.ph"/>
+                <data android:host="maps.google.com.pr"/>
+                <data android:host="maps.google.com.py"/>
+                <data android:host="maps.google.com.qa"/>
+                <data android:host="maps.google.com.sa"/>
+                <data android:host="maps.google.com.sb"/>
+                <data android:host="maps.google.com.sg"/>
+                <data android:host="maps.google.com.sl"/>
+                <data android:host="maps.google.com.sv"/>
+                <data android:host="maps.google.com.tr"/>
+                <data android:host="maps.google.com.tw"/>
+                <data android:host="maps.google.com.ua"/>
+                <data android:host="maps.google.com.uy"/>
+                <data android:host="maps.google.com.vc"/>
+                <data android:host="maps.google.cv"/>
+                <data android:host="maps.google.cz"/>
+                <data android:host="maps.google.de"/>
+                <data android:host="maps.google.dj"/>
+                <data android:host="maps.google.dk"/>
+                <data android:host="maps.google.dm"/>
+                <data android:host="maps.google.dz"/>
+                <data android:host="maps.google.ee"/>
+                <data android:host="maps.google.es"/>
+                <data android:host="maps.google.fi"/>
+                <data android:host="maps.google.fm"/>
+                <data android:host="maps.google.fr"/>
+                <data android:host="maps.google.ga"/>
+                <data android:host="maps.google.ge"/>
+                <data android:host="maps.google.gg"/>
+                <data android:host="maps.google.gl"/>
+                <data android:host="maps.google.gm"/>
+                <data android:host="maps.google.gp"/>
+                <data android:host="maps.google.gr"/>
+                <data android:host="maps.google.gy"/>
+                <data android:host="maps.google.hk"/>
+                <data android:host="maps.google.hn"/>
+                <data android:host="maps.google.hr"/>
+                <data android:host="maps.google.ht"/>
+                <data android:host="maps.google.hu"/>
+                <data android:host="maps.google.ie"/>
+                <data android:host="maps.google.im"/>
+                <data android:host="maps.google.iq"/>
+                <data android:host="maps.google.is"/>
+                <data android:host="maps.google.it"/>
+                <data android:host="maps.google.it.ao"/>
+                <data android:host="maps.google.je"/>
+                <data android:host="maps.google.jo"/>
+                <data android:host="maps.google.jp"/>
+                <data android:host="maps.google.kg"/>
+                <data android:host="maps.google.ki"/>
+                <data android:host="maps.google.kz"/>
+                <data android:host="maps.google.la"/>
+                <data android:host="maps.google.li"/>
+                <data android:host="maps.google.lk"/>
+                <data android:host="maps.google.lt"/>
+                <data android:host="maps.google.lu"/>
+                <data android:host="maps.google.lv"/>
+                <data android:host="maps.google.mg"/>
+                <data android:host="maps.google.mk"/>
+                <data android:host="maps.google.ml"/>
+                <data android:host="maps.google.mn"/>
+                <data android:host="maps.google.ms"/>
+                <data android:host="maps.google.mu"/>
+                <data android:host="maps.google.mv"/>
+                <data android:host="maps.google.mw"/>
+                <data android:host="maps.google.ne"/>
+                <data android:host="maps.google.nf"/>
+                <data android:host="maps.google.ng"/>
+                <data android:host="maps.google.nl"/>
+                <data android:host="maps.google.no"/>
+                <data android:host="maps.google.nr"/>
+                <data android:host="maps.google.nu"/>
+                <data android:host="maps.google.pl"/>
+                <data android:host="maps.google.pn"/>
+                <data android:host="maps.google.pt"/>
+                <data android:host="maps.google.ro"/>
+                <data android:host="maps.google.rs"/>
+                <data android:host="maps.google.ru"/>
+                <data android:host="maps.google.rw"/>
+                <data android:host="maps.google.sc"/>
+                <data android:host="maps.google.se"/>
+                <data android:host="maps.google.sh"/>
+                <data android:host="maps.google.si"/>
+                <data android:host="maps.google.sk"/>
+                <data android:host="maps.google.sm"/>
+                <data android:host="maps.google.sn"/>
+                <data android:host="maps.google.so"/>
+                <data android:host="maps.google.st"/>
+                <data android:host="maps.google.td"/>
+                <data android:host="maps.google.tg"/>
+                <data android:host="maps.google.tk"/>
+                <data android:host="maps.google.tl"/>
+                <data android:host="maps.google.tn"/>
+                <data android:host="maps.google.to"/>
+                <data android:host="maps.google.tt"/>
+                <data android:host="maps.google.vg"/>
+                <data android:host="maps.google.vu"/>
+                <data android:host="maps.google.ws"/>
+                <data android:host="mapy.google.pl"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:path="/maps"/>
+                <data android:path="/maps/preview"/>
+                <data android:pathPrefix="/locationhistory"/>
+                <data android:pathPrefix="/maps/timeline"/>
+                <data android:pathPrefix="/maps/contrib"/>
+                <data android:pathPrefix="/local/guides/signup"/>
+                <data android:pathPrefix="/maps/@"/>
+                <data android:pathPrefix="/maps/place/"/>
+                <data android:pathPrefix="/maps/search/"/>
+                <data android:pathPrefix="/maps/dir/"/>
+                <data android:pathPrefix="/maps/offline"/>
+                <data android:pathPrefix="/maps/placelists/all"/>
+                <data android:pathPrefix="/maps/placelists/list/"/>
+                <data android:pathPrefix="/maps/preview/@"/>
+                <data android:pathPrefix="/maps/preview/place/"/>
+                <data android:pathPrefix="/maps/preview/search/"/>
+                <data android:pathPrefix="/maps/preview/dir/"/>
+                <data android:pathPrefix="/maps/d/viewer"/>
+                <data android:pathPattern="/maps/d/u/.*/viewer"/>
+                <data android:pathPrefix="/maps/me"/>
+                <data android:host="www.google.ad"/>
+                <data android:host="www.google.ae"/>
+                <data android:host="www.google.as"/>
+                <data android:host="www.google.at"/>
+                <data android:host="www.google.ba"/>
+                <data android:host="www.google.be"/>
+                <data android:host="www.google.bf"/>
+                <data android:host="www.google.bg"/>
+                <data android:host="www.google.bi"/>
+                <data android:host="www.google.bj"/>
+                <data android:host="www.google.bs"/>
+                <data android:host="www.google.bt"/>
+                <data android:host="www.google.by"/>
+                <data android:host="www.google.ca"/>
+                <data android:host="www.google.cat"/>
+                <data android:host="www.google.cd"/>
+                <data android:host="www.google.cf"/>
+                <data android:host="www.google.cg"/>
+                <data android:host="www.google.ch"/>
+                <data android:host="www.google.ci"/>
+                <data android:host="www.google.cl"/>
+                <data android:host="www.google.cm"/>
+                <data android:host="www.google.cn"/>
+                <data android:host="www.google.co.ao"/>
+                <data android:host="www.google.co.bw"/>
+                <data android:host="www.google.co.ck"/>
+                <data android:host="www.google.co.cr"/>
+                <data android:host="www.google.co.id"/>
+                <data android:host="www.google.co.il"/>
+                <data android:host="www.google.co.in"/>
+                <data android:host="www.google.co.jp"/>
+                <data android:host="www.google.co.ke"/>
+                <data android:host="www.google.co.kr"/>
+                <data android:host="www.google.co.ls"/>
+                <data android:host="www.google.co.ma"/>
+                <data android:host="www.google.co.mz"/>
+                <data android:host="www.google.co.nz"/>
+                <data android:host="www.google.co.th"/>
+                <data android:host="www.google.co.tz"/>
+                <data android:host="www.google.co.ug"/>
+                <data android:host="www.google.co.uk"/>
+                <data android:host="www.google.co.ve"/>
+                <data android:host="www.google.co.vi"/>
+                <data android:host="www.google.co.za"/>
+                <data android:host="www.google.co.zm"/>
+                <data android:host="www.google.co.zw"/>
+                <data android:host="www.google.com"/>
+                <data android:host="www.google.com.ag"/>
+                <data android:host="www.google.com.ai"/>
+                <data android:host="www.google.com.ar"/>
+                <data android:host="www.google.com.au"/>
+                <data android:host="www.google.com.bd"/>
+                <data android:host="www.google.com.bh"/>
+                <data android:host="www.google.com.bn"/>
+                <data android:host="www.google.com.bo"/>
+                <data android:host="www.google.com.br"/>
+                <data android:host="www.google.com.bz"/>
+                <data android:host="www.google.com.co"/>
+                <data android:host="www.google.com.cu"/>
+                <data android:host="www.google.com.do"/>
+                <data android:host="www.google.com.ec"/>
+                <data android:host="www.google.com.eg"/>
+                <data android:host="www.google.com.et"/>
+                <data android:host="www.google.com.fj"/>
+                <data android:host="www.google.com.gh"/>
+                <data android:host="www.google.com.gi"/>
+                <data android:host="www.google.com.gt"/>
+                <data android:host="www.google.com.hk"/>
+                <data android:host="www.google.com.iq"/>
+                <data android:host="www.google.com.jm"/>
+                <data android:host="www.google.com.kh"/>
+                <data android:host="www.google.com.kw"/>
+                <data android:host="www.google.com.lb"/>
+                <data android:host="www.google.com.ly"/>
+                <data android:host="www.google.com.mm"/>
+                <data android:host="www.google.com.mt"/>
+                <data android:host="www.google.com.mx"/>
+                <data android:host="www.google.com.my"/>
+                <data android:host="www.google.com.na"/>
+                <data android:host="www.google.com.ng"/>
+                <data android:host="www.google.com.ni"/>
+                <data android:host="www.google.com.np"/>
+                <data android:host="www.google.com.om"/>
+                <data android:host="www.google.com.pa"/>
+                <data android:host="www.google.com.pe"/>
+                <data android:host="www.google.com.pg"/>
+                <data android:host="www.google.com.ph"/>
+                <data android:host="www.google.com.pr"/>
+                <data android:host="www.google.com.py"/>
+                <data android:host="www.google.com.qa"/>
+                <data android:host="www.google.com.sa"/>
+                <data android:host="www.google.com.sb"/>
+                <data android:host="www.google.com.sg"/>
+                <data android:host="www.google.com.sl"/>
+                <data android:host="www.google.com.sv"/>
+                <data android:host="www.google.com.tr"/>
+                <data android:host="www.google.com.tw"/>
+                <data android:host="www.google.com.ua"/>
+                <data android:host="www.google.com.uy"/>
+                <data android:host="www.google.com.vc"/>
+                <data android:host="www.google.cv"/>
+                <data android:host="www.google.cz"/>
+                <data android:host="www.google.de"/>
+                <data android:host="www.google.dj"/>
+                <data android:host="www.google.dk"/>
+                <data android:host="www.google.dm"/>
+                <data android:host="www.google.dz"/>
+                <data android:host="www.google.ee"/>
+                <data android:host="www.google.es"/>
+                <data android:host="www.google.fi"/>
+                <data android:host="www.google.fm"/>
+                <data android:host="www.google.fr"/>
+                <data android:host="www.google.ga"/>
+                <data android:host="www.google.ge"/>
+                <data android:host="www.google.gg"/>
+                <data android:host="www.google.gl"/>
+                <data android:host="www.google.gm"/>
+                <data android:host="www.google.gp"/>
+                <data android:host="www.google.gr"/>
+                <data android:host="www.google.gy"/>
+                <data android:host="www.google.hk"/>
+                <data android:host="www.google.hn"/>
+                <data android:host="www.google.hr"/>
+                <data android:host="www.google.ht"/>
+                <data android:host="www.google.hu"/>
+                <data android:host="www.google.ie"/>
+                <data android:host="www.google.im"/>
+                <data android:host="www.google.iq"/>
+                <data android:host="www.google.is"/>
+                <data android:host="www.google.it"/>
+                <data android:host="www.google.it.ao"/>
+                <data android:host="www.google.je"/>
+                <data android:host="www.google.jo"/>
+                <data android:host="www.google.jp"/>
+                <data android:host="www.google.kg"/>
+                <data android:host="www.google.ki"/>
+                <data android:host="www.google.kz"/>
+                <data android:host="www.google.la"/>
+                <data android:host="www.google.li"/>
+                <data android:host="www.google.lk"/>
+                <data android:host="www.google.lt"/>
+                <data android:host="www.google.lu"/>
+                <data android:host="www.google.lv"/>
+                <data android:host="www.google.mg"/>
+                <data android:host="www.google.mk"/>
+                <data android:host="www.google.ml"/>
+                <data android:host="www.google.mn"/>
+                <data android:host="www.google.ms"/>
+                <data android:host="www.google.mu"/>
+                <data android:host="www.google.mv"/>
+                <data android:host="www.google.mw"/>
+                <data android:host="www.google.ne"/>
+                <data android:host="www.google.nf"/>
+                <data android:host="www.google.ng"/>
+                <data android:host="www.google.nl"/>
+                <data android:host="www.google.no"/>
+                <data android:host="www.google.nr"/>
+                <data android:host="www.google.nu"/>
+                <data android:host="www.google.pl"/>
+                <data android:host="www.google.pn"/>
+                <data android:host="www.google.pt"/>
+                <data android:host="www.google.ro"/>
+                <data android:host="www.google.rs"/>
+                <data android:host="www.google.ru"/>
+                <data android:host="www.google.rw"/>
+                <data android:host="www.google.sc"/>
+                <data android:host="www.google.se"/>
+                <data android:host="www.google.sh"/>
+                <data android:host="www.google.si"/>
+                <data android:host="www.google.sk"/>
+                <data android:host="www.google.sm"/>
+                <data android:host="www.google.sn"/>
+                <data android:host="www.google.so"/>
+                <data android:host="www.google.st"/>
+                <data android:host="www.google.td"/>
+                <data android:host="www.google.tg"/>
+                <data android:host="www.google.tk"/>
+                <data android:host="www.google.tl"/>
+                <data android:host="www.google.tn"/>
+                <data android:host="www.google.to"/>
+                <data android:host="www.google.tt"/>
+                <data android:host="www.google.vg"/>
+                <data android:host="www.google.vu"/>
+                <data android:host="www.google.ws"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="goo.gl" android:pathPrefix="/maps"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="google.navigation"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/postal-address_v2"/>
+            </intent-filter>
+            <intent-filter android:label="@LEMON_transformed_from_string/MAPS_APP_NAME">
+                <action android:name="android.intent.action.MANAGE_NETWORK_USAGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+            <intent-filter android:label="@LEMON_transformed_from_string/MAPS_APP_NAME">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="google.streetview"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="google.maps.timeline"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="plus.codes"/>
+                <data android:pathPrefix="/2"/>
+                <data android:pathPrefix="/3"/>
+                <data android:pathPrefix="/4"/>
+                <data android:pathPrefix="/5"/>
+                <data android:pathPrefix="/6"/>
+                <data android:pathPrefix="/7"/>
+                <data android:pathPrefix="/8"/>
+                <data android:pathPrefix="/9"/>
+                <data android:pathPrefix="/C"/>
+                <data android:pathPrefix="/F"/>
+                <data android:pathPrefix="/G"/>
+                <data android:pathPrefix="/H"/>
+                <data android:pathPrefix="/J"/>
+                <data android:pathPrefix="/M"/>
+                <data android:pathPrefix="/P"/>
+                <data android:pathPrefix="/Q"/>
+                <data android:pathPrefix="/R"/>
+                <data android:pathPrefix="/V"/>
+                <data android:pathPrefix="/W"/>
+                <data android:pathPrefix="/X"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:configChanges="keyboardHidden|screenSize" android:launchMode="singleTask" android:name="com.google.android.maps.PlacesActivity" android:screenOrientation="user" android:targetActivity="com.google.android.maps.MapsActivity" android:theme="@style/GmmTheme.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:configChanges="keyboardHidden|screenSize" android:launchMode="singleTask" android:name="com.google.android.maps.driveabout.app.DestinationActivity" android:screenOrientation="user" android:targetActivity="com.google.android.maps.MapsActivity" android:theme="@style/GmmTheme.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.RiddlerUgcActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.EditAliasActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.EventNotificationActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.EditPublishedActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.PlaceQaActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.FactualModerationActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.ReviewActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.ReportAProblemActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.LocationShareReceivedIntentActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.RequestLocationIntentActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.LocationShareBurstingActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.maps.LocationShareShortcutActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.GmbPromotionActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.TodoPhotoActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.CommuteSettingsActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.StartCommuteSetupActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.TimelineNotificationActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.maps.TrafficHubActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.ParkingLocationActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.LauncherShortcutActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.MissionsActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.maps.PostTripQuestionsActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:name="com.google.android.maps.driveabout.app.NavigationActivity" android:targetActivity="com.google.android.maps.MapsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.maps.TransitStationActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.maps.TransitSchematicMapActivity" android:targetActivity="com.google.android.maps.MapsActivity"/>
+        <activity android:label="MockGmmActivity" android:name="com.google.android.apps.gmm.testing.mock.MockGmmActivity" android:screenOrientation="user" android:theme="@style/GmmTheme.SplashScreen"/>
+        <activity android:label="SimpleActivity" android:name="com.google.android.apps.gmm.testing.instrumentation.SimpleActivity"/>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.traffic.notification.service.CommuteNotificationProberService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.gmm.traffic.notification.service.DismissTrafficToPlaceNotificationReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.traffic.notification.service.DismissTrafficToPlaceNotificationReceiver.NOTIFICATION_DISMISSED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.gmm.traffic.notification.service.TrafficToPlaceNotificationGeofenceReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.traffic.notification.service.TrafficToPlaceNotificationGeofenceReceiver.ACTION_DISMISS"/>
+                <action android:name="com.google.android.apps.gmm.traffic.notification.service.TrafficToPlaceNotificationGeofenceReceiver.ACTION_UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.apps.gmm.navigation.service.base.NavigationService"/>
+        <service android:name="com.google.android.apps.gmm.util.systemhealth.inject.SystemHealthService"/>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.traffic.notification.service.AreaTrafficNotificationService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.gmm.traffic.notification.service.AreaTrafficNotificationGeofenceReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.traffic.notification.service.AreaTrafficNotificationGeofenceReceiver.ACTION_GEOFENCE_EXIT"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.shared.cache.glide.GlideDiskCacheExpirationService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.gmm.navigation.service.detection.StartDetectionReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.gmm.navigation.service.detection.ActivityRecognitionReceiver"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.gmm.map.prefetch.background.TilePrefetchBroadcastReceiver" android:permission="com.google.android.apps.maps.permission.PREFETCH">
+            <intent-filter>
+                <action android:name="com.google.android.apps.maps.PREFETCH"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.wearable.GmmWearableListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED"/>
+                <data android:host="*" android:scheme="wear"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED"/>
+                <data android:host="*" android:pathPrefix="/log/" android:scheme="wear"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.google.android.apps.maps"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.majorevents.notification.dismissreceiver.DismissEventNotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.majorevents.notification.dismissreceiver.DISMISS_EVENT_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.gmm.notification.channels.NotificationChannelBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.gmm.cloudmessage.receiver.GcmService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.gmm.cloudmessage.CloudMessageBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.cloudmessage.CloudMessageService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.cloudmessage.guns.GunsNotificationFetcherService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.gmm.notification.log.NotificationLoggingReceiver"/>
+        <activity android:name="com.google.android.apps.gmm.notification.log.NotificationLoggingActivity"/>
+        <activity android:name="com.google.android.apps.gmm.notification.log.NotificationLoggingActivity$NoTaskAffinityNotificationLoggingActivity" android:taskAffinity="" android:theme="@style/GmmTheme.Transparent"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.notification.feedback.NotificationInlineFeedbackBroadcastReceiver"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.notification.receiver.CancelNotificationBroadcastReceiver"/>
+        <service android:name="com.google.android.apps.gmm.map.prefetch.TrackedTilePrefetcherGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.notification.interactive.receiver.GlobalInteractiveReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.notification.interactive.receiver.GlobalInteractiveReceiver.CLICK_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:label="Photo taken notification proxy broadcast receiver" android:name="com.google.android.apps.gmm.ugc.clientnotification.phototaken.NotificationIntentProxyReceiver"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.ugc.clientnotification.phototaken.InlinePtnPostReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.ugc.clientnotification.phototaken.InlinePtnPostReceiver.POST_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:label="Photo taken notifier service" android:name="com.google.android.apps.gmm.ugc.phototaken.PhotoTakenNotifierService">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.ugc.phototaken.PhotoTakenNotifierService.ACTION_PHOTO_PROCESSING_TIMED_OUT"/>
+                <action android:name="com.google.android.apps.gmm.ugc.phototaken.PhotoTakenNotifierService.ACTION_PHOTO_TAKEN"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.ugc.phototaken.PhotoTakenObserverService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.ugc.clientnotification.phototaken.PhotoMetadataDatabaseScheduledCleanerService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.apps.gmm.place.timeline.service.detection.LocalLocationSignalDetectorService" android:permission="android.permission.BIND_JOB_SERVICE" android:stopWithTask="false"/>
+        <service android:name="com.google.android.apps.gmm.place.timeline.service.SaveVisitBadgeLocationSurveyService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:enabled="false" android:name="com.google.android.apps.gmm.ugc.phototaken.StartPhotoTakenNotifierServiceReceiver">
+            <intent-filter>
+                <action android:name="com.android.camera.NEW_PICTURE"/>
+                <action android:name="android.hardware.action.NEW_PICTURE"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.camera.NEW_VIDEO"/>
+                <action android:name="android.hardware.action.NEW_VIDEO"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.gmm.ugc.ataplace.StartAtAPlaceReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.gmm.parkinglocation.ParkingLocationNotificationReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.gmm.ugc.posttrip.EnforceTripStoreTtlReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.ugc.posttrip.EnforceTripStoreTtlService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:label="Be the first service" android:name="com.google.android.apps.gmm.ugc.ataplace.AtAPlaceService"/>
+        <service android:exported="false" android:name="com.google.android.apps.gmm.ugc.ataplace.AtAPlaceJobIntentService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.google.android.apps.gmm.ugc.tasks.nearby.UgcTasksNearbyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.ugc.tasks.nearby.UgcTasksNearbyBroadcastReceiver.START_NEARBY_NEED_MODE"/>
+                <action android:name="com.google.android.apps.gmm.ugc.tasks.nearby.UgcTasksNearbyBroadcastReceiver.STOP_NEARBY_NEED_MODE"/>
+                <action android:name="com.google.android.apps.gmm.ugc.tasks.nearby.UgcTasksNearbyBroadcastReceiver.TRIGGER_NEARBY_NEED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.ugc.clientnotification.review.ReviewAtAPlaceNotificationUpdater">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.ugc.clientnotification.review.ReviewAtAPlaceNotificationUpdater.UPDATE_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.gmm.reportaproblem.common.service.DismissNotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.reportaproblem.common.service.DISMISS_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.reportaproblem.common.service.DismissNotificationTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.traffic.notification.DismissAreaTrafficWarmUpNotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.traffic.notification.DISMISS_AREA_TRAFFIC_WARM_UP_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.parkinglocation.ParkingLocationDismissReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.parkinglocation.DISMISS_PARKING_LOCATION_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.parkinglocation.ParkingLocationExpireWarningReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.parkinglocation.ACTION_PARKING_LOCATION_EXPIRES_SOON_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.parkinglocation.ParkingLocationExpireAlertReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.parkinglocation.ACTION_PARKING_LOCATION_EXPIRED_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.parkinglocation.ParkingLocationUpdateNotificationReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.parkinglocation.ACTION_UPDATE_PARKING_LOCATION_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="fontScale|orientation|screenSize|uiMode" android:icon="@mipmap/adaptiveproduct_maps" android:label="@LEMON_transformed_from_string/DIRECTIONS_WIDGET_NAME" android:name="com.google.android.apps.gmm.directions.appwidget.CreateDirectionsShortcutActivity" android:theme="@style/GmmTheme.SplashScreen">
+            <intent-filter android:label="@LEMON_transformed_from_string/DIRECTIONS_WIDGET_NAME">
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.CAR_MODE"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/driving_icon" android:label="@LEMON_transformed_from_string/DRIVING_MODE_WIDGET_NAME" android:name="com.google.android.apps.gmm.navigation.ui.freenav.shortcut.FreeNavCreateShortcutActivity" android:theme="@style/GmmTheme.SplashScreen">
+            <intent-filter android:label="@LEMON_transformed_from_string/DRIVING_MODE_WIDGET_NAME">
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/traffic_hub_shortcut_icon" android:label="@LEMON_transformed_from_string/TRAFFIC_HUB_SHORTCUT_NAME" android:name="com.google.android.apps.gmm.traffic.shortcut.TrafficHubCreateShortcutActivity" android:theme="@style/GmmTheme.SplashScreen">
+            <intent-filter android:label="@LEMON_transformed_from_string/TRAFFIC_HUB_SHORTCUT_NAME">
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/location_sharing_icon" android:label="@LEMON_transformed_from_string/LOCATION_SHARING_FEATURE_TITLE" android:name="com.google.android.apps.gmm.locationsharing.widget.LocationSharingCreateShortcutActivity" android:theme="@style/GmmTheme.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/friend_default_icon" android:label="@LEMON_transformed_from_string/SELECTED_PERSON_SHORTCUT_TITLE" android:name="com.google.android.apps.gmm.locationsharing.widget.SelectedPersonCreateShortcutActivity" android:theme="@style/GmmTheme.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.gmm.locationsharing.ui.sendkit.SendKitActivity" android:theme="@style/SendKitTheme"/>
+        <activity android:excludeFromRecents="true" android:icon="@mipmap/adaptiveproduct_maps" android:label="@LEMON_transformed_from_string/NOTIFICATION_FEEDBACK_ACTIVITY_LABEL" android:name="com.google.android.apps.gmm.notification.feedback.NotificationFeedbackActivity" android:taskAffinity="" android:theme="@style/GmmTheme.Transparent"/>
+        <service android:exported="true" android:icon="@mipmap/adaptiveproduct_maps" android:label="@LEMON_transformed_from_string/MAPS_APP_NAME" android:name="com.google.android.apps.gmm.car.GmmCarProjectionService" android:process="com.google.android.apps.maps">
+            <meta-data android:name="android.app.theme" android:resource="@style/GmmAppTheme"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION_NAVIGATION"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION_NAVIGATION"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="ditu.google.cn" android:path="/"/>
+                <data android:host="ditu.google.cn" android:pathPrefix="/maps"/>
+                <data android:host="ditu.google.com" android:path="/"/>
+                <data android:host="ditu.google.com" android:pathPrefix="/maps"/>
+                <data android:host="local.google.com" android:path="/"/>
+                <data android:host="local.google.com" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ad" android:path="/"/>
+                <data android:host="maps.google.ad" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ae" android:path="/"/>
+                <data android:host="maps.google.ae" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.as" android:path="/"/>
+                <data android:host="maps.google.as" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.at" android:path="/"/>
+                <data android:host="maps.google.at" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ba" android:path="/"/>
+                <data android:host="maps.google.ba" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.be" android:path="/"/>
+                <data android:host="maps.google.be" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.bf" android:path="/"/>
+                <data android:host="maps.google.bf" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.bg" android:path="/"/>
+                <data android:host="maps.google.bg" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.bi" android:path="/"/>
+                <data android:host="maps.google.bi" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.bj" android:path="/"/>
+                <data android:host="maps.google.bj" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.bs" android:path="/"/>
+                <data android:host="maps.google.bs" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.bt" android:path="/"/>
+                <data android:host="maps.google.bt" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.by" android:path="/"/>
+                <data android:host="maps.google.by" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ca" android:path="/"/>
+                <data android:host="maps.google.ca" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.cat" android:path="/"/>
+                <data android:host="maps.google.cat" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.cd" android:path="/"/>
+                <data android:host="maps.google.cd" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.cf" android:path="/"/>
+                <data android:host="maps.google.cf" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.cg" android:path="/"/>
+                <data android:host="maps.google.cg" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ch" android:path="/"/>
+                <data android:host="maps.google.ch" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ci" android:path="/"/>
+                <data android:host="maps.google.ci" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.cl" android:path="/"/>
+                <data android:host="maps.google.cl" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.cm" android:path="/"/>
+                <data android:host="maps.google.cm" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.cn" android:path="/"/>
+                <data android:host="maps.google.cn" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.ao" android:path="/"/>
+                <data android:host="maps.google.co.ao" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.bw" android:path="/"/>
+                <data android:host="maps.google.co.bw" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.ck" android:path="/"/>
+                <data android:host="maps.google.co.ck" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.cr" android:path="/"/>
+                <data android:host="maps.google.co.cr" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.id" android:path="/"/>
+                <data android:host="maps.google.co.id" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.il" android:path="/"/>
+                <data android:host="maps.google.co.il" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.in" android:path="/"/>
+                <data android:host="maps.google.co.in" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.jp" android:path="/"/>
+                <data android:host="maps.google.co.jp" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.ke" android:path="/"/>
+                <data android:host="maps.google.co.ke" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.kr" android:path="/"/>
+                <data android:host="maps.google.co.kr" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.ls" android:path="/"/>
+                <data android:host="maps.google.co.ls" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.ma" android:path="/"/>
+                <data android:host="maps.google.co.ma" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.mz" android:path="/"/>
+                <data android:host="maps.google.co.mz" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.nz" android:path="/"/>
+                <data android:host="maps.google.co.nz" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.th" android:path="/"/>
+                <data android:host="maps.google.co.th" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.tz" android:path="/"/>
+                <data android:host="maps.google.co.tz" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.ug" android:path="/"/>
+                <data android:host="maps.google.co.ug" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.uk" android:path="/"/>
+                <data android:host="maps.google.co.uk" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.ve" android:path="/"/>
+                <data android:host="maps.google.co.ve" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.vi" android:path="/"/>
+                <data android:host="maps.google.co.vi" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.za" android:path="/"/>
+                <data android:host="maps.google.co.za" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.zm" android:path="/"/>
+                <data android:host="maps.google.co.zm" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.co.zw" android:path="/"/>
+                <data android:host="maps.google.co.zw" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com" android:path="/"/>
+                <data android:host="maps.google.com" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.ag" android:path="/"/>
+                <data android:host="maps.google.com.ag" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.ai" android:path="/"/>
+                <data android:host="maps.google.com.ai" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.ar" android:path="/"/>
+                <data android:host="maps.google.com.ar" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.au" android:path="/"/>
+                <data android:host="maps.google.com.au" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.bd" android:path="/"/>
+                <data android:host="maps.google.com.bd" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.bh" android:path="/"/>
+                <data android:host="maps.google.com.bh" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.bn" android:path="/"/>
+                <data android:host="maps.google.com.bn" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.bo" android:path="/"/>
+                <data android:host="maps.google.com.bo" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.br" android:path="/"/>
+                <data android:host="maps.google.com.br" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.bz" android:path="/"/>
+                <data android:host="maps.google.com.bz" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.co" android:path="/"/>
+                <data android:host="maps.google.com.co" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.cu" android:path="/"/>
+                <data android:host="maps.google.com.cu" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.do" android:path="/"/>
+                <data android:host="maps.google.com.do" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.ec" android:path="/"/>
+                <data android:host="maps.google.com.ec" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.eg" android:path="/"/>
+                <data android:host="maps.google.com.eg" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.et" android:path="/"/>
+                <data android:host="maps.google.com.et" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.fj" android:path="/"/>
+                <data android:host="maps.google.com.fj" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.gh" android:path="/"/>
+                <data android:host="maps.google.com.gh" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.gi" android:path="/"/>
+                <data android:host="maps.google.com.gi" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.gt" android:path="/"/>
+                <data android:host="maps.google.com.gt" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.hk" android:path="/"/>
+                <data android:host="maps.google.com.hk" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.iq" android:path="/"/>
+                <data android:host="maps.google.com.iq" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.jm" android:path="/"/>
+                <data android:host="maps.google.com.jm" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.kh" android:path="/"/>
+                <data android:host="maps.google.com.kh" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.kw" android:path="/"/>
+                <data android:host="maps.google.com.kw" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.lb" android:path="/"/>
+                <data android:host="maps.google.com.lb" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.ly" android:path="/"/>
+                <data android:host="maps.google.com.ly" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.mm" android:path="/"/>
+                <data android:host="maps.google.com.mm" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.mt" android:path="/"/>
+                <data android:host="maps.google.com.mt" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.mx" android:path="/"/>
+                <data android:host="maps.google.com.mx" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.my" android:path="/"/>
+                <data android:host="maps.google.com.my" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.na" android:path="/"/>
+                <data android:host="maps.google.com.na" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.ng" android:path="/"/>
+                <data android:host="maps.google.com.ng" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.ni" android:path="/"/>
+                <data android:host="maps.google.com.ni" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.np" android:path="/"/>
+                <data android:host="maps.google.com.np" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.om" android:path="/"/>
+                <data android:host="maps.google.com.om" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.pa" android:path="/"/>
+                <data android:host="maps.google.com.pa" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.pe" android:path="/"/>
+                <data android:host="maps.google.com.pe" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.pg" android:path="/"/>
+                <data android:host="maps.google.com.pg" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.ph" android:path="/"/>
+                <data android:host="maps.google.com.ph" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.pr" android:path="/"/>
+                <data android:host="maps.google.com.pr" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.py" android:path="/"/>
+                <data android:host="maps.google.com.py" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.qa" android:path="/"/>
+                <data android:host="maps.google.com.qa" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.sa" android:path="/"/>
+                <data android:host="maps.google.com.sa" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.sb" android:path="/"/>
+                <data android:host="maps.google.com.sb" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.sg" android:path="/"/>
+                <data android:host="maps.google.com.sg" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.sl" android:path="/"/>
+                <data android:host="maps.google.com.sl" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.sv" android:path="/"/>
+                <data android:host="maps.google.com.sv" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.tr" android:path="/"/>
+                <data android:host="maps.google.com.tr" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.tw" android:path="/"/>
+                <data android:host="maps.google.com.tw" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.ua" android:path="/"/>
+                <data android:host="maps.google.com.ua" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.uy" android:path="/"/>
+                <data android:host="maps.google.com.uy" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.com.vc" android:path="/"/>
+                <data android:host="maps.google.com.vc" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.cv" android:path="/"/>
+                <data android:host="maps.google.cv" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.cz" android:path="/"/>
+                <data android:host="maps.google.cz" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.de" android:path="/"/>
+                <data android:host="maps.google.de" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.dj" android:path="/"/>
+                <data android:host="maps.google.dj" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.dk" android:path="/"/>
+                <data android:host="maps.google.dk" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.dm" android:path="/"/>
+                <data android:host="maps.google.dm" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.dz" android:path="/"/>
+                <data android:host="maps.google.dz" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ee" android:path="/"/>
+                <data android:host="maps.google.ee" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.es" android:path="/"/>
+                <data android:host="maps.google.es" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.fi" android:path="/"/>
+                <data android:host="maps.google.fi" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.fm" android:path="/"/>
+                <data android:host="maps.google.fm" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.fr" android:path="/"/>
+                <data android:host="maps.google.fr" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ga" android:path="/"/>
+                <data android:host="maps.google.ga" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ge" android:path="/"/>
+                <data android:host="maps.google.ge" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.gg" android:path="/"/>
+                <data android:host="maps.google.gg" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.gl" android:path="/"/>
+                <data android:host="maps.google.gl" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.gm" android:path="/"/>
+                <data android:host="maps.google.gm" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.gp" android:path="/"/>
+                <data android:host="maps.google.gp" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.gr" android:path="/"/>
+                <data android:host="maps.google.gr" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.gy" android:path="/"/>
+                <data android:host="maps.google.gy" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.hk" android:path="/"/>
+                <data android:host="maps.google.hk" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.hn" android:path="/"/>
+                <data android:host="maps.google.hn" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.hr" android:path="/"/>
+                <data android:host="maps.google.hr" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ht" android:path="/"/>
+                <data android:host="maps.google.ht" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.hu" android:path="/"/>
+                <data android:host="maps.google.hu" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ie" android:path="/"/>
+                <data android:host="maps.google.ie" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.im" android:path="/"/>
+                <data android:host="maps.google.im" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.iq" android:path="/"/>
+                <data android:host="maps.google.iq" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.is" android:path="/"/>
+                <data android:host="maps.google.is" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.it" android:path="/"/>
+                <data android:host="maps.google.it" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.it.ao" android:path="/"/>
+                <data android:host="maps.google.it.ao" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.je" android:path="/"/>
+                <data android:host="maps.google.je" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.jo" android:path="/"/>
+                <data android:host="maps.google.jo" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.jp" android:path="/"/>
+                <data android:host="maps.google.jp" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.kg" android:path="/"/>
+                <data android:host="maps.google.kg" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ki" android:path="/"/>
+                <data android:host="maps.google.ki" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.kz" android:path="/"/>
+                <data android:host="maps.google.kz" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.la" android:path="/"/>
+                <data android:host="maps.google.la" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.li" android:path="/"/>
+                <data android:host="maps.google.li" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.lk" android:path="/"/>
+                <data android:host="maps.google.lk" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.lt" android:path="/"/>
+                <data android:host="maps.google.lt" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.lu" android:path="/"/>
+                <data android:host="maps.google.lu" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.lv" android:path="/"/>
+                <data android:host="maps.google.lv" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.mg" android:path="/"/>
+                <data android:host="maps.google.mg" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.mk" android:path="/"/>
+                <data android:host="maps.google.mk" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ml" android:path="/"/>
+                <data android:host="maps.google.ml" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.mn" android:path="/"/>
+                <data android:host="maps.google.mn" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ms" android:path="/"/>
+                <data android:host="maps.google.ms" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.mu" android:path="/"/>
+                <data android:host="maps.google.mu" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.mv" android:path="/"/>
+                <data android:host="maps.google.mv" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.mw" android:path="/"/>
+                <data android:host="maps.google.mw" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ne" android:path="/"/>
+                <data android:host="maps.google.ne" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.nf" android:path="/"/>
+                <data android:host="maps.google.nf" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ng" android:path="/"/>
+                <data android:host="maps.google.ng" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.nl" android:path="/"/>
+                <data android:host="maps.google.nl" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.no" android:path="/"/>
+                <data android:host="maps.google.no" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.nr" android:path="/"/>
+                <data android:host="maps.google.nr" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.nu" android:path="/"/>
+                <data android:host="maps.google.nu" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.pl" android:path="/"/>
+                <data android:host="maps.google.pl" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.pn" android:path="/"/>
+                <data android:host="maps.google.pn" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.pt" android:path="/"/>
+                <data android:host="maps.google.pt" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ro" android:path="/"/>
+                <data android:host="maps.google.ro" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.rs" android:path="/"/>
+                <data android:host="maps.google.rs" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ru" android:path="/"/>
+                <data android:host="maps.google.ru" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.rw" android:path="/"/>
+                <data android:host="maps.google.rw" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.sc" android:path="/"/>
+                <data android:host="maps.google.sc" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.se" android:path="/"/>
+                <data android:host="maps.google.se" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.sh" android:path="/"/>
+                <data android:host="maps.google.sh" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.si" android:path="/"/>
+                <data android:host="maps.google.si" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.sk" android:path="/"/>
+                <data android:host="maps.google.sk" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.sm" android:path="/"/>
+                <data android:host="maps.google.sm" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.sn" android:path="/"/>
+                <data android:host="maps.google.sn" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.so" android:path="/"/>
+                <data android:host="maps.google.so" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.st" android:path="/"/>
+                <data android:host="maps.google.st" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.td" android:path="/"/>
+                <data android:host="maps.google.td" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.tg" android:path="/"/>
+                <data android:host="maps.google.tg" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.tk" android:path="/"/>
+                <data android:host="maps.google.tk" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.tl" android:path="/"/>
+                <data android:host="maps.google.tl" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.tn" android:path="/"/>
+                <data android:host="maps.google.tn" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.to" android:path="/"/>
+                <data android:host="maps.google.to" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.tt" android:path="/"/>
+                <data android:host="maps.google.tt" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.vg" android:path="/"/>
+                <data android:host="maps.google.vg" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.vu" android:path="/"/>
+                <data android:host="maps.google.vu" android:pathPrefix="/maps"/>
+                <data android:host="maps.google.ws" android:path="/"/>
+                <data android:host="maps.google.ws" android:pathPrefix="/maps"/>
+                <data android:host="mapy.google.pl" android:path="/"/>
+                <data android:host="mapy.google.pl" android:pathPrefix="/maps"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION_NAVIGATION"/>
+                <data android:scheme="google.navigation"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION_NAVIGATION"/>
+                <data android:scheme="google.maps"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:icon="@mipmap/adaptiveproduct_maps" android:label="@LEMON_transformed_from_string/MAPS_APP_NAME" android:name="com.google.android.apps.gmm.car.CarNavigationProviderService" android:process="com.google.android.apps.maps">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.car.category.NAVIGATION_PROVIDER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.gmm.INTERNAL"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboardHidden|mcc|mnc|orientation" android:name="com.google.android.apps.gmm.car.firstrun.GmmProjectedFirstRunActivity" android:theme="@style/GmmTheme">
+            <intent-filter>
+                <action android:name="com.google.android.apps.maps.car.PROJECTED_FIRST_RUN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:name="com.google.android.libraries.geophotouploader.UploadService"/>
+        <service android:exported="false" android:name="com.google.android.libraries.geophotouploader.NotificationReceiverService"/>
+        <service android:exported="true" android:name="com.google.android.libraries.geophotouploader.PeriodicTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.libraries.geophotouploader.OneoffTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.shared.net.v2.impl.LowPriorityRequestTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.google.android.apps.maps" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.apps.gmm.util.fileprovider.SafeFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepaths"/>
+        </provider>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.locationsharing.intent.UpdateSharesBroadcastReceiver"/>
+        <receiver android:name="com.google.android.apps.gmm.locationsharing.bursting.BurstingController$RestartDetectionBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.locationsharing.bursting.BurstingController$ActivityRecognitionBroadcastReceiver"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.transit.commute.TransitCommuteNotificationBroadcastReceiver"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.transit.TransitStationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.transit.TransitStationService"/>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.transit.TransitDepartureBoardFetcherService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.gmm.transit.go.service.TransitTripService"/>
+        <receiver android:name="com.google.android.apps.gmm.backup.GmmBackupBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.gmm.locationsharing.bursting.BurstingService"/>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.location.heatmap.HeatmapExpirationService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.offline.update.OfflineAutoUpdateMaintenanceGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.gmm.location.heatmap.HeatmapStartupReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.gmm.context.appindexing.AppIndexingTtlStartupReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.context.appindexing.AppIndexingTtlTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.passiveassist.model.PassiveAssistDataStoreExpirationService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.offline.appindex.OfflineAppIndexingGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.android.apps.gmm.offline.appindex.OfflineAppIndexingReceiver" android:permission="com.google.android.gms.permission.APPINDEXING">
+            <intent-filter>
+                <action android:name="com.google.firebase.appindexing.UPDATE_INDEX"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="false" android:name="com.google.android.apps.gmm.offline.update.OfflineManualDownloadService"/>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.offline.update.OfflineManualDownloadRescheduleGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.offline.update.OfflineAutoUpdateJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.offline.update.OfflineGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.offline.update.OfflineAutoUpdateGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.gmm.offline.update.StartAutoUpdatesCheckingReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.apps.gmm.offline.update.watchdog.OfflineUpdateWatchdogService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="true" android:label="ReportAbuseActivity" android:name="com.google.android.libraries.abuse.reporting.ReportAbuseActivity"/>
+        <activity android:name="com.google.android.libraries.deepauth.appauth.AppAuthReceiverActivity" android:process="" android:theme="@style/GDI.AppAuthReceiver"/>
+        <activity android:name="com.google.android.libraries.deepauth.appauth.AppAuthCancellationReceiverActivity" android:process="" android:theme="@style/GDI.AppAuthReceiver"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="net.openid.appauth.AuthorizationManagementActivity" android:process="" android:theme="@style/GDI.Invisible"/>
+        <activity android:name="com.google.android.libraries.deepauth.ConsentActivity" android:process="" android:theme="@style/GDI.Consent"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbConsentActivity" android:process="" android:theme="@style/GDI.Consent"/>
+        <activity android:name="com.google.android.libraries.deepauth.ActivityController" android:process="" android:theme="@style/GDI.Invisible"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.AccountChooserActivity" android:process="" android:theme="@style/GDI.AccountChooser"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbAccountChooserActivity" android:process="" android:theme="@style/GDI.AccountChooser"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.CreateAccountActivity" android:process="" android:theme="@style/GDI.CreateAccount"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbCreateAccountActivity" android:process="" android:theme="@style/GDI.CreateAccount"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.EnterPhoneNumberActivity" android:process="" android:theme="@style/GDI.EnterPhoneNumber"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbEnterPhoneNumberActivity" android:process="" android:theme="@style/GDI.EnterPhoneNumber"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.EnterSmsCodeActivity" android:process="" android:theme="@style/GDI.EnterSMSCode"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbEnterSmsCodeActivity" android:process="" android:theme="@style/GDI.EnterSMSCode"/>
+        <activity android:name="com.google.android.libraries.deepauth.accountcreation.VerificationErrorActivity" android:process="" android:theme="@style/GDI.VerificationError"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.jni.crashreporter.NativeCrashReporterActivity" android:process=":native_crash_reporter"/>
+        <meta-data android:name="com.google.android.libraries.social.peoplekit.avatars.viewcontrollers.glide.FifeGlideModule" android:value="GlideModule"/>
+        <meta-data android:name="com.google.android.libraries.social.sendkit.ui.avatars.glide.FifeGlideModule" android:value="GlideModule"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.social.sendkit.ui.SendKitActivity" android:theme="@style/AppTheme.SendKitActivity"/>
+        <activity android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.libraries.stitch.incompat.PlatformBugActivity" android:process=":corrupted_install" android:stateNotNeeded="true" android:theme="@android:style/Theme.DeviceDefault"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@style/Theme.AppInvite.Preview">
+            <intent-filter>
+                <action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>
