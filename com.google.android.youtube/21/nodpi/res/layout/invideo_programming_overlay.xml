@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" _xmlns:android="http://schemas.android.com/apk/res/android" _xmlns:tools="http://schemas.android.com/tools" _xmlns:yt="http://schemas.android.com/apk/res-auto" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="bottom|center|right" android:id="@id/branding_watermark" android:layout_width="@dimen/annotation_branding_watermark_width" android:layout_height="@dimen/annotation_branding_watermark_width" android:layout_margin="12.0dip" android:scaleType="centerInside" android:alpha="0.7" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/promo_website_expanded" android:layout_width="wrap_content" android:layout_height="@dimen/annotation_banner_height" android:layoutDirection="ltr" style="@style/AnnotationBanner">
+        <ImageView android:id="@id/promo_website_thumbnail_expanded" android:layout_width="@dimen/annotation_banner_icon_height" android:layout_height="@dimen/annotation_banner_icon_height" style="@style/AnnotationBannerThumbnailImage" />
+        <LinearLayout android:gravity="start|center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layoutDirection="locale" style="@style/AnnotationBannerTextContent">
+            <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:id="@id/promo_website_title" android:layout_width="wrap_content" android:layout_height="wrap_content" res-auto:robotoFont="regular" style="@style/AnnotationBannerTitleText" xmlns:res-auto="http://schemas.android.com/apk/res-auto" />
+            <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:id="@id/promo_website_description" android:layout_width="wrap_content" android:layout_height="wrap_content" res-auto:robotoFont="light" style="@style/AnnotationBannerDescriptionText" xmlns:res-auto="http://schemas.android.com/apk/res-auto" />
+        </LinearLayout>
+        <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/annotation_banner_icon_height" android:src="@drawable/ic_annotation_external_link" style="@style/AnnotationBannerIcon" />
+        <ImageButton android:id="@id/promo_website_dismiss" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_annotation_close" android:contentDescription="@string/accessibility_annotation_overlay_promo_dismiss" style="@style/AnnotationBannerCloseIcon" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/promo_collapsed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layoutDirection="ltr" style="@style/AnnotationBanner">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/promo_thumbnail_collapsed" android:layout_width="wrap_content" android:layout_height="@dimen/annotation_banner_icon_height" style="@style/AnnotationBannerThumbnailImage" />
+            <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:layout_gravity="bottom|center|right" android:id="@id/promo_video_duration_collapsed" android:layout_width="wrap_content" android:layout_height="wrap_content" res-auto:robotoFont="light" style="@style/AnnotationBannerThumbnailImageVideoDurationText" xmlns:res-auto="http://schemas.android.com/apk/res-auto" />
+        </FrameLayout>
+        <ImageView android:id="@id/promo_expand_arrow" android:background="@null" android:layout_width="16.0dip" android:layout_height="@dimen/annotation_banner_icon_height" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_annotation_expand_right" android:scaleType="centerInside" android:contentDescription="@string/accessibility_annotation_overlay_promo_expand" />
+    </LinearLayout>
+</FrameLayout>

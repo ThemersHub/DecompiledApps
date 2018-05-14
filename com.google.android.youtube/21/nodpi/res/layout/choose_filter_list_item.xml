@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="@dimen/edit_filter_preview_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextureView android:id="@id/filter_thumbnail" android:layout_width="@dimen/edit_filter_preview_selected_thumbnail_width" android:layout_height="@dimen/edit_filter_preview_selected_thumbnail_height" android:layout_marginTop="@dimen/edit_filter_preview_item_top_margin" android:layout_marginStart="@dimen/edit_filter_preview_item_left_margin" android:layout_marginEnd="@dimen/edit_filter_preview_item_right_margin" />
+    <RelativeLayout android:layout_gravity="bottom" android:layout_width="@dimen/edit_filter_preview_selected_thumbnail_width" android:layout_height="@dimen/edit_filter_preview_item_text_view_height">
+        <TextView android:textSize="@dimen/edit_filter_preview_item_text_size" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/filter_text" android:paddingLeft="@dimen/edit_filter_preview_item_text_view_side_padding" android:paddingRight="@dimen/edit_filter_preview_item_text_view_side_padding" android:paddingBottom="@dimen/edit_filter_preview_item_text_view_bottom_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxWidth="@dimen/edit_filter_preview_item_text_max_width" android:maxLines="1" android:layout_centerHorizontal="true" android:alpha="@dimen/edit_filter_text_unselected_alpha_value" />
+        <ImageView android:id="@id/new_content_dot" android:paddingBottom="@dimen/edit_filter_preview_item_dot_view_bottom_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/dot" android:height="@dimen/edit_filter_preview_item_dot_dimension" android:width="@dimen/edit_filter_preview_item_dot_dimension" android:layout_toStartOf="@id/filter_text" />
+    </RelativeLayout>
+</FrameLayout>

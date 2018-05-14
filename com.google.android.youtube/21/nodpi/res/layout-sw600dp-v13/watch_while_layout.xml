@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.youtube.app.ui.watch.watchwhile.WatchWhileLayout android:id="@id/watch_while_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" res-auto:playerViewId="@id/watch_player" res-auto:metadataViewId="@id/video_metadata_layout" res-auto:metadataPanelViewId="@id/watch_info_panel" res-auto:tabletLayout="true" res-auto:miniPlayerWidth="@dimen/watch_while_mini_player_width" res-auto:miniPlayerPadding="@dimen/watch_while_mini_player_padding" _xmlns:android="http://schemas.android.com/apk/res/android" _xmlns:yt="http://schemas.android.com/apk/res-auto" _xmlns:tools="http://schemas.android.com/tools" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:res-auto="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/watch_player" />
+    <FrameLayout android:id="@id/video_metadata_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.libraries.youtube.common.ui.LoadingFrameLayout android:id="@id/watch_info_panel" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/watch_info_watch_list" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:smoothScrollbar="false" />
+    </com.google.android.libraries.youtube.common.ui.LoadingFrameLayout>
+    <include layout="@layout/watch_while_layout_coordinator_layout" />
+</com.google.android.apps.youtube.app.ui.watch.watchwhile.WatchWhileLayout>

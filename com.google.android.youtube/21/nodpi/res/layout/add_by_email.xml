@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" _xmlns:android="http://schemas.android.com/apk/res/android" _xmlns:tools="http://schemas.android.com/tools" _xmlns:yt="http://schemas.android.com/apk/res-auto" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="4.0dip" style="@style/ConnectionToolbars" />
+    <ScrollView android:id="@id/contents" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Space android:id="@id/space" android:layout_width="fill_parent" android:layout_height="60.0dip" />
+            <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textSize="10.0sp" android:textColor="@color/email_text_highlight_color" android:id="@id/input_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip" android:labelFor="@id/email_text" />
+            <EditText android:theme="@style/ShareEditText" android:id="@id/email_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:inputType="textEmailAddress" android:imeOptions="actionSend" />
+            <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?textAppearanceCaption" android:id="@id/detail_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/found_email_invitee" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="32.0dip" android:layout_marginBottom="16.0dip">
+                <com.google.android.libraries.youtube.share.ui.ContactImageHolder android:id="@id/contact_photo" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+                <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?textAppearanceSubhead" android:ellipsize="end" android:id="@id/contact_name" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:paddingStart="8.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout android:id="@id/button_frame" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="8.0dip">
+        <TextView android:textAppearance="?textAppearanceButton" android:textColor="@color/send_email_invite_disabled" android:layout_gravity="end" android:id="@id/send_invite_button" android:background="?selectableItemBackground" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textSize="@dimen/medium_font_size" android:textColor="?android:textColorSecondary" android:gravity="center" android:id="@id/error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="16.0dip" android:text="@string/error_message" android:layout_weight="1.0" res-auto:robotoFont="regular" xmlns:res-auto="http://schemas.android.com/apk/res-auto" />
+</LinearLayout>

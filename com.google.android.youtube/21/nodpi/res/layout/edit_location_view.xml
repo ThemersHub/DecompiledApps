@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge _xmlns:android="http://schemas.android.com/apk/res/android" xmlns:_xmlns="xmlns">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/edit_location_vertical_margin"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="@dimen/edit_location_text_size" android:layout_gravity="center_vertical" android:id="@id/location_setting_text" android:background="?selectableItemBackground" android:paddingTop="@dimen/edit_location_vertical_margin" android:paddingBottom="@dimen/edit_location_vertical_margin" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawableLeft="?edit_location_field_icon" android:drawablePadding="@dimen/edit_location_text_padding" android:layout_weight="1.0" android:textIsSelectable="false" android:drawableStart="?edit_location_field_icon" />
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/location_action_icon" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/edit_location_add_button_inset" android:src="?edit_location_add_icon" android:contentDescription="@null" android:layout_marginEnd="@dimen/edit_location_add_button_inset" />
+    </LinearLayout>
+    <HorizontalScrollView android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="horizontal" android:id="@id/place_suggestions" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/edit_location_suggestion_vertical_margin" android:divider="@drawable/edit_location_suggestion_divider" android:showDividers="middle" />
+    </HorizontalScrollView>
+    <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@dimen/edit_location_search_notice_size" android:id="@id/location_search_notice" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</merge>

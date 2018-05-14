@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/coordinator_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" _xmlns:android="http://schemas.android.com/apk/res/android" _xmlns:yt="http://schemas.android.com/apk/res-auto" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/pane_fragment_container" android:background="?ytBackground1" android:layout_width="fill_parent" android:layout_height="fill_parent" res-auto:layout_behavior="com.google.android.apps.youtube.app.ui.actionbar.MainScrollingViewBehavior" xmlns:res-auto="http://schemas.android.com/apk/res-auto">
+        <com.google.android.apps.youtube.app.ui.inline.InlinePlayerLayout android:id="@id/inline_player_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/fab_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/watch_while_fab_view" />
+    </FrameLayout>
+    <com.google.android.apps.youtube.app.ui.actionbar.ElevatedAppBarLayout android:orientation="vertical" android:id="@id/appbar_layout" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.youtube.app.ui.actionbar.MainCollapsingToolbarLayout android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" res-auto:layout_scrollFlags="enterAlways|scroll|snap" res-auto:expandedTitleTextAppearance="@style/TransparentTitleTextAppearance" res-auto:collapsedTitleTextAppearance="@style/TransparentTitleTextAppearance" res-auto:scrimAnimationDuration="250" xmlns:res-auto="http://schemas.android.com/apk/res-auto">
+            <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" res-auto:popupTheme="@style/ThemeOverlay.YouTube.Light" res-auto:layout_collapseMode="pin" res-auto:theme="@style/ThemeOverlay.YouTube.ActionBar" />
+            <View android:layout_gravity="bottom" android:id="@id/toolbar_compat_shadow" android:background="@color/compat_elevation_shadow_compat" android:focusable="false" android:layout_width="fill_parent" android:layout_height="@dimen/compat_elevation_shadow_height" />
+            <ImageView android:layout_gravity="center" android:id="@id/centered_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+        </com.google.android.apps.youtube.app.ui.actionbar.MainCollapsingToolbarLayout>
+    </com.google.android.apps.youtube.app.ui.actionbar.ElevatedAppBarLayout>
+</android.support.design.widget.CoordinatorLayout>

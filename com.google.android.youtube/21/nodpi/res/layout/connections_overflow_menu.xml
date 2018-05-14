@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" _xmlns:android="http://schemas.android.com/apk/res/android" _xmlns:tools="http://schemas.android.com/tools" _xmlns:yt="http://schemas.android.com/apk/res-auto" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.libraries.youtube.share.ui.ActivityIndicatorFrameLayout android:id="@id/activity_indicator" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/contents" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="4.0dip" android:navigationContentDescription="@string/accessibility_back" style="@style/ConnectionToolbars" />
+            <android.support.v7.widget.RecyclerView android:id="@id/list" android:background="@android:color/white" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:overScrollMode="never" />
+            <View android:id="@id/list_bottom_sheet_padding" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+        </LinearLayout>
+    </com.google.android.libraries.youtube.share.ui.ActivityIndicatorFrameLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:paddingTop="3.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/select_message_view" android:visibility="invisible" layout="@layout/share_panel_select_message" />
+        <include android:id="@id/message_input_view" android:visibility="invisible" layout="@layout/message_input_section_v15" />
+    </LinearLayout>
+    <com.google.android.libraries.quantum.fab.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/send_button" android:visibility="gone" android:layout_width="@dimen/quantum_fab_diameter_default" android:layout_height="@dimen/quantum_fab_diameter_default" android:layout_margin="@dimen/quantum_fab_edge_margin" android:src="@drawable/quantum_ic_send_white_24" android:contentDescription="@string/accessibility_send_share" res-auto:quantumFabColor="@color/quantum_googred500" xmlns:res-auto="http://schemas.android.com/apk/res-auto" />
+    <com.google.android.libraries.quantum.snackbar.Snackbar android:layout_gravity="bottom" android:id="@id/snackbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

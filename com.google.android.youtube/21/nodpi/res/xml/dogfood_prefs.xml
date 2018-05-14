@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:key="media_network_activation_type" android:defaultValue="0" />
+    <PreferenceScreen android:title="Backend settings">
+        <ListPreference android:title="@string/pref_developer_innertube_backend_title" android:key="ApiaryHostSelection" android:summary="@string/pref_developer_innertube_backend_summary" android:defaultValue="0" />
+        <ListPreference android:title="@string/pref_developer_payment_environment_title" android:key="InnerTubeApiSelection" android:summary="@string/pref_developer_payment_environment_summary" android:defaultValue="0" />
+        <ListPreference android:title="@string/pref_developer_mdx_host_title" android:key="MdxServerSelection" android:summary="@string/pref_developer_mdx_host_summary" android:defaultValue="0" />
+    </PreferenceScreen>
+    <EditTextPreference android:digits="0123456789, " android:key="experiment_ids" android:defaultValue="" android:inputType="number" />
+    <EditTextPreference android:key="experiment_flags" android:defaultValue="" android:inputType="textNoSuggestions" />
+    <Preference android:key="experiments_token" />
+    <Preference android:key="refresh_innertube_config" />
+    <EditTextPreference android:digits="0123456789." android:key="innertube_override_version" android:defaultValue="" />
+    <EditTextPreference android:key="innertube_promo_id" android:defaultValue="" android:inputType="textNoSuggestions" />
+    <Preference android:key="clear_visitor_id" />
+    <Preference android:key="copy_visitor_id" />
+    <ListPreference android:enabled="false" android:key="internal_geo" />
+    <PreferenceScreen android:title="Uploads">
+        <SwitchPreference android:key="com.google.android.libraries.youtube.upload.pref.force_enable_cronet" android:defaultValue="false" />
+        <SwitchPreference android:key="com.google.android.libraries.youtube.upload.pref.force_enable_cronet_async" android:defaultValue="false" />
+        <SwitchPreference android:key="com.google.android.libraries.youtube.upload.pref.force_enable_cronet_quic" android:defaultValue="false" />
+        <SwitchPreference android:key="com.google.android.libraries.youtube.upload.pref.force_enable_cronet_http2" android:defaultValue="false" />
+        <SwitchPreference android:key="com.google.android.libraries.youtube.upload.pref.force_enable_in_app_camera" android:defaultValue="false" />
+        <SwitchPreference android:key="com.google.android.libraries.youtube.upload.pref.force_enable_streaming_upload" android:defaultValue="false" />
+        <SwitchPreference android:key="com.google.android.libraries.youtube.upload.pref.force_enable_predictive_processing" android:defaultValue="false" />
+        <SwitchPreference android:key="com.google.android.libraries.youtube.upload.pref.force_enable_foreground_notification" android:defaultValue="false" />
+        <SwitchPreference android:key="enable_upload_video_editing" android:defaultValue="false" />
+        <SwitchPreference android:key="enable_upload_audio_swap" android:defaultValue="false" />
+        <SwitchPreference android:key="enable_upload_filters" android:defaultValue="false" />
+        <ListPreference android:key="camera_audio_source" android:defaultValue="0" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Suggest">
+        <SwitchPreference android:key="dogfood_suggest_log_requests" android:defaultValue="false" />
+        <SwitchPreference android:key="dogfood_suggest_log_responses" android:defaultValue="false" />
+        <EditTextPreference android:key="dogfood_suggest_client_name_override" android:defaultValue="" android:inputType="textNoSuggestions" />
+        <EditTextPreference android:key="dogfood_suggest_host_override" android:defaultValue="" android:inputType="textNoSuggestions" />
+        <EditTextPreference android:key="dogfood_suggest_response_override" android:defaultValue="" android:inputType="textNoSuggestions" />
+        <EditTextPreference android:key="dogfood_suggest_sugexp_override" android:defaultValue="" android:inputType="textNoSuggestions" />
+        <SwitchPreference android:key="dogfood_suggest_send_visitor_id_signed_out" android:defaultValue="false" />
+    </PreferenceScreen>
+    <SwitchPreference android:title="Force-enable Sticky Browsy Bars in Search Results" android:key="force_enable_sticky_browsy_bars" android:defaultValue="false" />
+    <SwitchPreference android:key="bypass_rate_limit" android:defaultValue="false" />
+    <EditTextPreference android:persistent="false" android:title="@string/pref_developer_mdx_debug_command_title" android:key="MdxDebugCommand" android:defaultValue="" />
+    <PreferenceScreen android:title="Ads">
+        <Preference android:title="@string/pref_developer_online_ads_title" android:key="OnlineAd" android:summary="@string/pref_developer_online_ads_summary" />
+    </PreferenceScreen>
+</PreferenceScreen>

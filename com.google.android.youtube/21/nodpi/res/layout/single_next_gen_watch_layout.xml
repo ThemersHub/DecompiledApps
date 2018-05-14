@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.youtube.app.watch.nextgenwatch.ui.NextGenWatchContainerLayout android:id="@id/next_gen_watch_container_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" res-auto:scrimViewId="@id/scrim_view" res-auto:watchLayoutViewId="@id/next_gen_watch_layout" _xmlns:android="http://schemas.android.com/apk/res/android" _xmlns:yt="http://schemas.android.com/apk/res-auto" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:res-auto="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/watch_while_layout_coordinator_layout" />
+    <View android:id="@id/scrim_view" android:background="#70000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.youtube.app.watch.nextgenwatch.ui.NextGenWatchLayout android:id="@id/next_gen_watch_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" res-auto:playerViewId="@id/watch_player" res-auto:playerControlsViewId="@id/player_controls_view_stub" res-auto:playerControlsTimeBarId="@id/player_controls_time_bar_view_stub" res-auto:metadataViewId="@id/video_metadata_layout">
+        <include layout="@layout/watch_player" />
+        <FrameLayout android:id="@id/video_metadata_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/player_controls_view_stub" android:layout="@layout/floaty_bar_controls" android:inflatedId="@id/player_controls_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/player_controls_time_bar_view_stub" android:layout="@layout/floaty_bar_time_bar" android:inflatedId="@id/player_controls_time_bar_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.google.android.apps.youtube.app.watch.nextgenwatch.ui.NextGenWatchLayout>
+</com.google.android.apps.youtube.app.watch.nextgenwatch.ui.NextGenWatchContainerLayout>

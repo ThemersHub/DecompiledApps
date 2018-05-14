@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.libraries.youtube.common.ui.AccessibilityLayerLayout android:id="@id/accessibility_layer_container" android:layout_width="fill_parent" android:layout_height="fill_parent" res-auto:backgroundViewId="@id/watch_while_layout" res-auto:footerViewId="@id/pivot_bar_container" _xmlns:android="http://schemas.android.com/apk/res/android" _xmlns:yt="http://schemas.android.com/apk/res-auto" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:res-auto="http://schemas.android.com/apk/res-auto">
+    <ViewStub android:id="@id/watch_ui_layout_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/mdx_fragment_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.youtube.app.common.ui.bottomui.BottomUiContainer android:layout_gravity="bottom|center" android:id="@id/bottom_ui_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/include_memory_monitor" />
+    <LinearLayout android:layout_gravity="bottom|center" android:orientation="vertical" android:id="@id/pivot_bar_container" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CompatElevationZ8">
+        <View android:background="@color/compat_elevation_shadow_compat" android:focusable="false" android:layout_width="fill_parent" android:layout_height="@dimen/compat_elevation_shadow_height" />
+        <com.google.android.apps.youtube.app.ui.PivotTabsBar android:gravity="bottom|center" android:id="@id/pivot_bar" android:background="?ytBackground1" android:layout_width="fill_parent" android:layout_height="?actionBarSize" res-auto:background_dark="@color/almost_black_color" res-auto:tab_content_color="?ytUnselectedNavIcon" res-auto:tab_content_color_dark="@color/pivot_bar_content_tab_dark" res-auto:tab_highlight_color="?ytSelectedNavIcon" res-auto:tab_highlight_color_dark="?ytStaticWhite" res-auto:text_highlight_color="?ytSelectedNavText" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/interstitials_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CompatElevationZ12" />
+</com.google.android.libraries.youtube.common.ui.AccessibilityLayerLayout>

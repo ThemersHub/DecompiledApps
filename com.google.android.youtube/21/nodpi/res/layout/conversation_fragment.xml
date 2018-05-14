@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" _xmlns:android="http://schemas.android.com/apk/res/android" _xmlns:tools="http://schemas.android.com/tools" _xmlns:yt="http://schemas.android.com/apk/res-auto" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/conversation_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/conversation_reply_container">
+        <include android:id="@id/pending_chat_members" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/pending_chat_members" />
+        <include android:id="@id/name_your_group" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/name_your_group" />
+        <ViewStub android:id="@id/conversation_list_stub" android:inflatedId="@id/conversation_list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <include android:id="@id/loading_progress_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/conversation_loading_progress_bar" />
+        <ViewStub android:id="@id/load_error_stub" android:layout="@layout/conversation_load_error" android:inflatedId="@id/load_error" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <com.google.android.libraries.youtube.conversation.ui.StickyPlayerContainer android:id="@id/conversation_sticky_player" android:layout_width="fill_parent" android:layout_height="wrap_content" res-auto:swipeToDismissThreshold="88.0dip" xmlns:res-auto="http://schemas.android.com/apk/res-auto" />
+    <LinearLayout android:orientation="vertical" android:id="@id/conversation_reply_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:elevation="8.0dip">
+        <View android:id="@id/shadow" android:background="@color/conversation_reply_shadow_compat" android:layout_width="fill_parent" android:layout_height="@dimen/conversation_reply_shadow_height" />
+        <include android:id="@id/conversation_reply_wrapper" android:layout_width="fill_parent" android:layout_height="@dimen/conversation_reply_view_init_height" layout="@layout/conversation_reply_view" />
+    </LinearLayout>
+    <View android:id="@id/chat_version" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</RelativeLayout>

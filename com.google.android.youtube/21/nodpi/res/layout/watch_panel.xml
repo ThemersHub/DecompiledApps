@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/watch_panel" android:layout_width="fill_parent" android:layout_height="fill_parent" _xmlns:android="http://schemas.android.com/apk/res/android" _xmlns:yt="http://schemas.android.com/apk/res-auto" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.libraries.youtube.common.ui.LoadingFrameLayout android:id="@id/video_info_loading_layout" android:background="?ytBackground1" android:layout_width="fill_parent" android:layout_height="fill_parent" res-auto:progressViewLayout="@layout/video_info_loading_preview" xmlns:res-auto="http://schemas.android.com/apk/res-auto">
+            <android.support.v7.widget.RecyclerView android:id="@id/watch_list" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:smoothScrollbar="false" />
+        </com.google.android.libraries.youtube.common.ui.LoadingFrameLayout>
+        <View android:id="@id/scrim" android:background="#88000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include android:id="@id/set_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/watch_panel_playlist_header_height" layout="@layout/set_list" />
+        <include android:layout_gravity="top" android:id="@id/set_bar" android:layout_width="fill_parent" android:layout_height="@dimen/watch_panel_playlist_header_height" layout="@layout/set_bar" />
+        <RelativeLayout android:id="@id/engagement_panel" android:background="?ytBackground1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/live_chat_view_stub" android:layout="@layout/live_chat_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/conversation_live_chat_shadow_negative_height" />
+        <ViewStub android:id="@id/info_cards_drawer" android:layout="@layout/watch_next_info_card_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

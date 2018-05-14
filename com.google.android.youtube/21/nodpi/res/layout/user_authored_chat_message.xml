@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:baselineAligned="false" _xmlns:android="http://schemas.android.com/apk/res/android" _xmlns:yt="http://schemas.android.com/apk/res-auto" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/author_avatar_container" android:background="?selectableItemBackground" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip">
+        <com.google.android.libraries.youtube.share.ui.ContactImageHolder android:layout_gravity="center" android:id="@id/author_avatar" android:layout_width="@dimen/chat_message_author_avatar_size" android:layout_height="@dimen/chat_message_author_avatar_size" android:contentDescription="@string/accessibility_chat_message_author" />
+    </FrameLayout>
+    <Space android:layout_width="12.0dip" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:minHeight="@dimen/chat_message_author_avatar_size" android:layout_weight="1.0">
+        <com.google.android.libraries.youtube.conversation.ui.ConversationRoundedLinearLayout android:orientation="vertical" android:id="@id/bubble" android:background="@color/chat_message_bubble_background_other_author" android:layout_width="wrap_content" android:layout_height="wrap_content" res-auto:sharpCorners="4.0dip" res-auto:corners="16.0dip" xmlns:res-auto="http://schemas.android.com/apk/res-auto">
+            <ViewStub android:id="@id/inside_bubble_stub" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <include layout="@layout/chat_message_face_pile" />
+        </com.google.android.libraries.youtube.conversation.ui.ConversationRoundedLinearLayout>
+        <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?textAppearanceCaption" android:id="@id/author_name" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?textAppearanceCaption" android:textColor="?ytTextError" android:gravity="center_vertical" android:layout_gravity="end" android:id="@id/error_retry" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:text="@string/send_failed_tap_to_retry" android:drawableRight="@drawable/quantum_ic_error_red_24" android:drawablePadding="8.0dip" android:contentDescription="@string/send_failed_tap_to_retry" android:drawableEnd="@drawable/quantum_ic_error_red_24" />
+    </LinearLayout>
+    <Space android:layout_width="12.0dip" android:layout_height="1.0dip" />
+    <com.google.android.libraries.youtube.conversation.ui.HeartView android:id="@id/heart_button" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" android:minWidth="56.0dip" android:minHeight="56.0dip" />
+    <Space android:layout_width="12.0dip" android:layout_height="1.0dip" />
+</LinearLayout>

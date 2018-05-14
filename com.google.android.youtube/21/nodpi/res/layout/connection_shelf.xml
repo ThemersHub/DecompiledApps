@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/connection_shelf" android:layout_width="fill_parent" android:layout_height="wrap_content" _xmlns:android="http://schemas.android.com/apk/res/android" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/top_divider" android:background="@color/connection_shelf_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/connection_shelf_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip">
+        <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?textAppearanceSubhead" android:textColor="?android:textColorSecondary" android:ellipsize="end" android:gravity="start" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:maxLines="1" android:layout_weight="1.0" />
+        <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textAppearance="?textAppearanceButton" android:textColor="@color/quantum_googblue" android:id="@id/link" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_marginEnd="16.0dip" />
+        <ImageView android:id="@id/dismiss_button" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:contentDescription="@string/dismiss" android:layout_marginEnd="12.0dip" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/connections_list" android:paddingLeft="@dimen/connection_shelf_item_margin" android:paddingRight="@dimen/connection_shelf_item_margin" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:overScrollMode="never" />
+    <View android:id="@id/bottom_divider" android:background="@color/connection_shelf_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

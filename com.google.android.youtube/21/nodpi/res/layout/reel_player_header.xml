@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/reel_header_group" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.libraries.youtube.common.ui.CircularImageView android:id="@id/reel_channel_thumbnail" android:layout_width="@dimen/reel_avatar_size" android:layout_height="@dimen/reel_avatar_size" android:scaleType="centerCrop" android:layout_alignParentTop="true" android:layout_marginEnd="@dimen/reel_title_group_margin" android:layout_alignParentStart="true" />
+    <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textSize="@dimen/reel_primary_font_size" android:textColor="@color/reel_primary_text_color" android:ellipsize="end" android:id="@id/reel_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_alignTop="@id/reel_channel_thumbnail" android:contentDescription="@null" android:layout_toEndOf="@id/reel_channel_thumbnail" />
+    <TableLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:shrinkColumns="0" android:layout_below="@id/reel_title" android:layout_toEndOf="@id/reel_channel_thumbnail">
+        <TableRow>
+            <TextView android:textSize="@dimen/reel_secondary_font_size" android:textColor="@color/reel_secondary_text_color" android:ellipsize="marquee" android:id="@id/reel_channel_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:contentDescription="@null" />
+            <TextView android:textSize="@dimen/reel_secondary_font_size" android:textColor="@color/reel_secondary_text_color" android:id="@id/reel_timestamp_separator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reel_timestamp_separator" android:maxLines="1" android:contentDescription="@null" android:layout_marginStart="@dimen/reel_title_separator_margin" android:layout_marginEnd="@dimen/reel_title_separator_margin" />
+            <TextView android:textSize="@dimen/reel_secondary_font_size" android:textColor="@color/reel_secondary_text_color" android:id="@id/reel_timestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:contentDescription="@null" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
