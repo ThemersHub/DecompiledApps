@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/setting_suggestion_and_correction_title" android:key="@string/setting_suggestion_key"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="true" android:title="@string/setting_intelligent_correction_title" android:key="@string/pref_key_enable_spatial_model" android:summary="@string/setting_intelligent_correction_summary" />
+    <CheckBoxPreference android:persistent="true" android:title="@string/setting_show_suggestion_title" android:key="@string/pref_key_korean_show_suggestion" android:summary="@string/setting_show_suggestion_summary" />
+    <CheckBoxPreference android:persistent="true" android:title="@string/setting_auto_correction_title" android:key="@string/pref_key_spell_correction" android:summary="@string/setting_auto_correction_summary" android:dependency="@string/pref_key_korean_show_suggestion" />
+    <CheckBoxPreference android:persistent="true" android:title="@string/setting_korean_mend_consonant_conflict_title" android:key="@string/pref_key_korean_mend_consonant_conflict" android:summary="@string/setting_korean_mend_consonant_conflict_summary" />
+    <CheckBoxPreference android:persistent="true" android:title="@string/setting_gesture_input_title" android:key="@string/pref_key_enable_gesture_input" android:summary="@string/setting_gesture_input_summary" />
+    <CheckBoxPreference android:persistent="true" android:title="@string/setting_gesture_input_preview_title" android:key="@string/pref_key_enable_incremental_gesture_input" android:summary="@string/setting_gesture_input_preview_summary" android:dependency="@string/pref_key_enable_gesture_input" />
+</PreferenceScreen>

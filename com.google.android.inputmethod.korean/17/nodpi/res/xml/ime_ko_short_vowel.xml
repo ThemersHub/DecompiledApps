@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <ime string_id="@string/string_id_korean_short_vowel" class="com.google.android.apps.inputmethod.libs.framework.ime.AsyncProcessorBasedIme" keyevent_interpreter="com.google.android.apps.inputmethod.korean.ime.KoreanKeyEventInterpreter" language="@string/korean_language_id" inline_composing="true" label="@string/korean_short_vowel_ime_label" display_app_completions="true">
+        <keyboard_group>
+            <keyboard type="prime" def="@xml/keyboard_ko_short_vowel" />
+            <keyboard type="symbol" def="@xml/keyboard_non_prime_symbol" />
+            <keyboard type="smiley" def="@xml/keyboard_non_prime_smiley" />
+            <keyboard type="digit" def="@xml/keyboard_non_prime_digit" />
+            <keyboard type="emoticon" def="@xml/keyboard_non_prime_emoticon" />
+        </keyboard_group>
+        <extra_values>
+            <item id="@id/extra_value_period" value=". " />
+            <item id="@id/extra_value_show_suggestion_pref_key" value="@string/pref_key_korean_show_suggestion" />
+        </extra_values>
+        <include href="@xml/processors_ko" />
+    </ime>
+</framework>

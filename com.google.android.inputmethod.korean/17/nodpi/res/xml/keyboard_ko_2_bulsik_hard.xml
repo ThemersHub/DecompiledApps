@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <keyboard id="@id/keyboard_ko_2_bulsik_hard" class=".libs.framework.keyboard.PrimeKeyboard" initial_states="NO_MICROPHONE" session_states="SHIFT_LOCK">
+        <view layout="@layout/keyboard_hard_header" scalable="false" type="header">
+            <softkeys href="@xml/softkeys_header_prime" />
+            <softkeys href="@xml/softkeys_header_candidates" />
+            <softkeys href="@xml/softkeys_function" />
+            <include href="@xml/keymapping_header_candidates" />
+            <include href="@xml/keymapping_header_hard_ko" />
+        </view>
+        <view layout="@layout/keyboard_hard_body" type="body" always_show="false">
+            <softkeys href="@xml/softkeys_function" />
+            <softkeys href="@xml/softkeys_body_candidates" />
+            <include href="@xml/keymapping_body_candidates" />
+        </view>
+    </keyboard>
+</framework>

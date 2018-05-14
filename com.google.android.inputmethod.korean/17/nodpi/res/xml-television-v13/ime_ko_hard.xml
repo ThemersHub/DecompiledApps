@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <ime string_id="korean_for_tv" class="com.google.android.apps.inputmethod.libs.framework.ime.ProcessorBasedIme" keyevent_interpreter="com.google.android.apps.inputmethod.korean.ime.KoreanKeyEventInterpreter" language="@string/korean_language_id" inline_composing="true" prime_keyboard_type="HARD_QWERTY" label="@string/korean_2_bulsik_ime_label" display_app_completions="true">
+        <keyboard_group>
+            <keyboard type="prime" def="@xml/keyboard_ko" />
+        </keyboard_group>
+        <extra_values>
+            <item id="@id/extra_value_force_display_app_completions" value="true" />
+            <item id="@id/extra_value_period" value=". " />
+            <item id="@id/extra_value_show_suggestion_pref_key" value="@string/pref_key_korean_show_suggestion" />
+        </extra_values>
+        <include href="@xml/processors_ko" />
+    </ime>
+</framework>
