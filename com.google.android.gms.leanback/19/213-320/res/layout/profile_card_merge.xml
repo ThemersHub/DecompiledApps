@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.smart_profile.card.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Theme.Profile.CardStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/profile_merge_outer_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/profile_card_title_view_simple" />
+        <include layout="@layout/profile_card_line_separator" />
+        <LinearLayout android:orientation="vertical" android:id="@id/profile_merge_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <RelativeLayout android:padding="@dimen/profile_card_merge_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="@dimen/profile_card_expanding_entry_header_text_size" android:id="@id/profile_merge_dismiss_button" android:padding="@dimen/profile_card_merge_button_padding" android:layout_width="wrap_content" android:layout_height="@dimen/profile_card_merge_button_height" android:minWidth="@dimen/profile_card_merge_button_min_width" android:text="@string/common_dismiss" android:layout_alignParentTop="true" android:layout_marginEnd="@dimen/profile_card_merge_margin" android:layout_toStartOf="@id/profile_merge_accept_button" style="?android:attr/borderlessButtonStyle" />
+            <Button android:textSize="@dimen/profile_card_expanding_entry_header_text_size" android:id="@id/profile_merge_accept_button" android:padding="@dimen/profile_card_merge_button_padding" android:layout_width="wrap_content" android:layout_height="@dimen/profile_card_merge_button_height" android:minWidth="@dimen/profile_card_merge_button_min_width" android:text="@string/profile_merge_accept" android:layout_alignParentTop="true" android:textAlignment="center" android:layout_alignParentEnd="true" style="?android:attr/borderlessButtonStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/profile_merge_progress_bar" android:background="@color/profile_merge_progress_bar_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="@dimen/profile_card_merge_progress_background_alpha">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:attr/progressBarStyle" />
+    </FrameLayout>
+</com.google.android.gms.smart_profile.card.CardView>

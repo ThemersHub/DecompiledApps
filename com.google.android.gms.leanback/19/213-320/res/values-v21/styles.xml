@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AlertThemeSelector" parent="@style/common.Theme.GoogleSettings.Dialog">
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="ApdlNotificationTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+    <style name="AsHatsLibPromptTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:colorControlNormal">#ff9b9b9b</item>
+        <item name="android:colorControlActivated">#ff4285f4</item>
+        <item name="android:colorPrimaryDark">@android:color/transparent</item>
+    </style>
+    <style name="AsMgAppTheme" parent="@style/AsMgAppBaseTheme">
+        <item name="android:colorPrimaryDark">@color/google_grey500</item>
+    </style>
+    <style name="AsSelectableItem" parent="@style/common.Widget.SelectableItem" />
+    <style name="AuthConsentActionButton" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/auth_action_button_text_color</item>
+        <item name="android:background">@drawable/audience_auth_btn_material</item>
+        <item name="android:paddingLeft">12.0dip</item>
+        <item name="android:paddingRight">12.0dip</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat" parent="@android:style/TextAppearance.Material" />
+    <style name="Base.TextAppearance.AppCompat.Body1" parent="@android:style/TextAppearance.Material.Body1" />
+    <style name="Base.TextAppearance.AppCompat.Body2" parent="@android:style/TextAppearance.Material.Body2" />
+    <style name="Base.TextAppearance.AppCompat.Button" parent="@android:style/TextAppearance.Material.Button" />
+    <style name="Base.TextAppearance.AppCompat.Caption" parent="@android:style/TextAppearance.Material.Caption" />
+    <style name="Base.TextAppearance.AppCompat.Display1" parent="@android:style/TextAppearance.Material.Display1" />
+    <style name="Base.TextAppearance.AppCompat.Headline" parent="@android:style/TextAppearance.Material.Headline" />
+    <style name="Base.TextAppearance.AppCompat.Inverse" parent="@android:style/TextAppearance.Material.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Large" parent="@android:style/TextAppearance.Material.Large" />
+    <style name="Base.TextAppearance.AppCompat.Large.Inverse" parent="@android:style/TextAppearance.Material.Large.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Medium" parent="@android:style/TextAppearance.Material.Medium" />
+    <style name="Base.TextAppearance.AppCompat.Medium.Inverse" parent="@android:style/TextAppearance.Material.Medium.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Menu" parent="@android:style/TextAppearance.Material.Menu" />
+    <style name="Base.TextAppearance.AppCompat.SearchResult.Subtitle" parent="@android:style/TextAppearance.Material.SearchResult.Subtitle" />
+    <style name="Base.TextAppearance.AppCompat.SearchResult.Title" parent="@android:style/TextAppearance.Material.SearchResult.Title" />
+    <style name="Base.TextAppearance.AppCompat.Small" parent="@android:style/TextAppearance.Material.Small" />
+    <style name="Base.TextAppearance.AppCompat.Small.Inverse" parent="@android:style/TextAppearance.Material.Small.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Subhead" parent="@android:style/TextAppearance.Material.Subhead" />
+    <style name="Base.TextAppearance.AppCompat.Title" parent="@android:style/TextAppearance.Material.Title" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionMode.Subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionMode.Subtitle" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionMode.Title" parent="@android:style/TextAppearance.Material.Widget.ActionMode.Title" />
+    <style name="Base.TextAppearance.AppCompat.Widget.Button" parent="@android:style/TextAppearance.Material.Widget.Button" />
+    <style name="Base.TextAppearance.AppCompat.Widget.PopupMenu.Header" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/abc_text_size_menu_header_material</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:fontFamily">@string/abc_font_family_title_material</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat.Widget.PopupMenu.Large" parent="@android:style/TextAppearance.Material.Widget.PopupMenu.Large" />
+    <style name="Base.TextAppearance.AppCompat.Widget.PopupMenu.Small" parent="@android:style/TextAppearance.Material.Widget.PopupMenu.Small" />
+    <style name="Base.TextAppearance.AppCompat.Widget.Switch" parent="@android:style/TextAppearance.Material.Button" />
+    <style name="Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem" parent="@android:style/TextAppearance.Material.Widget.TextView.SpinnerItem" />
+    <style name="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle" />
+    <style name="Base.TextAppearance.Widget.AppCompat.Toolbar.Title" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title" />
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V21.Theme.AppCompat" />
+    <style name="Base.Theme.AppCompat.Dialog" parent="@style/Base.V21.Theme.AppCompat.Dialog" />
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V21.Theme.AppCompat.Light" />
+    <style name="Base.Theme.AppCompat.Light.Dialog" parent="@style/Base.V21.Theme.AppCompat.Light.Dialog" />
+    <style name="Base.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.V21.ThemeOverlay.AppCompat.Dialog" />
+    <style name="Base.Widget.AppCompat.ActionBar.TabText" parent="@android:style/Widget.Material.ActionBar.TabText" />
+    <style name="Base.Widget.AppCompat.ActionBar.TabView" parent="@android:style/Widget.Material.ActionBar.TabView" />
+    <style name="Base.Widget.AppCompat.ActionButton" parent="@android:style/Widget.Material.ActionButton" />
+    <style name="Base.Widget.AppCompat.ActionButton.CloseMode" parent="@android:style/Widget.Material.ActionButton.CloseMode">
+        <item name="android:minWidth">56.0dip</item>
+    </style>
+    <style name="Base.Widget.AppCompat.ActionButton.Overflow" parent="@android:style/Widget.Material.ActionButton.Overflow" />
+    <style name="Base.Widget.AppCompat.AutoCompleteTextView" parent="@android:style/Widget.Material.AutoCompleteTextView">
+        <item name="android:background">?editTextBackground</item>
+    </style>
+    <style name="Base.Widget.AppCompat.Button" parent="@android:style/Widget.Material.Button" />
+    <style name="Base.Widget.AppCompat.Button.Borderless" parent="@android:style/Widget.Material.Button.Borderless" />
+    <style name="Base.Widget.AppCompat.Button.Borderless.Colored" parent="@android:style/Widget.Material.Button.Borderless.Colored">
+        <item name="android:textColor">@color/abc_btn_colored_borderless_text_material</item>
+    </style>
+    <style name="Base.Widget.AppCompat.Button.Small" parent="@android:style/Widget.Material.Button.Small" />
+    <style name="Base.Widget.AppCompat.ButtonBar" parent="@android:style/Widget.Material.ButtonBar" />
+    <style name="Base.Widget.AppCompat.CompoundButton.CheckBox" parent="@android:style/Widget.Material.CompoundButton.CheckBox" />
+    <style name="Base.Widget.AppCompat.CompoundButton.RadioButton" parent="@android:style/Widget.Material.CompoundButton.RadioButton" />
+    <style name="Base.Widget.AppCompat.DropDownItem.Spinner" parent="@android:style/Widget.Material.DropDownItem.Spinner" />
+    <style name="Base.Widget.AppCompat.EditText" parent="@android:style/Widget.Material.EditText">
+        <item name="android:background">?editTextBackground</item>
+    </style>
+    <style name="Base.Widget.AppCompat.ImageButton" parent="@android:style/Widget.Material.ImageButton" />
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabText" parent="@android:style/Widget.Material.Light.ActionBar.TabText" />
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabView" parent="@android:style/Widget.Material.Light.ActionBar.TabView" />
+    <style name="Base.Widget.AppCompat.Light.PopupMenu" parent="@android:style/Widget.Material.Light.PopupMenu" />
+    <style name="Base.Widget.AppCompat.Light.PopupMenu.Overflow" parent="@style/Base.Widget.AppCompat.Light.PopupMenu">
+        <item name="android:dropDownHorizontalOffset">-4.0dip</item>
+        <item name="android:overlapAnchor">true</item>
+    </style>
+    <style name="Base.Widget.AppCompat.ListPopupWindow" parent="@android:style/Widget.Material.ListPopupWindow" />
+    <style name="Base.Widget.AppCompat.ListView" parent="@android:style/Widget.Material.ListView" />
+    <style name="Base.Widget.AppCompat.ListView.DropDown" parent="@android:style/Widget.Material.ListView.DropDown" />
+    <style name="Base.Widget.AppCompat.ListView.Menu" parent="@style/Base.Widget.AppCompat.ListView" />
+    <style name="Base.Widget.AppCompat.PopupMenu" parent="@android:style/Widget.Material.PopupMenu" />
+    <style name="Base.Widget.AppCompat.PopupMenu.Overflow" parent="@style/Base.Widget.AppCompat.PopupMenu">
+        <item name="android:dropDownHorizontalOffset">-4.0dip</item>
+        <item name="android:overlapAnchor">true</item>
+    </style>
+    <style name="Base.Widget.AppCompat.ProgressBar" parent="@android:style/Widget.Material.ProgressBar" />
+    <style name="Base.Widget.AppCompat.ProgressBar.Horizontal" parent="@android:style/Widget.Material.ProgressBar.Horizontal" />
+    <style name="Base.Widget.AppCompat.RatingBar" parent="@android:style/Widget.Material.RatingBar" />
+    <style name="Base.Widget.AppCompat.SeekBar" parent="@android:style/Widget.Material.SeekBar" />
+    <style name="Base.Widget.AppCompat.Spinner" parent="@android:style/Widget.Material.Spinner" />
+    <style name="Base.Widget.AppCompat.TextView.SpinnerItem" parent="@android:style/Widget.Material.TextView.SpinnerItem" />
+    <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="@android:style/Widget.Material.Toolbar.Button.Navigation" />
+    <style name="CaptchaActivity" parent="@style/auth_minutemaid_theme_material">
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+    <style name="CardStyle">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:elevation">2.0dip</item>
+    </style>
+    <style name="CredentialPickerButton" parent="@android:style/Widget.Material.Button.Borderless">
+        <item name="android:textAppearance">@style/CredentialsTypographyButton</item>
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:paddingRight">8.0dip</item>
+        <item name="android:minWidth">88.0dip</item>
+        <item name="android:minHeight">44.0dip</item>
+    </style>
+    <style name="CredentialPickerButtonPrimary" parent="@android:style/Widget.Material.Button">
+        <item name="android:textAppearance">@style/CredentialsTypographyButton</item>
+        <item name="android:textColor">@color/credentials_white_alpha_87</item>
+        <item name="android:background">@drawable/credential_button_primary_ripple</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:minWidth">88.0dip</item>
+        <item name="android:minHeight">44.0dip</item>
+    </style>
+    <style name="CredentialsTypographyButton" parent="@style/CredentialsTypographyBase">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="DiscoveryHeroProgressBar" parent="@android:style/Widget.Material.ProgressBar">
+        <item name="android:indeterminateTint">@color/list_item_hero_image_progress_bar</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+    </style>
+    <style name="DiscoveryTransparentActivityStyle" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    <style name="LocationHistoryTealHeaderColor">
+        <item name="android:textColor">?android:colorAccent</item>
+    </style>
+    <style name="LoginActivity" parent="@style/auth_minutemaid_theme_material">
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:actionBarStyle">@style/AccountIntroActionBarStyle</item>
+    </style>
+    <style name="LoginActivityTask" parent="@style/auth_minutemaid_theme_material" />
+    <style name="MaterialBodyTextAppearance" parent="@android:style/TextAppearance.Material.Body1" />
+    <style name="MaterialSubheadTextAppearance" parent="@android:style/TextAppearance.Material.Subhead" />
+    <style name="NearbySetup.WifiConsentDialog.Icon" parent="@style/NearbySetup.WifiConsentDialog">
+        <item name="android:tint">?android:colorAccent</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="NoTitleInXL" parent="@style/auth_minutemaid_theme_material" />
+    <style name="PeopleButton.Borderless" parent="@android:style/Widget.Material.Light.Button.Borderless" />
+    <style name="PeopleDialogTheme" parent="@android:style/Theme.Material.Light.Dialog" />
+    <style name="Platform.AppCompat" parent="@style/Platform.V21.AppCompat" />
+    <style name="Platform.AppCompat.Light" parent="@style/Platform.V21.AppCompat.Light" />
+    <style name="Platform.ThemeOverlay.AppCompat" parent="">
+        <item name="android:colorControlNormal">?colorControlNormal</item>
+        <item name="android:colorControlActivated">?colorControlActivated</item>
+        <item name="android:colorButtonNormal">?colorButtonNormal</item>
+        <item name="android:colorControlHighlight">?colorControlHighlight</item>
+        <item name="android:colorPrimary">?colorPrimary</item>
+        <item name="android:colorPrimaryDark">?colorPrimaryDark</item>
+        <item name="android:colorAccent">?colorAccent</item>
+    </style>
+    <style name="Platform.ThemeOverlay.AppCompat.Dark" parent="@style/Platform.ThemeOverlay.AppCompat" />
+    <style name="Platform.ThemeOverlay.AppCompat.Light" parent="@style/Platform.ThemeOverlay.AppCompat" />
+    <style name="SmartDevice.SUW.Text.PinCode" parent="@style/SmartDevice.TextAppearance.Title">
+        <item name="android:textSize">@dimen/smartdevice_text_size_display_2</item>
+        <item name="android:fontFamily">google-sans</item>
+        <item name="android:letterSpacing">@dimen/smartdevice_pin_code_letter_spacing</item>
+    </style>
+    <style name="SmartDevice.Widget.ProgressBar.Large" parent="@android:style/Widget.Material.ProgressBar.Large" />
+    <style name="SmartDevice.Widget.ProgressBar.Large.Inverse" parent="@android:style/Widget.Material.Light.ProgressBar.Large.Inverse" />
+    <style name="SuwEditText" parent="@android:style/Widget.Material.EditText">
+        <item name="android:background">@drawable/suw_edittext_bg</item>
+        <item name="android:minHeight">@dimen/suw_edit_text_min_height</item>
+    </style>
+    <style name="SuwGlifButton.Secondary" parent="@style/Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:theme">@style/SuwGlifButton.Secondary</item>
+        <item name="android:buttonStyle">@style/SuwGlifButton.Secondary</item>
+        <item name="android:paddingLeft">@dimen/suw_glif_button_padding</item>
+        <item name="android:paddingRight">@dimen/suw_glif_button_padding</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:textAllCaps">?suwButtonAllCaps</item>
+        <item name="android:fontFamily">?suwButtonFontFamily</item>
+        <item name="android:colorControlHighlight">@color/suw_flat_button_highlight</item>
+        <item name="textAllCaps">?suwButtonAllCaps</item>
+        <item name="colorControlHighlight">@color/suw_flat_button_highlight</item>
+        <item name="buttonStyle">@style/SuwGlifButton.Secondary</item>
+    </style>
+    <style name="SuwGlifButton.Tertiary" parent="@style/SuwGlifButton.BaseTertiary">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="SuwGlifCardBackground">
+        <item name="android:background">?android:colorPrimary</item>
+    </style>
+    <style name="SuwGlifCardContainer">
+        <item name="android:background">?android:colorBackground</item>
+        <item name="android:elevation">@dimen/suw_glif_card_elevation</item>
+    </style>
+    <style name="SuwItemContainer">
+        <item name="android:paddingTop">@dimen/suw_items_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/suw_items_padding_vertical</item>
+        <item name="android:minHeight">?android:listPreferredItemHeight</item>
+        <item name="android:paddingStart">?android:listPreferredItemPaddingStart</item>
+        <item name="android:paddingEnd">?android:listPreferredItemPaddingEnd</item>
+    </style>
+    <style name="SuwItemSummary">
+        <item name="android:textAppearance">?android:textAppearanceListItemSmall</item>
+    </style>
+    <style name="SuwItemTitle">
+        <item name="android:textAppearance">?android:textAppearanceListItem</item>
+    </style>
+    <style name="SuwNavBarButtonStyle" parent="@android:style/Widget.Material.Button.Borderless">
+        <item name="android:textSize">@dimen/suw_navbar_text_size</item>
+        <item name="android:textColor">?suwNavBarTextColor</item>
+        <item name="android:background">?suwNavBarButtonBackground</item>
+        <item name="android:paddingLeft">@dimen/suw_navbar_button_padding_sides</item>
+        <item name="android:paddingRight">@dimen/suw_navbar_button_padding_sides</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="SuwNavBarThemeDark" parent="@style/SuwNavBarTheme">
+        <item name="suwNavBarBackgroundColor">@color/suw_navbar_bg_dark</item>
+        <item name="suwNavBarButtonBackground">@drawable/suw_navbar_btn_bg</item>
+    </style>
+    <style name="SuwNavBarThemeLight" parent="@style/SuwNavBarTheme">
+        <item name="suwNavBarBackgroundColor">@color/suw_navbar_bg_light</item>
+        <item name="suwNavBarButtonBackground">@drawable/suw_navbar_btn_bg</item>
+    </style>
+    <style name="SuwThemeGlif" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:colorBackground">@color/suw_glif_background_color_dark</item>
+        <item name="android:listPreferredItemHeight">@dimen/suw_items_preferred_height</item>
+        <item name="android:textColorLink">@color/suw_color_accent_glif_dark</item>
+        <item name="android:windowAnimationStyle">@style/Animation.SuwWindowAnimation</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:textAppearanceListItemSmall">?textAppearanceListItemSmall</item>
+        <item name="android:listPreferredItemPaddingStart">?suwMarginSides</item>
+        <item name="android:listPreferredItemPaddingEnd">?suwMarginSides</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:indeterminateTint">?colorControlActivated</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+        <item name="suwButtonAllCaps">true</item>
+        <item name="suwButtonCornerRadius">@dimen/suw_glif_button_corner_radius</item>
+        <item name="suwButtonFontFamily">sans-serif</item>
+        <item name="suwColorPrimary">?colorPrimary</item>
+        <item name="suwDividerInsetEnd">0.0dip</item>
+        <item name="suwDividerInsetStart">@dimen/suw_items_glif_icon_divider_inset</item>
+        <item name="suwDividerInsetStartNoIcon">@dimen/suw_items_glif_text_divider_inset</item>
+        <item name="suwFillContentLayoutStyle">@style/SuwFillContentLayout</item>
+        <item name="suwGlifHeaderGravity">start</item>
+        <item name="suwGlifIconStyle">@style/SuwGlifIcon</item>
+        <item name="suwItemDescriptionStyle">@style/SuwItemContainer.Description.Glif</item>
+        <item name="suwItemDescriptionTitleStyle">@style/SuwItemTitle.GlifDescription</item>
+        <item name="suwListItemIconColor">@color/suw_list_item_icon_color_dark</item>
+        <item name="suwMarginSides">@dimen/suw_glif_margin_sides</item>
+        <item name="suwScrollIndicators">bottom</item>
+        <item name="listPreferredItemPaddingLeft">?suwMarginSides</item>
+        <item name="listPreferredItemPaddingRight">?suwMarginSides</item>
+        <item name="textAppearanceListItem">@style/TextAppearance.SuwGlifItemTitle</item>
+        <item name="textAppearanceListItemSmall">@style/TextAppearance.SuwGlifItemSummary</item>
+        <item name="colorPrimary">?colorAccent</item>
+        <item name="colorAccent">@color/suw_color_accent_glif_dark</item>
+    </style>
+    <style name="SuwThemeGlif.Light" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorBackground">@color/suw_glif_background_color_light</item>
+        <item name="android:listPreferredItemHeight">@dimen/suw_items_preferred_height</item>
+        <item name="android:textColorLink">@color/suw_color_accent_glif_light</item>
+        <item name="android:windowAnimationStyle">@style/Animation.SuwWindowAnimation</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:textAppearanceListItemSmall">?textAppearanceListItemSmall</item>
+        <item name="android:listPreferredItemPaddingStart">?suwMarginSides</item>
+        <item name="android:listPreferredItemPaddingEnd">?suwMarginSides</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:indeterminateTint">?colorControlActivated</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+        <item name="suwButtonAllCaps">true</item>
+        <item name="suwButtonCornerRadius">@dimen/suw_glif_button_corner_radius</item>
+        <item name="suwButtonFontFamily">sans-serif</item>
+        <item name="suwColorPrimary">?colorPrimary</item>
+        <item name="suwDividerInsetEnd">0.0dip</item>
+        <item name="suwDividerInsetStart">@dimen/suw_items_glif_icon_divider_inset</item>
+        <item name="suwDividerInsetStartNoIcon">@dimen/suw_items_glif_text_divider_inset</item>
+        <item name="suwFillContentLayoutStyle">@style/SuwFillContentLayout</item>
+        <item name="suwGlifHeaderGravity">start</item>
+        <item name="suwGlifIconStyle">@style/SuwGlifIcon</item>
+        <item name="suwItemDescriptionStyle">@style/SuwItemContainer.Description.Glif</item>
+        <item name="suwItemDescriptionTitleStyle">@style/SuwItemTitle.GlifDescription</item>
+        <item name="suwListItemIconColor">@color/suw_list_item_icon_color_light</item>
+        <item name="suwMarginSides">@dimen/suw_glif_margin_sides</item>
+        <item name="suwScrollIndicators">bottom</item>
+        <item name="listPreferredItemPaddingLeft">?suwMarginSides</item>
+        <item name="listPreferredItemPaddingRight">?suwMarginSides</item>
+        <item name="textAppearanceListItem">@style/TextAppearance.SuwGlifItemTitle</item>
+        <item name="textAppearanceListItemSmall">@style/TextAppearance.SuwGlifItemSummary</item>
+        <item name="colorPrimary">?colorAccent</item>
+        <item name="colorAccent">@color/suw_color_accent_glif_light</item>
+    </style>
+    <style name="SuwThemeMaterial" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:colorBackground">@color/suw_color_background_dark</item>
+        <item name="android:listPreferredItemHeight">@dimen/suw_items_preferred_height</item>
+        <item name="android:textColorLink">@color/suw_link_color_dark</item>
+        <item name="android:windowAnimationStyle">@style/Animation.SuwWindowAnimation</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:textAppearanceListItemSmall">?textAppearanceListItemSmall</item>
+        <item name="android:listPreferredItemPaddingStart">?suwMarginSides</item>
+        <item name="android:listPreferredItemPaddingEnd">?suwMarginSides</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:indeterminateTint">@color/suw_progress_bar_color_dark</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+        <item name="suwButtonAllCaps">true</item>
+        <item name="suwButtonFontFamily">sans-serif</item>
+        <item name="suwCardBackground">@drawable/suw_card_bg_dark</item>
+        <item name="suwDividerInsetEnd">0.0dip</item>
+        <item name="suwDividerInsetStart">@dimen/suw_items_icon_divider_inset</item>
+        <item name="suwDividerInsetStartNoIcon">@dimen/suw_items_text_divider_inset</item>
+        <item name="suwFillContentLayoutStyle">@style/SuwFillContentLayout</item>
+        <item name="suwItemDescriptionStyle">@style/SuwItemContainer.Description</item>
+        <item name="suwItemDescriptionTitleStyle">@style/SuwItemTitle</item>
+        <item name="suwListItemIconColor">@color/suw_list_item_icon_color_dark</item>
+        <item name="suwMarginSides">@dimen/suw_layout_margin_sides</item>
+        <item name="suwNavBarTheme">@style/SuwNavBarThemeDark</item>
+        <item name="listPreferredItemPaddingLeft">?suwMarginSides</item>
+        <item name="listPreferredItemPaddingRight">?suwMarginSides</item>
+        <item name="textAppearanceListItemSmall">@style/TextAppearance.SuwItemSummary</item>
+        <item name="colorAccent">@color/suw_color_accent_dark</item>
+    </style>
+    <style name="SuwThemeMaterial.Light" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorBackground">@color/suw_color_background_light</item>
+        <item name="android:listPreferredItemHeight">@dimen/suw_items_preferred_height</item>
+        <item name="android:textColorLink">@color/suw_link_color_light</item>
+        <item name="android:windowAnimationStyle">@style/Animation.SuwWindowAnimation</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:textAppearanceListItemSmall">?textAppearanceListItemSmall</item>
+        <item name="android:listPreferredItemPaddingStart">?suwMarginSides</item>
+        <item name="android:listPreferredItemPaddingEnd">?suwMarginSides</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:indeterminateTint">@color/suw_progress_bar_color_light</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+        <item name="suwButtonAllCaps">true</item>
+        <item name="suwButtonFontFamily">sans-serif</item>
+        <item name="suwCardBackground">@drawable/suw_card_bg_light</item>
+        <item name="suwDividerInsetEnd">0.0dip</item>
+        <item name="suwDividerInsetStart">@dimen/suw_items_icon_divider_inset</item>
+        <item name="suwDividerInsetStartNoIcon">@dimen/suw_items_text_divider_inset</item>
+        <item name="suwFillContentLayoutStyle">@style/SuwFillContentLayout</item>
+        <item name="suwItemDescriptionStyle">@style/SuwItemContainer.Description</item>
+        <item name="suwItemDescriptionTitleStyle">@style/SuwItemTitle</item>
+        <item name="suwListItemIconColor">@color/suw_list_item_icon_color_light</item>
+        <item name="suwMarginSides">@dimen/suw_layout_margin_sides</item>
+        <item name="suwNavBarTheme">@style/SuwNavBarThemeLight</item>
+        <item name="listPreferredItemPaddingLeft">?suwMarginSides</item>
+        <item name="listPreferredItemPaddingRight">?suwMarginSides</item>
+        <item name="textAppearanceListItemSmall">@style/TextAppearance.SuwItemSummary</item>
+        <item name="colorAccent">@color/suw_color_accent_light</item>
+    </style>
+    <style name="T12Roboto12_16">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:minHeight">16.0sp</item>
+        <item name="android:lineSpacingExtra">2.5sp</item>
+        <item name="android:fontFamily">sans-serif-regular</item>
+        <item name="android:letterSpacing">0.025</item>
+    </style>
+    <style name="T2GoogleSansReg28_36" parent="@style/AsMgBaseGoogleSansReg">
+        <item name="android:textSize">28.0sp</item>
+        <item name="android:minHeight">36.0sp</item>
+        <item name="android:lineSpacingExtra">5.0sp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    <style name="T7RobotoMedium11_16">
+        <item name="android:textSize">11.0sp</item>
+        <item name="android:minHeight">16.0sp</item>
+        <item name="android:lineSpacingExtra">3.125sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.07</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.ButtonAlt" parent="@style/TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.MaterialButton" parent="@style/TextAppearance.GoogleMaterial.ButtonAlt">
+        <item name="android:textColor">@color/google_btn_text_color_selector</item>
+        <item name="android:letterSpacing">@dimen/google_btn_letter_spacing</item>
+    </style>
+    <style name="TextAppearance.LeanbackBase" parent="@android:style/TextAppearance.Material" />
+    <style name="TextAppearance.MaterialComponents.Button" parent="@style/TextAppearance.AppCompat.Button">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.08928572</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="TextAppearance.MaterialComponents.MaterialButton" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/mtrl_btn_text_size</item>
+        <item name="android:textColor">@color/mtrl_btn_text_color_selector</item>
+        <item name="android:textAllCaps">@bool/mtrl_btn_textappearance_all_caps</item>
+        <item name="android:letterSpacing">@dimen/mtrl_btn_letter_spacing</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="TextAppearance.SuwCardTitle" parent="@android:style/TextAppearance.Material.Display1">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="TextAppearance.SuwDescription" parent="@android:style/TextAppearance.Material.Medium">
+        <item name="android:textSize">@dimen/suw_description_text_size</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="Theme.FamilyManagement.Dialog.Progress" parent="@style/Theme.FamilyManagement.Dialog">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+    <style name="Theme.FamilyManagement.Wallet" parent="">
+        <item name="android:colorPrimary">#ff4285f4</item>
+        <item name="android:colorPrimaryDark">#ff000000</item>
+        <item name="android:colorAccent">#ff4285f4</item>
+    </style>
+    <style name="Theme.FamilyManagement.v2" parent="@style/Base.Theme.FamilyManagement.v2">
+        <item name="android:colorPrimary">#ff4285f4</item>
+        <item name="android:colorAccent">#ff4285f4</item>
+        <item name="colorPrimary">?android:colorPrimary</item>
+        <item name="colorAccent">#ff4285f4</item>
+    </style>
+    <style name="Theme.G1" parent="@style/Base.Theme.G1">
+        <item name="android:textColorLink">#ff4285f4</item>
+        <item name="android:colorPrimary">#ffffffff</item>
+        <item name="android:colorPrimaryDark">#ff000000</item>
+        <item name="android:colorAccent">#ff4285f4</item>
+    </style>
+    <style name="Theme.Leanback.GuidedStepBase" parent="@style/Theme.LeanbackBase">
+        <item name="android:windowEnterTransition">@transition/lb_guidedstep_activity_enter</item>
+        <item name="android:windowTransitionBackgroundFadeDuration">@integer/lb_guidedstep_activity_background_fade_duration_ms</item>
+        <item name="guidedActionsSelectorDrawable">@drawable/lb_selectable_item_rounded_rect</item>
+    </style>
+    <style name="Theme.LeanbackBase" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowOverscan">true</item>
+        <item name="android:colorPrimary">@color/lb_default_brand_color</item>
+        <item name="android:colorPrimaryDark">@color/lb_default_brand_color_dark</item>
+        <item name="android:windowEnterTransition">@transition/lb_enter_transition</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/lb_shared_element_enter_transition</item>
+        <item name="android:windowTransitionBackgroundFadeDuration">350</item>
+        <item name="android:windowReturnTransition">@transition/lb_return_transition</item>
+        <item name="android:windowSharedElementReturnTransition">@transition/lb_shared_element_return_transition</item>
+        <item name="guidedStepTheme">@style/Theme.Leanback.GuidedStep</item>
+        <item name="defaultBrandColor">?android:colorPrimary</item>
+        <item name="defaultBrandColorDark">?android:colorPrimaryDark</item>
+        <item name="playbackProgressPrimaryColor">?android:colorAccent</item>
+        <item name="playbackControlsIconHighlightColor">?android:colorAccent</item>
+    </style>
+    <style name="Theme.OptIn" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="colorAccent">@color/button_accent_color</item>
+    </style>
+    <style name="Theme.Play" parent="@style/Base.Theme.Play">
+        <item name="android:textColorLink">#ff00838f</item>
+        <item name="android:colorControlNormal">#ffffffff</item>
+        <item name="android:colorPrimary">#ff455a64</item>
+        <item name="android:colorPrimaryDark">#ff000000</item>
+        <item name="android:colorAccent">#ff455a64</item>
+    </style>
+    <style name="Theme.Play.Dialog.Progress" parent="@style/Theme.Play.Dialog">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+    <style name="Theme.PlayMusic" parent="@style/Base.Theme.PlayMusic">
+        <item name="android:textColorLink">#ffe65100</item>
+        <item name="android:colorPrimary">#ffef6c00</item>
+        <item name="android:colorPrimaryDark">#ff000000</item>
+        <item name="android:colorAccent">#ffe65100</item>
+    </style>
+    <style name="Theme.PlayMusic.Dialog.Progress" parent="@style/Theme.PlayMusic.Dialog">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+    <style name="Theme.YouTube" parent="@style/Base.Theme.YouTube">
+        <item name="android:textColorLink">#ff4285f4</item>
+        <item name="android:colorPrimary">#ffe62117</item>
+        <item name="android:colorPrimaryDark">#ff000000</item>
+        <item name="android:colorAccent">#ff4285f4</item>
+    </style>
+    <style name="Theme.YouTube.Dialog.Progress" parent="@style/Theme.YouTube.Dialog">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+    <style name="ThemeOverlay.Button.Borderless" parent="@style/ThemeOverlay.Base.Button" />
+    <style name="UdcConsentButtonLabelNegativeGlif" parent="@style/UdcTextAppearanceButtonGlif">
+        <item name="android:textColor">@color/udc_g_blue_600</item>
+        <item name="android:background">@drawable/udc_label_button_background</item>
+    </style>
+    <style name="UdcConsentButtonLabelPositiveGlif" parent="@style/UdcTextAppearanceButtonGlif">
+        <item name="android:textColor">@color/material_grey_white_1000</item>
+        <item name="android:paddingLeft">@dimen/udc_consent_button_horizontal_padding_glif</item>
+        <item name="android:paddingRight">@dimen/udc_consent_button_horizontal_padding_glif</item>
+    </style>
+    <style name="UdcTextAppearance" parent="@android:style/TextAppearance.Material">
+        <item name="android:textSize">@dimen/udc_text_size_body</item>
+        <item name="android:textColorLink">@color/udc_g_blue_600</item>
+    </style>
+    <style name="UdcTextAppearanceMedium" parent="@style/UdcTextAppearance">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="UrawTheme" parent="@android:style/Theme.Material.Light">
+        <item name="android:colorControlActivated">@color/quantum_googblue500</item>
+    </style>
+    <style name="Widget.Design.AppBarLayout" parent="@android:style/Widget">
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:stateListAnimator">@animator/design_appbar_state_list_animator</item>
+        <item name="android:touchscreenBlocksFocus">true</item>
+    </style>
+    <style name="Widget.FamilyManagement.Toolbar" parent="@style/Base.Widget.FamilyManagement.Toolbar">
+        <item name="android:elevation">@dimen/fm_toolbar_elevation</item>
+    </style>
+    <style name="Widget.GoogleMaterial.Button" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/TextAppearance.GoogleMaterial.MaterialButton</item>
+        <item name="android:paddingLeft">@dimen/google_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/google_btn_padding_right</item>
+        <item name="android:stateListAnimator">@animator/google_btn_state_list_anim</item>
+        <item name="iconTint">@color/google_btn_text_color_selector</item>
+        <item name="additionalPaddingLeftForIcon">@dimen/google_btn_additional_padding_left_for_icon</item>
+        <item name="additionalPaddingRightForIcon">@dimen/google_btn_additional_padding_right_for_icon</item>
+        <item name="rippleColor">@color/google_btn_filled_btn_ripple_color</item>
+        <item name="backgroundTint">@color/google_btn_filled_btn_bg_color_selector</item>
+    </style>
+    <style name="Widget.GoogleMaterial.StrokedButton" parent="@style/Widget.GoogleMaterial.TextButton">
+        <item name="android:stateListAnimator">@animator/google_btn_stroked_btn_state_list_anim</item>
+        <item name="strokeColor">@color/google_btn_stroke_color_selector</item>
+        <item name="strokeWidth">@dimen/mtrl_btn_stroke_size</item>
+        <item name="backgroundTint">@color/google_btn_stroked_btn_bg_color_selector</item>
+    </style>
+    <style name="Widget.LeanbackBase" parent="@android:style/Widget.Material" />
+    <style name="Widget.MaterialComponents.Button" parent="@style/Widget.AppCompat.Button">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.MaterialButton</item>
+        <item name="android:paddingLeft">@dimen/mtrl_btn_padding_left</item>
+        <item name="android:paddingTop">@dimen/mtrl_btn_padding_top</item>
+        <item name="android:paddingRight">@dimen/mtrl_btn_padding_right</item>
+        <item name="android:paddingBottom">@dimen/mtrl_btn_padding_bottom</item>
+        <item name="android:insetLeft">0.0dip</item>
+        <item name="android:insetRight">0.0dip</item>
+        <item name="android:insetTop">@dimen/mtrl_btn_inset</item>
+        <item name="android:insetBottom">@dimen/mtrl_btn_inset</item>
+        <item name="android:stateListAnimator">@animator/mtrl_btn_state_list_anim</item>
+        <item name="iconPadding">@dimen/mtrl_btn_icon_padding</item>
+        <item name="iconTint">@color/mtrl_btn_text_color_selector</item>
+        <item name="additionalPaddingLeftForIcon">@dimen/mtrl_btn_additional_padding_left_for_icon</item>
+        <item name="additionalPaddingRightForIcon">@dimen/mtrl_btn_additional_padding_right_for_icon</item>
+        <item name="cornerRadius">@dimen/mtrl_btn_corner_radius</item>
+        <item name="rippleColor">@color/mtrl_btn_ripple_color</item>
+        <item name="backgroundTint">@color/mtrl_btn_bg_color_selector</item>
+    </style>
+    <style name="Widget.MaterialComponents.Button.UnelevatedButton" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:stateListAnimator">@animator/mtrl_btn_unelevated_state_list_anim</item>
+    </style>
+    <style name="appInviteTextStyleMedium">
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="audience_authImage">
+        <item name="android:tint">#ccffffff</item>
+    </style>
+    <style name="common.Activity.Light.Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="windowActionBar">false</item>
+    </style>
+    <style name="common.Theme.Base.GoogleSettings" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/material_blue_grey_900</item>
+        <item name="colorPrimaryDark">@color/material_blue_grey_950</item>
+    </style>
+    <style name="common.Theme.Base.NoAppCompat.DialogWhenLarge" parent="@android:style/Theme.Material.DialogWhenLarge" />
+    <style name="common.Theme.Base.NoAppCompat.Light.Dialog" parent="@android:style/Theme.Material.Light.Dialog">
+        <item name="buttonBarStyle">?android:buttonBarStyle</item>
+        <item name="buttonBarButtonStyle">?android:buttonBarButtonStyle</item>
+        <item name="dividerHorizontal">?android:dividerHorizontal</item>
+    </style>
+    <style name="common.Theme.Base.NoAppCompat.Light.Dialog.MinWidth" parent="@android:style/Theme.Material.Light.Dialog.MinWidth">
+        <item name="buttonBarStyle">?android:buttonBarStyle</item>
+        <item name="buttonBarButtonStyle">?android:buttonBarButtonStyle</item>
+        <item name="dividerHorizontal">?android:dividerHorizontal</item>
+    </style>
+    <style name="common.Widget.Base.Spinner.Form" parent="@android:style/Widget.Material.Spinner.Underlined" />
+    <style name="common.Widget.Base.SwitchBar.GoogleSettings" parent="@style/common.Widget.SwitchBar">
+        <item name="colorPrimary">@color/material_blue_grey_800</item>
+        <item name="colorAccent">@color/material_teal_200</item>
+        <item name="colorControlHighlight">@color/ripple_material_dark</item>
+    </style>
+    <style name="drive_ButtonBar">
+        <item name="android:elevation">@dimen/drive_DefaultElevation</item>
+    </style>
+    <style name="drive_Button_Platform" parent="@android:style/Widget.Material.Light.Button.Borderless" />
+    <style name="drive_Spinner" parent="@android:style/Widget.Material.Light.Spinner.Underlined" />
+    <style name="drive_Toolbar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="android:elevation">@dimen/drive_DefaultElevation</item>
+    </style>
+    <style name="play_protect_settings" parent="@style/play_protect_settings_base" />
+    <style name="play_protect_touchable">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+    </style>
+    <style name="plus.Activity.AppCompat.Moment" parent="@style/common.Theme.GoogleSettings">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="indeterminateProgressStyle">?android:indeterminateProgressStyle</item>
+    </style>
+    <style name="sp.SelectableItem" parent="@style/common.Widget.Base.SelectableItem">
+        <item name="android:background">@drawable/unbounded_ripple</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:minHeight">0.0dip</item>
+    </style>
+    <style name="sp.SelectableItemDark" parent="@style/common.Widget.Base.SelectableItem">
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+    </style>
+    <style name="udc.Theme" parent="@style/udc">
+        <item name="android:colorEdgeEffect">#33000000</item>
+    </style>
+    <style name="udc.Theme.Dialog.TransparentStatusBar" parent="@style/udc.Theme.Dialog">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/udc_statusbar_scrim</item>
+    </style>
+    <style name="udc.Theme.Fullscreen.TransparentStatusBar" parent="@style/udc.Theme.Fullscreen">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/udc_statusbar_scrim</item>
+    </style>
+    <style name="udc.Theme.Fullscreen.WhiteStatusBar" parent="@style/udc.Theme.Fullscreen">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/udc_statusbar_scrim</item>
+    </style>
+    <style name="BackupSettingsTheme" parent="@style/common.Theme.GoogleSettings">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+    <style name="Base.V21.Theme.AppCompat" parent="@style/Base.V7.Theme.AppCompat">
+        <item name="android:colorControlNormal">?colorControlNormal</item>
+        <item name="android:colorControlActivated">?colorControlActivated</item>
+        <item name="android:colorButtonNormal">?colorButtonNormal</item>
+        <item name="android:colorControlHighlight">?colorControlHighlight</item>
+        <item name="android:colorPrimary">?colorPrimary</item>
+        <item name="android:colorPrimaryDark">?colorPrimaryDark</item>
+        <item name="android:colorAccent">?colorAccent</item>
+        <item name="actionOverflowButtonStyle">?android:actionOverflowButtonStyle</item>
+        <item name="actionBarSize">?android:actionBarSize</item>
+        <item name="actionBarDivider">?android:actionBarDivider</item>
+        <item name="actionBarItemBackground">@drawable/abc_action_bar_item_background_material</item>
+        <item name="actionModeBackground">?android:actionModeBackground</item>
+        <item name="actionModeCloseDrawable">?android:actionModeCloseDrawable</item>
+        <item name="textAppearanceLargePopupMenu">?android:textAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">?android:textAppearanceSmallPopupMenu</item>
+        <item name="homeAsUpIndicator">?android:homeAsUpIndicator</item>
+        <item name="actionButtonStyle">?android:actionButtonStyle</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackgroundBorderless</item>
+        <item name="borderlessButtonStyle">?android:borderlessButtonStyle</item>
+        <item name="dividerVertical">?android:dividerVertical</item>
+        <item name="dividerHorizontal">?android:dividerHorizontal</item>
+        <item name="editTextColor">?android:editTextColor</item>
+        <item name="editTextBackground">@drawable/abc_edit_text_material</item>
+        <item name="listPreferredItemHeightSmall">?android:listPreferredItemHeightSmall</item>
+        <item name="listChoiceBackgroundIndicator">?android:listChoiceBackgroundIndicator</item>
+        <item name="buttonStyle">?android:buttonStyle</item>
+        <item name="buttonStyleSmall">?android:buttonStyleSmall</item>
+        <item name="checkboxStyle">?android:checkboxStyle</item>
+        <item name="checkedTextViewStyle">?android:checkedTextViewStyle</item>
+        <item name="radioButtonStyle">?android:radioButtonStyle</item>
+        <item name="ratingBarStyle">?android:ratingBarStyle</item>
+        <item name="spinnerStyle">?android:spinnerStyle</item>
+    </style>
+    <style name="Base.V21.Theme.AppCompat.Dialog" parent="@style/Base.V7.Theme.AppCompat.Dialog">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="Base.V21.Theme.AppCompat.Light" parent="@style/Base.V7.Theme.AppCompat.Light">
+        <item name="android:colorControlNormal">?colorControlNormal</item>
+        <item name="android:colorControlActivated">?colorControlActivated</item>
+        <item name="android:colorButtonNormal">?colorButtonNormal</item>
+        <item name="android:colorControlHighlight">?colorControlHighlight</item>
+        <item name="android:colorPrimary">?colorPrimary</item>
+        <item name="android:colorPrimaryDark">?colorPrimaryDark</item>
+        <item name="android:colorAccent">?colorAccent</item>
+        <item name="actionOverflowButtonStyle">?android:actionOverflowButtonStyle</item>
+        <item name="actionBarSize">?android:actionBarSize</item>
+        <item name="actionBarDivider">?android:actionBarDivider</item>
+        <item name="actionBarItemBackground">@drawable/abc_action_bar_item_background_material</item>
+        <item name="actionModeBackground">?android:actionModeBackground</item>
+        <item name="actionModeCloseDrawable">?android:actionModeCloseDrawable</item>
+        <item name="textAppearanceLargePopupMenu">?android:textAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">?android:textAppearanceSmallPopupMenu</item>
+        <item name="homeAsUpIndicator">?android:homeAsUpIndicator</item>
+        <item name="actionButtonStyle">?android:actionButtonStyle</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackgroundBorderless</item>
+        <item name="borderlessButtonStyle">?android:borderlessButtonStyle</item>
+        <item name="dividerVertical">?android:dividerVertical</item>
+        <item name="dividerHorizontal">?android:dividerHorizontal</item>
+        <item name="editTextColor">?android:editTextColor</item>
+        <item name="editTextBackground">@drawable/abc_edit_text_material</item>
+        <item name="listPreferredItemHeightSmall">?android:listPreferredItemHeightSmall</item>
+        <item name="listChoiceBackgroundIndicator">?android:listChoiceBackgroundIndicator</item>
+        <item name="buttonStyle">?android:buttonStyle</item>
+        <item name="buttonStyleSmall">?android:buttonStyleSmall</item>
+        <item name="checkboxStyle">?android:checkboxStyle</item>
+        <item name="checkedTextViewStyle">?android:checkedTextViewStyle</item>
+        <item name="radioButtonStyle">?android:radioButtonStyle</item>
+        <item name="ratingBarStyle">?android:ratingBarStyle</item>
+        <item name="spinnerStyle">?android:spinnerStyle</item>
+    </style>
+    <style name="Base.V21.Theme.AppCompat.Light.Dialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="Base.V21.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.V7.ThemeOverlay.AppCompat.Dialog">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="Platform.V21.AppCompat" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_light</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:textColorLink">?android:colorAccent</item>
+        <item name="android:buttonBarStyle">?buttonBarStyle</item>
+        <item name="android:buttonBarButtonStyle">?buttonBarButtonStyle</item>
+        <item name="android:textColorLinkInverse">?android:colorAccent</item>
+    </style>
+    <style name="Platform.V21.AppCompat.Light" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_light</item>
+        <item name="android:textColorLink">?android:colorAccent</item>
+        <item name="android:buttonBarStyle">?buttonBarStyle</item>
+        <item name="android:buttonBarButtonStyle">?buttonBarButtonStyle</item>
+        <item name="android:textColorLinkInverse">?android:colorAccent</item>
+    </style>
+    <style name="SetBackupAccountActivity" parent="@android:style/Theme.Material.Light.Dialog" />
+    <style name="TextAppearance.SetupWizardCardTitle" parent="@android:style/TextAppearance.Material.Display1">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="auth_minutemaid_theme_material" parent="@style/auth_setup_wizard_theme_material.light">
+        <item name="android:textColorSecondary">@color/auth_minutemaid_color_secondary_light</item>
+        <item name="android:colorAccent">@color/auth_minutemaid_color_accent_light</item>
+        <item name="auth_setup_wizard_divider_color">@color/auth_minutemaid_divider_color_light</item>
+        <item name="auth_setup_wizard_header_background">@color/auth_minutemaid_header_background</item>
+        <item name="auth_setup_wizard_header_foreground">@null</item>
+        <item name="auth_setup_wizard_link_color">@color/auth_minutemaid_link_color_light</item>
+        <item name="auth_setup_wizard_progress_bar_color">@color/auth_minutemaid_progress_bar_activated</item>
+    </style>
+    <style name="auth_setup_wizard_card_title">
+        <item name="android:textAppearance">@style/TextAppearance.SetupWizardCardTitle</item>
+        <item name="android:paddingTop">@dimen/auth_setup_wizard_card_title_padding_top</item>
+        <item name="android:paddingBottom">@dimen/auth_setup_wizard_card_title_padding_bottom</item>
+        <item name="android:paddingStart">@dimen/auth_setup_wizard_card_title_padding_start</item>
+        <item name="android:paddingEnd">@dimen/auth_setup_wizard_card_title_padding_end</item>
+    </style>
+    <style name="auth_setup_wizard_content_frame">
+        <item name="android:paddingLeft">@dimen/auth_setup_wizard_margin_sides</item>
+        <item name="android:paddingTop">@dimen/auth_setup_wizard_content_frame_padding_top</item>
+        <item name="android:paddingRight">@dimen/auth_setup_wizard_margin_sides</item>
+        <item name="android:paddingBottom">@dimen/auth_setup_wizard_content_frame_padding_bottom</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="auth_setup_wizard_description" parent="@style/auth_setup_wizard_text">
+        <item name="android:textSize">@dimen/auth_setup_wizard_description_text_size</item>
+        <item name="android:textColorLink">?auth_setup_wizard_link_color</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/auth_setup_wizard_description_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/auth_setup_wizard_description_margin_bottom</item>
+        <item name="android:lineSpacingExtra">@dimen/auth_setup_wizard_description_line_spacing_extra</item>
+    </style>
+    <style name="auth_setup_wizard_edit_text" parent="@style/auth_setup_wizard_description">
+        <item name="android:paddingLeft">0.0dip</item>
+        <item name="android:paddingRight">0.0dip</item>
+    </style>
+    <style name="auth_setup_wizard_header_title">
+        <item name="android:textSize">@dimen/auth_setup_wizard_header_title_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingTop">@dimen/auth_setup_wizard_header_title_padding_top</item>
+        <item name="android:paddingBottom">@dimen/auth_setup_wizard_header_title_padding_bottom</item>
+        <item name="android:layout_marginBottom">@dimen/auth_setup_wizard_header_title_margin_bottom</item>
+        <item name="android:lineSpacingExtra">@dimen/auth_setup_wizard_header_title_line_spacing_extra</item>
+        <item name="android:layout_marginStart">@dimen/auth_setup_wizard_margin_sides</item>
+        <item name="android:layout_marginEnd">@dimen/auth_setup_wizard_margin_sides</item>
+    </style>
+    <style name="auth_setup_wizard_heading_text" parent="@style/auth_setup_wizard_text">
+        <item name="android:textSize">@dimen/auth_setup_wizard_heading_text_size</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/auth_setup_wizard_heading_margin_top</item>
+    </style>
+    <style name="auth_setup_wizard_link" parent="@style/auth_setup_wizard_text">
+        <item name="android:textSize">@dimen/auth_setup_wizard_description_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?auth_setup_wizard_link_color</item>
+        <item name="android:textColorLink">?auth_setup_wizard_link_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="auth_setup_wizard_navbar_button_style" parent="@android:style/Widget.Material.Button.Borderless">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">?auth_setup_wizard_navbar_text_color</item>
+        <item name="android:background">@drawable/auth_setup_wizard_navbar_btn_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:layout_weight">0.0</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:paddingStart">10.0dip</item>
+        <item name="android:paddingEnd">10.0dip</item>
+    </style>
+    <style name="auth_setup_wizard_navbar_style">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">?auth_setup_wizard_navbar_bg_color</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">56.0dip</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:paddingStart">24.0dip</item>
+        <item name="android:paddingEnd">24.0dip</item>
+    </style>
+    <style name="auth_setup_wizard_navbar_theme_dark">
+        <item name="auth_setup_wizard_navbar_bg_color">@color/auth_setup_wizard_navbar_bg_dark</item>
+        <item name="auth_setup_wizard_navbar_text_color">@color/auth_setup_wizard_navbar_text_dark</item>
+    </style>
+    <style name="auth_setup_wizard_navbar_theme_light">
+        <item name="auth_setup_wizard_navbar_bg_color">@color/auth_setup_wizard_navbar_bg_light</item>
+        <item name="auth_setup_wizard_navbar_text_color">@color/auth_setup_wizard_navbar_text_light</item>
+    </style>
+    <style name="auth_setup_wizard_text">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textColorLink">?android:textColorPrimary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="auth_setup_wizard_theme_material.light" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:textColorSecondary">@color/auth_setup_wizard_color_secondary_light</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:colorAccent">@color/auth_setup_wizard_color_accent_light</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="auth_setup_wizard_divider_color">@color/auth_setup_wizard_divider_color_light</item>
+        <item name="auth_setup_wizard_link_color">@color/auth_setup_wizard_link_color_light</item>
+    </style>
+    <style name="play_protect_action_bar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorPrimary">@color/material_blue_grey_700</item>
+    </style>
+    <style name="play_protect_settings_base" parent="@style/common.Theme.GoogleSettings">
+        <item name="android:statusBarColor">@color/material_blue_grey_900</item>
+        <item name="actionBarTheme">@style/play_protect_action_bar</item>
+        <item name="colorPrimaryDark">@color/material_blue_grey_900</item>
+        <item name="colorAccent">@color/material_google_green_500</item>
+    </style>
+</resources>

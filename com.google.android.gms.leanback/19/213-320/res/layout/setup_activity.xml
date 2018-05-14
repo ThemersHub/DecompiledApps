@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/empty_space" android:background="@color/opt_in_dim_color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="bottom|center" android:orientation="vertical" android:id="@id/bottom_sheet" android:background="@drawable/opt_in_sheet_background" android:layout_width="@dimen/opt_in_sheet_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/opt_in_container_side_spacing" android:layout_marginRight="@dimen/opt_in_container_side_spacing">
+        <ScrollView android:id="@id/scroll_view" android:layout_width="@dimen/opt_in_sheet_width" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <FrameLayout android:id="@id/content_wrapper" android:paddingLeft="@dimen/opt_in_sheet_content_spacing" android:paddingTop="@dimen/opt_in_sheet_content_spacing" android:paddingRight="@dimen/opt_in_sheet_content_spacing" android:paddingBottom="@dimen/opt_in_half_text_spacing" android:layout_width="@dimen/opt_in_sheet_width" android:layout_height="wrap_content" />
+        </ScrollView>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:paddingTop="@dimen/opt_in_half_text_spacing" android:paddingBottom="@dimen/opt_in_container_button_spacing" android:clipToPadding="false" android:layout_width="@dimen/opt_in_sheet_width" android:layout_height="wrap_content">
+            <Button android:theme="@style/ThemeOverlay.Button.Borderless" android:id="@id/cancel_button" android:paddingLeft="@dimen/opt_in_button_horizontal_padding" android:paddingRight="@dimen/opt_in_button_horizontal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/opt_in_button_button_spacing" android:minWidth="@dimen/opt_in_button_min_width" style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+            <Button android:theme="@style/ThemeOverlay.Button" android:id="@id/confirm_button" android:paddingLeft="@dimen/opt_in_button_horizontal_padding" android:paddingRight="@dimen/opt_in_button_horizontal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/opt_in_container_button_spacing" android:minWidth="@dimen/opt_in_button_min_width" style="@style/Widget.AppCompat.Button.Colored" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

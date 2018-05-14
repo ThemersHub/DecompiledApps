@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@color/appinvite_action_bar_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:titleTextAppearance="@style/appInviteTitleTextStyle" app:theme="@style/Widget.AppCompat.ActionBar" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?android:windowContentOverlay">
+        <RelativeLayout android:orientation="vertical" android:id="@id/selection_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/select_frame" android:layout_alignParentTop="true" />
+            <FrameLayout android:id="@id/select_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <TextView android:gravity="center" android:id="@id/select" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_ok" android:onClick="onClick" style="@style/common.Widget.SelectableItem" />
+            </FrameLayout>
+        </RelativeLayout>
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:padding="50.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateOnly="true" />
+    </FrameLayout>
+</LinearLayout>

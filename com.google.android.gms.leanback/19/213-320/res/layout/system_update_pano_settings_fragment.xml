@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/guidance_container" android:layout_width="@dimen/system_update_pano_gsf_guidance_width" android:layout_height="fill_parent" android:layout_alignParentStart="true" style="?attr/guidanceContainerStyle">
+        <Space android:id="@id/space" android:layout_width="fill_parent" android:layout_height="160.0dip" />
+        <TextView android:id="@id/guidance_title" android:layout_below="@id/space" android:importantForAccessibility="yes" android:textDirection="locale" android:textAlignment="viewStart" android:layout_alignParentStart="true" style="?attr/guidanceTitleStyle" />
+        <ProgressBar android:id="@id/progress" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip" android:indeterminate="true" android:layout_below="@id/guidance_title" android:layout_alignParentStart="true" style="?android:attr/progressBarStyleHorizontal" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/progress" android:importantForAccessibility="yes" android:textDirection="locale" android:textAlignment="viewStart" android:layout_alignParentStart="true" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/progress" android:importantForAccessibility="yes" android:textDirection="locale" android:textAlignment="viewStart" android:layout_toEndOf="@id/status" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/status2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/status" android:importantForAccessibility="yes" android:textDirection="locale" android:textAlignment="viewStart" android:layout_alignParentEnd="true" />
+        <TextView android:id="@id/guidance_description" android:paddingTop="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/status2" android:layout_alignWithParentIfMissing="true" android:importantForAccessibility="yes" android:textAlignment="viewStart" style="?attr/guidanceDescriptionStyle" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@android:color/black" android:layout_width="@dimen/system_update_pano_gsf_action_width" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/action_button_container" android:background="@drawable/system_update_settings_gsf_button_background_drawable" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/system_update_settings_gsf_top_space_height" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip">
+            <TextView android:textSize="18.0sp" android:textColor="@color/system_update_settings_gsf_button_text_color_selector" android:id="@id/action_title" style="@style/SystemUpdatePanoSettingsButtonStyle" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/system_update_settings_gsf_button_text_color_selector" android:id="@id/action_description" android:paddingTop="3.0dip" android:visibility="gone" style="@style/SystemUpdatePanoSettingsButtonStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

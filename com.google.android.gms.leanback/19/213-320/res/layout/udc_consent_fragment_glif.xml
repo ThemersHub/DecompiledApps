@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/udc_g_blue_500" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/udc_consent_background" />
+    <view android:layout_gravity="@integer/udc_consent_scrollview_gravity_glif" android:orientation="vertical" android:id="@id/udc_consent_scroll_view" android:background="@color/udc_background" android:layout_width="@dimen/udc_consent_scrollview_width_glif" android:layout_height="@dimen/udc_consent_scrollview_height_glif" android:layout_marginTop="@dimen/udc_consent_status_bar_margin_glif" class="com.google.android.gms.common.widget.ScrollViewWithEvents">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/udc_consent_container" android:layout_width="fill_parent" android:layout_height="wrap_content" style="UdcConsentContainer" />
+            <include layout="@layout/udc_consent_action_container" />
+        </LinearLayout>
+    </view>
+</FrameLayout>
