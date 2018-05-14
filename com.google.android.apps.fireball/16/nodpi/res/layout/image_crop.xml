@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:layout_gravity="top" android:id="@id/top_gradient" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="@dimen/header_darkener_height" />
+            <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </FrameLayout>
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout android:id="@id/crop_background" android:background="@color/black" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.fireball.ui.common.ZoomableImageView android:gravity="center" android:id="@id/crop_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerInside" android:contentDescription="@string/self_profile_image_content_description" />
+        <com.google.android.apps.fireball.ui.profile.common.ImageCropOverlayView android:id="@id/crop_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

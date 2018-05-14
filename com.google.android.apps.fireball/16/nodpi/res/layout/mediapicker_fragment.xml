@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.fireball.ui.mediapicker.MediaPickerPanel android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/mediapicker_chooser_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="@dimen/mediapicker_default_chooser_height" />
+    <FrameLayout android:id="@id/mediapicker_confirmation_container" android:background="@color/black" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="@dimen/mediapicker_selection_confirmation_height">
+        <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/image_selection_confirmation_preview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@string/message_image_content_description" />
+            <com.google.android.apps.fireball.ui.mediapicker.VideoSelectConfirmationView android:layout_gravity="center_vertical" android:id="@id/video_selection_confirmation_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" app:mode="playableVideo" app:playOnLoad="true" app:loop="true" app:allowCrop="true" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="top" android:id="@id/top_buttons_container" android:background="@drawable/ink_header_gradient" android:paddingLeft="4.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax">
+            <ImageButton android:layout_gravity="start|center" android:id="@id/exit_button" android:background="@drawable/transparent_button_background" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:src="@drawable/quantum_ic_clear_white_24" android:contentDescription="@android:string/cancel" />
+            <LinearLayout android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageButton android:id="@id/annotate_button" android:background="@drawable/transparent_white_button_bg" android:visibility="gone" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:layout_marginBottom="2.0dip" android:src="@drawable/quantum_ic_edit_white_24" android:contentDescription="@string/annotateContentDescription" />
+                <Space android:id="@id/annotate_button_space" android:visibility="gone" android:layout_width="14.0dip" android:layout_height="wrap_content" />
+                <ImageButton android:id="@id/send_button" android:background="@drawable/selection_state_background" android:paddingLeft="3.0dip" android:paddingTop="1.0dip" android:paddingRight="0.0dip" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:layout_marginBottom="2.0dip" android:src="@drawable/quantum_ic_send_white_24" android:contentDescription="@string/sendButtonContentDescription" />
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Chronometer android:textSize="14.0sp" android:textColor="@color/white" android:layout_gravity="center|left" android:id="@id/video_length" android:background="@drawable/camera_video_counter_background" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <android.support.v7.widget.RecyclerView android:layout_gravity="bottom|center|left" android:id="@id/image_carousel" android:background="@color/white" android:visibility="gone" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:stretchMode="columnWidth" android:numColumns="auto_fit"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/mediapicker_tabstrip" android:background="@drawable/pill_background" android:padding="@dimen/mediapicker_pill_padding" android:layout_width="fill_parent" android:layout_height="@dimen/min_touch_target_size" />
+</com.google.android.apps.fireball.ui.mediapicker.MediaPickerPanel>

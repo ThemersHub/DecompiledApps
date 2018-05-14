@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/emoji_gallery_fragment" android:background="#ffeceff1" android:layout_width="fill_parent" android:layout_height="@dimen/emoji_gallery_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TabHost android:id="@id/emoji_category_tabhost" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="6.0">
+                <TabWidget android:id="@android:id/tabs" android:background="@color/emoji_category_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:tabStripLeft="@drawable/emoji_top_bottom_border" android:tabStripRight="@drawable/emoji_top_bottom_border" android:tabStripEnabled="true" />
+                <FrameLayout android:id="@android:id/tabcontent" android:layout_width="0.0dip" android:layout_height="0.0dip">
+                    <View android:id="@id/recentEmojiFakeGrid" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                    <View android:id="@id/facesEmojiFakeGrid" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                    <View android:id="@id/objectsEmojiFakeGrid" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                    <View android:id="@id/natureEmojiFakeGrid" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                    <View android:id="@id/placesEmojiFakeGrid" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                    <View android:id="@id/symbolsEmojiFakeGrid" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                </FrameLayout>
+            </TabHost>
+            <ImageButton android:id="@id/emoji_keyboard_backspace" android:background="@drawable/emoji_backspace_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_backspace_24" android:tint="@color/emoji_button_foreground" android:layout_weight="1.0" android:contentDescription="@string/emoji_keyboard_backspace_content_description" />
+        </LinearLayout>
+        <android.support.v4.view.ViewPager android:id="@id/emoji_pager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.google.android.apps.fireball.ui.conversation.emoji.EmojiCategoryPageIndicatorView android:id="@id/emoji_category_page_id_view" android:background="@color/transparent" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/emoji_key_bar" android:layout_width="fill_parent" android:layout_height="0.0dip">
+            <TextView android:textSize="@dimen/emoji_keyboard_key_btn_text_size" android:textStyle="bold" android:textColor="@color/emoji_button_foreground" android:gravity="center" android:id="@id/emoji_keyboard_alphabet_left" android:background="@drawable/emoji_left_alphabet_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/emoji_keyboard_key_btn_label" android:layout_weight="0.15" />
+            <ImageButton android:id="@id/emoji_keyboard_space" android:background="@drawable/emoji_space_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.7" android:contentDescription="@string/emoji_space_bar_description" />
+            <TextView android:textSize="@dimen/emoji_keyboard_key_btn_text_size" android:textStyle="bold" android:textColor="@color/emoji_button_foreground" android:gravity="center" android:id="@id/emoji_keyboard_alphabet_right" android:background="@drawable/emoji_right_alphabet_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/emoji_keyboard_key_btn_label" android:layout_weight="0.15" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:layout_weight="1.0">
+                <TextView android:gravity="center_vertical" android:layout_gravity="start|center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/selfie_time_title" style="@style/Welcome.Title" />
+                <TextView android:gravity="center_vertical" android:layout_gravity="start|center" android:id="@id/selfie_privacy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/selfie_long_privacy" style="@style/Welcome.Subtitle" />
+            </LinearLayout>
+            <ImageButton android:id="@id/help_button" android:background="?selectableItemBackgroundBorderless" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:layout_marginTop="5.0dip" android:src="@drawable/ic_help_outline_24" android:contentDescription="@string/action_help_and_feedback" />
+        </LinearLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.apps.fireball.ui.common.ZoomableImageView android:id="@id/profile_image" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/self_profile_image_content_description" />
+            <FrameLayout android:id="@id/camera" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:id="@id/camera_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <ImageButton android:layout_gravity="end|bottom|center" android:id="@id/camera_swapCamera_button" android:background="@drawable/transparent_button_background" android:visibility="gone" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:layout_marginBottom="16.0dip" android:src="@drawable/ic_cameraflip" android:contentDescription="@string/camera_switch_camera_facing" />
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/bottom_bar" android:background="@color/quantum_cyan700" android:layout_width="fill_parent" android:layout_height="@dimen/selfie_time_bottom_bar_height" android:baselineAligned="false" android:weightSum="2.0">
+        <FrameLayout android:id="@id/bottom_bar_left" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageButton android:layout_gravity="center" android:id="@id/albums" android:background="@drawable/transparent_button_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_photo_library_white_24" android:minWidth="56.0dip" android:minHeight="56.0dip" android:contentDescription="@string/self_profile_change_image" />
+            <ImageButton android:layout_gravity="center" android:id="@id/undo_selfie_button" android:background="@drawable/transparent_button_background" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_undo_white_24" android:minWidth="56.0dip" android:minHeight="56.0dip" android:contentDescription="@string/profile_remove_photo" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/center_button" android:layout_width="@dimen/selfie_time_center_button_size" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip">
+            <ImageButton android:layout_gravity="center" android:id="@id/camera_capture_button" android:background="@drawable/transparent_button_background" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_capture" android:minWidth="56.0dip" android:minHeight="56.0dip" android:contentDescription="@string/camera_take_picture" />
+            <ImageButton android:layout_gravity="center" android:id="@id/confirmation_button" android:background="@drawable/transparent_button_background" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/confirmation_button" android:minWidth="56.0dip" android:minHeight="56.0dip" android:contentDescription="@string/action_confirm_selection" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/bottom_bar_right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:layout_gravity="center" android:id="@id/action_skip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/skip" style="@style/Welcome.Footer.Button" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

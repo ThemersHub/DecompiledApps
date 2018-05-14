@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_height" />
+        <View android:id="@id/search_divider" android:background="@color/toolbar_divider_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <android.support.design.widget.CoordinatorLayout android:id="@id/conversation_list_coordinator_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:id="@android:id/list" android:paddingTop="@dimen/conversation_list_first_item_extra_padding" android:paddingBottom="@dimen/conversation_list_last_item_extra_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="?android:listSelector" android:dividerHeight="0.0px" />
+            <FrameLayout android:layout_gravity="center_vertical" android:id="@id/no_conversations_placeholder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/conversation_list_empty_text_bottom_margin" />
+            <Button android:layout_gravity="end|bottom|center" android:id="@id/start_new_conversation_button_with_text" android:background="@drawable/new_conversation_button_bg" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="56.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="24.0dip" android:text="@string/start_chat_button_text" android:drawableLeft="@drawable/quantum_ic_chat_white_24" android:drawablePadding="10.0dip" android:contentDescription="@string/start_new_conversation" android:drawableStart="@drawable/quantum_ic_chat_white_24" android:layout_marginEnd="24.0dip" app:layout_behavior="com.google.android.apps.fireball.ui.conversationlist.HomeScreenFabBehavior" style="@style/NewConversationFabStyle" />
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+    <include android:id="@id/autolink_snackbar" android:visibility="gone" layout="@layout/autolink_account_view" />
+    <com.google.android.apps.fireball.ui.common.RecyclerViewToolbar android:id="@id/recycler_view_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

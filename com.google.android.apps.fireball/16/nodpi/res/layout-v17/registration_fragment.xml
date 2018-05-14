@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:paddingBottom="48.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageButton android:layout_gravity="end" android:id="@id/help_button" android:background="?selectableItemBackgroundBorderless" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:src="@drawable/ic_help_outline_24" android:contentDescription="@string/action_help_and_feedback" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="32.0dip" android:paddingEnd="32.0dip">
+                <TextView android:id="@id/registration_activity_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/registration_activity_title" style="@style/Welcome.Title" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/registration_activity_subtitle" style="@style/Welcome.Subtitle" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <android.support.v7.widget.AppCompatEditText android:id="@id/country" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:hint="@string/country_hint" android:layout_weight="1.0" android:textDirection="locale" style="@style/Welcome.EditText" />
+                    <ImageView android:id="@id/country_picker" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:src="@drawable/quantum_ic_arrow_drop_down_black_24" android:contentDescription="@string/country_hint" />
+                </LinearLayout>
+                <android.support.v7.widget.AppCompatEditText android:id="@id/phone_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:hint="@string/phone_number_hint" android:inputType="phone" android:textDirection="ltr" style="@style/Welcome.EditText" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/quantum_googredA700" android:id="@id/number_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="@style/Welcome.Subtitle" />
+                <TextView android:textSize="12.0sp" android:id="@id/consent_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/registration_activity_consent" style="@style/Welcome.Subtitle" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout android:layout_gravity="bottom" android:background="@color/quantum_cyan700" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <Button android:layout_gravity="end" android:id="@id/register_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/next" style="@style/Welcome.Footer.Button" />
+    </FrameLayout>
+</FrameLayout>

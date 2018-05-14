@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/status_bar_placeholder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:background="?selectableItemBackground" android:padding="@dimen/drawer_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.fireball.ui.components.ContactIconView android:id="@id/user_avatar" android:layout_width="@dimen/drawer_avatar_size" android:layout_height="@dimen/drawer_avatar_size" android:contentDescription="@string/self_profile_image_content_description" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/drawer_padding" android:paddingRight="@dimen/drawer_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <android.support.text.emoji.widget.EmojiTextView android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/DrawerNameTextStyle" />
+            <TextView android:id="@id/user_phone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/DrawerNumberTextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

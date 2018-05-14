@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher android:id="@id/sticker_grid_view_switcher" android:layout_width="fill_parent" android:layout_height="fill_parent" android:inAnimation="@android:anim/fade_in" android:outAnimation="@android:anim/fade_out"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:enabled="false" android:gravity="center_vertical" android:orientation="vertical" android:id="@id/stickers_downloading_progress_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:indeterminate="true">
+        <ProgressBar android:enabled="false" android:layout_gravity="center" android:id="@id/stickers_downloading_progress_view_spinner" android:layout_width="fill_parent" android:layout_height="40.0dip" android:indeterminate="true" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/stickers_downloaded_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/sticker_grid_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/sticker_grid_view" />
+        </LinearLayout>
+        <ProgressBar android:enabled="false" android:layout_gravity="center" android:id="@id/localDownloadingSpinner" android:layout_width="fill_parent" android:layout_height="40.0dip" android:indeterminate="true" />
+    </FrameLayout>
+</ViewSwitcher>

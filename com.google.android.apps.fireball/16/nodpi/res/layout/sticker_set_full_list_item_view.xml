@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.fireball.ui.sticker.StickerSetFullListItemView android:orientation="horizontal" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="@dimen/sticker_set_list_item_view_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bg_image" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <LinearLayout android:background="@color/background_item_transparent" android:layout_width="fill_parent" android:layout_height="@dimen/sticker_set_list_item_view_height" android:layout_marginLeft="@dimen/sticker_market_side_margin" android:layout_marginRight="@dimen/sticker_market_side_margin"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/set_image" android:background="@null" android:layout_width="@dimen/sticker_set_list_item_view_height" android:layout_height="@dimen/sticker_set_list_item_view_height" android:scaleType="fitCenter" style="@style/StickerMarketSetIconStyle" />
+        <LinearLayout android:orientation="vertical" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sticker_set_list_item_view_text_marginTop">
+                <android.support.text.emoji.widget.EmojiTextView android:ellipsize="end" android:id="@id/sticker_name_text_view" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/StickerSetListItemViewStickerNameTextStyle" />
+                <TextView android:textStyle="bold" android:id="@id/sticker_highlight_text_view" android:background="@null" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sticker_set_new_all_caps" android:maxLines="1" android:singleLine="true" style="@style/StickerSetListItemViewStickerHighlightStyle" />
+            </LinearLayout>
+            <android.support.text.emoji.widget.EmojiTextView android:ellipsize="end" android:id="@id/author_text_view" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/StickerSetListItemViewStickerCreatorTextStyle" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="center_vertical" android:background="@color/background_item_transparent" android:layout_width="@dimen/sticker_market_list_item_functional_button_size" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:id="@id/status_image" android:layout_width="@dimen/sticker_market_list_item_functional_background_circle_size" android:layout_height="@dimen/sticker_market_list_item_functional_background_circle_size" android:scaleType="centerInside" />
+            <LinearLayout android:gravity="center" android:id="@id/loading_spinner_container" android:padding="@dimen/sticker_market_list_item_functional_button_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.google.android.libraries.material.progress.MaterialProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.GoogleLib.Progress.Circular.Indeterminate.Small" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</com.google.android.apps.fireball.ui.sticker.StickerSetFullListItemView>

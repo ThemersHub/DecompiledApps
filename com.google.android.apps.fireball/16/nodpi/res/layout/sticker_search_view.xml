@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.fireball.ui.conversation.attachments.sticker.StickerSearchAttachmentView android:orientation="vertical" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="@dimen/short_minimode_height">
+        <ImageButton android:id="@id/sticker_close" android:background="@drawable/pill_background_top_left_gray" android:paddingTop="@dimen/short_minimode_close_padding_vertical" android:paddingBottom="@dimen/short_minimode_close_padding_vertical" android:layout_width="@dimen/short_minimode_close_width" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_close_white_24" android:contentDescription="@string/sticker_search_attachment_back_content_description" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textColor="@color/quantum_bluegrey600" android:gravity="center" android:id="@id/sticker_no_results" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/image_search_no_results" />
+            <android.support.v7.widget.RecyclerView android:layout_gravity="center_vertical" android:id="@id/stickers" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="@dimen/content_wizard_suggestion_size" />
+        </FrameLayout>
+    </LinearLayout>
+    <View android:background="@color/gif_attachment_divider" android:layout_width="fill_parent" android:layout_height="@dimen/content_wizard_divider_height" />
+</com.google.android.apps.fireball.ui.conversation.attachments.sticker.StickerSearchAttachmentView>

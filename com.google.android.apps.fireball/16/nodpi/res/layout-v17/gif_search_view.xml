@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.fireball.ui.conversation.attachments.gifs.GifSearchAttachmentView android:orientation="vertical" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="@dimen/short_minimode_height">
+        <ImageButton android:id="@id/gif_close" android:background="@drawable/pill_background_top_left_gray" android:paddingTop="@dimen/short_minimode_close_padding_vertical" android:paddingBottom="@dimen/short_minimode_close_padding_vertical" android:layout_width="@dimen/short_minimode_close_width" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_close_white_24" android:contentDescription="@string/gif_attachment_back_content_description" android:paddingStart="@dimen/short_minimode_close_padding_horizontal" android:paddingEnd="@dimen/short_minimode_close_padding_horizontal" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textColor="@color/quantum_bluegrey600" android:gravity="center" android:id="@id/no_results" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/image_search_no_results" />
+            <android.support.v7.widget.RecyclerView android:id="@id/gifs" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+    <View android:background="@color/gif_attachment_divider" android:layout_width="fill_parent" android:layout_height="@dimen/content_wizard_divider_height" />
+</com.google.android.apps.fireball.ui.conversation.attachments.gifs.GifSearchAttachmentView>

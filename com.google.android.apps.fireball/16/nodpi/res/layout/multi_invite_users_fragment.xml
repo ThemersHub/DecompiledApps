@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/welcome_standard_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="16.0dip">
+        <TextView android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/multi_invite_title" style="@style/Welcome.Title" />
+        <android.support.v7.widget.RecyclerView android:id="@id/multi_invite_users_fragment_list" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:divider="@null" android:dividerHeight="0.0px" android:layout_weight="1.0" android:fastScrollEnabled="true" />
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="bottom" android:background="@color/quantum_cyan700" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <Button android:layout_gravity="end" android:id="@id/multi_invite_users_fragment_button_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/skip" style="@style/Welcome.Footer.Button" />
+    </FrameLayout>
+</FrameLayout>

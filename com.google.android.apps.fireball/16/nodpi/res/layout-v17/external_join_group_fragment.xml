@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/join_group_confirm" android:background="@color/group_invite_preview_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <Button android:textColor="@color/white" android:id="@id/cancel_preview_button" android:background="@color/quantum_cyan700" android:layout_width="0.0dip" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground" android:minHeight="48.0dip" android:text="@android:string/cancel" android:layout_weight="0.5" android:textAllCaps="true" style="@style/Widget.AppCompat.Button.Borderless" />
+        <Button android:textColor="@color/white" android:id="@id/join_group_by_link_button" android:background="@color/quantum_cyan700" android:layout_width="0.0dip" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground" android:minHeight="48.0dip" android:text="@string/confirm_join_by_link" android:layout_weight="0.5" android:textAllCaps="true" style="@style/Widget.AppCompat.Button.Borderless" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/group_invite_preview_bg" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/join_group_confirm" android:layout_centerHorizontal="true">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <LinearLayout android:gravity="end" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.35">
+                <com.google.android.apps.fireball.ui.components.ContactIconView android:id="@id/group_avatar" android:background="@color/transparent" android:clickable="false" android:layout_width="@dimen/conversation_list_contact_icon_size" android:layout_height="@dimen/conversation_list_contact_icon_size" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.65">
+                <TextView android:textSize="24.0sp" android:gravity="start" android:id="@id/group_invite_preview_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:textIsSelectable="false" style="@style/FontRegular" />
+                <TextView android:textSize="16.0sp" android:gravity="start" android:id="@id/group_invite_preview_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:textIsSelectable="false" style="@style/FontRegular" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/people_you_know" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/toolbar_divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingTop="24.0dip" android:paddingRight="16.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+                <TextView android:textSize="14.0sp" android:id="@id/people_you_know_size" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="true" style="@style/FontRegular" />
+                <android.support.v7.widget.RecyclerView android:orientation="horizontal" android:id="@id/people_you_know_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

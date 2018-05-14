@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+        <android.support.design.widget.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/appbar" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.4">
+            <android.support.design.widget.CollapsingToolbarLayout android:id="@id/collapsing_toolbar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:titleEnabled="false">
+                <ViewSwitcher android:id="@id/viewswitcher" android:layout_width="fill_parent" android:layout_height="fill_parent" android:inAnimation="@android:anim/fade_in" android:outAnimation="@android:anim/fade_out">
+                    <ImageView android:id="@id/backdrop_switcher_one" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/backdrop_switcher_two" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </ViewSwitcher>
+                <ImageView android:layout_gravity="center" android:id="@id/default_avatar" android:layout_width="@dimen/default_avatar_backdrop_size" android:layout_height="@dimen/default_avatar_backdrop_size" android:src="@drawable/ic_default_profile_large" android:importantForAccessibility="no" />
+                <View android:layout_gravity="top" android:id="@id/top_gradient" android:background="@drawable/header_darkener_gradient_top" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="@dimen/header_darkener_height" />
+                <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:titleTextAppearance="@style/FireballExpandedConversationInfoTextStyle" />
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+        <TabHost android:id="@id/tab_host" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.6" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout android:orientation="vertical" android:id="@id/tab_host_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TabWidget android:id="@android:id/tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/people_tab" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/media_tab" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/settings_tab" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

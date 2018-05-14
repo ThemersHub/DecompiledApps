@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="internalOnly" package="com.google.android.apps.fireball" platformBuildVersionCode="27" platformBuildVersionName="8.1.0">
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <permission android:name="com.google.android.apps.fireball.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.apps.fireball.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" android:required="true"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <application android:allowBackup="true" android:backupAgent="com.google.android.apps.fireball.backup.FireballBackupAgent" android:fullBackupOnly="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.google.android.apps.fireball.Fireball_Application" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/FireballTheme">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/maps_api_key"/>
+        <provider android:authorities="com.google.android.apps.fireball.datamodel.FireballContentProvider" android:exported="true" android:label="@string/app_name" android:name="com.google.android.apps.fireball.datamodel.FireballContentProvider"/>
+        <meta-data android:name="com.google.android.gms.car.application" android:resource="@xml/automotive_app_desc"/>
+        <meta-data android:name="optimization_key" android:value="EFqy2pCB+F60JOdK2otJrjl4ZvsqTQTzteey7g9iryjr7lVvgzTCC+7sOUnEpWPQNdNbfH3HJR1wVxRNVPkKEaRnJgCErKLsb35Vc4Bln2Be09LBN8PXaDIYJLGllamrsT8TmOOFejx2enbdJZbsInUfe1k9B60Ot8Dh1GkSf0bSEhasce+N8Ks3zNQGK94WAb1QJXI4E4PQNzD20JZVYNy1GnJOH+0ChM9Zy8F/lMhnkU1/RrUwZgbOoRwwy40LIQgcfYkgXngV/+12D2Olfu3CnE8zOiHttfzg/qv8/YUYXJ+RXZ6Gkv8THBTVnvtRrGHoOjkvBHnTjoIYce7Hzw=="/>
+        <receiver android:exported="true" android:name="com.google.android.apps.fireball.analytics.InstallReferrerTrackingReceiver_Receiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIu5c5TJbMtSKSzoo9R9_wdOz2n4R2Uc7nKo7ohw"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <provider android:authorities="com.google.android.apps.fireball.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <receiver android:exported="true" android:name="com.google.android.apps.fireball.datamodel.appindexing.AppIndexReceiver_Receiver" android:permission="com.google.android.gms.permission.APPINDEXING">
+            <intent-filter>
+                <action android:name="com.google.firebase.appindexing.UPDATE_INDEX"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.google.android.apps.fireball.providers.INDEXED_STICKER_FILES" android:exported="true" android:name="com.google.android.apps.fireball.datamodel.appindexing.sticker.IndexedStickerFileProvider"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.fireball.datamodel.appindexing.sticker.UpdateStickerIndexReceiver_Receiver" android:permission="com.google.android.apps.inputmethod.latin.permission.UPDATE_STICKER_INDEX">
+            <intent-filter>
+                <action android:name="com.google.android.apps.inputmethod.latin.UPDATE_STICKER_INDEX"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.google.android.apps.fireball.datamodel.NetworkFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.apps.fireball.datamodel.contentprovider.NetworkFileProvider"/>
+        <service android:exported="false" android:name="com.google.android.apps.fireball.datamodel.conversation.CreateConversationService">
+            <intent-filter>
+                <action android:name="com.google.android.apps.fireball.datamodel.conversation.CREATE_CONVERSATION"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.google.android.apps.fireball.datamodel.message.RunCullExpiredMessagesActionReceiver_Receiver"/>
+        <service android:exported="false" android:name="com.google.android.apps.fireball.datamodel.network.NetworkServiceImpl"/>
+        <service android:exported="false" android:name="com.google.android.apps.fireball.directshare.FireballChooserTargetService" android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.chooser.ChooserTargetService"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.android.apps.fireball.experiments.PhenotypeBroadcastReceiver_Receiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/action_help_and_feedback" android:name="com.google.android.apps.fireball.feedback.CustomFeedbackActivity" android:theme="@style/FireballTheme"/>
+        <provider android:authorities="com.google.android.apps.fireball.provider.firebaseinitprovider" android:exported="false" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <service android:exported="true" android:name="com.google.android.apps.fireball.jobs.FireballJobService">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.fireball.network.fcm.FireballFcmService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.fireball.network.fcm.FireballFcmInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.google.android.apps.fireball.notifications.NotificationReceiver_Receiver"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.fireball.notifications.NotificationSuggestionReceiver_Receiver"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.fireball.oobe.jobs.AbandonedNotificationReceiver_Receiver"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/welcome" android:name="com.google.android.apps.fireball.oobe.ui.WelcomeActivity" android:theme="@style/Welcome.Theme" android:windowSoftInputMode="adjustResize"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.fireball.receiver.BootReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.fireball.receiver.AppUpdateReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.fireball.receiver.AccountChangedReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/general_settings_activity_title" android:name="com.google.android.apps.fireball.ui.appsettings.ApplicationSettingsActivity" android:parentActivityName="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity" android:theme="@style/FireballTheme.SettingsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:name="com.google.android.apps.fireball.ui.appsettings.SingleOptOutSettingActivity" android:parentActivityName="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity" android:theme="@style/FireballTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/blocked_contacts_title" android:name="com.google.android.apps.fireball.ui.blockedparticipants.BlockedParticipantsActivity" android:parentActivityName="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity" android:theme="@style/FireballTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.fireball.ui.confidential.ConfidentialActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.google.android.apps.fireball.ui.conversation.attachments.gallery.FullScreenGalleryAttachmentActivity" android:theme="@style/FireballTheme"/>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:name="com.google.android.apps.fireball.ui.conversation.attachments.location.LocationAttachmentActivity" android:theme="@style/FireballTheme"/>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:name="com.google.android.apps.fireball.ui.conversation.attachments.media.MediaConfirmationActivity" android:theme="@style/FireballTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="true" android:name="com.google.android.apps.fireball.ui.conversation.ConversationActivity" android:parentActivityName="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity" android:theme="@style/FireballTheme.ConversationActivity" android:windowSoftInputMode="adjustResize|stateHidden">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="@string/content_data_path" android:scheme="content"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:name="com.google.android.apps.fireball.ui.conversation.ConversationActivityShim" android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="@string/gsa_mime_type"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/message_details_title" android:name="com.google.android.apps.fireball.ui.conversation.message.MessageDetailsActivity" android:theme="@style/FireballTheme"/>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:label="@string/change_conversation_theme_title" android:name="com.google.android.apps.fireball.ui.conversation.theme.EditConversationThemeActivity" android:theme="@style/FireballTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.google.android.apps.fireball.ui.conversation.webview.WebViewActivity" android:screenOrientation="user" android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="launch_webview" android:scheme="fireball"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|screenSize" android:exported="true" android:label="@string/app_name" android:name="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity" android:theme="@style/FireballTheme.Launcher" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:documentLaunchMode="always" android:excludeFromRecents="true" android:exported="true" android:label="@string/share_intent_label" android:name="com.google.android.apps.fireball.ui.conversationlist.ShareIntentActivity" android:parentActivityName="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity" android:theme="@style/FireballTheme.Transparent">
+            <intent-filter android:label="@string/share_intent_label">
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="text/x-vcard"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/*"/>
+            </intent-filter>
+            <meta-data android:name="android.service.chooser.chooser_target_service" android:value=".directshare.FireballChooserTargetService"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/forward_message_activity_title" android:name="com.google.android.apps.fireball.ui.conversationlist.ForwardMessageActivity" android:theme="@style/FireballTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:documentLaunchMode="always" android:excludeFromRecents="true" android:exported="false" android:label="@string/invoke_intent_activity_title" android:name="com.google.android.apps.fireball.ui.conversationlist.InvokeConversationFeatureActivity" android:parentActivityName="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity" android:theme="@style/FireballTheme.Transparent">
+            <intent-filter>
+                <action android:name="com.google.android.apps.fireball.ui.conversationlist.INVOKE_CONVERSATION_FEATURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.google.android.apps.fireball.ui.createconversation.CreateConversationActivity" android:parentActivityName="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity" android:theme="@style/FireballTheme.ConversationActivity" android:windowSoftInputMode="adjustResize|stateHidden">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity"/>
+        </activity>
+        <activity android:exported="false" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.google.android.apps.fireball.ui.createconversation.grouplinkshare.ExternalJoinGroupActivity" android:parentActivityName="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity" android:theme="@style/FireballTheme.ExternalJoinGroupActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity"/>
+        </activity>
+        <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.google.android.apps.fireball.ui.createconversation.grouplinkshare.ExternalJoinGroupLauncherActivity" android:noHistory="true" android:theme="@style/FireballTheme.ExternalJoinGroupActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="allo.google.com" android:pathPrefix="/group/invite" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:label="@string/app_name" android:name="com.google.android.apps.fireball.ui.createconversation.intentapi.ExternalCreateBotConversationActivity" android:parentActivityName="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity" android:theme="@style/FireballTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity"/>
+            <intent-filter>
+                <action android:name="com.google.business.ACTION_CHAT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true" android:priority="999">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="business.google.com" android:pathPrefix="/chat" android:scheme="http"/>
+                <data android:host="business.google.com" android:pathPrefix="/chat" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="chat_with" android:scheme="fireball"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:label="@string/app_name" android:name="com.google.android.apps.fireball.ui.createconversation.userlinkshare.ExternalCreateConversationViaLinkActivity" android:parentActivityName="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity" android:theme="@style/FireballTheme.Transparent">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="allo.google.com" android:pathPrefix="/user/invite" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:label="@string/desktop_activity_title" android:name="com.google.android.apps.fireball.ui.desktop.DesktopActivity" android:parentActivityName="com.google.android.apps.fireball.ui.conversationlist.ConversationListActivity" android:theme="@style/FireballTheme"/>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:label="@string/desktop_activity_title" android:name="com.google.android.apps.fireball.ui.desktop.DesktopQrScannerActivity" android:theme="@style/FireballTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.google.android.apps.fireball.ui.forcedupgrade.ForcedUpgradeActivity" android:noHistory="true" android:taskAffinity="com.google.android.apps.fireball.ui.forcedupgrade.ForcedUpgradeActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.google.android.apps.fireball.ui.gaia.LinkGaiaAccountActivity" android:theme="@style/Welcome.Theme" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:excludeFromRecents="true" android:exported="false" android:label="@string/gms_update_activity_label" android:name="com.google.android.apps.fireball.ui.gmsupdate.GmsUpdateActivity" android:theme="@style/FireballTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/ink_activity_label" android:name="com.google.android.apps.fireball.ui.mediapicker.ink.ImageAnnotateActivity" android:theme="@style/FireballTheme" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/permission_check_activity_label" android:name="com.google.android.apps.fireball.ui.permissioncheck.PermissionCheckActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/photo_view_activity_title" android:name="com.google.android.apps.fireball.ui.photoviewer.FireballPhotoViewActivity" android:screenOrientation="user" android:theme="@style/FireballPhotoViewTheme"/>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:label="@string/label_crop_photo_activity" android:name="com.google.android.apps.fireball.ui.profile.common.ImageCropActivity" android:screenOrientation="portrait" android:theme="@style/FireballTheme.ProfileActivity" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.google.android.apps.fireball.ui.profile.common.CROP"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:name="com.google.android.apps.fireball.ui.profile.ProfileActivity" android:theme="@style/FireballTheme.ProfileActivity"/>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:name="com.google.android.apps.fireball.ui.profile.GroupProfileActivity" android:parentActivityName="com.google.android.apps.fireball.ui.conversation.ConversationActivity" android:theme="@style/FireballTheme.ProfileActivity" android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.fireball.ui.conversation.ConversationActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:label="@string/group_qr_code_title" android:name="com.google.android.apps.fireball.ui.profile.GroupQRCodeActivity" android:theme="@style/FireballTheme.GroupQRCodeActivity"/>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:label="@string/personal_qr_code_title" android:name="com.google.android.apps.fireball.ui.profile.PersonalQrCodeActivity" android:theme="@style/FireballTheme"/>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:label="@string/label_self_profile_activity" android:name="com.google.android.apps.fireball.ui.profile.self.SelfProfileActivity" android:theme="@style/FireballTheme.ProfileActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/sticker_market_title" android:name="com.google.android.apps.fireball.ui.sticker.StickerMarketActivity" android:theme="@style/FireballTheme.StickerMarketActivity"/>
+        <activity android:configChanges="keyboardHidden|screenLayout|screenSize" android:exported="true" android:label="@string/sticker_set_overview_toolbar_text" android:name="com.google.android.apps.fireball.ui.sticker.StickerSetOverviewActivity" android:theme="@style/FireballTheme.ImageAnnotateActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="allo.google.com" android:pathPrefix="/stickers" android:scheme="http"/>
+                <data android:host="allo.google.com" android:pathPrefix="/stickers" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:label="@string/video_fullscreen_activity_label" android:name="com.google.android.apps.fireball.video.viewer.VideoViewActivity" android:theme="@style/FireballVideoViewTheme"/>
+        <activity android:exported="true" android:name="com.google.android.apps.fireball.voiceactions.FireballSearchActionVerificationClientActivity">
+            <intent-filter>
+                <action android:name="com.google.android.voicesearch.SEND_MESSAGE_TO_CONTACTS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <meta-data android:name="android.provider.account_type" android:value="com.google.android.apps.fireball"/>
+            <meta-data android:name="android.provider.mimetype" android:value="@string/gsa_mime_type"/>
+        </activity>
+        <service android:exported="false" android:name="com.google.android.apps.fireball.voiceactions.FireballSearchActionVerificationClientService"/>
+        <service android:exported="false" android:name="com.google.android.apps.fireball.voiceactions.AccountAuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.fireball.voiceactions.ContactsSyncService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/syncadapter"/>
+            <meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@xml/contacts"/>
+        </service>
+        <activity android:exported="false" android:name="com.google.android.libraries.eyck.avatarcreation.AvatarCreationActivity" android:screenOrientation="portrait" android:theme="@style/AvatarCreation.FullScreen"/>
+        <activity android:exported="false" android:label="" android:name="com.google.android.libraries.eyck.customizer.CustomizerActivity" android:screenOrientation="portrait"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.libraries.hats20.SurveyPromptActivity" android:theme="@style/HatsLibPromptTheme" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <receiver android:exported="false" android:name="com.google.android.libraries.social.silentfeedback.tiktok.SilentFeedbackReceiver" android:process=":crash_report"/>
+        <service android:exported="false" android:name="com.google.apps.tiktok.concurrent.AndroidFutures$RefCountedService"/>
+        <service android:exported="false" android:name="com.google.apps.tiktok.concurrent.AndroidFutures$ForegroundService"/>
+        <receiver android:exported="false" android:name="com.google.apps.tiktok.logging.backends.clientlogging.ClientLoggingReceiver_Receiver" android:process=":client_logging"/>
+        <receiver android:enabled="false" android:exported="false" android:name="com.google.apps.tiktok.sync.constraints.onbatteryokay.OnBatteryOkayConstraintReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:exported="true" android:name="com.google.apps.tiktok.sync.impl.gcm.SyncGmsPackageUpdatedReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.apps.tiktok.sync.impl.gcm.SyncGcoreGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.google.apps.tiktok.sync.impl.SyncReceiver_Receiver"/>
+        <receiver android:enabled="false" android:exported="true" android:name="com.google.apps.tiktok.sync.impl.SyncBootReceiver_Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@style/Theme.AppInvite.Preview">
+            <intent-filter>
+                <action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"/>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <activity-alias android:documentLaunchMode="always" android:excludeFromRecents="true" android:exported="true" android:label="@string/share_activity_title" android:name="com.google.android.apps.fireball.ui.conversationlist.VideoShareIntentActivity" android:noHistory="true" android:targetActivity="com.google.android.apps.fireball.ui.conversationlist.ShareIntentActivity">
+            <intent-filter android:label="@string/share_intent_label">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/3gp"/>
+                <data android:mimeType="video/3gpp"/>
+                <data android:mimeType="video/3gpp2"/>
+                <data android:mimeType="video/m4v"/>
+                <data android:mimeType="video/mp4"/>
+                <data android:mimeType="video/mpeg"/>
+                <data android:mimeType="video/mpeg4"/>
+                <data android:mimeType="video/webm"/>
+            </intent-filter>
+            <meta-data android:name="android.service.chooser.chooser_target_service" android:value=".directshare.FireballChooserTargetService"/>
+        </activity-alias>
+    </application>
+</manifest>
