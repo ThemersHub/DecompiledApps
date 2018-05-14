@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <ime string_id="zh_tw_pinyin_hard_qwerty" class="com.google.android.apps.inputmethod.libs.framework.ime.ProcessorBasedIme" language="zh-TW" inline_composing="true" label="@string/pinyin_ime_label" candidate_selection_keys="1,2,3,4,5,6,7,8,9,0" announce_auto_selected_candidate="true" status_icon="@drawable/ic_pinyin_status_icon" prime_keyboard_type="HARD_QWERTY" indicator_icon="@drawable/ic_pinyin_indicator_icon">
+        <keyboard_group>
+            <keyboard type="prime" def="@xml/keyboard_zh_tw_pinyin_floating_hard_qwerty" />
+            <keyboard type="digit" def="@xml/keyboard_non_prime_digit" />
+            <keyboard type="symbol" def="@xml/keyboard_non_prime_symbol_tw" />
+            <keyboard type="smiley" def="@xml/keyboard_non_prime_smiley" />
+            <keyboard type="emoticon" def="@xml/keyboard_non_prime_emoticon" />
+        </keyboard_group>
+        <extra_values>
+            <item id="@id/extra_value_enable_prediction" value="false" />
+            <item id="@id/extra_value_period" value="。" />
+        </extra_values>
+        <include href="@xml/processors_zh_tw_pinyin_qwerty" />
+    </ime>
+</framework>

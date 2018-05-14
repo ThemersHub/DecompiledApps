@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" style="@style/InputArea"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1000.0" style="@style/InputArea.4x10Key">
+        <include layout="@layout/keyboard_4x10_input_area_inner" />
+    </LinearLayout>
+    <LinearLayout android:weightSum="3.0" android:layout_weight="100.0" style="@style/Linear.WidthWeighted.Vertical">
+        <com.google.android.apps.inputmethod.libs.framework.keyboard.SoftKeyView android:id="@id/key_pos_del" android:layout_weight="1.0" style="@style/SoftKey.BigInset.Dark.InColumn" />
+        <com.google.android.apps.inputmethod.libs.framework.keyboard.SoftKeyView android:id="@id/key_pos_ime_action" android:layout_weight="1.0" style="@style/SoftKey.BigInset.ImeAction.InColumn" />
+        <com.google.android.apps.inputmethod.libs.framework.keyboard.SoftKeyView android:id="@id/key_pos_shift" android:layout_weight="1.0" style="@style/SoftKey.BigInset.Dark.InColumn" />
+    </LinearLayout>
+</LinearLayout>
