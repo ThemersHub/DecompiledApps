@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="start" android:orientation="vertical" android:id="@id/news_module_container" android:background="?selectableItemBackground" android:paddingBottom="24.0dip" android:focusable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="start|center" android:id="@id/module_title_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:minHeight="56.0dip" style="@style/TextStyle.Replay.Headline.6" />
+    <include layout="@layout/games__module_header_section" />
+    <View android:id="@id/top_module_padding" android:layout_width="fill_parent" android:layout_height="24.0dip" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="88.0dip">
+            <TextView android:ellipsize="end" android:gravity="start" android:id="@id/title_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" style="@style/TextStyle.Replay.Subtitle.1" />
+            <TextView android:ellipsize="end" android:gravity="start" android:id="@id/snippet_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="2" style="@style/TextStyle.Replay.Body.2" />
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:baselineAligned="false" android:weightSum="1.0">
+                <ImageView android:id="@id/publication_icon_image" android:layout_width="12.0sp" android:layout_height="12.0sp" android:layout_marginRight="8.0sp" />
+                <TextView android:ellipsize="end" android:gravity="start" android:id="@id/publication_name_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:lines="1" android:layout_weight="1.0" style="@style/TextStyle.Replay.Caption" />
+                <include layout="@layout/games__news_middle_dot_text_view" />
+                <TextView android:gravity="start" android:id="@id/published_duration_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" style="@style/TextStyle.Replay.Caption" />
+                <include android:id="@id/published_duration_text_separator" layout="@layout/games__news_middle_dot_text_view" />
+                <ImageView android:id="@id/amp_icon_image" android:layout_width="12.0sp" android:layout_height="12.0sp" android:src="@drawable/quantum_ic_amp_grey600_24" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="end" android:id="@id/header_image" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginTop="4.0sp" />
+    </FrameLayout>
+</LinearLayout>

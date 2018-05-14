@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Games.AlertDialog.Body" parent="@style/Games.AlertDialog">
+        <item name="android:textSize">@dimen/games_dialog_body_font_size</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textColor">@color/play_fg_secondary</item>
+        <item name="android:textColorLink">@color/play_games_theme_secondary</item>
+        <item name="android:linksClickable">true</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Games.AlertDialog.CheckBox" parent="@android:style/Widget.Holo.Light.CompoundButton.CheckBox">
+        <item name="android:textSize">@dimen/games_dialog_body_footnote_font_size</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textColor">@color/play_fg_secondary</item>
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Games.AlertDialog.EditText" parent="@android:style/Widget.Holo.Light.EditText">
+        <item name="android:textSize">@dimen/games_dialog_edittext_font_size</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textColor">@color/play_fg_primary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Games.AlertDialog.Title" parent="@style/Games.AlertDialog">
+        <item name="android:textSize">@dimen/games_dialog_title_font_size</item>
+        <item name="android:textColor">@color/play_fg_primary</item>
+        <item name="android:gravity">left</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">@string/games_font_roboto_medium</item>
+    </style>
+    <style name="Games.ButtonBarButtonLight" parent="@style/Games">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:background">@drawable/ab_bottom_play_match_bg</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Games.ChipDisplayNameNormal" parent="@style/Games">
+        <item name="android:textSize">@dimen/games_player_chip_text_size</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:paddingLeft">@dimen/games_player_chip_text_side_padding</item>
+        <item name="android:paddingRight">@dimen/games_player_chip_text_side_padding</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">@string/games_player_chip_text_font_family</item>
+    </style>
+    <style name="Games.ChipDisplayNameSelected" parent="@style/Games">
+        <item name="android:textSize">@dimen/games_player_chip_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:paddingLeft">@dimen/games_player_chip_text_side_padding</item>
+        <item name="android:paddingRight">@dimen/games_player_chip_text_side_padding</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">@string/games_player_chip_text_font_family</item>
+    </style>
+    <style name="Games.EmptyViewText" parent="@style/Games">
+        <item name="android:textSize">@dimen/games_null_state_empty_message_text_size</item>
+        <item name="android:textColor">?gamesEmptyTextColor</item>
+        <item name="android:paddingLeft">@dimen/games_standard_side_padding</item>
+        <item name="android:paddingRight">@dimen/games_standard_side_padding</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Games.GameDetailAboutHeader" parent="@style/Games">
+        <item name="android:textSize">@dimen/games_game_detail_about_title_font_size</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="Games.InGame.Header.Subtitle" parent="@style/Games.InGame.Header">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/v2_games_client_text_tertiary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:minHeight">@dimen/v2_games_header_subtitle_min_height</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Games.InGame.Header.Title" parent="@style/Games.InGame.Header">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/v2_games_client_text_primary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Games.InGame.ListItem.Label" parent="@style/Games.InGame.ListItem">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/v2_games_client_text_tertiary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Games.InGame.ListItem.Progress" parent="@style/Games.InGame.ListItem">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@color/v2_games_client_accent</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Games.InGame.ListItem.Title" parent="@style/Games.InGame.ListItem">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/v2_games_client_text_primary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:minHeight">@dimen/v2_games_list_item_text_min_height</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Games.InGame.NoData.Title" parent="@style/Games.InGame.NoData">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/v2_games_client_text_tertiary</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Games.LeaderboardScoreNullTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/games_leaderboard_score_null_text_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Games.PlayWholeRowListHeading" parent="@style/Games">
+        <item name="android:textSize">@dimen/games_onyx_whole_row_list_font_size_header</item>
+        <item name="android:textColor">?gamesSecondaryTextColor</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Games.PopupTextData" parent="@style/Games">
+        <item name="android:textSize">@dimen/games_popup_text_large_size</item>
+        <item name="android:textColor">@color/games_popup_dark_text_color</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxWidth">@dimen/games_popup_text_data_max_width</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Games.PopupTextLabel" parent="@style/Games">
+        <item name="android:textSize">@dimen/games_popup_text_small_size</item>
+        <item name="android:textColor">@color/games_popup_light_text_color</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Games.PopupTextSingleLineMessage" parent="@style/Games">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">#ff5e5e5e</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="Games.Tile.Mixed.Text.PlayerName" parent="@style/Games.Tile.Mixed.Text">
+        <item name="android:textSize">@dimen/games_mixed_tile_player_font_size_name</item>
+        <item name="android:paddingLeft">@dimen/games_tile_text_name_left_padding</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="Games.Tile.Text.QuestButton" parent="@style/Games.Tile.Text">
+        <item name="android:textSize">@dimen/games_tile_quest_button_font_size</item>
+        <item name="android:textColor">@color/play_games_theme_secondary</item>
+        <item name="android:background">@drawable/games_highlight_overlay</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:minHeight">0.0dip</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Games.Tile.Text.QuestTimeLeft" parent="@style/Games.Tile.Text">
+        <item name="android:textSize">@dimen/games_tile_quest_time_left_font_size</item>
+        <item name="android:textColor">?gamesSecondaryTextColor</item>
+        <item name="android:padding">0.0dip</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:minHeight">0.0dip</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Games.Tile.Text.QuestTotalProgress" parent="@style/Games.Tile.Text">
+        <item name="android:textSize">@dimen/games_tile_quest_progress_text_font_size</item>
+        <item name="android:textColor">@color/games_tile_quest_text_color_total_progress</item>
+        <item name="android:padding">0.0dip</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:minHeight">0.0dip</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="HatsLibFollowupMessageTextStyle" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/hats_lib_survey_header_font_size</item>
+        <item name="android:textColor">@color/hats_lib_prompt_take_survey_blue</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="HatsLibPromptTextStyle" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/hats_lib_survey_header_font_size</item>
+        <item name="android:textColor">@color/hats_lib_prompt_text_color</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="HatsLibQuestionTextStyle" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/hats_lib_survey_header_font_size</item>
+        <item name="android:textColor">@color/hats_lib_prompt_text_color</item>
+        <item name="android:background">@color/hats_lib_white_100</item>
+        <item name="android:lineSpacingMultiplier">@dimen/hats_lib_survey_header_question_line_spacing_multiplier</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="HatsLibThankYouTextStyle" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/hats_lib_survey_header_font_size</item>
+        <item name="android:textColor">@color/hats_lib_prompt_text_color</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="PlayCondensedText">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+    <style name="PlayGridBoldText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="PlayPlainText">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Preference_TextAppearanceMaterialBody2">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Preference_TextAppearanceMaterialSubhead">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="SuwGlifHeaderTitle" parent="@style/SuwBaseHeaderTitle">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:gravity">?suwGlifHeaderGravity</item>
+        <item name="android:layout_marginLeft">?suwMarginSides</item>
+        <item name="android:layout_marginTop">@dimen/suw_glif_header_title_margin_top</item>
+        <item name="android:layout_marginRight">?suwMarginSides</item>
+        <item name="android:layout_marginBottom">@dimen/suw_glif_header_title_margin_bottom</item>
+        <item name="android:fontFamily">@string/suwFontSecondary</item>
+    </style>
+    <style name="SuwNavBarButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:textSize">@dimen/suw_navbar_text_size</item>
+        <item name="android:textColor">?suwNavBarTextColor</item>
+        <item name="android:background">?suwNavBarButtonBackground</item>
+        <item name="android:paddingLeft">@dimen/suw_navbar_button_padding_sides</item>
+        <item name="android:paddingRight">@dimen/suw_navbar_button_padding_sides</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:drawablePadding">@dimen/suw_navbar_button_drawable_padding</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Tooltip" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.BottomNavigationView" parent="@style/Base.TextAppearance.GoogleMaterial.BottomNavigationView">
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.BottomNavigationView.Active" parent="@style/Base.TextAppearance.GoogleMaterial.BottomNavigationView.Active">
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Chip.Input" parent="@style/Base.TextAppearance.GoogleMaterial.Chip.Input">
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Chip.Suggestive" parent="@style/Base.TextAppearance.GoogleMaterial.Chip.Suggestive">
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="TextStyle.Replay.Headline.3" parent="@style/TextAppearance.GoogleMaterial.Headline3">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:lineSpacingExtra">1.0999756sp</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="TextStyle.Replay.Headline.4" parent="@style/TextAppearance.GoogleMaterial.Headline4">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:lineSpacingExtra">2.0sp</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="TextStyle.Replay.Headline.5" parent="@style/TextAppearance.GoogleMaterial.Headline5">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:lineSpacingExtra">0.70000005sp</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="TextStyle.Replay.Headline.6" parent="@style/TextAppearance.GoogleMaterial.Headline6">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:lineSpacingExtra">1.2999878sp</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+</resources>

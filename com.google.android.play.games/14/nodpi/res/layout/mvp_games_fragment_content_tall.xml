@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5" />
+    <android.support.v7.widget.RecyclerView android:id="@id/carousel" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="@dimen/games_mvp_carousel_size" style="@style/Games.Mvp.Carousel" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/games_mvp_games_fragment_content_tall_info_panel_side_margin" android:layout_marginTop="@dimen/games_mvp_games_fragment_content_tall_carousel_info_gap" android:layout_marginRight="@dimen/games_mvp_games_fragment_content_tall_info_panel_side_margin" android:weightSum="1.0">
+        <include android:layout_width="@dimen/games_mvp_games_fragment_content_tall_info_panel_width" android:layout_height="wrap_content" android:layout_weight="@dimen/games_mvp_games_fragment_content_tall_info_panel_weight" layout="@layout/mvp_games_fragment_game_info" />
+    </LinearLayout>
+    <Space android:layout_width="fill_parent" android:layout_height="@dimen/games_mvp_bottom_sheet_header_height" android:layout_weight="0.5" />
+</merge>

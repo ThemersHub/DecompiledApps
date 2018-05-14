@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.NestedScrollView android:id="@id/scroll_view" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:fadeScrollbars="false">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/scroll_view_spacer" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@android:id/message" android:paddingLeft="?dialogPreferredPadding" android:paddingRight="?dialogPreferredPadding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/TextAppearance.AppCompat.Subhead" />
+                <View android:id="@id/text_spacer_no_buttons" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/abc_dialog_padding_top_material" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/custom_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/top_panel" android:background="@color/material_grey_white_1000" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <com.google.android.gms.common.images.internal.LoadingImageView android:id="@id/banner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/games_dialog_banner_height" android:scaleType="centerCrop" />
+        <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/alert_title" android:paddingLeft="?dialogPreferredPadding" android:paddingTop="@dimen/games_dialog_padding_top" android:paddingRight="?dialogPreferredPadding" android:paddingBottom="@dimen/games_dialog_padding_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" style="?attr/android:windowTitleStyle" />
+    </LinearLayout>
+    <ProgressBar android:id="@id/loading_progress" android:visibility="gone" android:layout_width="@dimen/games_dialog_progress_size" android:layout_height="@dimen/games_dialog_progress_size" android:layout_below="@id/top_panel" android:layout_centerHorizontal="true" style="@style/Games.ProgressBar.Large" />
+    <ProgressBar android:id="@id/processing_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/games_horizontal_progress_bar_size" android:layout_marginLeft="?dialogPreferredPadding" android:layout_marginRight="?dialogPreferredPadding" android:indeterminate="true" android:progressDrawable="@drawable/games_progress_bar" android:layout_below="@id/top_panel" style="?android:attr/progressBarStyleHorizontal" />
+</RelativeLayout>

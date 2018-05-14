@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/splash_logo_container" android:paddingBottom="@dimen/games_mvp_splash_animation_vertical_offset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <com.google.android.libraries.material.butterfly.ButterflyView android:id="@id/splash_logo" android:visibility="invisible" android:layout_width="@dimen/games_mvp_splash_animation_size" android:layout_height="@dimen/games_mvp_splash_animation_size" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <ImageView android:id="@id/splash_text" android:visibility="invisible" android:layout_width="@dimen/games_mvp_splash_text_width" android:layout_height="@dimen/games_mvp_splash_text_height" android:layout_marginBottom="@dimen/games_mvp_splash_bottom_margin" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:importantForAccessibility="no" app:srcCompat="@drawable/google_play_splash_text" />
+    <ProgressBar android:id="@id/loading_indicator" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/games_mvp_splash_animation_size" android:layout_above="@id/splash_text" android:layout_alignTop="@id/splash_logo_container" android:layout_centerHorizontal="true" style="@style/Widget.AppCompat.ProgressBar" />
+</RelativeLayout>

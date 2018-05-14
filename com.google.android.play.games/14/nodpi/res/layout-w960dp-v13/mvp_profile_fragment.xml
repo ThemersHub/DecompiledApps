@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/mvp_profile_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" />
+        <LinearLayout android:orientation="horizontal" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Space android:layout_width="@dimen/games_mvp_landscape_column_horizontal_margin" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:clipChildren="false" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <com.google.android.gms.games.ui.widget.mvp.AvatarLevelView android:layout_gravity="center_horizontal" android:id="@id/avatar_level_view" android:paddingBottom="@dimen/games_mvp_side_margin" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" />
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/profile_header" android:background="?android:selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:gravity="center" android:id="@id/gamer_tag_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/games_mvp_title_text_bottom_margin" style="@style/TextStyle.Replay.Headline.3" />
+                    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/email_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/games_mvp_profile_email_margin_top" android:maxLines="1" android:drawableRight="@drawable/quantum_ic_arrow_drop_down_black_18" android:drawablePadding="@dimen/games_mvp_profile_email_drawable_padding" android:drawableEnd="@drawable/quantum_ic_arrow_drop_down_black_18" style="@style/TextStyle.Replay.Subtitle.2" />
+                </LinearLayout>
+                <TextView android:gravity="center" android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/games_mvp_profile_gamer_title_margin_top" android:layout_marginBottom="@dimen/games_standard_side_padding" style="@style/TextStyle.Replay.Caption" />
+                <include layout="@layout/mvp_profile_thick_xp_bar" />
+            </LinearLayout>
+            <Space android:layout_width="@dimen/games_mvp_landscape_column_horizontal_margin" android:layout_height="fill_parent" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <View android:id="@id/toolbar_divider" android:visibility="invisible" style="@style/GamesCommon.Divider" />
+                <ScrollView android:id="@id/scroll_view" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/games_mvp_side_margin_correction" android:layout_marginRight="@dimen/games_mvp_side_margin_correction">
+                        <include layout="@layout/mvp_profile_fragment_content" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+            <Space android:layout_width="@dimen/games_mvp_landscape_column_horizontal_margin" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

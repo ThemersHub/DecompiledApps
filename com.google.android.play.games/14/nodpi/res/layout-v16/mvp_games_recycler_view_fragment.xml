@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/games_simple_list_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/games_mvp_background_color" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/games_mvp_podium_logo_diameter_plus_radius" android:importantForAccessibility="no" />
+    <android.support.v7.widget.RecyclerView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/empty_view" android:visibility="gone" layout="@layout/games_empty_view" />
+    <include android:id="@id/network_error_view" android:visibility="gone" layout="@layout/games_network_error_message" />
+    <include android:id="@id/generic_error_view" android:visibility="gone" layout="@layout/games_generic_error_view" />
+    <LinearLayout android:orientation="vertical" android:id="@id/loading_view" android:visibility="gone" style="@style/Games.LoadingViewContainer">
+        <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge" />
+    </LinearLayout>
+</FrameLayout>

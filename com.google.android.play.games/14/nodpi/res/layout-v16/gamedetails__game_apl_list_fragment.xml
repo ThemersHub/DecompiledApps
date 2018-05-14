@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+            <ImageView android:id="@id/back_button" android:background="?actionBarItemBackground" android:paddingLeft="@dimen/gamedetails__apl_standard_margin" android:paddingTop="12.0dip" android:paddingRight="@dimen/gamedetails__apl_standard_margin" android:paddingBottom="12.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_arrow_back_grey600_24" android:contentDescription="@string/gamedetails__apl_back_content_description" />
+            <TextView android:gravity="start" android:id="@id/header_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/gamedetails__apl_bar_half_margin" android:layout_marginRight="@dimen/gamedetails__apl_bar_half_margin" android:layout_weight="1.0" style="@style/TextStyle.Replay.Headline.6" />
+            <FrameLayout android:id="@id/header_extra_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/gamedetails__apl_standard_margin" android:layout_marginRight="@dimen/gamedetails__apl_standard_margin" />
+        </LinearLayout>
+        <View android:id="@id/toolbar_divider" android:layout_margin="0.0dip" style="@style/APL.Divider" />
+        <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:paddingTop="@dimen/gamedetails__apl_list_vertical_padding" android:paddingBottom="@dimen/gamedetails__apl_list_vertical_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:id="@id/bottom_sheet_scrim" android:background="@color/gamedetails__apl_bottom_sheet_scrim_color" android:focusable="false" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+    <FrameLayout android:orientation="vertical" android:id="@id/bottom_sheet" android:layout_width="fill_parent" android:layout_height="fill_parent" app:behavior_peekHeight="0.0dip" app:layout_behavior="@string/bottom_sheet_behavior">
+        <FrameLayout android:id="@id/bottom_sheet_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

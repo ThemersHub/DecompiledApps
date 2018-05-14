@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="start" android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_mvp_settings_title" android:textAlignment="viewStart" style="@style/TextStyle.Replay.Headline.6" />
+            <TextView android:gravity="start" android:id="@id/account_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/TextStyle.Replay.Subhead.2" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <View android:id="@id/toolbar_divider" style="@style/GamesCommon.Divider" />
+    <android.support.v7.widget.RecyclerView android:id="@id/settings_recycler_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:maxWidth="@dimen/games_mvp_settings_item_max_width" android:layout_weight="1.0" />
+</LinearLayout>

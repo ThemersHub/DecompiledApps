@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/last_played_game_info_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/games_mvp_player_comparison_horizontal_margin" android:layout_marginTop="24.0dip" android:layout_marginRight="@dimen/games_mvp_player_comparison_horizontal_margin" android:weightSum="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/last_played_game_info_container" android:background="?android:selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="start|center" android:id="@id/last_played_icon" android:layout_width="@dimen/games_mvp_list_image_size" android:layout_height="@dimen/games_mvp_list_image_size" />
+        <LinearLayout android:layout_gravity="start|center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/games_standard_side_padding" android:layout_marginRight="@dimen/games_standard_side_padding" android:layout_weight="1.0">
+            <TextView android:id="@id/last_played_game_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextStyle.Replay.Subtitle.2" />
+            <TextView android:id="@id/last_played_game_timestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextStyle.Replay.Caption" />
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.design.button.MaterialButton android:layout_gravity="end|center" android:id="@id/last_played_game_play_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.Replay.FillButton" />
+</LinearLayout>

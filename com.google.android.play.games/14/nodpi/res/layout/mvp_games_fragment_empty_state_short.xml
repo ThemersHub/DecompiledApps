@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:layout_width="@dimen/games_mvp_carousel_size" android:layout_height="wrap_content" android:src="@drawable/mvp_games_ghost" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/games_standard_side_padding" android:layout_marginRight="@dimen/games_standard_side_padding" android:layout_weight="1.0">
+        <Space android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/games_mvp_empty_carousel_margin_between_text" android:text="@string/games_mvp_you_have_no_games_message" style="@style/TextStyle.Replay.Headline.3" />
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/prompt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/games_mvp_empty_carousel_margin_between_text_minus_button_inset" android:text="@string/games_mvp_empty_prompt_visit_store" style="@style/TextStyle.Replay.Body.1" />
+        <android.support.design.button.MaterialButton android:layout_gravity="center" android:id="@id/find_games_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_mvp_find_games_button_text" app:icon="@drawable/product_logo_play_prism_color_24" app:iconTint="@null" style="@style/Widget.Replay.HairlineButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <Space android:id="@id/bottom_sheet_hint_spacer" android:layout_width="fill_parent" android:layout_height="@dimen/games_mvp_bottom_sheet_header_height" />
+    </LinearLayout>
+</LinearLayout>

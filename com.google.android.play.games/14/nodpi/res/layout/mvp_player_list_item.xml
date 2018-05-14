@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/avatar_image" android:layout_width="@dimen/games_mvp_player_image_size" android:layout_height="@dimen/games_mvp_player_image_size" android:layout_marginTop="@dimen/games_mvp_player_image_vertical_margin" android:layout_marginRight="@dimen/games_standard_side_padding" android:layout_marginBottom="@dimen/games_mvp_player_image_vertical_margin" android:scaleType="centerCrop" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:gravity="start" android:id="@id/name_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextStyle.Replay.Subtitle.2" />
+        <TextView android:gravity="start" android:id="@id/annotation_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextStyle.Replay.Caption" />
+    </LinearLayout>
+    <TextView android:gravity="start" android:id="@id/level_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/games_standard_side_padding" style="@style/TextStyle.Replay.Caption" />
+    <ImageView android:id="@id/level_unknown_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_lock_outline_grey600_24" android:contentDescription="@string/games_mvp_player_level_unknown_content_description" />
+</LinearLayout>

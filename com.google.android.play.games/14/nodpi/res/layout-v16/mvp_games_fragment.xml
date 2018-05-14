@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/games_main_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/games_app_name">
+                    <ImageView android:layout_width="@dimen/games_mvp_logo_icon_size" android:layout_height="@dimen/games_mvp_logo_icon_size" android:layout_marginRight="@dimen/games_mvp_logo_icon_end_margin" android:src="@drawable/product_logo_play_games_color_48" />
+                    <TextView android:gravity="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_only_brand_name" android:importantForAccessibility="no" style="@style/TextStyle.Replay.Headline.6" />
+                </LinearLayout>
+            </android.support.v7.widget.Toolbar>
+            <LinearLayout android:orientation="vertical" android:id="@id/mvp_games_fragment_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0">
+                <include layout="@layout/mvp_games_fragment_content" />
+            </LinearLayout>
+            <include android:id="@id/empty_state_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/mvp_games_fragment_empty_state" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/bottom_sheet" android:layout_width="fill_parent" android:layout_height="fill_parent" app:behavior_peekHeight="@dimen/games_mvp_bottom_sheet_header_height" app:behavior_hideable="false" app:layout_behavior="@string/bottom_sheet_behavior">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+                <Space android:id="@id/bottom_sheet_hint_spacer" android:layout_width="@dimen/games_mvp_games_fragment_bottom_sheet_spacer_width" android:layout_height="@dimen/games_mvp_bottom_sheet_header_height" android:layout_marginLeft="@dimen/games_mvp_games_fragment_bottom_sheet_hint_spacer_start_margin" android:layout_marginRight="@dimen/games_mvp_games_fragment_bottom_sheet_hint_spacer_end_margin" />
+                <TextView android:gravity="center" android:layout_gravity="bottom" android:id="@id/bottom_sheet_hint" android:background="@drawable/games_library_hint_background" android:paddingBottom="@dimen/games_mvp_games_fragment_bottom_sheet_hint_bottom_margin" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/games_mvp_games_fragment_bottom_sheet_hint_end_margin" android:text="@string/games_mvp_games_library_label" android:drawableTop="@drawable/quantum_ic_keyboard_arrow_up_grey600_24" android:drawablePadding="0.0dip" android:layout_weight="1.0" style="@style/TextStyle.Replay.Caption" />
+            </LinearLayout>
+            <include layout="@layout/mvp_games_fragment_bottom_sheet_content" />
+        </FrameLayout>
+    </android.support.design.widget.CoordinatorLayout>
+    <include layout="@layout/navigation_bar" />
+</LinearLayout>

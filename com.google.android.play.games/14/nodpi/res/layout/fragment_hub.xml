@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.play.games.lib.widgets.conductor.ConductorLayout android:id="@id/hub_page_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <include android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_conductor_behavior="floating|offset" app:layout_conductor_maxOffset="?actionBarSize" app:layout_conductor_hideWhen="fullyOffset" layout="@layout/games__module_list_page_toolbar" />
+        <View android:id="@id/toolbar_divider" android:layout_marginTop="?actionBarSize" app:layout_conductor_behavior="floating|offset" app:layout_conductor_maxOffset="?actionBarSize" app:layout_conductor_hideWhen="notFloating|fullyOffset" style="@style/GamesCommon.Divider" />
+    </com.google.android.apps.play.games.lib.widgets.conductor.ConductorLayout>
+    <include layout="@layout/navigation_bar" />
+</LinearLayout>

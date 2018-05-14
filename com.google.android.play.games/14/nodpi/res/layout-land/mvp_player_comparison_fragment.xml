@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" />
+    <View android:id="@id/toolbar_divider" android:visibility="invisible" style="@style/GamesCommon.Divider" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0">
+        <FrameLayout android:layout_width="@dimen/games_mvp_landscape_left_icon_width_plus_twice_left_icon_padding" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/games_mvp_landscape_column_horizontal_margin_minus_left_icon_padding">
+            <com.google.android.gms.games.ui.widget.mvp.AvatarLevelView android:layout_gravity="center_horizontal" android:id="@id/avatar_level_view" android:padding="@dimen/games_mvp_landscape_left_icon_padding" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/games_mvp_player_comparison_avatar_level_view_bottom_margin" app:levelBackground="@drawable/mvp_avatar_comparison_level_circle" />
+        </FrameLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/player_comparison_recycler_view" android:paddingLeft="@dimen/games_mvp_landscape_column_horizontal_margin_minus_left_icon_padding" android:paddingRight="@dimen/games_mvp_landscape_end_margin" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>
