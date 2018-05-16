@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.photos.devicesetup.ShadowScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" photos:shadowColor="@color/quantum_grey300"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:photos="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/first_page" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AccountPickerWidth">
+        <FrameLayout android:id="@id/photos_backup_freestorage_full_auto_backup_switch_background" android:background="@color/quantum_grey100" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/photos_devicesetup_resources_autobackup_switch" />
+        </FrameLayout>
+        <View android:id="@id/photos_backup_freestorage_full_autobackup_switch_extra_padding" android:layout_width="fill_parent" android:layout_height="16.0dip" />
+        <RelativeLayout android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/photos_devicesetup_pixel_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photos_backup_freestorage_full_pixel_preload" android:contentDescription="@null" android:rotationY="@integer/photos_backup_freestorage_full_pixel_preload_rotation_angle" android:layout_alignParentEnd="true" />
+            <LinearLayout android:orientation="vertical" android:id="@id/photos_devicesetup_pixel_text" android:paddingLeft="@dimen/photos_devicesetup_resources_account_picker_padding" android:paddingTop="6.0dip" android:paddingRight="@dimen/photos_devicesetup_resources_account_picker_padding" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toStartOf="@id/photos_devicesetup_pixel_image" android:layout_alignParentStart="true">
+                <TextView android:id="@id/photos_backup_freestorage_full_offer_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/photos_backup_freestorage_full_pixel_back_up_your_photos" style="@style/quantum_text_body_2_black" />
+                <TextView android:textColor="@color/quantum_black_secondary_text" android:id="@id/photos_backup_freestorage_full_offer_description" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/photos_backup_freestorage_full_pixel_back_up_your_photos_2016_description" android:lineSpacingMultiplier="1.25" style="@style/quantum_text_body_1_black" />
+            </LinearLayout>
+            <CheckBox android:textColor="@color/quantum_black_secondary_text" android:gravity="center_vertical" android:id="@id/photos_backup_freestorage_full_pixel_checkbox" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="11.0dip" android:layout_marginRight="11.0dip" android:text="@string/photos_backup_freestorage_full_pixel_data_checkbox" android:layout_below="@id/photos_devicesetup_pixel_text" android:paddingStart="3.0dip" android:paddingEnd="3.0dip" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" style="@style/quantum_text_body_1_black" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.google.android.apps.photos.devicesetup.ShadowScrollView>
