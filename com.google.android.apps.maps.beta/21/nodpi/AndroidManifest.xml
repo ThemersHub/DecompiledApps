@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:sharedUserId="com.google.android.apps.maps" package="com.google.android.apps.maps" platformBuildVersionCode="28" platformBuildVersionName="9">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="P" android:sharedUserId="com.google.android.apps.maps" package="com.google.android.apps.maps" platformBuildVersionCode="28" platformBuildVersionName="P">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -1023,7 +1023,6 @@
             </intent-filter>
         </service>
         <receiver android:exported="false" android:label="Be the first service" android:name="com.google.android.apps.gmm.ugc.ataplace.AtAPlaceService"/>
-        <service android:exported="false" android:name="com.google.android.apps.gmm.ugc.ataplace.AtAPlaceJobIntentService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <receiver android:name="com.google.android.apps.gmm.ugc.tasks.nearby.UgcTasksNearbyBroadcastReceiver">
             <intent-filter>
                 <action android:name="com.google.android.apps.gmm.ugc.tasks.nearby.UgcTasksNearbyBroadcastReceiver.START_NEARBY_NEED_MODE"/>
@@ -1543,18 +1542,19 @@
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepaths"/>
         </provider>
         <receiver android:exported="false" android:name="com.google.android.apps.gmm.locationsharing.intent.UpdateSharesBroadcastReceiver"/>
-        <receiver android:name="com.google.android.apps.gmm.locationsharing.bursting.BurstingController$RestartDetectionBroadcastReceiver">
+        <receiver android:name="com.google.android.apps.gmm.locationsharing.bursting.BurstingControllerImpl$RestartDetectionBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
             </intent-filter>
         </receiver>
-        <receiver android:exported="false" android:name="com.google.android.apps.gmm.locationsharing.bursting.BurstingController$ActivityRecognitionBroadcastReceiver"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.gmm.locationsharing.bursting.BurstingControllerImpl$ActivityRecognitionBroadcastReceiver"/>
         <receiver android:exported="false" android:name="com.google.android.apps.gmm.transit.commute.TransitCommuteNotificationBroadcastReceiver"/>
-        <receiver android:exported="false" android:name="com.google.android.apps.gmm.transit.TransitStationBroadcastReceiver">
+        <receiver android:name="com.google.android.apps.gmm.transit.TransitStationBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="com.google.android.gms.location.reporting.SETTINGS_CHANGED"/>
             </intent-filter>
         </receiver>
         <receiver android:exported="false" android:name="com.google.android.apps.gmm.transit.TransitStationService"/>
@@ -1641,21 +1641,21 @@
             </intent-filter>
         </service>
         <activity android:exported="true" android:label="ReportAbuseActivity" android:name="com.google.android.libraries.abuse.reporting.ReportAbuseActivity"/>
-        <activity android:name="com.google.android.libraries.deepauth.appauth.AppAuthReceiverActivity" android:process="" android:theme="@style/GDI.AppAuthReceiver"/>
-        <activity android:name="com.google.android.libraries.deepauth.appauth.AppAuthCancellationReceiverActivity" android:process="" android:theme="@style/GDI.AppAuthReceiver"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.appauth.AppAuthReceiverActivity" android:process="" android:theme="@style/GDI.AppAuthReceiver"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.appauth.AppAuthCancellationReceiverActivity" android:process="" android:theme="@style/GDI.AppAuthReceiver"/>
         <activity android:exported="false" android:launchMode="singleTask" android:name="net.openid.appauth.AuthorizationManagementActivity" android:process="" android:theme="@style/GDI.Invisible"/>
-        <activity android:name="com.google.android.libraries.deepauth.ConsentActivity" android:process="" android:theme="@style/GDI.Consent"/>
-        <activity android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbConsentActivity" android:process="" android:theme="@style/GDI.Consent"/>
-        <activity android:name="com.google.android.libraries.deepauth.ActivityController" android:process="" android:theme="@style/GDI.Invisible"/>
-        <activity android:name="com.google.android.libraries.deepauth.accountcreation.AccountChooserActivity" android:process="" android:theme="@style/GDI.AccountChooser"/>
-        <activity android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbAccountChooserActivity" android:process="" android:theme="@style/GDI.AccountChooser"/>
-        <activity android:name="com.google.android.libraries.deepauth.accountcreation.CreateAccountActivity" android:process="" android:theme="@style/GDI.CreateAccount"/>
-        <activity android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbCreateAccountActivity" android:process="" android:theme="@style/GDI.CreateAccount"/>
-        <activity android:name="com.google.android.libraries.deepauth.accountcreation.EnterPhoneNumberActivity" android:process="" android:theme="@style/GDI.EnterPhoneNumber"/>
-        <activity android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbEnterPhoneNumberActivity" android:process="" android:theme="@style/GDI.EnterPhoneNumber"/>
-        <activity android:name="com.google.android.libraries.deepauth.accountcreation.EnterSmsCodeActivity" android:process="" android:theme="@style/GDI.EnterSMSCode"/>
-        <activity android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbEnterSmsCodeActivity" android:process="" android:theme="@style/GDI.EnterSMSCode"/>
-        <activity android:name="com.google.android.libraries.deepauth.accountcreation.VerificationErrorActivity" android:process="" android:theme="@style/GDI.VerificationError"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.ConsentActivity" android:process="" android:theme="@style/GDI.Consent"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbConsentActivity" android:process="" android:theme="@style/GDI.Consent"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.ActivityController" android:process="" android:theme="@style/GDI.Invisible"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.accountcreation.AccountChooserActivity" android:process="" android:theme="@style/GDI.AccountChooser"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbAccountChooserActivity" android:process="" android:theme="@style/GDI.AccountChooser"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.accountcreation.CreateAccountActivity" android:process="" android:theme="@style/GDI.CreateAccount"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbCreateAccountActivity" android:process="" android:theme="@style/GDI.CreateAccount"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.accountcreation.EnterPhoneNumberActivity" android:process="" android:theme="@style/GDI.EnterPhoneNumber"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbEnterPhoneNumberActivity" android:process="" android:theme="@style/GDI.EnterPhoneNumber"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.accountcreation.EnterSmsCodeActivity" android:process="" android:theme="@style/GDI.EnterSMSCode"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.accountcreation.ui.BbbEnterSmsCodeActivity" android:process="" android:theme="@style/GDI.EnterSMSCode"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.deepauth.accountcreation.VerificationErrorActivity" android:process="" android:theme="@style/GDI.VerificationError"/>
         <activity android:exported="false" android:name="com.google.android.libraries.social.jni.crashreporter.NativeCrashReporterActivity" android:process=":native_crash_reporter"/>
         <meta-data android:name="com.google.android.libraries.social.peoplekit.avatars.viewcontrollers.glide.FifeGlideModule" android:value="GlideModule"/>
         <meta-data android:name="com.google.android.libraries.social.sendkit.ui.avatars.glide.FifeGlideModule" android:value="GlideModule"/>
@@ -1674,5 +1674,23 @@
         <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
         <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
     </application>
 </manifest>
