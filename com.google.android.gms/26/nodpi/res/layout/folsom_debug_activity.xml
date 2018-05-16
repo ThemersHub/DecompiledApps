@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/button_open_vault" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Open Vault" android:layout_alignParentLeft="true" />
+        <Button android:id="@id/button_update_vault" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Update Vault" android:layout_below="@id/button_open_vault" android:layout_alignParentLeft="true" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/button_update_vault">
+            <LinearLayout android:orientation="horizontal" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:id="@id/textview_result" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="180.0dip" android:text="" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.locationsharing.common.ui.DisableableFrameLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/location_sharing_normal_padding" android:maxWidth="@dimen/location_sharing_share_item_width">
+        <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/avatar_frame" android:background="@drawable/location_sharing_avatar_selector" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/share_item_icon" android:layout_width="@dimen/location_sharing_one_touch_icon_size" android:layout_height="@dimen/location_sharing_one_touch_icon_size" android:layout_margin="3.0dip" android:scaleType="fitCenter" />
+            <LinearLayout android:gravity="center" android:id="@id/selector_container" android:background="@drawable/location_sharing_grey_circle_background" android:visibility="gone" android:layout_width="@dimen/location_sharing_one_touch_icon_size" android:layout_height="@dimen/location_sharing_one_touch_icon_size" android:layout_margin="3.0dip" android:weightSum="2.0">
+                <ImageView android:id="@id/selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_check_white_24" android:scaleType="center" android:contentDescription="@null" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="end|bottom|center" android:id="@id/contact_method" android:background="@drawable/location_sharing_contact_method_background" android:padding="1.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="14.0dip" android:maxHeight="14.0dip" android:contentDescription="@null" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/location_sharing_text_size_12" android:textColor="@color/material_grey_600" android:gravity="center_horizontal" android:id="@id/share_item_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/location_sharing_small_padding" android:maxLines="2" android:minLines="2" />
+    </LinearLayout>
+</com.google.android.gms.locationsharing.common.ui.DisableableFrameLayout>

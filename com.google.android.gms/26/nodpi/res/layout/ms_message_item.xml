@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/message_item_view_padding" android:paddingRight="@dimen/message_item_view_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/message_item_view_padding" android:paddingEnd="@dimen/message_item_view_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/ms_message_avatar" android:layout_width="@dimen/default_conversation_user_avatar_icon_view_size" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" layout="@layout/ms_message_avatar" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/message_horizontal_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:baselineAligned="false" android:weightSum="1.0" android:layout_toRightOf="@id/ms_message_avatar" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/ms_message_avatar">
+        <LinearLayout android:orientation="vertical" android:id="@id/message_text_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.7">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.google.android.libraries.matchstick.ui.MessageBubbleView android:textSize="14.0sp" android:textColor="@color/ms_message_text" android:textColorLink="@color/ms_message_text" android:autoLink="email|web" android:id="@id/message_text_view" android:background="@drawable/ms_message_item_bg" android:paddingLeft="10.0dip" android:paddingTop="8.0dip" android:paddingRight="10.0dip" android:paddingBottom="8.0dip" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/read_receipt_size" android:layout_alignParentRight="true" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginEnd="@dimen/read_receipt_size" android:layout_alignParentEnd="true" />
+                <include android:layout_width="@dimen/read_receipt_size" android:layout_height="@dimen/read_receipt_size" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" layout="@layout/ms_read_receipt_layout" />
+            </RelativeLayout>
+            <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/read_receipt_size" android:layout_marginEnd="@dimen/read_receipt_size" layout="@layout/ms_message_sender_timestamp" />
+            <include layout="@layout/ms_message_status" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

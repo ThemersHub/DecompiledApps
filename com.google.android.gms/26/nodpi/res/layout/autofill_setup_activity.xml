@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/autofill_label" android:layout_marginStart="24.0dip" style="?android:attr/windowTitleStyle" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/autofill_setup_summary" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/points_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+            <Spinner android:id="@id/account_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+            <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
+                <Button android:id="@id/negative_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_cancel" style="@style/autofill.Widget.Button.Borderless" />
+                <Button android:id="@id/positive_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_continue" android:layout_marginStart="16.0dip" style="@style/autofill.Widget.Button.Colored" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@android:id/progress" android:background="?android:colorBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.5">
+            <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+        </FrameLayout>
+    </FrameLayout>
+</ScrollView>
