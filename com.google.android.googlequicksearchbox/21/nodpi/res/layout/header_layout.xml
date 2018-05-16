@@ -15,10 +15,7 @@
     <ViewStub android:layout_gravity="center_horizontal" android:id="@id/top_nav_container_stub" android:layout="@layout/top_nav_parent_container" android:inflatedId="@id/top_nav_parent_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <com.google.android.apps.gsa.search.shared.overlay.SearchOverlayLayout android:id="@id/search_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <com.google.android.apps.gsa.search.shared.ui.ReverseDrawRestrictedLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/search_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <com.google.android.apps.gsa.search.shared.overlay.OverlaySearchPlateContainer android:layout_gravity="center|top" android:id="@id/search_plate_container" android:clipChildren="@bool/clip_children_and_to_padding" android:clipToPadding="@bool/clip_children_and_to_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_gravity="center|top" android:id="@id/text_search_plate_stub" android:layout_width="fill_parent" android:layout_height="@dimen/text_search_plate_height" />
-                <include android:layout_gravity="center|top" android:id="@id/search_plate" layout="@layout/search_plate" />
-            </com.google.android.apps.gsa.search.shared.overlay.OverlaySearchPlateContainer>
+            <include layout="@layout/search_plate_container" />
         </com.google.android.apps.gsa.search.shared.ui.ReverseDrawRestrictedLayout>
     </com.google.android.apps.gsa.search.shared.overlay.SearchOverlayLayout>
 </FrameLayout>

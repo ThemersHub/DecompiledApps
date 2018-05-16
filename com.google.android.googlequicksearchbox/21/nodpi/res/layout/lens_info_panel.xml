@@ -6,9 +6,10 @@
         <android.support.v4.widget.NestedScrollView android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/lens_info_panel_horizontal_padding" android:layout_marginTop="@dimen/lens_info_panel_content_top_margin" android:layout_marginRight="@dimen/lens_info_panel_horizontal_padding" android:layout_marginBottom="@dimen/lens_info_panel_vertical_padding">
             <FrameLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
                 <LinearLayout android:orientation="vertical" android:id="@id/panel_content" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/lens_info_panel_content_divider" android:showDividers="middle" />
-                <com.airbnb.lottie.LottieAnimationView android:id="@id/ghost_animation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitStart" android:adjustViewBounds="true" app:lottie_fileName="ghostui.json" app:lottie_autoPlay="false" app:lottie_loop="true" />
+                <com.airbnb.lottie.LottieAnimationView android:id="@id/ghost_animation" android:background="@drawable/immersive_actions_small_card_background_v2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitStart" android:adjustViewBounds="true" android:elevation="@dimen/opa_action_card_elevation" app:lottie_fileName="ghostui.json" app:lottie_autoPlay="false" app:lottie_loop="true" />
             </FrameLayout>
         </android.support.v4.widget.NestedScrollView>
+        <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/lenslets_panel_child_stub" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/lenslets_panel_height" />
     </FrameLayout>
     <Space android:id="@id/panel_bottom_space" android:layout_width="fill_parent" android:layout_height="0.0dip" />
 </com.google.android.apps.gsa.staticplugins.opa.eyes.client.onelens.LensInfoPanel>

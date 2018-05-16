@@ -430,6 +430,20 @@
     <style name="Base.TextAppearance.AppCompat.Widget.PopupMenu.Small" parent="@style/TextAppearance.AppCompat.Menu" />
     <style name="Base.TextAppearance.AppCompat.Widget.Switch" parent="@style/TextAppearance.AppCompat.Button" />
     <style name="Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem" parent="@style/TextAppearance.AppCompat.Menu" />
+    <style name="Base.TextAppearance.GoogleMaterial.BottomNavigationView" parent="@style/TextAppearance.MaterialComponents.BottomNavigationView">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/google_bottom_nav_text_color</item>
+    </style>
+    <style name="Base.TextAppearance.GoogleMaterial.BottomNavigationView.Active" parent="@style/Base.TextAppearance.GoogleMaterial.BottomNavigationView" />
+    <style name="Base.TextAppearance.GoogleMaterial.Chip.Input" parent="@style/TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">@dimen/google_chip_input_text_size</item>
+        <item name="android:textColor">@color/google_chip_text_color</item>
+    </style>
+    <style name="Base.TextAppearance.GoogleMaterial.Chip.Suggestive" parent="@style/TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">@dimen/google_chip_suggestive_text_size</item>
+        <item name="android:textColor">@color/google_chip_suggestive_text_color</item>
+    </style>
     <style name="Base.TextAppearance.Widget.AppCompat.ExpandedMenu.Item" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?android:textColorPrimaryDisableOnly</item>
     </style>
@@ -482,6 +496,60 @@
         <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
     </style>
     <style name="Base.Theme.AppCompat.Light.DialogWhenLarge" parent="@style/Theme.AppCompat.Light" />
+    <style name="Base.Theme.GoogleMaterial.CompactMenu" parent="">
+        <item name="android:listViewStyle">@style/Widget.AppCompat.ListView.Menu</item>
+        <item name="android:windowAnimationStyle">@style/Animation.AppCompat.DropDownUp</item>
+        <item name="android:itemTextAppearance">?android:textAppearanceMedium</item>
+    </style>
+    <style name="Base.Theme.GoogleMaterial.Dark" parent="@style/Base.V14.Theme.GoogleMaterial.Dark" />
+    <style name="Base.Theme.GoogleMaterial.Dark.BottomSheetDialog" parent="@style/Theme.GoogleMaterial.Dark.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="bottomSheetStyle">@style/Widget.GoogleMaterial.BottomSheet.Modal</item>
+    </style>
+    <style name="Base.Theme.GoogleMaterial.Dark.Dialog" parent="@style/Base.V14.Theme.GoogleMaterial.Dark.Dialog" />
+    <style name="Base.Theme.GoogleMaterial.Dark.Dialog.Alert" parent="@style/Base.Theme.GoogleMaterial.Dark.Dialog">
+        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="Base.Theme.GoogleMaterial.Dark.Dialog.FixedSize" parent="@style/Base.Theme.GoogleMaterial.Dark.Dialog">
+        <item name="windowFixedWidthMajor">@dimen/abc_dialog_fixed_width_major</item>
+        <item name="windowFixedHeightMinor">@dimen/abc_dialog_fixed_height_minor</item>
+        <item name="windowFixedWidthMinor">@dimen/abc_dialog_fixed_width_minor</item>
+        <item name="windowFixedHeightMajor">@dimen/abc_dialog_fixed_height_major</item>
+    </style>
+    <style name="Base.Theme.GoogleMaterial.Dark.Dialog.MinWidth" parent="@style/Base.Theme.GoogleMaterial.Dark.Dialog">
+        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="Base.Theme.GoogleMaterial.Dark.DialogWhenLarge" parent="@style/Theme.GoogleMaterial.Dark" />
+    <style name="Base.Theme.GoogleMaterial.Light" parent="@style/Base.V14.Theme.GoogleMaterial.Light">
+        <item name="android:statusBarColor">@color/google_grey700</item>
+    </style>
+    <style name="Base.Theme.GoogleMaterial.Light.BottomSheetDialog" parent="@style/Theme.GoogleMaterial.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="bottomSheetStyle">@style/Widget.GoogleMaterial.BottomSheet.Modal</item>
+    </style>
+    <style name="Base.Theme.GoogleMaterial.Light.Dialog" parent="@style/Base.V14.Theme.GoogleMaterial.Light.Dialog" />
+    <style name="Base.Theme.GoogleMaterial.Light.Dialog.Alert" parent="@style/Base.Theme.GoogleMaterial.Light.Dialog">
+        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="Base.Theme.GoogleMaterial.Light.Dialog.FixedSize" parent="@style/Base.Theme.GoogleMaterial.Light.Dialog">
+        <item name="windowFixedWidthMajor">@dimen/abc_dialog_fixed_width_major</item>
+        <item name="windowFixedHeightMinor">@dimen/abc_dialog_fixed_height_minor</item>
+        <item name="windowFixedWidthMinor">@dimen/abc_dialog_fixed_width_minor</item>
+        <item name="windowFixedHeightMajor">@dimen/abc_dialog_fixed_height_major</item>
+    </style>
+    <style name="Base.Theme.GoogleMaterial.Light.Dialog.MinWidth" parent="@style/Base.Theme.GoogleMaterial.Light.Dialog">
+        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="Base.Theme.GoogleMaterial.Light.DialogWhenLarge" parent="@style/Theme.GoogleMaterial.Light" />
     <style name="Base.Theme.MaterialComponents" parent="@style/Base.V14.Theme.MaterialComponents" />
     <style name="Base.Theme.MaterialComponents.CompactMenu" parent="">
         <item name="android:listViewStyle">@style/Widget.AppCompat.ListView.Menu</item>
@@ -590,8 +658,262 @@
         <item name="colorSwitchThumbNormal">@color/switch_thumb_material_light</item>
         <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
     </style>
+    <style name="Base.ThemeOverlay.GoogleMaterial.Dialog" parent="@style/Base.V14.ThemeOverlay.GoogleMaterial.Dialog" />
+    <style name="Base.ThemeOverlay.GoogleMaterial.Dialog.Alert" parent="@style/Base.V14.ThemeOverlay.GoogleMaterial.Dialog.Alert" />
     <style name="Base.ThemeOverlay.MaterialComponents.Dialog" parent="@style/Base.V14.ThemeOverlay.MaterialComponents.Dialog" />
     <style name="Base.ThemeOverlay.MaterialComponents.Dialog.Alert" parent="@style/Base.V14.ThemeOverlay.MaterialComponents.Dialog.Alert" />
+    <style name="Base.V14.Theme.GoogleMaterial.Dark" parent="@style/Platform.GoogleMaterial.Dark">
+        <item name="android:colorBackground">@color/google_grey900</item>
+        <item name="android:datePickerDialogTheme">@style/ThemeOverlay.GoogleMaterial.Dialog</item>
+        <item name="android:colorEdgeEffect">@color/google_grey500</item>
+        <item name="bottomAppBarStyle">@style/Widget.GoogleMaterial.BottomAppBar</item>
+        <item name="bottomNavigationStyle">@style/Widget.GoogleMaterial.BottomNavigationView</item>
+        <item name="bottomSheetDialogTheme">@style/Theme.GoogleMaterial.Dark.BottomSheetDialog</item>
+        <item name="chipStandaloneStyle">@style/Widget.GoogleMaterial.Chip.Input</item>
+        <item name="chipStyle">@style/Widget.GoogleMaterial.Chip.Assistive</item>
+        <item name="colorPrimaryLight">@color/google_grey900</item>
+        <item name="colorSecondary">@color/google_dark_blue600</item>
+        <item name="colorSecondaryDark">@color/google_dark_blue900</item>
+        <item name="colorSecondaryLight">@color/google_dark_blue500</item>
+        <item name="floatingActionButtonStyle">@style/Widget.GoogleMaterial.FloatingActionButton</item>
+        <item name="materialButtonStyle">@style/Widget.GoogleMaterial.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.GoogleMaterial.CardView.Dark</item>
+        <item name="navigationViewStyle">@style/Widget.GoogleMaterial.NavigationView</item>
+        <item name="scrimBackground">@color/google_scrim</item>
+        <item name="tabStyle">@style/Widget.GoogleMaterial.TabLayout</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.GoogleMaterial.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.GoogleMaterial.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.GoogleMaterial.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.GoogleMaterial.Caption</item>
+        <item name="textAppearanceHeadline1">@style/TextAppearance.GoogleMaterial.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.GoogleMaterial.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.GoogleMaterial.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.GoogleMaterial.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.GoogleMaterial.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.GoogleMaterial.Headline6</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.GoogleMaterial.Overline</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.GoogleMaterial.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.GoogleMaterial.Subtitle2</item>
+        <item name="textInputStyle">@style/Widget.Design.TextInputLayout</item>
+        <item name="borderlessButtonStyle">@style/Widget.GoogleMaterial.TextButton</item>
+        <item name="toolbarStyle">@style/Widget.GoogleMaterial.Toolbar</item>
+        <item name="colorPrimary">@color/google_grey900</item>
+        <item name="colorPrimaryDark">@color/google_grey900</item>
+        <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
+        <item name="alertDialogTheme">@style/ThemeOverlay.GoogleMaterial.Dialog.Alert</item>
+        <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+        <item name="colorPrimary50">@color/google_white</item>
+        <item name="colorPrimary100">@color/google_white</item>
+        <item name="colorPrimary500">@color/google_white</item>
+        <item name="colorPrimary600">@color/google_white</item>
+        <item name="colorPrimary700">@color/google_white</item>
+        <item name="colorPrimary800">@color/google_white</item>
+        <item name="colorPrimary900">@color/google_white</item>
+        <item name="colorSecondary50">@color/google_dark_blue50</item>
+        <item name="colorSecondary100">@color/google_dark_blue100</item>
+        <item name="colorSecondary500">@color/google_dark_blue500</item>
+        <item name="colorSecondary600">@color/google_dark_blue600</item>
+        <item name="colorSecondary700">@color/google_dark_blue700</item>
+        <item name="colorSecondary800">@color/google_dark_blue800</item>
+        <item name="colorSecondary900">@color/google_dark_blue900</item>
+        <item name="textAppearanceDisplay1">@style/TextAppearance.GoogleMaterial.Display1</item>
+        <item name="textAppearanceDisplay2">@style/TextAppearance.GoogleMaterial.Display2</item>
+        <item name="textAppearanceDisplay3">@style/TextAppearance.GoogleMaterial.Display3</item>
+        <item name="textAppearanceSubhead1">@style/TextAppearance.GoogleMaterial.Subhead1</item>
+        <item name="textAppearanceSubhead2">@style/TextAppearance.GoogleMaterial.Subhead2</item>
+        <item name="textAppearanceSubtitleAlt1">@style/TextAppearance.GoogleMaterial.SubtitleAlt1</item>
+        <item name="textAppearanceSubtitleAlt2">@style/TextAppearance.GoogleMaterial.SubtitleAlt2</item>
+        <item name="textAppearanceButtonAlt">@style/TextAppearance.GoogleMaterial.ButtonAlt</item>
+        <item name="snackbarButtonStyle">@style/Widget.GoogleMaterial.TextButton.Snackbar</item>
+    </style>
+    <style name="Base.V14.Theme.GoogleMaterial.Dark.Dialog" parent="@style/Platform.GoogleMaterial.Dark.Dialog">
+        <item name="android:colorBackground">@color/google_grey900</item>
+        <item name="android:colorEdgeEffect">@color/google_grey500</item>
+        <item name="bottomAppBarStyle">@style/Widget.GoogleMaterial.BottomAppBar</item>
+        <item name="bottomNavigationStyle">@style/Widget.GoogleMaterial.BottomNavigationView</item>
+        <item name="chipStandaloneStyle">@style/Widget.GoogleMaterial.Chip.Input</item>
+        <item name="chipStyle">@style/Widget.GoogleMaterial.Chip.Assistive</item>
+        <item name="colorPrimaryLight">@color/google_grey900</item>
+        <item name="colorSecondary">@color/google_dark_blue600</item>
+        <item name="colorSecondaryDark">@color/google_dark_blue900</item>
+        <item name="colorSecondaryLight">@color/google_dark_blue500</item>
+        <item name="floatingActionButtonStyle">@style/Widget.GoogleMaterial.FloatingActionButton</item>
+        <item name="materialButtonStyle">@style/Widget.GoogleMaterial.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.GoogleMaterial.CardView.Dark</item>
+        <item name="navigationViewStyle">@style/Widget.GoogleMaterial.NavigationView</item>
+        <item name="scrimBackground">@color/google_scrim</item>
+        <item name="tabStyle">@style/Widget.GoogleMaterial.TabLayout</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.GoogleMaterial.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.GoogleMaterial.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.GoogleMaterial.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.GoogleMaterial.Caption</item>
+        <item name="textAppearanceHeadline1">@style/TextAppearance.GoogleMaterial.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.GoogleMaterial.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.GoogleMaterial.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.GoogleMaterial.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.GoogleMaterial.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.GoogleMaterial.Headline6</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.GoogleMaterial.Overline</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.GoogleMaterial.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.GoogleMaterial.Subtitle2</item>
+        <item name="textInputStyle">@style/Widget.Design.TextInputLayout</item>
+        <item name="buttonBarButtonStyle">@style/Widget.GoogleMaterial.TextButton.Dialog</item>
+        <item name="borderlessButtonStyle">@style/Widget.GoogleMaterial.TextButton</item>
+        <item name="toolbarStyle">@style/Widget.GoogleMaterial.Toolbar</item>
+        <item name="colorPrimary">@color/google_grey900</item>
+        <item name="colorPrimaryDark">@color/google_grey900</item>
+        <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
+        <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+        <item name="colorPrimary50">@color/google_white</item>
+        <item name="colorPrimary100">@color/google_white</item>
+        <item name="colorPrimary500">@color/google_white</item>
+        <item name="colorPrimary600">@color/google_white</item>
+        <item name="colorPrimary700">@color/google_white</item>
+        <item name="colorPrimary800">@color/google_white</item>
+        <item name="colorPrimary900">@color/google_white</item>
+        <item name="colorSecondary50">@color/google_dark_blue50</item>
+        <item name="colorSecondary100">@color/google_dark_blue100</item>
+        <item name="colorSecondary500">@color/google_dark_blue500</item>
+        <item name="colorSecondary600">@color/google_dark_blue600</item>
+        <item name="colorSecondary700">@color/google_dark_blue700</item>
+        <item name="colorSecondary800">@color/google_dark_blue800</item>
+        <item name="colorSecondary900">@color/google_dark_blue900</item>
+        <item name="textAppearanceDisplay1">@style/TextAppearance.GoogleMaterial.Display1</item>
+        <item name="textAppearanceDisplay2">@style/TextAppearance.GoogleMaterial.Display2</item>
+        <item name="textAppearanceDisplay3">@style/TextAppearance.GoogleMaterial.Display3</item>
+        <item name="textAppearanceSubhead1">@style/TextAppearance.GoogleMaterial.Subhead1</item>
+        <item name="textAppearanceSubhead2">@style/TextAppearance.GoogleMaterial.Subhead2</item>
+        <item name="textAppearanceSubtitleAlt1">@style/TextAppearance.GoogleMaterial.SubtitleAlt1</item>
+        <item name="textAppearanceSubtitleAlt2">@style/TextAppearance.GoogleMaterial.SubtitleAlt2</item>
+        <item name="textAppearanceButtonAlt">@style/TextAppearance.GoogleMaterial.ButtonAlt</item>
+        <item name="snackbarButtonStyle">@style/Widget.GoogleMaterial.TextButton.Snackbar</item>
+    </style>
+    <style name="Base.V14.Theme.GoogleMaterial.Light" parent="@style/Platform.GoogleMaterial.Light">
+        <item name="android:colorBackground">@color/google_white</item>
+        <item name="android:datePickerDialogTheme">@style/ThemeOverlay.GoogleMaterial.Dialog</item>
+        <item name="android:colorEdgeEffect">@color/google_grey500</item>
+        <item name="bottomAppBarStyle">@style/Widget.GoogleMaterial.BottomAppBar</item>
+        <item name="bottomNavigationStyle">@style/Widget.GoogleMaterial.BottomNavigationView</item>
+        <item name="bottomSheetDialogTheme">@style/Theme.GoogleMaterial.Light.BottomSheetDialog</item>
+        <item name="chipStandaloneStyle">@style/Widget.GoogleMaterial.Chip.Input</item>
+        <item name="chipStyle">@style/Widget.GoogleMaterial.Chip.Assistive</item>
+        <item name="colorPrimaryLight">@color/google_white</item>
+        <item name="colorSecondary">@color/google_blue600</item>
+        <item name="colorSecondaryDark">@color/google_blue900</item>
+        <item name="colorSecondaryLight">@color/google_blue500</item>
+        <item name="floatingActionButtonStyle">@style/Widget.GoogleMaterial.FloatingActionButton</item>
+        <item name="materialButtonStyle">@style/Widget.GoogleMaterial.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.GoogleMaterial.CardView.Light</item>
+        <item name="navigationViewStyle">@style/Widget.GoogleMaterial.NavigationView</item>
+        <item name="scrimBackground">@color/google_scrim</item>
+        <item name="tabStyle">@style/Widget.GoogleMaterial.TabLayout</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.GoogleMaterial.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.GoogleMaterial.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.GoogleMaterial.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.GoogleMaterial.Caption</item>
+        <item name="textAppearanceHeadline1">@style/TextAppearance.GoogleMaterial.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.GoogleMaterial.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.GoogleMaterial.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.GoogleMaterial.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.GoogleMaterial.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.GoogleMaterial.Headline6</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.GoogleMaterial.Overline</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.GoogleMaterial.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.GoogleMaterial.Subtitle2</item>
+        <item name="textInputStyle">@style/Widget.Design.TextInputLayout</item>
+        <item name="borderlessButtonStyle">@style/Widget.GoogleMaterial.TextButton</item>
+        <item name="toolbarStyle">@style/Widget.GoogleMaterial.Toolbar</item>
+        <item name="colorPrimary">@color/google_white</item>
+        <item name="colorPrimaryDark">@color/google_white</item>
+        <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
+        <item name="alertDialogTheme">@style/ThemeOverlay.GoogleMaterial.Dialog.Alert</item>
+        <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+        <item name="colorPrimary50">@color/google_white</item>
+        <item name="colorPrimary100">@color/google_white</item>
+        <item name="colorPrimary500">@color/google_white</item>
+        <item name="colorPrimary600">@color/google_white</item>
+        <item name="colorPrimary700">@color/google_white</item>
+        <item name="colorPrimary800">@color/google_white</item>
+        <item name="colorPrimary900">@color/google_white</item>
+        <item name="colorSecondary50">@color/google_blue50</item>
+        <item name="colorSecondary100">@color/google_blue100</item>
+        <item name="colorSecondary500">@color/google_blue500</item>
+        <item name="colorSecondary600">@color/google_blue600</item>
+        <item name="colorSecondary700">@color/google_blue700</item>
+        <item name="colorSecondary800">@color/google_blue800</item>
+        <item name="colorSecondary900">@color/google_blue900</item>
+        <item name="textAppearanceDisplay1">@style/TextAppearance.GoogleMaterial.Display1</item>
+        <item name="textAppearanceDisplay2">@style/TextAppearance.GoogleMaterial.Display2</item>
+        <item name="textAppearanceDisplay3">@style/TextAppearance.GoogleMaterial.Display3</item>
+        <item name="textAppearanceSubhead1">@style/TextAppearance.GoogleMaterial.Subhead1</item>
+        <item name="textAppearanceSubhead2">@style/TextAppearance.GoogleMaterial.Subhead2</item>
+        <item name="textAppearanceSubtitleAlt1">@style/TextAppearance.GoogleMaterial.SubtitleAlt1</item>
+        <item name="textAppearanceSubtitleAlt2">@style/TextAppearance.GoogleMaterial.SubtitleAlt2</item>
+        <item name="textAppearanceButtonAlt">@style/TextAppearance.GoogleMaterial.ButtonAlt</item>
+        <item name="snackbarButtonStyle">@style/Widget.GoogleMaterial.TextButton.Snackbar</item>
+    </style>
+    <style name="Base.V14.Theme.GoogleMaterial.Light.Dialog" parent="@style/Platform.GoogleMaterial.Light.Dialog">
+        <item name="android:colorBackground">@color/google_white</item>
+        <item name="android:colorEdgeEffect">@color/google_grey500</item>
+        <item name="bottomAppBarStyle">@style/Widget.GoogleMaterial.BottomAppBar</item>
+        <item name="bottomNavigationStyle">@style/Widget.GoogleMaterial.BottomNavigationView</item>
+        <item name="chipStandaloneStyle">@style/Widget.GoogleMaterial.Chip.Input</item>
+        <item name="chipStyle">@style/Widget.GoogleMaterial.Chip.Assistive</item>
+        <item name="colorPrimaryLight">@color/google_white</item>
+        <item name="colorSecondary">@color/google_blue600</item>
+        <item name="colorSecondaryDark">@color/google_blue900</item>
+        <item name="colorSecondaryLight">@color/google_blue500</item>
+        <item name="floatingActionButtonStyle">@style/Widget.GoogleMaterial.FloatingActionButton</item>
+        <item name="materialButtonStyle">@style/Widget.GoogleMaterial.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.GoogleMaterial.CardView.Light</item>
+        <item name="navigationViewStyle">@style/Widget.GoogleMaterial.NavigationView</item>
+        <item name="scrimBackground">@color/google_scrim</item>
+        <item name="tabStyle">@style/Widget.GoogleMaterial.TabLayout</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.GoogleMaterial.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.GoogleMaterial.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.GoogleMaterial.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.GoogleMaterial.Caption</item>
+        <item name="textAppearanceHeadline1">@style/TextAppearance.GoogleMaterial.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.GoogleMaterial.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.GoogleMaterial.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.GoogleMaterial.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.GoogleMaterial.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.GoogleMaterial.Headline6</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.GoogleMaterial.Overline</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.GoogleMaterial.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.GoogleMaterial.Subtitle2</item>
+        <item name="textInputStyle">@style/Widget.Design.TextInputLayout</item>
+        <item name="buttonBarButtonStyle">@style/Widget.GoogleMaterial.TextButton.Dialog</item>
+        <item name="borderlessButtonStyle">@style/Widget.GoogleMaterial.TextButton</item>
+        <item name="toolbarStyle">@style/Widget.GoogleMaterial.Toolbar</item>
+        <item name="colorPrimary">@color/google_white</item>
+        <item name="colorPrimaryDark">@color/google_white</item>
+        <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
+        <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+        <item name="colorPrimary50">@color/google_white</item>
+        <item name="colorPrimary100">@color/google_white</item>
+        <item name="colorPrimary500">@color/google_white</item>
+        <item name="colorPrimary600">@color/google_white</item>
+        <item name="colorPrimary700">@color/google_white</item>
+        <item name="colorPrimary800">@color/google_white</item>
+        <item name="colorPrimary900">@color/google_white</item>
+        <item name="colorSecondary50">@color/google_blue50</item>
+        <item name="colorSecondary100">@color/google_blue100</item>
+        <item name="colorSecondary500">@color/google_blue500</item>
+        <item name="colorSecondary600">@color/google_blue600</item>
+        <item name="colorSecondary700">@color/google_blue700</item>
+        <item name="colorSecondary800">@color/google_blue800</item>
+        <item name="colorSecondary900">@color/google_blue900</item>
+        <item name="textAppearanceDisplay1">@style/TextAppearance.GoogleMaterial.Display1</item>
+        <item name="textAppearanceDisplay2">@style/TextAppearance.GoogleMaterial.Display2</item>
+        <item name="textAppearanceDisplay3">@style/TextAppearance.GoogleMaterial.Display3</item>
+        <item name="textAppearanceSubhead1">@style/TextAppearance.GoogleMaterial.Subhead1</item>
+        <item name="textAppearanceSubhead2">@style/TextAppearance.GoogleMaterial.Subhead2</item>
+        <item name="textAppearanceSubtitleAlt1">@style/TextAppearance.GoogleMaterial.SubtitleAlt1</item>
+        <item name="textAppearanceSubtitleAlt2">@style/TextAppearance.GoogleMaterial.SubtitleAlt2</item>
+        <item name="textAppearanceButtonAlt">@style/TextAppearance.GoogleMaterial.ButtonAlt</item>
+        <item name="snackbarButtonStyle">@style/Widget.GoogleMaterial.TextButton.Snackbar</item>
+    </style>
     <style name="Base.V14.Theme.MaterialComponents" parent="@style/Platform.MaterialComponents">
         <item name="android:datePickerDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog</item>
         <item name="bottomAppBarStyle">@style/Widget.MaterialComponents.BottomAppBar</item>
@@ -599,28 +921,8 @@
         <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
         <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
         <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
-        <item name="colorPrimary100">?colorPrimary200</item>
-        <item name="colorPrimary200">?colorPrimary300</item>
-        <item name="colorPrimary300">?colorPrimary400</item>
-        <item name="colorPrimary400">?colorPrimary500</item>
-        <item name="colorPrimary50">?colorPrimary100</item>
-        <item name="colorPrimary500">?colorPrimaryLight</item>
-        <item name="colorPrimary600">?colorPrimary</item>
-        <item name="colorPrimary700">?colorPrimary600</item>
-        <item name="colorPrimary800">?colorPrimary700</item>
-        <item name="colorPrimary900">?colorPrimaryDark</item>
         <item name="colorPrimaryLight">?colorPrimary</item>
         <item name="colorSecondary">?colorPrimary</item>
-        <item name="colorSecondary100">?colorSecondary200</item>
-        <item name="colorSecondary200">?colorSecondary300</item>
-        <item name="colorSecondary300">?colorSecondary400</item>
-        <item name="colorSecondary400">?colorSecondary500</item>
-        <item name="colorSecondary50">?colorSecondary100</item>
-        <item name="colorSecondary500">?colorSecondaryLight</item>
-        <item name="colorSecondary600">?colorSecondary</item>
-        <item name="colorSecondary700">?colorSecondary600</item>
-        <item name="colorSecondary800">?colorSecondary700</item>
-        <item name="colorSecondary900">?colorSecondaryDark</item>
         <item name="colorSecondaryDark">?colorPrimaryDark</item>
         <item name="colorSecondaryLight">?colorPrimaryLight</item>
         <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
@@ -658,28 +960,8 @@
         <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
         <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
         <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
-        <item name="colorPrimary100">?colorPrimary200</item>
-        <item name="colorPrimary200">?colorPrimary300</item>
-        <item name="colorPrimary300">?colorPrimary400</item>
-        <item name="colorPrimary400">?colorPrimary500</item>
-        <item name="colorPrimary50">?colorPrimary100</item>
-        <item name="colorPrimary500">?colorPrimaryLight</item>
-        <item name="colorPrimary600">?colorPrimary</item>
-        <item name="colorPrimary700">?colorPrimary600</item>
-        <item name="colorPrimary800">?colorPrimary700</item>
-        <item name="colorPrimary900">?colorPrimaryDark</item>
         <item name="colorPrimaryLight">?colorPrimary</item>
         <item name="colorSecondary">?colorPrimary</item>
-        <item name="colorSecondary100">?colorSecondary200</item>
-        <item name="colorSecondary200">?colorSecondary300</item>
-        <item name="colorSecondary300">?colorSecondary400</item>
-        <item name="colorSecondary400">?colorSecondary500</item>
-        <item name="colorSecondary50">?colorSecondary100</item>
-        <item name="colorSecondary500">?colorSecondaryLight</item>
-        <item name="colorSecondary600">?colorSecondary</item>
-        <item name="colorSecondary700">?colorSecondary600</item>
-        <item name="colorSecondary800">?colorSecondary700</item>
-        <item name="colorSecondary900">?colorSecondaryDark</item>
         <item name="colorSecondaryDark">?colorPrimaryDark</item>
         <item name="colorSecondaryLight">?colorPrimaryLight</item>
         <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
@@ -718,28 +1000,8 @@
         <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
         <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
         <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
-        <item name="colorPrimary100">?colorPrimary200</item>
-        <item name="colorPrimary200">?colorPrimary300</item>
-        <item name="colorPrimary300">?colorPrimary400</item>
-        <item name="colorPrimary400">?colorPrimary500</item>
-        <item name="colorPrimary50">?colorPrimary100</item>
-        <item name="colorPrimary500">?colorPrimaryLight</item>
-        <item name="colorPrimary600">?colorPrimary</item>
-        <item name="colorPrimary700">?colorPrimary600</item>
-        <item name="colorPrimary800">?colorPrimary700</item>
-        <item name="colorPrimary900">?colorPrimaryDark</item>
         <item name="colorPrimaryLight">?colorPrimary</item>
         <item name="colorSecondary">?colorPrimary</item>
-        <item name="colorSecondary100">?colorSecondary200</item>
-        <item name="colorSecondary200">?colorSecondary300</item>
-        <item name="colorSecondary300">?colorSecondary400</item>
-        <item name="colorSecondary400">?colorSecondary500</item>
-        <item name="colorSecondary50">?colorSecondary100</item>
-        <item name="colorSecondary500">?colorSecondaryLight</item>
-        <item name="colorSecondary600">?colorSecondary</item>
-        <item name="colorSecondary700">?colorSecondary600</item>
-        <item name="colorSecondary800">?colorSecondary700</item>
-        <item name="colorSecondary900">?colorSecondaryDark</item>
         <item name="colorSecondaryDark">?colorPrimaryDark</item>
         <item name="colorSecondaryLight">?colorPrimaryLight</item>
         <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
@@ -777,28 +1039,8 @@
         <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
         <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
         <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
-        <item name="colorPrimary100">?colorPrimary200</item>
-        <item name="colorPrimary200">?colorPrimary300</item>
-        <item name="colorPrimary300">?colorPrimary400</item>
-        <item name="colorPrimary400">?colorPrimary500</item>
-        <item name="colorPrimary50">?colorPrimary100</item>
-        <item name="colorPrimary500">?colorPrimaryLight</item>
-        <item name="colorPrimary600">?colorPrimary</item>
-        <item name="colorPrimary700">?colorPrimary600</item>
-        <item name="colorPrimary800">?colorPrimary700</item>
-        <item name="colorPrimary900">?colorPrimaryDark</item>
         <item name="colorPrimaryLight">?colorPrimary</item>
         <item name="colorSecondary">?colorPrimary</item>
-        <item name="colorSecondary100">?colorSecondary200</item>
-        <item name="colorSecondary200">?colorSecondary300</item>
-        <item name="colorSecondary300">?colorSecondary400</item>
-        <item name="colorSecondary400">?colorSecondary500</item>
-        <item name="colorSecondary50">?colorSecondary100</item>
-        <item name="colorSecondary500">?colorSecondaryLight</item>
-        <item name="colorSecondary600">?colorSecondary</item>
-        <item name="colorSecondary700">?colorSecondary600</item>
-        <item name="colorSecondary800">?colorSecondary700</item>
-        <item name="colorSecondary900">?colorSecondaryDark</item>
         <item name="colorSecondaryDark">?colorPrimaryDark</item>
         <item name="colorSecondaryLight">?colorPrimaryLight</item>
         <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
@@ -829,6 +1071,12 @@
         <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
         <item name="viewInflaterClass">android.support.design.theme.MaterialComponentsViewInflater</item>
         <item name="snackbarButtonStyle">?borderlessButtonStyle</item>
+    </style>
+    <style name="Base.V14.ThemeOverlay.GoogleMaterial.Dialog" parent="@style/ThemeOverlay.MaterialComponents.Dialog">
+        <item name="materialButtonStyle">@style/Widget.GoogleMaterial.TextButton.Dialog</item>
+    </style>
+    <style name="Base.V14.ThemeOverlay.GoogleMaterial.Dialog.Alert" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarButtonStyle">@style/Widget.GoogleMaterial.TextButton.Dialog</item>
     </style>
     <style name="Base.V14.ThemeOverlay.MaterialComponents.Dialog" parent="@style/ThemeOverlay.AppCompat.Dialog">
         <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
@@ -954,7 +1202,7 @@
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_light</item>
         <item name="tooltipForegroundColor">@color/foreground_material_light</item>
         <item name="colorError">@color/error_color_material_dark</item>
-        <item name="viewInflaterClass">android.support.v7.app.AppCompatViewInflater</item>
+        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
     </style>
     <style name="Base.V7.Theme.AppCompat.Dialog" parent="@style/Base.Theme.AppCompat">
         <item name="android:colorBackground">?colorBackgroundFloating</item>
@@ -1095,7 +1343,7 @@
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_dark</item>
         <item name="tooltipForegroundColor">@color/foreground_material_dark</item>
         <item name="colorError">@color/error_color_material_light</item>
-        <item name="viewInflaterClass">android.support.v7.app.AppCompatViewInflater</item>
+        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
     </style>
     <style name="Base.V7.Theme.AppCompat.Light.Dialog" parent="@style/Base.Theme.AppCompat.Light">
         <item name="android:colorBackground">?colorBackgroundFloating</item>
@@ -1464,6 +1712,19 @@
         <item name="tabRippleColor">?colorControlHighlight</item>
         <item name="tabUnboundedRipple">false</item>
     </style>
+    <style name="Base.Widget.GoogleMaterial.Chip" parent="@style/Base.Widget.MaterialComponents.Chip">
+        <item name="android:stateListAnimator">@animator/google_chip_state_list_anim</item>
+        <item name="rippleColor">@color/google_chip_ripple_color</item>
+        <item name="chipBackgroundColor">@color/google_chip_background_color</item>
+        <item name="chipStrokeColor">@color/google_chip_stroke_color</item>
+        <item name="chipStrokeWidth">1.0dip</item>
+        <item name="chipIcon">@null</item>
+        <item name="chipIconSize">18.0dip</item>
+        <item name="closeIcon">@drawable/ic_google_chip_close_grey</item>
+        <item name="closeIconTint">@color/google_chip_close_icon_tint</item>
+        <item name="checkedIcon">@drawable/ic_google_chip_checked_circle</item>
+        <item name="enforceMaterialTheme">true</item>
+    </style>
     <style name="Base.Widget.MaterialComponents.Chip" parent="@android:style/Widget">
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Chip</item>
         <item name="android:focusable">true</item>
@@ -1517,10 +1778,10 @@
         <item name="android:colorBackgroundCacheHint">@null</item>
     </style>
     <style name="BottomBarTooltipText">
-        <item name="android:textSize">14.0sp</item>
+        <item name="android:textSize">12.0sp</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:maxWidth">@dimen/tooltip_max_width</item>
-        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:maxWidth">@dimen/bottombartooltip_max_width</item>
+        <item name="android:fontFamily">Roboto Medium</item>
     </style>
     <style name="BottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -1789,15 +2050,16 @@
         <item name="android:textColor">@color/chatui_launch_hq_suggestion_background</item>
     </style>
     <style name="ChatUi.ZS.Chevron.Text" parent="@style/ChatUi.ZS.Text">
-        <item name="android:textColor">@color/chatui_zero_state_chevron_text_color</item>
+        <item name="android:textColor">@color/zero_state_chevron_text_color</item>
     </style>
     <style name="ChatUi.ZS.Text" parent="@android:style/TextAppearance.Medium">
         <item name="android:textSize">@dimen/chatui_font_size_small</item>
-        <item name="android:textColor">@color/chatui_zero_state_hint_text_color</item>
+        <item name="android:textColor">@color/zero_state_hint_text_color</item>
         <item name="android:gravity">center</item>
-        <item name="android:paddingBottom">@dimen/chatui_zero_state_hint_padding</item>
+        <item name="android:paddingBottom">@dimen/zero_state_hint_padding</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="ChatUi.thirdparty.header" parent="@android:style/TextAppearance.Medium">
         <item name="android:textSize">@dimen/third_party_header_text</item>
@@ -1992,15 +2254,23 @@
         <item name="android:layout_width">32.0dip</item>
         <item name="android:layout_height">32.0dip</item>
     </style>
+    <style name="ConversationStartersHqSuggestionText">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@color/quantum_googblue</item>
+        <item name="android:fontFamily">google-sans-medium</item>
+    </style>
     <style name="ConversationStartersSuggestionText">
         <item name="android:textSize">14.0dip</item>
-        <item name="android:textColor">@color/quantum_black_text</item>
+        <item name="android:textColor">@color/quantum_grey900</item>
         <item name="android:fontFamily">google-sans-medium</item>
     </style>
     <style name="ConversationThumbnail">
         <item name="android:adjustViewBounds">true</item>
         <item name="android:maxWidth">@dimen/conversation_thumbnail_max_height</item>
         <item name="android:maxHeight">@dimen/conversation_thumbnail_max_height</item>
+    </style>
+    <style name="CopyrightDisclaimerText" parent="@style/Quartz.Text.T12">
+        <item name="android:textSize">@dimen/quartz_16sdp</item>
     </style>
     <style name="CorpusBarSelector" parent="@android:style/Widget">
         <item name="android:orientation">horizontal</item>
@@ -2131,6 +2401,23 @@
     <style name="EditReminderDateTimeSpinner">
         <item name="android:layout_marginRight">@dimen/small_units_4</item>
         <item name="android:layout_marginEnd">@dimen/small_units_4</item>
+    </style>
+    <style name="EducationCardHeading">
+        <item name="android:textSize">@dimen/lens_education_card_heading_size</item>
+        <item name="android:textColor">@color/lens_education_card_heading_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/lens_education_card_heading_margin_bottom</item>
+        <item name="android:lineSpacingExtra">@dimen/lens_education_card_heading_line_spacing_extra</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="EducationCardParagraph">
+        <item name="android:textSize">@dimen/lens_education_card_paragraph_size</item>
+        <item name="android:textColor">@color/lens_education_card_paragraph_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingExtra">@dimen/lens_education_card_paragraph_line_spacing_extra</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
     <style name="EmailConsentElement.Description" parent="@style/ConsentElement.Description">
         <item name="android:textSize">11.0sp</item>
@@ -2521,6 +2808,14 @@
     <style name="HatsLibThankYouTextStyle" parent="@style/TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/hats_lib_survey_header_font_size</item>
         <item name="android:textColor">@color/hats_lib_prompt_text_color</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="HeaderText">
+        <item name="android:textSize">@dimen/suggestions_header_text_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/suggestions_header_text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAllCaps">true</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="Holo.ActionBar" parent="@android:style/Widget.Holo.ActionBar">
@@ -2974,6 +3269,12 @@
         <item name="android:textAlignment">center</item>
         <item name="android:paddingEnd">8.0dip</item>
     </style>
+    <style name="IpaSnippetText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/quantum_black_hint_text</item>
+        <item name="android:lineSpacingExtra">4.0sp</item>
+        <item name="android:fontFamily">Roboto-Regular</item>
+    </style>
     <style name="KeepListViewDropdownStyle" parent="@android:style/Widget.ListView.DropDown">
         <item name="android:background">@android:color/background_light</item>
         <item name="android:listSelector">?android:listChoiceBackgroundIndicator</item>
@@ -3234,6 +3535,12 @@
         <item name="android:paddingBottom">12.0dip</item>
         <item name="android:layout_alignParentLeft">true</item>
     </style>
+    <style name="NotesListsActionStyle" parent="@style/Widget.AppCompat.Button.Borderless.Colored.WithPaddingStartZeroDp">
+        <item name="android:textAppearance">@style/NotesListsActionTextStyle</item>
+    </style>
+    <style name="NotesListsActionTextStyle" parent="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
     <style name="OnDeviceAppResultRightGutterText">
         <item name="android:textAppearance">@style/OnDeviceAppResultRightGutterTextAppearance</item>
         <item name="android:duplicateParentState">true</item>
@@ -3243,6 +3550,9 @@
         <item name="android:textSize">@dimen/line_right_gutter_text_size</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/suggestion_right_gutter_text</item>
+    </style>
+    <style name="OnboardingButton" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:textAllCaps">false</item>
     </style>
     <style name="OobeListElement">
         <item name="android:layout_marginTop">@dimen/oobe_element_padding</item>
@@ -3626,6 +3936,10 @@
         <item name="android:listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
         <item name="android:listPreferredItemPaddingRight">@dimen/abc_list_item_padding_horizontal_material</item>
     </style>
+    <style name="Platform.GoogleMaterial.Dark" parent="@style/Theme.MaterialComponents" />
+    <style name="Platform.GoogleMaterial.Dark.Dialog" parent="@style/Theme.MaterialComponents.Dialog" />
+    <style name="Platform.GoogleMaterial.Light" parent="@style/Theme.MaterialComponents.Light" />
+    <style name="Platform.GoogleMaterial.Light.Dialog" parent="@style/Theme.MaterialComponents.Light.Dialog" />
     <style name="Platform.MaterialComponents" parent="@style/Theme.AppCompat" />
     <style name="Platform.MaterialComponents.Dialog" parent="@style/Theme.AppCompat.Dialog" />
     <style name="Platform.MaterialComponents.Light" parent="@style/Theme.AppCompat.Light" />
@@ -3656,12 +3970,18 @@
     </style>
     <style name="Preference.Category.Material" parent="@style/Preference.Category">
         <item name="android:layout">@layout/preference_category_material</item>
+        <item name="allowDividerAbove">true</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.CheckBoxPreference" parent="@style/Preference">
         <item name="android:widgetLayout">@layout/preference_widget_checkbox</item>
     </style>
     <style name="Preference.CheckBoxPreference.Material" parent="@style/Preference.CheckBoxPreference">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.DialogPreference" parent="@style/Preference">
         <item name="android:positiveButtonText">@android:string/ok</item>
@@ -3672,15 +3992,25 @@
     </style>
     <style name="Preference.DialogPreference.EditTextPreference.Material" parent="@style/Preference.DialogPreference.EditTextPreference">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="singleLineTitle">false</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.DialogPreference.Material" parent="@style/Preference.DialogPreference">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.DropDown" parent="@style/Preference">
         <item name="android:layout">@layout/preference_dropdown</item>
     </style>
     <style name="Preference.DropDown.Material" parent="@style/Preference.DropDown">
         <item name="android:layout">@layout/preference_dropdown_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.Information" parent="@style/Preference">
         <item name="android:enabled">false</item>
@@ -3694,10 +4024,17 @@
     </style>
     <style name="Preference.Material" parent="@style/Preference">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="singleLineTitle">false</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.PreferenceScreen" parent="@style/Preference" />
     <style name="Preference.PreferenceScreen.Material" parent="@style/Preference.PreferenceScreen">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.SeekBarPreference" parent="@style/Preference">
         <item name="android:layout">@layout/preference_widget_seekbar</item>
@@ -3706,6 +4043,9 @@
     </style>
     <style name="Preference.SeekBarPreference.Material" parent="@style/Preference.SeekBarPreference">
         <item name="android:layout">@layout/preference_widget_seekbar_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
         <item name="adjustable">true</item>
         <item name="showSeekBarValue">true</item>
     </style>
@@ -3716,6 +4056,10 @@
     </style>
     <style name="Preference.SwitchPreference.Material" parent="@style/Preference.SwitchPreference">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="singleLineTitle">false</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.SwitchPreferenceCompat" parent="@style/Preference">
         <item name="android:widgetLayout">@layout/preference_widget_switch_compat</item>
@@ -3724,6 +4068,9 @@
     </style>
     <style name="Preference.SwitchPreferenceCompat.Material" parent="@style/Preference.SwitchPreferenceCompat">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="PreferenceFragment">
         <item name="android:paddingLeft">0.0dip</item>
@@ -3732,6 +4079,7 @@
     </style>
     <style name="PreferenceFragment.Material" parent="@style/PreferenceFragment">
         <item name="android:divider">@drawable/preference_list_divider_material</item>
+        <item name="allowDividerAfterLastItem">false</item>
     </style>
     <style name="PreferenceFragmentList">
         <item name="android:paddingLeft">16.0dip</item>
@@ -3760,6 +4108,7 @@
         <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
     </style>
     <style name="PreferenceThemeOverlay.v14.Material" parent="@style/PreferenceThemeOverlay.v14">
+        <item name="android:scrollbars">vertical</item>
         <item name="preferenceScreenStyle">@style/Preference.PreferenceScreen.Material</item>
         <item name="preferenceFragmentStyle">@style/PreferenceFragment.Material</item>
         <item name="preferenceFragmentCompatStyle">@style/PreferenceFragment.Material</item>
@@ -3873,6 +4222,75 @@
         <item name="android:fontFamily">@font/google_sans</item>
         <item name="fontFamily">@font/google_sans</item>
     </style>
+    <style name="Quartz.Ganache.Home.Subtitle.WithImage" parent="@style/Quartz.Text.T12">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="Quartz.Ganache.Home.Subtitle.WithoutImage" parent="@style/Quartz.Text.T10">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="Quartz.Ganache.Home.Title.WithImage" parent="@style/Quartz.Text.T6">
+        <item name="android:textColor">@color/quartz_grey_50</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">3</item>
+    </style>
+    <style name="Quartz.Ganache.Home.Title.WithoutImage" parent="@style/Quartz.Text.T3">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">5</item>
+    </style>
+    <style name="Quartz.HomeRecommended.Grid.Image" parent="">
+        <item name="android:background">@drawable/quartz_ripple_background_dark</item>
+        <item name="android:layout_width">@dimen/quartz_156sdp</item>
+        <item name="android:layout_height">@dimen/quartz_156sdp</item>
+    </style>
+    <style name="Quartz.HomeRecommended.Grid.Label" parent="@style/Quartz.Text.T13">
+        <item name="android:textColor">@color/quartz_white_96p</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/quartz_ripple_background_dark</item>
+        <item name="android:layout_width">@dimen/quartz_188sdp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/quartz_24sdp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="Quartz.HomeRecommended.List.Image" parent="">
+        <item name="android:layout_width">@dimen/quartz_188sdp</item>
+        <item name="android:layout_height">@dimen/quartz_104sdp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="Quartz.HomeRecommended.List.Subtitle" parent="@style/Quartz.HomeRecommended.List.Text">
+        <item name="android:gravity">top</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">2</item>
+    </style>
+    <style name="Quartz.HomeRecommended.List.Text" parent="@style/Quartz.Text.T12">
+        <item name="android:textColor">@color/quartz_white_96p</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="android:layout_marginStart">@dimen/quartz_24sdp</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="Quartz.HomeRecommended.List.Title" parent="@style/Quartz.HomeRecommended.List.Text">
+        <item name="android:textColor">@color/quartz_text_color_secondary_dark</item>
+        <item name="android:paddingBottom">@dimen/quartz_16sdp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="layout_constraintVertical_chainStyle">spread</item>
+    </style>
+    <style name="Quartz.HomeRecommended.Subtitle" parent="@style/Quartz.Text.T10">
+        <item name="android:textColor">@color/quartz_text_color_secondary_dark</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
     <style name="Quartz.HomeSuggestion.Footer" parent="@style/Quartz.Text.T13">
         <item name="android:textColor">@color/quartz_text_color_secondary</item>
         <item name="android:ellipsize">end</item>
@@ -3909,6 +4327,20 @@
         <item name="android:maxLines">1</item>
         <item name="android:fontFamily">@font/google_sans_medium</item>
         <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="Quartz.Media.Home.Title.Audio" parent="@style/Quartz.Text.T10">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="Quartz.Media.Home.Title.Video" parent="@style/Quartz.Text.T6">
+        <item name="android:textColor">@color/quartz_grey_50</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">start</item>
+        <item name="android:maxLines">3</item>
     </style>
     <style name="Quartz.Noparse.Query" parent="@style/Quartz.Text.T8">
         <item name="android:textColor">@color/quartz_grey_600</item>
@@ -4026,6 +4458,9 @@
     </style>
     <style name="Quartz.Text.Ambient.Primary" parent="@style/Quartz.Text.Ambient">
         <item name="android:textSize">@dimen/quartz_text_size_1</item>
+    </style>
+    <style name="Quartz.Text.Ambient.Secondary" parent="@style/Quartz.Text.Ambient">
+        <item name="android:textSize">@dimen/quartz_48sdp</item>
     </style>
     <style name="Quartz.Text.AmbientScreen.BuildInfo" parent="@style/Quartz.Text.T15">
         <item name="android:textColor">@color/quartz_white_80p</item>
@@ -4330,11 +4765,17 @@
     <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.InternalGroup" parent="@android:style/Widget">
         <item name="android:layout_marginLeft">16.0dip</item>
     </style>
+    <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.Shortcut" parent="@android:style/Widget">
+        <item name="android:layout_marginLeft">16.0dip</item>
+    </style>
     <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.SubmenuArrow" parent="@android:style/Widget">
         <item name="android:layout_marginLeft">8.0dip</item>
     </style>
     <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.Text" parent="@android:style/Widget">
         <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.Title" parent="@android:style/Widget">
+        <item name="android:layout_marginLeft">16.0dip</item>
     </style>
     <style name="RtlOverlay.Widget.AppCompat.Search.DropDown" parent="@android:style/Widget">
         <item name="android:paddingLeft">@dimen/abc_dropdownitem_text_padding_left</item>
@@ -4496,11 +4937,10 @@
     <style name="SnackbarContainer">
         <item name="android:layout_width">fill_parent</item>
     </style>
-    <style name="SnippetText">
+    <style name="SnippetText" parent="@style/LineTwoText">
         <item name="android:textSize">14.0sp</item>
-        <item name="android:textColor">@color/quantum_black_hint_text</item>
-        <item name="android:lineSpacingExtra">4.0sp</item>
-        <item name="android:fontFamily">Roboto-Regular</item>
+        <item name="android:textColor">#8a000000</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
     <style name="SoundSearchNote">
         <item name="android:layout_marginTop">16.0dip</item>
@@ -5124,6 +5564,172 @@
         <item name="android:textColor">@color/mtrl_tabs_legacy_text_color_selector</item>
         <item name="textAllCaps">true</item>
     </style>
+    <style name="TextAppearance.GoogleMaterial.Body1" parent="@style/TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.00625</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Body2" parent="@style/TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.014285714</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.BottomNavigationView" parent="@style/Base.TextAppearance.GoogleMaterial.BottomNavigationView" />
+    <style name="TextAppearance.GoogleMaterial.BottomNavigationView.Active" parent="@style/Base.TextAppearance.GoogleMaterial.BottomNavigationView.Active" />
+    <style name="TextAppearance.GoogleMaterial.Button" parent="@style/TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.010714286</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.ButtonAlt" parent="@style/TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0125</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Caption" parent="@style/TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Chip.Assistive" parent="@style/TextAppearance.GoogleMaterial.Chip.Suggestive">
+        <item name="android:textColor">@color/google_chip_assistive_text_color</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Chip.Input" parent="@style/Base.TextAppearance.GoogleMaterial.Chip.Input">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Chip.Suggestive" parent="@style/Base.TextAppearance.GoogleMaterial.Chip.Suggestive">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Display1" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">64.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans_display</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Display2" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">56.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans_display</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Display3" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">44.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans_display</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Headline1" parent="@style/TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">36.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Headline2" parent="@style/TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">32.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Headline3" parent="@style/TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textSize">28.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Headline4" parent="@style/TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textSize">24.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Headline5" parent="@style/TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">22.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Headline6" parent="@style/TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.MaterialButton" parent="@style/TextAppearance.GoogleMaterial.ButtonAlt">
+        <item name="android:textColor">@color/google_btn_text_color_selector</item>
+        <item name="android:letterSpacing">@dimen/google_btn_letter_spacing</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.MaterialButton.Secondary" parent="@style/TextAppearance.GoogleMaterial.MaterialButton">
+        <item name="android:textColor">@color/google_btn_text_color_selector_secondary</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Overline" parent="@style/TextAppearance.MaterialComponents.Overline">
+        <item name="android:textSize">11.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.07272727</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Subhead1" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0125</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Subhead2" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0125</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Subtitle1" parent="@style/TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.0125</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Subtitle2" parent="@style/TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.010714286</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.SubtitleAlt1" parent="@style/TextAppearance.GoogleMaterial.Subhead1" />
+    <style name="TextAppearance.GoogleMaterial.SubtitleAlt2" parent="@style/TextAppearance.GoogleMaterial.Subhead2" />
+    <style name="TextAppearance.GoogleMaterial.Tab" parent="@style/TextAppearance.MaterialComponents.Tab">
+        <item name="android:textColor">@color/google_tabs_icon_color_selector</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Tab.Secondary" parent="@style/TextAppearance.GoogleMaterial.Tab">
+        <item name="android:textColor">@color/google_tabs_secondary_text_color_selector</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Toolbar.Subtitle" parent="@style/TextAppearance.GoogleMaterial.Subhead1">
+        <item name="android:textSize">@dimen/google_toolbar_text_size_subtitle</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Toolbar.Title" parent="@style/TextAppearance.GoogleMaterial.Headline6">
+        <item name="android:textSize">@dimen/google_toolbar_text_size_title</item>
+    </style>
     <style name="TextAppearance.MaterialComponents.Body1" parent="@style/TextAppearance.AppCompat.Body2">
         <item name="android:textSize">16.0sp</item>
         <item name="android:textStyle">normal</item>
@@ -5408,6 +6014,27 @@
         <item name="android:windowActionBar">false</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+    <style name="Theme.GoogleMaterial.CompactMenu" parent="@style/Base.Theme.GoogleMaterial.CompactMenu" />
+    <style name="Theme.GoogleMaterial.Dark" parent="@style/Base.Theme.GoogleMaterial.Dark" />
+    <style name="Theme.GoogleMaterial.Dark.BottomSheetDialog" parent="@style/Base.Theme.GoogleMaterial.Dark.BottomSheetDialog" />
+    <style name="Theme.GoogleMaterial.Dark.Dialog" parent="@style/Base.Theme.GoogleMaterial.Dark.Dialog" />
+    <style name="Theme.GoogleMaterial.Dark.Dialog.Alert" parent="@style/Base.Theme.GoogleMaterial.Dark.Dialog.Alert" />
+    <style name="Theme.GoogleMaterial.Dark.Dialog.MinWidth" parent="@style/Base.Theme.GoogleMaterial.Dark.Dialog.MinWidth" />
+    <style name="Theme.GoogleMaterial.Dark.DialogWhenLarge" parent="@style/Base.Theme.GoogleMaterial.Dark.DialogWhenLarge" />
+    <style name="Theme.GoogleMaterial.Dark.NoActionBar" parent="@style/Theme.GoogleMaterial.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.GoogleMaterial.Light" parent="@style/Base.Theme.GoogleMaterial.Light" />
+    <style name="Theme.GoogleMaterial.Light.BottomSheetDialog" parent="@style/Base.Theme.GoogleMaterial.Light.BottomSheetDialog" />
+    <style name="Theme.GoogleMaterial.Light.Dialog" parent="@style/Base.Theme.GoogleMaterial.Light.Dialog" />
+    <style name="Theme.GoogleMaterial.Light.Dialog.Alert" parent="@style/Base.Theme.GoogleMaterial.Light.Dialog.Alert" />
+    <style name="Theme.GoogleMaterial.Light.Dialog.MinWidth" parent="@style/Base.Theme.GoogleMaterial.Light.Dialog.MinWidth" />
+    <style name="Theme.GoogleMaterial.Light.DialogWhenLarge" parent="@style/Base.Theme.GoogleMaterial.Light.DialogWhenLarge" />
+    <style name="Theme.GoogleMaterial.Light.NoActionBar" parent="@style/Theme.GoogleMaterial.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
     <style name="Theme.Gsa" parent="@style/Theme.Shim.Light">
         <item name="android:textColorHighlight">@color/qp_highlight</item>
@@ -5742,6 +6369,13 @@
     <style name="ThemeOverlay.AppCompat.Dialog" parent="@style/Base.ThemeOverlay.AppCompat.Dialog" />
     <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="@style/Base.ThemeOverlay.AppCompat.Dialog.Alert" />
     <style name="ThemeOverlay.AppCompat.Light" parent="@style/Base.ThemeOverlay.AppCompat.Light" />
+    <style name="ThemeOverlay.GoogleMaterial" parent="@style/ThemeOverlay.MaterialComponents" />
+    <style name="ThemeOverlay.GoogleMaterial.ActionBar" parent="@style/ThemeOverlay.MaterialComponents.ActionBar" />
+    <style name="ThemeOverlay.GoogleMaterial.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dark" />
+    <style name="ThemeOverlay.GoogleMaterial.Dark.ActionBar" parent="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+    <style name="ThemeOverlay.GoogleMaterial.Dialog" parent="@style/Base.ThemeOverlay.GoogleMaterial.Dialog" />
+    <style name="ThemeOverlay.GoogleMaterial.Dialog.Alert" parent="@style/Base.ThemeOverlay.GoogleMaterial.Dialog.Alert" />
+    <style name="ThemeOverlay.GoogleMaterial.Light" parent="@style/ThemeOverlay.MaterialComponents.Light" />
     <style name="ThemeOverlay.Gsa.ActionBar" parent="@style/ThemeOverlay.Shim.ActionBar">
         <item name="android:colorControlHighlight">@color/qp_ripple_dark</item>
     </style>
@@ -6178,6 +6812,183 @@
     <style name="Widget.GoogleLib.Progress.Linear.QueryIndeterminateDeterminate" parent="@style/Widget.GoogleLib.Progress.Linear">
         <item name="mtrlIndeterminateProgressStyle">linearReverse</item>
     </style>
+    <style name="Widget.GoogleMaterial.BottomAppBar" parent="@style/Widget.MaterialComponents.BottomAppBar">
+        <item name="fabCradleMargin">@dimen/google_bottomappbar_fab_cradle_margin</item>
+        <item name="fabCradleRoundedCornerRadius">@dimen/google_bottomappbar_fab_cradle_rounded_corner_radius</item>
+        <item name="fabCradleVerticalOffset">@dimen/google_bottomappbar_fab_cradle_vertical_offset</item>
+        <item name="backgroundTint">#f4ffffff</item>
+    </style>
+    <style name="Widget.GoogleMaterial.BottomAppBar.Secondary" parent="@style/Widget.GoogleMaterial.BottomAppBar">
+        <item name="fabAlignmentMode">end</item>
+    </style>
+    <style name="Widget.GoogleMaterial.BottomNavigationView" parent="@style/Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">#f4ffffff</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.GoogleMaterial.BottomNavigationView</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.GoogleMaterial.BottomNavigationView.Active</item>
+        <item name="itemIconTint">@color/google_bottom_nav_icon_tint</item>
+        <item name="enforceMaterialTheme">true</item>
+    </style>
+    <style name="Widget.GoogleMaterial.BottomSheet.Modal" parent="@style/Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_background_with_rounded_corners</item>
+    </style>
+    <style name="Widget.GoogleMaterial.Button" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/TextAppearance.GoogleMaterial.MaterialButton</item>
+        <item name="android:paddingLeft">@dimen/google_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/google_btn_padding_right</item>
+        <item name="android:stateListAnimator">@animator/google_btn_state_list_anim</item>
+        <item name="rippleColor">@color/google_btn_filled_btn_ripple_color</item>
+        <item name="iconTint">@color/google_btn_text_color_selector</item>
+        <item name="additionalPaddingStartForIcon">@dimen/google_btn_additional_padding_start_for_icon</item>
+        <item name="additionalPaddingEndForIcon">@dimen/google_btn_additional_padding_end_for_icon</item>
+        <item name="backgroundTint">@color/google_btn_filled_btn_bg_color_selector</item>
+    </style>
+    <style name="Widget.GoogleMaterial.CardView" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="strokeColor">@color/google_grey300</item>
+        <item name="strokeWidth">@dimen/google_card_stroke_width</item>
+        <item name="cardCornerRadius">@dimen/google_card_corner_radius</item>
+        <item name="cardElevation">@dimen/google_card_elevation</item>
+    </style>
+    <style name="Widget.GoogleMaterial.CardView.Dark" parent="@style/Widget.GoogleMaterial.CardView">
+        <item name="strokeColor">@color/google_grey900</item>
+    </style>
+    <style name="Widget.GoogleMaterial.CardView.Light" parent="@style/Widget.GoogleMaterial.CardView" />
+    <style name="Widget.GoogleMaterial.Chip.Assistive" parent="@style/Base.Widget.GoogleMaterial.Chip">
+        <item name="android:textAppearance">@style/TextAppearance.GoogleMaterial.Chip.Assistive</item>
+        <item name="android:checkable">false</item>
+        <item name="chipMinHeight">32.0dip</item>
+        <item name="chipCornerRadius">16.0dip</item>
+        <item name="chipIconEnabled">true</item>
+        <item name="closeIconEnabled">false</item>
+        <item name="checkedIconEnabled">false</item>
+        <item name="chipStartPadding">8.0dip</item>
+        <item name="iconStartPadding">0.0dip</item>
+        <item name="iconEndPadding">0.0dip</item>
+        <item name="textStartPadding">8.0dip</item>
+        <item name="textEndPadding">8.0dip</item>
+        <item name="closeIconStartPadding">0.0dip</item>
+        <item name="closeIconEndPadding">0.0dip</item>
+        <item name="chipEndPadding">8.0dip</item>
+    </style>
+    <style name="Widget.GoogleMaterial.Chip.Assistive.Protected" parent="@style/Widget.GoogleMaterial.Chip.Assistive">
+        <item name="android:elevation">@dimen/google_chip_protected_elevation</item>
+        <item name="android:stateListAnimator">@animator/google_chip_state_list_anim</item>
+        <item name="chipStrokeColor">@color/google_transparent</item>
+    </style>
+    <style name="Widget.GoogleMaterial.Chip.Input" parent="@style/Base.Widget.GoogleMaterial.Chip">
+        <item name="android:textAppearance">@style/TextAppearance.GoogleMaterial.Chip.Input</item>
+        <item name="android:checkable">true</item>
+        <item name="chipMinHeight">26.0dip</item>
+        <item name="chipCornerRadius">13.0dip</item>
+        <item name="closeIconSize">12.0dip</item>
+        <item name="chipStartPadding">4.0dip</item>
+        <item name="iconStartPadding">0.0dip</item>
+        <item name="iconEndPadding">-2.0dip</item>
+        <item name="textStartPadding">8.0dip</item>
+        <item name="textEndPadding">6.0dip</item>
+        <item name="closeIconStartPadding">0.0dip</item>
+        <item name="closeIconEndPadding">2.0dip</item>
+        <item name="chipEndPadding">6.0dip</item>
+    </style>
+    <style name="Widget.GoogleMaterial.Chip.Suggestive" parent="@style/Base.Widget.GoogleMaterial.Chip">
+        <item name="android:textAppearance">@style/TextAppearance.GoogleMaterial.Chip.Suggestive</item>
+        <item name="android:checkable">true</item>
+        <item name="chipMinHeight">32.0dip</item>
+        <item name="chipCornerRadius">8.0dip</item>
+        <item name="chipIconEnabled">false</item>
+        <item name="closeIconEnabled">false</item>
+        <item name="closeIconSize">18.0dip</item>
+        <item name="checkedIconEnabled">false</item>
+        <item name="chipStartPadding">8.0dip</item>
+        <item name="iconStartPadding">0.0dip</item>
+        <item name="iconEndPadding">-2.0dip</item>
+        <item name="textStartPadding">8.0dip</item>
+        <item name="textEndPadding">6.0dip</item>
+        <item name="closeIconStartPadding">-2.0dip</item>
+        <item name="closeIconEndPadding">0.0dip</item>
+        <item name="chipEndPadding">10.0dip</item>
+    </style>
+    <style name="Widget.GoogleMaterial.Chip.Suggestive.Protected" parent="@style/Widget.GoogleMaterial.Chip.Suggestive">
+        <item name="android:elevation">@dimen/google_chip_protected_elevation</item>
+        <item name="android:stateListAnimator">@animator/google_chip_state_list_anim</item>
+        <item name="chipStrokeColor">@color/google_transparent</item>
+    </style>
+    <style name="Widget.GoogleMaterial.FloatingActionButton" parent="@style/Widget.MaterialComponents.FloatingActionButton">
+        <item name="rippleColor">@color/google_fab_ripple_color</item>
+        <item name="elevation">@dimen/google_fab_elevation</item>
+        <item name="tint">?colorSecondaryLight</item>
+        <item name="hoveredFocusedTranslationZ">@dimen/google_fab_translation_z_hovered_focused</item>
+        <item name="pressedTranslationZ">@dimen/google_fab_translation_z_pressed</item>
+        <item name="enforceMaterialTheme">true</item>
+        <item name="backgroundTint">@color/google_white</item>
+    </style>
+    <style name="Widget.GoogleMaterial.FloatingActionButton.Branded" parent="@style/Widget.GoogleMaterial.FloatingActionButton">
+        <item name="rippleColor">@color/google_fab_branded_ripple_color</item>
+        <item name="srcCompat">@drawable/coloredicons_cic_create_36</item>
+        <item name="tint">@null</item>
+        <item name="fabSize">normal</item>
+        <item name="maxImageSize">@dimen/google_fab_branded_image_size</item>
+    </style>
+    <style name="Widget.GoogleMaterial.FloatingActionButton.Secondary" parent="@style/Widget.GoogleMaterial.FloatingActionButton">
+        <item name="elevation">@dimen/google_fab_secondary_elevation</item>
+        <item name="hoveredFocusedTranslationZ">@dimen/google_fab_secondary_translation_z_hovered_focused</item>
+        <item name="pressedTranslationZ">@dimen/google_fab_secondary_translation_z_pressed</item>
+    </style>
+    <style name="Widget.GoogleMaterial.NavigationView" parent="@style/Widget.MaterialComponents.NavigationView" />
+    <style name="Widget.GoogleMaterial.ProtectedButton" parent="@style/Widget.GoogleMaterial.Button">
+        <item name="android:textAppearance">@style/TextAppearance.GoogleMaterial.MaterialButton.Secondary</item>
+        <item name="android:stateListAnimator">@animator/google_btn_protected_btn_state_list_anim</item>
+        <item name="rippleColor">@color/google_btn_ripple_color</item>
+        <item name="iconTint">@color/google_btn_text_color_selector_secondary</item>
+        <item name="backgroundTint">@color/google_btn_protected_btn_bg_color_selector</item>
+    </style>
+    <style name="Widget.GoogleMaterial.StrokedButton" parent="@style/Widget.GoogleMaterial.TextButton">
+        <item name="android:stateListAnimator">@animator/google_btn_stroked_btn_state_list_anim</item>
+        <item name="strokeColor">@color/google_btn_stroke_color_selector</item>
+        <item name="strokeWidth">@dimen/mtrl_btn_stroke_size</item>
+    </style>
+    <style name="Widget.GoogleMaterial.TabLayout" parent="@style/Widget.MaterialComponents.TabLayout">
+        <item name="tabIndicator">@drawable/google_tabs_rounded_line_indicator</item>
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabTextAppearance">@style/TextAppearance.GoogleMaterial.Tab</item>
+        <item name="tabIconTint">@color/google_tabs_icon_color_selector</item>
+    </style>
+    <style name="Widget.GoogleMaterial.TabLayout.Secondary" parent="@style/Widget.GoogleMaterial.TabLayout">
+        <item name="android:background">@drawable/google_tabs_secondary_tabs_background</item>
+        <item name="tabIndicator">@drawable/google_tabs_line_indicator</item>
+        <item name="tabIndicatorFullWidth">true</item>
+        <item name="tabTextAppearance">@style/TextAppearance.GoogleMaterial.Tab.Secondary</item>
+    </style>
+    <style name="Widget.GoogleMaterial.TextButton" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/TextAppearance.GoogleMaterial.MaterialButton.Secondary</item>
+        <item name="android:paddingLeft">@dimen/google_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/google_btn_padding_right</item>
+        <item name="rippleColor">@color/google_btn_ripple_color</item>
+        <item name="iconTint">@color/google_btn_text_color_selector_secondary</item>
+        <item name="additionalPaddingStartForIcon">@dimen/google_btn_additional_padding_start_for_icon</item>
+        <item name="additionalPaddingEndForIcon">@dimen/google_btn_additional_padding_end_for_icon</item>
+    </style>
+    <style name="Widget.GoogleMaterial.TextButton.Dialog" parent="@style/Widget.GoogleMaterial.TextButton">
+        <item name="android:paddingLeft">@dimen/google_btn_dialog_btn_spacing</item>
+        <item name="android:paddingRight">@dimen/google_btn_dialog_btn_spacing</item>
+        <item name="android:layout_marginLeft">@dimen/google_btn_dialog_btn_spacing</item>
+        <item name="android:minWidth">@dimen/mtrl_btn_dialog_btn_min_width</item>
+        <item name="android:layout_marginStart">@dimen/google_btn_dialog_btn_spacing</item>
+    </style>
+    <style name="Widget.GoogleMaterial.TextButton.Snackbar" parent="@style/Widget.GoogleMaterial.TextButton">
+        <item name="android:paddingLeft">@dimen/mtrl_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/mtrl_btn_padding_right</item>
+    </style>
+    <style name="Widget.GoogleMaterial.TextInputLayout.FilledBox" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox" />
+    <style name="Widget.GoogleMaterial.TextInputLayout.FilledBox.Dense" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense" />
+    <style name="Widget.GoogleMaterial.TextInputLayout.OutlineBox" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox">
+        <item name="boxStrokeColor">?colorSecondaryLight</item>
+        <item name="enforceMaterialTheme">true</item>
+    </style>
+    <style name="Widget.GoogleMaterial.TextInputLayout.OutlineBox.Dense" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox.Dense" />
+    <style name="Widget.GoogleMaterial.Toolbar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.GoogleMaterial.Toolbar.Title</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.GoogleMaterial.Toolbar.Subtitle</item>
+    </style>
     <style name="Widget.MaterialComponents.BottomAppBar" parent="@style/Widget.AppCompat.Toolbar">
         <item name="fabAttached">true</item>
         <item name="fabCradleMargin">@dimen/mtrl_bottomappbar_fab_cradle_margin</item>
@@ -6422,22 +7233,18 @@
     </style>
     <style name="ZeroStateContextualGreetingText">
         <item name="android:textSize">28.0dip</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/quantum_black_text</item>
-        <item name="android:fontFamily">google-sans</item>
+        <item name="android:textColor">@color/quantum_grey900</item>
+        <item name="android:fontFamily">google-sans-medium</item>
     </style>
     <style name="ZeroStateContextualWeatherText">
         <item name="android:textSize">16.0dip</item>
-        <item name="android:textColor">@color/quantum_black_text</item>
+        <item name="android:textColor">@color/quantum_grey900</item>
         <item name="android:fontFamily">google-sans</item>
     </style>
     <style name="ZeroStateHomeAutomationHeaderText">
         <item name="android:textSize">@dimen/zero_state_section_header_title_text_size</item>
         <item name="android:textColor">@color/quantum_grey900</item>
         <item name="android:fontFamily">google-sans</item>
-    </style>
-    <style name="ZeroStateHqSuggestionChip">
-        <item name="android:textColor">@color/quantum_googblue</item>
     </style>
     <style name="ZeroStateSectionHeaderLink">
         <item name="android:textSize">@dimen/zero_state_section_header_title_text_size</item>
@@ -6452,14 +7259,13 @@
     </style>
     <style name="ZeroStateSectionHeaderText">
         <item name="android:textSize">@dimen/zero_state_section_header_title_text_size</item>
-        <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/quantum_grey900</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="ZeroStateSuggestionChipText">
         <item name="android:textSize">16.0dip</item>
-        <item name="android:textColor">@color/quantum_black_text</item>
+        <item name="android:textColor">@color/quantum_grey900</item>
         <item name="android:fontFamily">google-sans</item>
     </style>
     <style name="actionButtonStyle" parent="@style/Widget.AppCompat.Button.Borderless">
@@ -6679,7 +7485,7 @@
     <style name="card_footer_text">
         <item name="android:textSize">12.0sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/eames_blue</item>
+        <item name="android:textColor">@color/google_blue600</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
@@ -6809,7 +7615,7 @@
         <item name="android:layout_marginEnd">24.0dip</item>
     </style>
     <style name="download_episode" parent="@style/episode_description">
-        <item name="android:textColor">@color/eames_blue</item>
+        <item name="android:textColor">@color/google_blue600</item>
     </style>
     <style name="download_episode_text_light" parent="@style/episode_description">
         <item name="android:textColor">@color/eames_grey</item>
@@ -7491,11 +8297,14 @@
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="playback_subtitle" parent="@style/quantum_text_white_medium">
-        <item name="android:textSize">14.0sp</item>
+        <item name="android:textSize">12.0sp</item>
     </style>
     <style name="playback_title" parent="@style/quantum_text_white_light">
         <item name="android:textSize">14.0sp</item>
         <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="playback_trim_silence" parent="@style/quantum_text_white_medium">
+        <item name="android:textSize">12.0sp</item>
     </style>
     <style name="podcast_description" parent="@style/quantum_text_body_1_black">
         <item name="android:lineSpacingExtra">4.0dip</item>
@@ -7549,7 +8358,7 @@
     <style name="promotion_card_sign_in_or_waa_button">
         <item name="android:textSize">12.0sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/eames_blue</item>
+        <item name="android:textColor">@color/google_blue600</item>
         <item name="android:lineSpacingExtra">2.0dip</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:fontFamily">sans-serif</item>
@@ -8273,7 +9082,7 @@
         <item name="android:fontFamily">sans-serif</item>
     </style>
     <style name="show_unsubscribe_button" parent="@style/show_subscription_button">
-        <item name="android:textColor">@color/eames_blue</item>
+        <item name="android:textColor">@color/google_blue600</item>
         <item name="android:background">@drawable/button_border</item>
         <item name="android:paddingRight">12.0dip</item>
         <item name="android:text">@string/unsubscribe_button_label</item>

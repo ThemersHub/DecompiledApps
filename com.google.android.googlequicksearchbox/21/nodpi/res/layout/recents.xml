@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+<LinearLayout android:orientation="vertical" android:id="@id/recently_content_layout" android:background="@color/recently_background_color" android:paddingBottom="16.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:id="@id/recently_content_layout" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <include layout="@layout/action_bar_layout" />
-        <FrameLayout android:id="@id/recently_filter_box_module_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-        <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
-        <FrameLayout android:id="@id/header" android:layout_width="fill_parent" android:layout_height="48.0dip" />
-        <com.google.android.apps.gsa.plugins.recents.view.group.RecentlyView android:id="@id/recently_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/recently_filterbox_elevation" />
-        <com.google.android.apps.gsa.plugins.recents.view.timeline.TimelineView android:id="@id/timeline_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" />
-        <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
-    </LinearLayout>
-    <FrameLayout android:layout_gravity="bottom" android:id="@id/snackbar_container" android:background="#ff444444" android:layout_width="fill_parent" android:layout_height="48.0dip" android:translationY="48.0dip">
-        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="start" android:id="@id/snackbar_message" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="24.0dip" />
-        <Button android:textColor="@color/recently_accent_color" android:gravity="center" android:layout_gravity="end" android:id="@id/snackbar_action" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginEnd="16.0dip" style="@style/Widget.AppCompat.Button.Borderless.Colored" />
-    </FrameLayout>
-</FrameLayout>
+    <include layout="@layout/action_bar_layout" />
+    <FrameLayout android:id="@id/recently_filter_box_module_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <FrameLayout android:id="@id/header" android:layout_width="fill_parent" android:layout_height="48.0dip" />
+    <com.google.android.apps.gsa.plugins.recents.view.group.RecentlyView android:id="@id/recently_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/recently_filterbox_elevation" />
+    <com.google.android.apps.gsa.plugins.recents.view.timeline.TimelineView android:id="@id/timeline_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" />
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

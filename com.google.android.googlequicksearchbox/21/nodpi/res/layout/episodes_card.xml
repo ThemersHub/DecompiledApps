@@ -3,8 +3,13 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:orientation="vertical" android:id="@id/episodes_card" android:background="@drawable/eames_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip">
         <TextView android:gravity="center_vertical" android:id="@id/episodes_card_title" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" style="@style/homebase_section_title" />
+        <View android:id="@id/episodes_card_title_separator" android:visibility="gone" style="@style/episode_separator" />
         <android.support.v7.widget.RecyclerView android:id="@id/episodes_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
         <View android:id="@id/card_footer_separator" style="@style/episode_separator" />
         <TextView android:id="@id/episodes_card_footer" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/card_footer_text" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/no_content_description_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View style="@style/episode_separator" />
+        <TextView android:id="@id/no_content_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_marginStart="16.0dip" style="@style/TextAppearance.GoogleMaterial.Subtitle2" />
     </LinearLayout>
 </FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/episodes_tabs" android:background="@drawable/eames_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:text="@string/episodes_for_you" android:textDirection="locale" android:layout_marginStart="16.0dip" style="@style/TextAppearance.GoogleMaterial.Headline6" />
+        <com.google.android.apps.gsa.plugins.podcastplayer.ui.HeightAdaptiveViewPager android:id="@id/episodes_pager" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <android.support.design.tabs.TabLayout android:layout_gravity="top" android:id="@id/episodes_tabs_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.google.android.apps.gsa.plugins.podcastplayer.ui.HeightAdaptiveViewPager>
+    </LinearLayout>
+</FrameLayout>

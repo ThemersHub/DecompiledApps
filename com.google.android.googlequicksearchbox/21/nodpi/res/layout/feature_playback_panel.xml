@@ -38,7 +38,10 @@
             </LinearLayout>
             <RelativeLayout android:orientation="vertical" android:id="@id/speed_setting" android:layout_width="fill_parent" android:layout_height="@dimen/playback_panel_content_height">
                 <com.google.android.apps.gsa.plugins.podcastplayer.PlaybackSpeedSelector android:id="@id/playback_speed_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_alignParentTop="true" />
-                <TextView android:layout_gravity="right" android:id="@id/close_speed_setting" android:padding="@dimen/icon_extra_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:text="@string/done" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_marginEnd="12.0dip" android:layout_alignParentEnd="true" style="@style/playback_speed_setting_done" />
+                <RelativeLayout android:id="@id/playback_speed_buttons" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+                    <CheckBox android:id="@id/trim_silence" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:text="@string/trim_silence" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_marginStart="24.0dip" android:layout_alignParentStart="true" android:buttonTint="@color/quantum_white_100" style="@style/playback_trim_silence" />
+                    <TextView android:id="@id/close_speed_setting" android:padding="@dimen/icon_extra_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:text="@string/done" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginEnd="12.0dip" android:layout_alignParentEnd="true" style="@style/playback_speed_setting_done" />
+                </RelativeLayout>
             </RelativeLayout>
         </ViewSwitcher>
     </LinearLayout>

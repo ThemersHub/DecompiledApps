@@ -18,9 +18,7 @@
         <FrameLayout android:layout_gravity="bottom" android:id="@id/bottom_bar_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
         <FrameLayout android:id="@id/search_scrim" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <com.google.android.apps.gsa.search.shared.ui.ReverseDrawRestrictedLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/search_container" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <com.google.android.apps.gsa.search.shared.overlay.OverlaySearchPlateContainer android:layout_gravity="center|top" android:id="@id/search_plate_container" android:clipChildren="@bool/clip_children_and_to_padding" android:clipToPadding="@bool/clip_children_and_to_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <include android:id="@id/search_plate" layout="@layout/search_plate" />
-            </com.google.android.apps.gsa.search.shared.overlay.OverlaySearchPlateContainer>
+            <include layout="@layout/search_plate_container" />
             <include android:layout_width="fill_parent" android:layout_height="@dimen/top_nav_bar_height" android:layout_marginTop="@dimen/search_bg_content_inset" layout="@layout/corpus_bar_view_stub" />
             <include layout="@layout/scrollable_suggestions_container" />
         </com.google.android.apps.gsa.search.shared.ui.ReverseDrawRestrictedLayout>
