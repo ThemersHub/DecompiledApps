@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framework>
+    <module id="@string/id_access_point_sticker" class="com.google.android.apps.inputmethod.libs.search.sticker.StickerExtension" label="@string/label_access_point_sticker" icon="@attr/IconTabSticker" access_point_enabled="@bool/enable_sticker_access_point" access_point_locales="@string/enabled_sticker_access_point_locales" content_description="@string/sticker_keyboard_key_content_desc">
+        <initialization_deps>
+            <system_property value="@string/system_property_enable_sticker" />
+        </initialization_deps>
+        <keyboard_group>
+            <keyboard type="prime" def="@xml/keyboard_sticker_search" />
+            <keyboard type="search_result" def="@xml/keyboard_sticker" />
+        </keyboard_group>
+        <extra_values />
+    </module>
+</framework>
