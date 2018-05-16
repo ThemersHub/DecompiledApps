@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.setupwizardlib.view.StatusBarBackgroundLayout android:id="@id/suw_pattern_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.gms.wallet.common.ui.WalletSecureLinearLayout android:orientation="vertical" android:id="@id/wallet_root" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.wallet.ui.common.FocusedViewToTopScrollView android:id="@id/suw_scroll_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/wallet_spacing_form_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/suw_glif_header" />
+                <FrameLayout android:id="@id/suw_layout_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.google.android.wallet.ui.common.FocusedViewToTopScrollView>
+        <LinearLayout android:gravity="?walletRaisedButtonGravity" android:orientation="vertical" android:id="@id/sticky_button_container" android:paddingTop="@dimen/wallet_suw_button_bar_padding_vertical" android:paddingBottom="@dimen/wallet_suw_button_bar_padding_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?uicFormStartEndMargin" android:layout_marginRight="?uicFormStartEndMargin" />
+        <View android:id="@id/focus_stealer" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    </com.google.android.gms.wallet.common.ui.WalletSecureLinearLayout>
+</com.android.setupwizardlib.view.StatusBarBackgroundLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.google.android.gms.people.profile.AvatarView android:layout_gravity="center" android:id="@id/avatar_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/people_avatar_preview_button_bar_height" android:baselineAligned="false">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/cancel_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@android:string/cancel" style="@style/PeopleButton.Borderless" />
+        </RelativeLayout>
+        <View android:layout_gravity="center" android:background="?android:listDivider" android:layout_width="@dimen/people_avatar_preview_button_divider_width" android:layout_height="@dimen/people_avatar_preview_button_divider_height" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/accept_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/common_accept" style="@style/PeopleButton.Borderless" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

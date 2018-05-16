@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.wallet.common.ui.WalletSecureLinearLayout android:orientation="vertical" android:id="@id/wallet_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:theme="?toolbarTheme" android:id="@id/buyflow_toolbar" android:background="?toolbarBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.wallet.ui.common.FocusedViewToTopScrollView android:id="@id/content_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+            <FrameLayout android:id="@id/popover_content_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/wallet_spacing_material_top_bottom" />
+        </com.google.android.wallet.ui.common.FocusedViewToTopScrollView>
+        <include android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/wallet_view_color_progress_spinner_large_with_caption" />
+    </FrameLayout>
+    <Button android:textColor="?colorWalletButtonTextPrimary" android:id="@id/floating_ocr_button" android:background="@drawable/wallet_material_button_background_no_padding" android:padding="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:text="@string/wallet_scan_credit_card_button" />
+    <View android:id="@id/focus_stealer" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+</com.google.android.gms.wallet.common.ui.WalletSecureLinearLayout>

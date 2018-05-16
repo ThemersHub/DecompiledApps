@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/setup_info" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/smartdevice_fullscreen_background" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/smartdevice_setup_info_img_width" android:layout_height="@dimen/smartdevice_setup_info_img_height" android:src="@drawable/smartdevice_img_gears" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/smartdevice_setup_info_fullscreen_background_ratio_top" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/smartdevice_setup_info_fullscreen_background_ratio_bottom">
+                <TextView android:textAppearance="@style/SmartDevice.TextAppearance.HeadlineWhite" android:gravity="center" android:id="@id/message" android:paddingLeft="@dimen/smartdevice_setup_info_text_margin_horizontal" android:paddingRight="@dimen/smartdevice_setup_info_text_margin_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <ProgressBar android:id="@id/progress_bar" android:visibility="invisible" android:layout_width="@dimen/smartdevice_setup_info_progressbar_size" android:layout_height="@dimen/smartdevice_setup_info_progressbar_size" android:layout_marginTop="@dimen/smartdevice_setup_info_land_bottom_margin" android:layout_marginBottom="@dimen/smartdevice_setup_info_land_bottom_margin" style="@style/SmartDevice.Widget.ProgressBar.Large" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

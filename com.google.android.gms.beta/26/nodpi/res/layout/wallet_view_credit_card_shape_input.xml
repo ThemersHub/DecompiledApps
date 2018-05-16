@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/background_ocr_button" android:background="?colorAccent" android:layout_width="fill_parent" android:layout_height="@dimen/wallet_ocr_background_banner_height" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/credit_card_background_shape_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/credit_card_info_summary_image">
+        <LinearLayout android:orientation="vertical" android:id="@id/credit_card_background_shape" android:paddingLeft="@dimen/wallet_credit_card_input_background_padding" android:paddingRight="@dimen/wallet_credit_card_input_background_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="?uicFormStartEndMargin" android:layout_marginTop="@dimen/wallet_ocr_background_banner_top_offset" android:layout_marginBottom="@dimen/wallet_spacing_material_top_bottom" android:layout_weight="1.0">
+            <include android:id="@id/credit_card_number_container" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/wallet_view_credit_card_number_container" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include android:id="@id/exp_date_and_cvc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" layout="@layout/wallet_view_exp_date_and_cvc" />
+                <include android:id="@id/credit_card_info_card_holder_name_wrapper" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/wallet_view_card_holder_name_simple" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/background_ocr_button_image_and_text" android:layout_width="@dimen/wallet_credit_card_input_ocr_button_width" android:layout_height="@dimen/wallet_ocr_background_banner_height">
+            <ImageView android:id="@id/background_ocr_button_image" android:layout_width="@dimen/wallet_ocr_icon_size" android:layout_height="@dimen/wallet_ocr_icon_size" android:src="@drawable/wallet_ic_camera_ocr_light" />
+            <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/background_ocr_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wallet_uic_ocr_button" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

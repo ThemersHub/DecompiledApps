@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/google_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/map_fragment_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/location_layout" />
+    <RelativeLayout android:orientation="vertical" android:id="@id/location_layout" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/alias_editor_update_ui_height" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/alias_editor_layout_padding_small" android:paddingTop="@dimen/alias_editor_layout_padding_small" android:paddingRight="@dimen/alias_editor_layout_padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:layout_width="@dimen/alias_editor_icon_width" android:layout_height="@dimen/alias_editor_icon_height" android:src="@drawable/ic_qu_place" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/alias_editor_field_font_size" android:textColor="@color/alias_editor_font_dark" android:ellipsize="end" android:id="@id/address_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/alias_editor_updating_location" android:maxLines="2" android:layout_weight="4.0" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/alias_editor_button_font_size" android:textColor="@color/alias_editor_button_enabled" android:id="@id/cancel_button" android:paddingRight="@dimen/alias_editor_layout_padding_medium" android:paddingBottom="@dimen/alias_editor_layout_padding_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_cancel" android:layout_toLeftOf="@id/update_button" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="@dimen/alias_editor_button_font_size" android:textColor="@color/alias_editor_button_disabled" android:id="@id/update_button" android:paddingRight="@dimen/alias_editor_layout_padding_medium" android:paddingBottom="@dimen/alias_editor_layout_padding_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_update" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

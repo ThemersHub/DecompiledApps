@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dbb="http://schemas.android.com/apk/res-auto">
+    <com.google.android.wallet.ui.common.FocusedViewToTopScrollView android:id="@id/content_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.gms.wallet.ui.component.pageheader.PageHeaderView android:id="@id/page_header_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <FrameLayout android:id="@id/account_selector_fragment_holder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/wallet_spacing_dialog_side" android:layout_marginTop="@dimen/wallet_spacing_dialog_top_bottom" android:layout_marginRight="@dimen/wallet_spacing_dialog_side" android:layout_marginBottom="@dimen/wallet_spacing_dialog_top_bottom">
+                <TextView android:id="@id/share_address_text" android:paddingLeft="?internalUicNonFormFieldTextStartMargin" android:paddingRight="?internalUicNonFormFieldTextStartMargin" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wallet_share_address_with_app" style="@style/WalletSubTitleText" />
+                <TextView android:id="@id/app_name_text" android:paddingLeft="?internalUicNonFormFieldTextStartMargin" android:paddingRight="?internalUicNonFormFieldTextStartMargin" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/wallet_spacing_tight" android:layout_marginBottom="@dimen/wallet_spacing_wide" style="@style/WalletImportantSubTitleText" />
+                <FrameLayout android:id="@id/selector_fragment_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <LinearLayout android:gravity="?walletRaisedButtonGravity" android:orientation="vertical" android:id="@id/button_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?uicFormStartEndMargin" android:layout_marginRight="?uicFormStartEndMargin" />
+        </LinearLayout>
+    </com.google.android.wallet.ui.common.FocusedViewToTopScrollView>
+    <include android:layout_gravity="center" android:id="@id/overlay_color_prog_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/wallet_color_progress_spinner_large" />
+</FrameLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:entries="@array/car_app_mode_labels" android:title="@string/car_app_mode" android:key="car_app_mode" android:summary="%s" android:dialogTitle="@string/car_app_mode" />
+    <ListPreference android:entries="@array/car_day_night_mode_labels" android:title="@string/car_day_night_mode" android:key="car_day_night_mode" android:summary="%s" android:dialogTitle="@string/car_day_night_mode" />
+    <Preference android:title="@string/car_share_screenshot" android:key="car_share_screenshot">
+        <intent android:targetPackage="com.google.android.gms" android:action="com.google.android.gms.car.DumpScreenshot" android:targetClass="com.google.android.gms.car.BroadcastRedirectActivity" />
+    </Preference>
+    <CheckBoxPreference android:title="@string/car_capture_video_feedback" android:key="car_capture_video_feedback" android:defaultValue="true" />
+    <CheckBoxPreference android:title="@string/car_save_video" android:key="car_save_video" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/car_dump_screenshot" android:key="car_dump_screenshot" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/car_save_audio" android:key="car_save_audio" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/car_save_mic" android:key="car_save_mic" android:defaultValue="false" />
+    <Preference android:title="@string/storage_managment_clear_all_data" android:key="car_clear_data" />
+    <CheckBoxPreference android:title="@string/car_force_logging" android:key="car_force_logging" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/car_collect_gps_data" android:key="car_collect_gps_data" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/car_disable_anr_monitoring" android:key="car_disable_anr_monitoring" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/car_take_vf_on_start" android:key="car_take_vf_on_start" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/car_enable_audio_latency_dump" android:key="car_enable_audio_latency_dump" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/car_allow_720p_video" android:key="car_allow_720p_video" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/car_allow_1080p_video" android:key="car_allow_1080p_video" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/allow_unknown_sources" android:key="allow_unknown_sources" android:defaultValue="false" />
+</PreferenceScreen>

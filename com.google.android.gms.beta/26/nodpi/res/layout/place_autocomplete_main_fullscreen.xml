@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/place_autocomplete_list_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/action_bar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:contentInsetStart="@dimen/place_autocomplete_toolbar_inset_start" app:contentInsetEnd="@dimen/place_autocomplete_toolbar_inset_end" app:contentInsetLeft="@dimen/place_autocomplete_toolbar_inset_start" app:contentInsetRight="@dimen/place_autocomplete_toolbar_inset_end">
+        <include layout="@layout/place_autocomplete_search_bar" />
+    </android.support.v7.widget.Toolbar>
+    <View android:background="@drawable/place_autocomplete_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_below="@id/action_bar" />
+    <android.support.v7.widget.RecyclerView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/action_bar" />
+    <RelativeLayout android:gravity="center_horizontal" android:id="@id/error" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/action_bar">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:layout_width="192.0dip" android:layout_height="120.0dip" app:srcCompat="@drawable/quantum_ic_cloud_off_vd_theme_24" />
+            <include layout="@layout/place_autocomplete_error_text" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
