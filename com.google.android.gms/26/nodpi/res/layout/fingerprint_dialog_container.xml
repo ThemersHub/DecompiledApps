@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <include layout="@layout/fingerprint_dialog_content" />
+    </FrameLayout>
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/buttonPanel" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" style="?android:attr/buttonBarStyle">
+        <Space android:id="@id/spacer" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <Button android:id="@id/use_backup_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/buttonBarPositiveButtonStyle" />
+        <Button android:id="@id/cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/buttonBarNegativeButtonStyle" />
+        <Button android:id="@id/use_backup_right_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/buttonBarPositiveButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

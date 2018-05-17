@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uic="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true">
+        <com.google.android.wallet.ui.common.InfoMessageView android:id="@id/top_info_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?suwMarginSides" android:layout_marginTop="8.0dip" android:layout_marginRight="?suwMarginSides" android:layout_marginBottom="24.0dip" uic:internalUicInfoMessageTextAppearance="@style/TextAppearance.SuwDescription.Secondary" uic:internalUicInfoMessageTextForceGravity="?suwGlifHeaderGravity" />
+        <com.google.android.gms.wallet.ui.common.SelectorView android:orientation="vertical" android:id="@id/creatable_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?uicFormListDivider" android:showDividers="beginning|end|middle" android:layout_marginStart="?suwMarginSides" android:layout_marginEnd="?suwMarginSides" />
+        <FrameLayout android:id="@id/fragment_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?suwMarginSides" android:layout_marginTop="40.0dip" android:layout_marginRight="?suwMarginSides" android:layout_marginBottom="@dimen/wallet_spacing_medium" />
+    </LinearLayout>
+    <com.android.setupwizardlib.view.ButtonBarLayout android:id="@id/suw_button_bar" android:paddingTop="@dimen/wallet_suw_button_bar_padding_vertical" android:paddingBottom="@dimen/wallet_suw_button_bar_padding_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <android.support.design.button.MaterialButton android:id="@id/skip_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_skip" android:layout_alignParentLeft="true" style="@style/Widget.GoogleMaterial.TextButton" />
+        <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <com.google.android.gms.wallet.ui.common.MaterialButtonComponent android:layout_gravity="?walletRaisedButtonGravity" android:id="@id/submit_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="?suwMarginSides" android:layout_alignParentRight="true" android:layout_marginEnd="?suwMarginSides" style="@style/WalletMaterialButton" />
+    </com.android.setupwizardlib.view.ButtonBarLayout>
+</RelativeLayout>

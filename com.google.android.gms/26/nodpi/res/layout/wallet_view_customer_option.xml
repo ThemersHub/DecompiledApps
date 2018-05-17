@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/wallet_selector_item_height">
+        <FrameLayout android:layout_gravity="center_vertical" android:layout_width="@dimen/wallet_page_left_column_width" android:layout_height="wrap_content">
+            <ImageView android:id="@id/customer_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/wallet_ic_account_details_gray" android:contentDescription="@string/wallet_empty_string" />
+            <RadioButton android:id="@id/radio_button" android:background="@drawable/wallet_ic_radio_button" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/customer_container" android:paddingTop="@dimen/wallet_material_selector_vertical_padding" android:paddingBottom="@dimen/wallet_material_selector_vertical_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:id="@id/customer_name" android:paddingRight="@dimen/wallet_material_selector_name_right_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/WalletMaterialInputText" />
+            <TextView android:ellipsize="end" android:id="@id/customer_description" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" style="@style/WalletDetailsText" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/expand_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="?drawableWalletExpand" android:contentDescription="@string/wallet_empty_string" />
+        </FrameLayout>
+    </LinearLayout>
+    <View android:id="@id/customer_divider_line" android:layout_width="fill_parent" android:layout_height="@dimen/wallet_dialog_divider_height" style="@style/WalletDividerHorizontal" />
+</LinearLayout>

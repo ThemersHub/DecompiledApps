@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="24.0dip" android:paddingTop="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/fm_reauth_title" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@style/TextAppearance.AppCompat.Title" />
+        <TextView android:textColor="?android:textColorSecondary" android:id="@id/fm_reauth_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@style/TextAppearance.AppCompat.Subhead" />
+        <android.support.design.widget.TextInputLayout android:id="@id/fm_credential_type" android:layout_width="fill_parent" android:layout_height="wrap_content" errorEnabled="true">
+            <EditText android:id="@id/fm_reauth_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:ems="10" android:password="true" android:inputType="textPassword" android:contentDescription="@string/fm_password_description" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="end" android:orientation="horizontal" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:layout_gravity="right" android:id="@id/fm_reauth_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_cancel" style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+        <Button android:layout_gravity="right" android:id="@id/fm_reauth_submit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="@string/fm_confirm" style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+    </LinearLayout>
+</LinearLayout>
