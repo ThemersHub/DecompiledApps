@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@android:drawable/dialog_holo_light_frame" android:layout_width="@dimen/gh_pip_width" android:layout_height="@dimen/gh_pip_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/gh_pip_action_bar" android:layout_width="fill_parent" android:layout_height="@dimen/gh_pip_action_bar_height">
+            <ImageView android:id="@id/gh_pip_icon" android:layout_width="@dimen/gh_pip_icon_size" android:layout_height="fill_parent" android:layout_marginTop="@dimen/gh_pip_icon_vertical_spacing" android:layout_marginBottom="@dimen/gh_pip_icon_vertical_spacing" android:scaleType="fitXY" android:importantForAccessibility="no" android:layout_marginStart="@dimen/gh_padding" />
+            <TextView android:textSize="@dimen/gh_pip_text_size" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/gh_pip_title" android:paddingLeft="@dimen/gh_padding" android:paddingRight="@dimen/gh_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+        <ImageView android:id="@id/gh_pip_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:importantForAccessibility="no" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/gh_pip_hint" android:padding="@dimen/gh_pip_hint_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/gh_pip_on_boarding_icon" android:layout_width="@dimen/gh_pip_hint_icon_size" android:layout_height="@dimen/gh_pip_hint_icon_size" android:src="@drawable/gh_ic_toggle_icon_dark" android:scaleType="fitXY" android:importantForAccessibility="no" />
+        <TextView android:textSize="@dimen/gh_pip_text_size" android:textColor="@color/material_grey_white_1000" android:ellipsize="end" android:gravity="center" android:id="@id/gh_pip_on_boarding_text" android:layout_width="fill_parent" android:layout_height="@dimen/gh_pip_hint_text_height" android:layout_marginTop="@dimen/gh_pip_hint_text_top_margin" android:text="@string/gh_pip_hint" android:maxLines="1" android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+</FrameLayout>

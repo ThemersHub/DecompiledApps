@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.wallet.ui.common.FocusedViewToTopScrollView android:id="@id/content_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="?uicFormStartEndMargin" android:paddingTop="@dimen/wallet_spacing_form_top" android:paddingRight="?uicFormStartEndMargin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.wallet.ui.common.InfoMessageView android:id="@id/top_info_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?internalUicNonFormFieldTextStartMargin" android:layout_marginRight="?internalUicNonFormFieldTextStartMargin" android:layout_marginBottom="@dimen/wallet_spacing_medium" />
+            <FrameLayout android:id="@id/fragment_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <Button android:layout_gravity="center" android:id="@id/cancel_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:text="@android:string/cancel" style="?attr/internalUicFlatButtonTransparentStyle" />
+                <com.google.android.wallet.ui.common.ButtonComponent android:layout_gravity="center" android:id="@id/submit_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" style="@style/WalletDialogPositiveButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.wallet.ui.common.FocusedViewToTopScrollView>
+    <include android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/wallet_view_color_progress_spinner_large_with_caption" />
+</FrameLayout>

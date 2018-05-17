@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/bottom_share_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/select_button_line" android:background="@color/material_grey_300" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/sms_warning" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/location_sharing_normal_padding" android:layout_weight="1.0">
+            <ImageView android:id="@id/sms_icon" android:layout_width="@dimen/location_sharing_normal_padding" android:layout_height="@dimen/location_sharing_normal_padding" android:layout_marginRight="@dimen/location_sharing_small_padding" android:src="@drawable/quantum_ic_message_grey600_36" android:scaleType="fitCenter" />
+            <TextView android:textSize="@dimen/location_sharing_text_size_13" android:textColor="@color/material_grey_600" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/location_sharing_sms_warning" />
+        </LinearLayout>
+        <Button android:textColor="?colorAccent" android:id="@id/select" android:text="@string/location_sharing_settings_share_button" style="@style/LocationSharingSettingsButton" />
+    </LinearLayout>
+</LinearLayout>

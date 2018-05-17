@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/drive_primary_background_selector" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/drive_TwoLineList_TileHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:gravity="center" android:id="@id/drive_file_list_item_icon" android:layout_width="@dimen/drive_TwoLineList_IconSize" android:layout_height="@dimen/drive_TwoLineList_IconSize" android:layout_margin="@dimen/drive_TwoLineList_IconLeftPadding" android:scaleType="center" android:contentDescription="@null" />
+        <LinearLayout android:gravity="start" android:orientation="vertical" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/drive_TwoLineList_TopPadding" android:layout_marginRight="@dimen/drive_TwoLineList_RightPadding" android:layout_marginBottom="@dimen/drive_TwoLineList_TopPadding" android:layout_weight="1.0" android:layout_marginEnd="@dimen/drive_TwoLineList_RightPadding">
+            <TextView android:textSize="@dimen/drive_TwoLineList_PrimaryTextSize" android:textColor="@color/drive_primary_text_selector" android:ellipsize="middle" android:gravity="start" android:id="@id/drive_file_list_item_title" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:lineSpacingExtra="0.0dip" android:textAlignment="viewStart" />
+            <LinearLayout android:gravity="start" android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/drive_file_list_item_state_on_device" android:src="@drawable/ic_drive_filestate_keep" android:contentDescription="@string/drive_filestate_on_device" style="@style/drive_FileStateIcon" />
+                <ImageView android:id="@id/drive_file_list_item_state_shared" android:src="@drawable/ic_drive_filestate_shared" android:contentDescription="@string/drive_filestate_shared" style="@style/drive_FileStateIcon" />
+                <ImageView android:id="@id/drive_file_list_item_state_starred" android:src="@drawable/ic_drive_filestate_starred" android:contentDescription="@string/drive_filestate_starred" style="@style/drive_FileStateIcon" />
+                <TextView android:textSize="@dimen/drive_TwoLineList_SecondaryTextSize" android:textColor="@color/drive_secondary_text_selector" android:ellipsize="middle" android:gravity="start" android:id="@id/drive_file_list_item_subtitle" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:lineSpacingExtra="0.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/drive_Divider" android:layout_width="fill_parent" android:layout_height="@dimen/drive_DividerSize" />
+</LinearLayout>

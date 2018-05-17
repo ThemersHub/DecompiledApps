@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/settings_fragment_container" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/location_settings_content" android:paddingBottom="88.0dip" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TextView android:textSize="@dimen/location_sharing_text_size_18" android:gravity="center" android:layout_gravity="center" android:id="@id/empty_settings_view" android:paddingTop="@dimen/location_sharing_normal_padding" android:paddingBottom="@dimen/location_sharing_large_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/location_sharing_no_visibility" android:drawableTop="@drawable/quantum_ic_location_off_grey600_48" android:drawablePadding="@dimen/location_sharing_small_padding" />
+        <android.support.design.widget.CoordinatorLayout android:id="@id/coordinator_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.design.widget.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/edit_shares_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/location_sharing_normal_padding" android:src="@drawable/quantum_ic_add_white_24" android:contentDescription="@string/location_sharing_add_shares_description" />
+        </android.support.design.widget.CoordinatorLayout>
+    </FrameLayout>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:id="@id/empty_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/location_sharing_normal_padding" />
+        <Button android:textColor="@color/material_teal_500" android:id="@id/try_again" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/location_sharing_try_again" style="@style/LocationSharingSettingsButton" />
+    </LinearLayout>
+    <com.google.android.libraries.material.progress.LinearProgressBar android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:indeterminate="true" />
+</FrameLayout>

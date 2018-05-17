@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/ContentView" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.RecyclerView android:id="@id/PaymentCardList" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ScrollView android:id="@id/Splash" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/SplashViewGroup" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="48.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:paddingStart="48.0dip" android:paddingEnd="48.0dip">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/tp_payments_application_name" app:srcCompat="@drawable/tp_gpay_logo" />
+                <TextView android:id="@id/Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tp_default_spacing" android:layout_marginBottom="@dimen/tp_default_spacing" style="@style/Tp_Text_Headline" />
+                <TextView android:id="@id/TextBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tp_settings_bodytext" android:textAlignment="center" style="@style/Tp_Text_Body" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <android.support.design.button.MaterialButton android:layout_gravity="center_horizontal" android:id="@id/AppButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tp_18_dp" android:paddingStart="@dimen/tp_medium_spacing" android:paddingEnd="@dimen/tp_medium_spacing" />
+                <android.support.design.button.MaterialButton android:layout_gravity="center_horizontal" android:id="@id/AdvancedSettings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tp_10_dp" android:layout_marginBottom="@dimen/tp_medium_spacing" android:text="@string/tp_settings_manage_payment_methods" style="@style/Widget.GoogleMaterial.TextButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/shade" android:background="@color/google_scrim" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.libraries.material.progress.MaterialProgressBar android:id="@id/spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+        <TextView android:textColor="@android:color/white" android:id="@id/spinner_label" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>
