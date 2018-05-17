@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
     <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
@@ -74,8 +75,9 @@
                 <data android:mimeType="text/tab-separated-values"/>
             </intent-filter>
         </activity-alias>
-        <activity android:exported="false" android:name="com.google.android.apps.docs.billing.googleone.GoogleOneActivity" android:theme="@style/CakemixTheme.AppCompatActivity.NoActionBar.G1"/>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.billing.googleone.GoogleOneActivity" android:theme="@style/CakemixTheme.G1"/>
         <activity android:exported="false" android:label="@string/app_name" android:name="com.google.android.apps.docs.cello.data.ui.PurgeTrashActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="true"/>
         <provider android:authorities="com.google.android.apps.docs.editors.trix" android:exported="false" android:name="com.google.android.apps.docs.doclist.contentprovider.DocListProvider"/>
         <provider android:authorities="com.google.android.apps.docs.editors.trix.doclist.search_suggest" android:exported="true" android:name="com.google.android.apps.docs.doclist.DocListGlobalSearchSuggestionProvider" android:permission="com.google.android.apps.docs.editors.trix.permission.READ_MY_DATA">
             <path-permission android:pathPrefix="/search_suggest_query" android:readPermission="android.permission.GLOBAL_SEARCH"/>
@@ -238,7 +240,21 @@
             </intent-filter>
         </activity-alias>
         <meta-data android:name="com.google.trix.ritz.client.mobile.android.app" android:value="true"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/app_name_sheets" android:logo="@drawable/editor_actionbar_trix_logo" android:name="com.google.android.apps.docs.editors.shared.documentcreation.ExternalDocumentCreatorActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent">
+        <activity android:autoRemoveFromRecents="true" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:documentLaunchMode="intoExisting" android:exported="false" android:hardwareAccelerated="true" android:logo="@drawable/editor_actionbar_trix_logo" android:name="com.google.android.apps.docs.editors.ritz.RitzActivity" android:theme="@style/RitzActivityTheme" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:logo="@drawable/editor_actionbar_trix_logo" android:name="com.google.android.apps.docs.editors.ritz.UnableToStartActivity" android:theme="@style/CakemixTheme.Dialog"/>
+        <activity android:exported="false" android:name="com.google.android.apps.docs.editors.shared.testing.TestFragmentActivity"/>
+        <provider android:authorities="com.google.android.apps.docs.editors.trix.editors.clipboard" android:enabled="true" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.copypaste.AndroidClipboardContentProvider"/>
+        <provider android:authorities="com.google.android.apps.docs.editors.trix.editors.inserttoolclipboard" android:enabled="true" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.inserttool.clipboard.InsertToolClipboardContentProvider"/>
+        <provider android:authorities="com.google.android.apps.docs.editors.trix.editors.clipboard.image" android:enabled="true" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.copypaste.AndroidImageContentProvider" android:writePermission="com.google.android.apps.docs.editors.trix.permission.WRITE_IMAGES"/>
+        <provider android:authorities="com.google.android.apps.docs.editors.trix.editors.inserttoolclipboard.image" android:enabled="true" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.inserttool.clipboard.InsertToolImageContentProvider" android:writePermission="com.google.android.apps.docs.editors.trix.permission.WRITE_IMAGES"/>
+        <meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@xml/app_restrictions"/>
+        <provider android:authorities="com.google.android.apps.docs.editors.trix.local_files" android:exported="false" android:name="com.google.android.apps.docs.editors.shared.database.LocalFilesProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.editors.shared.details.ShowBasicDetailsPanelActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity-alias android:exported="false" android:name="com.google.android.apps.docs.editors.details.ShowBasicDetailsPanelActivity" android:targetActivity="com.google.android.apps.docs.editors.shared.details.ShowBasicDetailsPanelActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.docs.editors.shared.documentcreation.DoclistDocumentCreatorActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.docs.editors.shared.documentcreation.ShortcutDocumentCreatorActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.documentcreation.WidgetDocumentCreatorActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.documentcreation.ExternalDocumentCreatorActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent">
             <intent-filter>
                 <action android:name="android.intent.action.PICK"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -251,24 +267,6 @@
                 <data android:mimeType="application/vnd.google-apps.spreadsheet"/>
             </intent-filter>
         </activity-alias>
-        <activity android:autoRemoveFromRecents="true" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:documentLaunchMode="intoExisting" android:exported="false" android:hardwareAccelerated="true" android:logo="@drawable/editor_actionbar_trix_logo" android:name="com.google.android.apps.docs.editors.ritz.RitzActivity" android:theme="@style/RitzActivityTheme" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:logo="@drawable/editor_actionbar_trix_logo" android:name="com.google.android.apps.docs.editors.ritz.UnableToStartActivity" android:theme="@style/CakemixTheme.Dialog"/>
-        <activity android:exported="false" android:name="com.google.android.apps.docs.editors.shared.testing.TestFragmentActivity"/>
-        <provider android:authorities="com.google.android.apps.docs.editors.trix.editors.clipboard" android:enabled="true" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.copypaste.AndroidClipboardContentProvider"/>
-        <provider android:authorities="com.google.android.apps.docs.editors.trix.editors.inserttoolclipboard" android:enabled="true" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.inserttool.clipboard.InsertToolClipboardContentProvider"/>
-        <provider android:authorities="com.google.android.apps.docs.editors.trix.editors.clipboard.image" android:enabled="true" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.copypaste.AndroidImageContentProvider" android:writePermission="com.google.android.apps.docs.editors.trix.permission.WRITE_IMAGES"/>
-        <provider android:authorities="com.google.android.apps.docs.editors.trix.editors.inserttoolclipboard.image" android:enabled="true" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.inserttool.clipboard.InsertToolImageContentProvider" android:writePermission="com.google.android.apps.docs.editors.trix.permission.WRITE_IMAGES"/>
-        <meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@xml/app_restrictions"/>
-        <provider android:authorities="com.google.android.apps.docs.editors.trix.local_files" android:exported="false" android:name="com.google.android.apps.docs.editors.shared.database.LocalFilesProvider"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.editors.shared.details.ShowBasicDetailsPanelActivity" android:theme="@style/CakemixTheme.Translucent"/>
-        <activity-alias android:exported="false" android:name="com.google.android.apps.docs.editors.details.ShowBasicDetailsPanelActivity" android:targetActivity="com.google.android.apps.docs.editors.shared.details.ShowBasicDetailsPanelActivity"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="@bool/is_l_or_above" android:exported="false" android:name="com.google.android.apps.docs.editors.shared.documentcreation.DocumentCreatorActivityDelegate" android:theme="@style/CakemixTheme.Translucent">
-            <intent-filter>
-                <action android:name="android.intent.action.PICK"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="@bool/is_l_or_above" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.documentcreation.GDocCreatorActivity" android:taskAffinity="" android:theme="@style/CakemixTheme.Translucent"/>
         <provider android:authorities="com.google.android.apps.docs.editors.trix.file_content" android:exported="true" android:icon="@drawable/launcher_icon" android:label="@string/app_name" android:name="com.google.android.apps.docs.editors.shared.export.FileContentProvider" android:syncable="false"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="com.google.android.apps.docs.editors.shared.export.ExportDocumentActivity" android:noHistory="false" android:theme="@style/CakemixTheme.Translucent"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.docs.editors.shared.export.SendAsExportedActivity" android:noHistory="false" android:theme="@style/CakemixTheme.Translucent"/>
@@ -340,13 +338,13 @@
             </intent-filter>
         </service>
         <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/activity_title_template_picker" android:name="com.google.android.apps.docs.editors.shared.templates.TemplatePickerActivity" android:taskAffinity="" android:theme="@style/TemplatesTheme" android:windowSoftInputMode="stateUnchanged"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:icon="@drawable/ic_create_file_shortcut" android:label="@string/shortcut_name_new_file" android:name="com.google.android.apps.docs.editors.shared.widgets.NewFileShortcutActivity" android:theme="@style/CakemixTheme.Translucent">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:icon="@drawable/ic_create_file_shortcut" android:label="@string/shortcut_name_new_file" android:name="com.google.android.apps.docs.editors.shared.widgets.NewDocumentWidgetActivity" android:theme="@style/CakemixTheme.Translucent">
             <intent-filter>
                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <receiver android:enabled="@bool/is_o_or_above" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.widgets.NewFileShortcutLocaleChangeReceiver">
+        <receiver android:enabled="@bool/is_o_or_above" android:exported="true" android:name="com.google.android.apps.docs.editors.shared.widgets.NewDocumentWidgetLocaleChangeReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.LOCALE_CHANGED"/>
             </intent-filter>
