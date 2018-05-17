@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" package="com.google.vr.vrcore" platformBuildVersionCode="27" platformBuildVersionName="P">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.google.vr.vrcore" platformBuildVersionCode="28" platformBuildVersionName="9">
     <protected-broadcast android:name="com.google.vr.vrcore.daydream.action.ACTION_IDLE"/>
     <permission android:name="com.google.vr.vrcore.permission.VRCORE_INTERNAL" android:protectionLevel="signature"/>
     <uses-permission android:name="com.google.vr.vrcore.permission.VRCORE_INTERNAL"/>
@@ -45,7 +45,7 @@
             </intent-filter>
         </service>
         <activity android:exported="true" android:name="com.google.vr.vrcore.capture.record.VrScreencapInterstitialActivity" android:noHistory="true" android:theme="@style/VrCoreSettingsActivityTheme"/>
-        <activity android:configChanges="orientation|uiMode" android:exported="false" android:name="com.google.vr.vrcore.capture.record.PermissionsActivity" android:noHistory="true" android:theme="@style/VrActivityTheme"/>
+        <activity android:configChanges="density|orientation|uiMode" android:exported="false" android:name="com.google.vr.vrcore.capture.record.PermissionsActivity" android:noHistory="true" android:theme="@style/VrActivityTheme"/>
         <service android:enabled="@bool/is_n_or_above" android:exported="true" android:name="com.google.vr.vrcore.capture.record.RecorderService" android:process=":sysui"/>
         <service android:enabled="@bool/is_n_or_above" android:exported="@bool/is_n_or_above" android:name="com.google.vr.vrcore.common.VrCoreListenerService" android:permission="android.permission.BIND_VR_LISTENER_SERVICE">
             <intent-filter>
@@ -64,19 +64,18 @@
         </service>
         <service android:enabled="@bool/is_o_or_above" android:exported="false" android:name="com.google.vr.vrcore.compositor.VrCoreCompositorService" android:process=":compositor"/>
         <service android:enabled="@bool/is_o_or_above" android:exported="true" android:name="com.google.vr.vrcore.compositor.CompositorKeepaliveService" android:permission="android.permission.BIND_VR_LISTENER_SERVICE" android:process=":compositor"/>
-        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.vr.vrcore.controller.ControllerIssueActivity" android:theme="@android:style/Theme.NoDisplay"/>
         <service android:enabled="@bool/is_n_or_above" android:exported="@bool/is_n_or_above" android:name="com.google.vr.vrcore.controller.ControllerService">
             <intent-filter>
                 <action android:name="com.google.vr.vrcore.controller.BIND"/>
             </intent-filter>
         </service>
-        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.vr.vrcore.daydream.PrepareActivity" android:screenOrientation="sensor" android:theme="@style/VrCoreSysUiActivityNoPreviewTheme">
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.vr.vrcore.daydream.PrepareActivity" android:screenOrientation="sensor" android:theme="@style/VrCoreTransientActivityTheme">
             <intent-filter>
                 <action android:name="com.google.vr.vrcore.PREPARE_VR"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.vr.vrcore.daydream.DonPrepareActivity" android:resizeableActivity="false" android:screenOrientation="sensor" android:theme="@style/VrCoreSysUiActivityNoPreviewTheme">
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.vr.vrcore.daydream.DonPrepareActivity" android:resizeableActivity="false" android:screenOrientation="sensor" android:theme="@style/VrCoreTransientActivityBlackTheme">
             <intent-filter android:priority="100">
                 <action android:name="com.google.vr.vrcore.PREPARE_VR"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -102,12 +101,6 @@
             </intent-filter>
         </activity>
         <activity android:exported="false" android:name="com.google.vr.vrcore.daydream.DaydreamSetupWizardActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.vr.vrcore.daydream.StartSetupActivity" android:noHistory="true" android:theme="@android:style/Theme.NoDisplay">
-            <intent-filter>
-                <action android:name="com.google.vr.vrcore.daydream.REQUEST_SETUP"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
         <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:exported="true" android:label="@string/pairing_title" android:launchMode="singleTask" android:name="com.google.vr.vrcore.daydream.DonPairingActivity" android:noHistory="true" android:resizeableActivity="false" android:screenOrientation="portrait" android:theme="@style/VrCoreDonDefaultActivityTheme">
             <intent-filter>
                 <action android:name="com.google.intent.action.vr.controller.PAIR_DON"/>
@@ -128,9 +121,10 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.vr.vrcore.daydream.AreYouStillThereActivity" android:noHistory="true" android:theme="@style/VrCoreDialogActivityTheme"/>
         <service android:exported="false" android:name="com.google.vr.vrcore.daydream.OtaService"/>
         <meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@xml/app_restrictions"/>
-        <meta-data android:name="com.google.vr.vrcore.SdkLibraryVersion" android:value="v1.140.0"/>
+        <meta-data android:name="com.google.vr.vrcore.SdkLibraryVersion" android:value="v1.150.0"/>
         <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize|uiMode" android:enableVrMode="@string/gvr_vr_mode_component" android:excludeFromRecents="true" android:exported="false" android:name="com.google.vr.vrcore.modules.calibration.CalibrationActivity" android:process="@string/calibration_process_name" android:resizeableActivity="false" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="com.google.vr.vrcore.ACTION_NONE"/>
@@ -188,7 +182,7 @@
                 <action android:name="android.service.notification.NotificationListenerService"/>
             </intent-filter>
         </service>
-        <meta-data android:name="com.google.vr.vrcore.PaymentsVersion" android:value="v188840474"/>
+        <meta-data android:name="com.google.vr.vrcore.PaymentsVersion" android:value="v193861112"/>
         <service android:enabled="@bool/is_o_or_above" android:exported="true" android:name="com.google.vr.vrcore.compositor.performance.PerformanceOverlayService" android:process=":compositor">
             <intent-filter>
                 <action android:name="com.google.vr.vrcore.compositor.performance.BIND_SDK_SERVICE"/>
