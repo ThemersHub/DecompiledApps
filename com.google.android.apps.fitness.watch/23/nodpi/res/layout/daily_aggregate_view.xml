@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/daily_aggregates_heading" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/heading_bottom_margin" android:text="@string/today_label" style="@style/Text.Title.Heading" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/heading_bottom_margin" android:divider="@drawable/spacer_small" android:showDividers="middle" android:paddingStart="@dimen/content_start_padding" android:paddingEnd="@dimen/content_end_padding">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/spacer_medium" android:showDividers="middle">
+            <com.google.android.wearable.fitness.passive.views.MetricValueView android:gravity="center" android:id="@id/metric_duration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" app:metric="DURATION" />
+            <com.google.android.wearable.fitness.passive.views.MetricValueView android:gravity="center" android:id="@id/metric_steps" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" app:metric="STEPS" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/spacer_medium" android:showDividers="middle">
+            <com.google.android.wearable.fitness.passive.views.MetricValueView android:gravity="center" android:id="@id/metric_distance" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" app:metric="DISTANCE" />
+            <com.google.android.wearable.fitness.passive.views.MetricValueView android:gravity="center" android:id="@id/metric_calories" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" app:metric="ENERGY_EXPENDED" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/spacer_medium" android:showDividers="middle">
+            <com.google.android.wearable.fitness.passive.views.MetricValueView android:gravity="center" android:id="@id/metric_floors" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" app:metric="FLOORS" />
+            <View android:gravity="center" android:id="@id/metric_placeholder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

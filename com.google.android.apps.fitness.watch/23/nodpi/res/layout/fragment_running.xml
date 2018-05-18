@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/start_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/rest_timer_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextSwitcher android:id="@id/timer_value" android:background="@drawable/oval" android:layout_width="60.0dip" android:layout_height="60.0dip" android:backgroundTint="@color/default_accent_color" />
+            <TextView android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rest_timer_label" style="@style/Strength.Small" />
+        </LinearLayout>
+        <TextView android:gravity="center" android:id="@id/start_button" android:background="?android:selectableItemBackground" android:padding="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/start_set" style="@style/Strength.Large" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/running_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/timer" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/Strength.Small" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="3.0">
+            <ImageView android:id="@id/workout_animation" android:layout_width="@dimen/animation_size" android:layout_height="@dimen/animation_size" />
+            <TextView android:gravity="center" android:id="@id/detecting_exercise" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ready_to_detect" style="@style/Strength.Small" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/non_ambient_bottom_layout" android:background="@drawable/default_accent_color_ripple" android:paddingTop="@dimen/stop_padding" android:paddingBottom="@dimen/stop_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_gravity="bottom|center" android:id="@id/stop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stop_set" style="@style/Strength.SheetButton" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/ambient_bottom_layout" android:paddingTop="@dimen/stop_padding" android:paddingBottom="@dimen/stop_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_gravity="bottom|center" android:id="@id/ambient_time" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Strength.SheetButton" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

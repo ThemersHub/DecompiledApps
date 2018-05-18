@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/app_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/spacer_small" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@color/heading_background" android:paddingTop="@dimen/screen_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.wearable.fitness.passive.goals.MultiGoalProgressView android:id="@id/progress_goals" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <com.google.android.wearable.fitness.passive.metrics.DailyAggregateView android:id="@id/daily_aggregates" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/no_account_history_graph" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/content_start_padding" android:paddingEnd="@dimen/content_end_padding">
+        <com.google.android.wearable.fitness.passive.metrics.HistoryGraphView android:layout_width="fill_parent" android:layout_height="@dimen/history_graph_view_height" />
+    </FrameLayout>
+    <com.google.android.wearable.fitness.passive.metrics.NoAccountTableView android:id="@id/metrics_table" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/heart_rate_view_placeholder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/workouts_summary_placeholder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.google.android.wearable.fitness.common.views.RoundButton android:id="@id/settings_button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_settings_vd_theme_24" android:text="@string/start_settings_label" app:background_color="@color/heading_background" style="@style/RoundButton.Layout.WithText" />
+</LinearLayout>

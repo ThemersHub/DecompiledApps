@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" package="com.google.android.apps.fitness" platformBuildVersionCode="27" platformBuildVersionName="P">
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.type.watch" android:required="true"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <application android:allowBackup="true" android:icon="@mipmap/adaptiveproduct_google_fit" android:label="@string/app_name" android:name="com.google.android.wearable.fitness.application.WearableFitnessApplication" android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.wearable.standalone" android:value="true"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml" android:resource="@xml/phenotype"/>
+        <activity android:name="com.google.android.wearable.fitness.application.account.chooser.AccountChooserActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.application.account.chooser.AddAccountActivity"/>
+        <activity android:label="@string/app_name" android:name="android.support.wearable.activity.ConfirmationActivity" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:name="com.google.android.wearable.fitness.application.WearableDispatcher">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED"/>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED"/>
+                <data android:scheme="wear"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.wearable.fitness.application.OpenOnPhoneService"/>
+        <provider android:authorities="com.google.android.wearable.fitness" android:exported="false" android:label="@string/app_name" android:name="com.google.android.wearable.fitness.application.data.provider.WearContentProvider"/>
+        <activity android:name="com.google.android.wearable.fitness.application.gms.UpdateGmsCoreActivity"/>
+        <service android:exported="true" android:name="com.google.android.wearable.fitness.application.location.XtraLocationDataJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:enabled="false" android:name="com.google.android.wearable.fitness.application.monitors.AppMonitorsReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="com.google.gservices.intent.action.GSERVICES_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.wearable.fitness.application.ppg.PpgCollectionJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:label="@string/app_name" android:name="com.google.android.wearable.fitness.application.sync.services.WearSyncAdapterService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/wear_sync_adapter"/>
+        </service>
+        <service android:exported="true" android:name="com.google.android.wearable.fitness.application.versioninfo.VersionInfoJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:name="com.google.android.wearable.fitness.application.welcome.WelcomeActivity"/>
+        <receiver android:exported="true" android:name="com.google.android.wearable.fitness.common.api.fitness.FitnessSyncDispatcher"/>
+        <receiver android:enabled="@bool/androidOOrLater" android:name="com.google.android.wearable.fitness.common.notifications.UpdateWearChannelsReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:icon="@drawable/ic_complication_metric_white" android:label="@string/metric_label" android:name="com.google.android.wearable.fitness.complications.MetricProviderService" android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
+            <intent-filter>
+                <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST"/>
+            </intent-filter>
+            <meta-data android:name="android.support.wearable.complications.PROVIDER_CONFIG_ACTION" android:value="com.google.android.wearable.fitness.complications.ACTION_CHOOSE_METRIC"/>
+            <meta-data android:name="android.support.wearable.complications.SUPPORTED_TYPES" android:value="SHORT_TEXT"/>
+            <meta-data android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS" android:value="300"/>
+            <meta-data android:name="android.support.wearable.complications.SAFE_WATCH_FACES" android:value="com.ustwo.watchfaces.hero, com.ustwo.watchfaces.moods"/>
+        </service>
+        <service android:icon="@drawable/ic_complication_activemode_white" android:label="@string/start_realtime_provider_label" android:name="com.google.android.wearable.fitness.complications.StartRealtimeProviderService" android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
+            <intent-filter>
+                <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST"/>
+            </intent-filter>
+            <meta-data android:name="android.support.wearable.complications.PROVIDER_CONFIG_ACTION" android:value="com.google.android.wearable.fitness.complications.ACTION_CHOOSE_ACTIVITY"/>
+            <meta-data android:name="android.support.wearable.complications.SUPPORTED_TYPES" android:value="ICON"/>
+            <meta-data android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS" android:value="0"/>
+            <meta-data android:name="android.support.wearable.complications.SAFE_WATCH_FACES" android:value="com.ustwo.watchfaces.hero, com.ustwo.watchfaces.moods"/>
+        </service>
+        <service android:icon="@drawable/ic_complication_goal_white" android:label="@string/goal_label" android:name="com.google.android.wearable.fitness.complications.GoalProviderService" android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
+            <intent-filter>
+                <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST"/>
+            </intent-filter>
+            <meta-data android:name="android.support.wearable.complications.PROVIDER_CONFIG_ACTION" android:value="com.google.android.wearable.fitness.complications.ACTION_CHOOSE_GOAL"/>
+            <meta-data android:name="android.support.wearable.complications.SUPPORTED_TYPES" android:value="RANGED_VALUE"/>
+            <meta-data android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS" android:value="300"/>
+            <meta-data android:name="android.support.wearable.complications.SAFE_WATCH_FACES" android:value="com.ustwo.watchfaces.hero, com.ustwo.watchfaces.moods"/>
+        </service>
+        <activity android:exported="true" android:name="com.google.android.wearable.fitness.complications.FitnessCheckPermissionActivity">
+            <intent-filter>
+                <action android:name="com.google.android.wearable.fitness.complications.ACTION_CHECK_PERMISSION"/>
+                <category android:name="android.support.wearable.complications.category.PROVIDER_CONFIG"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="false" android:name="com.google.android.wearable.fitness.complications.ComplicationMidnightAlarmReceiver"/>
+        <activity android:exported="true" android:name="com.google.android.wearable.fitness.complications.config.ComplicationConfigActivity" android:theme="@style/ComplicationSettingsTheme">
+            <intent-filter>
+                <action android:name="com.google.android.wearable.fitness.complications.ACTION_CHOOSE_GOAL"/>
+                <action android:name="com.google.android.wearable.fitness.complications.ACTION_CHOOSE_ACTIVITY"/>
+                <action android:name="com.google.android.wearable.fitness.complications.ACTION_CHOOSE_METRIC"/>
+                <category android:name="android.support.wearable.complications.category.PROVIDER_CONFIG"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.wearable.fitness.passive.goals.details.GoalOptionsActivity" android:noHistory="true"/>
+        <activity android:name="com.google.android.wearable.fitness.passive.goals.goalcreation.GoalCreationActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.passive.goals.onboarding.GoalsOnboardingActivity"/>
+        <receiver android:exported="true" android:name="com.google.android.wearable.fitness.passive.hrm.HrmSubscriptionRefreshWorkaroundReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="com.google.android.apps.fitness.REFRESH_HRM"/>
+            </intent-filter>
+        </receiver>
+        <activity android:enabled="true" android:exported="true" android:name="com.google.android.wearable.fitness.passive.metrics.DetailedMetricsActivity"/>
+        <service android:exported="true" android:name="com.google.android.wearable.fitness.passive.notifications.NotificationJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.google.android.wearable.fitness.passive.notifications.DismissBroadcastReceiver"/>
+        <receiver android:name="com.google.android.wearable.fitness.passive.notifications.ShowDetailBroadcastReceiver"/>
+        <receiver android:name="com.google.android.wearable.fitness.passive.notifications.ShowSettingBroadcastReceiver"/>
+        <activity android:name="com.google.android.wearable.fitness.passive.notifications.settings.GoalNotificationSettingsActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.passive.profile.onboarding.ProfileOnboardingActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.passive.profile.ProfileEditorActivity" exported="false"/>
+        <activity android:name="com.google.android.wearable.fitness.passive.profile.UnitsEditorActivity" exported="false"/>
+        <activity android:name="com.google.android.wearable.fitness.passive.profile.ProfileDataPickerActivity" exported="false"/>
+        <activity android:name="com.google.android.wearable.fitness.passive.settings.LocalAccountSettingsActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.passive.settings.LocalAccountSetGoalActivity"/>
+        <activity android:clearTaskOnLaunch="true" android:enabled="true" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.google.android.wearable.fitness.passive.ui.PassiveActivity" android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="com.android.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.data_type/com.google.heart_rate.bpm"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.clockwork.action.PEDOMETER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.data_type/com.google.step_count.cumulative"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.wearable.fitness.passive.ui.PackageUpdatedBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:clearTaskOnLaunch="true" android:launchMode="singleTask" android:name="com.google.android.wearable.fitness.passive.ui.HeartSensorErrorActivity"/>
+        <activity android:label="@string/workout_history" android:name="com.google.android.wearable.fitness.passive.workouts.WorkoutsHistoryActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.passive.workouts.SingleWorkoutSummaryActivity"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.google.android.wearable.fitness.realtime.active.ActiveModeActivity" android:taskAffinity=""/>
+        <activity android:name="com.google.android.wearable.fitness.realtime.active.dialogs.ErrorDialogActivity"/>
+        <service android:name="com.google.android.wearable.fitness.realtime.active.service.ActiveModeService"/>
+        <activity android:name="com.google.android.wearable.fitness.realtime.challenge.ChallengeModeActivity" android:taskAffinity=""/>
+        <activity android:name="com.google.android.wearable.fitness.realtime.challenge.ChallengeModeDemoVideoActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.realtime.challenge.ChallengeDifficultySelectionActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.realtime.challenge.NumberPickerActivity"/>
+        <activity android:allowEmbedded="true" android:exported="true" android:name="com.google.android.wearable.fitness.realtime.challenge.ChallengeGraphNotificationActivity" android:taskAffinity=""/>
+        <receiver android:exported="false" android:name="com.google.android.wearable.fitness.realtime.challenge.ChallengeNotificationReceiver"/>
+        <activity android:name="com.google.android.wearable.fitness.realtime.onboarding.RealtimeOnboardingSelectionActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.realtime.onboarding.RealtimeBodySensorsRequestActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.realtime.onboarding.RealtimeLocationRequestActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.realtime.onboarding.RealtimeLocationSettingActivity"/>
+        <activity android:launchMode="singleTask" android:name="com.google.android.wearable.fitness.realtime.LowPowerActivity" android:taskAffinity=""/>
+        <activity android:enabled="@bool/realtime_enabled" android:launchMode="singleTask" android:name="com.google.android.wearable.fitness.realtime.ActivityListActivity" android:taskAffinity="">
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.activity/running"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.activity/biking"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.activity/walking"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.activity/other"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.wearable.fitness.realtime.WorkoutSelectionActivity"/>
+        <activity android:enabled="@bool/realtime_enabled" android:icon="@drawable/ic_launcher_fitness_activity" android:label="@string/realtime_app_name_v1" android:launchMode="singleTask" android:name="com.google.android.wearable.fitness.realtime.RealtimeActivity" android:taskAffinity="" android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.google.android.wearable.fitness.realtime.strength.StrengthTrainingActivity" android:taskAffinity=""/>
+        <activity android:icon="@drawable/ic_rm_fit_launcher" android:label="@string/retail_fit_app_name" android:name="com.google.android.wearable.fitness.retail.RetailFitActivity" android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.clockwork.RETAIL"/>
+                <category android:name="com.google.android.clockwork.FITNESS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.clockwork.home.action.FROM_HOME_STEM_1_PRESSED_IN_RETAIL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.wearable.fitness.retail.RetailDreamReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.clockwork.home.retail.action.STARTED_RETAIL_DREAM"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.google.android.wearable.fitness.settings.ble.BluetoothSensorsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.google.android.wearable.fitness.settings.debug.DebugModeSelectionActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.settings.debug.AppSettingsEditorActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.settings.SettingsOptionsActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.settings.visualizer.StepVisualizerActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.settings.info.AppInfoActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.settings.announcementsetting.AnnouncementSettingActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.settings.workoutssetting.WorkoutsSettingActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.settings.numberdisplaysetting.NumberDisplaySettingActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.settings.goals.MultiGoalSettingActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.settings.goals.GoalSettingActivity"/>
+        <service android:exported="true" android:name="com.google.android.wearable.fitness.usage.UsageStatsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:label="@string/watch_face_aggregate" android:name="com.google.android.wearable.fitness.watchfaces.aggregate.AggregateFitWatchFace" android:permission="android.permission.BIND_WALLPAPER">
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/watch_face"/>
+            <meta-data android:name="com.google.android.wearable.watchface.preview" android:resource="@drawable/aggregate_watch_face_preview"/>
+            <meta-data android:name="com.google.android.wearable.watchface.wearableConfigurationAction" android:value="com.google.android.wearable.fitness.watchface.CONFIG_THEME"/>
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService"/>
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE"/>
+            </intent-filter>
+        </service>
+        <activity android:name="com.google.android.wearable.fitness.watchfaces.ConfigureWatchFaceActivity">
+            <intent-filter>
+                <action android:name="com.google.android.wearable.fitness.watchface.CONFIG_GOAL_AND_THEME"/>
+                <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.wearable.fitness.watchfaces.ConfigureGoalActivity" android:taskAffinity="com.google.android.wearable.fitness.watchfaces.ConfigureGoalActivity"/>
+        <activity android:name="com.google.android.wearable.fitness.watchfaces.ConfigureWatchFaceThemeActivity">
+            <intent-filter>
+                <action android:name="com.google.android.wearable.fitness.watchface.CONFIG_THEME"/>
+                <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.wearable.fitness.watchfaces.CheckinCompleteReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.checkin.CHECKIN_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <service android:label="@string/watch_face_digital" android:name="com.google.android.wearable.fitness.watchfaces.DigitalFitWatchFace" android:permission="android.permission.BIND_WALLPAPER">
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/watch_face"/>
+            <meta-data android:name="com.google.android.wearable.watchface.preview" android:resource="@drawable/digital_watchface_preview_square"/>
+            <meta-data android:name="com.google.android.wearable.watchface.preview_circular" android:resource="@drawable/digital_watchface_preview_round"/>
+            <meta-data android:name="com.google.android.wearable.watchface.wearableConfigurationAction" android:value="com.google.android.wearable.fitness.watchface.CONFIG_GOAL_AND_THEME"/>
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService"/>
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE"/>
+            </intent-filter>
+        </service>
+        <service android:label="@string/watch_face_analog" android:name="com.google.android.wearable.fitness.watchfaces.AnalogFitWatchFace" android:permission="android.permission.BIND_WALLPAPER">
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/watch_face"/>
+            <meta-data android:name="com.google.android.wearable.watchface.preview" android:resource="@drawable/analog_watch_face_preview_square"/>
+            <meta-data android:name="com.google.android.wearable.watchface.preview_circular" android:resource="@drawable/analog_watch_face_preview_round"/>
+            <meta-data android:name="com.google.android.wearable.watchface.wearableConfigurationAction" android:value="com.google.android.wearable.fitness.watchface.CONFIG_GOAL_AND_THEME"/>
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService"/>
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE"/>
+            </intent-filter>
+        </service>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <uses-library android:name="com.google.android.wearable" android:required="false"/>
+    </application>
+</manifest>

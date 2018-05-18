@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/units_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.wearable.view.ObservableScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/units_editor_container" android:paddingBottom="@dimen/confirmation_button_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.wearable.fitness.passive.profile.UnitsEditorView android:id="@id/units_editor_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.google.android.wearable.fitness.common.views.RoundButton android:layout_gravity="bottom|center" android:id="@id/units_done_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/circled_button_vertical_padding" android:src="@drawable/quantum_ic_check_vd_theme_24" android:contentDescription="@string/save_button_description" style="@style/RoundButton.Layout.NoText.Large" />
+        </LinearLayout>
+    </android.support.wearable.view.ObservableScrollView>
+    <ProgressBar android:layout_gravity="center" android:id="@id/units_saving_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateTint="@android:color/white" android:indeterminateTintMode="src_in" style="@android:style/Widget.Material.Light.ProgressBar.Large" />
+</FrameLayout>

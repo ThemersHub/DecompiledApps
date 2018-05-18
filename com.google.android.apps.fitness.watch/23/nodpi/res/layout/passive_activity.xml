@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/app_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/main_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.wearable.view.ObservableScrollView android:id="@id/app_scrollable_view" android:paddingBottom="@dimen/app_fab_height" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/passive_activity_content" />
+        </android.support.wearable.view.ObservableScrollView>
+        <LinearLayout android:gravity="center" android:layout_gravity="top" android:orientation="horizontal" android:id="@id/syncing" android:background="@color/sync_overlay_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Space android:layout_width="0.0dip" android:layout_height="@dimen/heading_vertical_padding" android:layout_marginTop="@dimen/screen_top_padding" />
+            <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ProgressBarSyncOverlay" />
+        </LinearLayout>
+        <com.google.android.wearable.fitness.passive.views.WearableAnchorButton android:layout_gravity="bottom" android:id="@id/app_fab_button" android:background="@color/quantum_googred600" android:layout_width="fill_parent" android:layout_height="@dimen/app_fab_height" android:contentDescription="@string/start_realtime_label" android:elevation="8.0dip" app:src="@drawable/ic_running" />
+        <com.google.android.wearable.fitness.passive.hrm.HeartRateMessagingView android:id="@id/heart_rate_measuring_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/content_start_padding" android:paddingEnd="@dimen/content_end_padding" android:elevation="10.0dip" />
+    </FrameLayout>
+</FrameLayout>

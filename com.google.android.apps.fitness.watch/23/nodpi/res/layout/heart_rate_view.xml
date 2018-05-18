@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/heading_bottom_margin" android:text="@string/passive_heart_rate_header" style="@style/Text.Title.Heading" />
+    <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/passive_heart_rate_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/passive_heart_rate_button_description" android:elevation="6.0dip">
+        <TextView android:textSize="32.0sp" android:textColor="@color/passive_primary_text" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/passive_heart_rate_value" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Text" />
+    </FrameLayout>
+    <TextView android:gravity="center" android:id="@id/passive_heart_rate_error" android:paddingTop="@dimen/small_spacing_size" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text.Secondary" />
+    <com.google.android.wearable.fitness.passive.views.HistoryTableRowView android:id="@id/passive_heart_table_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/small_spacing_size" android:contentDescription="@string/passive_heart_table_header_description" android:paddingStart="@dimen/content_start_padding" android:paddingEnd="@dimen/content_end_padding" app:rowIcon="@drawable/heart_header_icon" app:rowValue="@string/unit_bpm_short" app:rowValueColor="@color/passive_secondary_text" />
+    <LinearLayout android:orientation="vertical" android:id="@id/passive_heart_table_values" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/content_start_padding" android:paddingEnd="@dimen/content_end_padding" />
+</merge>

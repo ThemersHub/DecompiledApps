@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/light_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/location_status" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <com.google.android.wearable.fitness.common.views.AnimatingImageView android:layout_gravity="center_horizontal" android:id="@id/location_status_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/quantum_ic_gps_fixed_vd_theme_24" />
+            <TextView android:textAppearance="@style/ActiveMetricItemLabel" android:textSize="12.0sp" android:gravity="center" android:id="@id/location_status_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gps_acquired" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/start_button_container" android:paddingTop="@dimen/start_button_padding" android:paddingBottom="@dimen/start_button_padding" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:paddingStart="@dimen/start_button_padding" android:paddingEnd="@dimen/start_button_padding">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/start_button_size" android:layout_height="@dimen/start_button_size" android:src="@drawable/play" />
+            <TextView android:gravity="center" android:id="@id/start_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/start" style="@style/ActiveModeStart" />
+        </LinearLayout>
+        <com.google.android.wearable.fitness.common.views.RoundButton android:id="@id/settings_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/round_button_no_text_vertical_margin" android:layout_marginBottom="@dimen/round_button_no_text_vertical_margin" android:src="@drawable/quantum_ic_settings_white_24" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:contentDescription="@string/start_settings_label" app:button_color="@color/quantum_grey700" app:button_diameter="32.0dip" style="@style/RoundButton.Layout.NoText.Large" />
+    </RelativeLayout>
+    <com.google.android.libraries.fitness.ui.countdown.CountdownView android:layout_gravity="center" android:id="@id/countdown_view" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="80.0dip" />
+    <com.google.android.wearable.fitness.realtime.active.views.TopView android:id="@id/starting_top_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

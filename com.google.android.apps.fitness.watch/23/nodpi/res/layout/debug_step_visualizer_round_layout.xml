@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_gravity="center" android:orientation="vertical" android:id="@id/container" android:paddingLeft="@dimen/round_inset" android:paddingRight="@dimen/round_inset" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="30.0dip" android:paddingBottom="50.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.wearable.fitness.settings.visualizer.StepsVisualizerView android:id="@id/svgraph" android:layout_width="fill_parent" android:layout_height="110.0dip" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" />
+        <com.google.android.wearable.fitness.settings.visualizer.ARGraphView android:id="@id/argraph" android:layout_width="fill_parent" android:layout_height="14.0dip" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" />
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="8.0sp" android:textColor="@color/debug_ar_graph_walk_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Walk" />
+                <TextView android:textSize="8.0sp" android:textColor="@color/debug_ar_graph_run_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Run" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="8.0sp" android:textColor="@color/debug_ar_graph_bike_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bike" />
+                <TextView android:textSize="8.0sp" android:textColor="@color/debug_ar_graph_drive_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vehicle" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="8.0sp" android:textColor="@color/light_grey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Still" />
+                <TextView android:textSize="8.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Other" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

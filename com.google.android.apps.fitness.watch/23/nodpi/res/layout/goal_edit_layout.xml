@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/edit_options" layout="@layout/goal_edit_options" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/delayed_confirmation_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.wearable.view.DelayedConfirmationView android:id="@id/delayed_confirmation_view" android:layout_width="112.0dip" android:layout_height="112.0dip" android:src="@drawable/ic_full_cancel" app:circle_color="@color/goal_primary_color" app:circle_radius="52.0dip" app:circle_radius_pressed="56.0dip" app:circle_border_width="6.0dip" app:circle_border_color="@color/white" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/saving_indicator" android:visibility="gone" android:layout_width="112.0dip" android:layout_height="112.0dip" style="@style/ProgressBar" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delete_goal_confirmation" style="@style/Text.Secondary.Large" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/round_button_vertical_padding" android:paddingStart="@dimen/content_start_padding" android:paddingEnd="@dimen/chart_end_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/bpm_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:paddingEnd="4.0dip" android:layout_alignParentStart="true" style="@style/Text.Number.Large" />
+    <TextView android:ellipsize="end" android:id="@id/bpm_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_bpm_short" android:layout_alignBaseline="@id/bpm_value" android:contentDescription="@string/unit_bpm_long" android:paddingEnd="4.0dip" android:layout_toEndOf="@id/bpm_value" style="@style/Text.Secondary.Large" />
+    <TextView android:ellipsize="end" android:gravity="end|bottom|center" android:id="@id/bpm_updated" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_alignBaseline="@id/bpm_value" android:layout_toEndOf="@id/bpm_unit" android:layout_alignParentEnd="true" style="@style/Text.Secondary.Small" />
+    <TextView android:ellipsize="end" android:gravity="end|bottom|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hr_updated" android:maxLines="1" android:layout_above="@id/bpm_updated" android:layout_toEndOf="@id/bpm_unit" android:layout_alignParentEnd="true" style="@style/Text.Secondary.Small" />
+</RelativeLayout>

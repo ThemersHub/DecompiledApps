@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/settings_container" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/screen_top_padding" android:paddingBottom="@dimen/screen_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" style="@style/Text.Settings" />
+            <View android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/settings_item_vertical_padding" android:layout_marginStart="@dimen/content_start_padding" android:layout_marginEnd="@dimen/content_end_padding" style="@style/SettingsDivider" />
+            <TextView android:gravity="center" android:layout_gravity="start" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/notification_channel_default_label" style="@style/Text.Settings" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/settings_item_vertical_padding" android:paddingStart="@dimen/content_start_padding" android:paddingEnd="@dimen/content_end_padding">
+                <CheckBox android:id="@id/goal_complete_check_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_goal_notifications_goal_completion" style="@style/Text.Settings.Button" />
+                <CheckBox android:id="@id/goal_progress_check_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_goal_notifications_goal_progress" style="@style/Text.Settings.Button" />
+            </LinearLayout>
+            <com.google.android.wearable.fitness.common.views.RoundButton android:id="@id/edit_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_mode_edit_vd_theme_24" android:text="@string/edit_goal_label" app:button_color="@color/settings_circle_purple" style="@style/RoundButton.Layout.WithText.Large" />
+            <com.google.android.wearable.fitness.common.views.RoundButton android:id="@id/delete_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_delete_vd_theme_24" android:text="@string/delete_goal_label" app:button_color="@color/settings_circle_purple" style="@style/RoundButton.Layout.WithText.Large" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/delayed_confirmation_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.wearable.view.DelayedConfirmationView android:id="@id/delayed_confirmation_view" android:layout_width="112.0dip" android:layout_height="112.0dip" android:src="@drawable/ic_full_cancel" app:circle_radius="52.0dip" app:circle_radius_pressed="56.0dip" app:circle_border_width="6.0dip" app:circle_border_color="@color/white" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/saving_indicator" android:visibility="gone" android:layout_width="112.0dip" android:layout_height="112.0dip" style="@style/ProgressBar" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delete_goal_confirmation" style="@style/Text.Secondary.Large" />
+    </LinearLayout>
+</FrameLayout>

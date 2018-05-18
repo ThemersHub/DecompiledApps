@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/heading_bottom_margin" android:text="@string/workouts_label" style="@style/Text.Title.Heading" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/workouts_loading_view" />
+        <FrameLayout android:id="@id/content_panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/workouts_empty_view" />
+            <ViewStub android:id="@id/retry_panel_viewstub" android:layout="@layout/workouts_retry_panel" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <include layout="@layout/workouts_main_content" />
+        </FrameLayout>
+    </FrameLayout>
+</merge>

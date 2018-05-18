@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/continuous_hrm_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/passive_heart_rate_header" style="@style/Text.Title.Heading" />
+    <FrameLayout android:id="@id/continuous_heart_rate_view_promo_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/chart_start_padding" android:paddingEnd="@dimen/chart_end_padding">
+        <com.google.android.wearable.fitness.common.views.chart.LineChartView android:id="@id/chart" android:layout_width="fill_parent" android:layout_height="120.0dip" android:layout_marginTop="@dimen/round_button_vertical_padding" />
+    </FrameLayout>
+    <include android:id="@id/last_bpm_view" android:visibility="gone" layout="@layout/heart_rate_value_view" />
+    <com.google.android.wearable.fitness.common.views.RoundButton android:textColor="@color/passive_heart_rate_color" android:id="@id/passive_heart_rate_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/round_button_vertical_padding" android:src="@drawable/quantum_ic_favorite_vd_theme_24" android:text="@string/passive_heart_rate_button_text" app:button_color="@color/passive_heart_rate_color" style="@style/RoundButton.Layout.WithText" />
+    <LinearLayout android:orientation="vertical" android:id="@id/last_rhr_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/round_button_vertical_padding">
+        <View android:background="@color/quantum_white_divider" android:layout_width="fill_parent" android:layout_height="@dimen/line_divider_height" android:layout_marginStart="@dimen/content_start_padding" android:layout_marginEnd="@dimen/chart_end_padding" />
+        <TextView android:id="@id/resting_heart_rate_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/round_button_vertical_padding" android:text="@string/passive_resting_heart_rate_title" android:layout_marginStart="@dimen/content_start_padding" android:layout_marginEnd="@dimen/chart_end_padding" style="@style/Text.Title" />
+        <include layout="@layout/heart_rate_value_view" />
+    </LinearLayout>
+</merge>

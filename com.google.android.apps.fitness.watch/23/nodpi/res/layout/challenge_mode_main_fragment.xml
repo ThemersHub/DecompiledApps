@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/main" android:background="@color/challenge_mode_normal_mode" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.percent.PercentFrameLayout android:id="@id/running_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/challenge_mode_metric_display" />
+        <FrameLayout android:layout_gravity="bottom|center" android:id="@id/pause_icon" android:background="@drawable/oval" android:layout_width="40.0dip" android:layout_height="40.0dip" app:layout_marginBottomPercent="8.000004%">
+            <ImageView android:layout_gravity="center" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/quantum_ic_pause_vd_theme_24" />
+        </FrameLayout>
+    </android.support.percent.PercentFrameLayout>
+    <com.google.android.wearable.fitness.common.views.realtime.ActivityPausedView android:id="@id/paused_menu" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.wearable.fitness.realtime.challenge.GoalView android:id="@id/goal_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

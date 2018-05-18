@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wear.widget.SwipeDismissFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.wearable.fitness.common.views.realtime.ActivityPausedView android:id="@id/no_reps_menu" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/exercise_detected_container" android:paddingBottom="@dimen/bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/summary_container" android:background="@drawable/default_accent_color_ripple" android:paddingLeft="@dimen/realtime_inset" android:paddingTop="6.0dip" android:paddingRight="@dimen/realtime_inset" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/expand_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_expand_more_white_18" />
+                    <TextView android:gravity="center_horizontal" android:id="@id/exercise_type" android:paddingTop="3.0dip" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Strength.Small" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/rep_picker_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.google.android.wearable.fitness.common.views.horizpicker.HorizontalPicker android:id="@id/horiz_rep_picker" android:layout_width="fill_parent" android:layout_height="@dimen/horizontal_picker_height" android:layout_marginTop="4.0dip" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/label_reps" style="@style/Strength.Small" />
+                        <View android:id="@id/horizontal_separator_reps" android:background="@color/default_accent_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/weight_picker_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+                        <com.google.android.wearable.fitness.common.views.horizpicker.HorizontalPicker android:id="@id/horiz_weight_picker" android:layout_width="fill_parent" android:layout_height="@dimen/horizontal_picker_height" android:layout_marginTop="4.0dip" />
+                        <TextView android:id="@id/label_weight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/label_lb" style="@style/Strength.Small" />
+                        <View android:id="@id/horizontal_separator_weight" android:background="@color/default_accent_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                    </LinearLayout>
+                    <RelativeLayout android:id="@id/confirm_set" style="@style/Strength.ListOption">
+                        <android.support.wearable.view.DelayedConfirmationView android:id="@id/confirm" android:src="@drawable/quantum_ic_check_black_24" app:circle_color="@color/white" app:circle_radius="22.0dip" app:circle_border_width="4.0dip" app:circle_border_color="@color/confirm_rep_timeout_color" style="@style/Strength.ListIcon" />
+                        <TextView android:text="@string/confirm_set" android:layout_toEndOf="@id/confirm" style="@style/Strength.Small.ListText" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/discard_set" style="@style/Strength.ListOption">
+                        <ImageView android:id="@id/discard" android:src="@drawable/quantum_ic_delete_black_24" style="@style/Strength.ListIcon" />
+                        <TextView android:text="@string/discard_set" android:layout_toEndOf="@id/discard" style="@style/Strength.Small.ListText" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/end_workout" style="@style/Strength.ListOption">
+                        <ImageView android:id="@id/save_end_workout" android:src="@drawable/quantum_ic_stop_black_24" style="@style/Strength.ListIcon" />
+                        <TextView android:text="@string/save_end_workout" android:layout_toEndOf="@id/save_end_workout" style="@style/Strength.Small.ListText" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+</android.support.wear.widget.SwipeDismissFrameLayout>

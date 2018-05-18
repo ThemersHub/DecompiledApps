@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:gravity="center_vertical" android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingTop="?android:dialogPreferredPadding" android:paddingBottom="?android:dialogPreferredPadding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/short_activity_icon" android:layout_width="@dimen/realtime_summary_header_icon_size" android:layout_height="@dimen/realtime_summary_header_icon_size" />
+            <TextView android:id="@id/short_activity_confirmation" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ActiveModeDialogMessage" />
+            <com.google.android.wearable.fitness.common.views.RoundButton android:id="@id/short_activity_delete" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_delete_white_24" android:text="@string/short_activity_delete" app:button_color="@color/active_mode_dialog_enabled" style="@style/RoundButton.Layout.WithText.Large" />
+            <com.google.android.wearable.fitness.common.views.RoundButton android:id="@id/short_activity_keep" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_arrow_forward_white_24" android:text="@string/short_activity_keep" app:button_color="@color/active_mode_dialog_disabled" style="@style/RoundButton.Layout.WithText.Large" />
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateTint="@android:color/white" android:indeterminateTintMode="src_in" style="@android:style/Widget.Material.Light.ProgressBar.Large" />
+</merge>

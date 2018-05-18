@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/controls_container" android:background="@color/light_background" android:layout_width="fill_parent" android:layout_height="@dimen/controls_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/pause_view" android:paddingTop="@dimen/controls_pause_resume_padding_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/pause_resume_image" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/pause" />
+        <TextView android:textAppearance="@style/ActiveMetricItemLabel" android:gravity="center" android:id="@id/pause_resume_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pause_activity_title" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/stop_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/stop_image" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/stop" />
+        <TextView android:textAppearance="@style/ActiveMetricItemLabel" android:gravity="center" android:id="@id/stop_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/end_activity_title" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:translationZ="1.0dip">
+        <TextView android:id="@id/profile_picker_title" android:paddingBottom="@dimen/expand_indicator_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile" style="@style/Text.Title.Heading.Settings" />
+        <ImageView android:layout_gravity="center|top" android:id="@id/expand_indicator" android:layout_width="@dimen/expand_indicator_size" android:layout_height="@dimen/expand_indicator_size" android:src="@drawable/quantum_ic_expand_more_vd_theme_24" android:contentDescription="@string/expand_indicator_description" />
+    </FrameLayout>
+    <FrameLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.wear.widget.WearableRecyclerView android:id="@id/list_view" android:paddingBottom="@dimen/screen_bottom_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+        <com.google.android.wearable.fitness.passive.profile.ProfileUnitsDrawer android:id="@id/units_drawer" android:visibility="invisible" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>
