@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/offer_line" android:background="@drawable/transparent_with_store_highlight" android:paddingBottom="@dimen/default_half_padding" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textAppearance="@android:style/TextAppearance.Medium" android:textColor="@color/app_color_material" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/default_half_padding" android:layout_alignParentEnd="true" ns:bindText="@id/OfferLine_price" ns:bind__editModeText="$5.00" ns:customFont="LIGHT_SANS" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textAppearance="@android:style/TextAppearance.Medium" android:textColor="@color/card_text" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toStartOf="@id/price" android:layout_alignParentStart="true" ns:bindText="@id/OfferLine_title" ns:bind__editModeText="Google Times" ns:customFont="LIGHT_SANS" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textSize="12.0sp" android:textColor="@color/card_time_text" android:id="@id/byline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/title" android:layout_alignParentStart="true" ns:bindText="@id/OfferLine_byline" ns:bind__editModeText="Your source for the best news" ns:customFont="LIGHT_SANS" />
+    </RelativeLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/offer_line_progress" android:visibility="invisible" android:layout_width="30.0dip" android:layout_height="30.0dip" android:indeterminate="true" style="?android:attr/progressBarStyleLarge" />
+</FrameLayout>

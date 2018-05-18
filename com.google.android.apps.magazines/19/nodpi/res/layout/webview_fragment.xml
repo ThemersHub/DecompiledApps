@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:ns="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:paddingTop="?actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.apps.dots.android.modules.widgets.webview.LinkWidget android:id="@id/link_widget" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.libraries.bind.widget.LoadingView android:id="@id/loading" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include android:id="@id/load_error" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/action_message" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_marginBottom="@dimen/play_header_list_header_shadow_height" ns:popupTheme="?actionBarPopupTheme" ns:theme="?actionBarTheme" />
+        <View android:layout_gravity="bottom" android:id="@id/toolbar_shadow" android:background="@drawable/play_header_list_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/play_header_list_header_shadow_height" />
+    </FrameLayout>
+</FrameLayout>

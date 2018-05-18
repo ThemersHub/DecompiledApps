@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.CardGcmRegistrationDebug android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/NSCardView"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#ff8888bb" android:paddingTop="@dimen/default_half_padding" android:paddingBottom="@dimen/default_half_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/default_padding" android:paddingEnd="@dimen/default_padding">
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textSize="16.0sp" android:textColor="#ffffffff" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_title" android:singleLine="true" android:layout_weight="1.0" />
+        <Button android:id="@id/share_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <TextView android:textStyle="bold" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_instanceID_title" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:ellipsize="end" android:id="@id/instanceIdText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" ns:bindText="@id/CardGCMRegistrationDebug_instanceId" />
+        <Button android:id="@id/instanceIdRefreshButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gcm_debug_refresh" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <TextView android:textStyle="bold" android:gravity="top" android:layout_gravity="top" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_token_title" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:ellipsize="end" android:id="@id/gcmTokenText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="170.0dip" android:maxLines="1" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" ns:bindText="@id/CardGCMRegistrationDebug_gcmToken" />
+        <Button android:id="@id/gcmTokenRefreshButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gcm_debug_refresh" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <TextView android:textStyle="bold" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_gcm_sender_id_title" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/gcmSenderIdText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" ns:bindText="@id/CardGCMRegistrationDebug_gcmSenderId" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <TextView android:textStyle="bold" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_time_title" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:ellipsize="end" android:id="@id/gcmRegistrationTimeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="170.0dip" android:maxLines="1" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" ns:bindText="@id/CardGCMRegistrationDebug_gcmRegistrationTime" />
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:textStyle="bold|italic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/gcm_debug_device_targeting_title" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <TextView android:textStyle="bold" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_locale_title" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/preferredLocaleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" ns:bindText="@id/CardGCMRegistrationDebug_locale" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <TextView android:textStyle="bold" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_country_title" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/countryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" ns:bindText="@id/CardGCMRegistrationDebug_country" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <TextView android:textStyle="bold" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_sync_state_title" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/syncStateText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" ns:bindText="@id/CardGCMRegistrationDebug_syncState" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <TextView android:textStyle="bold" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_registration_environment_title" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/environmentText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" ns:bindText="@id/CardGcmRegistrationDebug_registrationEnvironment" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <TextView android:textStyle="bold" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_device_tag_title" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/deviceTagText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" ns:bindText="@id/CardGcmRegistrationDebug_deviceTag" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <TextView android:textStyle="bold" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_registration_version_code_title" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/registrationVersionText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" ns:bindText="@id/CardGCMRegistrationDebug_registrationVersionCode" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <TextView android:textStyle="bold" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_current_version_code_title" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/currentVersionText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" ns:bindText="@id/CardGCMRegistrationDebug_currentVersionCode" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <Button android:id="@id/sendTestPostNotificationButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_send_test_post_notification" android:layout_weight="1.0" />
+        <Button android:id="@id/sendTestReadNowNotificationButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/gcm_debug_send_test_readnow_notification" android:layout_weight="1.0" />
+    </LinearLayout>
+</com.google.apps.dots.android.newsstand.card.CardGcmRegistrationDebug>

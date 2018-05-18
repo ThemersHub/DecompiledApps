@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.CardArticleItem android:orientation="vertical" android:layout_height="wrap_content" ns:foregroundRespectPadding="false" style="@style/CardArticleItemNeueContent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:padding="@dimen/card_inner_content_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <com.google.android.libraries.bind.widget.BindingFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.apps.dots.android.newsstand.card.CardArticleItemMediaView android:layout_width="@dimen/card_article_item_carousel_page_image_size" android:layout_height="@dimen/card_article_item_carousel_page_image_size" ns:bindVisibility="@id/CardArticleItem_imageId" ns:cornerRadius="@dimen/media_clipped_corner_radius">
+                <include layout="@layout/card_article_item_media_mini" />
+            </com.google.apps.dots.android.newsstand.card.CardArticleItemMediaView>
+        </com.google.android.libraries.bind.widget.BindingFrameLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/card_inner_content_padding">
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" ns:bindText="@id/CardArticleItem_title" ns:bindContentDescription="@id/CardArticleItem_titleContentDescription" style="@style/Text.Headline3" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.apps.dots.android.newsstand.card.CardArticleItem>

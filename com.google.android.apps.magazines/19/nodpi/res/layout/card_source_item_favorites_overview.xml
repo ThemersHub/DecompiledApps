@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.CardSourceItem android:layout_width="fill_parent" android:layout_height="wrap_content" ns:cardElevation="@dimen/card_in_cluster_elevation" style="@style/NSCardView.NoCard.EditionIcon"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.card.CardFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/NSCardView.CardSourceItemIcon">
+        <include layout="@layout/edition_icon" />
+        <com.google.apps.dots.android.modules.widgets.premiumstatusview.PremiumStatusView android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom" android:background="@color/card_meter_green" android:padding="@dimen/card_inner_content_quarter_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" ns:bindPremiumStatus="@id/ApplicationList_premiumStatus" style="@style/Text.Label3" />
+        <ViewStub android:layout_gravity="start|center|top" android:id="@id/download_progress_view_stub" style="@style/CardSourceItemDownloadProgressViewStub" />
+        <com.google.apps.dots.android.newsstand.widget.CardSourceItemClickableMenuView android:layout_gravity="end" android:id="@id/context_menu" ns:shadow="true" ns:overlapAnchor="false" ns:appearance="light" style="@style/CardSourceItemClickableMenuView" />
+    </com.google.apps.dots.android.modules.widgets.card.CardFrameLayout>
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:gravity="center_horizontal" android:id="@id/source_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:lines="2" ns:bindText="@id/CardSourceItem_sourceName" ns:useTitleEllipsizing="true" style="@style/Text.Title2" />
+</com.google.apps.dots.android.newsstand.card.CardSourceItem>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.CardSourceItem android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/card_inner_content_half_padding" android:paddingBottom="@dimen/card_inner_content_half_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" ns:cardCornerRadius="@dimen/card_corner_radius" ns:cardElevation="@dimen/card_in_cluster_elevation" ns:cardInset="@dimen/card_inset" style="@style/NSCardView.NoCard.Fullbleed.Portrait"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <Space android:layout_width="@dimen/card_inner_padding_fullbleed" android:layout_height="0.0dip" />
+    <com.google.apps.dots.android.modules.widgets.card.CardFrameLayout android:id="@id/icon_frame" android:layout_width="wrap_content" android:layout_height="@dimen/favorites_detail_icon_size" android:foreground="@null" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/card_inner_content_three_halves_padding" ns:bindVisibility="@id/EditionIcon_showIcon" style="@style/NSCardView.CardSourceItemIcon">
+        <include layout="@layout/edition_icon_fixed_height" />
+    </com.google.apps.dots.android.modules.widgets.card.CardFrameLayout>
+    <Space android:layout_width="0.0dip" android:layout_height="@dimen/favorites_detail_icon_size" />
+    <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" ns:bindText="@id/CardSourceItem_sourceName" ns:useTitleEllipsizing="true" style="@style/Text.Title" />
+        <com.google.apps.dots.android.modules.widgets.premiumstatusview.PremiumStatusView android:textColor="@color/card_meter_green" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_inner_content_half_padding" ns:bindPremiumStatus="@id/ApplicationList_premiumStatus" style="@style/Text.Label3" />
+    </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout>
+    <ViewStub android:id="@id/download_progress_view_stub" style="@style/CardSourceItemDownloadProgressViewStub" />
+    <com.google.apps.dots.android.newsstand.widget.NotificationPreferenceImageButton android:layout_marginStart="@dimen/card_inner_content_padding" android:layout_marginEnd="@dimen/card_inner_content_padding" ns:bindVisibility="@id/NotificationSubscriptionsFilter_notificationAppId" style="@style/NotificationPreferenceButton.Fab" />
+    <com.google.apps.dots.android.newsstand.widget.CardSourceItemClickableMenuView android:id="@id/context_menu" android:paddingStart="@dimen/card_inner_content_2x_padding" android:paddingEnd="@dimen/card_inner_padding_fullbleed" ns:overlapAnchor="false" ns:appearance="dark" style="@style/CardSourceItemClickableMenuView" />
+</com.google.apps.dots.android.newsstand.card.CardSourceItem>

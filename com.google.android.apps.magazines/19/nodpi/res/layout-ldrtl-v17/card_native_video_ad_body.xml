@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.modules.widgets.card.CardLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="@drawable/card_overlay_darken_fullbleed" ns:bindOnClickListener="@id/NativeAd_c2aOnClickListener" ns:cardBackgroundColor="@android:color/transparent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.bound.viewgroup.SizingLayout android:id="@id/image_container" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0" ns:bindVisibility="@id/NativeAd_image" ns:heightSource="WIDTH" ns:bindHeightMultiplier="@id/NativeAd_imageAspectRatio" ns:maxHeightMultiplier="0.8">
+        <com.google.android.gms.ads.formats.MediaView android:id="@id/media" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/NativeAdCardImage" />
+        <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout android:id="@id/call_to_action_frame" android:background="@drawable/transparent_with_store_highlight" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/card_icon_size_compact" ns:bindOnClickListener="@id/NativeAd_c2aOnClickListener">
+            <View android:layout_gravity="end|center|top" android:id="@id/dummy_ad_click_view" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="1.0dip" />
+        </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout>
+    </com.google.apps.dots.android.modules.widgets.bound.viewgroup.SizingLayout>
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:layout_gravity="start" android:id="@id/headline" android:paddingTop="@dimen/card_inner_content_half_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/card_inner_padding_fullbleed" android:paddingEnd="@dimen/card_inner_padding_fullbleed" style="@style/NativeAdText.Headline" />
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/body_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_quarter_padding" android:paddingStart="@dimen/card_inner_padding_fullbleed" android:paddingEnd="@dimen/card_inner_padding_fullbleed" style="@style/NativeAdText.Body" />
+    <include layout="@layout/card_native_ad_footer__no_dummy_view" />
+</com.google.apps.dots.android.modules.widgets.card.CardLinearLayout>

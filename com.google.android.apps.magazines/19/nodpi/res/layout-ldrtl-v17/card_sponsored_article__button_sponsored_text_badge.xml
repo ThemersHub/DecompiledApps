@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.nativeads.DfpNativeAdCard android:id="@id/card" style="@style/SponsoredArticleCard"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.gms.ads.formats.NativeContentAdView android:id="@id/nativeAdView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/call_to_action" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/card_sponsored_article_image" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/card_inner_padding_fullbleed" android:paddingEnd="@dimen/card_inner_padding_fullbleed">
+                <include layout="@layout/card_sponsored_article_headline" />
+                <include layout="@layout/card_sponsored_article_body_text" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <include layout="@layout/card_sponsored_article_left_footer_sponsored_text_badge" />
+                    </FrameLayout>
+                    <FrameLayout android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <include layout="@layout/card_sponsored_article_button" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.gms.ads.formats.NativeContentAdView>
+</com.google.apps.dots.android.newsstand.nativeads.DfpNativeAdCard>

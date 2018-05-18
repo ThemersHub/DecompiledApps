@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.CardDebugInfo android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" ns:layoutSpanStyle="@style/CardSpan.AllColumns" style="@style/NSCardView.NoHighlight" xmlns:ns="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#ff8888bb" android:paddingTop="@dimen/default_half_padding" android:paddingBottom="@dimen/default_half_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/default_padding" android:paddingEnd="@dimen/default_padding">
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textSize="16.0sp" android:textColor="#ffffffff" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" ns:bindText="@id/CardDebugInfo_title" />
+        <com.google.android.libraries.bind.widget.BoundFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" ns:bindVisibility="@id/CardDebugInfo_showShareButton">
+            <Button android:id="@id/share_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share" />
+        </com.google.android.libraries.bind.widget.BoundFrameLayout>
+    </LinearLayout>
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/text" android:padding="@dimen/default_padding" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="20" android:layout_weight="1.0" ns:bindText="@id/CardDebugInfo_body" />
+</com.google.apps.dots.android.newsstand.card.CardDebugInfo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.molecule.widget.video.EmbedVideoView android:id="@id/embed_video_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.molecule.widget.video.BoundVideoView android:layout_gravity="center" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" app:bindVideoSource="@id/EmbedVideoView_videoSource" app:bindDisplayMode="@id/EmbedVideoView_displayMode" app:bindOnClickListener="@id/EmbedVideoView_videoClickListener" app:bindVisibility="@id/EmbedVideoView_videoSource" />
+    <include layout="@layout/molecule__embed_video_progress_meter" />
+    <ViewStub android:layout_gravity="bottom" android:id="@id/embed_video_controls_container_stub" android:layout="@layout/molecule__embed_video_view_controls" android:layout_width="fill_parent" android:layout_height="@dimen/embed_video_controls_height" />
+    <FrameLayout android:id="@id/embed_video_view_overlay_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.google.apps.dots.android.molecule.widget.video.EmbedVideoView>

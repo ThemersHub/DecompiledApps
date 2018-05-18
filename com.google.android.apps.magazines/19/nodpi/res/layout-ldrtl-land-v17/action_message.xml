@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.ActionMessage android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" xmlns:ns="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/card_header_spacer" />
+    <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout android:background="@color/home_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/action_message_top_margin" ns:bindOnClickListener="@id/ActionMessage_onClickListener">
+        <com.google.apps.dots.android.modules.widgets.bound.NSImageView android:layout_gravity="center" ns:bindInvisibility="@id/ActionMessage_messageText" style="@style/ActionMessageIcon" />
+        <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" ns:bindVisibility="@id/ActionMessage_messageText">
+            <com.google.apps.dots.android.modules.widgets.bound.NSImageView android:layout_gravity="center" android:paddingStart="@dimen/action_message_side_padding" style="@style/ActionMessageIcon" />
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textColor="@color/action_message_text" android:ellipsize="end" android:gravity="start" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:paddingStart="@dimen/card_inner_content_padding" ns:bindText="@id/ActionMessage_messageText" ns:bind__editModeText="Unfortunately, the content didn't load." style="@style/ActionMessageText" />
+                <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:gravity="start" android:layout_gravity="center_horizontal" android:singleLine="true" android:paddingStart="@dimen/card_inner_content_padding" style="@style/ActionMessageText.Button" />
+            </LinearLayout>
+        </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout>
+    </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout>
+</com.google.apps.dots.android.newsstand.card.ActionMessage>

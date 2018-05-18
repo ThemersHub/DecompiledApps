@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/dialog_container" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextDialogBody"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/default_language" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_padding" android:layout_marginBottom="@dimen/default_padding" android:text="@string/default_language" android:layout_alignParentStart="true" />
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:enabled="false" android:id="@id/edition_language" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/default_language" android:paddingStart="@dimen/default_half_padding" android:layout_toEndOf="@id/default_language" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/translation_languages" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/default_language">
+        <Spinner android:entries="@array/languages_array" android:id="@id/translation_languages_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_spinner_margin" android:layout_marginBottom="@dimen/dialog_spinner_margin" android:dropDownWidth="@dimen/translation_languages_spinner_dropdown_width" android:spinnerMode="dropdown" style="@style/Widget.AppCompat.Spinner" />
+    </LinearLayout>
+</RelativeLayout>

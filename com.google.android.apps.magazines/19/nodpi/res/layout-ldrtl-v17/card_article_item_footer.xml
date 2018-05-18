@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/min_touch_size"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:paddingTop="@dimen/card_inner_content_padding" android:paddingBottom="@dimen/card_inner_content_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" ns:bindText="@id/CardArticleItem_justificationText" ns:bindVisibility="@id/CardArticleItem_justificationText" style="@style/Text.Metadata" />
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/CardArticleItemText.Time.Compact" />
+    <com.google.apps.dots.android.modules.widgets.bound.NSImageView android:id="@id/story_metadata_icon" android:scaleType="fitCenter" android:contentDescription="@string/go_to_story_360" ns:srcCompat="@drawable/ic_full_coverage_24" ns:bindOnClickListener="@id/CardArticleItem_actionRelatedClickListener" ns:bindVisibility="@id/CardArticleItem_actionRelatedClickListener" style="@style/CardFooterActionIcon.NoBackground" />
+    <com.google.apps.dots.android.newsstand.widget.CardActionMenuView android:id="@id/more_button" android:layout_width="wrap_content" android:layout_height="@dimen/min_touch_size" android:paddingStart="@dimen/card_inner_content_padding" android:paddingEnd="@dimen/card_inner_padding_fullbleed" ns:shadow="true" ns:overlapAnchor="true" ns:appearance="dark" style="@style/CardActionClickableMenuView" />
+</LinearLayout>

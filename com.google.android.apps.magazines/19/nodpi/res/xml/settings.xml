@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/general_capitalized" android:key="@string/general_preference_category_key">
+        <ListPreference android:title="@string/settings_preferred_language_region" android:key="@string/edition_override_preference_key" />
+        <SwitchPreference android:title="@string/mini_cards" android:key="@string/compact_cards_preference_key" />
+        <Preference android:title="@string/blacklist_editor_title" android:key="@string/blacklist_editor_preference_key" />
+        <ListPreference android:entries="@array/data_saver_mode_entries" android:title="@string/data_saver_mode" android:key="@string/data_saver_mode_preference_key" android:defaultValue="AUTOMATIC" android:entryValues="@array/data_saver_mode_values" />
+        <ListPreference android:entries="@array/autoplay_video_entries" android:title="@string/auto_play_videos" android:key="@string/auto_play_videos_preference_key" android:defaultValue="ENABLED" android:entryValues="@array/autoplay_video_values" />
+        <SwitchPreference android:title="@string/custom_tabs" android:key="@string/browser_custom_tabs_preference_key" android:summary="@string/custom_tabs_summary" />
+        <ListPreference android:entries="@array/temperature_unit_entries" android:title="@string/temperature_units" android:key="@string/temperature_unit_preference_key" android:entryValues="@array/temperature_unit_values" />
+        <Preference android:title="@string/my_activity" android:key="@string/my_activity_preference_key" />
+        <PreferenceScreen android:title="@string/notifications_settings_menu_title" android:key="@string/notifications_screen_key" android:shouldDisableView="true">
+            <PreferenceCategory android:title="@string/notifications_settings_menu_title" android:key="@string/notifications_category_key" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/downloading_capitalized" android:key="@string/downloading_category_key">
+        <SwitchPreference android:title="@string/for_you_pinned" android:key="@string/for_you_pinned_preference_key" android:summary="@string/for_you_pinned_summary" />
+        <SwitchPreference android:title="@string/download_via_wifi_only" android:key="@string/download_via_wifi_only_preference_key" android:summary="@string/download_via_wifi_only_description" />
+        <SwitchPreference android:title="@string/download_while_charging_only" android:key="@string/download_while_charging_only_preference_key" android:summary="@string/download_while_charging_only_description" />
+        <SwitchPreference android:title="@string/store_content_on_sd_card" android:key="@string/use_external_storage_preference_key" />
+        <SwitchPreference android:title="@string/auto_pin_magazines" android:key="@string/auto_pin_magazines_preference_key" android:summary="@string/auto_pin_magazines_description" />
+        <Preference android:title="@string/auto_pin_settings" android:key="@string/auto_pin_settings_preference_key" android:shouldDisableView="true" />
+        <Preference android:title="@string/clear_all_downloads" android:key="@string/clear_all_downloads_preference_key" />
+    </PreferenceCategory>
+</PreferenceScreen>

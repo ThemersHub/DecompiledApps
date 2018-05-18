@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.molecule.internal.view.ArticleSlideshowView style="@style/BlockStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:molecule="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.molecule.internal.view.SlideshowSideSlidingView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.apps.dots.android.molecule.widget.BoundSizeLayout android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0" molecule:molecule__heightSource="WIDTH" molecule:molecule__bindHeightMultiplier="@id/ArticleSlideshowView_slideAspectRatio">
+                <com.google.apps.dots.android.molecule.internal.view.SlideshowRecyclerView android:id="@id/molecule__slideshow_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.google.apps.dots.android.molecule.widget.BoundSizeLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/molecule__slideshow_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/molecule__defaultPadding2x" android:layout_marginStart="@dimen/molecule__defaultPadding3x">
+                <com.google.apps.dots.android.molecule.internal.view.MoleculeTextView android:gravity="center_horizontal" android:layout_gravity="top" android:id="@id/slide_index_text" android:layout_width="@dimen/slideshow_index_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/molecule__defaultPadding" molecule:bindText="@id/ArticleSlideshowView_slideIndex" style="@style/MoleculeText.SlideIndex" />
+                <com.google.android.libraries.bind.widget.BindingLinearLayout android:orientation="vertical" android:id="@id/caption_attribution_container" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_marginStart="@dimen/molecule__negativeDefaultPadding2x">
+                    <include layout="@layout/molecule__image_caption_attribution" />
+                </com.google.android.libraries.bind.widget.BindingLinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.apps.dots.android.molecule.internal.view.SlideshowSideSlidingView>
+</com.google.apps.dots.android.molecule.internal.view.ArticleSlideshowView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:focusableInTouchMode="true" android:layout_width="@dimen/dialog_width" android:layout_height="wrap_content" android:paddingStart="@dimen/default_padding" android:paddingEnd="@dimen/default_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/dialog_container" android:background="@color/card_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/card_elevation">
+        <FrameLayout android:id="@id/dialog_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ProgressBar android:id="@id/action_trigger" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="100" android:progress="100" android:layout_alignBottom="@id/dialog_header" style="@style/GreenHorizontalProgressBar" />
+        <FrameLayout android:id="@id/dialog_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/dialog_header" />
+    </RelativeLayout>
+</FrameLayout>

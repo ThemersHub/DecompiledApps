@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@android:color/transparent" android:focusable="true" android:focusableInTouchMode="true" style="@style/Toolbar"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="?actionBarSize" ns:layout_scrollFlags="enterAlways|scroll|snap" ns:layout_collapseMode="pin">
+        <android.support.v7.widget.AppCompatImageView android:id="@id/search_button" android:focusable="true" android:clickable="true" android:layout_width="@dimen/min_touch_size" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_search_grey600_24" android:scaleType="centerInside" android:contentDescription="@string/search_button_description" android:layout_marginStart="10.0dip" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:gravity="center" android:id="@id/header_bar_title" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/Text.HeaderTitle" />
+        <FrameLayout android:id="@id/header_bar_logo" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.google.android.libraries.material.productlockup.ProductLockupView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="24.0dip" android:text="@string/app_name" />
+        </FrameLayout>
+        <android.support.v7.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/settings_button" android:padding="10.0dip" android:focusable="true" android:clickable="true" android:layout_width="@dimen/min_touch_size" android:layout_height="@dimen/min_touch_size" android:src="@drawable/image_loading_circle" android:scaleType="centerInside" android:contentDescription="@string/profile_icon_description" android:layout_marginEnd="16.0dip" />
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>

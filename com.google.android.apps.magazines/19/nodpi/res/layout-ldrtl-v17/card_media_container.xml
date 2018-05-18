@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.attachment.CacheableAttachmentView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" ns:bindColorFilter="@id/CardArticleItem_imageColorFilter" ns:bindBackground="@id/CardArticleItem_imageBackground" ns:bindOnClickListener="@id/CardArticleItem_imageOnClickListener" ns:hideBackgroundWhenLoaded="true" ns:bindAttachmentId="@id/CardArticleItem_imageId" ns:fadeInType="ifSlowLoad" />
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textColor="@color/card_white_text_secondary" android:layout_gravity="end|bottom|center" android:background="@drawable/image_attribution_background_round_top_left" android:paddingTop="@dimen/card_inner_content_half_padding" android:paddingBottom="@dimen/card_inner_content_half_padding" android:layout_width="wrap_content" android:paddingStart="@dimen/card_inner_content_half_padding" android:paddingEnd="@dimen/card_inner_content_half_padding" style="@style/CardArticleItemText.ImageAttribution" />
+    <ViewStub android:id="@id/embed_video_container_stub" android:layout="@layout/molecule__embed_video_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/youtube_embed_video_container_stub" android:layout="@layout/molecule__youtube_embed_video_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.apps.dots.android.modules.widgets.bound.NSImageView android:id="@id/play_button" style="@style/VideoPlayButton" />
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView style="@style/CardArticleItemGalleryButton" />
+    <include android:visibility="gone" layout="@layout/molecule__video_error_view" />
+    <com.google.apps.dots.android.modules.amp.StampIcon android:layout_gravity="end|bottom|center" android:id="@id/stamp_icon" android:layout_width="@dimen/card_article_item_stamp_icon_size" android:layout_height="@dimen/card_article_item_stamp_icon_size" android:layout_margin="@dimen/card_inner_content_padding" android:alpha="0.95" />
+</merge>

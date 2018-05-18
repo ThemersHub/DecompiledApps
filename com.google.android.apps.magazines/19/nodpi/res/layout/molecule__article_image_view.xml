@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.molecule.internal.view.ArticleImageView style="@style/BlockStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.apps.dots.android.molecule.widget.BoundSizeLayout android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0" app:molecule__heightSource="WIDTH" app:molecule__bindHeightMultiplier="@id/ArticleImageView_imageAspectRatio" app:molecule__bindMaxHeightMultiplier="@id/ArticleImageView_maxImageAspectRatio">
+            <com.google.apps.dots.android.molecule.internal.view.MoleculeImageView style="@style/MoleculeImageView" />
+            <com.google.apps.dots.android.molecule.widget.video.BoundVideoView android:layout_gravity="center" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" app:bindVideoSource="@id/ArticleImageView_videoSource" app:bindVisibility="@id/ArticleImageView_videoSource" />
+        </com.google.apps.dots.android.molecule.widget.BoundSizeLayout>
+        <include layout="@layout/molecule__image_caption_attribution" />
+    </LinearLayout>
+</com.google.apps.dots.android.molecule.internal.view.ArticleImageView>

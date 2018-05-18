@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.CardArticleItem android:layout_width="fill_parent" android:layout_height="@dimen/article_carousel_height" android:foreground="@drawable/card_overlay_lighten" ns:bindOnClickListener="@id/CardArticleItem_articleOnClickListener" ns:bindOnCardSeenListener="@id/CardArticleItem_onCardSeenListener" style="@style/NSCardView"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.apps.dots.android.newsstand.card.CardArticleItemVideoView android:id="@id/image_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/card_media_container" />
+        </com.google.apps.dots.android.newsstand.card.CardArticleItemVideoView>
+        <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/gradient_text_container" android:paddingTop="@dimen/article_carousel_gradient_padding" android:paddingBottom="@dimen/card_inner_content_three_halves_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_quarter_padding" android:paddingStart="@dimen/card_inner_content_three_halves_padding" android:paddingEnd="@dimen/card_inner_content_three_halves_padding" ns:bindBackground="@id/CardArticleItem_carouselMetadataBackground">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/card_article_item_source_icon" />
+                <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/source_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/card_inner_content_padding" style="@style/CardArticleItemText.Source.Compact.Carousel" />
+                <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/time" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" ns:bindTextColor="@id/CardArticleItem_timeTextColor" style="@style/CardArticleItemText.Time.Compact.Carousel" />
+                <com.google.apps.dots.android.newsstand.widget.CardActionMenuView android:id="@id/overflow_action" android:background="@drawable/card_action_button_bg" android:layout_width="3.0dip" android:layout_height="wrap_content" android:alpha="0.7" ns:overlapAnchor="true" ns:bindInvertAppearance="@id/CardArticleItem_tileLightTheme" style="@style/CardActionClickableMenuView" />
+            </LinearLayout>
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/title" android:layout_marginTop="@dimen/card_inner_content_three_quarter_padding" android:maxLines="3" ns:bindTextColor="@id/CardArticleItem_headlineTextColor" style="@style/CardArticleItemText.Headline.Carousel" />
+            <com.google.apps.dots.android.modules.widgets.bound.ExpandingTextView android:id="@id/post_abstract" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/card_inner_content_three_quarter_padding" android:layout_weight="1.0" android:paddingStart="0.0dip" android:paddingEnd="0.0dip" ns:bindInvisibility="@id/CardArticleItem_imageId" style="@style/CardArticleItemAbstract" />
+        </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout>
+    </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout>
+</com.google.apps.dots.android.newsstand.card.CardArticleItem>

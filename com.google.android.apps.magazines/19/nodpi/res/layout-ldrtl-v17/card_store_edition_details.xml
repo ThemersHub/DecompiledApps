@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textSize="@dimen/text_display_M" android:textColor="@color/text_color_secondary" android:gravity="center_vertical" android:id="@id/rank" android:layout_width="@dimen/card_inner_content_2x_padding" android:layout_height="@dimen/native_store_card_list_item_height" android:fontFamily="@font/google_sans_medium" ns:bindText="@id/CardNativeStoreItem_rankText" ns:bindVisibility="@id/CardNativeStoreItem_rankText" />
+    <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout android:layout_width="@dimen/native_store_card_list_item_width" android:layout_height="wrap_content" ns:bindVisibility="@id/EditionIcon_attachmentId">
+        <com.google.apps.dots.android.modules.widgets.bound.viewgroup.SizingLayout android:layout_gravity="center_horizontal" android:id="@id/icon_wrapper" android:layout_width="wrap_content" android:layout_height="@dimen/native_store_card_list_item_height" ns:cornerRadius="@dimen/native_store_edition_details_icon_corners">
+            <include android:layout_gravity="center" android:layout_width="@dimen/native_store_card_list_item_width" android:layout_height="@dimen/native_store_card_list_item_width" layout="@layout/edition_icon_fixed_height" />
+        </com.google.apps.dots.android.modules.widgets.bound.viewgroup.SizingLayout>
+    </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout>
+    <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="@dimen/card_inner_content_padding" android:paddingEnd="0.0dip">
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" ns:bindText="@id/CardNativeStoreItem_title" style="@style/Text.Headline3" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:layout_width="wrap_content" android:layout_height="wrap_content" ns:bindText="@id/CardNativeStoreItem_description" ns:bindVisibility="@id/CardNativeStoreItem_description" style="@style/Text.Metadata" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="1" ns:bindText="@id/ActionChip_text" ns:bindVisibility="@id/CardNativeStoreItem_alreadySubscribedChipVisible" />
+        <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout android:layout_gravity="start|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-18.0dip" ns:bindVisibility="@id/CardNativeStoreItem_shortChipVisible">
+            <include layout="@layout/subscribe_chip_short" />
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:gravity="center_vertical" android:id="@id/trialTerms" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_inner_content_quarter_padding" ns:bindText="@id/CardNativeStoreItem_trialTerms" ns:bindVisibility="@id/CardNativeStoreItem_trialTerms" style="@style/Text.Metadata" />
+        </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout>
+    </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout>
+    <FrameLayout android:gravity="end|center" android:layout_width="wrap_content" android:layout_height="@dimen/native_store_card_list_item_height">
+        <include android:layout_gravity="center_vertical" android:layout_width="@dimen/native_store_carousel_favorite_button_size" android:layout_height="@dimen/native_store_carousel_favorite_button_size" android:layout_marginStart="@dimen/default_padding" layout="@layout/card_native_store_item_favorite_button" />
+    </FrameLayout>
+</merge>

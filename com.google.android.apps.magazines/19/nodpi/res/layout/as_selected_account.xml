@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.libraries.material.aspectratio.FixedAspectRatioFrameLayout android:id="@id/account_switcher_lib_view_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" app:aspectRatio="1.7778"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/offscreen_cover_photo" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:contentDescription="@null" android:importantForAccessibility="no" />
+    <ImageView android:id="@id/cover_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:contentDescription="@null" android:importantForAccessibility="no" />
+    <View android:id="@id/scrim" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.4" />
+    <include layout="@layout/as_avatars" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/account_list_wrapper" android:layout_width="fill_parent" android:layout_height="@dimen/as_account_text_area_height" style="@style/Material.AccountSwitcher.BackgroundStyle">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:id="@id/account_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" style="@style/Material.AccountSwitcher.AccountItemStyle">
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="start" android:id="@id/account_display_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:textAlignment="viewStart" style="@style/Material.AccountSwitcher.AccountDisplayNameStyle" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="start" android:id="@id/account_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:alpha="0.72" android:textAlignment="viewStart" />
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="start|center" android:id="@id/sign_in" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/as_sign_in" android:maxLines="1" android:textAlignment="viewStart" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/offscreen_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" style="@style/Material.AccountSwitcher.AccountItemStyle">
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="start" android:id="@id/offscreen_account_display_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:textAlignment="viewStart" style="@style/Material.AccountSwitcher.AccountDisplayNameStyle" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="start" android:id="@id/offscreen_account_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:alpha="0.72" android:textAlignment="viewStart" />
+            </LinearLayout>
+        </RelativeLayout>
+        <com.google.android.libraries.material.accountswitcher.ExpanderView android:id="@id/account_list_button" android:layout_height="fill_parent" android:src="@drawable/expander_group" android:scaleType="center" android:contentDescription="@string/as_show_account_list" style="@style/Material.AccountSwitcher.SelectedAccountButtonStyle" />
+    </LinearLayout>
+</com.google.android.libraries.material.aspectratio.FixedAspectRatioFrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.CardSourceMagazineListItem android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/card_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/card_inner_content_2x_padding" ns:bindOnClickListener="@id/CardSourceListItem_sourceClickListener" ns:bindTransitionName="@id/CardSourceListItem_cardTransitionName" style="@style/NSCardView" xmlns:ns="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@color/card_source_list_item_icon_background" android:layout_width="@dimen/card_source_list_item_icon_size" android:layout_height="wrap_content">
+        <include layout="@layout/edition_icon" />
+    </FrameLayout>
+    <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:paddingStart="@dimen/card_inner_content_padding">
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textColor="@color/card_source_list_item_title_text" android:id="@id/source_name" android:layout_width="fill_parent" android:layout_height="wrap_content" ns:bindText="@id/CardSourceListItem_sourceFamilyName" ns:bind__editModeText="Shalabi Daily" style="@style/CardSourceListItemTitle" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textColor="@color/play_secondary_text" android:layout_width="fill_parent" android:layout_height="wrap_content" ns:bindText="@id/CardSourceListItem_sourceName" ns:bind__editModeText="HIT IT! gg NA-NA-NA-NA-NAAAA" style="@style/CardSourceListItemDescription" />
+    </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout>
+    <include layout="@layout/card_source_list_item_subscribe_button" />
+</com.google.apps.dots.android.newsstand.card.CardSourceMagazineListItem>

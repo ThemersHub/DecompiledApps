@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.search.SuggestListItem android:gravity="center" android:orientation="horizontal" android:background="@drawable/play_highlight_overlay_light" android:paddingTop="@dimen/card_inner_content_half_padding" android:paddingBottom="@dimen/card_inner_content_half_padding" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/card_inner_padding_fullbleed" android:paddingEnd="@dimen/card_inner_padding_fullbleed" ns:bindOnClickListener="@id/SuggestListItem_onClickListener"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="@dimen/suggest_list_item_icon_size" android:layout_height="@dimen/suggest_list_item_icon_size">
+        <include layout="@layout/edition_icon_fixed_height" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/text_frame" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_centerVertical="true" android:animateLayoutChanges="true" android:layout_marginStart="@dimen/card_inner_content_three_halves_padding">
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:ellipsize="end" android:id="@id/suggest_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" ns:bindText="@id/SuggestListItem_text" style="@style/Text.Title" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:ellipsize="end" android:id="@id/suggest_subtext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" ns:bindText="@id/SuggestListItem_description" ns:bindVisibility="@id/SuggestListItem_description" style="@style/Text.Metadata" />
+    </LinearLayout>
+    <include android:layout_gravity="center_vertical" android:layout_width="@dimen/native_store_carousel_favorite_button_size" android:layout_height="@dimen/native_store_carousel_favorite_button_size" android:layout_marginStart="@dimen/card_inner_content_padding" layout="@layout/card_native_store_item_favorite_button" />
+</com.google.apps.dots.android.newsstand.search.SuggestListItem>

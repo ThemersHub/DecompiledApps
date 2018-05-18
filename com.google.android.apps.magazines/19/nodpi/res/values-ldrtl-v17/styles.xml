@@ -1,0 +1,1579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ActionChip">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/card_action_button_oval_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/action_chip_height</item>
+        <item name="android:minWidth">50.0dip</item>
+    </style>
+    <style name="ActionMessageIcon">
+        <item name="android:layout_width">120.0dip</item>
+        <item name="android:layout_height">120.0dip</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="bindDrawable">@id/ActionMessage_iconDrawable</item>
+        <item name="editModeDrawable">@drawable/ic_empty_error</item>
+        <item name="forceLayoutOnSetDrawable">true</item>
+    </style>
+    <style name="ActionMessageIcon.SmallIcon" parent="@style/ActionMessageIcon">
+        <item name="android:layout_width">@dimen/action_message_icon_size_small</item>
+        <item name="android:layout_height">@dimen/action_message_icon_size_small</item>
+    </style>
+    <style name="ActionMessageText" parent="@style/Text.Headline">
+        <item name="android:paddingStart">@dimen/action_message_side_padding</item>
+        <item name="android:paddingEnd">@dimen/action_message_side_padding</item>
+    </style>
+    <style name="ActionMessageText.Button" parent="@style/Widget.GoogleMaterial.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="accessibilityClassOverride">button</item>
+        <item name="bindText">@id/ActionMessage_actionText</item>
+        <item name="bindOnClickListener">@id/ActionMessage_actionOnClickListener</item>
+        <item name="bindVisibility">@id/ActionMessage_actionText</item>
+    </style>
+    <style name="ActionMessageText.Small" parent="@style/Text.Headline2">
+        <item name="android:paddingStart">@dimen/action_message_side_padding</item>
+        <item name="android:paddingEnd">@dimen/action_message_side_padding</item>
+    </style>
+    <style name="ArchiveHorizontalDivider">
+        <item name="android:background">@color/my_mag_archive_divider</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">2.0dip</item>
+        <item name="android:layout_marginTop">@dimen/warm_welcome_button_padding</item>
+        <item name="android:layout_marginBottom">@dimen/warm_welcome_button_padding</item>
+    </style>
+    <style name="ArticlePivotsBottomSheetContainer">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="ArticleTailBuyButton">
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textColor">@color/card_label_text_white</item>
+        <item name="android:background">@drawable/article_tail_buy_button_bg</item>
+        <item name="android:paddingTop">@dimen/card_inner_content_padding</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_padding</item>
+        <item name="android:text">@string/buy_button</item>
+        <item name="android:contentDescription">@string/buy_button</item>
+        <item name="android:paddingStart">@dimen/card_inner_content_2x_padding</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_2x_padding</item>
+    </style>
+    <style name="AudioCircleProgress">
+        <item name="android:background">@drawable/progress_circle_background</item>
+        <item name="android:max">100</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_circle</item>
+    </style>
+    <style name="AudioProgressText">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="AudioSeekBar">
+        <item name="android:focusable">true</item>
+        <item name="android:maxHeight">4.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@drawable/audio_progress</item>
+        <item name="android:progressDrawable">@drawable/audio_progress</item>
+        <item name="android:minHeight">4.0dip</item>
+        <item name="android:thumbOffset">16.0dip</item>
+        <item name="android:mirrorForRtl">true</item>
+    </style>
+    <style name="BottomBar">
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="BottomBarButton">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Caption</item>
+        <item name="android:textSize">@dimen/bottom_bar_button_text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/tab_background</item>
+        <item name="android:paddingTop">@dimen/card_inner_content_half_padding</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_quarter_padding</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">@dimen/bottom_bar_button_height</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:animateLayoutChanges">false</item>
+        <item name="maxWidth">168.0dip</item>
+    </style>
+    <style name="BottomBarButtonIcon">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">22.0dip</item>
+        <item name="android:layout_height">22.0dip</item>
+    </style>
+    <style name="BottomBarButtonText" parent="@style/TextDisplay.XS">
+        <item name="android:textColor">@color/tab_color_inactive</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">2.0dip</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="CardActionButtonText" parent="@style/PlayCardAction">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/card_action_button_height</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="android:paddingStart">@dimen/card_inner_content_padding</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_padding</item>
+    </style>
+    <style name="CardActionButtonText.Primary" parent="@style/CardActionButtonText">
+        <item name="android:background">@drawable/card_action_button_background_colorable</item>
+        <item name="bindText">@id/CardActionButtons_primaryButtonText</item>
+    </style>
+    <style name="CardActionButtonText.Primary.Light" parent="@style/CardActionButtonText.Primary">
+        <item name="android:textColor">@color/app_color_material</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_height">@dimen/min_touch_size</item>
+        <item name="android:paddingStart">@dimen/card_inner_content_half_padding</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_half_padding</item>
+        <item name="android:layout_marginStart">@dimen/card_inner_content_padding</item>
+        <item name="android:layout_marginEnd">@dimen/card_inner_content_quarter_padding</item>
+    </style>
+    <style name="CardActionButtonText.Secondary" parent="@style/CardActionButtonText">
+        <item name="android:background">@drawable/card_action_button_highlight_stateful</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="bindText">@id/CardActionButtons_secondaryButtonText</item>
+    </style>
+    <style name="CardActionButtonWrapper">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/min_touch_size</item>
+        <item name="android:layout_marginTop">@dimen/default_half_padding</item>
+        <item name="android:minWidth">@dimen/min_touch_size</item>
+        <item name="accessibilityClassOverride">button</item>
+    </style>
+    <style name="CardActionButtonWrapper.Primary" parent="@style/CardActionButtonWrapper">
+        <item name="android:layout_marginStart">@dimen/card_inner_content_padding</item>
+        <item name="bindContentDescription">@id/CardActionButtons_primaryButtonContentDescription</item>
+        <item name="bindOnClickListener">@id/CardActionButtons_primaryButtonClickListener</item>
+        <item name="bindVisibility">@id/CardActionButtons_primaryButtonText</item>
+    </style>
+    <style name="CardActionButtonWrapper.Primary.Compact" parent="@style/CardActionButtonWrapper.Primary">
+        <item name="android:layout_marginTop">0.0dip</item>
+    </style>
+    <style name="CardActionButtonWrapper.Primary.Light" parent="@style/CardActionButtonWrapper.Primary">
+        <item name="android:background">@drawable/tab_background</item>
+    </style>
+    <style name="CardActionButtonWrapper.Secondary" parent="@style/CardActionButtonWrapper">
+        <item name="bindContentDescription">@id/CardActionButtons_secondaryButtonText</item>
+        <item name="bindOnClickListener">@id/CardActionButtons_secondaryButtonClickListener</item>
+        <item name="bindVisibility">@id/CardActionButtons_secondaryButtonText</item>
+    </style>
+    <style name="CardActionButtonWrapper.Secondary.Compact" parent="@style/CardActionButtonWrapper.Secondary">
+        <item name="android:layout_marginTop">0.0dip</item>
+    </style>
+    <style name="CardActionButtonWrapper.Secondary.Light" parent="@style/CardActionButtonWrapper.Secondary">
+        <item name="android:background">@drawable/tab_background</item>
+    </style>
+    <style name="CardActionClickableMenuView">
+        <item name="android:layout_width">@dimen/min_touch_size</item>
+        <item name="android:layout_height">@dimen/min_touch_size</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:contentDescription">@string/more_options_description</item>
+        <item name="bindVisibility">@id/CardActionMenuView_actions</item>
+    </style>
+    <style name="CardArticleActionIconBase">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/card_action_button_oval_bg</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">32.0dip</item>
+        <item name="android:layout_height">32.0dip</item>
+        <item name="android:tint">@color/card_action_button_tint</item>
+        <item name="android:cropToPadding">true</item>
+    </style>
+    <style name="CardArticleItemAbstract">
+        <item name="android:textSize">@dimen/card_news_item_abstract</item>
+        <item name="android:textColor">@color/card_abstract_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:lineSpacingExtra">@dimen/card_news_item_abstract_line_spacing_extra</item>
+        <item name="android:paddingStart">@dimen/card_inner_padding_fullbleed</item>
+        <item name="android:paddingEnd">@dimen/card_inner_padding_fullbleed</item>
+        <item name="bindText">@id/CardArticleItem_abstract</item>
+        <item name="customFont">REGULAR_SANS</item>
+    </style>
+    <style name="CardArticleItemAbstract.Compact" parent="@style/CardArticleItemAbstract">
+        <item name="android:textSize">@dimen/text_display_S</item>
+    </style>
+    <style name="CardArticleItemGalleryButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_gravity">end|bottom|center</item>
+        <item name="android:background">@drawable/card_action_button_background_colorable</item>
+        <item name="android:padding">@dimen/card_inner_content_padding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/card_inner_content_2x_padding</item>
+        <item name="android:text">@string/gallery</item>
+        <item name="android:drawablePadding">@dimen/card_inner_content_half_padding</item>
+        <item name="android:drawableStart">@drawable/quantum_ic_photo_library_white_24</item>
+        <item name="android:layout_marginEnd">@dimen/card_inner_content_2x_padding</item>
+        <item name="bindOnClickListener">@id/CardArticleItem_galleryOnClickListener</item>
+        <item name="bindVisibility">@id/CardArticleItem_hasGallery</item>
+    </style>
+    <style name="CardArticleItemNeueCard" parent="@style/NSCardView.NoCard.Fullbleed.Portrait">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/card_inner_content_half_padding</item>
+        <item name="android:layout_marginBottom">@dimen/card_inner_content_half_padding</item>
+        <item name="android:foreground">@null</item>
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+        <item name="layoutSpanStyle">@style/CardSpan.BigCard</item>
+    </style>
+    <style name="CardArticleItemNeueContent" parent="@style/NSCardView.NoCard">
+        <item name="android:orientation">vertical</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:foreground">@drawable/card_overlay_darken_fullbleed</item>
+        <item name="foregroundRespectPadding">true</item>
+        <item name="bindOnClickListener">@id/CardArticleItem_articleOnClickListener</item>
+        <item name="bindTransitionName">@id/CardArticleItem_cardTransitionName</item>
+        <item name="cardElevation">@dimen/card_article_item_content_elevation</item>
+        <item name="layout_flmGridInsetStart">0.0dip</item>
+        <item name="layout_flmGridInsetEnd">0.0dip</item>
+        <item name="layout_flmVAlign">top</item>
+        <item name="layoutSpanStyle">@style/CardSpan.Cluster</item>
+        <item name="disableShadow">true</item>
+    </style>
+    <style name="CardArticleItemNotification" parent="@style/NSCardView.NoCard.Fullbleed.Portrait">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+    <style name="CardArticleItemText">
+        <item name="android:textColor">@color/card_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+    <style name="CardArticleItemText.Headline" parent="@style/CardText.Headline">
+        <item name="android:paddingTop">@dimen/card_inner_content_half_padding</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_half_padding</item>
+        <item name="android:paddingStart">@dimen/card_inner_padding_fullbleed</item>
+        <item name="android:paddingEnd">@dimen/card_inner_padding_fullbleed</item>
+        <item name="bindText">@id/CardArticleItem_title</item>
+        <item name="bindTextColor">@id/CardArticleItem_headlineTextColor</item>
+        <item name="bindContentDescription">@id/CardArticleItem_titleContentDescription</item>
+    </style>
+    <style name="CardArticleItemText.Headline.Carousel" parent="@style/CardArticleItemText.Headline">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/card_white_text_normal</item>
+        <item name="android:paddingTop">0.0dip</item>
+        <item name="android:paddingBottom">0.0dip</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingStart">0.0dip</item>
+        <item name="android:paddingEnd">0.0dip</item>
+        <item name="bindTextColor">@null</item>
+        <item name="bindPaddingStartResId">@null</item>
+        <item name="bindPaddingEndResId">@null</item>
+    </style>
+    <style name="CardArticleItemText.Headline.Compact" parent="@style/CardArticleItemText.Headline">
+        <item name="android:textSize">@dimen/card_news_item_text_headline_neue_compact</item>
+        <item name="android:paddingTop">0.0dip</item>
+        <item name="android:paddingBottom">0.0dip</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:lineSpacingExtra">0.0dip</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="android:paddingStart">0.0dip</item>
+        <item name="android:paddingEnd">0.0dip</item>
+    </style>
+    <style name="CardArticleItemText.Headline.FullWeight" parent="@style/CardArticleItemText.Headline">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="CardArticleItemText.Headline.Lightbox" parent="@style/CardArticleItemText.Headline">
+        <item name="android:textColor">@color/card_white_text_normal</item>
+        <item name="android:maxLines">4</item>
+        <item name="bindTextColor">@null</item>
+    </style>
+    <style name="CardArticleItemText.ImageAttribution" parent="@style/CardArticleItemText">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textColor">@color/card_time_text</item>
+        <item name="android:gravity">end</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">@dimen/card_inner_padding_fullbleed</item>
+        <item name="android:paddingEnd">@dimen/card_inner_padding_fullbleed</item>
+        <item name="bindText">@id/CardArticleItem_imageAttribution</item>
+        <item name="bind__editModeText">Photo by Joe P. Photographer</item>
+        <item name="bindContentDescription">@id/CardArticleItem_imageAttributionContentDescription</item>
+        <item name="bindVisibility">@id/CardArticleItem_imageAttribution</item>
+        <item name="customFont">LIGHT_SANS</item>
+    </style>
+    <style name="CardArticleItemText.Kicker" parent="@style/CardText">
+        <item name="android:textSize">@dimen/text_body_S</item>
+        <item name="android:paddingTop">0.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:paddingStart">@dimen/card_inner_padding_fullbleed</item>
+        <item name="android:paddingEnd">@dimen/card_inner_padding_fullbleed</item>
+        <item name="bindText">@id/CardArticleItem_kicker</item>
+        <item name="bindTextColor">@id/CardArticleItem_kickerTextColor</item>
+        <item name="bindVisibility">@id/CardArticleItem_kicker</item>
+        <item name="customFont">MEDIUM_SANS</item>
+    </style>
+    <style name="CardArticleItemText.Kicker.Compact" parent="@style/CardArticleItemText.Kicker">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:paddingTop">0.0dip</item>
+        <item name="android:paddingBottom">0.0dip</item>
+        <item name="android:paddingStart">0.0dip</item>
+        <item name="android:paddingEnd">0.0dip</item>
+    </style>
+    <style name="CardArticleItemText.Source" parent="@style/CardArticleItemText">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:textColor">@color/card_source_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="bindText">@id/CardArticleItem_sourceName</item>
+        <item name="bind__editModeText">Google Periodical Publications</item>
+        <item name="bindTextColor">@id/CardArticleItem_sourceTextColor</item>
+        <item name="bindVisibility">@id/CardArticleItem_sourceName</item>
+        <item name="customFont">REGULAR_SANS</item>
+    </style>
+    <style name="CardArticleItemText.Source.Compact" parent="@style/CardArticleItemText.Source">
+        <item name="android:textSize">@dimen/text_body_S</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="CardArticleItemText.Source.Compact.Carousel" parent="@style/CardArticleItemText.Source.Compact">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/card_white_text_normal</item>
+    </style>
+    <style name="CardArticleItemText.Source.Compact.Metadata" parent="@style/CardArticleItemText.Source.Compact">
+        <item name="bindText">@id/CardArticleItem_metadata</item>
+        <item name="bindVisibility">@id/CardArticleItem_metadata</item>
+    </style>
+    <style name="CardArticleItemText.Time" parent="@style/CardArticleItemText">
+        <item name="android:textColor">@color/text_color_secondary</item>
+        <item name="android:singleLine">true</item>
+        <item name="bindText">@id/CardArticleItem_time</item>
+        <item name="bind__editModeText">12 minutes ago | Web</item>
+        <item name="bindTextColor">@id/CardArticleItem_timeTextColor</item>
+        <item name="bindVisibility">@id/CardArticleItem_time</item>
+        <item name="customFont">REGULAR_SANS</item>
+    </style>
+    <style name="CardArticleItemText.Time.Compact" parent="@style/CardArticleItemText.Time">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="CardArticleItemText.Time.Compact.Carousel" parent="@style/CardArticleItemText.Time.Compact">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/card_white_text_tertiary</item>
+        <item name="bindTextColor">@null</item>
+    </style>
+    <style name="CardArticleItemTile" parent="@style/NSCardView.NoCard">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingStart">@dimen/card_inner_content_three_halves_padding</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_three_halves_padding</item>
+        <item name="bindOnClickListener">@id/CardArticleItem_articleOnClickListener</item>
+        <item name="bindPaddingBottomResId">@id/CardStoryNewscastCarousel_optTileBottomPaddingResId</item>
+        <item name="bindOnCardSeenListener">@id/CardArticleItem_onCardSeenListener</item>
+    </style>
+    <style name="CardArticleItemTile.Light" parent="@style/CardArticleItemTile">
+        <item name="android:background">@color/card_background</item>
+        <item name="cardBackgroundColor">@color/card_background</item>
+    </style>
+    <style name="CardArticleItemTileText" />
+    <style name="CardArticleItemTileText.Metadata" parent="@style/CardArticleItemText.Source.Compact">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="bindText">@id/CardArticleItem_tileMetadataFooterText</item>
+        <item name="bindTextColor">@id/CardArticleItem_tileMetadataFooterColor</item>
+        <item name="bindVisibility">@id/CardArticleItem_tileMetadataFooterText</item>
+    </style>
+    <style name="CardArticleItemTileText.Title" parent="@style/CardArticleItemTileText">
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="bindText">@id/CardArticleItem_title</item>
+        <item name="bindTextColor">@id/CardArticleItem_tileMetadataFooterPrimaryColor</item>
+    </style>
+    <style name="CardArticleItemTileText.Title.Small" parent="@style/CardArticleItemTileText.Title">
+        <item name="android:textSize">@dimen/text_body_M</item>
+        <item name="android:maxLines">2</item>
+        <item name="customFont">REGULAR_SANS</item>
+    </style>
+    <style name="CardBlacklistItem" parent="@style/CardSourceListItem">
+        <item name="android:foreground">@drawable/card_overlay_darken</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="CardCarousel" parent="@style/NSCardView.NoCard.Fullbleed.Portrait">
+        <item name="android:paddingStart">0.0dip</item>
+        <item name="android:paddingEnd">0.0dip</item>
+    </style>
+    <style name="CardCarousel.Cluster" parent="@style/NSCardView.Cluster">
+        <item name="android:paddingStart">0.0dip</item>
+        <item name="android:paddingEnd">0.0dip</item>
+        <item name="cardBackgroundColor">@color/card_carousel_card_background</item>
+        <item name="cardCornerRadius">0.0dip</item>
+        <item name="cardElevation">0.0dip</item>
+        <item name="cardInsetTop">0.0dip</item>
+        <item name="cardInsetBottom">0.0dip</item>
+        <item name="bindPaddingTopResId">@null</item>
+        <item name="bindPaddingBottomResId">@null</item>
+    </style>
+    <style name="CardClusterBackground" parent="@style/NSCardView.Fullbleed.Portrait">
+        <item name="android:paddingTop">6.0dip</item>
+        <item name="android:paddingBottom">6.0dip</item>
+        <item name="cardElevation">5.0dip</item>
+        <item name="cardInsetTop">6.0dip</item>
+        <item name="cardInsetBottom">6.0dip</item>
+        <item name="useEamesShadow">true</item>
+    </style>
+    <style name="CardClusterItemChild" parent="@style/NSCardView.NoCard">
+        <item name="cardCornerRadius">0.0dip</item>
+    </style>
+    <style name="CardClusterItemHeaderText" parent="@style/PlayMediumBoldText">
+        <item name="android:textSize">@dimen/card_cluster_item_plain_header_title_text</item>
+        <item name="android:textColor">@color/text_color_primary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingStart">@dimen/card_inner_content_padding</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_padding</item>
+    </style>
+    <style name="CardClusterItemHeaderText.Subtitle" parent="@style/CardClusterItemHeaderText">
+        <item name="android:textSize">@dimen/card_cluster_item_plain_header_subtitle_text</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_marginTop">@dimen/card_cluster_item_plain_header_subtitle_top_margin</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="customFont">REGULAR_SANS</item>
+    </style>
+    <style name="CardFooterActionIcon">
+        <item name="android:background">@drawable/card_footer_button_bg</item>
+        <item name="android:padding">@dimen/card_footer_button_padding</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">@dimen/card_footer_button_size</item>
+        <item name="android:layout_height">@dimen/card_footer_button_size</item>
+    </style>
+    <style name="CardFooterActionIcon.NoBackground" parent="@style/CardFooterActionIcon">
+        <item name="android:background">@drawable/tab_background</item>
+        <item name="android:padding">@dimen/card_footer_button_padding_no_bg</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">@dimen/card_footer_button_size</item>
+        <item name="android:layout_height">@dimen/card_footer_button_size</item>
+        <item name="android:scaleType">center</item>
+    </style>
+    <style name="CardFooterCenterText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="customFont">BOLD_SANS</item>
+    </style>
+    <style name="CardOfferItemText">
+        <item name="android:textColor">@color/card_label_text_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginStart">@dimen/card_inner_padding_fullbleed</item>
+        <item name="android:layout_marginEnd">@dimen/card_inner_padding_fullbleed</item>
+        <item name="customFont">REGULAR_SANS</item>
+    </style>
+    <style name="CardOfferItemText.SourceInfo" parent="@style/CardOfferItemText">
+        <item name="android:textSize">@dimen/card_offer_item_source_info_text</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="CardOfferItemText.Title" parent="@style/CardOfferItemText">
+        <item name="android:textSize">@dimen/card_offer_item_title_text</item>
+    </style>
+    <style name="CardOfferItemText.Title.Compact" parent="@style/CardOfferItemText.Title">
+        <item name="android:textSize">@dimen/card_offer_item_title_text_compact</item>
+        <item name="android:gravity">start</item>
+    </style>
+    <style name="CardOfferItemTextSplashTitle" parent="@style/PlayMediumBoldText">
+        <item name="android:textSize">@dimen/card_offer_item_splash_title_text</item>
+        <item name="android:textColor">@color/card_label_text_white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginStart">@dimen/card_inner_padding_fullbleed</item>
+        <item name="android:layout_marginEnd">@dimen/card_inner_padding_fullbleed</item>
+    </style>
+    <style name="CardOfferItemTextSplashTitle.Compact" parent="@style/CardOfferItemTextSplashTitle">
+        <item name="android:textSize">@dimen/card_offer_item_splash_title_text_compact</item>
+    </style>
+    <style name="CardSourceItemClickableMenuView">
+        <item name="android:paddingTop">@dimen/card_inner_content_half_padding</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_half_padding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:contentDescription">@string/more_options_description</item>
+        <item name="android:paddingStart">@dimen/card_inner_content_half_padding</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_half_padding</item>
+    </style>
+    <style name="CardSourceItemDownloadProgressView" parent="@style/PlayDownloadStatusView.Small">
+        <item name="android:padding">@dimen/card_source_item_pin_padding</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">@dimen/card_download_progress_view_size</item>
+        <item name="android:layout_height">@dimen/card_download_progress_view_size</item>
+        <item name="android:layout_marginStart">1.0px</item>
+        <item name="hideWhenRemoved">true</item>
+    </style>
+    <style name="CardSourceItemDownloadProgressViewStub">
+        <item name="android:layout">@layout/download_progress_view</item>
+        <item name="android:layout_width">@dimen/card_download_progress_view_size</item>
+        <item name="android:layout_height">@dimen/card_download_progress_view_size</item>
+    </style>
+    <style name="CardSourceItemName" parent="@style/CardSourceItemNameBase">
+        <item name="android:textSize">@dimen/text_display_S</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">@dimen/card_inner_content_half_padding</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lines">2</item>
+        <item name="android:paddingStart">@dimen/card_inner_content_three_quarter_padding</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_three_quarter_padding</item>
+        <item name="bind__editModeText">The Daily Planet</item>
+        <item name="useTitleEllipsizing">true</item>
+    </style>
+    <style name="CardSourceItemName.Condensed" parent="@style/CardSourceItemName">
+        <item name="android:paddingBottom">0.0dip</item>
+        <item name="android:paddingStart">0.0dip</item>
+        <item name="android:paddingEnd">0.0dip</item>
+    </style>
+    <style name="CardSourceItemNameBase">
+        <item name="android:textSize">@dimen/text_display_S</item>
+        <item name="android:textColor">@color/text_color_sub_headline</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="bindText">@id/CardSourceItem_sourceName</item>
+        <item name="bind__editModeText">The Daily Planet</item>
+        <item name="useTitleEllipsizing">true</item>
+    </style>
+    <style name="CardSourceListItem" parent="@style/NSCardView">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:weightSum">1.0</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_three_halves_padding</item>
+        <item name="bindBackground">@id/CardSourceListItem_cardBackground</item>
+        <item name="bindContentDescription">@id/CardSourceListItem_cardContentDescription</item>
+        <item name="bindTransitionName">@id/CardSourceListItem_cardTransitionName</item>
+        <item name="layoutSpanStyle">@style/CardSpan.AllColumns</item>
+        <item name="bindOnCardSeenListener">@id/CardSourceListItem_onCardSeenListener</item>
+    </style>
+    <style name="CardSourceListItemDescription" parent="@style/PlayCardSubtitle">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+    <style name="CardSourceListItemShare" parent="@style/NSCardView.NoCard.Fullbleed.Portrait">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:weightSum">1.0</item>
+        <item name="bindBackground">@id/CardSourceListItem_cardBackground</item>
+        <item name="bindContentDescription">@id/CardSourceListItem_cardContentDescription</item>
+        <item name="bindTransitionName">@id/CardSourceListItem_cardTransitionName</item>
+        <item name="layoutSpanStyle">@style/CardSpan.AllColumns</item>
+        <item name="bindOnCardSeenListener">@id/CardSourceListItem_onCardSeenListener</item>
+    </style>
+    <style name="CardSourceListItemShelfHeader" parent="@style/NSCardView.NoCard">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:weightSum">1.0</item>
+        <item name="bindContentDescription">@id/CardSourceListItem_cardContentDescription</item>
+        <item name="bindOnClickListener">@id/CardSourceListItem_sourceClickListener</item>
+        <item name="bindTransitionName">@id/CardSourceListItem_cardTransitionName</item>
+        <item name="layoutSpanStyle">@style/CardSpan.AllColumns</item>
+        <item name="bindOnCardSeenListener">@id/CardSourceListItem_onCardSeenListener</item>
+    </style>
+    <style name="CardSourceListItemSubscribeButton" />
+    <style name="CardSourceListItemTitle" parent="@style/PlayCardTitle">
+        <item name="android:textSize">@dimen/card_source_list_item_title_text_size</item>
+        <item name="android:textColor">@color/card_source_list_item_title_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+    <style name="CardSourceListItemTitle.Cluster" parent="@style/CardSourceListItemTitle">
+        <item name="android:textSize">@dimen/card_source_list_item_cluster_title_text_size</item>
+    </style>
+    <style name="CardSourceNotificationItem" parent="@style/NSCardView.NoCard.Fullbleed.Portrait">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">@dimen/card_inner_content_three_halves_padding</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_half_padding</item>
+        <item name="android:focusable">true</item>
+        <item name="android:weightSum">1.0</item>
+        <item name="android:paddingStart">@dimen/card_inner_padding_fullbleed</item>
+        <item name="android:paddingEnd">@dimen/card_inner_padding_fullbleed</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="layout_flmVAlign">top</item>
+    </style>
+    <style name="CardSourceNotificationItemBody">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/card_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingTop">0.0dip</item>
+        <item name="android:paddingBottom">0.0dip</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:lineSpacingExtra">1.0dip</item>
+    </style>
+    <style name="CardSourceNotificationItemSourceNameCompact" parent="@style/CardArticleItemText">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/card_source_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_half_padding</item>
+        <item name="android:singleLine">true</item>
+        <item name="customFont">REGULAR_SANS</item>
+    </style>
+    <style name="CardSourceNotificationItemTitle" parent="@style/CardText.Headline">
+        <item name="android:textSize">@dimen/card_news_item_text_headline_neue_compact</item>
+        <item name="android:textColor">@color/card_text</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_half_padding</item>
+    </style>
+    <style name="CardText">
+        <item name="android:textAppearance">@android:style/TextAppearance</item>
+        <item name="android:textColor">@color/card_text</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="CardText.Headline" parent="@style/CardText">
+        <item name="android:textSize">@dimen/text_display_L</item>
+        <item name="android:textColor">@color/text_color_primary</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="CollectionViewStyle">
+        <item name="layout_flmWidth">1.0</item>
+        <item name="layout_flmHeight">wrap_content</item>
+        <item name="layout_flmGridInsetStart">@dimen/collection_view_padding</item>
+        <item name="layout_flmGridInsetEnd">@dimen/collection_view_padding</item>
+        <item name="layout_flmMaxGridWidth">@dimen/collection_view_max_width</item>
+        <item name="layout_flmGridColumnCount">1.0</item>
+        <item name="layout_flmStyle">@style/FlowLayoutManager_Layout_Default</item>
+        <item name="isTransitionGroup">true</item>
+        <item name="willNotDraw">true</item>
+    </style>
+    <style name="CollectionViewStyle.Fullbleed" parent="@style/CollectionViewStyle">
+        <item name="layout_flmGridInsetStart">0.0dip</item>
+        <item name="layout_flmGridInsetEnd">0.0dip</item>
+        <item name="layoutSpanStyle">@style/CardSpan.AllColumns</item>
+    </style>
+    <style name="CollectionViewStyle.Fullbleed.Portrait" parent="@style/CollectionViewStyle.Fullbleed">
+        <item name="android:paddingStart">@dimen/collection_view_inset_fullbleed</item>
+        <item name="android:paddingEnd">@dimen/collection_view_inset_fullbleed</item>
+        <item name="cardInsetStart">@dimen/collection_view_inset_fullbleed</item>
+        <item name="cardInsetEnd">@dimen/collection_view_inset_fullbleed</item>
+        <item name="layout_flmGridInsetStart">@dimen/collection_view_padding_fullbleed</item>
+        <item name="layout_flmGridInsetEnd">@dimen/collection_view_padding_fullbleed</item>
+    </style>
+    <style name="DialogActionButton" parent="@style/PlayCardAction">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/default_half_padding</item>
+        <item name="android:paddingBottom">@dimen/default_half_padding</item>
+        <item name="android:layout_margin">@dimen/default_quarter_padding</item>
+        <item name="android:minHeight">@dimen/min_touch_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingStart">@dimen/default_three_quarter_padding</item>
+        <item name="android:paddingEnd">@dimen/default_three_quarter_padding</item>
+    </style>
+    <style name="DialogActionButton.Primary" parent="@style/DialogActionButton">
+        <item name="android:background">@drawable/card_action_button_background_colorable</item>
+    </style>
+    <style name="DialogActionButton.Secondary" parent="@style/DialogActionButton">
+        <item name="android:background">@drawable/card_action_button_highlight_stateful</item>
+    </style>
+    <style name="DialogFormRow">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="DialogText">
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textSize">@dimen/user_data_collection_form_description_text_size</item>
+        <item name="android:textColor">@color/card_text_normal</item>
+        <item name="android:textColorHint">@color/gm_grey_700</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/default_padding</item>
+    </style>
+    <style name="DialogText.Form" parent="@style/DialogText">
+        <item name="android:padding">@dimen/default_half_padding</item>
+        <item name="android:minHeight">@dimen/min_touch_size</item>
+    </style>
+    <style name="DialogText.Form.Checkbox" parent="@style/DialogText.Form">
+        <item name="android:textSize">@dimen/user_data_collection_form_input_text_size</item>
+        <item name="android:textColor">@color/gm_grey_700</item>
+        <item name="android:padding">@dimen/dialog_form_checkbox_padding</item>
+    </style>
+    <style name="DialogText.Form.Col" parent="@style/DialogText.Form">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="DialogText.Form.SpinnerItem" parent="@style/DialogText.Form">
+        <item name="android:textColor">@color/gm_grey_700</item>
+        <item name="android:padding">@dimen/default_half_padding</item>
+    </style>
+    <style name="DialogText.Title" parent="@style/DialogText">
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+    </style>
+    <style name="EditionUpsellPsvLink" parent="@style/TextDisplay.XS">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="EditionUpsellSubscribeButton" parent="@style/CardActionButtonText.Primary">
+        <item name="android:textSize">@dimen/text_display_M</item>
+        <item name="android:textColor">@color/app_color_material</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingStart">@dimen/card_inner_content_2x_padding</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_2x_padding</item>
+    </style>
+    <style name="EditionUpsellTitle" parent="@style/TextDisplay.L">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="FavoriteButton">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:padding">6.0dip</item>
+        <item name="android:layout_width">@dimen/native_store_carousel_favorite_button_size</item>
+        <item name="android:layout_height">@dimen/native_store_carousel_favorite_button_size</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="bindDrawable">@id/CardNativeStoreItem_favoriteIcon</item>
+        <item name="bindColorFilter">@id/CardNativeStoreItem_favoriteIconColorFilter</item>
+        <item name="bindContentDescription">@id/CardNativeStoreItem_favoriteDescription</item>
+        <item name="bindOnClickListener">@id/CardNativeStoreItem_favoriteClickHandler</item>
+        <item name="bindVisibility">@id/CardNativeStoreItem_favoriteIcon</item>
+        <item name="minTouchSize">@dimen/min_touch_size</item>
+    </style>
+    <style name="FloatingActionButtonBranded">
+        <item name="android:tint">@null</item>
+        <item name="rippleColor">@color/google_fab_branded_ripple_color</item>
+        <item name="srcCompat">@drawable/coloredicons_cic_create_36</item>
+        <item name="fabSize">normal</item>
+        <item name="maxImageSize">@dimen/google_fab_branded_image_size</item>
+        <item name="backgroundTint">@color/white</item>
+    </style>
+    <style name="GreenHorizontalProgressBar">
+        <item name="android:maxHeight">16.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@drawable/green_progress_horizontal</item>
+        <item name="android:progressDrawable">@drawable/green_progress_horizontal</item>
+        <item name="android:minHeight">16.0dip</item>
+    </style>
+    <style name="HeaderAttribution">
+        <item name="android:textSize">@dimen/header_attribution_text_size</item>
+        <item name="android:textColor">@color/gm_grey_500</item>
+        <item name="android:textColorLink">@color/gm_grey_500</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxWidth">200.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_padding</item>
+    </style>
+    <style name="LandingPageIconLabel" parent="@style/Text.Label">
+        <item name="android:textSize">@dimen/text_body_M</item>
+        <item name="android:gravity">center</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:paddingStart">@dimen/card_inner_content_padding</item>
+        <item name="customFont">MEDIUM_SANS</item>
+    </style>
+    <style name="LandingPageSubTitle" parent="@style/TextDisplay.S">
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="LandingPageSubscribeBadge" parent="@style/TextDisplay.S">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/subscribe_badge_bg</item>
+        <item name="android:paddingTop">@dimen/card_inner_content_half_padding</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_half_padding</item>
+        <item name="android:text">@string/subscription_already_subscribed</item>
+        <item name="android:paddingStart">@dimen/card_inner_content_padding</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_padding</item>
+    </style>
+    <style name="LandingPageTitle" parent="@style/TextDisplay.XL">
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="LetterIcon">
+        <item name="android:textSize">@dimen/letter_icon_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:contentDescription">@null</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="bind__editModeText">S</item>
+    </style>
+    <style name="MeterLargeNumber" parent="@android:style/TextAppearance.Large">
+        <item name="android:textSize">50.0sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="customFont">LIGHT_SANS</item>
+    </style>
+    <style name="MeterLargeText" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+    </style>
+    <style name="MeterLinkText" parent="@style/PlayMediumPlainText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/app_color_material_dark</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/transparent_with_store_highlight</item>
+        <item name="android:paddingTop">@dimen/default_quarter_padding</item>
+        <item name="android:paddingBottom">@dimen/default_quarter_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/default_quarter_padding</item>
+        <item name="android:minHeight">@dimen/min_touch_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="customFont">REGULAR_SANS</item>
+    </style>
+    <style name="MeterMediumText" parent="@style/PlayCardAction">
+        <item name="android:textSize">@dimen/meter_dialog_medium_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+    </style>
+    <style name="MeterMediumText.Button" parent="@style/MeterMediumText">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/transparent_with_store_highlight</item>
+        <item name="android:padding">@dimen/default_half_padding</item>
+        <item name="android:minHeight">@dimen/min_touch_size</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="MeterSmallText" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+    </style>
+    <style name="NSCardView" parent="@style/CardViewGroup">
+        <item name="android:paddingTop">@dimen/card_inset</item>
+        <item name="android:paddingBottom">@dimen/card_inset</item>
+        <item name="android:foreground">@drawable/card_overlay_darken</item>
+        <item name="android:importantForAccessibility">yes</item>
+        <item name="android:paddingStart">@dimen/card_inset</item>
+        <item name="android:paddingEnd">@dimen/card_inset</item>
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardInset">@dimen/card_inset</item>
+        <item name="cardClipToOutline">true</item>
+        <item name="layout_flmWidth">1.0</item>
+        <item name="layout_flmHeight">wrap_content</item>
+        <item name="layout_flmGridInsetStart">@dimen/collection_view_padding</item>
+        <item name="layout_flmGridInsetEnd">@dimen/collection_view_padding</item>
+        <item name="layout_flmMaxGridWidth">@dimen/collection_view_max_width</item>
+        <item name="layout_flmGridColumnCount">1.0</item>
+        <item name="layout_flmStyle">@style/FlowLayoutManager_Layout_Default</item>
+    </style>
+    <style name="NSCardView.CardSourceItemIcon" parent="@style/NSCardView">
+        <item name="cardElevation">@dimen/card_source_item_icon_elevation</item>
+    </style>
+    <style name="NSCardView.Cluster" parent="@style/NSCardView">
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+        <item name="cardCornerRadius">0.0dip</item>
+        <item name="cardElevation">0.0dip</item>
+        <item name="layout_flmGridInsetStart">@dimen/collection_view_padding_fullbleed</item>
+        <item name="layout_flmGridInsetEnd">@dimen/collection_view_padding_fullbleed</item>
+        <item name="layoutSpanStyle">@style/CardSpan.Cluster</item>
+    </style>
+    <style name="NSCardView.Fullbleed" parent="@style/NSCardView">
+        <item name="android:foreground">@drawable/card_overlay_darken_fullbleed</item>
+        <item name="android:paddingStart">0.0dip</item>
+        <item name="android:paddingEnd">0.0dip</item>
+        <item name="cardCornerRadius">0.0dip</item>
+        <item name="cardInsetStart">0.0dip</item>
+        <item name="cardInsetEnd">0.0dip</item>
+        <item name="layout_flmGridInsetStart">0.0dip</item>
+        <item name="layout_flmGridInsetEnd">0.0dip</item>
+    </style>
+    <style name="NSCardView.Fullbleed.Portrait" parent="@style/NSCardView.Fullbleed">
+        <item name="android:layout_marginTop">@dimen/card_default_inset</item>
+        <item name="android:layout_marginBottom">@dimen/card_default_inset</item>
+        <item name="android:paddingStart">@dimen/collection_view_inset_fullbleed</item>
+        <item name="android:paddingEnd">@dimen/collection_view_inset_fullbleed</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius_fullbleed</item>
+        <item name="cardInsetStart">@dimen/collection_view_inset_fullbleed</item>
+        <item name="cardInsetEnd">@dimen/collection_view_inset_fullbleed</item>
+        <item name="layout_flmGridInsetStart">@dimen/collection_view_padding_fullbleed</item>
+        <item name="layout_flmGridInsetEnd">@dimen/collection_view_padding_fullbleed</item>
+    </style>
+    <style name="NSCardView.Fullbleed.Portrait.NoHighlight" parent="@style/NSCardView.Fullbleed.Portrait">
+        <item name="android:foreground">@null</item>
+    </style>
+    <style name="NSCardView.NoCard" parent="@style/NSCardView">
+        <item name="android:paddingTop">0.0dip</item>
+        <item name="android:paddingBottom">0.0dip</item>
+        <item name="android:paddingStart">0.0dip</item>
+        <item name="android:paddingEnd">0.0dip</item>
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+        <item name="cardCornerRadius">0.0dip</item>
+        <item name="cardElevation">0.0dip</item>
+        <item name="cardInset">0.0dip</item>
+        <item name="disableShadow">true</item>
+    </style>
+    <style name="NSCardView.NoCard.EditionIcon" parent="@style/NSCardView.NoCard">
+        <item name="android:orientation">vertical</item>
+        <item name="android:foreground">@null</item>
+        <item name="bindContentDescription">@id/CardSourceItem_sourceName</item>
+        <item name="cardElevation">@dimen/card_in_cluster_elevation</item>
+    </style>
+    <style name="NSCardView.NoCard.Fullbleed" parent="@style/NSCardView.NoCard">
+        <item name="layout_flmGridInsetStart">0.0dip</item>
+        <item name="layout_flmGridInsetEnd">0.0dip</item>
+        <item name="layoutSpanStyle">@style/CardSpan.AllColumns</item>
+    </style>
+    <style name="NSCardView.NoCard.Fullbleed.Portrait" parent="@style/NSCardView.NoCard.Fullbleed">
+        <item name="layout_flmGridInsetStart">@dimen/collection_view_padding_fullbleed</item>
+        <item name="layout_flmGridInsetEnd">@dimen/collection_view_padding_fullbleed</item>
+    </style>
+    <style name="NSCardView.NoHighlight" parent="@style/NSCardView">
+        <item name="android:foreground">@null</item>
+    </style>
+    <style name="NSCardView.RoundedButton" parent="@style/NSCardView">
+        <item name="android:layout_height">@dimen/rounded_button_card_height</item>
+        <item name="android:foreground">@null</item>
+        <item name="android:paddingStart">@dimen/rounded_button_horizontal_padding</item>
+        <item name="android:paddingEnd">@dimen/rounded_button_horizontal_padding</item>
+        <item name="cardBackgroundColor">@color/button_light_sel</item>
+        <item name="cardCornerRadius">@dimen/rounded_button_corner_radius</item>
+    </style>
+    <style name="NSCardView.Transparent" parent="@style/NSCardView">
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+    </style>
+    <style name="NSRecyclerViewStyle">
+        <item name="android:background">@color/ns_recycler_view_bg_light</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="shuffleOnItemAdd">true</item>
+    </style>
+    <style name="NSRecyclerViewStyle.NoBackground" parent="@style/NSRecyclerViewStyle">
+        <item name="android:background">@null</item>
+    </style>
+    <style name="NSUndoNotificationDescriptionStyle">
+        <item name="android:textColor">@color/card_text</item>
+        <item name="android:paddingStart">@dimen/notification_undo_description_padding</item>
+        <item name="android:paddingEnd">@dimen/notification_undo_description_padding</item>
+    </style>
+    <style name="NSUndoNotificationTextStyle">
+        <item name="android:textSize">@dimen/notification_undo_text_size</item>
+        <item name="android:textColor">@color/app_color_material</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingStart">@dimen/notification_undo_description_padding</item>
+        <item name="android:paddingEnd">@dimen/notification_undo_description_padding</item>
+    </style>
+    <style name="NativeAdAdAttribution">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/card_white_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/rounded_ad_attribution_rect</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">6.0dip</item>
+        <item name="android:paddingEnd">6.0dip</item>
+        <item name="android:layout_marginEnd">@dimen/default_half_padding</item>
+    </style>
+    <style name="NativeAdBadgeText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">@dimen/card_inner_content_padding</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_padding</item>
+        <item name="bindText">@id/NativeAd_sponsoredBannerText</item>
+        <item name="bindBackground">@id/NativeAd_sponsoredBannerBackgroundDrawable</item>
+        <item name="bindVisibility">@id/NativeAd_showSponsoredBanner</item>
+        <item name="customFont">ITALIC_CONDENSED_SANS</item>
+    </style>
+    <style name="NativeAdCard" parent="@style/NSCardView.Fullbleed.Portrait" />
+    <style name="NativeAdCardImage">
+        <item name="android:background">@drawable/image_loading</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="bindDrawable">@id/NativeAd_image</item>
+        <item name="bindOnClickListener">@id/NativeAd_imageOnClickListener</item>
+        <item name="bindVisibility">@id/NativeAd_image</item>
+        <item name="hideBackgroundWhenLoaded">true</item>
+        <item name="fadeInType">ifSlowLoad</item>
+        <item name="highlightColor">@color/card_image_colorfilter</item>
+    </style>
+    <style name="NativeAdCardSourceIcon">
+        <item name="android:background">@drawable/image_loading</item>
+        <item name="android:layout_width">@dimen/article_source_icon_size</item>
+        <item name="android:layout_height">@dimen/article_source_icon_size</item>
+        <item name="android:foreground">@drawable/card_overlay_darken</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="bindDrawable">@id/NativeAd_icon</item>
+        <item name="bindVisibility">@id/NativeAd_icon</item>
+        <item name="hideBackgroundWhenLoaded">true</item>
+        <item name="fadeInType">ifSlowLoad</item>
+        <item name="highlightColor">@color/card_image_colorfilter</item>
+    </style>
+    <style name="NativeAdText" parent="@style/CardText">
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="NativeAdText.Body" parent="@style/NativeAdText">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:textColor">@color/play_fg_secondary</item>
+        <item name="android:singleLine">false</item>
+        <item name="bindText">@id/NativeAd_body</item>
+        <item name="bind__editModeText">Something cool</item>
+        <item name="bindVisibility">@id/NativeAd_body</item>
+    </style>
+    <style name="NativeAdText.Headline" parent="@style/CardText.Headline">
+        <item name="bindText">@id/NativeAd_headline</item>
+        <item name="bindVisibility">@id/NativeAd_headline</item>
+    </style>
+    <style name="NativeAdText.Store" parent="@style/NativeAdText">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/card_time_text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="bindText">@id/NativeAd_store</item>
+        <item name="bind__editModeText">Google Play Store</item>
+        <item name="bindVisibility">@id/NativeAd_store</item>
+        <item name="customFont">LIGHT_SANS</item>
+    </style>
+    <style name="NativeAppInstallAdInArticle" parent="@style/NSCardView">
+        <item name="android:paddingTop">@dimen/nativeads_in_article_app_install_card_padding</item>
+        <item name="android:paddingBottom">@dimen/nativeads_in_article_app_install_card_padding</item>
+        <item name="android:paddingStart">@dimen/nativeads_in_article_app_install_card_padding</item>
+        <item name="android:paddingEnd">@dimen/nativeads_in_article_app_install_card_padding</item>
+        <item name="cardInset">@dimen/nativeads_in_article_app_install_card_inset</item>
+    </style>
+    <style name="Newscast" />
+    <style name="Newscast.MetadataText" parent="@style/CardArticleItemTileText.Metadata">
+        <item name="shadowColor">@color/card_text_shadow</item>
+        <item name="shadowRadius">4.0dip</item>
+    </style>
+    <style name="Newscast.MetadataText.Large" parent="@style/Newscast.MetadataText">
+        <item name="android:textSize">@dimen/text_body_M</item>
+        <item name="android:layout_width">0.0dip</item>
+    </style>
+    <style name="Newscast.SnippetText" parent="@style/Newscast">
+        <item name="android:textSize">@dimen/newscasts_snippet_text_size</item>
+        <item name="android:textColor">@color/card_white_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:padding">@dimen/card_inner_content_half_padding</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:lineSpacingExtra">4.0dip</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="bindText">@id/CardNewscastItem_summaryQuoteText</item>
+    </style>
+    <style name="Newscast.Title" parent="@style/CardArticleItemTileText.Title" />
+    <style name="Newscast.Title.Large" parent="@style/Newscast.Title">
+        <item name="android:textSize">@dimen/text_display_L</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="shadowColor">@color/card_text_shadow</item>
+        <item name="shadowRadius">4.0dip</item>
+    </style>
+    <style name="NewscastContainerMetadata">
+        <item name="android:paddingTop">@dimen/card_inner_content_padding</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_three_halves_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/card_inner_padding_fullbleed</item>
+        <item name="android:paddingEnd">@dimen/card_inner_padding_fullbleed</item>
+    </style>
+    <style name="NotificationText" parent="@android:style/TextAppearance.StatusBar.EventContent" />
+    <style name="NotificationTitle" parent="@android:style/TextAppearance.StatusBar.EventContent.Title" />
+    <style name="PlayCardAction" parent="@style/PlayMediumPlainText">
+        <item name="android:textSize">@dimen/play_card_action_size</item>
+    </style>
+    <style name="PlayCardSubtitle" parent="@style/PlayPlainText">
+        <item name="android:textSize">@dimen/play_medium_size</item>
+        <item name="android:textColor">@color/play_secondary_text</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">4.0dip</item>
+        <item name="android:lineSpacingExtra">0.0sp</item>
+    </style>
+    <style name="PlayCardTitle" parent="@style/PlayPlainText">
+        <item name="android:textSize">@dimen/play_title_size</item>
+        <item name="android:textColor">@color/play_primary_text</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:lineSpacingExtra">0.0sp</item>
+        <item name="allowsCompactLineSpacing">true</item>
+    </style>
+    <style name="PlayClusterTitle" parent="@style/PlayMediumPlainText">
+        <item name="android:textSize">@dimen/play_cluster_header_title_size</item>
+        <item name="android:textColor">@color/play_primary_text</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="PlayEduCardDescription" parent="@style/PlayPlainText">
+        <item name="android:textSize">@dimen/play_edu_body_size</item>
+        <item name="android:textColor">@color/play_fg_secondary</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:paddingStart">@dimen/play_edu_main_content_padding</item>
+        <item name="android:paddingEnd">@dimen/play_edu_main_content_padding</item>
+        <item name="allowsCompactLineSpacing">true</item>
+    </style>
+    <style name="PlayEduCardTitle" parent="@style/PlayMediumPlainText">
+        <item name="android:textSize">@dimen/play_edu_title_size</item>
+        <item name="android:textColor">@color/play_fg_primary</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingMultiplier">1.05</item>
+        <item name="android:paddingStart">@dimen/play_edu_main_content_padding</item>
+        <item name="android:paddingEnd">@dimen/play_edu_main_content_padding</item>
+    </style>
+    <style name="PlayGridBoldText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="PlayHeaderListTabText" parent="@style/PlayMediumBoldText">
+        <item name="android:textSize">@dimen/play_header_list_text_size</item>
+        <item name="android:textColor">@color/play_header_list_tab_text_color</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">@dimen/play_header_list_tab_padding_side</item>
+        <item name="android:paddingEnd">@dimen/play_header_list_tab_padding_side</item>
+    </style>
+    <style name="PlayMediumBoldText" parent="@style/PlayGridBoldText" />
+    <style name="PlayMediumPlainText" parent="@style/PlayPlainText" />
+    <style name="PlayOnboardNavFooterButton">
+        <item name="android:textAppearance">@style/PlayCardAction</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/play_action_button_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/play_onboard_dark_button_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:maxHeight">48.0dip</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingStart">@dimen/play_onboard__onboard_nav_footer_button_padding</item>
+        <item name="android:paddingEnd">@dimen/play_onboard__onboard_nav_footer_button_padding</item>
+    </style>
+    <style name="PlayPlainText">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="PlaySearchSuggestionText">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/play_fg_primary</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="PlaySearchSuggestionText.Query" parent="@style/PlaySearchSuggestionText">
+        <item name="android:textColor">@color/play_fg_tertiary</item>
+    </style>
+    <style name="PlaySearchSuggestionText.Suggested" parent="@style/PlaySearchSuggestionText">
+        <item name="android:textColor">@color/play_fg_primary</item>
+    </style>
+    <style name="ShareBottomSheetTitle">
+        <item name="android:textSize">@dimen/text_display_S</item>
+        <item name="android:textColor">@color/text_color_metadata</item>
+        <item name="android:paddingTop">@dimen/card_inner_content_padding</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_padding</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="android:paddingStart">@dimen/sendkit_wrapper_fragment_horizontal_padding</item>
+        <item name="android:paddingEnd">@dimen/sendkit_wrapper_fragment_horizontal_padding</item>
+    </style>
+    <style name="SharedItemHeaderText" parent="@style/CardArticleItemText">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:textSize">@dimen/text_body_S</item>
+        <item name="android:textColor">@color/card_source_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">start</item>
+        <item name="android:singleLine">true</item>
+        <item name="customFont">REGULAR_SANS</item>
+    </style>
+    <style name="SharedItemHeaderText.Message" parent="@style/SharedItemHeaderText">
+        <item name="android:maxLines">8</item>
+        <item name="android:singleLine">false</item>
+        <item name="bindText">@id/SharedItemHeader_message</item>
+        <item name="bindVisibility">@id/SharedItemHeader_message</item>
+    </style>
+    <style name="Shelf" parent="@style/CollectionViewStyle.Fullbleed.Portrait">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/card_action_button_highlight_stateful</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/min_touch_size</item>
+        <item name="bindContentDescription">@id/ShelfHeader_contentDescription</item>
+        <item name="bindOnClickListener">@id/ShelfHeader_onClickListener</item>
+        <item name="bindVisibility">@id/ShelfHeader_title</item>
+        <item name="layoutSpanStyle">@style/CardSpan.AllColumns</item>
+    </style>
+    <style name="ShelfButton" parent="@style/PlayMediumPlainText">
+        <item name="android:textSize">@dimen/shelf_header_button_text_size</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lines">1</item>
+        <item name="android:paddingStart">@dimen/shelf_interior_horizontal_half_padding</item>
+        <item name="accessibilityClassOverride">button</item>
+    </style>
+    <style name="ShelfHeaderTitle" parent="@style/PlayClusterTitle">
+        <item name="android:textSize">@dimen/shelf_header_title</item>
+        <item name="android:textColor">@color/gm_grey_900</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">7</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textDirection">locale</item>
+        <item name="bindText">@id/ShelfHeader_title</item>
+    </style>
+    <style name="ShelfHeaderTitle.Hero" parent="@style/ShelfHeaderTitle">
+        <item name="android:textSize">@dimen/shelf_header_subtitle</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="customFont">BOLD_SANS</item>
+    </style>
+    <style name="SponsoredArticleCard" parent="@style/NSCardView.Fullbleed.Portrait">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layoutSpanStyle">@style/CardSpan</item>
+        <item name="bindOnCardSeenListener">@id/NativeAd_onCardSeenListener</item>
+    </style>
+    <style name="SponsoredArticleCardAdvertiserText">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="bindText">@id/NativeAd_store</item>
+        <item name="bindVisibility">@id/NativeAd_store</item>
+    </style>
+    <style name="SponsoredArticleCardBadgeText">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/card_white_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/rounded_ad_attribution_rect</item>
+        <item name="android:paddingTop">1.0dip</item>
+        <item name="android:paddingBottom">1.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">6.0dip</item>
+        <item name="android:paddingEnd">6.0dip</item>
+        <item name="android:layout_marginEnd">@dimen/default_half_padding</item>
+    </style>
+    <style name="SponsoredArticleCardBodyText">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:textColor">@color/card_time_text</item>
+        <item name="android:singleLine">false</item>
+        <item name="bindText">@id/NativeAd_body</item>
+        <item name="bindVisibility">@id/NativeAd_body</item>
+    </style>
+    <style name="SponsoredArticleCardButtonText" parent="@style/PlayCardAction">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/card_inner_content_half_padding</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_half_padding</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingStart">@dimen/card_inner_content_2x_padding</item>
+        <item name="android:paddingEnd">@dimen/card_inner_content_2x_padding</item>
+    </style>
+    <style name="SponsoredArticleCardHeadlineText" parent="@style/CardArticleItemText.Headline">
+        <item name="android:layout_gravity">start</item>
+        <item name="android:paddingStart">0.0dip</item>
+        <item name="android:paddingEnd">0.0dip</item>
+        <item name="bindText">@id/NativeAd_headline</item>
+        <item name="bindTextColor">@null</item>
+        <item name="bindVisibility">@id/NativeAd_headline</item>
+    </style>
+    <style name="SponsoredArticleCardImage">
+        <item name="android:background">@drawable/image_loading</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="bindDrawable">@id/NativeAd_image</item>
+        <item name="bindOnClickListener">@id/NativeAd_imageOnClickListener</item>
+        <item name="bindVisibility">@id/NativeAd_image</item>
+        <item name="hideBackgroundWhenLoaded">true</item>
+        <item name="fadeInType">ifSlowLoad</item>
+        <item name="highlightColor">@color/card_image_colorfilter</item>
+    </style>
+    <style name="SponsoredArticleCardSourceIcon">
+        <item name="android:background">@drawable/image_loading</item>
+        <item name="android:layout_width">@dimen/nativeads_card_icon_size</item>
+        <item name="android:layout_height">@dimen/nativeads_card_icon_size</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="bindDrawable">@id/NativeAd_icon</item>
+        <item name="bindVisibility">@id/NativeAd_icon</item>
+        <item name="hideBackgroundWhenLoaded">true</item>
+        <item name="fadeInType">ifSlowLoad</item>
+        <item name="highlightColor">@color/card_image_colorfilter</item>
+    </style>
+    <style name="SponsoredArticleCardSponsoredTextInFooter">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/card_time_text</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="customFont">LIGHT_SANS</item>
+    </style>
+    <style name="SportsHeaderScoreSepText" parent="@style/TextDisplay.XL">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:paddingStart">3.0dip</item>
+        <item name="android:paddingEnd">3.0dip</item>
+    </style>
+    <style name="SportsHeaderScoreText" parent="@style/TextDisplay.XL">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">@dimen/sport_team_score_size</item>
+        <item name="android:layout_height">@dimen/sport_team_logo_background_size</item>
+        <item name="android:maxLines">3</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeStepGranularity">2.0sp</item>
+        <item name="autoSizeMinTextSize">@dimen/sport_score_min_text_size</item>
+        <item name="autoSizeMaxTextSize">@dimen/sport_score_text_size</item>
+    </style>
+    <style name="SportsHeaderStatusText" parent="@style/TextDisplay.S">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">20.0dip</item>
+        <item name="android:paddingBottom">12.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:scrollHorizontally">false</item>
+    </style>
+    <style name="SportsHeaderStatusText.TeamName" parent="@style/SportsHeaderStatusText">
+        <item name="android:textSize">@dimen/text_display_S</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingBottom">0.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="SportsHeaderTeamColumn">
+        <item name="android:gravity">center|top</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:clipChildren">false</item>
+        <item name="android:layout_width">@dimen/sport_team_width</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="SportsHeaderTeamLogoFrame">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@drawable/sports_icon_background</item>
+        <item name="android:clipChildren">false</item>
+        <item name="android:layout_width">@dimen/sport_team_logo_background_size</item>
+        <item name="android:layout_height">@dimen/sport_team_logo_background_size</item>
+    </style>
+    <style name="SportsHeaderTeamLogoImage">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">@dimen/sport_team_logo_width</item>
+        <item name="android:layout_height">@dimen/sport_team_logo_height</item>
+    </style>
+    <style name="SubscribeChipText" parent="@style/ActionChip">
+        <item name="android:textSize">@dimen/text_display_XS</item>
+        <item name="android:textColor">@color/subscribe_button_foreground_color</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/card_subscribe_button_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/native_store_chip_height_short</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="TabBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_height">@dimen/tab_bar_height</item>
+        <item name="tabMarginEnd">8.0dip</item>
+        <item name="indicatorAlignToPadding">true</item>
+        <item name="indicatorRoundedCorners">true</item>
+        <item name="tabIndicatorColor">@color/quantum_googblue600</item>
+        <item name="tabIndicatorHeight">3.0dip</item>
+        <item name="tabContentStart">@dimen/card_inner_content_2x_padding</item>
+        <item name="tabBackground">@android:color/transparent</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabGravity">center</item>
+        <item name="tabMinWidth">0.0dip</item>
+        <item name="tabPaddingStart">8.0dip</item>
+        <item name="tabPaddingEnd">8.0dip</item>
+    </style>
+    <style name="TabText" parent="@style/TextDisplay.M">
+        <item name="android:textColor">@color/tab_text</item>
+        <item name="android:gravity">bottom|center</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:background">@drawable/card_action_button_bg</item>
+        <item name="android:paddingBottom">@dimen/card_inner_content_padding</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+    </style>
+    <style name="TabText.Light" parent="@style/TabText">
+        <item name="android:textColor">@color/tab_text_light</item>
+    </style>
+    <style name="TextDialogBody">
+        <item name="android:paddingTop">16.0dip</item>
+        <item name="android:paddingBottom">16.0dip</item>
+        <item name="android:paddingStart">24.0dip</item>
+        <item name="android:paddingEnd">24.0dip</item>
+    </style>
+    <style name="TextDialogText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/gm_grey_900</item>
+    </style>
+    <style name="TextDialogText.CheckBox" parent="@style/TextDialogText">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+    <style name="TextDialogText.Subtitle" parent="@style/TextDialogText">
+        <item name="android:textColor">@color/gm_grey_700</item>
+    </style>
+    <style name="TweetIcon">
+        <item name="android:layout_width">@dimen/text_body_XL</item>
+        <item name="android:layout_height">@dimen/text_body_XL</item>
+        <item name="android:layout_marginTop">@dimen/card_inner_content_three_halves_padding</item>
+        <item name="android:layout_marginBottom">@dimen/card_inner_content_three_halves_padding</item>
+        <item name="android:src">@drawable/ic_twitter_24</item>
+    </style>
+    <style name="TweetMessage" parent="@style/TextBody.L">
+        <item name="android:textColor">@color/text_color_primary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:autoLink">web</item>
+        <item name="android:linksClickable">false</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">7</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="bindText">@id/CardTweetItem_message</item>
+        <item name="bindTextColorLink">@id/CardTweetItem_textColorLink</item>
+    </style>
+    <style name="TweetMessage.AutoSizing" parent="@style/TweetMessage">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">@dimen/card_tweet_message_height</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeStepGranularity">2.0sp</item>
+        <item name="autoSizeMinTextSize">@dimen/text_body_M</item>
+        <item name="autoSizeMaxTextSize">@dimen/text_body_XL</item>
+    </style>
+    <style name="VideoPlayButton">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/video_play_button</item>
+        <item name="android:padding">18.0dip</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/ic_play_overlay</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:contentDescription">@string/media_play</item>
+        <item name="bindOnClickListener">@id/CardArticleItem_videoPlayButtonOnClickListener</item>
+        <item name="bindVisibility">@id/CardArticleItem_videoPlayButtonOnClickListener</item>
+    </style>
+    <style name="WarmWelcomeBody" parent="@style/PlayEduCardDescription">
+        <item name="android:textSize">@dimen/card_warm_welcome_body_text</item>
+        <item name="android:textColor">@color/card_white_text_normal</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+        <item name="android:paddingStart">@dimen/card_warm_welcome_side_padding</item>
+        <item name="android:paddingEnd">@dimen/card_warm_welcome_side_padding</item>
+        <item name="bindText">@id/CardWarmWelcome_body</item>
+        <item name="bindVisibility">@id/CardWarmWelcome_body</item>
+    </style>
+    <style name="WarmWelcomeLogo">
+        <item name="android:paddingTop">@dimen/warm_welcome_logo_padding</item>
+        <item name="android:paddingBottom">@dimen/warm_welcome_logo_padding</item>
+        <item name="bindContentDescription">@id/CardWarmWelcome_logoContentDescription</item>
+        <item name="bindImportantForAccessibility">@id/CardWarmWelcome_logoImportantForAccessibility</item>
+        <item name="bindOnClickListener">@id/CardWarmWelcome_logoOnClickListener</item>
+        <item name="bindVisibility">@id/CardWarmWelcome_showLogo</item>
+        <item name="releaseBitmapOnDetach">true</item>
+        <item name="fadeInType">ifSlowLoad</item>
+    </style>
+    <style name="WarmWelcomeTitle" parent="@style/PlayEduCardTitle">
+        <item name="android:textSize">@dimen/card_warm_welcome_title_text</item>
+        <item name="android:textColor">@color/card_white_text_normal</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingTop">@dimen/card_warm_welcome_outer_padding</item>
+        <item name="android:paddingBottom">@dimen/card_warm_welcome_title_body_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:paddingStart">@dimen/card_warm_welcome_side_padding</item>
+        <item name="android:paddingEnd">@dimen/card_warm_welcome_side_padding</item>
+        <item name="bindText">@id/CardWarmWelcome_title</item>
+        <item name="bindVisibility">@id/CardWarmWelcome_title</item>
+    </style>
+    <style name="WhiteTextWithShadow">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:shadowColor">@color/card_text_shadow</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">2.0</item>
+    </style>
+    <style name="WhiteTextWithShadow.Secondary" parent="@style/WhiteTextWithShadow">
+        <item name="android:textColor">@color/card_label_text</item>
+    </style>
+    <style name="Text.HeaderTitle" parent="@style/TextDisplay.L" />
+    <style name="Text.Label" parent="@style/TextBody.XS">
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="customFont">BOLD_SANS</item>
+    </style>
+    <style name="TextBody" parent="@style/TextN2">
+        <item name="android:textColor">@color/text_color_primary</item>
+        <item name="customFont">REGULAR_SANS</item>
+    </style>
+    <style name="TextBody.L" parent="@style/TextBody">
+        <item name="android:textSize">@dimen/text_body_L</item>
+    </style>
+    <style name="TextBody.XS" parent="@style/TextBody">
+        <item name="android:textSize">@dimen/text_body_XS</item>
+        <item name="android:textColor">@color/text_color_secondary</item>
+    </style>
+</resources>

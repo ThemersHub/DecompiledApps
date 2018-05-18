@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.InternalFeedbackItem android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingTop="@dimen/card_inner_content_2x_padding" android:paddingBottom="@dimen/card_inner_content_padding" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="@null" android:paddingStart="@dimen/card_inner_padding_fullbleed" android:paddingEnd="@dimen/card_inner_padding_fullbleed" style="@style/NSCardView.NoCard"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:padding="@dimen/card_inner_content_half_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <android.support.v7.widget.AppCompatImageView android:layout_gravity="center_vertical" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/quantum_ic_dogfood_color_24" />
+                <TextView android:textStyle="normal" android:textColor="@color/card_abstract_text" android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/internal_article_feedback_title" android:layout_marginStart="@dimen/card_inner_content_padding" style="@style/ShelfHeaderTitle.Hero" />
+            </LinearLayout>
+            <View android:background="@color/gm_grey_300" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/card_inner_content_half_padding" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/custom_form_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="14.0sp" android:id="@id/custom_form_feedback_type" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/card_inner_content_half_padding" android:maxLines="2" style="@style/TextDialogText" />
+                    <EditText android:textSize="14.0sp" android:gravity="start|center|top" android:layout_gravity="center_vertical" android:id="@id/custom_form_text" android:background="@drawable/internal_feedback_custom_text_bg" android:padding="@dimen/card_inner_content_padding" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginBottom="@dimen/card_inner_content_half_padding" android:hint="@string/internal_article_feedback_form" android:inputType="textAutoComplete|textAutoCorrect|textCapSentences" android:imeOptions="actionSend" />
+                    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <CheckBox android:gravity="top" android:id="@id/consent_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="4" style="@style/TextDialogText.CheckBox" />
+                        <android.support.v7.widget.AppCompatImageView android:layout_gravity="bottom" android:id="@id/consent_text_shadow" android:layout_width="fill_parent" android:layout_height="40.0dip" android:src="@drawable/gradient_down_white" />
+                    </FrameLayout>
+                    <android.support.v7.widget.AppCompatImageView android:layout_gravity="center_horizontal" android:id="@id/consent_text_arrow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_keyboard_arrow_up_grey600_24" android:tint="@color/app_color_material" android:rotation="180.0" />
+                    <android.support.v7.widget.AppCompatButton android:layout_gravity="end" android:id="@id/send_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/internal_feedback_send_button" style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/group_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <include android:id="@id/internal_feedback_group_targeting" layout="@layout/internal_article_feedback_item_group_view" />
+                    <include android:id="@id/internal_feedback_group_label" layout="@layout/internal_article_feedback_item_group_view" />
+                    <include android:id="@id/internal_feedback_group_quality" layout="@layout/internal_article_feedback_item_group_view" />
+                    <include android:id="@id/internal_feedback_group_presentation" layout="@layout/internal_article_feedback_item_group_view" />
+                    <include android:id="@id/internal_feedback_group_article_rendering" layout="@layout/internal_article_feedback_item_group_view" />
+                    <TextView android:textSize="13.0sp" android:textStyle="bold" android:gravity="center_vertical" android:padding="@dimen/card_inner_content_half_padding" android:layout_width="fill_parent" android:layout_height="@dimen/min_touch_size" android:text="@string/internal_article_feedback_other" android:maxLines="1" android:layout_marginStart="@dimen/card_inner_content_half_padding" style="@style/CardText" />
+                    <View android:background="@color/gm_grey_300" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/card_inner_content_half_padding" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/takedown_container" android:layout_width="fill_parent" android:layout_height="@dimen/min_touch_size" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/ui_bug_container" android:layout_width="fill_parent" android:layout_height="@dimen/min_touch_size" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/great_results_container" android:layout_width="fill_parent" android:layout_height="@dimen/min_touch_size" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/write_your_own_container" android:layout_width="fill_parent" android:layout_height="@dimen/min_touch_size" />
+                    <View android:layout_gravity="bottom" android:background="@color/gm_grey_300" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                </LinearLayout>
+            </FrameLayout>
+            <com.google.android.libraries.bind.widget.BoundFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" ns:bindVisibility="@id/CardActionButtons_primaryButtonText">
+                <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout android:layout_gravity="end" android:id="@id/primary_button_wrapper" style="@style/CardActionButtonWrapper.Primary.Light">
+                    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/primary_button" style="@style/CardActionButtonText.Primary.Light" />
+                </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout>
+            </com.google.android.libraries.bind.widget.BoundFrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</com.google.apps.dots.android.newsstand.card.InternalFeedbackItem>

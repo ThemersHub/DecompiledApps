@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/news_widget_article" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/card_inner_content_three_quarter_padding" android:layout_weight="1.0">
+        <LinearLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/card_briefing_number" android:id="@id/news_widget_article_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/google_sans_medium" android:layout_marginEnd="@dimen/card_inner_content_half_padding" style="@style/Text.Headline3" />
+            <LinearLayout android:orientation="vertical" android:id="@id/news_widget_article_info" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="@dimen/widget_outer_padding">
+                <TextView android:textColor="@color/black" android:ellipsize="end" android:id="@id/news_widget_article_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/card_inner_content_half_padding" android:lines="3" android:fontFamily="@font/google_sans_medium" style="@style/Text.Headline3" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/card_inner_content_half_padding">
+                    <TextView android:id="@id/news_widget_source_name" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="1" android:fontFamily="sans-serif-medium" android:layout_marginEnd="@dimen/card_inner_content_half_padding" style="@style/Text.Metadata" />
+                    <TextView android:textColor="@color/card_source_text" android:id="@id/news_widget_time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="1" android:fontFamily="sans-serif" style="@style/Text.Metadata" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:id="@id/news_widget_article_image" android:layout_width="@dimen/widget_primary_image_size" android:layout_height="@dimen/widget_primary_image_size" android:scaleType="fitCenter" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="start|bottom|center" android:orientation="horizontal" android:id="@id/news_widget_article_360" android:background="@drawable/news_widget_story_button_bg" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/widget_story_button_height" android:layout_marginBottom="@dimen/card_footer_button_inset">
+        <ImageView android:layout_width="@dimen/widget_story_icon_size" android:layout_height="@dimen/widget_story_icon_size" android:src="@drawable/ic_full_coverage_24" android:layout_marginStart="@dimen/card_footer_button_inset" android:layout_marginEnd="@dimen/card_footer_button_inset" />
+        <TextView android:textColor="@color/text_color_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edition_type_story_360" android:fontFamily="sans-serif" android:layout_marginEnd="@dimen/card_footer_button_inset" style="@style/Text.Metadata" />
+    </LinearLayout>
+</LinearLayout>

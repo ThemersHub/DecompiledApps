@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.card.CardLinearLayout android:orientation="vertical" android:id="@id/dialog_container" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/default_padding" android:layout_marginEnd="@dimen/default_padding" ns:cardBackgroundColor="@color/card_warm_welcome_logo_background" style="@style/NSCardView.NoHighlight">
+        <TextView android:id="@id/dialog_header" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/WarmWelcomeTitle" />
+        <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:id="@id/dialog_buttons" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_padding" android:layout_marginBottom="@dimen/card_inner_content_padding" android:layout_marginStart="@dimen/card_inner_content_padding" android:layout_marginEnd="@dimen/card_inner_content_padding">
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:layout_gravity="start" android:id="@id/secondary_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" ns:accessibilityClassOverride="button" style="@style/DialogActionButton.Secondary" />
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:layout_gravity="end" android:id="@id/primary_button" android:layout_width="wrap_content" android:layout_height="wrap_content" ns:accessibilityClassOverride="button" style="@style/DialogActionButton.Primary" />
+        </LinearLayout>
+    </com.google.apps.dots.android.modules.widgets.card.CardLinearLayout>
+</merge>

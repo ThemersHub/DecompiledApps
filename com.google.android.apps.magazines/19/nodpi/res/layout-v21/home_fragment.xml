@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.design.NSCoordinatorLayout android:id="@id/coordinator_layout" android:focusable="true" android:fitsSystemWindows="true" android:nextFocusDown="@id/appbar" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <FrameLayout android:id="@id/home_fragment_content" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <android.support.design.widget.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/floating_action_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" style="@style/FloatingActionButtonBranded" />
+        <android.support.design.widget.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/floating_action_button_feedback" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" ns:elevation="4.0dip" ns:backgroundTint="@color/white" />
+        <include layout="@layout/audio_fragment_include" />
+        <include layout="@layout/tab_bar_shadow" />
+        <android.support.design.widget.AppBarLayout android:id="@id/appbar" android:background="@android:color/transparent" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="2.0dip">
+            <include layout="@layout/default_fragment_toolbar" />
+            <ViewStub android:id="@id/contextual_header_stub" android:layout="@layout/contextual_header_contents" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.google.apps.dots.android.newsstand.widget.NSTabLayout android:layout_gravity="center_horizontal" android:id="@id/toolbar_tabs" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/min_touch_size" style="@style/TabBar" />
+        </android.support.design.widget.AppBarLayout>
+    </com.google.apps.dots.android.modules.widgets.design.NSCoordinatorLayout>
+    <include layout="@layout/tab_bar_layout" />
+</LinearLayout>

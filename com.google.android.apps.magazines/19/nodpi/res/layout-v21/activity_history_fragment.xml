@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.modules.widgets.design.NSCoordinatorLayout android:id="@id/coordinator_layout" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.bound.HomeFragmentViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" ns:layout_behavior="@string/appbar_scrolling_view_behavior"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <include layout="@layout/audio_fragment_include" />
+    <android.support.design.widget.AppBarLayout android:id="@id/appbar" android:background="@android:color/transparent" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" android:elevation="@dimen/design_appbar_elevation" ns:layout_scrollFlags="enterAlways|scroll|snap">
+        <include layout="@layout/default_fragment_toolbar" />
+        <com.google.apps.dots.android.newsstand.widget.NSTabLayout android:layout_gravity="center_horizontal" android:id="@id/toolbar_tabs" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/min_touch_size" style="@style/TabBar" />
+    </android.support.design.widget.AppBarLayout>
+</com.google.apps.dots.android.modules.widgets.design.NSCoordinatorLayout>

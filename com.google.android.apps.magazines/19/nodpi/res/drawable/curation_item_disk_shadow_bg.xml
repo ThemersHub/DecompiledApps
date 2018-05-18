@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/shadow" android:top="1.0dip">
+        <shape android:shape="oval">
+            <solid android:color="@color/curation_shadow" />
+        </shape>
+    </item>
+    <item android:id="@id/disk" android:left="@dimen/curation_item_disk_shadow_thickness" android:top="@dimen/curation_item_disk_shadow_thickness" android:right="@dimen/curation_item_disk_shadow_thickness" android:bottom="@dimen/curation_item_disk_shadow_thickness">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/darker_gray" />
+        </shape>
+    </item>
+    <item android:left="@dimen/curation_item_disk_shadow_thickness" android:top="@dimen/curation_item_disk_shadow_thickness" android:right="@dimen/curation_item_disk_shadow_thickness" android:bottom="@dimen/curation_item_disk_shadow_thickness">
+        <selector>
+            <item android:state_pressed="true">
+                <shape android:shape="oval">
+                    <solid android:color="@color/holo_light_pressed" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>

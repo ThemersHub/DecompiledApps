@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.libraries.bind.widget.BindingLinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:focusable="true" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" ns:bind__isOwnedByParent="true" ns:bindContentDescription="@id/CardClusterItemHeader_contentDescription"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:layout_gravity="center_horizontal" android:id="@id/score_status" android:layout_width="wrap_content" android:layout_height="wrap_content" ns:bindText="@id/CardClusterItemHeader_sportGameStatus" style="@style/SportsHeaderStatusText" />
+        <com.google.apps.dots.android.newsstand.widget.CardActionMenuView android:layout_gravity="end|center" android:paddingTop="@dimen/card_inner_content_padding" android:paddingBottom="@dimen/card_inner_content_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/card_inner_content_padding" android:paddingEnd="@dimen/card_inner_padding_fullbleed" ns:appearance="dark" style="@style/CardActionClickableMenuView" />
+    </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout>
+    <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout android:gravity="center|top" android:orientation="horizontal" android:id="@id/scores" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout android:id="@id/first_team" style="@style/SportsHeaderTeamColumn">
+            <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout android:id="@id/first_team_logo" style="@style/SportsHeaderTeamLogoFrame">
+                <com.google.apps.dots.android.modules.widgets.attachment.CacheableAttachmentView android:id="@id/first_team_logo_image" ns:bindContentDescription="@id/CardClusterItemHeader_firstTeamName" ns:bindOnClickListener="@id/CardClusterItemHeader_firstTeamOnClickListener" ns:bindAttachmentId="@id/CardClusterItemHeader_firstTeamLogo" style="@style/SportsHeaderTeamLogoImage" />
+            </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout>
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/first_team_name" ns:bindText="@id/CardClusterItemHeader_firstTeamName" style="@style/SportsHeaderStatusText.TeamName" />
+        </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/first_team_score" android:layout_marginStart="@dimen/sport_team_overlap_width" ns:bindText="@id/CardClusterItemHeader_firstTeamScore" style="@style/SportsHeaderScoreText" />
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/score_separator" android:text="@string/sport_game_score_seperator" style="@style/SportsHeaderScoreSepText" />
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/second_team_score" android:layout_marginEnd="@dimen/sport_team_overlap_width" ns:bindText="@id/CardClusterItemHeader_secondTeamScore" style="@style/SportsHeaderScoreText" />
+        </LinearLayout>
+        <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout android:id="@id/second_team" style="@style/SportsHeaderTeamColumn">
+            <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout android:id="@id/second_team_logo" style="@style/SportsHeaderTeamLogoFrame">
+                <com.google.apps.dots.android.modules.widgets.attachment.CacheableAttachmentView android:id="@id/second_team_logo_image" ns:bindContentDescription="@id/CardClusterItemHeader_secondTeamName" ns:bindOnClickListener="@id/CardClusterItemHeader_secondTeamOnClickListener" ns:bindAttachmentId="@id/CardClusterItemHeader_secondTeamLogo" style="@style/SportsHeaderTeamLogoImage" />
+            </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout>
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/second_team_name" ns:bindText="@id/CardClusterItemHeader_secondTeamName" style="@style/SportsHeaderStatusText.TeamName" />
+        </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout>
+    </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout>
+</com.google.android.libraries.bind.widget.BindingLinearLayout>

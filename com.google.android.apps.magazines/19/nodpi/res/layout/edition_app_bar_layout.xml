@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.design.NSCollapsingToolbarLayout android:id="@id/collapsing_toolbar" android:background="@color/edition_landing_page_background" android:layout_width="fill_parent" android:layout_height="wrap_content" ns:layout_scrollFlags="enterAlways|enterAlwaysCollapsed|scroll|snap" ns:contentScrim="@color/edition_landing_page_background" ns:statusBarScrim="@color/edition_landing_page_background">
+        <include layout="@layout/edition_pager_header" />
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@android:color/transparent" android:layout_marginBottom="@dimen/action_bar_default_height" ns:layout_collapseMode="pin" style="@style/Toolbar">
+            <com.google.apps.dots.android.modules.widgets.bound.viewgroup.SizingLayout android:gravity="start|center" android:id="@id/edition_pager_toolbar_logo" android:visibility="gone" android:layout_width="@dimen/edition_header_toolbar_logo_max_width" android:layout_height="0.0dip" android:layout_marginRight="@dimen/card_inner_content_padding" android:alpha="0.0" ns:heightSource="WIDTH">
+                <com.google.apps.dots.android.modules.widgets.attachment.CacheableAttachmentView android:id="@id/edition_pager_toolbar_logo_image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.google.apps.dots.android.modules.widgets.bound.viewgroup.SizingLayout>
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/edition_pager_toolbar_title" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:maxLines="1" android:alpha="0.0" style="@style/Text.HeaderTitle" />
+        </android.support.v7.widget.Toolbar>
+        <com.google.apps.dots.android.newsstand.widget.NSTabLayout android:layout_gravity="bottom|center" android:id="@id/tab_layout" android:layout_width="wrap_content" android:layout_height="@dimen/min_touch_size" ns:layout_collapseMode="pin" style="@style/TabBar" />
+    </com.google.apps.dots.android.modules.widgets.design.NSCollapsingToolbarLayout>
+</android.support.design.widget.AppBarLayout>

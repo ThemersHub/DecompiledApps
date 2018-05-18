@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.CardMultiOffer android:layout_width="fill_parent" android:layout_height="wrap_content" ns:cardBackgroundColor="@color/app_color_material" ns:layoutSpanStyle="@style/CardSpan.WideCard" style="@style/NSCardView.Fullbleed.Portrait"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_inner_content_2x_padding">
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/card_inner_content_padding" ns:bindText="@id/CardMultiOffer_title" style="@style/EditionUpsellTitle" />
+        <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout android:layout_gravity="center" android:id="@id/primary_button_wrapper" android:layout_marginStart="0.0dip" style="@style/CardActionButtonWrapper.Primary">
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/primary_button" android:bufferType="spannable" style="@style/EditionUpsellSubscribeButton" />
+        </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout>
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/psv_link" android:paddingTop="@dimen/card_inner_content_2x_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/already_a_subscriber" ns:bindOnClickListener="@id/CardMultiOffer_psvLinkClickListener" ns:bindVisibility="@id/CardMultiOffer_psvLinkClickListener" style="@style/EditionUpsellPsvLink" />
+    </LinearLayout>
+</com.google.apps.dots.android.newsstand.card.CardMultiOffer>

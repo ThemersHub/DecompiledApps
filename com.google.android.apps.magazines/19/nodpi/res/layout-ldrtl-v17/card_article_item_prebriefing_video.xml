@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.CardArticleItem ns:foregroundRespectPadding="false" style="@style/CardArticleItemNeueContent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.molecule.widget.ParallaxLayout android:layout_width="fill_parent" android:layout_height="fill_parent" ns:parallaxMode="pin">
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/card_inner_content_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/card_inner_content_three_halves_padding" android:paddingEnd="@dimen/card_inner_content_three_halves_padding" ns:fadeOnScroll="true">
+            <com.google.apps.dots.android.modules.widgets.card.CardFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" ns:cardCornerRadius="@dimen/media_clipped_corner_radius" ns:cardElevation="@dimen/card_default_elevation" style="@style/NSCardView.Transparent">
+                <com.google.apps.dots.android.newsstand.card.CardArticleItemVideoView android:id="@id/image_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/card_inner_content_quarter_padding" ns:bindShouldResize="@id/CollectionLayoutGroup_cardWillExpandHeight" ns:bindVisibility="@id/CardArticleItem_imageId" ns:bindCornerRadius="@id/CardArticleItem_cornerRadius" ns:heightSource="WIDTH" ns:bindHeightMultiplier="@id/CardArticleItem_mediaAspectRatio" ns:maxHeightMultiplier="@dimen/card_article_item_max_image_aspect_ratio">
+                    <include layout="@layout/card_media_container" />
+                </com.google.apps.dots.android.newsstand.card.CardArticleItemVideoView>
+                <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="@drawable/gradient_up_hard" android:paddingTop="@dimen/card_inner_content_2x_padding" android:paddingBottom="@dimen/card_inner_content_half_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/card_inner_content_padding" android:paddingEnd="@dimen/card_inner_content_padding">
+                    <include android:layout_width="wrap_content" android:layout_height="@dimen/article_source_icon_size" android:layout_marginEnd="8.0dip" layout="@layout/card_article_item_source_icon" />
+                    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textSize="@dimen/text_display_M" android:id="@id/title" android:maxLines="2" style="@style/CardArticleItemText.Headline.Carousel" />
+                </LinearLayout>
+            </com.google.apps.dots.android.modules.widgets.card.CardFrameLayout>
+            <View android:layout_gravity="center_horizontal" android:background="@color/app_color_material" android:layout_width="@dimen/shelf_header_divider_width" android:layout_height="@dimen/shelf_header_divider_height" android:layout_marginTop="@dimen/card_inner_content_half_padding" android:layout_marginBottom="@dimen/card_inner_content_half_padding" />
+        </LinearLayout>
+    </com.google.apps.dots.android.molecule.widget.ParallaxLayout>
+</com.google.apps.dots.android.newsstand.card.CardArticleItem>

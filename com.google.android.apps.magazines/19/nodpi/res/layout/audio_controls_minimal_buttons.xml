@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="@dimen/audio_player_buttons_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ProgressBar android:layout_gravity="center" android:id="@id/preparing" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:indeterminate="true" android:minWidth="@dimen/audio_player_button_size" android:minHeight="@dimen/audio_player_button_size" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSImageView android:enabled="false" android:layout_gravity="center" android:id="@id/play_button" android:background="@drawable/transparent_with_store_highlight" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_play_arrow_32dp" android:scaleType="fitCenter" android:minWidth="@dimen/audio_player_button_size" android:minHeight="@dimen/audio_player_button_size" android:contentDescription="@string/media_play" />
+        <include android:visibility="invisible" android:minWidth="@dimen/audio_player_button_size" android:minHeight="@dimen/audio_player_button_size" layout="@layout/audio_button" />
+    </FrameLayout>
+    <ImageButton android:gravity="center" android:id="@id/cancel_button" android:background="@drawable/transparent_with_store_highlight" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_clear_24dp" android:scaleType="fitCenter" android:minWidth="@dimen/audio_player_button_size" android:minHeight="@dimen/audio_player_button_size" android:layout_weight="1.0" android:contentDescription="@string/close" />
+</LinearLayout>

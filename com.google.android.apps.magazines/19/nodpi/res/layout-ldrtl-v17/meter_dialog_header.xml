@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/header" android:background="@drawable/meter_header_green" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/meter_dialog_header_size">
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:gravity="center" android:layout_gravity="center" android:id="@id/meter_status_text" android:layout_width="fill_parent" android:layout_height="wrap_content" ns:bind__editModeText="3 free articles left today." ns:customFont="REGULAR_SANS" style="@style/MeterLargeText" />
+        <RelativeLayout android:layout_gravity="center" android:id="@id/meter_number_container" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:gravity="start" android:id="@id/meter_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerInParent="true" ns:bind__editModeText="3" style="@style/MeterLargeNumber" />
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:gravity="end" android:id="@id/meter_number_decremented" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_alignTop="@id/meter_number" android:layout_alignBottom="@id/meter_number" android:alpha="0.0" android:layout_toEndOf="@id/meter_number" ns:bind__editModeText="2" style="@style/MeterLargeNumber" />
+        </RelativeLayout>
+    </FrameLayout>
+    <include layout="@layout/meter_dialog_header_buttons" />
+</LinearLayout>

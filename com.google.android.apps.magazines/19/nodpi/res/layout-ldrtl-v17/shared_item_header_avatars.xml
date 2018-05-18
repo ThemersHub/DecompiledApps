@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/card_inner_content_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/shared_avatars" android:layout_width="@dimen/shared_item_header_avatar_image_size" android:layout_height="@dimen/shared_item_header_avatar_image_size" android:baselineAligned="false">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.google.apps.dots.android.modules.widgets.attachment.CacheableAttachmentView android:id="@id/share_avatar_1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" ns:bindVisibility="@id/SharedItemHeader_avatarPictureUrl_1" ns:bindAttachmentId="@id/SharedItemHeader_avatarPictureUrl_1" ns:fadeInType="ifSlowLoad" />
+            <com.google.apps.dots.android.modules.widgets.attachment.CacheableAttachmentView android:id="@id/share_avatar_4" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="1.0dip" android:layout_weight="1.0" ns:bindVisibility="@id/SharedItemHeader_avatarPictureUrl_4" ns:bindAttachmentId="@id/SharedItemHeader_avatarPictureUrl_4" ns:fadeInType="ifSlowLoad" />
+        </LinearLayout>
+        <com.google.android.libraries.bind.widget.BoundFrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="1.0dip" ns:bindVisibility="@id/SharedItemHeader_avatarPictureUrl_2">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.google.apps.dots.android.modules.widgets.attachment.CacheableAttachmentView android:id="@id/share_avatar_2" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" ns:bindVisibility="@id/SharedItemHeader_avatarPictureUrl_2" ns:bindAttachmentId="@id/SharedItemHeader_avatarPictureUrl_2" ns:fadeInType="ifSlowLoad" />
+                <com.google.apps.dots.android.modules.widgets.attachment.CacheableAttachmentView android:id="@id/share_avatar_3" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="1.0dip" android:layout_weight="1.0" ns:bindVisibility="@id/SharedItemHeader_avatarPictureUrl_3" ns:bindAttachmentId="@id/SharedItemHeader_avatarPictureUrl_3" ns:fadeInType="ifSlowLoad" />
+            </LinearLayout>
+            <com.google.android.libraries.bind.widget.BoundTextView android:textSize="@dimen/shared_item_header_other_recipients_text_size" android:textColor="@color/shared_avatar_text_color" android:gravity="center" android:background="@color/shared_avatar_overlay_background" android:layout_width="fill_parent" android:layout_height="fill_parent" ns:bindText="@id/SharedItemHeader_otherRecipientsCountOnAvatars" ns:bindVisibility="@id/SharedItemHeader_otherRecipientsCountOnAvatars" />
+        </com.google.android.libraries.bind.widget.BoundFrameLayout>
+    </LinearLayout>
+    <com.google.apps.dots.android.newsstand.widget.TransparentCircleView android:layout_width="@dimen/shared_item_header_avatar_image_size" android:layout_height="@dimen/shared_item_header_avatar_image_size" ns:bindCircleBorderColor="@id/TransparentCircleView_borderColor" ns:bindCircleBorderWidth="@id/TransparentCircleView_borderWidth" ns:bindCircleInset="@id/TransparentCircleView_inset" ns:bindCircleBackgroundColor="@id/TransparentCircleView_backgroundColor" />
+</FrameLayout>

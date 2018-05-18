@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:paddingStart="@dimen/user_data_collection_form_outer_padding" android:paddingEnd="@dimen/user_data_collection_form_outer_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingTop="@dimen/card_inner_content_padding" android:paddingBottom="@dimen/card_inner_content_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/user_data_collection_form_inner_padding" android:paddingEnd="@dimen/user_data_collection_form_inner_padding" android:elevation="@dimen/user_data_collection_form_elevation">
+        <TextView android:id="@id/privacy_message" android:paddingTop="@dimen/dialog_inner_padding" android:paddingBottom="@dimen/dialog_inner_padding" style="@style/DialogText" />
+        <CheckBox android:gravity="top" android:id="@id/first_party_marketing" android:padding="@dimen/dialog_form_checkbox_padding" android:text="@string/user_data_collection_first_party_marketing" style="@style/DialogText.Form.Checkbox" />
+        <CheckBox android:gravity="top" android:id="@id/third_party_marketing" android:padding="@dimen/dialog_form_checkbox_padding" android:text="@string/user_data_collection_third_party_marketing" style="@style/DialogText.Form.Checkbox" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/user_info_input_form" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="@drawable/rounded_top_corners_bg" android:layout_width="fill_parent" android:layout_height="16.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/bottom_sheet_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatImageView android:layout_gravity="center_horizontal" android:id="@id/onboarding_image" android:background="@color/white" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginTop="@dimen/card_inner_content_three_halves_padding" android:layout_marginBottom="@dimen/card_inner_content_half_padding" android:scaleType="centerInside" android:alpha="0.0" />
+        <TextView android:textColor="@color/text_color_sub_headline" android:gravity="center" android:id="@id/onboarding_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_inner_content_half_padding" android:text="@string/onboarding_title2" android:maxLines="1" android:alpha="0.0" android:fontFamily="@font/google_sans" android:layout_marginStart="@dimen/card_inner_content_4x_padding" android:layout_marginEnd="@dimen/card_inner_content_4x_padding" style="@style/TextDisplay.L" />
+        <FrameLayout android:id="@id/onboarding_sub_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_inner_content_half_padding" android:layout_marginBottom="@dimen/card_inner_content_2x_padding">
+            <TextView android:gravity="center" android:id="@id/onboarding_sub_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:alpha="0.0" android:fontFamily="@font/google_sans" style="@style/TextDisplay.XL" />
+        </FrameLayout>
+        <com.google.android.libraries.material.productlockup.ProductLockupView android:layout_gravity="center" android:id="@id/product_lockup" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_inner_content_2x_padding" android:layout_marginBottom="42.0dip" android:scaleX="1.33" android:scaleY="1.33" app:logoColor="grey" />
+        <RelativeLayout android:layout_gravity="center" android:id="@id/primary_action_button_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/card_inner_content_padding">
+            <TextView android:id="@id/primary_action_button" style="@style/GM2Button" />
+            <com.google.apps.dots.android.modules.widgets.progress.SegmentProgressView android:layout_gravity="center" android:id="@id/primary_action_button_progress" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="1.5dip" android:layout_margin="2.0dip" android:layout_alignStart="@id/primary_action_button" android:layout_alignEnd="@id/primary_action_button" app:cornerRadius="0.75dip" app:primaryColor="#aaffffff" app:secondaryColor="#40ffffff" />
+        </RelativeLayout>
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/progress_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_margin="@dimen/card_inner_content_padding" style="@style/TextDisplay.S" />
+        <View android:background="@color/gm_grey_100" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/card_inner_content_padding" />
+        <FrameLayout android:id="@id/account_viewgroup" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:background="@color/gm_grey_50" android:paddingTop="@dimen/card_inner_content_padding" android:paddingBottom="@dimen/card_inner_content_padding" android:layout_width="fill_parent" android:layout_height="72.0dip" android:animateLayoutChanges="true">
+                <include layout="@layout/single_account_view" />
+            </LinearLayout>
+        </FrameLayout>
+        <View android:background="@color/gm_grey_200" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+</LinearLayout>

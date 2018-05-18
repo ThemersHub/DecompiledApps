@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.modules.widgets.card.CardFrameLayout android:id="@id/card" android:layout_width="fill_parent" android:layout_height="wrap_content" ns:cardBackgroundColor="@color/card_carousel_card_background" ns:layoutSpanStyle="@style/CardSpan.WideCardPhoneOnly" ns:bindOnCardSeenListener="@id/CardClusterItem_onCardSeenListener" style="@style/NSCardView.Fullbleed.Portrait"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/card_inner_content_half_padding">
+        <include layout="@layout/shelf_header" />
+        <com.google.apps.dots.android.newsstand.card.CardClusterItem android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/card_inner_content_padding" android:layout_marginEnd="@dimen/card_inner_content_padding" style="@style/NSCardView">
+            <com.google.apps.dots.android.modules.widgets.bound.CardClusterListView android:id="@id/card_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.google.apps.dots.android.newsstand.card.CardClusterItem>
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textColor="@color/gm_grey_600" android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/card_inner_content_padding" android:layout_marginEnd="@dimen/card_inner_content_padding" ns:bindText="@id/CardClusterItem_attribution" style="@style/HeaderAttribution" />
+    </LinearLayout>
+</com.google.apps.dots.android.modules.widgets.card.CardFrameLayout>

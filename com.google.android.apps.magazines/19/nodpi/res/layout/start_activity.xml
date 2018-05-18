@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/static_splash_view_dummy_toolbar" />
+        <ViewStub android:id="@id/start_activity_dummy_feed_stub" android:layout="@layout/start_activity_dummy_feed" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:background="@color/fifty_percent_black" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" />
+    <include android:layout_gravity="bottom" android:id="@id/start_activity_onboarding" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/onboard__onboarding_dialog" />
+</FrameLayout>

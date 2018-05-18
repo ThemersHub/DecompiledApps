@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.modules.widgets.gesture.DragToCloseLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.apps.dots.android.modules.widgets.design.NSCoordinatorLayout android:id="@id/coordinator_layout" android:background="@color/article_reading_background" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/reading_expando_hero" android:background="@color/card_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSImageView android:layout_gravity="center" android:id="@id/transition_image_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" android:importantForAccessibility="no" />
+        <android.support.v4.view.NSViewPager android:id="@id/article_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/pager_drop_shadow" android:background="@drawable/pager_shadow" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:layout_gravity="bottom" android:id="@id/toolbar_shadow" android:background="@drawable/play_header_list_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_article_elevation" android:alpha="0.5" />
+            <com.google.apps.dots.android.modules.widgets.actionbar.TintedToolbar android:theme="?actionBarTheme" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_marginBottom="@dimen/action_bar_article_elevation" ns:popupTheme="?actionBarPopupTheme" />
+        </FrameLayout>
+        <fragment android:name="com.google.apps.dots.android.newsstand.audio.AudioFragment" android:layout_gravity="bottom" android:id="@id/audio_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" ns:layout_anchorGravity="top" />
+    </com.google.apps.dots.android.modules.widgets.design.NSCoordinatorLayout>
+</com.google.apps.dots.android.modules.widgets.gesture.DragToCloseLayout>

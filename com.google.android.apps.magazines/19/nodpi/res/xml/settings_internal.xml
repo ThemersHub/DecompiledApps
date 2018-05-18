@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/internal_options_title">
+        <PreferenceScreen android:title="@string/internal_environment_title" android:key="@string/internal_environment_key">
+            <ListPreference android:title="@string/server_type_title" android:key="@string/server_type_key" android:defaultValue="@string/default_environment" />
+            <com.google.apps.dots.android.modules.widgets.AutoCompletePreference android:title="@string/for_you_mixer_override" android:key="@string/for_you_mixer_override_key" />
+            <com.google.apps.dots.android.modules.widgets.AutoCompletePreference android:title="@string/related_videos_mixer_override" android:key="@string/related_videos_mixer_override_key" />
+            <EditTextPreference android:title="@string/custom_url_params_title" android:key="@string/custom_url_params_key" android:defaultValue="" android:dialogTitle="@string/custom_url_params_title" android:dialogMessage="@string/custom_url_params_summary" android:inputType="textLongMessage|textNoSuggestions" />
+            <EditTextPreference android:title="@string/custom_base_url_title" android:key="@string/custom_base_url_key" android:defaultValue="http://-obscura.sandbox.google.com/newsstand" android:dialogTitle="@string/custom_base_url_title" android:dialogMessage="@string/custom_base_url_summary" android:inputType="textUri" />
+            <EditTextPreference android:title="@string/custom_guc_url_title" android:key="@string/custom_guc_url_key" android:defaultValue="@string/staging_guc_url" android:dialogTitle="@string/custom_guc_url_title" android:dialogMessage="@string/custom_guc_url_summary" android:inputType="textUri" />
+            <EditTextPreference android:title="@string/country_override_title" android:key="@string/country_override_key" android:defaultValue="" android:dialogTitle="@string/country_override_title" android:dialogMessage="@string/country_override_summary" />
+            <EditTextPreference android:title="@string/lat_long_override_title" android:key="@string/lat_long_override_key" android:defaultValue="" android:dialogTitle="@string/lat_long_override_title" android:dialogMessage="@string/lat_long_override_summary" />
+            <EditTextPreference android:title="@string/fcs_merge_label_override_title" android:key="@string/fcs_merge_label_override_key" android:defaultValue="" android:dialogTitle="@string/fcs_merge_label_override_title" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/internal_debugging_title">
+            <EditTextPreference android:title="@string/load_extra_js_title" android:key="@string/load_extra_js_key" android:defaultValue="" android:dialogTitle="@string/load_extra_js_title" android:dialogMessage="@string/load_extra_js_summary" android:inputType="textUri" />
+            <Preference android:title="@string/simulate_crash_event" android:key="@string/simulate_crash_event_key" />
+            <SwitchPreference android:title="@string/enable_all_debug_loggers" android:key="@string/enable_all_debug_loggers_key" />
+            <SwitchPreference android:title="@string/enable_debug_info_card" android:key="@string/enable_debug_info_card_key" />
+            <SwitchPreference android:title="@string/also_show_standalone_weather" android:key="@string/also_show_standalone_weather_key" />
+            <SwitchPreference android:title="@string/always_show_static_onboarding" android:key="@string/always_show_static_onboarding_key" />
+            <SwitchPreference android:title="@string/static_onboarding_delay" android:key="@string/static_onboarding_delay_key" />
+            <SwitchPreference android:title="@string/web_view_debugging" android:key="@string/web_view_debugging_key" />
+            <SwitchPreference android:title="@string/force_autoplay_videos" android:key="@string/force_autoplay_videos_key" />
+            <SwitchPreference android:title="@string/force_low_ram_device" android:key="@string/force_low_ram_device_key" />
+            <SwitchPreference android:title="@string/enable_widget_debug_timestamp" android:key="@string/enable_widget_debug_timestamp_key" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/internal_user_state_title">
+            <SwitchPreference android:title="Synchronize local reading position with server" android:key="@string/reading_position_sync_preference_key" />
+            <Preference android:title="@string/reset_warm_welcome_cards" android:key="@string/reset_warm_welcome_cards_key" />
+            <PreferenceCategory android:title="@string/debug_pref_briefing_title">
+                <Preference android:title="@string/test_briefing_title" android:key="@string/test_briefing_key" />
+            </PreferenceCategory>
+            <PreferenceCategory android:title="@string/debug_pref_upgrade_title">
+                <Preference android:title="@string/test_upgrade_notification" android:key="@string/test_upgrade_key" />
+            </PreferenceCategory>
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/internal_ads_title">
+            <SwitchPreference android:title="Always show Google-sold ads" android:key="@string/always_show_google_sold_ads_key" />
+            <SwitchPreference android:title="@string/show_ad_trace_info_title" android:key="@string/show_ad_trace_info_key" />
+            <SwitchPreference android:title="@string/force_native_ads_in_articles" android:key="@string/force_native_ads_in_articles_key" />
+            <SwitchPreference android:title="@string/enable_test_midrolls" android:key="@string/enable_test_midrolls_key" />
+            <SwitchPreference android:title="@string/disable_ads" android:key="@string/disable_ads_key" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/internal_options_sync_title">
+            <ListPreference android:enabled="false" android:entries="@array/image_sync_type_entries" android:title="@string/image_sync_type_title" android:key="@string/image_sync_type_key" android:defaultValue="IMAGES_IN_BG" android:entryValues="@array/image_sync_type_values" />
+            <EditTextPreference android:title="@string/min_sync_space_mags" android:key="@string/sync_minimum_storage_mags_key" android:dialogTitle="@string/min_sync_space_mags" android:inputType="number" />
+            <EditTextPreference android:title="@string/min_sync_space_news" android:key="@string/sync_minimum_storage_news_key" android:dialogTitle="@string/min_sync_space_news" android:inputType="number" />
+            <Preference android:title="@string/start_background_sync" android:key="@string/start_background_sync_key" />
+            <Preference android:title="@string/reset_auto_enabled_sync" android:key="@string/reset_auto_enabled_sync_key" android:summary="@string/reset_auto_enabled_sync_summary" />
+            <Preference android:title="@string/sync_info_title" android:key="@string/sync_info_key" />
+            <Preference android:title="@string/pinned_edition_sizes_title" android:key="@string/pinned_edition_sizes_key" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

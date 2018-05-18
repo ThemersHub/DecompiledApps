@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.CardTweetItem android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/card_inner_content_three_halves_padding" android:paddingEnd="@dimen/card_inner_content_three_halves_padding" ns:bindOnClickListener="@id/CardTweetItem_onClickListener" style="@style/NSCardView.Fullbleed.Portrait"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.Guideline android:orientation="horizontal" android:id="@id/guideline_top" android:layout_width="wrap_content" android:layout_height="wrap_content" ns:layout_constraintGuide_begin="72.0dip" />
+    <include layout="@layout/card_tweet_item_content" />
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/message" ns:layout_constraintBottom_toTopOf="@id/twitter_icon" ns:layout_constraintStart_toStartOf="parent" ns:layout_constraintTop_toBottomOf="@id/guideline_top" ns:layout_constraintVertical_bias="0.0" ns:layout_constraintVertical_chainStyle="packed" ns:bindMinLines="@id/CardTweetItem_messageMinLines" style="@style/TweetMessage" />
+    <android.support.v7.widget.AppCompatImageView android:id="@id/twitter_icon" ns:layout_constraintBottom_toBottomOf="parent" ns:layout_constraintEnd_toStartOf="@id/tweet_footer" ns:layout_constraintStart_toStartOf="parent" ns:layout_constraintTop_toBottomOf="@id/message" ns:layout_constraintVertical_chainStyle="packed" style="@style/TweetIcon" />
+</com.google.apps.dots.android.newsstand.card.CardTweetItem>

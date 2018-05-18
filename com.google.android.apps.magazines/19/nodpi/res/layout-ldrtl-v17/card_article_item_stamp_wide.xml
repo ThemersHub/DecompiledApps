@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.modules.widgets.card.CardFrameLayout android:id="@id/card" android:layout_height="wrap_content" style="@style/CardArticleItemNeueCard"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.apps.dots.android.newsstand.card.CardArticleItem android:orientation="vertical" android:layout_height="wrap_content" ns:foregroundRespectPadding="false" style="@style/CardArticleItemNeueContent"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/shared_item_header" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_inner_content_three_halves_padding" android:baselineAligned="false" android:layout_marginStart="@dimen/card_inner_padding_fullbleed" android:layout_marginEnd="@dimen/card_inner_padding_fullbleed">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:paddingEnd="8.0dip">
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/card_inner_content_half_padding" layout="@layout/card_article_item_header" />
+                <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/card_article_item_kicker" android:layout_marginBottom="@dimen/card_inner_content_half_padding" style="@style/CardArticleItemText.Kicker.Compact" />
+                <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textSize="20.0sp" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="6" ns:bindMinLines="@id/CardArticleItem_titleMinLines" style="@style/CardArticleItemText.Headline.Compact" />
+                <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/card_article_item_footer" />
+            </LinearLayout>
+            <com.google.android.libraries.bind.widget.BindingFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" ns:bindInvisibility="@id/CardArticleItem_numAudio">
+                <com.google.apps.dots.android.newsstand.card.CardArticleItemMediaView android:layout_width="@dimen/article_stamp_image_width" android:layout_height="@dimen/article_stamp_image_height" ns:bindVisibility="@id/CardArticleItem_imageId" ns:cornerRadius="@dimen/media_clipped_corner_radius">
+                    <include layout="@layout/card_article_item_media_mini" />
+                </com.google.apps.dots.android.newsstand.card.CardArticleItemMediaView>
+            </com.google.android.libraries.bind.widget.BindingFrameLayout>
+            <include android:id="@id/audio" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/audio_button" />
+        </LinearLayout>
+    </com.google.apps.dots.android.newsstand.card.CardArticleItem>
+</com.google.apps.dots.android.modules.widgets.card.CardFrameLayout>

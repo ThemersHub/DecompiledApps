@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.NSViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/pager_drop_shadow" android:background="@drawable/pager_shadow" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/info" android:background="@drawable/gradient_up_soft" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:ellipsize="end" android:id="@id/attribution" android:paddingBottom="@dimen/default_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_alignParentBottom="true" android:paddingStart="@dimen/default_padding" android:layout_marginEnd="@dimen/media_drawer_right_padding" ns:customFont="LIGHT_SANS" style="@style/WhiteTextWithShadow.Secondary" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/expanded_caption" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_size" android:layout_above="@id/attribution" android:paddingStart="@dimen/default_padding" android:layout_marginEnd="@dimen/media_drawer_right_padding" ns:customFont="LIGHT_SANS" style="@style/WhiteTextWithShadow" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:ellipsize="end" android:id="@id/caption" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_size" android:maxLines="4" android:layout_above="@id/attribution" android:paddingStart="@dimen/default_padding" android:layout_marginEnd="@dimen/media_drawer_right_padding" ns:customFont="LIGHT_SANS" style="@style/WhiteTextWithShadow" />
+        <LinearLayout android:orientation="vertical" android:id="@id/progress_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/caption" android:paddingStart="@dimen/default_padding" android:layout_marginEnd="@dimen/media_drawer_right_padding">
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textSize="12.0sp" android:id="@id/progressText" android:paddingBottom="@dimen/default_quarter_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" ns:customFont="LIGHT_SANS" style="@style/WhiteTextWithShadow" />
+        </LinearLayout>
+    </RelativeLayout>
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" ns:popupTheme="?actionBarPopupTheme" ns:theme="?actionBarTheme" />
+</FrameLayout>

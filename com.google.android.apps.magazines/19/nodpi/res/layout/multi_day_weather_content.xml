@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <HorizontalScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/card_inner_content_2x_padding" android:paddingEnd="@dimen/card_inner_content_half_padding">
+                <include android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/single_day_weather_view_current" />
+                <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textColor="@color/text_color_secondary" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_inner_content_quarter_padding" ns:bindText="@id/WeatherHeader_location" style="@style/Text.Headline3" />
+            </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout>
+            <com.google.apps.dots.android.modules.widgets.weather.WeatherForecastListView android:layout_gravity="bottom" android:id="@id/list_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/card_inner_content_padding" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <View android:layout_gravity="end" android:background="@drawable/gradient_end_white" android:layout_width="@dimen/card_inner_content_padding" android:layout_height="0.0dip" ns:layout_constraintBottom_toBottomOf="parent" ns:layout_constraintEnd_toEndOf="parent" ns:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

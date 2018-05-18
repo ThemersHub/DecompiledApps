@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.apps.dots.android.newsstand.card.CardArticleItem android:orientation="vertical" android:layout_height="@dimen/edition_spotlight_overview_card_height" style="@style/CardArticleItemNeueContent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.android.libraries.bind.widget.BindingFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.apps.dots.android.newsstand.card.CardArticleItemMediaView android:layout_width="fill_parent" android:layout_height="@dimen/edition_spotlight_article_large_image_height" ns:bindVisibility="@id/CardArticleItem_imageId">
+            <include layout="@layout/card_article_item_media_mini" />
+        </com.google.apps.dots.android.newsstand.card.CardArticleItemMediaView>
+    </com.google.android.libraries.bind.widget.BindingFrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_inner_content_half_padding" android:layout_marginStart="@dimen/card_inner_content_padding" android:layout_marginEnd="@dimen/card_inner_content_padding">
+        <include layout="@layout/card_article_item_source_icon" />
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/source_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/card_inner_content_padding" style="@style/CardArticleItemText.Source.Compact.Carousel" />
+    </LinearLayout>
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_inner_content_half_padding" android:layout_marginStart="@dimen/card_inner_content_padding" android:layout_marginEnd="@dimen/card_inner_content_padding" ns:bindText="@id/CardArticleItem_authorName" ns:bindVisibility="@id/CardArticleItem_authorName" style="@style/Text.Metadata" />
+    <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_inner_content_half_padding" android:layout_marginBottom="@dimen/card_inner_content_padding" android:layout_marginStart="@dimen/card_inner_content_padding" android:layout_marginEnd="@dimen/card_inner_content_padding" ns:bindText="@id/CardArticleItem_title" ns:bindMinLines="@id/CardArticleItem_titleMinLines" style="@style/Text.Headline3" />
+</com.google.apps.dots.android.newsstand.card.CardArticleItem>

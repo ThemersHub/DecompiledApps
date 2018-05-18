@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/edition_icon_rect_icon_only" />
+    <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout android:id="@id/circular_icon_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" ns:bindBackground="@id/EditionIcon_rectBgForCircularIcon" ns:bindInvisibility="@id/EditionIcon_showRectIcon">
+        <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout android:id="@id/circular_icon_disk_background" android:background="@drawable/curation_item_disk_shadow_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.apps.dots.android.newsstand.widget.RoundedCacheableAttachmentView android:layout_gravity="center" android:id="@id/circular_image_icon" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" ns:bindDrawable="@id/EditionIcon_drawableResId" ns:bindVisibility="@id/EditionIcon_showCircularImageIcon" ns:hideBackgroundWhenLoaded="true" ns:bindAttachmentId="@id/EditionIcon_attachmentId" ns:highlightColor="@color/card_image_colorfilter" ns:bindUseRoundIconKey="@id/RoundedCacheableAttachmentView_useRoundedSourceIcon" ns:bindRoundIconInsetKey="@id/RoundedCacheableAttachmentView_roundedSourceIconInset" />
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:layout_gravity="center" android:id="@id/circular_text_icon" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" ns:bindText="@id/EditionIcon_circularIconText" ns:bindVisibility="@id/EditionIcon_showCircularTextIcon" style="@style/LetterIcon" />
+        </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout>
+    </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSFrameLayout>
+</merge>

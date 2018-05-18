@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="@dimen/default_padding" android:paddingBottom="@dimen/default_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/default_padding" android:paddingEnd="@dimen/default_padding">
+        <LinearLayout android:orientation="vertical" android:id="@id/offers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_half_padding">
+            <com.google.apps.dots.android.modules.widgets.bound.viewgroup.SizingLayout android:layout_gravity="center" android:id="@id/source_icon_sizing_layout" android:layout_width="@dimen/dialog_source_icon_size" android:layout_height="0.0dip" ns:heightSource="WIDTH">
+                <com.google.apps.dots.android.modules.widgets.attachment.CacheableAttachmentView android:id="@id/source_icon" android:background="@drawable/image_loading" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" ns:hideBackgroundWhenLoaded="true" ns:releaseBitmapOnDetach="true" ns:fadeInType="ifSlowLoad" ns:highlightColor="@color/card_image_colorfilter" />
+            </com.google.apps.dots.android.modules.widgets.bound.viewgroup.SizingLayout>
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:textAppearance="@android:style/TextAppearance.Small" android:textColor="@color/card_text_normal" android:ellipsize="end" android:layout_gravity="center" android:id="@id/source_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_quarter_padding" android:layout_marginBottom="20.0dip" android:singleLine="true" ns:bind__editModeText="Super Awesome Times" ns:customFont="REGULAR_SANS" />
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/swg_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/sub_with_google_description" android:layout_marginStart="@dimen/card_inner_content_2x_padding" android:layout_marginEnd="@dimen/card_inner_content_2x_padding" style="@style/Text.Metadata" />
+            <include layout="@layout/purchase_options_list" />
+        </LinearLayout>
+        <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:id="@id/psv" android:visibility="gone" android:text="@string/already_a_subscriber" style="@style/MeterLinkText" />
+    </LinearLayout>
+</ScrollView>
