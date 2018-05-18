@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <slide android:interpolator="@android:interpolator/fast_out_linear_in" android:duration="350" android:slideEdge="left">
+        <targets>
+            <target android:targetId="@id/browse_headers_root" />
+            <target android:targetId="@id/browse_orb" />
+        </targets>
+    </slide>
+    <slide android:interpolator="@android:interpolator/fast_out_linear_in" android:duration="350" android:slideEdge="right">
+        <targets>
+            <target android:excludeId="@id/browse_headers_root" />
+            <target android:excludeId="@id/browse_orb" />
+        </targets>
+    </slide>
+    <fade android:interpolator="@android:interpolator/fast_out_linear_in" android:duration="350">
+        <targets>
+            <target android:excludeId="@id/browse_headers_root" />
+        </targets>
+    </fade>
+</transitionSet>
