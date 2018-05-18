@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/event_info_progress_bar_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ProgressBar android:id="@id/event_info_progress_bar" android:layout_width="@dimen/info_segment_single_height" android:layout_height="@dimen/info_segment_single_height" android:layout_marginTop="24.0dip" android:indeterminate="true" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/event_info" android:background="@android:color/white" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/view_screen_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:id="@id/segment_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <FrameLayout android:id="@id/header_action_bar" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.google.android.calendar.common.view.ClickTargetFrameLayout android:id="@id/cancel" android:contentDescription="@string/close_label" style="@style/HeadlineButtonContainer">
+                        <ImageView style="@style/HeadlineCloseButton" />
+                    </com.google.android.calendar.common.view.ClickTargetFrameLayout>
+                    <LinearLayout android:gravity="center_vertical" android:layout_gravity="end" android:orientation="horizontal" android:id="@id/overflow_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </FrameLayout>
+            </FrameLayout>
+            <com.google.android.calendar.swipeclosing.DraggableScrollView android:id="@id/segments_scroll" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:importantForAccessibility="yes">
+                <LinearLayout android:orientation="vertical" android:id="@id/segments" android:paddingTop="@dimen/info_scroll_padding_top" android:paddingBottom="@dimen/info_scroll_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.google.android.calendar.swipeclosing.DraggableScrollView>
+        </LinearLayout>
+        <FrameLayout android:id="@id/info_action_edit" android:padding="@dimen/info_edit_fill_padding" android:clipToPadding="false" android:descendantFocusability="afterDescendants" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/info_rich_headline_edit_button_margin_top" android:layout_marginStart="@dimen/view_screen_edit_fab_start_margin">
+            <com.google.android.calendar.common.view.ClickTargetFrameLayout android:id="@id/info_action_edit_hit" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/edit_label" android:elevation="@dimen/info_edit_elevation">
+                <ImageView android:layout_gravity="center" android:focusable="true" android:layout_width="@dimen/info_icon_size" android:layout_height="@dimen/info_icon_size" android:src="@drawable/quantum_ic_edit_white_24" android:contentDescription="@string/empty_description" style="@style/NotImportantForAccessibility" />
+            </com.google.android.calendar.common.view.ClickTargetFrameLayout>
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/command_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+</FrameLayout>

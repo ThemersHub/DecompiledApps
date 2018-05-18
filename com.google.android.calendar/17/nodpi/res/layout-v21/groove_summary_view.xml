@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:autoresizetext="http://schemas.android.com/apk/res-auto">
+    <com.google.android.libraries.material.autoresizetext.AutoResizeTextView android:textSize="@dimen/groove_summary_title_max" android:ellipsize="end" android:id="@id/summary_title" android:paddingTop="0.0dip" android:paddingBottom="@dimen/groove_selection_title_with_divider_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:paddingEnd="@dimen/groove_selection_title_padding_right" autoresizetext:autoResizeText_resizeStepUnit="unitSp" autoresizetext:autoResizeText_minTextSize="@dimen/groove_summary_title_min" style="@style/GrooveCreationWizardTitle" />
+    <View android:id="@id/divider" android:layout_width="fill_parent" style="@style/Divider"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <FrameLayout android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/groove_fab_margin_top" android:layout_marginEnd="@dimen/groove_fab_margin_right">
+        <com.google.android.calendar.common.view.fab.FloatingActionButton android:layout_gravity="center" android:id="@id/floating_action_button" android:src="@drawable/quantum_ic_done_white_24" android:contentDescription="@string/groove_schedule_sessions" style="@style/MiniFloatingActionButton" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:background="@android:color/transparent" android:clickable="false" android:layout_width="@dimen/groove_progress_spinner_size" android:indeterminateTint="@android:color/white" style="@style/FloatingActionButtonOverlay" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/contract_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/contract" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/groove_selection_padding_horizontal" android:paddingEnd="@dimen/groove_selection_padding_horizontal">
+            <TextView android:id="@id/summary_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/groove_summary_header_margin_bottom" android:text="@string/groove_let_calendar_suggest" style="@style/GrooveSummaryText" />
+            <TextView android:id="@id/frequency_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/GrooveSummaryText" />
+            <TextView android:id="@id/duration_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/GrooveSummaryText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/edit_button_container" android:layout_width="fill_parent" android:layout_height="@dimen/medium_tile_min_height" android:layout_marginTop="@dimen/groove_edit_details_margin_top" style="@style/GrooveCreationWizardButton">
+            <TextView android:textSize="@dimen/groove_summary_text_text_size" android:textColor="@color/groove_wizard_button_black" android:id="@id/calendar_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/groove_summary_small_text_size" android:textColor="@color/groove_wizard_button_black" android:id="@id/more_options_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/groove_edit_details" android:contentDescription="@string/groove_edit_details_accessibility" android:textAllCaps="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@id/waiting_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/groove_waiting_text_margin_top" android:importantForAccessibility="no" android:paddingStart="@dimen/groove_selection_padding_horizontal" android:paddingEnd="@dimen/groove_selection_padding_horizontal" style="@style/GrooveScheduleWaitingText" />
+</merge>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.calendar.newapi.commandbar.SmartRsvpBottomBar android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/command_bar" android:background="@android:color/white" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="@color/event_info_action_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/action_container" android:layout_width="fill_parent" android:layout_height="@dimen/info_segment_single_height">
+        <TextView android:id="@id/bottom_bar_description" android:focusable="true" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:importantForAccessibility="yes" style="@style/ResponsePrompt.ProposeTime" />
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:background="@color/material_grey_300" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <RelativeLayout android:id="@id/bottom_view" android:background="@android:color/white" android:paddingRight="15.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/info_segment_single_height" android:layout_below="@id/action_container">
+        <android.support.design.chip.Chip android:theme="@style/Theme.MaterialComponents" android:id="@id/propose_new_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:chipBackgroundColor="@android:color/white" app:chipStrokeColor="@color/material_grey_300" app:chipStrokeWidth="1.0dip" app:chipText="@string/propose_time_chip_text" style="android:style/Widget.GoogleMaterial.Chip.Suggestive" />
+    </RelativeLayout>
+</com.google.android.calendar.newapi.commandbar.SmartRsvpBottomBar>

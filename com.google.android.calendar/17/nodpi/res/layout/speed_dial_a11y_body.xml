@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/speed_dial_fade" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/speed_dial_expanded_contents" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/speed_dial_event_container" android:text="@string/event" android:contentDescription="@string/accessibility_speeddial_event" style="@style/SpeedDialA11yButton" />
+        <TextView android:id="@id/speed_dial_task_container" android:text="@string/reminder" android:contentDescription="@string/accessibility_speeddial_reminder" style="@style/SpeedDialA11yButton" />
+        <TextView android:id="@id/speed_dial_groove_container" android:text="@string/groove" android:contentDescription="@string/accessibility_speeddial_groove" style="@style/SpeedDialA11yButton" />
+        <include layout="@layout/speed_dial_a11y_body_groom" />
+        <include layout="@layout/speed_dial_a11y_body_ooo" />
+        <TextView android:id="@id/speed_dial_cancel_container" android:text="@string/cancel_speeddial" android:contentDescription="@string/accessibility_speeddial_cancel" style="@style/SpeedDialA11yButton" />
+    </LinearLayout>
+</merge>

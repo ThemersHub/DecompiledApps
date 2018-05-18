@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/background_light" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:text="@string/calendar_inconsistent_details" />
+    <RelativeLayout android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ProgressBar android:id="@id/event_info_progress_bar" android:layout_width="@dimen/info_segment_single_height" android:layout_height="@dimen/info_segment_single_height" android:indeterminate="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/content" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/report_small_text_size" android:typeface="monospace" android:id="@id/report" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/report_text_view_margin" android:singleLine="false" android:fontFamily="monospace" />
+    </ScrollView>
+    <include layout="@layout/line_separator_horizontal" />
+    <Button android:textSize="@dimen/report_button_text_size" android:id="@id/send" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/report_send" android:textAllCaps="true" />
+    <include layout="@layout/line_separator_horizontal" />
+    <Button android:textSize="@dimen/report_button_text_size" android:id="@id/dontSend" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/report_do_not_send" android:textAllCaps="true" />
+    <include layout="@layout/line_separator_horizontal" />
+    <Button android:textSize="@dimen/report_button_text_size" android:id="@id/neverSend" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/report_never_send" android:textAllCaps="true" />
+</LinearLayout>

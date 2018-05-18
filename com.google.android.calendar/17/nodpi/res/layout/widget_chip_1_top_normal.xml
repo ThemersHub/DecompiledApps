@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="@dimen/widget_day_height" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/widget_day_column" />
+    <FrameLayout android:id="@id/widget_row" android:paddingTop="@dimen/widget_padding_chip_top" android:paddingBottom="@dimen/widget_padding_chip_top" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/WidgetChip_Row">
+        <ImageView android:id="@id/agenda_item_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/widget_chip_fill" android:scaleType="fitXY" android:contentDescription="@string/accessibility_event_open" />
+        <LinearLayout style="@style/WidgetChip_Text_Layout_Normal_Solo">
+            <ImageView android:id="@id/chip_icon" style="@style/WidgetChip_Icon" />
+            <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/WidgetChip_Title" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/loading_view" style="@style/RoomBookingLoadingTile">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/loading_error" style="@style/RoomBookingLoadingTile">
+        <ImageView android:src="@drawable/quantum_ic_error_grey600_24" style="@style/RoomBookingLeftIcon" />
+        <LinearLayout android:gravity="start|center" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/second_keyline">
+            <TextView android:textColor="@color/gray_75" android:text="@string/room_booking_pagination_error" android:layout_weight="1.0" style="@style/RoomBookingRoomText" />
+            <Button android:textColor="@color/quantum_googblue" android:id="@id/try_again_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/try_again" android:layout_weight="0.0" android:textAllCaps="true" android:fontFamily="@string/roboto_medium" android:paddingStart="@dimen/first_keyline" android:paddingEnd="@dimen/first_keyline" style="@style/ResponsePaddedButtonI18n" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

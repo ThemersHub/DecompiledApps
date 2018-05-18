@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/material_list_vertical_padding" android:paddingBottom="@dimen/material_list_vertical_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/only_available_switch_tile" android:paddingTop="@dimen/material_list_vertical_padding" android:paddingBottom="@dimen/material_list_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/edit_segment_tile_height">
+        <TextView android:layout_gravity="start|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/room_booking_filters_only_available_rooms" android:layout_weight="1.0" android:textAlignment="viewStart" android:paddingStart="@dimen/edit_segment_horizontal_padding" style="@style/Edit.Text" />
+        <Switch android:layout_gravity="end|center" android:id="@id/only_available_switch" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="0.0" android:contentDescription="@string/room_booking_filters_only_available_rooms" android:paddingStart="@dimen/edit_segment_horizontal_padding" android:paddingEnd="@dimen/edit_segment_horizontal_padding" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/show_rooms_for_tile" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/large_tile_min_height">
+        <TextView android:id="@id/first_line_text" android:text="@string/room_booking_filters_show_rooms_for" android:paddingStart="@dimen/first_keyline" style="@style/Tile.TwoLine.First" />
+        <TextView android:id="@id/second_line_text" android:paddingStart="@dimen/first_keyline" style="@style/Tile.TwoLine.Second" />
+    </LinearLayout>
+</LinearLayout>

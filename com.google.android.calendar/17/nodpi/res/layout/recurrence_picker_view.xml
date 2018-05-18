@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.calendar.recurrencepicker.RecurrencePickerView android:orientation="vertical" android:id="@id/recurrence_picker_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+            <TextView android:id="@id/pre_interval_text" android:padding="@dimen/abc_control_padding_material" android:layout_width="wrap_content" android:layout_height="wrap_content" android:labelFor="@id/interval" style="@style/Recurrence.Text" />
+            <FrameLayout android:id="@id/first_frequency_holder" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:id="@id/post_interval_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Recurrence.Text" />
+            <FrameLayout android:id="@id/second_frequency_holder" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:id="@id/post_freq_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Recurrence.Text" />
+        </LinearLayout>
+        <Spinner android:id="@id/monthly_frequency_options" android:background="@null" android:padding="@dimen/abc_control_padding_material" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:minHeight="44.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/week_button_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:minHeight="56.0dip">
+            <TextView android:id="@id/weekday_buttons_label" android:padding="@dimen/abc_control_padding_material" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weekday_buttons_label" style="@style/Recurrence.Text" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/week_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:id="@id/end_options_label" android:padding="@dimen/abc_control_padding_material" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/end_label" style="@style/Recurrence.Text" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/infinite_radio_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip">
+            <RadioButton android:id="@id/infinite_duration_radio" android:text="@string/infinite_duration_label" style="@style/Recurrence.RadioButton" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/date_radio_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip">
+            <RadioButton android:id="@id/date_duration_radio" style="@style/Recurrence.RadioButton" />
+            <TextView android:id="@id/date_duration_text" android:background="@drawable/abc_edit_text_material" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Recurrence.BodyEditText" />
+            <TextView android:id="@id/date_duration_post_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Recurrence.Text" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/count_radio_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip">
+            <RadioButton android:id="@id/count_duration_radio" style="@style/Recurrence.RadioButton" />
+            <EditText android:id="@id/count_duration_edit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLength="3" android:inputType="number" style="@style/Recurrence.BodyEditText" />
+            <TextView android:id="@id/count_duration_post_text" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:labelFor="@id/count_duration_edit" style="@style/Recurrence.Text" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.calendar.recurrencepicker.RecurrencePickerView>
