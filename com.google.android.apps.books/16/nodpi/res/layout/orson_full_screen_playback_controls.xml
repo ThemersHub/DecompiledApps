@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/OrsonLightThemeOverlay" android:gravity="center" android:orientation="horizontal" android:layout_width="296.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/sleep_timer" android:importantForAccessibility="no" style="@style/OrsonPlaybackIconSize">
+        <ImageView android:id="@id/snooze_icon" android:padding="10.0dip" android:contentDescription="@string/accessibility_sleep_timer" app:srcCompat="@drawable/ic_snooze_black_24dp" app:tint="@color/orson_grey_icon" style="@style/OrsonPlaybackIcon.Outer" />
+        <TextView android:textColor="@color/orson_grey_subtext" android:id="@id/sleep_subtext" android:visibility="gone" android:importantForAccessibility="no" style="@style/OrsonPlaybackIconSubText" />
+    </FrameLayout>
+    <ImageButton android:id="@id/back" android:contentDescription="@string/accessibility_rewind" app:srcCompat="@drawable/quantum_ic_replay_30_white_48" app:tint="@color/orson_grey_icon" style="@style/OrsonPlaybackIcon.Inner" />
+    <ImageButton android:id="@id/play" android:contentDescription="@string/orson_pause" app:srcCompat="@drawable/ic_pause_hollow_48dp" app:tint="@color/orson_control_corpora" style="@style/OrsonPlaybackIcon.Center" />
+    <ImageButton android:id="@id/forward" android:contentDescription="@string/accessibility_fast_forward" app:srcCompat="@drawable/quantum_ic_forward_30_white_48" app:tint="@color/orson_grey_icon" style="@style/OrsonPlaybackIcon.Inner" />
+    <com.google.android.apps.play.books.ublib.widget.ActionTextView android:textAppearance="@style/BooksPlayMediumPlainText" android:textSize="16.0dip" android:textColor="@color/orson_control_corpora" android:gravity="center" android:id="@id/speed_button" android:maxLines="1" android:contentDescription="@null" style="@style/OrsonPlaybackIcon.Outer" />
+</LinearLayout>

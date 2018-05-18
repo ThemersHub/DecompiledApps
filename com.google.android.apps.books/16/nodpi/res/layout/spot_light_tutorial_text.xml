@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/info_card_primary_light" android:id="@id/textView" android:paddingTop="@dimen/edu_card_vpadding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/spotlight_edu_title" android:layout_alignParentLeft="true" style="@style/InfoCards.Title.Edu" />
+    <TextView android:textColor="@color/info_card_secondary_light" android:id="@id/spotlight_body_text" android:paddingTop="@dimen/edu_card_vpadding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/spotlight_button_panel" android:layout_below="@id/textView" android:layout_alignParentLeft="true" style="@style/InfoCards.Subtitle.Edu" />
+    <com.google.android.play.layout.PlayEduCardButtonPanel android:layout_gravity="end" android:id="@id/spotlight_button_panel" android:paddingBottom="@dimen/edu_card_vpadding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/PlayEduCardButtonPanel">
+        <Button android:textColor="@color/info_card_primary_light" android:id="@id/spotlight_dismiss" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dismiss_label" android:contentDescription="@string/dismiss_label" style="@style/InfoCards.InfoCardButton.EduCard" />
+        <Button android:id="@id/spotlight_edu_cta" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/InfoCards.InfoCardButton.EduCard" />
+    </com.google.android.play.layout.PlayEduCardButtonPanel>
+</merge>

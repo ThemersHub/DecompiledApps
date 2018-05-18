@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/books_corpora_primary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <view android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_marginBottom="@dimen/player_cover_top_margin" class="android.support.v7.widget.Toolbar" style="@style/OrsonToolbarStyle" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/player_cover_weight">
+        <View android:id="@id/divider" android:layout_width="0.0px" android:layout_height="0.0px" android:layout_centerInParent="true" android:importantForAccessibility="no" />
+        <View android:id="@id/below_divider" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/divider" android:layout_alignParentBottom="true" android:importantForAccessibility="no" />
+        <include android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true" layout="@layout/orson_cover_with_progress" />
+        <TextView android:textSize="@dimen/books_play_medium_size" android:textColor="@color/play_secondary_text" android:id="@id/overall_time_remaining" android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/cover_cardview" android:layout_below="@id/divider" android:layout_toEndOf="@id/cover_cardview" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/controls_container" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/player_controls_weight">
+        <include layout="@layout/orson_chapter_title_book_title_author" />
+        <include layout="@layout/orson_chapter_scrubber" />
+        <include layout="@layout/orson_full_screen_playback_controls" />
+    </LinearLayout>
+</LinearLayout>

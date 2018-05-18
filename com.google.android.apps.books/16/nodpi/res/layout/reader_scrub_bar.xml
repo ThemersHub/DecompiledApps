@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:visibility="gone" android:clickable="true" android:layout_width="0.0dip" android:layout_height="0.0dip" class="com.google.android.apps.play.books.widget.ScrubBar"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <view android:id="@id/scrub_track" android:focusable="true" android:layout_width="fill_parent" android:layout_height="@dimen/scrubber_bar_height" android:layout_marginLeft="@dimen/scrubber_track_view_margin" android:layout_marginRight="@dimen/scrubber_track_view_margin" class="com.google.android.apps.play.books.widget.ScrubTrackView" />
+    <FrameLayout android:id="@id/scrub_undo_frame" android:layout_width="@dimen/scrubber_undo_tap_target_width" android:layout_height="@dimen/scrubber_undo_tap_target_height">
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/scrub_undo" android:background="?scrubberUndoDrawable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+    </FrameLayout>
+    <ImageView android:id="@id/scrub_knob" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="?scrubberDrawable" android:scaleType="center" android:contentDescription="@null" />
+    <include layout="@layout/skim_buy_button" />
+</view>

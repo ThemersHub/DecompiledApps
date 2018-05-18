@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/content_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/progress_bar_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/read_now_stream_fragment_spacer" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <android.support.v4.widget.ContentLoadingProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:progressBarStyleLarge" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/read_now_stream_fragment_spacer" />
+        <TextView android:gravity="center" android:padding="@dimen/explore_card_detail_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/explore_loading_error" android:layout_weight="1.0" style="@style/ExploreError" />
+    </LinearLayout>
+    <include layout="@layout/stream_view_common_contents" />
+</FrameLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/selection_popup_root" android:background="?cardBackgroundDrawable" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ublibsvg="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/non_color_layout" android:padding="@dimen/selection_menu_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.play.books.ublib.svg.SvgImageButton android:id="@id/add_note_button" android:contentDescription="@string/menu_note" ublibsvg:svgDrawableFill="?grayD000L700" ublibsvg:svgRtlAutoMirror="true" ublibsvg:svgSrc="@raw/ic_note_add_24dp" style="@style/SelectionButton" />
+        <com.google.android.apps.play.books.ublib.svg.SvgImageButton android:id="@id/copy_button" android:contentDescription="@string/menu_copy" ublibsvg:svgDrawableFill="?grayD000L700" ublibsvg:svgRtlAutoMirror="true" ublibsvg:svgSrc="@raw/ic_content_copy_24dp" style="@style/SelectionButton" />
+        <com.google.android.apps.play.books.ublib.svg.SvgImageButton android:id="@id/translate_button" android:contentDescription="@string/menu_translate" ublibsvg:svgDrawableFill="?grayD000L700" ublibsvg:svgSrc="@raw/ic_translate_24dp" style="@style/SelectionButton" />
+        <com.google.android.apps.play.books.ublib.svg.SvgImageButton android:id="@id/share_button" android:contentDescription="@string/menu_share" ublibsvg:svgDrawableFill="?grayD000L700" ublibsvg:svgRtlAutoMirror="true" ublibsvg:svgSrc="@raw/ic_share_24dp" style="@style/SelectionButton" />
+        <com.google.android.apps.play.books.ublib.svg.SvgImageButton android:id="@id/search_book_button" android:contentDescription="@string/menu_search_book" ublibsvg:svgDrawableFill="?grayD000L700" ublibsvg:svgSrc="@raw/ic_search_24dp" style="@style/SelectionButton" />
+    </LinearLayout>
+    <View android:id="@id/divider" android:background="?android:listDivider" android:visibility="visible" android:layout_width="@dimen/selection_divider_thickness" android:layout_height="fill_parent" android:layout_marginTop="@dimen/selection_divider_margin" android:layout_marginBottom="@dimen/selection_divider_margin" />
+    <view android:orientation="vertical" android:id="@id/highlight_color_selector" android:padding="@dimen/selection_menu_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" class="com.google.android.apps.play.books.app.HighlightColorSelector">
+        <ImageButton android:id="@id/highlight_color_selection_red" android:contentDescription="@string/menu_highlight_color_red" style="@style/SelectionHighlightColorSwatch" />
+        <ImageButton android:id="@id/highlight_color_selection_yellow" android:contentDescription="@string/menu_highlight_color_yellow" style="@style/SelectionHighlightColorSwatch" />
+        <ImageButton android:id="@id/highlight_color_selection_green" android:contentDescription="@string/menu_highlight_color_green" style="@style/SelectionHighlightColorSwatch" />
+        <ImageButton android:id="@id/highlight_color_selection_blue" android:contentDescription="@string/menu_highlight_color_blue" style="@style/SelectionHighlightColorSwatch" />
+        <com.google.android.apps.play.books.ublib.svg.SvgImageButton android:id="@id/remove_highlight_button" android:visibility="gone" android:contentDescription="@string/menu_remove_highlight" ublibsvg:svgDrawableFill="?grayD000L700" ublibsvg:svgSrc="@raw/ic_highlight_remove_24dp" style="@style/SelectionButton" />
+    </view>
+</LinearLayout>

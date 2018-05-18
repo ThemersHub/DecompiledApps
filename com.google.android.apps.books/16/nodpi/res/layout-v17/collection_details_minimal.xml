@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/explore_collection_detail_horizontal_padding" android:paddingTop="@dimen/explore_collection_top_padding" android:paddingRight="@dimen/explore_collection_detail_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/leading_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/explore_collection_leading_icon_margin" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/explore_collection_leading_icon_margin" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ExploreTitle" />
+            <TextView android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/explore_subtitle_top_margin" style="@style/ExploreSubTitle" />
+        </LinearLayout>
+        <com.google.android.apps.play.books.ublib.widget.ActionTextView android:id="@id/action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more" android:contentDescription="@string/explore_collection_more_a11y" style="@style/ExploreActionButton" />
+    </LinearLayout>
+    <TextView android:ellipsize="end" android:id="@id/description" android:paddingLeft="@dimen/explore_collection_detail_horizontal_padding" android:paddingRight="@dimen/explore_collection_detail_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/explore_description_top_margin" android:maxLines="@integer/explore_description_max_lines" style="@style/ExploreDescription" />
+</LinearLayout>

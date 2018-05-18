@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/survey_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="@drawable/bottomsheet_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    <FrameLayout android:background="@color/material_grey_50" android:layout_width="fill_parent" android:layout_height="72.0dip">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/take_survey" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="72.0dip">
+            <ImageView android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="@dimen/survey_prompt_padding" android:src="@mipmap/ic_launcher_play_books" android:importantForAccessibility="no" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/survey_prompt_padding" android:layout_marginRight="@dimen/survey_prompt_padding" android:text="@string/survey_prompt_title" style="@style/PlayCardTitle.Mini" />
+                <TextView android:textColor="@color/material_grey_700" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/survey_prompt_padding" android:layout_marginRight="@dimen/survey_prompt_padding" android:text="@string/survey_prompt_subtitle" style="@style/PlayCardTitle.Mini" />
+            </LinearLayout>
+            <ImageView android:id="@id/decline_survey_button" android:background="?android:selectableItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginRight="@dimen/survey_prompt_padding" android:scaleType="center" android:contentDescription="@android:string/cancel" app:srcCompat="@drawable/quantum_ic_close_vd_theme_24" app:tint="@color/material_grey_600" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

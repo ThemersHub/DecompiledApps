@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?cardBackgroundDrawable" style="@style/InfoCards.CardBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/info_card_vpadding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/offline_dictionary_card_title" android:layout_weight="1.0" android:textIsSelectable="false" style="@style/InfoCards.Title" />
+        <ImageButton android:id="@id/od_info_button" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginRight="@dimen/info_card_hpadding" android:layout_marginEnd="@dimen/info_card_hpadding" app:srcCompat="@drawable/quantum_ic_info_outline_vd_theme_24" app:tint="?grayD000L700" />
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/od_progress" android:paddingTop="@dimen/info_card_vpadding" android:paddingBottom="@dimen/info_card_vpadding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:progressBarStyleLarge" />
+    <LinearLayout android:orientation="vertical" android:id="@id/od_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:paddingTop="@dimen/info_card_vpadding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/offline_dictionary_card_message" android:textIsSelectable="false" style="@style/InfoCards.Subtitle" />
+        <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <Button android:textColor="?cardPrimaryColor" android:id="@id/od_dismiss" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_thanks" android:contentDescription="@string/no_thanks" style="@style/InfoCards.InfoCardButton" />
+            <Button android:id="@id/od_download" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="12.0dip" android:text="@string/offline_dictionary_download_button" android:contentDescription="@string/offline_dictionary_download_button" android:layout_marginStart="8.0dip" android:layout_marginEnd="12.0dip" style="@style/InfoCards.InfoCardButton" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

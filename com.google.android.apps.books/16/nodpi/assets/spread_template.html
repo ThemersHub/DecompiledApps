@@ -1,0 +1,40 @@
+<!-- Template to build the spread container. -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>__TITLE__</title>
+  <meta id="viewport_id" name="viewport"
+        content="initial-scale=1.0,minimum-scale=__MIN_SCALE__,maximum-scale=100,user-scalable=yes,
+        __VIEWPORT_SIZE__"/>
+  <meta name="format-detection" content="address=no,email=no,telephone=no"/>
+  <script type="text/javascript" src="assets/__SPREAD_API_JS__"></script>
+  <script type="text/javascript" src="assets/spread.js"></script>
+  <script type="text/javascript">
+    // We want to make sure the engine becomes available before iframes start loading.
+    window.engine = new ocean.android.SpreadApi();
+  </script>
+</head>
+<body>
+  <!--
+    The following div is intended to work around a bug in webview (see b/18251800) that causes
+    serif and other system fonts to never load if they were not referenced in the original
+    document load.
+  -->
+  <div style="position: absolute; left: -1000px; visibility: hidden;">
+    <div style="font-family: serif">serif</div>
+    <div style="font-family: sans-serif">sans-serif</div>
+  </div>
+
+  <!--
+    Since the page is loaded with setUseWideViewPort(false), WebView tries to zoom the letter boxed
+    content to fit the viewport... so we add a background of the right size to trick it.
+  -->
+  __BACKGROUND_DIV__
+
+  __IFRAME(S)__
+
+  <script type="text/javascript">
+    initializeSpread(document, [__IFRAME_ID(S)__], __IS_FIXEDLAYOUT__, __IS_ANIMATING__);
+  </script>
+</body>
+</html>

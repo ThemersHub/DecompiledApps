@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:gravity="center|top" android:orientation="vertical" android:background="@color/eob_background" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.apps.play.books.eob.TextureEndOfBookView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/short_message" style="@style/EndOfBookField.Message" />
+    <LinearLayout android:layout_gravity="center|top" android:orientation="horizontal" android:paddingTop="@dimen/eob_land_sample_top_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <RelativeLayout android:layout_gravity="right" android:id="@id/eob_cover_container" android:layout_width="0.0dip" android:layout_height="@dimen/eob_image_height" android:layout_marginRight="@dimen/eob_land_sample_side_margin" android:layout_weight="1.0">
+            <ImageView android:id="@id/cover" android:layout_width="@dimen/eob_image_width" android:layout_height="@dimen/eob_image_height" android:scaleType="fitStart" android:layout_alignParentRight="true" android:contentDescription="@string/cover_description" />
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="start" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/eob_land_sample_side_margin" android:layout_weight="1.0">
+            <TextView android:gravity="start" android:layout_gravity="start" android:id="@id/volume_title" android:layout_width="@dimen/eob_text_field_width" android:layout_height="wrap_content" android:layout_margin="0.0dip" style="@style/EndOfBookField.Title" />
+            <TextView android:gravity="start" android:layout_gravity="start" android:id="@id/volume_author" android:layout_width="@dimen/eob_text_field_width" android:layout_height="wrap_content" android:layout_margin="0.0dip" style="@style/EndOfBookField.Author" />
+            <com.google.android.apps.play.books.ublib.widget.ActionTextView android:layout_gravity="start" android:id="@id/buy_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_marginTop="@dimen/eob_divider_padding" android:text="@string/eob_button_buy" android:contentDescription="@string/eob_button_buy" style="@style/EndOfBookBlueButton" />
+            <com.google.android.apps.play.books.ublib.widget.ActionTextView android:layout_gravity="start" android:id="@id/eob_gift_button" android:background="?selectableItemBackground" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/eob_divider_padding" android:text="@string/menu_send_gift" android:contentDescription="@string/menu_send_gift" style="@style/EndOfBookBlueOnWhiteButton" />
+        </LinearLayout>
+    </LinearLayout>
+</view>

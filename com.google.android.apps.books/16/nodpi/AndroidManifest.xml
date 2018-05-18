@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="28" android:installLocation="auto" package="com.google.android.apps.books">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:minSdkVersion="23" android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.google.android.apps.books.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.apps.books.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <application android:allowBackup="true" android:backupAgent="com.google.android.apps.play.books.app.BooksBackupAgent" android:fullBackupContent="@xml/backup_scheme" android:fullBackupOnly="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher_play_books" android:label="@string/app_name" android:largeHeap="true" android:name="com.google.android.apps.play.books.app.TabletBooksApplication" android:resizeableActivity="true" android:restoreAnyVersion="true" android:restrictedAccountType="com.google" android:roundIcon="@mipmap/logo_play_books_round_launcher_color_48dp" android:supportsRtl="@bool/supportsRtl">
+        <meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.google.android.apps.play.books.cast.CastOptionsProvider"/>
+        <activity android:excludeFromRecents="true" android:label="@string/main_activity_name" android:name="com.google.android.apps.play.books.firstrun.FirstRunActivity" android:theme="@style/HomeActivityLaunch"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.gms.appdatasearch" android:resource="@xml/appdatasearch"/>
+        <meta-data android:name="android.max_aspect" android:value="2.4"/>
+        <activity android:excludeFromRecents="true" android:label="@string/main_activity_name" android:name="com.google.android.apps.play.books.app.BooksActivity" android:taskAffinity=":trampoline" android:theme="@android:style/Theme.NoDisplay"/>
+        <activity-alias android:label="@string/main_activity_name" android:name="com.google.android.apps.books.app.BooksActivity" android:targetActivity="com.google.android.apps.play.books.app.BooksActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/launcher_shortcuts"/>
+        </activity-alias>
+        <activity android:label="@string/main_activity_name" android:launchMode="singleTask" android:name="com.google.android.apps.play.books.app.HomeActivity" android:theme="@style/HomeActivityLaunch" android:windowSoftInputMode="adjustPan">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="play.google.com" android:path="/books" android:scheme="https"/>
+                <data android:host="play.google.com" android:path="/books/" android:scheme="https"/>
+                <data android:host="play.google.com" android:path="/books/home/onboarding" android:scheme="http"/>
+                <data android:host="play.google.com" android:path="@string/shop_intent_path" android:scheme="http"/>
+                <data android:host="play.google.com" android:path="@string/shop_intent_path" android:scheme="https"/>
+                <data android:host="play.google.com" android:path="/books/getapp" android:scheme="http"/>
+                <data android:host="play.google.com" android:path="/books/getapp" android:scheme="https"/>
+                <data android:host="play.google.com" android:path="/books/getapp2" android:scheme="http"/>
+                <data android:host="play.google.com" android:path="/books/getapp2" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.books.app.HomeActivity" android:targetActivity="com.google.android.apps.play.books.app.HomeActivity"/>
+        <activity android:autoRemoveFromRecents="true" android:documentLaunchMode="intoExisting" android:label="@string/main_activity_name" android:name="com.google.android.apps.play.books.app.ReadingActivity" android:theme="@style/ReadingActivityDay" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="play.google.com" android:pathPrefix="/books/reader" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="googlebooks"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:label="@string/main_activity_name" android:name="com.google.android.apps.play.books.app.ConsumptionTrampolineActivity" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="com.google.android.apps.books.intent.action.READ"/>
+                <data android:host="com.google.android.apps.books" android:pathPrefix="/volumes/" android:scheme="gsa"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize" android:name="com.google.android.apps.play.books.app.FullScreenVideoActivity" android:screenOrientation="sensor" android:theme="@style/Video"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.google.android.apps.play.books.help.CopyVersionActivity" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:label="@string/shortcut_name" android:name="com.google.android.apps.play.books.app.BooksShortcutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:theme="@style/FlatBlueLicenses"/>
+        <receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.google.android.apps.play.books"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.play.books.gcm.BooksGcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.play.books.gcm.BooksInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.play.books.gcm.CloudNotificationIntentService"/>
+        <activity android:excludeFromRecents="true" android:label="Books.GCM" android:name="com.google.android.apps.play.books.gcm.CloudNotificationRoutingActivity" android:theme="@android:style/Theme.NoDisplay"/>
+        <service android:exported="true" android:name="com.google.android.apps.play.books.gcm.LogFlushTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.play.books.gcm.NotificationFetchTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.play.books.gcm.GcmRegistrationTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.google.android.apps.books" android:exported="true" android:name="com.google.android.apps.play.books.database.main.BooksProvider"/>
+        <provider android:authorities="com.google.android.apps.books.suggest" android:exported="true" android:name="com.google.android.gms.appdatasearch.util.SuggestionsProvider" android:permission="android.permission.GLOBAL_SEARCH"/>
+        <provider android:authorities="com.google.android.apps.books.public" android:exported="true" android:name="com.google.android.apps.play.books.database.main.BooksProvider$PublicProvider"/>
+        <service android:name="com.google.android.apps.play.books.service.SyncService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/syncadapter"/>
+        </service>
+        <service android:name="com.google.android.apps.play.books.app.orson.service.OrsonDownloadService"/>
+        <receiver android:name="com.google.android.apps.play.books.app.AccountsReceiver">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.play.books.app.BooksAlarmBroadcastReceiver"/>
+        <receiver android:name="com.google.android.apps.play.books.app.NotificationBroadcastReceiver"/>
+        <service android:exported="false" android:name="com.google.android.apps.play.books.appwidget.BooksAppWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <receiver android:enabled="@string/widget_enabled" android:name="com.google.android.apps.books.appwidget.BooksAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_info"/>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:label="@string/uninstall_books_label" android:name="com.google.android.apps.play.books.app.RecommendUninstallActivity" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:label="@string/app_settings_activity_title" android:name="com.google.android.apps.play.books.app.AppSettingsActivity" android:theme="@style/FlatBlueSettings"/>
+        <activity android:exported="false" android:label="@string/main_activity_name" android:launchMode="singleTop" android:name="com.google.android.apps.play.books.app.WebViewTestActivity" android:theme="@style/ReadingActivityDay" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="true" android:label="@string/onboard_activity_title" android:name="com.google.android.apps.play.books.onboard.BooksOnboardHostActivity" android:theme="@style/FlatBlueOnboard">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="play.google.com" android:path="/books/onboarding" android:scheme="http"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/details_page_activity_title" android:name="com.google.android.apps.play.books.details.BookDetailsActivity" android:theme="@style/DetailsPage"/>
+        <activity android:label="@string/table_of_contents_title" android:name="com.google.android.apps.play.books.app.EbookTableOfContentsActivityLight" android:theme="@style/TableOfContentsLight"/>
+        <activity android:label="@string/table_of_contents_title" android:name="com.google.android.apps.play.books.app.EbookTableOfContentsActivityDark" android:theme="@style/TableOfContentsDark"/>
+        <activity android:label="@string/table_of_contents_title" android:name="com.google.android.apps.play.books.app.OrsonTableOfContentsActivityLight" android:theme="@style/TableOfContentsLight"/>
+        <activity android:label="@string/table_of_contents_title" android:name="com.google.android.apps.play.books.app.OrsonTableOfContentsActivityDark" android:theme="@style/TableOfContentsDark"/>
+        <activity android:label="@string/collection_activity_title" android:name="com.google.android.apps.play.books.collection.CollectionActivity" android:theme="@style/ExploreActivity"/>
+        <activity android:label="@string/uploads_activity_name" android:launchMode="singleTop" android:name="com.google.android.apps.play.books.app.UploadsActivityAlias" android:theme="@style/HomeActivity" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:mimeType="application/epub+zip"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="*" android:mimeType="*/*" android:pathPattern="/.*\\.epub" android:scheme="file"/>
+            </intent-filter>
+        </activity>
+        <activity android:enabled="false" android:label="@string/uploads_activity_name" android:launchMode="singleTop" android:name="com.google.android.apps.play.books.app.UploadsActivityAliasPdf" android:theme="@style/HomeActivity" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:mimeType="application/pdf"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="*" android:mimeType="*/*" android:pathPattern="/.*\\.pdf" android:scheme="file"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.google.android.apps.play.books.app.series.SeriesActivity" android:theme="@style/SeriesActivity"/>
+        <activity android:autoRemoveFromRecents="true" android:documentLaunchMode="intoExisting" android:exported="true" android:label="@string/main_activity_name" android:name="com.google.android.apps.play.books.app.orson.OrsonBookActivity" android:theme="@style/OrsonBook">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="play.google.com" android:pathPrefix="/books/listen" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:label="@string/main_activity_name" android:name="com.google.android.apps.play.books.app.orson.OrsonTrampolineActivity" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="play.google.com" android:pathPrefix="/books/cookbook" android:scheme="https"/>
+                <data android:host="play.google.com" android:pathPrefix="/books/ab" android:scheme="https"/>
+                <data android:host="play.google.com" android:pathPrefix="/books/absample" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="android.support.v4.media.session.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.apps.play.books.app.orson.service.BooksMediaBrowseService">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.android.gms.car.application" android:resource="@xml/automotive_app_desc"/>
+        <meta-data android:name="com.google.android.gms.car.notification.SmallIcon" android:resource="@drawable/ic_play_books_white_24dp"/>
+        <activity android:label="@string/main_activity_name" android:name="com.google.android.apps.play.books.splash.SplashActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:label="@string/testing_options_activity_title" android:name="com.google.android.apps.play.books.testingoptions.TestingOptionsActivity"/>
+        <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver"/>
+        <service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService"/>
+        <service android:name="com.google.android.gms.cast.framework.ReconnectionService"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

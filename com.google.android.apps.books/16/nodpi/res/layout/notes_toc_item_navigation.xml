@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="@dimen/notes_a_gutter" android:paddingTop="2.0dip" android:paddingRight="@dimen/notes_a_gutter" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:books="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/note_background_toc" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/color_bar_for_highlight_in_toc" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorPrimary" android:gravity="start" android:id="@id/highlighted_text_in_toc" android:background="?selectableItemBackground" android:padding="@dimen/notes_b_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/PlatformSerifItalic" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorPrimary" android:id="@id/position_in_toc" android:background="?selectableItemBackground" android:paddingTop="@dimen/notes_b_padding" android:paddingRight="@dimen/notes_b_padding" android:paddingBottom="@dimen/notes_b_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/BooksPlayPlainText" />
+        </LinearLayout>
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorSecondary" android:id="@id/note_text_in_toc" android:background="?selectableItemBackground" android:padding="@dimen/notes_b_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/BooksPlayPlainText" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:id="@id/info_cards_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.apps.play.books.widget.TransientInfoCardsLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:books="http://schemas.android.com/apk/res-auto" xmlns:ublibsvg="http://schemas.android.com/apk/res-auto">
+    <view android:id="@id/fragment_reader_content" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.apps.play.books.widget.base.EventsCapturingLayout">
+        <FrameLayout android:id="@id/webview_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/pagesview_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include layout="@layout/book_view" />
+        <ViewStub android:layout_gravity="bottom" android:id="@id/reader_scrub_bar_stub" android:visibility="gone" android:layout="@layout/reader_scrub_bar" android:inflatedId="@id/reader_scrub_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include layout="@layout/search_scrub_bar" />
+        <ViewStub android:id="@id/search_results_list_stub" android:visibility="gone" android:layout="@layout/search_results_list_view" android:inflatedId="@id/search_results_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/selection_popup_frame" android:background="@android:color/transparent" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/special_page_view_holder" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/texture_loading" />
+            <include layout="@layout/texture_start" />
+            <include layout="@layout/texture_gap" />
+        </FrameLayout>
+    </view>
+    <View android:id="@id/cards_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" />
+    <view android:id="@id/cards" ublibsvg:horizontalItemMargin="@dimen/info_card_margin" ublibsvg:maxColumnWidth="@dimen/info_card_max_size" ublibsvg:verticalItemMargin="@dimen/info_card_margin" class="com.google.android.apps.play.books.infocards.widget.SuggestionGridLayout" style="@style/InfoCards.Layout" />
+</view>

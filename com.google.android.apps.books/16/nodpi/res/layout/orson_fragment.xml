@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/books_corpora_primary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <view android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_marginBottom="@dimen/player_cover_top_margin" class="android.support.v7.widget.Toolbar" style="@style/OrsonToolbarStyle" />
+    <include android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="@integer/player_cover_weight" layout="@layout/orson_cover_with_progress" />
+    <TextView android:textSize="@dimen/books_play_medium_size" android:textColor="@color/play_white" android:gravity="center" android:id="@id/overall_time_remaining" android:padding="@dimen/player_small_pad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/player_cover_bottom_margin" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/controls_container" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/player_controls_weight">
+        <include layout="@layout/orson_chapter_title_book_title_author" />
+        <include layout="@layout/orson_chapter_scrubber" />
+        <include layout="@layout/orson_full_screen_playback_controls" />
+    </LinearLayout>
+</LinearLayout>

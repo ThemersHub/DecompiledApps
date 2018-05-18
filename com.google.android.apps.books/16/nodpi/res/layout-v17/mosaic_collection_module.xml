@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:orientation="vertical" android:paddingBottom="@dimen/explore_card_detail_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" class="com.google.android.apps.play.books.stream.MosaicCollectionModuleView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/collection_details" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/collection_cover_container" android:paddingLeft="@dimen/explore_collection_detail_horizontal_padding" android:paddingTop="@dimen/explore_collection_detail_vertical_padding" android:paddingRight="@dimen/explore_collection_detail_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.play.books.stream.StreamCoverView android:id="@id/book_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/explore_cover_internal_spacing" android:layout_weight="2.0" android:layout_marginEnd="@dimen/explore_cover_internal_spacing" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.google.android.apps.play.books.stream.StreamCoverView android:id="@id/book_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/explore_cover_internal_spacing" android:layout_marginStart="@dimen/explore_cover_internal_spacing" />
+            <com.google.android.apps.play.books.stream.StreamCoverView android:id="@id/book_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/explore_cover_internal_spacing" android:layout_marginStart="@dimen/explore_cover_internal_spacing" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/collection_attribution" />
+</view>

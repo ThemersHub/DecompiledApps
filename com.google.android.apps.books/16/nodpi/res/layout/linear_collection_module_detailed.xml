@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" android:importantForAccessibility="no" class="com.google.android.apps.play.books.stream.LinearCollectionModuleView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/collection_details_stub" android:layout="?collectionDetailsLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/documents_carousel_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.play.books.ublib.cardlib.PlayCardArtImageView android:id="@id/image" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="center" android:importantForAccessibility="no" />
+        <android.support.v7.widget.RecyclerView android:id="@id/documents_carousel" android:paddingLeft="@dimen/explore_detailed_carousel_gutter" android:paddingRight="@dimen/explore_detailed_carousel_gutter" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/explore_collection_top_padding" android:layout_marginBottom="@dimen/explore_collection_bottom_padding" android:foregroundGravity="bottom" />
+    </FrameLayout>
+    <include layout="@layout/collection_attribution" />
+</view>

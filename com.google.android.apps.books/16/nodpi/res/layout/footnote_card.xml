@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/InfoCards.Card"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/info_card_background" style="@style/InfoCards.CardBackground" />
+    <LinearLayout android:orientation="vertical" android:id="@id/footnote" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/note_primary_text_font_size" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/footnote_header" android:background="@color/books_corpora_primary" android:paddingLeft="@dimen/info_card_hpadding" android:paddingRight="@dimen/info_card_hpadding" android:layout_width="fill_parent" android:layout_height="@dimen/info_card_header_height" android:maxLines="1" style="@style/PlatformSerifRegular" />
+        <view android:id="@id/footnote_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/info_card_hpadding" android:layout_marginTop="@dimen/info_card_vpadding" android:layout_marginRight="@dimen/info_card_hpadding" class="com.google.android.apps.play.books.footnotes.FootnoteCardProvider$FootnoteWebView" />
+        <Button android:id="@id/header_action_button" android:text="@string/footnote_action_button" android:textAllCaps="true" style="@style/InfoCards.ActionButton.Footnote" />
+    </LinearLayout>
+</FrameLayout>

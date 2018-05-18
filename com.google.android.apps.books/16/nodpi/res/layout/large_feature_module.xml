@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" class="com.google.android.apps.play.books.stream.LargeFeatureModuleView"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:books="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/image_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <view android:layout_gravity="center_horizontal" android:id="@id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" books:maxCoverHeight="@dimen/explore_cover_large_max_height" books:maxCoverWidth="@dimen/explore_cover_large_max_width" class="com.google.android.apps.play.books.stream.StreamCoverView" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:background="@color/explore_card_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/simple_details_container" />
+            <include layout="@layout/related_books_module_footer" />
+        </LinearLayout>
+    </LinearLayout>
+</view>

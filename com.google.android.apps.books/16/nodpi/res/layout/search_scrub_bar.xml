@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:layout_gravity="bottom" android:id="@id/search_scrub" android:background="?searchBackground" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/searchbar_height" class="com.google.android.apps.play.books.widget.SearchScrubBar"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ublibsvg="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/scrub_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/searchbar_a_margin" android:layout_marginRight="@dimen/searchbar_a_margin" android:layout_alignParentBottom="true">
+        <com.google.android.apps.play.books.ublib.svg.SvgImageButton android:id="@id/exit_search" android:background="?selectableItemBackgroundBorderless" android:scaleType="center" android:contentDescription="@string/menu_reader_search_exit" ublibsvg:svgSrc="?searchScrubBarExit" style="@style/SearchBar.Action" />
+        <com.google.android.apps.play.books.ublib.svg.SvgImageButton android:visibility="invisible" android:scaleType="center" ublibsvg:svgSrc="?searchScrubBarExit" style="@style/SearchBar.Action" />
+        <FrameLayout android:gravity="center" android:layout_gravity="center" android:id="@android:id/title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/matchIndex" android:background="?selectableItemBackgroundBorderless" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/SearchBar.Text.Matches" />
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.google.android.apps.play.books.ublib.svg.SvgImageButton android:id="@id/proceed_left" android:background="?selectableItemBackgroundBorderless" android:scaleType="center" android:contentDescription="@string/previous_result_button" ublibsvg:svgSrc="?searchLeftArrow" style="@style/SearchBar.Action" />
+            <com.google.android.apps.play.books.ublib.svg.SvgImageButton android:id="@id/proceed_right" android:background="?selectableItemBackgroundBorderless" android:scaleType="center" android:contentDescription="@string/next_result_button" android:scaleX="-1.0" ublibsvg:svgSrc="?searchLeftArrow" style="@style/SearchBar.Action" />
+        </LinearLayout>
+    </LinearLayout>
+</view>

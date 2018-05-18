@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:background="@color/material_grey_700" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="@dimen/nl_tutorial_graphic_min_width" android:minHeight="@dimen/nl_tutorial_graphic_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.play.books.app.NlSkyView android:id="@id/nl_sky_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/nl_tutorial_graphic_min_height" android:layout_marginTop="@dimen/nl_tutorial_curve_vertical_margin" android:layout_marginBottom="@dimen/nl_tutorial_curve_vertical_margin">
+        <com.google.android.apps.play.books.app.NlCurveView android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.apps.play.books.app.NlMovingBallView android:id="@id/ball_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/moving_ball" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/nl_white_circle" />
+        </com.google.android.apps.play.books.app.NlMovingBallView>
+    </FrameLayout>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textStyle="bold" android:textColor="@android:color/white" android:layout_gravity="end|bottom|center" android:id="@id/time_text" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="4.0dip" android:importantForAccessibility="no" />
+</FrameLayout>

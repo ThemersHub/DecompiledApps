@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.play.books.stream.ContinuationView android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:id="@id/loading" android:padding="@dimen/explore_module_internal_spacing" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <android.support.v4.widget.ContentLoadingProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:progressBarStyleSmall" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/error" android:padding="@dimen/explore_module_internal_spacing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?selectableItemBackground">
+        <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/explore_next_page_error" style="@style/ExploreError" />
+        <com.google.android.apps.play.books.ublib.widget.ActionTextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/try_again" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/explore_module_internal_spacing" android:text="@string/explore_next_page_retry" android:contentDescription="@string/explore_next_page_retry" style="@style/ExploreActionButton" />
+    </LinearLayout>
+</com.google.android.apps.play.books.stream.ContinuationView>

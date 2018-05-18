@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:paddingBottom="2.0dip" android:focusable="false" android:clickable="false" android:importantForAccessibility="no" style="@style/InfoCards.Card"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/info_card_background" android:focusable="false" android:clickable="false" android:importantForAccessibility="no" style="@style/InfoCards.CardBackground" />
+    <LinearLayout android:orientation="vertical" android:id="@id/end_of_book_card" android:background="@drawable/card_background_default_light" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="@dimen/recommendations_card_min_height" android:importantForAccessibility="no">
+        <TextView android:gravity="center_vertical" android:id="@id/recommendation_heading" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:clickable="false" android:layout_height="wrap_content" android:minHeight="@dimen/eobrecs_cardtitle_minheight" style="@style/EndOfBookRecs.HeaderTitle" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.google.android.apps.play.books.app.ShortWideListView android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/end_of_book_recommendations_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

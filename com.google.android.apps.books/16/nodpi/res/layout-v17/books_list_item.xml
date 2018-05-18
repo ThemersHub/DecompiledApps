@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:gravity="center|left" android:orientation="horizontal" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" android:baselineAligned="false" playcommon:playCardBackgroundColor="@color/play_transparent" class="com.google.android.apps.play.books.widget.BooksListItemView"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:books="http://schemas.android.com/apk/res-auto" xmlns:playcommon="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.play.books.widget.base.ChildStretchingLinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:gravity="center_vertical" android:id="@id/thumbnail_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.android.play.layout.PlayCardThumbnail android:layout_gravity="center_vertical" android:id="@id/li_thumbnail_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" playcommon:app_thumbnail_padding="0.0dip">
+                <include android:id="@id/li_thumbnail" android:layout_width="@dimen/books_list_item_cover_width" android:layout_height="wrap_content" android:scaleType="fitCenter" android:contentDescription="@null" layout="@layout/play_card_thumbnail" />
+            </com.google.android.play.layout.PlayCardThumbnail>
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.google.android.apps.play.books.ublib.cardlib.layout.PlayCardOverflowView android:layout_gravity="end|center|top" android:id="@id/li_overflow" android:paddingTop="2.0dip" style="@style/SymmetricPlayOverflow" />
+            <LinearLayout android:layout_gravity="start|center|top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <View android:id="@id/top_separator" android:visibility="gone" style="@style/EndOfBookRecs.Separator" />
+                <com.google.android.play.layout.PlayTextView android:id="@id/li_title" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="20.0dip" android:textAlignment="viewStart" android:layout_marginEnd="20.0dip" style="@style/BooksPlayCardTitle" />
+                <LinearLayout android:orientation="horizontal" android:paddingTop="2.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip">
+                    <com.google.android.play.layout.PlayTextView android:ellipsize="end" android:id="@id/li_subtitle" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" android:layout_weight="1.0" android:textAlignment="viewStart" style="@style/BooksPlayCardSubtitle" />
+                    <com.google.android.play.layout.PlayCardLabelView android:id="@id/li_label" android:background="@null" android:paddingLeft="8.0dip" android:paddingTop="0.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.0" style="@style/PlayCardLabel" />
+                </LinearLayout>
+                <TextView android:ellipsize="end" android:id="@id/reason" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:maxLines="2" android:textAlignment="viewStart" android:layout_marginEnd="8.0dip" style="@style/BooksPlayCardReason" />
+                <View android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0" />
+                <com.google.android.apps.play.books.ublib.widget.ActionTextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/li_action" android:background="?selectableItemBackground" android:paddingLeft="12.0dip" android:paddingTop="6.0dip" android:paddingRight="12.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/info_card_action_button_height" android:layout_marginRight="8.0dip" android:layout_weight="0.0" android:layout_marginEnd="8.0dip" style="@style/BooksPlayCardAction" />
+                <View android:id="@id/bottom_separator" style="@style/EndOfBookRecs.Separator" />
+            </LinearLayout>
+        </FrameLayout>
+    </com.google.android.apps.play.books.widget.base.ChildStretchingLinearLayout>
+</view>

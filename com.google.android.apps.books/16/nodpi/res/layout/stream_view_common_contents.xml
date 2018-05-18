@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView android:id="@id/stream" android:paddingBottom="@dimen/orson_playbar_height" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.play.books.stream.StickyDividerView android:orientation="vertical" android:id="@id/sticky_divider" android:background="?android:colorBackground" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:paddingLeft="@dimen/explore_module_margin" android:paddingRight="@dimen/explore_module_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/divider" layout="@layout/divider_module_view" />
+        </FrameLayout>
+        <View android:id="@id/header_shadow" android:background="@drawable/play_header_list_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/explore_sticky_divider_elevation" />
+    </com.google.android.apps.play.books.stream.StickyDividerView>
+</merge>
