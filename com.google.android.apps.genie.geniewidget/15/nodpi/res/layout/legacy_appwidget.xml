@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:id="@id/appwidget_content" android:background="@drawable/appwidget_frame" android:padding="@dimen/appwidget_card_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/all_content" android:padding="@dimen/appwidget_card_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/appwidget_card_margin">
+        <LinearLayout android:orientation="horizontal" android:id="@id/weather" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <include layout="@layout/appwidget_weather_current" />
+            <include layout="@layout/appwidget_weather_forecast" />
+        </LinearLayout>
+        <AdapterViewFlipper android:id="@id/list" android:layout_width="0.0dip" android:layout_height="fill_parent" android:flipInterval="@integer/legacy_flip_interval_millis" android:layout_weight="3.0" android:autoStart="true" />
+        <ImageButton android:id="@id/next" android:background="@null" android:layout_width="@dimen/touch_target_min_size" android:layout_height="fill_parent" android:scaleType="center" android:contentDescription="@string/welcome_splash_next" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Network Quality Information" android:key="debug">
+        <Preference android:enabled="true" android:title="Report Network Information" android:key="@string/key_pref_network_quality_info" android:summary="no info yet" />
+        <CheckBoxPreference android:enabled="true" android:title="Ignore Sync Timer" android:key="@string/key_pref_ignore_sync_timer" />
+        <CheckBoxPreference android:enabled="true" android:title="Sync Aggressively" android:key="@string/key_pref_sync_aggressively" />
+        <CheckBoxPreference android:enabled="true" android:title="Force AMP" android:key="@string/key_pref_force_amp" />
+        <CheckBoxPreference android:enabled="true" android:title="Show Carousel" android:key="@string/key_pref_show_carousel" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="State Manipulation" android:key="state_manipulation">
+        <Preference android:title="@string/key_pref_save_debug_info" android:key="@string/key_pref_save_debug_info" />
+        <CheckBoxPreference android:title="@string/key_pref_keep_current_protos" android:key="@string/key_pref_keep_current_protos" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="AMP Debug Urls" android:key="debug">
+        <EditTextPreference android:title="Amp Urls (with space)" android:key="amp_debug_urls" android:defaultValue="not set" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Pick API server" android:key="apipicker">
+        <ListPreference android:entries="@array/server_list" android:title="prod" android:key="apiPref" android:entryValues="@array/server_list" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Pick AMP viewer server" android:key="viewerpicker">
+        <ListPreference android:entries="@array/server_list" android:title="prod" android:key="viewerPref" android:entryValues="@array/server_list" />
+    </PreferenceCategory>
+    <CheckBoxPreference android:enabled="true" android:title="Fetch fresh AMP Viewers" android:key="@string/key_pref_fetch_fresh_amp_viewer" />
+    <CheckBoxPreference android:enabled="true" android:title="Force Trends" android:key="@string/key_pref_force_trends" />
+    <Preference android:enabled="true" android:title="Test Crash" android:key="@string/key_pref_test_crash" />
+</PreferenceScreen>

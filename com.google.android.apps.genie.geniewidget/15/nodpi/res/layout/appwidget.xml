@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/appwidget_content" android:background="@drawable/appwidget_frame" android:padding="@dimen/appwidget_card_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/appwidget_weather" />
+    <FrameLayout android:id="@id/story_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/appwidget_card_margin" android:layout_weight="1.0">
+        <ListView android:id="@id/list_light" android:divider="@drawable/list_divider_light" style="@style/AppWidgetListStyle" />
+        <ListView android:id="@id/list_dark" android:divider="@drawable/list_divider_dark" style="@style/AppWidgetListStyle" />
+        <TextView android:textSize="@dimen/small_font_size" android:gravity="center" android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

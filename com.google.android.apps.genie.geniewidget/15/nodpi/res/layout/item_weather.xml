@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/weather_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/item_padding" android:paddingTop="@dimen/item_padding" android:paddingRight="@dimen/item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/current_weather" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/weather_card_current_weather_padding" android:layout_marginRight="@dimen/weather_card_current_weather_padding">
+            <ImageView android:id="@id/current_weather_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+            <FrameLayout android:id="@id/current_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.google.android.apps.genie.geniewidget.widgets.AlignedTextView android:textAppearance="@style/WeatherCurrentTemperatureTextAppearance" android:layout_gravity="top" android:id="@id/current_temperature_value" android:paddingTop="@dimen/item_text_padding" android:paddingBottom="@dimen/item_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.google.android.apps.genie.geniewidget.widgets.AlignedTextView android:textSize="@dimen/medium_font_size" android:textColor="?android:textColorSecondary" android:layout_gravity="bottom|center|right" android:id="@id/current_temperature_unit" android:paddingBottom="@dimen/item_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </FrameLayout>
+        </LinearLayout>
+        <Space android:layout_width="@dimen/weather_card_divider_padding" android:layout_height="fill_parent" />
+        <View android:background="?android:dividerVertical" android:layout_width="@dimen/divider_size" android:layout_height="fill_parent" android:layout_margin="@dimen/weather_card_divider_padding" />
+        <include android:id="@id/today" layout="@layout/weather_forecast" />
+        <include android:id="@id/tomorrow" layout="@layout/weather_forecast" />
+        <include android:id="@id/third_day" layout="@layout/weather_forecast" />
+        <include android:id="@id/fourth_day" layout="@layout/weather_forecast" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/expand_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/touch_target_min_size">
+        <com.google.android.apps.genie.geniewidget.widgets.AlignedTextView android:textAppearance="@style/WeatherSourceTextAppearance" android:gravity="center_vertical" android:id="@id/source_collapsed" android:background="?android:selectableItemBackground" android:paddingLeft="@dimen/item_padding" android:paddingRight="@dimen/item_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <include android:id="@id/expand" android:layout_width="wrap_content" android:layout_height="fill_parent" layout="@layout/expand_more_imagebutton" />
+    </LinearLayout>
+    <ViewStub android:id="@id/weather_chart" android:layout="@layout/weather_chart" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/collapse_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/WeatherSourceTextAppearance" android:gravity="center_vertical" android:layout_gravity="start" android:id="@id/source_expanded" android:background="?android:selectableItemBackground" android:paddingLeft="@dimen/item_padding" android:paddingRight="@dimen/item_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <include android:layout_gravity="end" android:id="@id/collapse" android:layout_width="wrap_content" android:layout_height="fill_parent" layout="@layout/expand_less_button" />
+    </FrameLayout>
+</LinearLayout>

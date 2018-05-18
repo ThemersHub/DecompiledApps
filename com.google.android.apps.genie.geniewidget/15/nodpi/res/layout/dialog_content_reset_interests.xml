@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/dialog_padding_control_half" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ex="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/dialog_item_divider" />
+    <com.google.android.apps.genie.geniewidget.widgets.LocalizedTextView android:textAppearance="@style/DialogContentTextAppearance" android:gravity="start|center" android:id="@android:id/empty" android:paddingLeft="@dimen/dialog_padding_full" android:paddingTop="@dimen/dialog_padding_control_half" android:paddingRight="@dimen/dialog_padding_full" android:paddingBottom="@dimen/dialog_padding_control_half" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall" />
+    <ListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:choiceMode="multipleChoice" android:layout_weight="1.0" />
+    <include layout="@layout/dialog_item_divider" />
+    <com.google.android.apps.genie.geniewidget.widgets.LocalizedTextView android:textSize="@dimen/tiny_font_size" android:textColor="?android:textColorHint" android:gravity="start" android:id="@id/too_many_interests" android:paddingLeft="@dimen/dialog_padding_full" android:paddingTop="@dimen/control_inset" android:paddingRight="@dimen/dialog_padding_full" android:paddingBottom="@dimen/control_inset" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" ex:localizedText="@string/reset_interests_too_many_topics" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/weather_no_chart_data_placeholder" />
+    <include layout="@layout/aplos_chart" />
+    <com.google.android.apps.genie.geniewidget.widgets.WeatherWindChart android:orientation="vertical" android:id="@id/wind_chart" android:paddingLeft="@dimen/weather_wind_chart_padding" android:paddingRight="@dimen/weather_wind_chart_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/wind_speed_labels" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/wind_speed_icons" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.google.android.apps.genie.geniewidget.widgets.WeatherWindChart>
+</FrameLayout>

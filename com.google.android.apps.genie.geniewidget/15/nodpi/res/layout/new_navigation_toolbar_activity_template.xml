@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ex="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.ActionBar" android:id="@id/appBar" android:background="?android:colorForeground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?android:colorForeground" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="@dimen/navigation_content_start_padding" app:popupTheme="?actionBarPopupTheme" app:navigationIcon="?homeAsUpIndicator" app:navigationContentDescription="@string/navigate_up_content_description" />
+        <android.support.design.widget.TabLayout android:id="@id/tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabIndicatorColor="?android:textColorHighlight" app:tabContentStart="@dimen/navigation_content_start_padding" app:tabMode="scrollable" app:tabTextColor="@color/primary_dark_color_light" app:tabSelectedTextColor="?android:textColorHighlight" app:tabPadding="@dimen/navigation_tab_padding" />
+    </android.support.design.widget.AppBarLayout>
+    <com.google.android.apps.genie.geniewidget.widgets.ExtendedSwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.v4.view.ViewPager android:id="@id/content" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.google.android.apps.genie.geniewidget.widgets.ExtendedSwipeRefreshLayout>
+    <include layout="@layout/empty_placeholder_view" />
+    <android.support.design.widget.CoordinatorLayout android:id="@id/snackbar_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <android.support.design.widget.BottomNavigationView android:layout_gravity="bottom" android:id="@id/bottom_navigation" android:background="?android:colorForeground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" app:elevation="16.0dip" app:layout_scrollFlags="enterAlways|scroll" app:layout_behavior="com.google.android.apps.genie.geniewidget.utils.BottomNavigationBehavior" app:menu="@menu/bottom_navigation_main" app:itemIconTint="@drawable/bottom_navigation_selector" app:itemTextColor="@drawable/bottom_navigation_selector" app:itemBackground="?android:colorForeground" />
+</android.support.design.widget.CoordinatorLayout>

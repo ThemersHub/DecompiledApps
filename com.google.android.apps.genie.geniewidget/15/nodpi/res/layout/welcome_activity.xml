@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/welcome_content" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ex="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:id="@id/welcome_pages" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/welcome_button_bar_height" android:baselineAligned="false">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:ellipsize="end" android:layout_gravity="start" android:id="@id/welcome_skip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/welcome_splash_skip" android:singleLine="true" />
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/welcome_page_indicators" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.google.android.apps.genie.geniewidget.widgets.TintButton android:layout_gravity="end" android:id="@id/welcome_next" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawableTop="@drawable/ic_chevron_next_white_24dp" android:contentDescription="@string/welcome_splash_next" ex:drawableTint="?colorControlNormal" />
+            <Button android:ellipsize="end" android:layout_gravity="end" android:id="@id/welcome_done" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/welcome_splash_done" android:singleLine="true" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

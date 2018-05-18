@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="?android:dividerHorizontal" android:showDividers="end"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ex="http://schemas.android.com/apk/res-auto">
+    <TableLayout android:padding="@dimen/item_padding" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TableRow>
+            <TextView android:textAppearance="@style/WeatherCurrentDetailTextAppearance" android:id="@id/current_time_and_temperature" android:layout_weight="1.0" />
+            <TextView android:textAppearance="@style/WeatherCurrentDetailTextAppearance" android:id="@id/current_precipitation" android:layout_weight="1.0" />
+        </TableRow>
+        <TableRow>
+            <TextView android:textAppearance="@style/WeatherCurrentDetailTextAppearance" android:id="@id/current_sunrise" android:layout_weight="1.0" />
+            <TextView android:textAppearance="@style/WeatherCurrentDetailTextAppearance" android:id="@id/current_wind" android:layout_weight="1.0" />
+        </TableRow>
+        <TableRow>
+            <TextView android:textAppearance="@style/WeatherCurrentDetailTextAppearance" android:id="@id/current_sunset" android:layout_weight="1.0" />
+            <TextView android:textAppearance="@style/WeatherCurrentDetailTextAppearance" android:id="@id/current_humidity" android:layout_weight="1.0" />
+        </TableRow>
+    </TableLayout>
+    <ViewStub android:id="@id/tab_strip_stub" android:layout="@layout/weather_tab_strip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="?android:textColorSecondary" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/item_padding" android:layout_marginRight="@dimen/item_padding" />
+    <com.google.android.apps.genie.geniewidget.widgets.WeatherChartFrameLayout android:id="@id/chart_frame_layout" android:layout_width="fill_parent" android:layout_height="@dimen/weather_chart_height" android:layout_marginTop="@dimen/item_padding" android:layout_marginBottom="@dimen/item_padding" ex:chartPadding="@dimen/item_padding">
+        <android.support.v4.view.ViewPager android:id="@id/chart_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/slider" android:background="?android:textColorPrimary" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+    </com.google.android.apps.genie.geniewidget.widgets.WeatherChartFrameLayout>
+</LinearLayout>
