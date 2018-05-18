@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/view_media_action_buttons_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/view_media_action_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/media_action_play" android:drawableStart="@drawable/ic_play_white_small" style="@style/MediaDetails.Button" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/media_details_btn_margin_left">
+            <LinearLayout android:orientation="horizontal" android:id="@id/view_media_action_shuffle_radio_container" android:paddingBottom="@dimen/go_to_media_margin_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/view_media_action_shuffle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/media_action_shuffle" android:drawableStart="@drawable/ic_shuffle_white_small" android:layout_marginEnd="@dimen/media_details_btn_margin_left" style="@style/MediaDetails.Button" />
+                <TextView android:id="@id/view_media_action_radio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/media_action_start_radio" android:drawableStart="@drawable/ic_radio_white_small" style="@style/MediaDetails.Button" />
+            </LinearLayout>
+            <com.google.android.music.tv.widget.GoToMediaTypeActionContainer android:id="@id/view_go_to_media" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

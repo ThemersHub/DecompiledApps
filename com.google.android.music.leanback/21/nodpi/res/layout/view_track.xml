@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="@dimen/details_item_track_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/common_list_divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider_track" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/details_item_track_height">
+        <TextView android:layout_gravity="center_vertical" android:id="@id/track_position" android:layout_width="@dimen/track_view_position_width" android:layout_height="wrap_content" style="@style/MediaTrackDetails.Track.Position" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/track_ic_explicit" android:layout_width="@dimen/track_view_explicit_icon_size" android:layout_height="@dimen/track_view_explicit_icon_size" android:src="@drawable/ic_explicit_accent" android:layout_marginStart="@dimen/track_view_explicit_icon_margin" android:layout_marginEnd="@dimen/track_view_explicit_icon_margin" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="@dimen/details_item_track_height" android:layout_weight="1.0">
+            <TextView android:layout_gravity="center_vertical" android:id="@id/track_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/MediaTrackDetails.Track.Title" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/track_artist" android:paddingLeft="8.0dip" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/MediaTrackDetails.Track.Title" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/track_album" android:paddingLeft="8.0dip" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/MediaTrackDetails.Track.Title" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>
