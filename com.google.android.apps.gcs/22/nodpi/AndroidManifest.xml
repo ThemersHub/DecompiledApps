@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.apps.gcs" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+    <permission android:label="@string/permission_receive_gcs_state" android:name="com.google.android.apps.gcs.RECEIVE_GCS_STATE" android:protectionLevel="signatureOrSystem"/>
+    <permission android:label="@string/receive_network_scores" android:name="com.google.android.apps.gcs.permission.RECEIVE_NETWORK_SCORES" android:protectionLevel="signature"/>
+    <permission android:label="@string/broadcast_network_scores" android:name="com.google.android.apps.gcs.permission.BROADCAST_NETWORK_SCORES" android:protectionLevel="signature"/>
+    <permission android:name="com.google.android.apps.gcs.WRITE_EXPERIMENTS" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.apps.gcs.WRITE_EXPERIMENTS"/>
+    <uses-permission android:name="com.google.android.apps.gcs.permission.RECEIVE_NETWORK_SCORES"/>
+    <uses-permission android:name="com.google.android.apps.gcs.permission.BROADCAST_NETWORK_SCORES"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.OVERRIDE_WIFI_CONFIG"/>
+    <uses-permission android:name="android.permission.GET_APP_OPS_STATS"/>
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.SCORE_NETWORKS"/>
+    <uses-permission android:name="android.permission.CONTROL_VPN"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-feature android:name="android.hardware.wifi"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <application android:allowBackup="true" android:backupAgent="com.google.android.apps.gcs.storage.GcsBackupAgent" android:fullBackupOnly="false" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="com.google.android.apps.gcs.GcsApplication" android:restoreAnyVersion="true" android:supportsRtl="true" android:theme="@style/Theme.Settings">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.android.systemui.IS_BRANDED" android:value="true"/>
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIBfA_-mcFUeJcXlRbtZAvgcP2w--M0MCbyh8goQ"/>
+        <activity android:enabled="@bool/enabled_by_default" android:excludeFromRecents="true" android:label="@string/settings_activity_title" android:name="com.google.android.apps.gcs.SettingsActivity">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gcs.action.NETWORKING_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:label="@string/open_source_licenses" android:name="com.google.android.apps.gcs.LicenseSettingsActivity"/>
+        <activity android:excludeFromRecents="true" android:label="@string/wifi_assistant_name" android:name="com.google.android.apps.gcs.WifiAssistantOptInActivity" android:theme="@style/Theme.Transluscent.TranslucentStatusAndNavBars">
+            <intent-filter>
+                <action android:name="android.net.scoring.CUSTOM_ENABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.apps.gcs.receiver.BootCompletedReceiver">
+            <meta-data android:name="com.google.android.apps.gcs.retainForSecondaryUsers" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.gcs.receiver.AppUpdatedReceiver">
+            <meta-data android:name="com.google.android.apps.gcs.retainForSecondaryUsers" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.gcs.receiver.OnboardingReceiver"/>
+        <receiver android:enabled="false" android:exported="false" android:name="com.google.android.apps.gcs.receiver.NetworkScoreReceiver" android:permission="com.google.android.apps.gcs.permission.BROADCAST_NETWORK_SCORES">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gcs.NETWORK_SCORES_REFRESHED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.apps.gcs.service.WfaEligibilityRefreshingGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.gcs.service.WfaStateTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.apps.gcs.service.GcsService">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gcs.GCS_SERVICE"/>
+                <action android:name="com.google.android.apps.gcs.GCS_SERVICE_V2"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.apps.gcs.service.GcsNetworkStatusReceiverService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gcs.NETWORK_STATUS_RECEIVER"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.apps.gcs.service.GcsStateService">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gcs.GCS_STATE_SERVICE"/>
+                <action android:name="com.google.android.apps.gcs.GCS_STATE_SERVICE_V2"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="false" android:exported="false" android:name="com.google.android.apps.gcs.receiver.WifiAssistantToggle"/>
+        <activity android:name="com.google.android.apps.gcs.chell.activity.WarmWelcomeHelpActivity" android:theme="@android:style/Theme.NoDisplay"/>
+        <activity android:excludeFromRecents="true" android:label="@string/manage_network_notification_title" android:name="com.google.android.apps.gcs.chell.activity.ManageNetworkActivity" android:theme="@style/Theme.Transluscent.TranslucentStatusAndNavBars"/>
+        <receiver android:enabled="false" android:exported="true" android:name="com.google.android.apps.gcs.chell.receiver.VpnServiceStartingReceiver" android:permission="android.permission.SCORE_NETWORKS"/>
+        <receiver android:name="com.google.android.apps.gcs.chell.receiver.WarmWelcomeDismissedReceiver"/>
+        <receiver android:name="com.google.android.apps.gcs.chell.receiver.FeedbackReceiver"/>
+        <service android:exported="true" android:label="@string/wifi_assistant_name" android:name="com.google.android.apps.gcs.chell.service.vpn.ChellVpnService" android:permission="android.permission.BIND_VPN_SERVICE">
+            <meta-data android:name="android.net.VpnService.SUPPORTS_ALWAYS_ON" android:value="false"/>
+            <intent-filter>
+                <action android:name="android.net.VpnService"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.google.android.apps.gcs.chell.receiver.NetworkEvaluationReceiver"/>
+        <service android:exported="true" android:name="com.google.android.apps.gcs.chell.service.SessionClosedJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.apps.gcs.wheatley.service.PlutarchSetupGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.gcs.wheatley.service.PlutarchAuthGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.gcs.wheatley.receiver.PlutarchFeedbackReceiver"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <meta-data android:name="android.support.VERSION" android:value="26.0.0"/>
+        <receiver android:exported="true" android:name="com.google.android.flib.phenotype.receivers.PhenotypeExperimentsChangedReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.flib.phenotype.services.PhenotypeExperimentCommitService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.google.android.flib.phenotype.receivers.OverrideReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.gcs.OVERRIDE_EXPERIMENT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>
