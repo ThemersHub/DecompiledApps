@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.calculator" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <uses-feature android:name="android.hardware.type.watch"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <application android:allowBackup="false" android:icon="@mipmap/ic_app_calculator" android:label="@string/calculator_label" android:supportsRtl="true">
+        <uses-library android:name="com.google.android.wearable" android:required="true"/>
+        <activity android:label="@string/calculator_label" android:launchMode="singleTop" android:name="com.google.android.calculator.app.CalculatorActivity" android:taskAffinity="com.google.android.calculator.CALCULATOR" android:theme="@style/CalculatorTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.APP_CALCULATOR"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
