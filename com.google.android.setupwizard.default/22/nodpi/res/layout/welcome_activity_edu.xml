@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background" android:src="@drawable/welcome_bg" android:contentDescription="@null" style="@style/BackgroundImage" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/welcome_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/welcome_edu_title_margin_top" android:text="@string/welcome_message" android:layout_alignParentTop="true" android:layout_alignParentStart="true" style="@style/WelcomeTitle" />
+        <TextView android:id="@id/welcome_text" android:layout_marginTop="@dimen/welcome_edu_text_margin_small" android:text="@string/welcome_text_edu" android:layout_below="@id/welcome_title" style="@style/EduWelcomeText" />
+        <TextView android:textStyle="bold" android:id="@id/info_header" android:layout_marginTop="@dimen/welcome_edu_text_margin_medium" android:text="@string/welcome_secondary_user_additional_info_header_edu" android:layout_below="@id/welcome_text" style="@style/EduWelcomeText" />
+        <TextView android:id="@id/info_text" android:layout_marginTop="@dimen/welcome_edu_text_margin_small" android:text="@string/welcome_secondary_user_additional_info_edu" android:layout_below="@id/info_header" style="@style/EduWelcomeText" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/welcome_edu_start_button_margin_top" android:layout_below="@id/welcome_title" style="@style/WelcomeFrame">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageButton android:id="@id/start" android:background="@drawable/start_button_bg_edu" android:layout_marginBottom="@dimen/welcome_start_button_margin_bottom" android:src="@drawable/edu_start_arrow" android:layout_below="@id/welcome_text" android:onClick="start" android:contentDescription="@string/start" android:elevation="@dimen/welcome_start_button_elevation" style="@style/FloatingActionButton" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+</FrameLayout>

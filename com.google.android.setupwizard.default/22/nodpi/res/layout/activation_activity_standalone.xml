@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.setupwizard.util.ProportionalOuterFrame"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="bottom" android:id="@id/activation_title" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/setup_wizard_title_height" android:text="@string/activation_title" android:layout_alignParentTop="true" android:layout_alignParentStart="true" style="@style/setup_wizard_title" />
+    <FrameLayout android:id="@id/top_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/activation_title">
+        <View android:id="@id/static_divider" style="@style/setup_wizard_top_divider" />
+        <ProgressBar android:id="@id/progress_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_wizard_divider_margin_top" android:layout_marginBottom="@dimen/setup_wizard_divider_margin_bottom" android:indeterminate="true" style="?android:attr/progressBarStyleHorizontal" />
+    </FrameLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/network_notifier" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/top_divider" android:layout_alignParentEnd="true">
+        <ImageView android:id="@id/network_bars" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/content_card" android:layout_width="@dimen/preference_width" android:layout_height="wrap_content" android:layout_below="@id/top_divider" android:layout_centerHorizontal="true">
+        <LinearLayout android:gravity="start|center|top" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/activation_text" android:text="@string/activation_text" style="@style/setup_wizard_description_text" />
+            <TextView android:id="@id/skip_confirmation" android:visibility="gone" android:text="@string/activation_skip_confirmation" style="@style/setup_wizard_description_text" />
+            <TextView android:id="@id/shutdown_countdown" android:visibility="gone" android:layout_alignStart="@id/progress_bar" style="@style/setup_wizard_description_text" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignStart="@id/content_card" android:layout_alignParentEnd="true">
+        <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/cancel_button" android:text="@string/cancel_button_label" android:layout_marginStart="@dimen/button_horizontal_margin" style="@style/setup_wizard_button" />
+            <Button android:id="@id/skip_button" android:text="@string/cancel_button_label" android:layout_marginStart="@dimen/button_horizontal_margin" style="@style/setup_wizard_button" />
+            <Button android:id="@id/next_button" android:text="@string/setup_wizard_next_button_label" android:layout_marginStart="@dimen/button_horizontal_margin" style="@style/setup_wizard_button" />
+        </LinearLayout>
+    </LinearLayout>
+</view>
