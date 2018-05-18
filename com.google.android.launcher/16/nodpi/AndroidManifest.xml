@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.launcher" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <permission android:name="com.google.android.launcher.permission.CONTENT_REDIRECT" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+    <application android:icon="@mipmap/ic_launcher_google_home" android:label="@string/launcher_name" android:requiredForAllUsers="true">
+        <activity android:clearTaskOnLaunch="true" android:excludeFromRecents="true" android:label="@string/launcher_name" android:launchMode="singleTask" android:name="com.google.android.launcher.StubApp" android:screenOrientation="nosensor" android:stateNotNeeded="true" android:theme="@style/StubTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.MONKEY"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="wallpapers" android:resource="@array/wallpapers"/>
+        <provider android:authorities="com.google.android.launcher.oldhome.settings" android:exported="true" android:name="com.google.android.launcher.LauncherRedirectionProvider" android:readPermission="com.google.android.launcher.permission.CONTENT_REDIRECT" android:writePermission="com.google.android.launcher.permission.CONTENT_REDIRECT"/>
+    </application>
+</manifest>
