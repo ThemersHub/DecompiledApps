@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.partnersetup" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-2168912">
+    <permission android:name="com.google.android.partnersetup.permission.UPDATE_CLIENT_ID" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.google.android.partnersetup.permission.ACCESS_PROVIDER" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.google.android.providers.settings.permission.WRITE_GSETTINGS"/>
+    <uses-permission android:name="com.google.android.providers.settings.permission.READ_GSETTINGS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.WRITE_GSERVICES"/>
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.android.launcher.permission.PRELOAD_WORKSPACE"/>
+    <application android:allowBackup="false" android:label="@string/appName">
+        <receiver android:name=".GooglePartnerSetup">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".PhoneStateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.SIM_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".UpdateIntentReceiver" android:permission="com.google.android.partnersetup.permission.UPDATE_CLIENT_ID">
+            <intent-filter>
+                <action android:name="com.google.android.partnersetup.intent.UPDATE_CLIENT_ID"/>
+            </intent-filter>
+        </receiver>
+        <activity android:label="@string/rlz_debug_activity" android:name=".RlzDebugActivity"/>
+        <activity android:name=".RlzDebugViewListActivity"/>
+        <receiver android:name=".RlzDebugBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE"/>
+                <data android:host="759" android:scheme="android_secret_code"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.google.android.partnersetup.rlzprovider" android:exported="true" android:name=".RlzProvider" android:permission="com.google.android.partnersetup.permission.ACCESS_PROVIDER"/>
+        <provider android:authorities="com.google.android.partnersetup.rlzappprovider" android:exported="true" android:name=".RlzAppProvider"/>
+        <service android:description="@string/rlz_ping_service_description" android:name=".RlzPingService"/>
+        <receiver android:name=".RlzPingBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".GservicesChangedReceiver">
+            <intent-filter>
+                <action android:name="com.google.gservices.intent.action.GSERVICES_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".AppInstalledReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service android:name=".AppHiderService"/>
+        <service android:name=".AppInstalledService"/>
+        <service android:name=".ClientIdService"/>
+        <service android:name=".LauncherConfigService"/>
+        <service android:name=".MccFallbackService"/>
+        <service android:name=".MccOverrideService"/>
+        <service android:name=".RlzPingIntentService"/>
+    </application>
+</manifest>
