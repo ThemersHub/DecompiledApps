@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.accessibility.talkback.tutorial.HoverTrackingLinearLayout android:orientation="vertical" android:id="@id/text_layout" android:paddingLeft="@dimen/wear_default_extra_padding" android:paddingTop="@dimen/wear_default_extra_padding" android:paddingRight="@dimen/wear_default_extra_padding" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true">
+            <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="16.0dip" android:textColor="@android:color/white" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.google.android.accessibility.talkback.tutorial.HoverTrackingLinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@color/confirmation_dialog_action_background" android:paddingLeft="@dimen/wear_default_extra_padding" android:paddingRight="@dimen/wear_default_extra_padding" android:paddingBottom="@dimen/wear_default_extra_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+            <com.google.android.accessibility.talkback.tutorial.HoverTrackingLinearLayout android:orientation="horizontal" android:id="@id/off_button_layout" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no">
+                <android.support.wearable.view.CircledImageView android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_clear" android:importantForAccessibility="no" app:circle_color="@color/confirmation_dialog_cancel_background" app:circle_radius="24.0dip" app:circle_border_width="4.0dip" app:circle_border_color="@android:color/transparent" />
+                <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/turn_off_talkback" android:importantForAccessibility="no" />
+            </com.google.android.accessibility.talkback.tutorial.HoverTrackingLinearLayout>
+            <com.google.android.accessibility.talkback.tutorial.HoverTrackingLinearLayout android:orientation="horizontal" android:id="@id/launch_tutorial_layout" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/tutorial_launch_double_tap_hint">
+                <android.support.wearable.view.CircledImageView android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_start_tutorial" app:circle_color="@color/confirmation_dialog_confirm_background" app:circle_radius="24.0dip" app:circle_border_width="4.0dip" app:circle_border_color="@android:color/transparent" />
+                <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tutorial_launch_tutorial" />
+            </com.google.android.accessibility.talkback.tutorial.HoverTrackingLinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
