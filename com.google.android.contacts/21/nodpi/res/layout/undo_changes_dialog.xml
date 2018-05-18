@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/undo_changes_dialog_side_padding" android:paddingRight="@dimen/undo_changes_dialog_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/account_header" layout="@layout/account_selector_list_item_condensed" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/undo_changes_description" android:textAlignment="viewStart" />
+        <TextView android:id="@id/learn_more_link" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/undo_changes_learn_more" android:textAlignment="viewStart" style="@style/UndoChangesDialogButton" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/undo_changes_choices" android:textAlignment="viewStart" />
+        <RadioGroup android:id="@id/radio_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checkedButton="@id/radio_one_hour">
+            <RadioButton android:id="@id/radio_ten_min" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/undo_changes_radio_ten_min" android:textAlignment="viewStart" style="@style/UndoChangesDialogButton" />
+            <RadioButton android:id="@id/radio_one_hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/undo_changes_radio_one_hour" style="@style/UndoChangesDialogButton" />
+            <RadioButton android:id="@id/radio_one_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/undo_changes_radio_one_day" style="@style/UndoChangesDialogButton" />
+            <RadioButton android:id="@id/radio_one_week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/undo_changes_radio_one_week" style="@style/UndoChangesDialogButton" />
+            <RadioButton android:id="@id/radio_custom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/undo_changes_radio_custom" style="@style/UndoChangesDialogButton" />
+        </RadioGroup>
+        <LinearLayout android:orientation="vertical" android:id="@id/custom_rollback_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/undo_changes_dialog_side_padding" android:paddingEnd="@dimen/undo_changes_dialog_side_padding">
+            <HorizontalScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <TextView android:id="@id/days_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/undo_changes_custom_rollback_days" />
+                    <NumberPicker android:id="@id/days_picker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/days_label" />
+                    <TextView android:id="@id/hours_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/undo_changes_custom_rollback_hours" android:layout_toEndOf="@id/days_picker" />
+                    <NumberPicker android:id="@id/hours_picker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/hours_label" android:layout_toEndOf="@id/days_picker" />
+                    <TextView android:id="@id/minutes_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/undo_changes_custom_rollback_minutes" android:layout_toEndOf="@id/hours_picker" />
+                    <NumberPicker android:id="@id/minutes_picker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/minutes_label" android:layout_toEndOf="@id/hours_picker" />
+                </RelativeLayout>
+            </HorizontalScrollView>
+            <TextView android:textColor="@android:color/holo_red_dark" android:id="@id/custom_rollback_invalid_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/undo_changes_custom_rollback_invalid" />
+        </LinearLayout>
+        <ProgressBar android:layout_gravity="center_horizontal" android:id="@android:id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/Widget.ProgressBar.Small" />
+    </LinearLayout>
+</ScrollView>

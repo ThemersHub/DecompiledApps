@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:icon="@null" android:title="@string/settings_my_info_title" android:key="myInfo" android:order="@integer/my_info_order_number" />
+    <Preference android:icon="@null" android:title="@string/settings_accounts" android:key="accounts" android:order="@integer/accounts_order_number" />
+    <PreferenceCategory android:title="@string/settings_contacts_list_title" android:orderingFromXml="true" android:key="@string/contacts_list_pref_key" android:order="@integer/contacts_list_order_number">
+        <com.google.android.apps.contacts.preference.SortOrderPreference android:icon="@null" android:title="@string/display_options_sort_list_by" android:key="sortOrder" android:dialogTitle="@string/display_options_sort_list_by" />
+        <com.google.android.apps.contacts.preference.DisplayOrderPreference android:icon="@null" android:title="@string/display_options_view_names_as" android:key="displayOrder" android:dialogTitle="@string/display_options_view_names_as" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_edit_contacts_title" android:orderingFromXml="true" android:key="@string/edit_contacts_pref_key" android:order="@integer/edit_contacts_order_number">
+        <com.google.android.apps.contacts.preference.DefaultAccountPreference android:icon="@null" android:title="@string/default_editor_account" android:key="defaultAccount" android:dialogTitle="@string/default_editor_account" />
+        <com.google.android.apps.contacts.preference.PhoneticNameDisplayPreference android:icon="@null" android:title="@string/display_options_phonetic_name_fields" android:key="phoneticNameDisplay" android:dialogTitle="@string/display_options_phonetic_name_fields" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_manage_contacts_title" android:orderingFromXml="true" android:key="@string/manage_contacts_pref_key" android:order="@integer/manage_contacts_order_number">
+        <Preference android:icon="@null" android:title="@string/menu_import" android:key="import" android:order="@integer/import_order_number" />
+        <Preference android:icon="@null" android:title="@string/menu_export" android:key="export" android:order="@integer/export_order_number" />
+        <Preference android:icon="@null" android:title="@string/menu_restore" android:key="restore" android:order="@integer/restore_order_number" />
+        <Preference android:icon="@null" android:title="@string/menu_undo_changes" android:key="undoChanges" android:order="@integer/undo_changes_order_number" />
+        <Preference android:icon="@null" android:title="@string/menu_blocked_numbers" android:key="blockedNumbers" android:order="@integer/blocked_numbers_order_number" />
+        <Preference android:icon="@null" android:title="@string/menu_cleanup_wizard" android:key="cleanupWizard" android:order="@integer/cleanup_wizard_order_number" />
+    </PreferenceCategory>
+</PreferenceScreen>

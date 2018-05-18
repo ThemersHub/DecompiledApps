@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/quickcontact_content_view" android:paddingBottom="@dimen/content_bottom_padding" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/quickcontact_display_name" />
+        <include layout="@layout/verbs_container" />
+        <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/cards" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.google.android.apps.contacts.widget.ContentLoadingProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-8.0dip" android:layout_marginBottom="-4.0dip" android:indeterminate="true" android:indeterminateOnly="true" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+</RelativeLayout>

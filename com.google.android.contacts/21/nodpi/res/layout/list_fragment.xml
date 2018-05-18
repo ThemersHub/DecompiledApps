@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:elevation="4.0dip" app:navigationIcon="?homeAsUpIndicator" app:navigationContentDescription="@string/back_arrow_content_description" style="@style/LightToolbarStyle">
+        <Button android:textSize="14.0sp" android:layout_gravity="end|center" android:id="@id/action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.AppCompat.Button.Borderless" />
+    </android.support.v7.widget.Toolbar>
+    <android.support.design.widget.CoordinatorLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/list_header" />
+            <ListView android:id="@android:id/list" android:paddingTop="8.0dip" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:dividerHeight="1.0px" android:layout_weight="1.0" />
+        </LinearLayout>
+        <android.support.v4.widget.ContentLoadingProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateOnly="true" style="@style/Widget.AppCompat.ProgressBar" />
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

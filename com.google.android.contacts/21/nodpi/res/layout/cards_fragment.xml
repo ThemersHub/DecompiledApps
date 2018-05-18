@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/assistant_root" android:background="@color/assistant_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/assistant_list_header_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" layout="@layout/header" />
+        <android.support.v4.widget.SwipeRefreshLayout android:enabled="false" android:id="@id/assistant_swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/assistant_list_footer_container" android:layout_below="@id/assistant_list_header_container" android:elevation="1.0dip">
+            <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/assistant_cards" android:paddingTop="@dimen/assistant_card_margin_top" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/assistant_card_margin" android:paddingEnd="@dimen/assistant_card_margin" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <include android:id="@id/assistant_list_footer_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/footer" />
+    </RelativeLayout>
+    <android.support.v4.widget.ContentLoadingProgressBar android:layout_gravity="center" android:id="@id/loading_progress" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateOnly="true" android:contentDescription="@string/assistant_loading_content_description" android:importantForAccessibility="yes" style="@style/Widget.AppCompat.ProgressBar" />
+</android.support.design.widget.CoordinatorLayout>

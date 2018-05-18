@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/quantum_grey300" android:layout_width="fill_parent" android:layout_height="@dimen/promo_card_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/promo_card_margin" card_view:cardBackgroundColor="@color/promo_card_background" card_view:cardCornerRadius="@dimen/promo_card_corner_radius">
+        <RelativeLayout android:padding="@dimen/promo_card_main_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/promo_card_spinner_size" android:maxHeight="@dimen/promo_card_spinner_size" android:minWidth="@dimen/promo_card_spinner_size" android:minHeight="@dimen/promo_card_spinner_size" android:layout_marginEnd="@dimen/promo_card_spinner_end_margin" />
+            <TextView android:textSize="@dimen/promo_card_header_text_size" android:textStyle="bold" android:textColor="@color/promo_card_primary_text" android:id="@id/header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/initial_sync_card_header_no_contacts" android:layout_alignParentTop="true" android:textAlignment="viewStart" android:layout_toEndOf="@id/progress" />
+            <TextView android:textSize="@dimen/promo_card_body_text_size" android:textColor="@color/promo_card_secondary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/initial_sync_card_message" android:layout_below="@id/header" android:textAlignment="viewStart" android:layout_toEndOf="@id/progress" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

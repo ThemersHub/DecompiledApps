@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/empty_image" android:layout_width="@dimen/contacts_no_account_empty_image_width" android:layout_height="wrap_content" android:src="@drawable/contacts_no_account_empty" android:scaleType="centerInside" android:adjustViewBounds="true" />
+        <TextView android:gravity="center_horizontal" android:id="@id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/contacts_no_account_empty_text_padding_top" android:text="@string/noContacts" style="@style/EmptyStateTextStyle" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

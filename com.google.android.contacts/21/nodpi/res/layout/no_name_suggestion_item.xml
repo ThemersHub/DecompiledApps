@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?android:selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/image_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="6.0dip" android:layout_alignParentTop="true" android:layout_marginStart="8.0dip" android:layout_marginEnd="18.0dip" android:layout_alignParentStart="true">
+        <com.google.android.apps.contacts.list.core.CheckmarkImageView android:id="@id/check_mark" android:layout_width="40.0dip" android:layout_height="40.0dip" android:contentDescription="@string/assistant_suggestion_selected" />
+        <ImageView android:id="@id/no_name_suggestion_photo" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="fitCenter" android:contentDescription="@string/assistant_suggestion_not_selected" />
+    </FrameLayout>
+    <TextView android:textSize="12.0sp" android:textColor="@color/secondary_text_color" android:id="@id/existing_name_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/existing_name" android:layout_alignTop="@id/image_container" android:layout_toEndOf="@id/image_container" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/quantum_black_100" android:id="@id/existing_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_below="@id/existing_name_title" android:layout_toEndOf="@id/image_container" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/secondary_text_color" android:id="@id/suggestion_source" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/existing_name" android:layout_toEndOf="@id/image_container" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/quantum_black_100" android:id="@id/no_name_suggestion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/suggestion_source" android:layout_toEndOf="@id/image_container" />
+    <View android:id="@id/card_separator" android:background="@color/divider_line_color_light" android:layout_width="fill_parent" android:layout_height="@dimen/divider_line_height" android:layout_marginTop="16.0dip" android:layout_below="@id/no_name_suggestion" android:layout_toEndOf="@id/image_container" />
+</RelativeLayout>

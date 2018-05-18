@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.CoordinatorLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/people_activity_toolbar" />
+        <FrameLayout android:id="@id/contacts_unavailable_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" />
+        <FrameLayout android:id="@id/contacts_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" />
+        <include layout="@layout/floating_action_button" />
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.CoordinatorLayout android:layout_gravity="start" android:id="@id/nav_view" android:background="@color/navigation_drawer_background_color" android:fitsSystemWindows="true" android:clickable="true" android:layout_width="@dimen/drawer_width" android:layout_height="fill_parent" />
+</android.support.v4.widget.DrawerLayout>
