@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.ConstraintLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.constraint.Guideline android:orientation="vertical" android:id="@id/left_guide" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.2" />
+        <android.support.constraint.Guideline android:orientation="vertical" android:id="@id/right_guide" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.8" />
+        <com.android.deskclock.widget.TimerCircleFrameLayout android:layout_gravity="center" android:id="@id/stopwatch_time_wrapper" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="1:1" app:layout_constraintLeft_toRightOf="@id/left_guide" app:layout_constraintRight_toLeftOf="@id/right_guide" app:layout_constraintTop_toTopOf="parent">
+            <include layout="@layout/stopwatch_time" />
+            <com.android.deskclock.stopwatch.StopwatchCircleView android:layout_gravity="center" android:id="@id/stopwatch_circle" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.android.deskclock.widget.TimerCircleFrameLayout>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.RecyclerView android:layout_gravity="center" android:id="@id/laps_list" android:paddingBottom="@dimen/fab_height" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

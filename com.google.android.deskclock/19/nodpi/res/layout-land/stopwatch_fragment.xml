@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/gutter_width_percent" />
+    <com.android.deskclock.stopwatch.StopwatchLandscapeLayout android:paddingBottom="@dimen/fab_height" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/guttered_content_width_percent">
+        <FrameLayout android:layout_gravity="center" android:id="@id/stopwatch_time_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <include layout="@layout/stopwatch_time" />
+        </FrameLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/laps_list" android:paddingBottom="@dimen/fab_height" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.android.deskclock.stopwatch.StopwatchLandscapeLayout>
+    <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/gutter_width_percent" />
+</LinearLayout>

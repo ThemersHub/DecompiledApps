@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.deskclock.timer.TimerItem android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.Guideline android:orientation="vertical" android:id="@id/left_guide" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.2" />
+    <android.support.constraint.Guideline android:orientation="vertical" android:id="@id/right_guide" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.8" />
+    <com.android.deskclock.widget.TimerCircleFrameLayout android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/fab_spacing" app:layout_constraintDimensionRatio="1:1" app:layout_constraintLeft_toRightOf="@id/left_guide" app:layout_constraintRight_toLeftOf="@id/right_guide" app:layout_constraintTop_toTopOf="parent">
+        <com.android.deskclock.widget.CircleButtonsLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.android.deskclock.timer.TimerCircleView android:id="@id/timer_time" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.android.deskclock.widget.AutoSizingTextView android:textAppearance="@style/TextAppearance.TextClock" android:textSize="70.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/timer_time_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" />
+            <TextView android:textAppearance="@style/TextAppearance.Label" android:ellipsize="end" android:gravity="center" android:layout_gravity="center|top" android:id="@id/timer_label" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/touch_target_min_size" android:minHeight="@dimen/touch_target_min_size" android:hint="@string/label" android:maxLines="1" style="?attr/borderlessButtonStyle" />
+            <Button android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/reset_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" android:contentDescription="@string/timer_plus_one" style="?attr/borderlessButtonStyle" />
+        </com.android.deskclock.widget.CircleButtonsLayout>
+    </com.android.deskclock.widget.TimerCircleFrameLayout>
+    <Space android:id="@id/fab_spacing" android:layout_width="fill_parent" android:layout_height="@dimen/fab_height" app:layout_constraintBottom_toBottomOf="parent" />
+</com.android.deskclock.timer.TimerItem>

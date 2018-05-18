@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/settings"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/clock_settings">
+        <com.android.deskclock.settings.SimpleMenuPreference android:entries="@array/clock_style_entries" android:title="@string/clock_style" android:key="clock_style" android:summary="%s" android:defaultValue="@string/default_clock_style" android:dialogTitle="@string/clock_style" android:entryValues="@array/clock_style_values" />
+        <SwitchPreferenceCompat android:title="@string/display_clock_seconds_pref" android:key="display_clock_seconds" />
+        <SwitchPreferenceCompat android:title="@string/automatic_home_clock" android:key="automatic_home_clock" android:summary="@string/automatic_home_clock_summary" android:defaultValue="true" />
+        <ListPreference android:entries="@array/timezone_labels" android:title="@string/home_time_zone" android:key="home_time_zone" android:summary="%s" android:dependency="automatic_home_clock" android:dialogTitle="@string/home_time_zone_title" android:entryValues="@array/timezone_values" />
+        <Preference android:title="@string/open_date_settings" android:key="date_time" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/alarm_settings">
+        <ListPreference android:entries="@array/auto_silence_entries" android:title="@string/auto_silence_title" android:key="auto_silence" android:summary="%s" android:defaultValue="10" android:dialogTitle="@string/auto_silence_title" android:entryValues="@array/auto_silence_values" />
+        <ListPreference android:entries="@array/snooze_duration_entries" android:title="@string/snooze_duration_title" android:key="snooze_duration" android:summary="%s" android:defaultValue="10" android:dialogTitle="@string/snooze_duration_title" android:entryValues="@array/snooze_duration_values" />
+        <com.android.deskclock.settings.AlarmVolumePreference android:layout="@layout/alarm_volume_preference" android:title="@string/alarm_volume_title" android:key="volume_setting" />
+        <ListPreference android:entries="@array/crescendo_entries" android:title="@string/crescendo_duration_title" android:key="alarm_crescendo_duration" android:summary="%s" android:defaultValue="0" android:dialogTitle="@string/crescendo_duration_title" android:entryValues="@array/crescendo_values" />
+        <com.android.deskclock.settings.SimpleMenuPreference android:entries="@array/volume_button_setting_entries" android:title="@string/volume_button_setting_title" android:key="volume_button_setting" android:summary="%s" android:defaultValue="0" android:dialogTitle="@string/volume_button_setting_title" android:entryValues="@array/volume_button_setting_values" />
+        <com.android.deskclock.settings.SimpleMenuPreference android:entries="@array/week_start_entries" android:title="@string/week_start_title" android:key="week_start" android:summary="%s" android:dialogTitle="@string/week_start_title" android:entryValues="@array/week_start_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/timer_settings">
+        <Preference android:title="@string/timer_sound" android:key="timer_ringtone" />
+        <ListPreference android:entries="@array/crescendo_entries" android:title="@string/crescendo_duration_title" android:key="timer_crescendo_duration" android:summary="%s" android:defaultValue="0" android:dialogTitle="@string/crescendo_duration_title" android:entryValues="@array/crescendo_values" />
+        <SwitchPreferenceCompat android:title="@string/timer_vibrate_title" android:key="timer_vibrate" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/menu_item_night_mode">
+        <com.android.deskclock.settings.SimpleMenuPreference android:entries="@array/clock_style_entries" android:title="@string/clock_style" android:key="screensaver_clock_style" android:summary="%s" android:defaultValue="@string/default_clock_style" android:dialogTitle="@string/clock_style" android:entryValues="@array/clock_style_values" />
+        <SwitchPreferenceCompat android:title="@string/night_mode_title" android:key="screensaver_night_mode" android:summary="@string/night_mode_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>
