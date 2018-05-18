@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/item_view_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/conversation_item_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conv_list_padding" android:layout_marginRight="@dimen/conv_list_padding">
+        <View android:id="@id/contact_image" style="@style/ConversationListContactImageStyle" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/conv_list_padding" android:layout_weight="1.0">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/priority" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conv_list_padding_priority" />
+                <FrameLayout android:id="@id/senders_decoration" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ConversationListSendersDecorationStyle">
+                    <ImageView android:id="@id/reply_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conv_list_reply_state_padding_top" android:layout_marginRight="@dimen/conv_list_reply_state_padding_end" android:src="@drawable/quantum_ic_reply_grey600_18" android:layout_marginEnd="@dimen/conv_list_reply_state_padding_end" />
+                    <ImageView android:id="@id/personal_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conv_list_padding" android:src="@drawable/ic_email_caret_single" style="@style/ConversationListPersonalIndicatorStyle" />
+                </FrameLayout>
+                <TextView android:textSize="16.0sp" android:id="@id/senders" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conv_list_padding" android:text="@string/long_string" android:lines="1" android:includeFontPadding="false" android:layout_toRightOf="@id/senders_decoration" android:layout_toEndOf="@id/senders_decoration" />
+                <TextView android:id="@id/date" android:layout_marginTop="@dimen/conv_list_padding" android:text="@string/long_string" android:layout_alignBaseline="@id/senders" style="@style/ConversationListDateStyle" />
+                <ImageView android:id="@id/attachment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conv_list_padding" android:src="@drawable/quantum_ic_attachment_grey600_18" style="@style/ConversationListAttachmentStyle" />
+                <TextView android:textSize="14.0sp" android:id="@id/wa_symbol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conv_list_padding" android:text="@string/long_string" android:lines="1" android:includeFontPadding="false" android:layout_alignBaseline="@id/senders" style="@style/ConversationListAttachmentStyle" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/star" style="@style/ConversationListStarStyle" />
+                <TextView android:textSize="14.0sp" android:id="@id/subject" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conv_list_item_details_padding_top" android:includeFontPadding="false" style="@style/ConversationListSubjectStyle" />
+                <TextView android:textSize="14.0sp" android:id="@id/snippet" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conv_list_item_details_padding_top" android:includeFontPadding="false" style="@style/ConversationListSnippetAndFoldersStyle" />
+                <TextView android:textSize="@dimen/folder_tl_font_size" android:id="@id/folders" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ConversationListSnippetAndFoldersStyle" />
+                <TextView android:textSize="14.0sp" android:id="@id/rank_rationale_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conv_list_item_details_padding_top" android:includeFontPadding="false" style="@style/ConversationListItemRankRationaleStyle" />
+            </RelativeLayout>
+            <include layout="@layout/offer_image" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

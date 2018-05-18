@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.libraries.gsuite.addons.ui.AddonToolbar android:id="@id/addon_tool_bar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <HorizontalScrollView android:id="@id/scrollView" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:gravity="center_vertical" android:id="@id/available_addon_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/available_addons" android:layout_weight="0.0" style="@style/AddonToolbarText" />
+            <com.google.android.libraries.gsuite.addons.ui.AddonIconsContainer android:gravity="end|center" android:id="@id/addon_buttons" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.google.android.libraries.gsuite.addons.ui.AddonsLoadingIndicator android:gravity="end|center" android:id="@id/addon_loading" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <TextView android:gravity="center" android:id="@id/no_addon_text" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_addon_available" style="@style/AddonToolbarText" />
+</com.google.android.libraries.gsuite.addons.ui.AddonToolbar>

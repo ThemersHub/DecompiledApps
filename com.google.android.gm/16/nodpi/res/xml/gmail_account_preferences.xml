@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:orderingFromXml="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/account_category" android:key="account" android:order="0">
+        <PreferenceScreen android:title="@string/my_account_title" android:key="my-account" android:summary="@string/my_account_settings" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/inbox_category" android:key="inbox" android:order="1">
+        <ListPreference android:persistent="false" android:entries="@array/gigInboxTypeEntries" android:title="@string/preferences_inbox_type_title" android:key="inbox-type-gig" android:defaultValue="@string/inboxTypeDefaultValue" android:entryValues="@array/gigInboxTypeEntryValues" />
+        <ListPreference android:persistent="false" android:entries="@array/inboxTypeEntries" android:title="@string/preferences_inbox_type_title" android:key="inbox-type" android:defaultValue="@string/inboxTypeDefaultValue" android:entryValues="@array/inboxTypeEntryValues" />
+        <PreferenceScreen android:title="@string/preferences_inbox_categories_title" android:key="inbox-categories" android:fragment="com.google.android.gm.preference.InboxSectionsPreferenceFragment" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/notifications_category" android:key="notifications" android:order="2">
+        <CheckBoxPreference android:title="@string/preferences_notifications_enable" android:key="notifications-enabled" android:defaultValue="true" />
+        <ListPreference android:persistent="false" android:entries="@array/notificationLevelEntries" android:title="@string/preferences_priority_inbox_notification_level_title" android:key="notification-level" android:dependency="notifications-enabled" android:defaultValue="@string/notificationLevelDefaultValue" android:entryValues="@array/notificationLevelEntryValues" />
+        <PreferenceScreen android:title="@string/preferences_manage_inbox_label_title" android:key="inbox-settings" android:dependency="notifications-enabled" />
+        <PreferenceScreen android:title="@string/preferences_manage_labels_title" android:key="manage-labels" />
+        <PreferenceScreen android:title="@string/preferences_manage_notifications_title" android:key="manage-notifications" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/general_category" android:key="general" android:order="3">
+        <ListPreference android:persistent="false" android:entries="@array/default_reply_action_entries" android:title="@string/preferences_default_reply_action_title" android:key="default-reply-action" android:summary="@string/preferences_default_reply_all_summary" android:entryValues="@array/default_reply_action_values" />
+        <EditTextPreference android:singleLine="false" android:title="@string/preferences_signature_title" android:key="signature" android:dialogTitle="@string/preferences_signature_dialog_title" />
+        <CheckBoxPreference android:title="@string/account_settings_conversation_view_title" android:key="cv-enabled" android:summary="@string/account_settings_conversation_view_summary" android:defaultValue="true" />
+        <PreferenceScreen android:title="@string/preferences_vacation_responder_title" android:key="vacation-responder" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/account_settings_nudges" android:key="nudges" android:order="4">
+        <PreferenceScreen android:title="@string/preferences_nudging_title" android:key="nudges-reply-followup-settings" android:fragment="com.google.android.gm.preference.NudgeSettingsPreferenceFragment" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/account_settings_data_usage" android:key="data-usage" android:order="5">
+        <CheckBoxPreference android:title="@string/preferences_sync_status" android:key="sync_status" android:defaultValue="true" />
+        <com.google.android.gm.preference.IntegerPickerPreference android:title="@string/settings_number_of_days" android:key="days-to-sync" />
+        <CheckBoxPreference android:title="@string/preference_prefetch_attachments_title" android:key="prefetch-attachments" android:summary="@string/preference_prefetch_attachments_summary" android:defaultValue="true" />
+        <ListPreference android:entries="@array/showImagesEntries" android:title="@string/preference_show_images_title" android:key="show-images-in-cv" android:entryValues="@array/showImagesValues" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/g6y_settings_title" android:key="gmailify" android:order="6">
+        <Preference android:selectable="false" android:key="gmailify-address" />
+        <CheckBoxPreference android:title="@string/g6y_settings_default_address_title" android:key="gmailify-default-address" />
+        <PreferenceScreen android:title="@string/g6y_setting_unlink_title" android:key="gmailify-unlink" />
+        <Preference android:title="@string/g6y_setting_last_sync_title" android:key="gmailify-last-sync" />
+    </PreferenceCategory>
+</PreferenceScreen>

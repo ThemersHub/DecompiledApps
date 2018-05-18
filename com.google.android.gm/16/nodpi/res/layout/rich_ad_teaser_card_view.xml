@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gm.ads.RichAdTeaserCardView android:id="@id/rich_ad_teaser_card" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="@dimen/rich_ad_teaser_card_corner_radius" app:cardElevation="@dimen/rich_ad_teaser_card_elevation" app:cardUseCompatPadding="true" app:cardPreventCornerOverlap="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/tl_item_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/rich_ad_teaser_image" android:background="@color/rich_ad_teaser_image_placeholder_background" android:layout_width="wrap_content" android:layout_height="fill_parent" android:adjustViewBounds="true" android:contentDescription="@null" />
+        <RelativeLayout android:id="@id/rich_ad_teaser_text_content" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/RichAdTeaserTextContent">
+            <TextView android:layout_gravity="start|center|top" android:id="@id/rich_ad_teaser_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" style="@style/RichAdTeaserDescription" />
+            <TextView android:id="@id/rich_ad_teaser_cta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/RichAdTeaserCtaButtonText" />
+            <TextView android:layout_gravity="bottom" android:id="@id/rich_ad_teaser_display_url" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/rich_ad_teaser_cta" android:layout_alignBaseline="@id/rich_ad_teaser_cta" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" style="@style/RichAdTeaserDisplayUrl" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.google.android.gm.ads.RichAdTeaserCardView>

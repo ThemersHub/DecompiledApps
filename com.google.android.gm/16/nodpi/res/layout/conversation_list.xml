@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.ui.PullToRefreshLayout android:id="@id/swipe_refresh_widget" android:background="@color/item_list_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/conversation_list_parent_frame" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewStub android:id="@id/conversation_list_empty_stub" android:layout="@layout/conversation_list_empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/security_hold_stub" android:layout="@layout/security_hold_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.android.mail.ui.ThreadListView android:id="@id/thread_list_view" android:visibility="gone" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+        <ViewStub android:layout_gravity="center" android:id="@id/conversation_list_loading_stub" android:layout="@layout/conversation_list_loading_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</com.android.mail.ui.PullToRefreshLayout>

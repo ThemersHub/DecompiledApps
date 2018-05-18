@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/search_banner_bg" android:paddingLeft="@dimen/search_results_padding" android:paddingRight="@dimen/search_results_padding" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/notification_view_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/threadlist_teaser_view" />
+    <LinearLayout android:background="@color/search_banner_bg" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="@dimen/notification_view_height" android:minHeight="@dimen/notification_view_height"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/search_status_text_view" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/search_results_header" android:singleLine="true" android:layout_weight="8.0" android:textAllCaps="true" style="@style/SearchTextStyle" />
+        <TextView android:gravity="end|center" android:id="@id/search_result_count_view" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" style="@style/SearchTextStyle" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/calendar_permission" android:paddingLeft="@dimen/calendar_permission_padding" android:paddingRight="@dimen/calendar_permission_padding" android:paddingBottom="@dimen/calendar_permission_padding_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:paddingTop="@dimen/calendar_permission_icon_padding" android:layout_width="@dimen/calendar_permission_icon_size" android:layout_height="@dimen/calendar_permission_icon_size" android:src="@drawable/ic_calendar_permissions" />
+        <TextView android:gravity="center" android:layout_width="@dimen/calendar_permission_text_width" android:layout_height="wrap_content" android:text="@string/calendar_permission_recommendation_text" style="@style/CalendarPermissionRecommendationStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:layout_gravity="start" android:id="@id/calendar_permission_deny_text" android:layout_width="wrap_content" android:layout_height="@dimen/calendar_permission_button_height" android:text="@string/calendar_permission_no_thanks" style="@style/CalendarPermissionRecommendationButtonStyle" />
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <Button android:layout_gravity="end" android:id="@id/calendar_permission_setting_text" android:layout_width="wrap_content" android:layout_height="@dimen/calendar_permission_button_height" android:text="@string/calendar_permission_settings" android:drawableEnd="@drawable/quantum_ic_chevron_right_googblue_18" android:paddingEnd="@dimen/calendar_permission_chevron_padding" style="@style/CalendarPermissionRecommendationButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

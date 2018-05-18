@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_gravity="center|top" android:paddingLeft="@dimen/compose_wrapper_side_padding" android:paddingRight="@dimen/compose_wrapper_side_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:paddingTop="@dimen/compose_wrapper_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/compose_padding_weight" />
+        <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:importantForAccessibility="no" style="@style/VacationResponderArea">
+            <android.support.v7.widget.SwitchCompat android:id="@id/vacation_responder_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/preferences_vacation_responder_title" style="@style/VacationResponderDisplayText" />
+            <LinearLayout android:orientation="vertical" android:id="@id/vacation_responder_main_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:id="@id/start_date_selector" android:layout_marginRight="@dimen/vacation_responder_padding_between_date_spinners" style="@style/VacationResponderDatePicker">
+                        <TextView android:text="@string/pick_start_date_title" style="@style/VacationResponderDateHeader" />
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@id/start_date" style="@style/VacationResponderDate" />
+                            <ImageView style="@style/VacationResponderDatePickerDropDown" />
+                        </LinearLayout>
+                        <View style="@style/VacationResponderDividerStyle" />
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/end_date_selector" style="@style/VacationResponderDatePicker">
+                        <TextView android:text="@string/pick_end_date_title" style="@style/VacationResponderDateHeader" />
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@id/end_date" style="@style/VacationResponderDate" />
+                            <ImageView style="@style/VacationResponderDatePickerDropDown" />
+                        </LinearLayout>
+                        <View style="@style/VacationResponderDividerStyle" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/compose_padding_weight" />
+    </LinearLayout>
+</ScrollView>

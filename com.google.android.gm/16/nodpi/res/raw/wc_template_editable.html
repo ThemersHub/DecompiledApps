@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+    Arguments for this template:
+    1. Body HTML String
+    2. Signature
+    3. Elided text HTML String
+    4. Hint text String
+    5. Hint text color String
+    6. padding-top of the body in px
+    7. padding-bottom of the body in px
+    8. direction of hint. "ltr" or "rtl".
+    9. Whether the elided text should be expanded (e.g. when Forwarding). "true" or "false"
+    10. Whether the signature should be initialized. "true" or "false"
+    11. Wallet discoverability keyword sequences - literal JSON array of arrays of words
+    12. Size of font in body
+    13. Whether plus/at mention is enabled. "true" or "false"
+-->
+<html>
+<head>
+<script type="text/javascript">
+    var SHOW_ELIDED=%9$s;
+    var INIT_SIGNATURE=%10$s;
+    var WALLET_DISCOVER_KEYWORD_HASHES=%11$s;
+    var MENTION_ENABLED=%13$s;
+</script>
+<script type="text/javascript" src="file:///android_asset/draft_editor.js"></script>
+<script type="text/javascript" src="file:///android_asset/wa_discover.js"></script>
+<link rel="stylesheet" type="text/css" href="file:///android_asset/compose.css">
+<style>
+body {
+    margin: 0;
+    padding-top: %6$.1fpx;
+    padding-bottom: %7$.1fpx;
+    font-size: %12$s;
+}
+div.body:empty {
+    direction: %8$s;
+}
+div.body:empty:before {
+    color: %5$s;
+    content: attr(hint);
+}
+span.money[uline] {
+    border-bottom: dotted #4CAF50;
+    border-width: 2px;
+}
+</style>
+</head>
+<body><div dir="auto" class="body" contenteditable="true" spellcheck="true" hint="%4$s">%1$s</div>
+<div class="signature_holder" style="display: none;">%2$s</div>
+<div class="elided_text" style="display: none;">%3$s</div></body>
+</html>

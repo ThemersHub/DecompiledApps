@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/t4_detail_container" android:paddingLeft="@dimen/tasks_detail_fragment_padding_horizontal" android:paddingRight="@dimen/tasks_detail_fragment_padding_horizontal" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/t4_detail_subject_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Tasks.Detail.Subject" />
+    <View android:background="@color/quantum_grey300" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginBottom="@dimen/tasks_detail_item_padding_vertical" />
+    <LinearLayout android:id="@id/t4_detail_due_date" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Tasks.Detail.Item">
+        <ImageView android:src="@drawable/quantum_ic_event_grey600_24" style="@style/Tasks.Detail.Icon" />
+        <TextView android:id="@id/t4_detail_due_date_text" style="@style/Tasks.Detail.BodyBase.Body" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/t4_detail_recurrence" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Tasks.Detail.Item">
+        <ImageView android:src="@drawable/quantum_ic_refresh_grey600_24" style="@style/Tasks.Detail.Icon" />
+        <TextView android:id="@id/t4_detail_recurrence_text" style="@style/Tasks.Detail.BodyBase.Body" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/t4_detail_notification_time" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Tasks.Detail.Item">
+        <ImageView android:src="@drawable/quantum_ic_notifications_grey600_24" style="@style/Tasks.Detail.Icon" />
+        <TextView android:id="@id/t4_detail_notification_time_text" style="@style/Tasks.Detail.BodyBase.Body" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/t4_detail_priority" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Tasks.Detail.Item">
+        <ImageView android:id="@id/t4_detail_priority_icon" style="@style/Tasks.Detail.Icon" />
+        <TextView android:id="@id/t4_detail_priority_text" style="@style/Tasks.Detail.BodyBase.Body" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/t4_detail_body" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Tasks.Detail.Item">
+        <ImageView android:src="@drawable/quantum_ic_short_text_grey600_24" style="@style/Tasks.Detail.Icon" />
+        <TextView android:autoLink="all" android:id="@id/t4_detail_body_text" style="@style/Tasks.Detail.BodyBase.Body" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/t4_view_conversation" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Tasks.Detail.Item">
+        <ImageView android:src="@drawable/quantum_ic_email_grey600_24" style="@style/Tasks.Detail.Icon" />
+        <TextView android:text="@string/t4_view_conversation" style="@style/Tasks.Detail.BodyBase.Body" />
+    </LinearLayout>
+</LinearLayout>

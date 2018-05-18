@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<providers>
+    <provider id="gmail" label="Gmail" oauth="google">
+        <domain pattern="gmail.com" />
+        <domain pattern="googlemail.com" />
+        <domain pattern="google.com" />
+        <domain pattern="android.com" />
+        <domain pattern="chromium.org" />
+        <incoming uri="gmail://gmail.com" username="" />
+        <outgoing uri="gmail://gmail.com" username="" />
+    </provider>
+    <provider id="aol" label="AOL">
+        <domain pattern="aim.com" />
+        <domain pattern="aol.*" />
+        <domain pattern="aol.co.uk" />
+        <domain pattern="cs.com" />
+        <domain pattern="netscape.net" />
+        <incoming uri="gLegacyImap+ssl+://imap.aol.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.aol.com" username="$email" />
+    </provider>
+    <provider id="dotmac" label=".Mac">
+        <domain pattern="mac.com" />
+        <incoming uri="gLegacyImap+ssl+://mail.mac.com" username="$email" />
+        <outgoing uri="smtp+tls+://smtp.mac.com" username="$email" />
+    </provider>
+    <provider id="mobileme" label="MobileMe">
+        <domain pattern="me.com" />
+        <incoming uri="gLegacyImap+ssl+://mail.me.com" username="$email" />
+        <outgoing uri="smtp+tls+://smtp.me.com" username="$email" />
+    </provider>
+    <provider id="icloud" label="iCloud">
+        <domain pattern="icloud.com" />
+        <incoming uri="gLegacyImap+ssl+://imap.mail.me.com" username="$email" />
+        <outgoing uri="smtp+tls+://smtp.mail.me.com" username="$email" />
+    </provider>
+    <provider id="outlook" label="Outlook" oauth="microsoft">
+        <domain pattern="outlook.*" />
+        <domain pattern="live.*" />
+        <domain pattern="live.*.*" />
+        <domain pattern="*.live.*" />
+        <domain pattern="hotmail.*" />
+        <domain pattern="hotmail.*.*" />
+        <domain pattern="livemail.*" />
+        <domain pattern="livemail.*.*" />
+        <domain pattern="msn.*" />
+        <domain pattern="msnhotmail.com" />
+        <incoming uri="gLegacyImap+ssl+://imap-mail.outlook.com" username="$email" />
+        <outgoing uri="smtp+tls+://smtp-mail.outlook.com" username="$email" />
+        <incoming-fallback uri="gEas+ssl+://m.hotmail.com" username="$email" />
+        <outgoing-fallback uri="gEas+ssl+://m.hotmail.com" username="$email" />
+        <send-settings includeBccInHeader="true" />
+    </provider>
+    <provider id="yahoo-jp-ybb" label="Yahoo! Japan">
+        <domain pattern="ybb.ne.jp" />
+        <incoming uri="gPop3+ssl+://ybbpop.mail.yahoo.co.jp" username="$email" />
+        <outgoing uri="smtp+ssl+://ybbsmtp.mail.yahoo.co.jp" username="$email" />
+    </provider>
+    <provider id="yahoo-jp" label="Yahoo! Japan">
+        <domain pattern="yahoo.co.jp" />
+        <incoming uri="gLegacyImap+ssl+://imap.mail.yahoo.co.jp" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.mail.yahoo.co.jp" username="$email" />
+    </provider>
+    <provider id="yahoo" label="Yahoo!" oauth="yahoo">
+        <domain pattern="yahoo.com" />
+        <domain pattern="ymail.com" />
+        <domain pattern="rocketmail.com" />
+        <domain pattern="bellsouth.net" />
+        <domain pattern="pacbell.net" />
+        <domain pattern="sbcglobal.net" />
+        <domain pattern="swbell.net" />
+        <domain pattern="rogers.com" />
+        <domain pattern="nl.rogers.com" />
+        <domain pattern="snet.net" />
+        <domain pattern="wans.net" />
+        <domain pattern="prodigy.net" />
+        <domain pattern="nvbell.net" />
+        <domain pattern="flash.net" />
+        <domain pattern="ameritech.net" />
+        <domain pattern="y7mail.com" />
+        <domain pattern="kimo.com" />
+        <domain pattern="yahoo.com.??" />
+        <domain pattern="yahoo.co.??" />
+        <domain pattern="yahoo.??" />
+        <incoming uri="gLegacyImap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="att" label="AT&amp;T">
+        <domain pattern="att.net" />
+        <incoming uri="gLegacyImap+ssl+://imap.mail.att.net" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.mail.att.net" username="$email" />
+    </provider>
+    <provider id="bt" label="BT">
+        <domain pattern="btinternet.com" />
+        <domain pattern="btopenworld.com" />
+        <domain pattern="talk21.com" />
+        <incoming uri="gLegacyImap+ssl+://mail.btinternet.com" username="$email" />
+        <outgoing uri="smtp+ssl+://mail.btinternet.com" username="$email" />
+    </provider>
+    <provider id="vodafone-de" label="Vodafone">
+        <domain pattern="vodafone.de" />
+        <incoming uri="gLegacyImap+ssl+://imap.vodafone.de" username="$email" />
+        <outgoing uri="smtp+tls+://smtp.vodafone.de" username="$email" />
+        <incoming-fallback uri="gPop3+ssl+://pop.vodafone.de" username="$email" />
+    </provider>
+    <provider id="orange-fr" label="Orange">
+        <domain pattern="orange.fr" />
+        <domain pattern="wanadoo.fr" />
+        <incoming uri="gLegacyImap+ssl+://imap.orange.fr" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.orange.fr" username="$email" />
+    </provider>
+    <provider id="tiscali-it" label="Tiscali">
+        <domain pattern="tiscali.it" />
+        <incoming uri="gLegacyImap+ssl+://imap.tiscali.it" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.tiscali.it" username="$email" />
+    </provider>
+    <provider id="rr" label="RoadRunner">
+        <domain pattern="roadrunner.com" />
+        <domain pattern="*.rr.com" />
+        <incoming uri="gLegacyImap+ssl+://mail.twc.com" username="$email" />
+        <outgoing uri="smtp+tls+://mail.twc.com" username="$email" />
+    </provider>
+    <provider id="1and1" label="1&amp;1">
+        <domain pattern="1and1.com" />
+        <incoming uri="gLegacyImap+ssl+://imap.1and1.com" username="$email" />
+        <outgoing uri="smtp+tls+://smtp.1and1.com" username="$email" />
+    </provider>
+    <provider id="1und1" label="1&amp;1">
+        <domain pattern="1und1.de" />
+        <domain pattern="online.de" />
+        <incoming uri="gLegacyImap+ssl+://imap.1und1.de" username="$email" />
+        <outgoing uri="smtp+tls+://smtp.1und1.de" username="$email" />
+    </provider>
+    <provider id="zoho" label="Zoho">
+        <domain pattern="zoho.com" />
+        <incoming uri="gLegacyImap+ssl+://imap.zoho.com" username="$email" />
+        <outgoing uri="smtp+tls+://smtp.zoho.com" username="$email" />
+    </provider>
+    <provider id="bigpond" label="Bigpond">
+        <domain pattern="bigpond.com" />
+        <domain pattern="bigpond.net.au" />
+        <domain pattern="telstra.com" />
+        <incoming uri="gLegacyImap+ssl+://imap.telstra.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.telstra.com" username="$email" />
+    </provider>
+    <provider id="skynet_be" label="skynet">
+        <domain pattern="skynet.be" />
+        <incoming uri="gLegacyImap+ssl+://imap.proximus.be" username="$email" />
+        <outgoing uri="smtp+tls+://relay.proximus.be" username="$email" />
+    </provider>
+    <provider id="telenet_be" label="Telenet">
+        <domain pattern="telenet.be" />
+        <incoming uri="gLegacyImap+ssl+://imap.telenet.be" username="$email" />
+        <outgoing uri="smtp+tls+://smtp.telenet.be" username="$email" />
+    </provider>
+    <provider id="bell" label="Bell">
+        <domain pattern="bell.net" />
+        <domain pattern="sympatico.ca" />
+        <incoming uri="gLegacyImap+ssl+://imap.bell.net" username="$email" />
+        <outgoing uri="smtp+tls+://smtphm.sympatico.ca" username="$email" />
+    </provider>
+    <provider id="eastlink" label="Eastlink">
+        <domain pattern="eastlink.ca" />
+        <domain pattern="accesscable.*" />
+        <domain pattern="accesswave.ca" />
+        <domain pattern="persona.ca" />
+        <domain pattern="personainternet.com" />
+        <domain pattern="cyberbeach.net" />
+        <domain pattern="isys.caxcelco.on.ca" />
+        <domain pattern="cabletv.on.ca" />
+        <domain pattern="amtelcom.net" />
+        <domain pattern="dccnet.com" />
+        <incoming uri="gLegacyImap+ssl+://mail.eastlink.ca" username="$email" />
+        <outgoing uri="smtp+tls+://mail.eastlink.ca" username="$email" />
+    </provider>
+    <provider id="sasktel" label="SaskTel">
+        <domain pattern="sasktel.net" />
+        <incoming uri="gLegacyImap+ssl+://mail.sasktel.net" username="$email" />
+        <outgoing uri="smtp+tls+://smtp.sasktel.net" username="$email" />
+    </provider>
+    <provider id="telus_net" label="TELUS">
+        <domain pattern="telus.net" />
+        <incoming uri="gLegacyImap+ssl+://imap.telus.net" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.telus.net" username="$email" />
+    </provider>
+    <provider id="videotron" label="Vidéotron">
+        <domain pattern="videotron.ca" />
+        <domain pattern="biz.videotron.ca" />
+        <domain pattern="vl.videotron.ca" />
+        <domain pattern="videotron.qc.ca" />
+        <incoming uri="gLegacyImap+ssl+://imap.videotron.ca" username="$email" />
+        <outgoing uri="smtp+ssl+://relais.videotron.ca" username="$email" />
+    </provider>
+    <provider id="seznam_cz" label="Seznam">
+        <domain pattern="seznam.cz" />
+        <domain pattern="email.cz" />
+        <domain pattern="post.cz" />
+        <domain pattern="spoluzaci.cz" />
+        <domain pattern="stream.cz" />
+        <domain pattern="firmy.cz" />
+        <incoming uri="gLegacyImap+ssl+://imap.seznam.cz" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.seznam.cz" username="$email" />
+    </provider>
+    <provider id="laposte" label="La Poste">
+        <domain pattern="laposte.net" />
+        <incoming uri="gLegacyImap+ssl+://imap.laposte.net" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.laposte.net" username="$email" />
+    </provider>
+    <provider id="free" label="Free">
+        <domain pattern="free.fr" />
+        <incoming uri="gLegacyImap+ssl+://imap.free.fr" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.free.fr" username="$email" />
+    </provider>
+    <provider id="sfr" label="SFR">
+        <domain pattern="sfr.fr" />
+        <domain pattern="neuf.fr" />
+        <domain pattern="club-internet.fr" />
+        <domain pattern="cegetel.fr" />
+        <domain pattern="cegetel.net" />
+        <incoming uri="gLegacyImap+ssl+://imap.sfr.fr" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.sfr.fr" username="$email" />
+    </provider>
+    <provider id="bouygtel" label="Bouygues tel">
+        <domain pattern="bouygtel.fr" />
+        <domain pattern="bbox.fr" />
+        <incoming uri="gLegacyImap+ssl+://imap.bbox.fr" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.bbox.fr" username="$email" />
+    </provider>
+    <provider id="freenet" label="Freenet">
+        <domain pattern="freenet.de" />
+        <incoming uri="gLegacyImap+tls+://mx.freenet.de" username="$user" />
+        <outgoing uri="smtp+tls+://mx.freenet.de" username="$email" />
+    </provider>
+    <provider id="gmx" label="GMX">
+        <domain pattern="gmx.*" />
+        <incoming uri="gLegacyImap+ssl+://imap.gmx.net" username="$email" />
+        <outgoing uri="smtp+tls+://mail.gmx.net" username="$email" />
+    </provider>
+    <provider id="T-Online" label="DTAG">
+        <domain pattern="t-online.de" />
+        <incoming uri="gLegacyImap+ssl+://secureimap.t-online.de" username="$email" />
+        <outgoing uri="smtp+ssl+://securesmtp.t-online.de" username="$email" />
+    </provider>
+    <provider id="web.de" label="Web.de">
+        <domain pattern="web.de" />
+        <incoming uri="gLegacyImap+ssl+://imap.web.de" username="$user" />
+        <outgoing uri="smtp+tls+://smtp.web.de" username="$user" />
+    </provider>
+    <provider id="tim_it" label="TIM">
+        <domain pattern="tim.it" />
+        <incoming uri="gLegacyImap+ssl+://imap.tim.it" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.tim.it" username="$email" />
+    </provider>
+    <provider id="virgilio_it" label="ViRGILIO">
+        <domain pattern="virgilio.it" />
+        <incoming uri="gLegacyImap+ssl+://in.virgilio.it" username="$email" />
+        <outgoing uri="smtp+ssl+://out.virgilio.it" username="$email" />
+    </provider>
+    <provider id="docomo" label="DoCoMo">
+        <domain pattern="docomo.ne.jp" />
+        <incoming uri="gLegacyImap+ssl+://imap.spmode.ne.jp" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.spmode.ne.jp" username="$email" />
+    </provider>
+    <provider id="onet" label="Onet.pl">
+        <domain pattern="poczta.onet.pl" />
+        <incoming uri="gLegacyImap+ssl+://imap.poczta.onet.pl" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.poczta.onet.pl" username="$email" />
+    </provider>
+    <provider id="wirtualna" label="Wirtualna Polska">
+        <domain pattern="wp.pl" />
+        <incoming uri="gLegacyImap+ssl+://imap.wp.pl" username="$user" />
+        <outgoing uri="smtp+ssl+://smtp.wp.pl" username="$user" />
+    </provider>
+    <provider id="interia" label="Interia">
+        <domain pattern="interia.pl" />
+        <incoming uri="gLegacyImap+ssl+://poczta.interia.pl" username="$user" />
+        <outgoing uri="smtp+ssl+://poczta.interia.pl" username="$user" />
+    </provider>
+    <provider id="o2" label="O2">
+        <domain pattern="o2.pl" />
+        <incoming uri="gLegacyImap+ssl+://poczta.o2.pl" username="$user" />
+        <outgoing uri="smtp+ssl+://poczta.o2.pl" username="$user" />
+    </provider>
+    <provider id="mail.ru" label="Mail.ru" oauth="mail.ru">
+        <domain pattern="mail.ru" />
+        <domain pattern="inbox.ru" />
+        <domain pattern="list.ru" />
+        <domain pattern="bk.ru" />
+        <incoming uri="gLegacyImap+ssl+://imap.mail.ru" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.mail.ru" username="$email" />
+    </provider>
+    <provider id="yandex" label="Yandex" oauth="yandex">
+        <domain pattern="yandex.*" />
+        <domain pattern="yandex.com.*" />
+        <domain pattern="ya.ru" />
+        <domain pattern="narod.ru" />
+        <domain pattern="tut.by" />
+        <domain pattern="tyt.by" />
+        <incoming uri="gLegacyImap+ssl+://imap.yandex.ru" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.yandex.ru" username="$email" />
+    </provider>
+    <provider id="rambler.ru" label="Rambler">
+        <domain pattern="rambler.ru" />
+        <domain pattern="lenta.ru" />
+        <domain pattern="autorambler.ru" />
+        <domain pattern="myrambler.ru" />
+        <domain pattern="ro.ru" />
+        <incoming uri="gLegacyImap+ssl+://imap.rambler.ru" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.rambler.ru" username="$email" />
+    </provider>
+    <provider id="bluewin" label="bluewin">
+        <domain pattern="bluewin.ch" />
+        <incoming uri="gLegacyImap+ssl+://imaps.bluewin.ch" username="$email" />
+        <outgoing uri="smtp+ssl+://smtpauths.bluewin.ch" username="$email" />
+    </provider>
+    <provider id="ntlworld" label="NTL World">
+        <domain pattern="ntlworld.com" />
+        <incoming uri="gLegacyImap+ssl+://imap.ntlworld.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.virginmedia.com" username="$email" />
+    </provider>
+    <provider id="ukr_net" label="ukr.net">
+        <domain pattern="ukr.net" />
+        <incoming uri="gLegacyImap+ssl+://imap.ukr.net" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.ukr.net" username="$email" />
+    </provider>
+    <provider id="xtra" label="Xtra">
+        <domain pattern="xtra.co.nz" />
+        <incoming uri="gLegacyImap+ssl+://imap.xtra.co.nz" username="$email" />
+        <outgoing uri="smtp+ssl+://send.xtra.co.nz" username="$email" />
+    </provider>
+    <provider id="comcast" label="Comcast">
+        <domain pattern="comcast.net" />
+        <incoming uri="gLegacyImap+ssl+://imap.comcast.net" username="$user" />
+        <outgoing uri="smtp+ssl+://smtp.comcast.net" username="$user" />
+    </provider>
+    <provider id="cox" label="Cox">
+        <domain pattern="cox.net" />
+        <incoming uri="gPop3+ssl+://pop.east.cox.net" username="$user" />
+        <outgoing uri="smtp+ssl+://smtp.east.cox.net" username="$user" />
+    </provider>
+    <provider id="juno" label="Juno">
+        <domain pattern="juno.com" />
+        <incoming uri="gPop3+ssl+://pop.juno.com" username="$user" />
+        <outgoing uri="smtp+ssl+://smtp.juno.com" username="$user" />
+    </provider>
+    <provider id="netzero" label="NetZero">
+        <domain pattern="netzero.com" />
+        <incoming uri="gPop3+ssl+://pop.netzero.com" username="$user" />
+        <outgoing uri="smtp+ssl+://smtp.netzero.com" username="$user" />
+    </provider>
+    <provider id="verizon" label="Verizon">
+        <domain pattern="verizon.net" />
+        <incoming uri="gPop3+ssl+://pop.verizon.net" username="$user" />
+        <outgoing uri="smtp+ssl+://smtp.verizon.net" username="$user" />
+    </provider>
+    <provider id="hanmail" label="Daum Hanmail">
+        <domain pattern="hanmail.net" />
+        <incoming uri="gLegacyImap+ssl+://imap.hanmail.net" username="$user" />
+        <outgoing uri="smtp+ssl+://smtp.hanmail.net" username="$user" />
+    </provider>
+    <provider id="daum" label="Daum">
+        <domain pattern="daum.net" />
+        <incoming uri="gLegacyImap+ssl+://imap.daum.net" username="$user" />
+        <outgoing uri="smtp+ssl+://smtp.daum.net" username="$user" />
+    </provider>
+    <provider id="naver" label="NAVER">
+        <domain pattern="naver.com" />
+        <incoming uri="gLegacyImap+ssl+://imap.naver.com" username="$user" />
+        <outgoing uri="smtp+tls+://smtp.naver.com" username="$user" />
+    </provider>
+    <provider id="paran" label="Paran">
+        <domain pattern="paran.com" />
+        <domain pattern="hitel.net" />
+        <domain pattern="hanmir.com" />
+        <incoming uri="gLegacyImap+ssl+://imap.paran.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.paran.com" username="$email" />
+    </provider>
+    <provider id="bol" label="BOL">
+        <domain pattern="bol.com.br" />
+        <incoming uri="gLegacyImap+ssl+://imap.bol.com.br" username="$email" />
+        <outgoing uri="smtp+ssl+://smtps.bol.com.br" username="$email" />
+    </provider>
+    <provider id="globo" label="Globo">
+        <domain pattern="globo.com" />
+        <domain pattern="globomail.com" />
+        <incoming uri="gLegacyImap+ssl+://imap.globo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.globo.com" username="$email" />
+    </provider>
+    <provider id="ig" label="iG">
+        <domain pattern="ig.com.br" />
+        <incoming uri="gLegacyImap+ssl+://imap.ig.com.br" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.ig.com.br" username="$email" />
+    </provider>
+    <provider id="superig" label="SuperiG">
+        <domain pattern="superig.com.br" />
+        <incoming uri="gLegacyImap+ssl+://imap.superig.com.br" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.superig.com.br" username="$email" />
+    </provider>
+    <provider id="uol" label="UOL">
+        <domain pattern="uol.com.br" />
+        <incoming uri="gLegacyImap+ssl+://imap.uol.com.br" username="$email" />
+        <outgoing uri="smtp+tls+://smtps.uol.com.br" username="$email" />
+    </provider>
+    <provider id="ibest" label="iBest">
+        <domain pattern="ibest.com.br" />
+        <incoming uri="pop3+ssl+://pop.ibest.com.br" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.ibest.com.br" username="$email" />
+    </provider>
+    <provider id="brturbo" label="BrTurbo">
+        <domain pattern="brturbo.com.br" />
+        <incoming uri="pop3+ssl+://pop.brturbo.com.br" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.brturbo.com.br" username="$email" />
+    </provider>
+    <provider id="click21" label="Click 21">
+        <domain pattern="click21.com.br" />
+        <incoming uri="pop3+ssl+://pop.click21.com.br" username="$user" />
+        <outgoing uri="smtp+ssl+://smtp.click21.com.br" username="$user" />
+    </provider>
+    <provider id="r7" label="r7.com">
+        <domain pattern="r7.com" />
+        <incoming uri="gLegacyImap+ssl+://imap.r7.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.r7.com" username="$email" />
+    </provider>
+    <provider id="claro-cl" label="Claro">
+        <domain pattern="iclaro.cl" />
+        <incoming uri="pop3+ssl+://pop.iclaro.cl:110" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.iclaro.cl:25" username="$email" />
+    </provider>
+    <provider id="mtco" label="MTCO">
+        <domain pattern="mtco.com" />
+        <incoming uri="pop3+ssl+://mail.mtco.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.mtco.com:25" username="$email" />
+    </provider>
+    <provider id="virginmedia" label="Virgin Media">
+        <domain pattern="virginmedia.com" />
+        <incoming uri="gLegacyImap+ssl+://imap.virginmedia.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.virginmedia.com" username="$email" />
+    </provider>
+    <provider id="cableone" label="Cable ONE">
+        <domain pattern="cableone.net" />
+        <incoming uri="gLegacyImap+ssl+://imap.gmail.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.gmail.com" username="$email" />
+    </provider>
+    <provider id="charter" label="Charter">
+        <domain pattern="charter.net" />
+        <incoming uri="gLegacyImap+ssl+://mobile.charter.net" username="$email" />
+        <outgoing uri="smtp+ssl+://mobile.charter.net:587" username="$email" />
+    </provider>
+    <provider id="wildblue" label="WildBlue">
+        <domain pattern="wildblue.net" />
+        <incoming uri="gLegacyImap+ssl+://mail.wildblue.net" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.wildblue.net" username="$email" />
+    </provider>
+    <provider id="sky" label="Sky">
+        <domain pattern="sky.com" />
+        <incoming uri="gLegacyImap+ssl+://imap.tools.sky.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.tools.sky.com" username="$email" />
+    </provider>
+</providers>
