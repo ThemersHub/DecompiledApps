@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chromecast Home Screen</title>
+    <link href="fonts.css" rel="stylesheet" type="text/css" />
+    <link href="styles_common.css" rel="stylesheet" type="text/css" />
+    <link href="styles_locale.css" rel="stylesheet" type="text/css" />
+    <link href="styles_direction.css" rel="stylesheet" type="text/css" />
+    <script src="chrome://resources/js/cr.js"></script>
+    <script src="chrome://resources/js/load_time_data.js"></script>
+    <script src="strings.js"></script>
+    <script src="util.js"></script>
+    <script src="eureka_info.js"></script>
+    <script src="message.js"></script>
+    <script src="background.js"></script>
+    <script src="banner_ad.js"></script>
+    <script src="info_box.js"></script>
+    <script src="ping.js"></script>
+    <script src="video.js"></script>
+    <script src="inherit.js"></script>
+    <script src="home.js"></script>
+  </head>
+  <body>
+
+    <div id="remote-background" style="display:none" class="full-screen"
+         data-screen="remote">
+      <iframe class="full-screen" seamless="true"></iframe>
+    </div>
+
+    <div id="mask" style="display:none"
+         data-screen="pre-remote,ready-2" class="mask"></div>
+    <div id="mask-ready-1" style="display:none"
+         data-screen="ready-1" class="mask"></div>
+
+    <div id="main-layout">
+      <div id="main-text" style="display:none"
+           data-screen="message,welcome-1" class="main-text"></div>
+      <div id="sub-main-text-with-url-link" style="display:none"
+           data-screen="welcome-1" class="sub-main-text"></div>
+      <div id="sub-main-text" style="display:none"
+           data-screen="message" class="sub-main-text"></div>
+      <div id="main-text-group-ready-1" style="display:none"
+           data-screen="ready-1">
+        <div class="group-in-bottom">
+          <div id="main-text-ready-1" class="main-text"></div>
+          <div id="sub-main-text-with-url-link-ready-1"
+               class="sub-main-text"></div>
+        </div>
+      </div>
+      <div id="main-text-group-welcome-2" style="display:none"
+           data-screen="welcome-2">
+        <div class="group-in-horizontal">
+          <div class="member-in-horizontal">
+            <div id="main-text-welcome-2-1" class="main-text-welcome-2"></div>
+            <div id="sub-main-text-with-url-link-welcome-2-1"
+                 class="sub-main-text-welcome-2"></div>
+            <div id="locale-separator"></div>
+            <div id="main-text-welcome-2-2" class="main-text-welcome-2"></div>
+            <div id="sub-main-text-with-url-link-welcome-2-2"
+                 class="sub-main-text-welcome-2"></div>
+          </div>
+          <div class="member-in-horizontal">
+            <img id="welcome-image-welcome-2">
+          </div>
+        </div>
+      </div>
+      <img id="welcome-wordless-image" style="display:none"
+           data-screen="welcome-0">
+      <div id="graybar" style="display:none"
+           data-screen="message,welcome-0,welcome-1,welcome-2,ready-1"></div>
+      <img id="welcome-image" style="display:none" data-screen="welcome-1">
+      <div id="txt-message" style="display:none" data-screen="message"></div>
+    </div>
+
+    <div id="txt-pin-code" style="display:none" data-screen="message"></div>
+
+    <div id="info-box" style="display:none"
+         data-screen="message,welcome-0,welcome-1,welcome-2,ready-1,ready-2">
+      <div id="device-wifi-box" style="display:-webkit-box">
+        <img id="cast-icon">
+        <div id="detailed-info-box" style="display:-webkit-box">
+          <div id="device-name-1" class="device-name"></div>
+          <div id="wifi-box" style="display:-webkit-box">
+            <div id="wifi-ssid"></div>
+            <img id="wifi-signal">
+          </div>
+        </div>
+      </div>
+      <div id="device-link-box" style="display:none">
+        <div id="device-name-2" class="device-name"></div>
+        <div id="app-link"></div>
+      </div>
+      <div id="device-only-box" style="display:none">
+        <div id="device-name-3" class="device-name"></div>
+      </div>
+    </div>
+
+    <div id="time" style="display:none" data-screen="ready-1,ready-2"></div>
+    <div id="debug-info"
+         data-screen="message,welcome-0,welcome-1,welcome-2,pre-remote,ready-1,ready-2">
+    </div>
+
+    <div id="banner-image" style="bottom:-720px;display:none"
+         data-screen="ready-1,ready-2">
+      <img></img>
+    </div>
+
+  </body>
+</html>

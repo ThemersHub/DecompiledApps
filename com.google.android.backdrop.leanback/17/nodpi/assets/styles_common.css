@@ -1,0 +1,294 @@
+/* CSS Document common for all locales */
+
+@charset 'utf-8';
+
+p, li, ul, a, div, span {
+  font-weight: 400;
+  font-size: 32px;
+  color: rgba(221, 221, 221, 0.8);
+}
+
+body {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  background-repeat: no-repeat;
+  background-color: black;
+  margin: 0;
+  overflow: hidden;
+}
+
+.full-screen {
+  width: 100%;
+  height: 100%;
+}
+
+.mask {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+#mask {
+  background: linear-gradient(to top,
+                              rgba(0, 0, 0, 0.9),
+                              rgba(0, 0, 0, 0) 72%,
+                              rgba(0, 0, 0, 0) 100%);
+}
+
+#mask-ready-1 {
+  background: linear-gradient(to top,
+                              rgba(0, 0, 0, 0.9),
+                              rgba(0, 0, 0, 0.3) 100%);
+}
+
+#banner-image {
+  position: absolute;
+  right: 0;
+  bottom: -720px;
+  -webkit-transition: bottom 1.0s ease-in-out;
+}
+
+#main-layout {
+  position: absolute;
+  z-index: 100;
+  top: 64px;
+  left: 64px;
+  width: 1152px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: start;
+}
+
+.main-text {
+  font-size: 95px;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+#main-text {
+  color: #fab231;
+}
+
+.sub-main-text, .sub-main-text-welcome-2 {
+  width: 100%;
+}
+
+#sub-main-text {
+  color: #fab231;
+  opacity: 0.8;
+}
+
+.url-link, .url-link-blue {
+  display: inline;
+  font-weight: inherit;
+  font-size: inherit;
+  opacity: 0.8;
+}
+
+.url-link {
+  color: #fab231;
+}
+
+.url-link-blue {
+  color: #4b8df7;
+}
+
+#main-text-group-ready-1 {
+  height: 470px;
+  width: 100%;
+}
+
+.group-in-bottom {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: end;
+  -webkit-box-align: center;
+  height: 100%;
+}
+
+#main-text-ready-1 {
+  color: #4b8df7;
+}
+
+#sub-main-text-with-url-link-ready-1 {
+  text-align: center;
+}
+
+#main-text-group-welcome-2 {
+  height: 480px;
+  width: 100%;
+  margin-top: -30px;
+}
+
+.group-in-horizontal {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.member-in-horizontal {
+  flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+}
+
+.main-text-welcome-2 {
+  font-size: 50px;
+  color: #fab231;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+.sub-main-text-welcome-2 {
+  font-size: 28px;
+  margin-top: 16px;
+}
+
+#locale-separator {
+  height: 60px;
+}
+
+#welcome-image-welcome-2 {
+  margin-top: 60px;
+  margin-left: 98px;
+}
+
+#welcome-wordless-image {
+  margin-top: -64px;
+  margin-bottom: -200px;
+}
+
+#welcome-video {
+  position: absolute;
+  z-index: 10;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+#graybar {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(221, 221, 221, 0.3);
+  margin-top: 32px;
+  margin-bottom: 28px;
+}
+
+#txt-message {
+  width: 100%;
+}
+
+#txt-pin-code {
+  position: absolute;
+  z-index: 100;
+  bottom: 25px;
+  /* TODO(byungchul): This is to remove last '4' which over-occupies text area.
+     Javascript innerText = '' cannot clear it while setting from remote
+     debugging does. It might be because remote debugging repaints larger space
+     than javascript does. Figure out potential bug in rendering. */
+  padding-right: 10px;
+  font-size: 124px;
+  white-space: nowrap;
+}
+
+#info-box {
+  position: absolute;
+  z-index: 100;
+  bottom: 60px;
+  height: 51px;
+  white-space: nowrap;
+}
+
+#device-wifi-box {
+  /* The internal of device wifi-box is not RTLed for RTL locales. */
+  direction: ltr;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+}
+
+#detailed-info-box {
+  margin-top: -10px;
+  margin-left: 16px;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+}
+
+.device-name {
+  overflow: hidden;
+  white-space: pre;
+  font-size: 18px;
+  color: white;
+  opacity: 0.6;
+}
+
+#device-name-1 {
+  font-size: 29px;
+}
+
+#wifi-box {
+  /* The internal of wifi-box is not RTLed for RTL locales. */
+  direction: ltr;
+}
+
+#wifi-ssid {
+  white-space: pre;
+  font-size: 18px;
+  color: #9f9e9e;
+  opacity: 0.7;
+  margin-top: -2px;
+  margin-right: 8px;
+}
+
+#wifi-signal {
+  height: 20px;
+  margin-bottom: 12px;
+}
+
+#device-link-box {
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: end;
+}
+
+#app-link {
+  font-size: 18px;
+  color: #9f9e9e;
+  opacity: 0.7;
+}
+
+#device-only-box {
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: end;
+}
+
+#device-name-3 {
+  color: #9f9e9e;
+  opacity: 0.7;
+}
+
+#time {
+  position: absolute;
+  z-index: 100;
+  bottom: 48px;
+  font-size: 40px;
+  color: white;
+  opacity: 0.5;
+}
+
+#debug-info {
+  position: absolute;
+  z-index: 100;
+  bottom: 40px;
+  left: 500px;
+  font-size: 18px;
+  color: white;
+}
