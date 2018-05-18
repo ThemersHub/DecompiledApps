@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.tvrecommendations" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+    <permission android:name="com.google.android.tv.permission.ROUTE_MARKET_UPDATE" android:protectionLevel="signature"/>
+    <uses-feature android:name="android.software.leanback" android:required="true"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
+    <uses-permission android:name="com.android.providers.tv.permission.ACCESS_ALL_EPG_DATA"/>
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA"/>
+    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.REAL_GET_TASKS"/>
+    <uses-permission android:name="android.permission.RECEIVE_MEDIA_RESOURCE_USAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.tv.permission.ROUTE_MARKET_UPDATE"/>
+    <application android:allowBackup="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.google.android.tvrecommendations.application.TvRecommendationsApplication" android:supportsRtl="true">
+        <service android:label="@string/app_name" android:name="com.google.android.tvrecommendations.NotificationsService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.android.tvrecommendations.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.tvrecommendations.PrebootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PRE_BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:label="@string/add_channel_label" android:launchMode="singleInstance" android:name="com.google.android.tvrecommendations.AddChannelActivity" android:screenOrientation="landscape" android:theme="@style/AddChannelDialog">
+            <intent-filter>
+                <action android:name="android.media.tv.action.REQUEST_CHANNEL_BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:name="com.google.android.tvrecommendations.NotificationsSidePanelActivity" android:noHistory="true" android:screenOrientation="landscape" android:theme="@style/Theme.Settings.SidePanel">
+            <intent-filter>
+                <action android:name="com.android.tv.action.OPEN_NOTIFICATIONS_PANEL"/>
+                <action android:name="com.android.tv.NOTIFICATIONS_PANEL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:name="com.google.android.tvrecommendations.OpenSourceActivity" android:screenOrientation="landscape" android:theme="@style/Theme.Leanback">
+            <intent-filter>
+                <action android:name="com.android.tv.action.VIEW_LICENSES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="true" android:name="com.google.android.tvrecommendations.AddChannelBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.media.tv.action.CHANNEL_BROWSABLE_REQUESTED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.tvrecommendations.AddChannelService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:label="Job service for collecting daily metrics" android:name="com.google.android.tvrecommendations.analytics.EventLoggerJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="true" android:name="com.google.android.tvrecommendations.GservicesChangesReceiver">
+            <intent-filter>
+                <action android:name="com.google.gservices.intent.action.GSERVICES_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.google.android.tvrecommendations" android:enabled="true" android:exported="true" android:name="com.google.android.tvrecommendations.ImageContentProvider"/>
+        <provider android:authorities="com.google.android.tvrecommendations.NotificationContentProvider;com.android.tv.notifications.NotificationContentProvider" android:exported="true" android:name="com.google.android.tvrecommendations.NotificationContentProvider"/>
+        <provider android:authorities="com.google.android.tvrecommendations.ForegroundActivityContentProvider" android:enabled="true" android:exported="true" android:name="com.google.android.tvrecommendations.ForegroundActivityContentProvider"/>
+        <service android:label="Job service for storing the foreground activity's package name" android:name="com.google.android.tvrecommendations.ForegroundActivityTrackerJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="true" android:name="com.google.android.tvrecommendations.AppsLaunchReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="apps" android:scheme="tvrecommendations"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.tvrecommendations.NotificationInteractionReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.DELETE"/>
+                <action android:name="android.tvservice.action.NOTIFICATION_HIDE"/>
+                <action android:name="android.tvservice.action.SHOW_UNSHOWN_NOTIFICATIONS"/>
+                <action android:name="android.tvservice.action.STOP_BACKGROUND_AUDIO"/>
+                <action android:name="com.android.tv.action.OPEN_NOTIFICATION"/>
+                <action android:name="com.android.tv.action.DISMISS_NOTIFICATION"/>
+                <action android:name="com.android.tv.action.NOTIFICATION_HIDE"/>
+                <action android:name="com.android.tv.action.SHOW_UNSHOWN_NOTIFICATIONS"/>
+                <action android:name="com.android.tv.action.STOP_BACKGROUND_AUDIO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.tvrecommendations.MarketUpdateReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.ACTION_PACKAGE_ENQUEUED"/>
+                <action android:name="com.android.launcher.action.ACTION_PACKAGE_DOWNLOADING"/>
+                <action android:name="com.android.launcher.action.ACTION_PACKAGE_INSTALLING"/>
+                <action android:name="com.android.launcher.action.ACTION_PACKAGE_DEQUEUED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.tvrecommendations.ProgramLaunchEventReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.tvrecommendations.PROGRAM_LAUNCH_LOG_EVENT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.tvrecommendations.ChannelOrderChangeEventReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.tvrecommendations.CHANNEL_ORDER_CHANGE_LOG_EVENT"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.tvrecommendations.WakeUpPackagesJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.libraries.social.silentfeedback.nobinder.SilentFeedbackReceiver" android:process=":crash_report"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT"/>
+    </application>
+</manifest>
