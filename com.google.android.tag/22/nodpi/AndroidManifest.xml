@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.android.apps.tag" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1863243">
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-feature android:name="android.hardware.nfc" required="true"/>
+    <application android:icon="@drawable/ic_launcher_nfc" android:label="@string/app_name">
+        <activity android:label="@string/title_scanned_tag" android:launchMode="singleTop" android:name="com.android.apps.tag.TagViewer" android:priority="-10">
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED"/>
+            </intent-filter>
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/filter_nfc"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:mimeType="vnd.android.cursor.item/ndef_msg"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
