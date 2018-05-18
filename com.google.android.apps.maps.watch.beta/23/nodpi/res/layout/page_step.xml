@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/backdrop" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.gmmwearable.ScrollDirectionArbiter android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.gmmwearable.PeekableNestedScrollingParent android:id="@id/steps_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:id="@id/steps" android:background="@color/step_list_background_active" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="@dimen/card_elevation" />
+            <View android:id="@id/ambient_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:elevation="@dimen/card_elevation" />
+        </com.google.android.apps.gmmwearable.PeekableNestedScrollingParent>
+    </com.google.android.apps.gmmwearable.ScrollDirectionArbiter>
+</FrameLayout>

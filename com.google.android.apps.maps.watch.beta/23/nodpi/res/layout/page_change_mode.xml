@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/action_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <android.support.wearable.view.CircledImageView android:layout_gravity="center" android:id="@id/icon_background" android:layout_width="wrap_content" android:layout_height="wrap_content" app:circle_color="@color/action_button" app:circle_radius="@dimen/action_button_radius" app:circle_border_width="0.0dip" />
+        <ImageView android:layout_gravity="center" android:id="@id/icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/loading_indicator" android:layout_width="@dimen/full_screen_spinner" android:layout_height="@dimen/full_screen_spinner" android:indeterminate="true" android:indeterminateTint="@color/change_mode_loading_spinner" android:indeterminateTintMode="src_in" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/action_text" android:textColor="@color/action_text" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/action_text_margin_top" android:text="@string/travel_mode" android:maxLines="2" android:layout_below="@id/button" android:fontFamily="sans-serif-condensed-light" />
+</RelativeLayout>
