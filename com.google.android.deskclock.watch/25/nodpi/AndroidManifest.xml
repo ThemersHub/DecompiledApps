@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.deskclock" platformBuildVersionCode="25" platformBuildVersionName="O">
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:name="android.hardware.type.watch"/>
+    <application android:allowBackup="false" android:icon="@mipmap/ic_app_clock" android:label="@string/app_name" android:name="com.google.android.deskclock.DeskClockMicroApp" android:theme="@style/DefaultTheme">
+        <uses-library android:name="com.google.android.wearable" android:required="false"/>
+        <service android:name="com.google.android.deskclock.DataLayerListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.CAPABILITY_CHANGED"/>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED"/>
+                <data android:host="*" android:scheme="wear"/>
+            </intent-filter>
+        </service>
+        <activity android:name="com.google.android.deskclock.NoOpActivity" android:theme="@android:style/Theme.NoDisplay"/>
+        <activity android:name="com.google.android.deskclock.SetAlarmActivity" android:taskAffinity="com.google.android.deskclock.SET_ALARM" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_ALARM"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_app_alarm" android:label="@string/alarm_app" android:name="com.google.android.deskclock.AlarmGatewayActivity" android:taskAffinity="com.google.android.deskclock.ALARM_LAUNCHER" android:theme="@style/GatewayTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SHOW_ALARMS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.deskclock.SetAlarmConfirmationActivity"/>
+        <activity android:name="com.google.android.deskclock.ChooseRepeatingDaysActivity"/>
+        <activity android:name="com.google.android.deskclock.ChooseAlarmTimeActivity"/>
+        <activity android:name="android.support.wearable.activity.ConfirmationActivity"/>
+        <activity android:name="com.google.android.deskclock.ShowAlarmsActivity" android:taskAffinity="com.google.android.deskclock.SHOW_ALARMS"/>
+        <activity android:name="com.google.android.deskclock.EditAlarmActivity"/>
+        <activity android:name="com.google.android.deskclock.roundui.alarm.ChooseAlarmTimeRoundActivity" android:theme="@style/NoSwipeToDismissDefaultTheme"/>
+        <activity android:name="com.google.android.deskclock.roundui.alarm.AlarmSettingsActivity"/>
+        <service android:name="com.google.android.deskclock.ResetAlarmsService"/>
+        <activity android:icon="@mipmap/ic_app_timer" android:label="@string/timer_app" android:name="com.google.android.deskclock.TimerGatewayActivity" android:taskAffinity="com.google.android.deskclock.TIMER_LAUNCHER" android:theme="@style/GatewayTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_app_timer" android:label="@string/timer_app" android:name="com.google.android.deskclock.ShowTimersActivity" android:taskAffinity="com.google.android.deskclock.SHOW_TIMER"/>
+        <activity android:name="com.google.android.deskclock.SetTimerActivity" android:taskAffinity="com.google.android.deskclock.SET_TIMER" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_TIMER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.deskclock.ChooseTimerLengthActivity"/>
+        <activity android:launchMode="singleTop" android:name="com.google.android.deskclock.TimerTickActivity"/>
+        <activity android:label="@string/timer_app" android:name="com.google.android.deskclock.roundui.timer.ChooseTimerLengthRoundInputActivity" android:theme="@style/NoSwipeToDismissDefaultTheme"/>
+        <activity android:label="@string/timer_app" android:name="com.google.android.deskclock.roundui.timer.TimerCountdownActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SHOW_RUNNING_TIMER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_app_stopwatch" android:immersive="true" android:label="@string/stopwatch_app" android:name="com.google.android.deskclock.StopwatchActivity" android:taskAffinity="com.google.android.deskclock.STOPWATCH">
+            <intent-filter>
+                <action android:name="com.google.android.wearable.action.STOPWATCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:immersive="true" android:label="@string/stopwatch_app" android:name="com.google.android.deskclock.roundui.stopwatch.StopwatchRoundActivity"/>
+        <service android:name="com.google.android.deskclock.StopwatchService"/>
+        <receiver android:name="com.google.android.deskclock.AlarmInitListener">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.deskclock.AlarmManagerService"/>
+        <service android:name="com.google.android.deskclock.TimerManagerService"/>
+        <service android:name="com.google.android.deskclock.TimerNotificationService"/>
+        <service android:name="com.google.android.deskclock.BootCompletedService"/>
+        <receiver android:name="com.google.android.deskclock.BootCompletedReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.deskclock.InitReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.deskclock.action.INIT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.deskclock.GservicesChangedReceiver">
+            <intent-filter>
+                <action android:name="com.google.gservices.intent.action.GSERVICES_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.deskclock.complications.UpdateRequesterJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:icon="@drawable/moon_phase_provider_icon" android:label="@string/moon_phase_provider_label" android:name="com.google.android.deskclock.complications.MoonPhaseProviderService" android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
+            <intent-filter>
+                <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST"/>
+            </intent-filter>
+            <meta-data android:name="android.support.wearable.complications.SUPPORTED_TYPES" android:value="SHORT_TEXT,LONG_TEXT"/>
+            <meta-data android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS" android:value="43200"/>
+        </service>
+        <service android:icon="@drawable/quantum_ic_alarm_vd_theme_24" android:label="@string/next_alarm_provider_label" android:name="com.google.android.deskclock.complications.NextAlarmProviderService" android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
+            <intent-filter>
+                <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST"/>
+            </intent-filter>
+            <meta-data android:name="android.support.wearable.complications.SUPPORTED_TYPES" android:value="SHORT_TEXT"/>
+            <meta-data android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS" android:value="0"/>
+        </service>
+        <service android:icon="@drawable/quantum_ic_timer_vd_theme_24" android:label="@string/stopwatch_provider_label" android:name="com.google.android.deskclock.complications.StopwatchProviderService" android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
+            <intent-filter>
+                <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST"/>
+            </intent-filter>
+            <meta-data android:name="android.support.wearable.complications.SUPPORTED_TYPES" android:value="SHORT_TEXT"/>
+            <meta-data android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS" android:value="0"/>
+        </service>
+        <service android:icon="@drawable/timer_provider_icon" android:label="@string/timer_provider_label" android:name="com.google.android.deskclock.complications.TimerProviderService" android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
+            <intent-filter>
+                <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST"/>
+            </intent-filter>
+            <meta-data android:name="android.support.wearable.complications.SUPPORTED_TYPES" android:value="SHORT_TEXT"/>
+            <meta-data android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS" android:value="0"/>
+        </service>
+        <service android:icon="@drawable/quantum_ic_timelapse_vd_theme_24" android:label="@string/date_countdown_provider_label" android:name="com.google.android.deskclock.complications.DateCountdownProviderService" android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
+            <intent-filter>
+                <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST"/>
+            </intent-filter>
+            <meta-data android:name="android.support.wearable.complications.SUPPORTED_TYPES" android:value="SHORT_TEXT,LONG_TEXT"/>
+            <meta-data android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS" android:value="0"/>
+            <meta-data android:name="android.support.wearable.complications.PROVIDER_CONFIG_ACTION" android:value="com.google.android.deskclock.complications.ACTION_DATE_COUNTDOWN_CONFIG"/>
+        </service>
+        <activity android:exported="true" android:name="com.google.android.deskclock.complications.DateCountdownConfigActivity" android:theme="@android:style/Theme.DeviceDefault">
+            <intent-filter>
+                <action android:name="com.google.android.deskclock.complications.ACTION_DATE_COUNTDOWN_CONFIG"/>
+                <category android:name="android.support.wearable.complications.category.PROVIDER_CONFIG"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.google.android.wearable.standalone" android:value="true"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

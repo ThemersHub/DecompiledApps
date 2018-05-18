@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.deskclock.AlarmTimePickerLayout android:id="@id/alarm_time_picker" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.wearable.view.WearableListView android:layout_gravity="center" android:id="@id/hour_picker" android:scrollbars="none" android:layout_width="@dimen/time_picker_listview_width" android:layout_height="fill_parent" android:dividerHeight="0.0dip" />
+    <LinearLayout android:id="@id/minute_container" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:textColor="@color/alarm_time_picker_separator_text_color" android:layout_gravity="center_vertical" android:id="@id/separator" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AlarmTimePickerTextAppearance" />
+        <android.support.wearable.view.WearableListView android:layout_gravity="center" android:id="@id/minute_picker" android:scrollbars="none" android:layout_width="@dimen/time_picker_listview_width" android:layout_height="fill_parent" android:dividerHeight="0.0dip" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/separator_spacer" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AlarmTimePickerTextAppearance" />
+    </LinearLayout>
+    <android.support.wearable.view.WearableListView android:layout_gravity="center" android:id="@id/meridiem_picker" android:scrollbars="none" android:layout_width="85.0dip" android:layout_height="fill_parent" android:dividerHeight="0.0dip" />
+    <android.support.wearable.view.CircledImageView android:layout_gravity="center_vertical" android:id="@id/done" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="96.0dip" android:layout_height="96.0dip" app:circle_color="@color/button_neutral" app:circle_radius="48.0dip" app:circle_border_color="@color/wof_transparent" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/set_alarm_layout" />
+</com.google.android.deskclock.AlarmTimePickerLayout>

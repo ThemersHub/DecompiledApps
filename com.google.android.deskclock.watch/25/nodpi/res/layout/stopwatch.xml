@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/stopwatch_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom|center" android:orientation="horizontal" android:id="@id/stopwatch_duration" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="50.0dip" android:id="@id/stopwatch_duration_HMMSS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="sans-serif-condensed-light" />
+        <TextView android:textSize="24.0dip" android:id="@id/stopwatch_duration_hundredths" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="sans-serif-condensed-light" />
+    </LinearLayout>
+    <Space android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="12.0dip" />
+    <GridLayout android:layout_gravity="top" android:id="@id/action_buttons" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:rowCount="1" android:columnCount="3">
+        <ImageButton android:layout_gravity="center|top" android:id="@id/restart_stopwatch" android:background="@null" android:visibility="invisible" android:layout_width="@dimen/min_layout_size" android:layout_height="@dimen/min_layout_size" android:layout_marginTop="8.0dip" android:src="@drawable/ic_restart" android:scaleType="center" android:contentDescription="@string/restart" android:layout_columnWeight="1.0" />
+        <ImageButton android:layout_gravity="center|top" android:id="@id/stopwatch_action" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:layout_columnWeight="1.0" />
+        <Space android:layout_gravity="center|top" android:layout_width="@dimen/min_layout_size" android:layout_height="@dimen/min_layout_size" android:layout_marginTop="8.0dip" android:layout_columnWeight="1.0" />
+    </GridLayout>
+    <TextClock android:textSize="18.0sp" android:textColor="@android:color/white" android:layout_gravity="center|top" android:id="@id/clock_tick" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" android:fontFamily="sans-serif-condensed-light" />
+</LinearLayout>

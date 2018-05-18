@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:background="@color/wof_dark_blue" android:paddingTop="30.0dip" android:paddingBottom="30.0dip" android:scrollbars="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/list_divider" android:showDividers="middle">
+            <LinearLayout android:orientation="vertical" android:id="@id/action_edit_time" android:paddingBottom="@dimen/row_padding_circular" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:paddingLeft="@dimen/row_padding_circular" android:paddingRight="@dimen/row_padding_circular" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/alarm" style="@style/ConfirmLabel" />
+                <TextView android:id="@id/alarm_value" android:paddingLeft="@dimen/row_padding_circular" android:paddingRight="@dimen/row_padding_circular" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ConfirmFieldText" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/action_edit_days" android:paddingTop="@dimen/row_padding_circular" android:paddingBottom="@dimen/row_padding_circular" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:paddingLeft="@dimen/row_padding_circular" android:paddingRight="@dimen/row_padding_circular" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recurring" style="@style/ConfirmLabel" />
+                <TextView android:id="@id/recurring_value" android:paddingLeft="@dimen/row_padding_circular" android:paddingRight="@dimen/row_padding_circular" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ConfirmFieldText" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/action_edit_sound" android:paddingTop="@dimen/row_padding_circular" android:paddingBottom="@dimen/row_padding_circular" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:paddingLeft="@dimen/row_padding_circular" android:paddingRight="@dimen/row_padding_circular" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sound" style="@style/ConfirmLabel" />
+                <TextView android:id="@id/sound_value" android:paddingLeft="@dimen/row_padding_circular" android:paddingRight="@dimen/row_padding_circular" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ConfirmFieldText" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/action_edit_vibrate" android:paddingTop="@dimen/row_padding_circular" android:paddingBottom="@dimen/row_padding_circular" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:paddingLeft="@dimen/row_padding_circular" android:paddingRight="@dimen/row_padding_circular" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vibrate" style="@style/ConfirmLabel" />
+                <TextView android:id="@id/vibrate_value" android:paddingLeft="@dimen/row_padding_circular" android:paddingRight="@dimen/row_padding_circular" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ConfirmFieldText" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/action_remove" android:paddingTop="@dimen/last_row_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <android.support.wearable.view.CircledImageView android:duplicateParentState="true" android:layout_width="@dimen/delete_icon_diameter" android:layout_height="@dimen/delete_icon_diameter" android:src="@drawable/ic_action_delete" app:circle_color="@color/button_neutral" app:circle_radius="@dimen/delete_icon_radius" app:circle_border_width="@dimen/confirm_icon_border_width" app:circle_border_color="@color/wof_transparent" app:circle_padding="@dimen/delete_icon_circle_border_width" />
+                <TextView android:textSize="@dimen/remove_text_fixed_size" android:gravity="center_vertical" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/alarm_remove" android:layout_weight="1.0" style="@style/ConfirmButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</merge>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.deskclock.TimerLengthPickerLayout android:id="@id/timer_length_picker" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:layout_gravity="center" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hour_symbol" style="@style/TimerLengthPickerSymbolTextAppearance" />
+        <android.support.wearable.view.WearableListView android:id="@id/hour_picker" android:scrollbars="none" android:layout_width="@dimen/time_picker_listview_width" android:layout_height="fill_parent" android:dividerHeight="0.0dip" />
+        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hour_symbol" style="@style/TimerLengthPickerSymbolTextAppearance" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:layout_gravity="center" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/minute_symbol" style="@style/TimerLengthPickerSymbolTextAppearance" />
+        <android.support.wearable.view.WearableListView android:id="@id/minute_picker" android:scrollbars="none" android:layout_width="@dimen/time_picker_listview_width" android:layout_height="fill_parent" android:dividerHeight="0.0dip" />
+        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/minute_symbol" style="@style/TimerLengthPickerSymbolTextAppearance" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:layout_gravity="center" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/second_symbol" style="@style/TimerLengthPickerSymbolTextAppearance" />
+        <android.support.wearable.view.WearableListView android:id="@id/second_picker" android:scrollbars="none" android:layout_width="@dimen/time_picker_listview_width" android:layout_height="fill_parent" android:dividerHeight="0.0dip" />
+        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/second_symbol" style="@style/TimerLengthPickerSymbolTextAppearance" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <android.support.wearable.view.CircledImageView android:layout_gravity="center" android:id="@id/check" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="96.0dip" android:layout_height="96.0dip" android:src="@drawable/ic_done" android:contentDescription="@string/timer_start" app:circle_color="@color/button_neutral" app:circle_radius="48.0dip" app:circle_border_color="@color/wof_transparent" />
+        <TextView android:textSize="@dimen/alarm_time_text_size" android:textColor="@color/text_color" android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/timer_start" android:fontFamily="sans-serif-condensed-light" />
+    </LinearLayout>
+</com.google.android.deskclock.TimerLengthPickerLayout>
