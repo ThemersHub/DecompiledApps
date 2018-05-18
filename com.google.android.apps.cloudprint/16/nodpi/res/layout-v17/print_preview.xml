@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment android:name="com.google.android.apps.cloudprint.printdialog.fragments.LoadNotificationFragment" android:id="@id/load_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/printer_info_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <fragment android:name="com.google.android.apps.cloudprint.printdialog.fragments.PrinterInfoFragment" android:id="@id/printer_info_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/PrinterInfoMargin" android:layout_marginStart="@dimen/PrinterInfoMargin" />
+    </LinearLayout>
+    <View android:id="@id/page_divider" android:background="@color/divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/DividerHeight" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TableLayout android:id="@id/semantic_capabilities" android:paddingLeft="@dimen/TextPaddingSmall" android:paddingRight="@dimen/TextPaddingSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.google.android.apps.cloudprint.printdialog.views.DocumentPreviewView android:id="@id/document_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/DocumentViewMargin" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

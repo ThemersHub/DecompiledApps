@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" package="com.google.android.apps.cloudprint" platformBuildVersionCode="27" platformBuildVersionName="P">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <application android:allowBackup="true" android:backupAgent="com.google.android.apps.cloudprint.printdialog.CloudPrintKVBackupAgent" android:fullBackupOnly="false" android:hardwareAccelerated="true" android:icon="@drawable/ic_main" android:label="@string/app_name" android:logo="@drawable/logo_placeholder" android:name="com.google.android.apps.cloudprint.CloudPrintApplication" android:restoreAnyVersion="true" android:supportsRtl="true" android:theme="@style/Theme.CloudPrint">
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAI30mhEvcPsEjdOaXSD48TwrgffeTknaXvb0a7tQ"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="8487000"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.google.android.apps.cloudprint.printdialog.CloudPrintLauncherActivity"/>
+        <activity android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.CloudPrintNavigationActivity" android:theme="@style/Theme.CloudPrint.NavigationDrawer"/>
+        <activity android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.PrinterPickerActivity" android:parentActivityName="com.google.android.apps.cloudprint.printdialog.CloudPrintLauncherActivity" android:windowSoftInputMode="adjustResize">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".printdialog.CloudPrintLauncherActivity"/>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.PrinterManagerActivity" android:parentActivityName="com.google.android.apps.cloudprint.printdialog.CloudPrintLauncherActivity" android:windowSoftInputMode="adjustResize">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".printdialog.CloudPrintLauncherActivity"/>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.PrintPreviewActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:exported="true" android:label="@string/preferences" android:name="com.google.android.apps.cloudprint.printdialog.PreferencesActivity" android:parentActivityName="com.google.android.apps.cloudprint.printdialog.CloudPrintLauncherActivity" android:theme="@style/Theme.CloudPrint.Preferences.DarkActionBar">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".printdialog.CloudPrintLauncherActivity"/>
+        </activity>
+        <activity android:exported="true" android:name="com.google.android.apps.cloudprint.printdialog.AdvancedPrintOptionsActivity"/>
+        <activity android:exported="false" android:name="android.app.AliasActivity"/>
+        <provider android:authorities="com.google.android.apps.cloudprint.cloudprintprovider" android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.database.CloudPrintContentProvider" android:syncable="true"/>
+        <service android:exported="true" android:name="com.google.android.apps.cloudprint.printdialog.services.CloudPrintService" android:permission="android.permission.BIND_PRINT_SERVICE">
+            <intent-filter>
+                <action android:name="android.printservice.PrintService"/>
+            </intent-filter>
+            <meta-data android:name="android.printservice" android:resource="@xml/printservice"/>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.cloudprint.printdialog.services.CloudPrintSyncService" android:process=":sync">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/syncadapter"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.services.DeletePrinterService"/>
+        <service android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.services.LocalDiscoveryService"/>
+        <service android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.services.PrintJobSubmitService"/>
+        <service android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.services.PrinterLookupService"/>
+        <service android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.services.PrinterUpdateService"/>
+        <service android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.services.ProcessInvitationService"/>
+        <service android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.services.SharePrinterService"/>
+        <service android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.services.NotificationService$ContentIntentHandler"/>
+        <service android:exported="false" android:name="com.google.android.apps.cloudprint.printdialog.services.NotificationService$DeleteIntentHandler"/>
+        <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <activity-alias android:enabled="@bool/launcher_enabled" android:exported="true" android:label="@string/app_name" android:name="com.google.android.apps.cloudprint.printdialog.CloudPrintLauncherVisibility" android:targetActivity="com.google.android.apps.cloudprint.printdialog.CloudPrintLauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="@bool/share_to_cloud_print_enabled" android:exported="true" android:label="@string/app_name" android:name="com.google.android.apps.cloudprint.printdialog.CloudPrintShareToPrintIntentVisibility" android:targetActivity="com.google.android.apps.cloudprint.printdialog.CloudPrintLauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/*"/>
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/*"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="@bool/is_link_processing_in_app_enabled" android:exported="true" android:label="@string/app_name" android:name="com.google.android.apps.cloudprint.printdialog.CloudPrintOpenLinksVisibility" android:targetActivity="com.google.android.apps.cloudprint.printdialog.CloudPrintLauncherActivity">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.google.com" android:path="/cloudprint" android:scheme="http"/>
+                <data android:host="www.google.com" android:path="/cloudprint" android:scheme="https"/>
+                <data android:host="google.com" android:path="/cloudprint" android:scheme="http"/>
+                <data android:host="google.com" android:path="/cloudprint" android:scheme="https"/>
+                <data android:host="www.cloudprint.sandbox.google.com" android:path="/cloudprint" android:scheme="http"/>
+                <data android:host="www.cloudprint.sandbox.google.com" android:path="/cloudprint" android:scheme="https"/>
+                <data android:host="cloudprint.sandbox.google.com" android:path="/cloudprint" android:scheme="http"/>
+                <data android:host="cloudprint.sandbox.google.com" android:path="/cloudprint" android:scheme="https"/>
+                <data android:host="www.cloudprint-nightly.sandbox.google.com" android:path="/cloudprint" android:scheme="http"/>
+                <data android:host="www.cloudprint-nightly.sandbox.google.com" android:path="/cloudprint" android:scheme="https"/>
+                <data android:host="cloudprint-nightly.sandbox.google.com" android:path="/cloudprint" android:scheme="http"/>
+                <data android:host="cloudprint-nightly.sandbox.google.com" android:path="/cloudprint" android:scheme="https"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:label="@string/pref_open_source" android:name="com.google.android.apps.cloudprint.printdialog.LicenseActivity" android:targetActivity="com.google.android.libraries.social.licenses.LicenseMenuActivity">
+            <intent-filter>
+                <action android:name="com.google.android.apps.cloudprint.printdialog.LicenseActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.cloudprint.printdialog.AddPrintersPageActivity" android:targetActivity="android.app.AliasActivity">
+            <meta-data android:name="android.app.alias" android:resource="@xml/addprintersalias"/>
+        </activity-alias>
+    </application>
+</manifest>
