@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.setupwizard.util.SetupWizardIllustration android:id="@id/illustration_tablet" android:background="@drawable/illustration_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="@drawable/illustration_tablet" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/setup_wizard_card_port_margin_sides" android:paddingRight="@dimen/setup_wizard_card_port_margin_sides" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/setup_wizard_tablet_illustration_height">
+            <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setup_wizard_title" style="@style/setup_wizard_card_title" />
+            <ListView android:id="@id/list_view" android:background="@drawable/setup_wizard_card_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:elevation="@dimen/setup_wizard_card_elevation" />
+        </LinearLayout>
+    </com.google.android.setupwizard.util.SetupWizardIllustration>
+    <fragment android:name="com.android.setupwizard.navigationbar.SetupWizardNavBar" android:id="@id/navigation_bar" style="@style/setup_wizard_navbar_style" />
+</LinearLayout>

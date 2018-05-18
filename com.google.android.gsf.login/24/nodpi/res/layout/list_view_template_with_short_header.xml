@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <FrameLayout android:id="@id/title_area" android:background="@drawable/illustration_bg" android:paddingTop="@dimen/status_bar_height" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setup_wizard_title" style="@style/setup_wizard_header_title" />
+        </FrameLayout>
+        <ListView android:id="@id/list_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title_area" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <fragment android:name="com.android.setupwizard.navigationbar.SetupWizardNavBar" android:id="@id/navigation_bar" style="@style/setup_wizard_navbar_style" />
+</LinearLayout>
