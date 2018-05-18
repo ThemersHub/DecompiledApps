@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.play.movies.tv.usecase.details.ReviewCardView android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="@dimen/pano_default_review_width" android:layout_height="@dimen/pano_default_poster_height" style="@style/PanoImageCardViewStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pc="http://schemas.android.com/apk/res-auto">
+    <com.google.android.play.layout.PlayTextView android:textSize="@dimen/lb_details_description_body_text_size" android:id="@id/comment" android:background="@color/pano_card_image_bg_color" android:paddingTop="12.0dip" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" pc:lastLineOverdrawColor="@color/pano_card_image_bg_color" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/pano_card_bg_color" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="52.0dip" android:paddingStart="12.0dip" android:paddingEnd="12.0dip">
+        <ImageView android:id="@id/image" android:layout_width="40.0dip" android:layout_height="fill_parent" android:contentDescription="@null" android:layout_marginEnd="8.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PanoCardPrimaryText" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="1.0dip">
+                <com.google.android.play.layout.StarRatingBar android:layout_gravity="center_vertical" android:id="@id/stars" android:visibility="gone" style="@style/PlayRatingBarPano.Small" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.apps.play.movies.tv.usecase.details.ReviewCardView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.play.movies.tv.usecase.details.DetailsView android:orientation="vertical" android:id="@id/details_view" android:tag="layout/details_description_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.play.movies.tv.view.widget.ResizingTextView android:id="@id/title" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TvDetailsDescriptionTitleStyle" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/subtitle_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_gravity="center" android:id="@id/release_year" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="20.0dip" style="?attr/detailsDescriptionSubtitleStyle" />
+        <TextView android:layout_gravity="center" android:id="@id/video_duration" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="20.0dip" style="?attr/detailsDescriptionSubtitleStyle" />
+        <TextView android:layout_gravity="center" android:id="@id/content_rating" android:tag="binding_4" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="20.0dip" style="?attr/detailsDescriptionSubtitleStyle" />
+        <ImageView android:layout_gravity="center" android:id="@id/content_rating_badge" android:tag="binding_5" android:visibility="gone" android:layout_width="@dimen/content_rating_badge_size" android:layout_height="@dimen/content_rating_badge_size" android:layout_marginEnd="20.0dip" />
+        <ImageView android:layout_gravity="center" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_4k_badge" android:contentDescription="@string/content_description_4k_badge" android:layout_marginEnd="20.0dip" />
+        <ImageView android:layout_gravity="center" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_hdr_badge" android:layout_marginEnd="20.0dip" />
+        <ImageView android:layout_gravity="center" android:id="@id/cc" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pano_cc_badge" android:contentDescription="@string/content_description_closed_captions" android:layout_marginEnd="20.0dip" />
+        <ImageView android:layout_gravity="center" android:id="@id/surround_sound" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_surround_sound_badge_white" android:contentDescription="@string/content_description_surround_sound" android:layout_marginEnd="20.0dip" />
+        <ImageView android:layout_gravity="center" android:id="@id/tomato" android:tag="binding_10" android:layout_width="16.0dip" android:layout_height="16.0dip" android:contentDescription="@null" />
+        <TextView android:layout_gravity="center" android:id="@id/tomatoes" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="4.0dip" android:paddingEnd="20.0dip" style="?attr/detailsDescriptionSubtitleStyle" />
+        <com.google.android.play.layout.StarRatingBar android:layout_gravity="center" android:id="@id/stars" android:tag="binding_12" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" style="@style/PlayRatingBarPano.DetailsPage" />
+    </LinearLayout>
+    <TextView android:gravity="center_vertical" android:layout_gravity="start" android:tag="binding_13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/choosies_redeem_item_redeemable" android:drawablePadding="16.0dip" android:drawableStart="@drawable/ic_gifticon_detailpage" style="?attr/detailsDescriptionSubtitleStyle" />
+    <TextView android:id="@id/body" android:tag="binding_14" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="?attr/detailsDescriptionBodyStyle" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/lb_details_description_color" android:id="@id/extra" android:tag="binding_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/details_description_extra_top_margin" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/details_description_extra_top_margin">
+        <LinearLayout android:orientation="vertical" android:id="@id/available_audio_column" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/available_audio_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/details_audio_languages" style="?attr/detailsDescriptionSubtitleStyle" />
+            <TextView android:id="@id/available_audio_text" android:tag="binding_16" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/detailsDescriptionBodyStyle" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/available_captions_column" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/subtitles" style="?attr/detailsDescriptionSubtitleStyle" />
+            <TextView android:id="@id/available_captions_text" android:tag="binding_17" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/detailsDescriptionBodyStyle" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <Button android:id="@id/see_more_toggle_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/see_more" android:layout_alignParentEnd="true" style="?attr/detailsActionButtonStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.google.android.apps.play.movies.tv.usecase.details.DetailsView>

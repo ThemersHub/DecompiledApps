@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.play.movies.tv.usecase.newwatch.view.ControlsRowView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.play.movies.tv.usecase.newwatch.view.SeekBar android:id="@id/seek_bar" android:padding="16.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="20.0dip" android:layoutDirection="ltr" android:layout_marginStart="36.0dip" android:layout_marginEnd="36.0dip">
+        <TextView android:id="@id/current_time" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.3" android:importantForAccessibility="no" style="@style/TvWatchCurrentTime" />
+        <FrameLayout android:id="@id/cc_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.4">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/cc_clickable" android:background="?android:selectableItemBackgroundBorderless" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pano_controls_cc_overlay" android:scaleType="center" android:contentDescription="@string/content_description_closed_captions" />
+            <ImageView android:layout_gravity="center" android:id="@id/cc_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pano_cc_badge" android:contentDescription="@null" />
+        </FrameLayout>
+        <TextView android:gravity="right" android:id="@id/total_time" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.3" android:importantForAccessibility="no" style="@style/TvWatchTime" />
+    </LinearLayout>
+    <Button android:layout_gravity="center_horizontal" android:id="@id/debug_info_button" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="10.0dip" android:text="@string/debug_info_button" android:contentDescription="@null" android:layoutDirection="ltr" />
+</com.google.android.apps.play.movies.tv.usecase.newwatch.view.ControlsRowView>

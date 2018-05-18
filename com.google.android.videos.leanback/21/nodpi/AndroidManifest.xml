@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" package="com.google.android.videos" platformBuildVersionCode="27" platformBuildVersionName="P">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:maxSdkVersion="18" android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:maxSdkVersion="18" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH"/>
+    <uses-permission android:name="com.google.android.videos.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-feature android:name="android.software.leanback" android:required="true"/>
+    <uses-feature android:name="android.hardware.type.television" android:required="true"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="false" android:xlargeScreens="true"/>
+    <uses-permission-sdk-23 android:name="com.android.providers.tv.permission.READ_EPG_DATA"/>
+    <uses-permission-sdk-23 android:name="com.android.providers.tv.permission.WRITE_EPG_DATA"/>
+    <permission android:name="com.google.android.apps.play.movies.common.permission.INVALIDATE_AUTH_TOKENS" android:protectionLevel="signature"/>
+    <permission android:name="com.google.android.apps.play.movies.common.permission.MOCK_GCM_RECEIVE" android:protectionLevel="signature"/>
+    <permission android:name="com.google.android.videos.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
+    <application android:backupAgent="com.google.android.apps.play.movies.common.service.backup.VideosBackupAgent" android:banner="@mipmap/pano_banner_movies" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher_videos" android:label="@string/long_app_name" android:largeHeap="true" android:name="com.google.android.apps.play.movies.tv.TvVideosApplication" android:restoreAnyVersion="true" android:restrictedAccountType="com.google" android:roundIcon="@mipmap/product_logo_play_movies_round_launcher_color_48" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:label="@string/application_name" android:name="com.google.android.apps.play.movies.common.activity.LauncherActivity" android:theme="@style/TvLauncherTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="youtube.com"/>
+                <data android:host="*.youtube.com"/>
+                <data android:path="/my_purchases"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.play.movies.common.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="youtube.com"/>
+                <data android:host="*.youtube.com"/>
+                <data android:pathPrefix="/watch"/>
+                <data android:pathPrefix="/show"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:exported="true" android:label="@string/application_name" android:name="com.google.android.videos.activity.LauncherActivity" android:targetActivity="com.google.android.apps.play.movies.common.activity.LauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="youtube.com"/>
+                <data android:host="*.youtube.com"/>
+                <data android:path="/my_purchases"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.videos.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="youtube.com"/>
+                <data android:host="*.youtube.com"/>
+                <data android:pathPrefix="/watch"/>
+                <data android:pathPrefix="/show"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="com.google.android.videos.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="play.google.com"/>
+                <data android:pathPrefix="/movies"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:label="@string/application_name" android:name="com.google.android.apps.play.movies.tv.presenter.activity.TvLauncherActivity" android:theme="@style/TvLauncherTheme"/>
+        <activity-alias android:exported="true" android:label="@string/application_name" android:name="com.google.android.videos.tv.presenter.activity.TvLauncherActivity" android:targetActivity="com.google.android.apps.play.movies.tv.presenter.activity.TvLauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:enabled="@bool/tv_input_support_enabled" android:name="com.google.android.apps.play.movies.tv.usecase.tvinput.epg.TvInputSetupActivity" android:theme="@style/PanoTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:enabled="@bool/tv_input_support_enabled" android:exported="true" android:name="com.google.android.videos.tv.usecase.tvinput.epg.TvInputSetupActivity" android:targetActivity="com.google.android.apps.play.movies.tv.usecase.tvinput.epg.TvInputSetupActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity-alias>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:exported="false" android:label="@string/long_app_name" android:name="com.google.android.apps.play.movies.common.presenter.activity.GmsErrorActivity"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.play.movies.tv.presenter.activity.RestrictionsActivity$Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_RESTRICTION_ENTRIES"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:exported="false" android:label="@string/application_name" android:launchMode="standard" android:name="com.google.android.apps.play.movies.tv.usecase.home.TvHomeActivity" android:theme="@style/PanoBrowseTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:exported="false" android:name="com.google.android.apps.play.movies.tv.usecase.home.InternalSettingsActivity" android:theme="@style/PanoBrowseTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:exported="false" android:name="com.google.android.apps.play.movies.tv.usecase.home.SettingsActivity" android:theme="@style/PanoBrowseTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:exported="false" android:name="com.google.android.apps.play.movies.tv.usecase.search.TvSearchActivity" android:theme="@style/PanoBrowseTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:exported="false" android:name="com.google.android.apps.play.movies.tv.presenter.activity.VideoGridActivity" android:theme="@style/PanoGridTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:exported="false" android:name="com.google.android.apps.play.movies.tv.usecase.details.DetailsActivity" android:theme="@style/PanoDetailsTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:exported="false" android:name="com.google.android.apps.play.movies.tv.usecase.details.AddToLibraryActivity" android:theme="@style/PanoAddToLibraryTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:exported="false" android:name="com.google.android.apps.play.movies.tv.usecase.details.AssetDetailsSynopsisActivity" android:theme="@style/PanoDetailsTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:exported="false" android:name="com.google.android.apps.play.movies.tv.usecase.details.ReviewActivity" android:theme="@style/PanoReviewsTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize" android:exported="false" android:label="@string/watch_activity_title" android:name="com.google.android.apps.play.movies.tv.usecase.newwatch.BootstrapWatchActivity" android:theme="@style/PanoWatchTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize" android:exported="false" android:label="@string/watch_activity_title" android:launchMode="singleTask" android:name="com.google.android.apps.play.movies.tv.usecase.newwatch.WatchActivity" android:theme="@style/PanoWatchTheme"/>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:name="com.google.android.apps.play.movies.tv.presenter.activity.RestrictionsActivity" android:theme="@style/PanoTheme"/>
+        <receiver android:enabled="@bool/tv_nowtification_broadcast_receiver_enabled" android:name="com.google.android.apps.play.movies.tv.service.nowtifications.NowtificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+                <action android:name="android.intent.action.RUN"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.google.android.apps.play.movies.tv.service.nowtifications.NowtificationBroadcastReceiver$TimeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.google.android.videos.nowtifications" android:exported="true" android:name="com.google.android.apps.play.movies.tv.service.nowtifications.NowtificationsContentProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:exported="false" android:name="com.google.android.apps.play.movies.tv.usecase.details.MoviesBundleSharingActivity" android:theme="@style/PanoTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:exported="false" android:name="com.google.android.apps.play.movies.tv.usecase.choosies.ChoosiesRedeemActivity" android:theme="@style/PanoTheme"/>
+        <service android:enabled="false" android:name="com.google.android.videos.tv.usecase.tvinput.playback.TvInputService" android:permission="android.permission.BIND_TV_INPUT">
+            <intent-filter>
+                <action android:name="android.media.tv.TvInputService"/>
+            </intent-filter>
+            <meta-data android:name="android.media.tv.input" android:resource="@xml/tv_input_service"/>
+        </service>
+        <service android:enabled="@bool/tv_input_support_enabled" android:name="com.google.android.apps.play.movies.tv.usecase.tvinput.epg.TvEpgUpdateJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:enabled="@bool/tv_input_support_enabled" android:name="com.google.android.apps.play.movies.tv.usecase.tvinput.epg.TvEpgUpdateBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+                <action android:name="com.google.gservices.intent.action.GSERVICES_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="@bool/tv_watson_integration_enabled" android:name="com.google.android.apps.play.movies.tv.service.channel.SyncChannelJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:enabled="@bool/tv_watson_integration_enabled" android:name="com.google.android.apps.play.movies.tv.service.channel.ChannelVisibilityListenerJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:enabled="@bool/tv_watson_integration_enabled" android:name="com.google.android.apps.play.movies.tv.service.channel.SyncWatchNextChannelJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:enabled="@bool/tv_watson_integration_enabled" android:name="com.google.android.apps.play.movies.tv.service.channel.LauncherChannelsCleanupService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:enabled="@bool/tv_watson_integration_enabled" android:name="com.google.android.apps.play.movies.tv.service.channel.ChannelBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+                <action android:name="com.google.gservices.intent.action.GSERVICES_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIIMwPdEUOCof2vS1arGUdRt_hmAsXfVZ10FHSXw"/>
+        <meta-data android:name="com.google.android.apps.play.movies.common.service.bitmap.VideosGlideModule" android:value="GlideModule"/>
+        <activity android:exported="true" android:name="com.google.android.apps.play.movies.common.presenter.activity.TrailerLauncherActivity" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="com.google.android.videos.intent.action.trailers.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="youtube.com"/>
+                <data android:host="*.youtube.com"/>
+                <data android:pathPrefix="/watch"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.videos.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="play.google.com"/>
+                <data android:pathPrefix="/trailers"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:exported="true" android:name="com.google.android.apps.play.movies.common.presenter.activity.ApiActivity" android:theme="@style/LightDialogTheme">
+            <intent-filter>
+                <action android:name="com.google.android.videos.intent.action.PLAY"/>
+                <action android:name="com.google.android.videos.intent.action.PIN"/>
+                <action android:name="com.google.android.videos.intent.action.UNPIN"/>
+                <action android:name="com.google.android.videos.intent.action.PURCHASE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="play.google.com"/>
+                <data android:pathPrefix="/movies/api"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:exported="false" android:name="com.google.android.apps.play.movies.common.activity.EpisodeStarterActivity" android:theme="@style/LightDialogTheme"/>
+        <provider android:authorities="com.google.android.videos.api" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.pinning.ApiContentProvider"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:exported="true" android:name="com.google.android.apps.play.movies.common.presenter.activity.AuxiliaryActivity" android:theme="@style/LightDialogTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.apps.play.movies.common.service.playstore.PlayStoreBootstrapActivity" android:noHistory="true" android:theme="@style/LightDialogTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.apps.play.movies.common.service.playstore.WatchActionBootstrapActivity" android:noHistory="true" android:theme="@style/LightDialogTheme"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.play.movies.common.service.pinning.TransferService$Receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.play.movies.common.service.pinning.PinBroadcastReceiver"/>
+        <service android:name="com.google.android.apps.play.movies.common.service.pinning.TransferService"/>
+        <receiver android:name="com.google.android.apps.play.movies.common.service.pinning.NotificationsCallbackBroadcastReceiver"/>
+        <receiver android:name="com.google.android.apps.play.movies.common.service.gcm.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.google.android.apps.play.movies.common"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.play.movies.common.service.gcm.VideosGcmService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.android.apps.play.movies.common.service.gcm.GcmMockReceiver" android:permission="com.google.android.apps.play.movies.common.permission.MOCK_GCM_RECEIVE"/>
+        <service android:exported="false" android:name="com.google.android.apps.play.movies.common.service.gcm.DefaultGcmRegistrationManager$VideosInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.android.gms.appdatasearch" android:resource="@xml/appdatasearch"/>
+        <provider android:authorities="com.google.android.videos.icing" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.search.IcingContentProvider"/>
+        <receiver android:name="com.google.android.apps.play.movies.common.service.contentnotification.NewEpisodeNotificationBroadcastReceiver"/>
+        <service android:exported="true" android:name="com.google.android.apps.play.movies.common.service.contentnotification.NewSeasonNotificationTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.play.movies.common.service.contentnotification.NewSeasonNotificationBroadcastReceiver"/>
+        <service android:exported="true" android:name="com.google.android.apps.play.movies.common.service.contentnotification.WishlistedMovieNotificationTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.play.movies.common.service.contentnotification.WishlistedMovieNotificationBroadcastReceiver"/>
+        <service android:exported="true" android:name="com.google.android.apps.play.movies.common.service.contentnotification.ExpiringRewardNotificationTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.play.movies.common.service.contentnotification.ExpiringRewardNotificationBroadcastReceiver"/>
+        <service android:name="com.google.android.apps.play.movies.common.store.sync.SyncService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/sync_adapter"/>
+        </service>
+        <provider android:authorities="com.google.android.videos.sync" android:exported="false" android:label="@string/sync_purchases_label" android:name="com.google.android.apps.play.movies.common.store.sync.SyncService$DummyContentProvider"/>
+        <service android:exported="false" android:name="com.google.android.apps.play.movies.common.service.drm.RefreshLicenseService"/>
+        <service android:enabled="true" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.drm.RefreshLicenseTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.android.apps.play.movies.common.service.drm.RefreshLicenseTaskService$Initializer">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.pinning.UnpinnedCleanUpTaskService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.logging.FlushLogsTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.android.apps.play.movies.common.service.logging.FlushLogsTaskService$Initializer">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="true" android:name="com.google.android.apps.play.movies.common.store.UpdateUserSentimentsTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.google.android.apps.play.movies.common.store.UpdateWishlistTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.play.movies.common.service.pinning.UpdateLastPlaybackTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.apps.play.movies.common.service.accounts.AccountsChangedTaskService$AccountsChangedReceiver">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.accounts.AccountsChangedTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.play.movies.common.service.restart.LaunchInEnvironmentTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.google.android.videos.bitmap" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.bitmap.BitmapContentProvider"/>
+        <receiver android:enabled="@bool/notification_channel_enabled" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.contentnotification.NotificationChannelManager$Initialize">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="@bool/notification_channel_enabled" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.contentnotification.NotificationChannelManager$SystemUpgradedInitialize">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>
