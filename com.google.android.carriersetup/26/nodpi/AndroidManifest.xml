@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.carriersetup" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CONNECTIVITY_INTERNAL"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MANAGE_NETWORK_POLICY"/>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.verizon.ACCESS_VZW_ACCOUNT"/>
+    <application android:label="@string/app_label">
+        <uses-library android:name="com.verizon.provider"/>
+        <activity android:exported="true" android:label="@string/vzw_setup_app_label" android:name="VzwSetupActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="VzwActivationReceiver">
+            <intent-filter>
+                <action android:name="com.android.internal.telephony.CARRIER_SIGNAL_PCO_VALUE"/>
+                <action android:name="com.android.internal.telephony.CARRIER_SIGNAL_REDIRECTED"/>
+                <action android:name="com.android.internal.telephony.CARRIER_SIGNAL_REQUEST_NETWORK_FAILED"/>
+                <action android:name="android.intent.action.SIM_STATE_CHANGED"/>
+                <action android:name="com.google.android.carriersetup.REQUEST_NETWORK_SUCCESS"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".VzwDebugReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE"/>
+                <data android:host="899726" android:scheme="android_secret_code"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE"/>
+                <data android:host="89987" android:scheme="android_secret_code"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
