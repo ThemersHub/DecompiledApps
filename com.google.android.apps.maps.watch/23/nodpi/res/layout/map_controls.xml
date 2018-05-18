@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/controls" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center|top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.google.android.apps.gmmwearable.mapcontrols.RoundedTouchFrameLayout android:id="@id/zoom_out_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_map_zoom_out" />
+        </com.google.android.apps.gmmwearable.mapcontrols.RoundedTouchFrameLayout>
+        <com.google.android.apps.gmmwearable.mapcontrols.RoundedTouchFrameLayout android:id="@id/zoom_in_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_map_zoom_in" />
+        </com.google.android.apps.gmmwearable.mapcontrols.RoundedTouchFrameLayout>
+    </LinearLayout>
+    <com.google.android.apps.gmmwearable.mapcontrols.RoundedTouchFrameLayout android:layout_gravity="start|center" android:id="@id/location_button" android:paddingTop="@dimen/map_buttons_extra_touch_padding" android:paddingBottom="@dimen/map_buttons_extra_touch_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/map_buttons_edge_margin" android:paddingEnd="@dimen/map_buttons_extra_touch_padding">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/location_button_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_map_circle" />
+            <ImageView android:id="@id/location_button_recenter_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/location_button_heading_up_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_map_heading_up" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/location_button_north_up_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_map_north_up" android:layout_centerInParent="true" />
+            <ProgressBar android:id="@id/location_button_spinner" android:padding="@dimen/location_button_spinner_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_alignTop="@id/location_button_background" android:layout_alignBottom="@id/location_button_background" android:layout_alignStart="@id/location_button_background" android:layout_alignEnd="@id/location_button_background" android:indeterminateTint="@color/waiting_for_location_spinner" android:indeterminateTintMode="src_in" />
+        </RelativeLayout>
+    </com.google.android.apps.gmmwearable.mapcontrols.RoundedTouchFrameLayout>
+    <com.google.android.apps.gmmwearable.mapcontrols.RoundedTouchFrameLayout android:layout_gravity="end|center" android:id="@id/menu_button" android:paddingTop="@dimen/map_buttons_extra_touch_padding" android:paddingBottom="@dimen/map_buttons_extra_touch_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/map_buttons_extra_touch_padding" android:paddingEnd="@dimen/map_buttons_edge_margin">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_map_circle" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_map_menu" />
+    </com.google.android.apps.gmmwearable.mapcontrols.RoundedTouchFrameLayout>
+</FrameLayout>

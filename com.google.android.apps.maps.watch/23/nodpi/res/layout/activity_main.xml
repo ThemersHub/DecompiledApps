@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/splash_background" android:background="@drawable/bg_maps_loading" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/map_holder" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/ui_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/location_sharing_layer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TextClock android:textSize="@dimen/clock_text" android:textColor="@color/map_clock_text" android:layout_gravity="center|top" android:id="@id/clock" android:background="@drawable/map_clock_background" android:paddingBottom="@dimen/clock_padding_bottom" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/clock_margin_top" android:fontFamily="sans-serif-condensed-light" />
+        <include layout="@layout/map_controls" />
+        <View android:id="@id/map_controls_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.apps.gmmwearable.NonGreedyGridViewPager android:id="@id/place_picker_pager" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <android.support.wearable.view.DotsPageIndicator android:layout_gravity="bottom|center" android:id="@id/place_picker_pager_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <include layout="@layout/navigation_container" />
+    </FrameLayout>
+</FrameLayout>

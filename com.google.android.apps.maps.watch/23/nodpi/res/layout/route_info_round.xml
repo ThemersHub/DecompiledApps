@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextClock android:textSize="@dimen/clock_text" android:layout_gravity="center_horizontal" android:id="@id/clock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/clock_margin_top" android:layout_marginBottom="@dimen/clock_margin_bottom" android:fontFamily="sans-serif-condensed" />
+        <View android:id="@id/divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <FrameLayout android:paddingTop="@dimen/route_info_divider_margin_bottom" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:id="@id/route_info" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/route_info_horizontal_margin_round" android:layout_marginEnd="@dimen/route_info_horizontal_margin_round">
+                <include android:id="@id/eta_info" layout="@layout/route_info_item" />
+                <include android:id="@id/place_info" layout="@layout/route_info_item" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/loading_indicator" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:id="@id/progress_spinner" android:layout_width="@dimen/full_screen_spinner" android:layout_height="@dimen/full_screen_spinner" android:indeterminate="true" android:layout_centerInParent="true" android:indeterminateTint="@color/widget_accent_navigation" android:indeterminateTintMode="src_in" />
+        <TextView android:textSize="@dimen/page_status_text" android:gravity="center" android:id="@id/loading_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/page_loading_text_margin_top" android:text="@string/route_info_page_loading" android:layout_below="@id/progress_spinner" android:fontFamily="sans-serif-condensed-light" android:layout_marginStart="@dimen/page_loading_text_margin_horizontal" android:layout_marginEnd="@dimen/page_loading_text_margin_horizontal" />
+    </RelativeLayout>
+</FrameLayout>
