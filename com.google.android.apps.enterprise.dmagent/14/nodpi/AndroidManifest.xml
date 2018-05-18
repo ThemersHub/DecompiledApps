@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" android:installLocation="internalOnly" package="com.google.android.apps.enterprise.dmagent" platformBuildVersionCode="27" platformBuildVersionName="P">
+    <permission android:name="com.google.android.apps.enterprise.dmagent.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <permission android:name="com.google.android.apps.enterprise.dmagent.permission.AutoRegisterPermission" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.google.android.apps.enterprise.dmagent.permission.InvokeDMServicePermission" android:protectionLevel="signature"/>
+    <permission android:name="com.google.android.apps.enterprise.dmagent.permission.InvokeDMSecurityLogsServicePermission" android:protectionLevel="signature"/>
+    <permission android:name="com.google.android.apps.enterprise.dmagent.permission.AutoSyncPermission" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.google.android.apps.enterprise.dmagent.permission.NotificationBroadcastReceiverPermission" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CONNECTIVITY_INTERNAL"/>
+    <uses-permission android:name="android.permission.MANAGE_USB"/>
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_CA_CERTIFICATES"/>
+    <uses-permission android:name="android.permission.MANAGE_USERS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="com.google.android.apps.enterprise.dmagent.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="com.google.android.apps.enterprise.dmagent.permission.InvokeDMServicePermission"/>
+    <uses-permission android:name="com.google.android.apps.enterprise.dmagent.permission.InvokeDMSecurityLogsServicePermission"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <application android:allowBackup="false" android:allowClearUserData="false" android:icon="@mipmap/product_logo_apps_policy_launcher_color_48" android:label="@string/app_name" android:requiredAccountType="com.google" android:theme="@style/DMAgentTheme" android:usesCleartextTraffic="false">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="com.google.android.apps.enterprise.dmagent.dmserver_url_prefix" android:value="https://m.google.com"/>
+        <meta-data android:name="com.google.android.apps.enterprise.dmagent.auth_token_type" android:value="Google Apps Mobile Management"/>
+        <meta-data android:name="com.google.android.apps.enterprise.dmagent.is_test_environment" android:value="false"/>
+        <meta-data android:name="com.google.android.apps.enterprise.dmagent.is_wear_device" android:value="false"/>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.DMAgentActivity" android:theme="@style/DMAgentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.AutoRegister">
+            <intent-filter>
+                <action android:name="com.google.android.apps.enterprise.dmagent.AUTO_REGISTER_SERVICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.receivers.DMServiceReceiver" android:permission="com.google.android.apps.enterprise.dmagent.permission.InvokeDMServicePermission">
+            <intent-filter>
+                <action android:name="com.google.android.apps.enterprise.dmagent.INVOKE_DMSERVICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.receivers.DMSecurityLogsProcessorServiceReceiver" android:permission="com.google.android.apps.enterprise.dmagent.permission.InvokeDMSecurityLogsServicePermission">
+            <intent-filter>
+                <action android:name="com.google.android.apps.enterprise.dmagent.INVOKE_DM_SECURITY_LOGS_PROCESSOR_SERVICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.AutoSync" android:permission="com.google.android.apps.enterprise.dmagent.permission.AutoSyncPermission">
+            <intent-filter>
+                <action android:name="com.google.android.apps.enterprise.dmagent.AUTO_SYNC"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.AutoRegisterActivity" android:theme="@style/DMAgentTheme">
+            <intent-filter>
+                <action android:name="com.google.android.apps.enterprise.dmagent.AUTO_REGISTER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/main_title" android:name="com.google.android.apps.enterprise.dmagent.IntroductionActivity" android:theme="@style/DMAgentTheme"/>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/sub_title_confirm_enforcement" android:name="com.google.android.apps.enterprise.dmagent.ConfirmEnforcementActivity" android:theme="@style/DMAgentTheme"/>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/sub_title_add_account" android:name="com.google.android.apps.enterprise.dmagent.AddAccountActivity" android:theme="@style/DMAgentWithActionBarTheme"/>
+        <activity android:exported="false" android:label="@string/sub_title_android_work_profile" android:name="com.google.android.apps.enterprise.dmagent.AndroidWorkProfileMandatoryActivity" android:theme="@style/DMAgentWithActionBarTheme"/>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/sub_title_android_work_profile_optional" android:name="com.google.android.apps.enterprise.dmagent.AndroidWorkProfileOptionalActivity" android:theme="@style/DMAgentWithActionBarTheme"/>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/setup_work_profile" android:name="com.google.android.apps.enterprise.dmagent.AndroidWorkProfileByDefaultActivity" android:theme="@style/DMAgentWithActionBarTheme"/>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.WebActivity" android:theme="@style/DMAgentTheme"/>
+        <activity android:exported="false" android:label="@string/sub_title_android_device_owner" android:name="com.google.android.apps.enterprise.dmagent.AndroidDeviceOwnerOptionalActivity" android:theme="@style/DMAgentWithActionBarTheme"/>
+        <activity android:exported="false" android:label="@string/sub_title_android_device_owner" android:name="com.google.android.apps.enterprise.dmagent.AndroidDeviceOwnerMandatoryActivity" android:theme="@style/DMAgentWithActionBarTheme"/>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/sub_title_android_device_owner" android:name="com.google.android.apps.enterprise.dmagent.AndroidDeviceOwnerByDefaultActivity" android:theme="@style/DMAgentWithActionBarTheme"/>
+        <activity android:exported="false" android:label="@string/sub_title_device_certificates" android:name="com.google.android.apps.enterprise.dmagent.DeviceCertificatesActivity" android:theme="@style/DMAgentWithActionBarTheme"/>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/activity_add_managed_profile" android:name="com.google.android.apps.enterprise.dmagent.ManagedProvisioningActivity"/>
+        <activity android:exported="false" android:label="@string/setup_work_profile" android:name="com.google.android.apps.enterprise.dmagent.SetupWorkProfileActivity" android:noHistory="true" android:theme="@style/DMAgentWithActionBarTheme"/>
+        <activity android:exported="false" android:label="@string/setup_work_profile_progress_title" android:launchMode="singleTop" android:name="com.google.android.apps.enterprise.dmagent.SetupProgressActivity" android:noHistory="true" android:theme="@style/DMAgentWithActionBarTheme"/>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/app_name" android:name="com.google.android.apps.enterprise.dmagent.ActivateDeviceManagementActivity" android:theme="@style/DMAgentWithActionBarTheme"/>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.StartUsesPolicyActivity"/>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.AuthAccessActivity"/>
+        <activity android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.NotificationActivity" android:theme="@style/NotificationDialog"/>
+        <activity android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.AlertDialogActivity"/>
+        <activity android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.DMAgentTabActivity" android:theme="@style/DMAgentTheme"/>
+        <activity android:exported="false" android:label="@string/application_list_subtitle" android:name="com.google.android.apps.enterprise.dmagent.ApplicationsActivity" android:parentActivityName="com.google.android.apps.enterprise.dmagent.DMAgentActivity" android:theme="@style/DMAgentTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DMAgentActivity"/>
+        </activity>
+        <activity android:exported="false" android:label="@string/wireless_network_list_subtitle" android:name="com.google.android.apps.enterprise.dmagent.WirelessNetworkActivity" android:parentActivityName="com.google.android.apps.enterprise.dmagent.DMAgentActivity" android:theme="@style/DMAgentTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DMAgentActivity"/>
+        </activity>
+        <activity android:exported="false" android:label="@string/disable_system_apps_list_subtitle" android:name="com.google.android.apps.enterprise.dmagent.DisablePackagesActivity" android:parentActivityName="com.google.android.apps.enterprise.dmagent.DMAgentActivity" android:theme="@style/DMAgentTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DMAgentActivity"/>
+        </activity>
+        <activity android:exported="false" android:label="@string/uninstall_blocked_apps_label" android:name="com.google.android.apps.enterprise.dmagent.UninstallBlockedAppsActivity" android:parentActivityName="com.google.android.apps.enterprise.dmagent.DMAgentActivity" android:theme="@style/DMAgentTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DMAgentActivity"/>
+        </activity>
+        <activity android:exported="false" android:label="@string/shared_device_details_subtitle" android:name="com.google.android.apps.enterprise.dmagent.SharedDeviceDetailsActivity" android:parentActivityName="com.google.android.apps.enterprise.dmagent.DMAgentActivity" android:theme="@style/DMAgentTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DMAgentActivity"/>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.RestrictedAppsListActivity" android:parentActivityName="com.google.android.apps.enterprise.dmagent.DMAgentActivity" android:theme="@style/DMAgentTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DMAgentActivity"/>
+        </activity>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/auto_install_app_subtitle" android:name="com.google.android.apps.enterprise.dmagent.AutoInstallAppsActivity" android:parentActivityName="com.google.android.apps.enterprise.dmagent.DMAgentActivity" android:theme="@style/DMAgentTheme"/>
+        <activity android:configChanges="fontScale|keyboardHidden|layoutDirection|locale|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/auto_install_app_subtitle" android:name="com.google.android.apps.enterprise.dmagent.AwaitAppsInstallActivity"/>
+        <activity android:exported="false" android:label="@string/provisioning_certificates_list_heading" android:name="com.google.android.apps.enterprise.dmagent.ProvisioningCertificatesActivity" android:parentActivityName="com.google.android.apps.enterprise.dmagent.DMAgentActivity" android:theme="@style/DMAgentTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DMAgentActivity"/>
+        </activity>
+        <activity android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.RestrictionsPinActivity" android:theme="@style/DMAgentTheme">
+            <intent-filter>
+                <action android:name="android.content.action.REQUEST_LOCAL_APPROVAL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/open_source_licenses_label" android:name="com.google.android.apps.enterprise.dmagent.activities.LicensesActivity" android:theme="@style/DMAgentWithActionBarTheme"/>
+        <activity android:enabled="false" android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.accountlesssetup.AccountlessSetupFlowActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.HOME"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.accountlesssetup.GooglePlayServicesUpdateActivity" android:process=":update" android:theme="@style/AccountlessThemeBlackTitle"/>
+        <activity android:exported="false" android:label="@string/system_audit_title" android:name="com.google.android.apps.enterprise.dmagent.SystemAuditReviewActivity" android:parentActivityName="com.google.android.apps.enterprise.dmagent.DMAgentActivity" android:theme="@style/DMAgentTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DMAgentActivity"/>
+        </activity>
+        <activity android:exported="false" android:label="@string/system_apps_settings_title" android:name="com.google.android.apps.enterprise.dmagent.SystemAppsActivity" android:parentActivityName="com.google.android.apps.enterprise.dmagent.DMAgentActivity" android:theme="@style/DMAgentTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DMAgentActivity"/>
+        </activity>
+        <activity android:exported="false" android:label="@string/main_title" android:name="com.google.android.apps.enterprise.dmagent.DisabledOnArcPlusPlusActivity" android:theme="@style/DMAgentTheme"/>
+        <activity android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.PoliciesViewActivity" android:theme="@style/DMAgentTheme"/>
+        <activity android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.PlayOtbDeeplinkHandlerActivity" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="play.google.com" android:scheme="https"/>
+                <data android:pathPrefix="/managed/google-mdm-work-profile-migration"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.RestrictionsReceiver">
+            <intent-filter>
+                <action android:name="android.content.action.REQUEST_PERMISSION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:description="@string/agent_device_admin_description" android:exported="true" android:label="@string/agent_device_admin" android:name="com.google.android.apps.enterprise.dmagent.DeviceAdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data android:name="android.app.device_admin" android:resource="@xml/dm_agent_device_admin"/>
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+                <action android:name="android.app.action.ACTION_PROFILE_PROVISIONING_COMPLETE"/>
+                <action android:name="android.app.action.PROFILE_PROVISIONING_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.DeviceAccountsChangedReceiver">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.AppUpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.enterprise.dmagent.receivers.MyPackageReplacedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.AndroidIdReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.checkin.CHECKIN_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.NotificationBroadcastReceiver" android:permission="com.google.android.apps.enterprise.dmagent.permission.NotificationBroadcastReceiverPermission">
+            <intent-filter>
+                <action android:name="auto_register_notification_cancelled"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.InstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.BugreportTriggerReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.enterprise.dmagent.COLLECT_BUGREPORT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.receivers.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.google.android.apps.enterprise.dmagent"/>
+                <category android:name="com.google.android.apps.enterprise.dmagent.receivers"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.services.GcmMessageProcessingService"/>
+        <service android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.DeviceManagementService"/>
+        <service android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.DMSecurityLogsProcessorService"/>
+        <service android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.NetworkLogsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.SecurityLogsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.SecurityLogsBufferedJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.DeviceManagementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.AutoRegistrationService"/>
+        <service android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.AutoRegistrationJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.services.GcmMessageProcessingJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.apps.enterprise.dmagent.DMSecurityLogsProcessorJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.comp.ProfileOwnerService" android:permission="android.permission.BIND_DEVICE_ADMIN"/>
+        <service android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.comp.DeviceOwnerService" android:permission="android.permission.BIND_DEVICE_ADMIN"/>
+        <service android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.HarmfulAppsDataManagerJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:enabled="false" android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.DevicePolicyAdminService" android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_SERVICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.enterprise.dmagent.BugreportUploadJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.apps.work.dpcsupport.ManagedConfigurationsProxy">
+            <intent-filter>
+                <action android:name="com.android.vending.dpc.APPLICATION_RESTRICTIONS_PROXY"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="@bool/dpcsupport_enable_receiver" android:exported="true" android:name="com.google.android.apps.work.dpcsupport.AccountManagementWhitelistEnforcer$ContinuousEnforcer">
+            <intent-filter>
+                <data android:scheme="package"/>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"/>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.tagmanager.TagManagerService"/>
+        <activity android:exported="true" android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

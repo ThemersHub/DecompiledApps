@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/user_identifier_header" />
+    <ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/FullViewLayout">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/android_work_profile_optional_text" android:paddingTop="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/android_work_profile_optional" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/learn_more_link" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/android_work_profile_optional_learn_more_link" />
+            <CheckBox android:id="@id/work_profile_confirmation_checkbox" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="-7.0dip" android:layout_marginTop="11.0dip" android:checked="false" android:text="@string/work_profile_checkbox_text" style="@style/AndroidWorkProfileOptionalActivityText" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/button_border" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="14.0sp" android:id="@id/cancel_button" android:layout_width="wrap_content" android:layout_height="@dimen/bottom_layout_button_height" android:text="@string/cancel_button_label" android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_drawable" android:layout_alignParentLeft="true" style="?android:attr/borderlessButtonStyle" />
+            <Button android:textSize="14.0sp" android:id="@id/work_profile_next" android:layout_width="wrap_content" android:layout_height="@dimen/bottom_layout_button_height" android:text="@string/next_button_label" android:drawableRight="@drawable/ic_keyboard_arrow_right_black_drawable" android:layout_alignParentRight="true" style="?android:attr/borderlessButtonStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

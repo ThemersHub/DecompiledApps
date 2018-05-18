@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@android:id/list" android:visibility="gone" android:fadingEdgeLength="16.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:drawSelectorOnTop="false" android:choiceMode="singleChoice" android:layout_weight="1.0" />
+    <ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/no_accounts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" style="@style/FullViewLayout">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:paddingBottom="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_apps_account" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add_apps_account" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ff777777" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/apps_account_example" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/button_border" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <Button android:textSize="14.0sp" android:id="@id/add_account_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/button_add_account" style="?android:attr/borderlessButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

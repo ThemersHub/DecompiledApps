@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:orientation="vertical" android:id="@id/dm_agent_tab_activity_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/suw_next_button_layout">
+            <include layout="@layout/toolbar" />
+            <include layout="@layout/user_identifier_header" />
+            <FrameLayout android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/suw_next_button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <View android:background="@color/button_border" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <RelativeLayout android:layout_gravity="bottom" android:background="@color/bottom_layout_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:textSize="14.0sp" android:id="@id/suw_next_button" android:layout_width="wrap_content" android:layout_height="@dimen/bottom_layout_button_height" android:text="@string/next_button_label" android:drawableRight="@drawable/ic_keyboard_arrow_right_black_drawable" android:layout_alignParentRight="true" style="?android:attr/borderlessButtonStyle" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <include layout="@layout/navigation_drawer" />
+</android.support.v4.widget.DrawerLayout>

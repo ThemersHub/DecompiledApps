@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/FullViewLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:paddingTop="10.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/shared_device_details_heading" />
+    <ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="0.0dip">
+            <TableLayout android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <TableRow>
+                    <TextView android:text="@string/device_model" style="@style/SharedDeviceDetailsLabelText" />
+                    <TextView android:id="@id/device_model" style="@style/SharedDeviceDetailsValueText" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/hardware_id_label" android:text="@string/hardware_id" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/hardware_id" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/imei_label" android:text="@string/imei_number" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/imei" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/meid_label" android:text="@string/meid_number" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/meid" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="@string/device_id" style="@style/SharedDeviceDetailsValueText" />
+                    <TextView android:id="@id/device_id" style="@style/SharedDeviceDetailsValueText" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/phone_number_label" android:text="@string/phone_number" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/phone_number" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/carrier_label" android:text="@string/carrier" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/carrier" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="@string/device_os" style="@style/SharedDeviceDetailsLabelText" />
+                    <TextView android:id="@id/device_os" style="@style/SharedDeviceDetailsValueText" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="@string/build_number" style="@style/SharedDeviceDetailsLabelText" />
+                    <TextView android:id="@id/build_number" android:layout_weight="1.0" style="@style/SharedDeviceDetailsValueText" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:text="@string/kernel_version" style="@style/SharedDeviceDetailsLabelText" />
+                    <TextView android:id="@id/kernel_version" style="@style/SharedDeviceDetailsValueText" />
+                </TableRow>
+                <TableRow android:id="@id/baseband_version_row">
+                    <TextView android:text="@string/baseband_version" style="@style/SharedDeviceDetailsLabelText" />
+                    <TextView android:id="@id/baseband_version" style="@style/SharedDeviceDetailsValueText" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/last_sync_label" android:text="@string/last_sync" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/last_sync" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/mac_address_label" android:text="@string/mac_address" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/mac_address" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/language_label" android:text="@string/language" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/language" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/adb_enabled_label" android:text="@string/adb_enabled" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/adb_enabled" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/unknown_sources_enabled_label" android:text="@string/unknown_sources_enabled" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/unknown_sources_enabled" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/developer_options_enabled_label" android:text="@string/developer_options_enabled" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/developer_options_enabled" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/supports_work_profile_label" android:text="@string/supports_work_profile" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/supports_work_profile" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/verify_apps_enabled_label" android:text="@string/verify_apps_enabled" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/verify_apps_enabled" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/manufacturer_label" android:text="@string/manufacturer" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/manufacturer" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/security_patch_time_label" android:text="@string/security_patch_time" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/security_patch_time" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/release_version_label" android:text="@string/release_version" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/release_version" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/brand_label" android:text="@string/brand" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/brand" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/hardware_label" android:text="@string/hardware" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/hardware" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/bootloader_label" android:text="@string/bootloader" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/bootloader" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/device_secured_with_pin_password_label" android:text="@string/device_secured_with_pin_password" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/device_secured_with_pin_password" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@id/encryption_status_label" android:text="@string/encryption_status" style="@style/SharedDeviceDetailsLabelTextDefaultInVisible" />
+                    <TextView android:id="@id/encryption_status" style="@style/SharedDeviceDetailsValueTextDefaultInVisible" />
+                </TableRow>
+            </TableLayout>
+            <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:id="@id/shared_application_info" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/shared_application_info_text" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

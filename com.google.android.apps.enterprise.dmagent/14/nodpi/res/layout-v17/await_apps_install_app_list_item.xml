@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AwaitAppsInstallItemContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/await_apps_install_app_list_item_icon" android:focusable="false" android:contentDescription="@null" style="@style/AwaitAppsInstallAppIcon" />
+    <LinearLayout android:orientation="vertical" android:id="@id/await_apps_install_app_details_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/await_apps_install_status_container" android:layout_toRightOf="@id/await_apps_install_app_list_item_icon" android:layout_centerVertical="true">
+        <TextView android:ellipsize="end" android:id="@id/await_apps_install_app_list_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" style="@style/AwaitAppsInstallAppTitle" />
+        <TextView android:ellipsize="end" android:id="@id/await_apps_install_app_list_item_developer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" style="@style/AwaitAppsInstallAppDeveloper" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/await_apps_install_status_container" android:paddingLeft="@dimen/await_apps_install_items_text_to_status_icon_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+        <ProgressBar android:id="@id/await_apps_install_app_list_item_status_progress_bar" android:contentDescription="@string/await_apps_install_icon_waiting_description" style="@style/AwaitAppsInstallProgressBar" />
+        <ImageView android:id="@id/await_apps_install_app_list_item_done_icon" android:src="@drawable/quantum_ic_check_circle_googblue_24" android:contentDescription="@string/await_apps_install_icon_done_description" style="@style/AwaitAppsInstallAppFinishedInstallingIcon" />
+    </FrameLayout>
+</RelativeLayout>

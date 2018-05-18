@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/user_identifier_header" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/FullViewLayout">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/device_owner_by_default_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:text="@string/device_owner_by_default_text" style="@style/AndroidDeviceOwnerByDefaultActivityText" />
+            <CheckBox android:id="@id/device_owner_by_default_personal_device_checkbox" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="-7.0dip" android:layout_marginTop="11.0dip" android:checked="false" android:text="@string/device_owner_by_default_personal_device_checkbox_text" style="@style/AndroidDeviceOwnerByDefaultActivityText" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/button_border" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="14.0sp" android:id="@id/cancel_button" android:layout_width="wrap_content" android:layout_height="@dimen/bottom_layout_button_height" android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_drawable" android:layout_alignParentLeft="true" android:contentDescription="@string/cancel_button_label" style="?android:attr/borderlessButtonStyle" />
+            <Button android:textSize="14.0sp" android:id="@id/device_owner_by_default_next" android:layout_width="wrap_content" android:layout_height="@dimen/bottom_layout_button_height" android:text="@string/next_button_label" android:drawableRight="@drawable/ic_keyboard_arrow_right_black_drawable" android:layout_alignParentRight="true" style="?android:attr/borderlessButtonStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

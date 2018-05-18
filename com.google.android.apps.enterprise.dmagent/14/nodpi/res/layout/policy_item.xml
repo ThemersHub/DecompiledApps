@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/FullWidthListItemLayout">
+        <ImageView android:id="@id/status_icon" android:paddingLeft="28.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/check" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/talkback_policy_met" android:alpha="0.54" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/status_icon" android:layout_alignParentLeft="true">
+            <TextView android:textColor="#ff000000" android:id="@id/message" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/numeric_password_required_enforced" style="@style/FullWidthListItemPrimaryText" />
+            <TextView android:textColor="@color/policy_not_met" android:id="@id/policy_not_met" android:focusable="false" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/policy_not_met" style="@style/FullWidthListItemSecondaryText" />
+            <TextView android:textColor="@color/policy_met" android:id="@id/change_settings" android:focusable="false" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/change_settings_link" style="@style/FullWidthListItemSecondaryText" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>
