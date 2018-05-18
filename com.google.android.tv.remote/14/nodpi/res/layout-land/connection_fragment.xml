@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:background="@color/window_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/connection_button" android:background="@drawable/button_background" android:layout_width="wrap_content" android:layout_height="@dimen/remote_button_height" android:text="@android:string/cancel" android:singleLine="true" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/HubListButtonTextAppearance" />
+    <TextView android:id="@id/connection_host_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/pairing_vertical_margin" android:layout_above="@id/connection_button" android:layout_centerHorizontal="true" style="@style/HubListMessageTextAppearance" />
+    <ImageView android:id="@id/connected_icon" android:layout_width="@dimen/connected_icon_size" android:layout_height="@dimen/connected_icon_size" android:layout_marginBottom="@dimen/connected_icon_bottom_margin" android:src="@drawable/ic_bg_mng_connection" android:layout_above="@id/connection_host_name" android:layout_centerHorizontal="true" android:contentDescription="@string/content_desc_connecting" />
+    <ProgressBar android:id="@id/connecting_progress" android:layout_width="@dimen/connected_icon_size" android:layout_height="@dimen/connected_icon_size" android:layout_marginBottom="@dimen/connecting_progress_bottom_margin" android:layout_above="@id/connection_host_name" android:layout_centerHorizontal="true" />
+</RelativeLayout>

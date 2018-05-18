@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/gamepad_layout" android:visibility="visible" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/gp_nav_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <ImageButton android:id="@id/gp_back_btn" android:background="@drawable/gp_nav_button_background" android:paddingTop="@dimen/gp_nav_button_vertical_padding" android:paddingBottom="@dimen/gp_nav_button_vertical_padding" android:layout_width="@dimen/gp_nav_button_width" android:layout_height="@dimen/gp_nav_button_height" android:src="@drawable/btn_back_normal" android:scaleType="centerInside" android:contentDescription="@string/content_desc_back_button" />
+        <ImageButton android:id="@id/gp_home_btn" android:background="@drawable/gp_nav_button_background" android:paddingTop="@dimen/gp_nav_button_vertical_padding" android:paddingBottom="@dimen/gp_nav_button_vertical_padding" android:layout_width="@dimen/gp_nav_button_width" android:layout_height="@dimen/gp_nav_button_height" android:src="@drawable/btn_home_normal" android:scaleType="centerInside" android:contentDescription="@string/content_desc_home_button" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="11.0" />
+        <com.google.android.tv.remote.GamepadView android:layout_gravity="start" android:id="@id/gamepad" android:background="@drawable/gamepad_joystick_bg" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:clipChildren="false" android:layout_width="@dimen/gp_diameter" android:layout_height="@dimen/gp_diameter" android:contentDescription="@string/content_desc_joystick">
+            <com.google.android.tv.remote.JoystickView android:layout_gravity="center" android:id="@id/gp_joystick" android:layout_width="@dimen/gp_joystick_diameter" android:layout_height="@dimen/gp_joystick_diameter" android:src="@drawable/gamepad_joystick" />
+        </com.google.android.tv.remote.GamepadView>
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="9.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="11.0" />
+        <ImageButton android:layout_gravity="end" android:id="@id/gp_button_center" android:background="@drawable/gp_background" android:padding="@dimen/gp_buttons_padding" android:layout_width="@dimen/gp_diameter" android:layout_height="@dimen/gp_diameter" android:contentDescription="@string/content_desc_enter_button" />
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="9.0" />
+    </LinearLayout>
+</RelativeLayout>

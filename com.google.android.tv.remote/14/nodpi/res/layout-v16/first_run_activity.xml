@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/activity_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/permission_denied_screen" android:background="@color/permission_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:layout_gravity="start" android:id="@id/permission_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/permission_title_margin_top" android:text="@string/permission_title_text" style="@style/PermissionTitleTextStyle" />
+        <TextView android:layout_gravity="start" android:id="@id/permission_enable_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/permission_text_margin_top" android:text="@string/permission_enable_hint_text" style="@style/PermissionTextStyle" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/permission_illustration_top" android:src="@drawable/ic_permission_illustration" android:scaleType="fitCenter" android:layout_weight="1.0" android:importantForAccessibility="no" />
+        <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/permission_button_bar_height">
+            <TextView android:layout_gravity="start" android:id="@id/exit" android:layout_width="0.0dip" android:text="@string/permission_negative_button_text" android:layout_weight="1.0" style="@style/PermissionButtonStyle" />
+            <TextView android:layout_gravity="end" android:id="@id/settings" android:layout_width="0.0dip" android:text="@string/permission_positive_button_text" android:layout_weight="1.0" style="@style/PermissionButtonStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
