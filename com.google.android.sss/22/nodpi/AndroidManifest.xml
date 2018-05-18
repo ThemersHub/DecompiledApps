@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.sss" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-2167335">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.sss.permission.AUTH_BRIDGE"/>
+    <permission android:description="@string/permdesc_second_screen_setup" android:name="com.google.android.sss.permission.SECOND_SCREEN_SETUP" android:protectionLevel="signatureOrSystem"/>
+    <application android:label="Second Screen Setup" android:process="com.google.android.sss">
+        <service android:exported="true" android:name=".MainService" android:permission="com.google.android.sss.permission.SECOND_SCREEN_SETUP"/>
+    </application>
+</manifest>
