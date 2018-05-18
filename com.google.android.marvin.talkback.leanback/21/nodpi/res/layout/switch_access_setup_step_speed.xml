@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/setup_wizard_padding_heading_top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/setup_wizard_padding_radio_buttons_start" android:paddingEnd="@dimen/setup_wizard_padding_start_end">
+        <RadioGroup android:orientation="vertical" android:id="@id/autoscan_speeds_radio_group" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RadioButton android:textSize="@dimen/setup_wizard_text_size" android:id="@id/fast_speed_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/setup_wizard_radio_button_padding" />
+            <RadioButton android:textSize="@dimen/setup_wizard_text_size" android:id="@id/medium_speed_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/setup_wizard_radio_button_padding" android:checked="true" />
+            <RadioButton android:textSize="@dimen/setup_wizard_text_size" android:id="@id/slow_speed_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/setup_wizard_radio_button_padding" />
+            <RadioButton android:textSize="@dimen/setup_wizard_text_size" android:id="@id/custom_speed_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/setup_wizard_radio_button_padding" android:text="@string/custom_switch" />
+        </RadioGroup>
+        <EditText android:id="@id/custom_speed_edit_text" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/custom_edit_text" android:inputType="numberDecimal" android:layout_marginStart="@dimen/setup_wizard_text_padding_start" />
+    </LinearLayout>
+</ScrollView>

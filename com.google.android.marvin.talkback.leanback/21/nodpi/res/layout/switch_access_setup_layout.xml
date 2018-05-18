@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/setup_wizard_heading_background" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/setup_wizard_padding_start_end" android:paddingEnd="@dimen/setup_wizard_padding_start_end">
+        <TextView android:textSize="@dimen/setup_wizard_text_size" android:textColor="@color/setup_wizard_heading_text" android:id="@id/setup_heading" android:paddingTop="@dimen/setup_wizard_padding_heading_top" android:paddingBottom="@dimen/setup_wizard_padding_heading_bottom" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="sans-serif-medium" android:textAlignment="viewStart" />
+        <TextView android:textSize="@dimen/setup_wizard_subtext_size" android:textColor="@color/setup_wizard_subheading_text" android:id="@id/setup_subheading" android:paddingBottom="@dimen/setup_wizard_padding_subheading_bottom" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ViewStub android:id="@id/switch_access_setup_number_of_switches_import" android:layout="@layout/switch_access_setup_number_of_switches" android:inflatedId="@id/switch_access_setup_number_of_switches_inflated_import" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/switch_access_setup_scanning_method_import" android:layout="@layout/switch_access_setup_scanning_method" android:inflatedId="@id/switch_access_setup_scanning_method_inflated_import" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/switch_access_setup_configure_switch_import" android:layout="@layout/switch_access_setup_configure_switch" android:inflatedId="@id/switch_access_setup_configure_switch_inflated_import" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/switch_access_setup_step_speed_import" android:layout="@layout/switch_access_setup_step_speed" android:inflatedId="@id/switch_access_setup_step_speed_inflated_import" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/switch_access_setup_switch_game_import" android:layout="@layout/switch_access_setup_switch_game" android:inflatedId="@id/switch_access_setup_switch_game_inflated_import" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/switch_access_setup_completion_import" android:layout="@layout/switch_access_setup_completion" android:inflatedId="@id/switch_access_setup_completion_inflated_import" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:background="@color/setup_wizard_footer_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/setup_wizard_activity_margin" android:paddingEnd="@dimen/setup_wizard_activity_margin">
+        <Button android:gravity="center" android:id="@id/previous_button" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:textAllCaps="true" style="@style/SwitchAccessButtonBarButtonStyle" />
+        <Button android:gravity="center" android:id="@id/next_button" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:textAllCaps="true" style="@style/SwitchAccessButtonBarButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

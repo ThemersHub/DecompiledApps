@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/title_pref_category_when_to_speak" android:key="@string/pref_category_when_to_speak_key">
+        <ListPreference android:entries="@array/pref_speech_volume_entries" android:title="@string/title_pref_speech_volume" android:key="@string/pref_speech_volume_key" android:summary="%s" android:defaultValue="@string/pref_speech_volume_default" android:dialogTitle="@string/title_pref_speech_volume" android:entryValues="@array/pref_speech_volume_values" />
+        <Preference android:title="@string/tts_preferences_title" android:key="@string/pref_tts_settings_key" />
+        <Preference android:title="@string/pref_verbosity_title" android:key="@string/pref_verbosity_key" />
+        <SwitchPreference android:title="@string/title_pref_proximity" android:key="@string/pref_proximity_key" android:defaultValue="@bool/pref_proximity_default" android:summaryOn="@string/summaryOn_pref_proximity" android:summaryOff="@string/summaryOff_pref_proximity" />
+        <ListPreference android:entries="@array/pref_shake_to_read_threshold_entries" android:title="@string/title_pref_shake_to_read_threshold" android:key="@string/pref_shake_to_read_threshold_key" android:summary="%s" android:defaultValue="@string/pref_shake_to_read_threshold_default" android:dialogTitle="@string/title_pref_shake_to_read_threshold" android:entryValues="@array/pref_shake_to_read_threshold_values" />
+        <SwitchPreference android:title="@string/title_pref_speak_passwords_without_headphones" android:key="@string/pref_speak_passwords_without_headphones" android:summaryOn="@string/summaryOn_pref_speak_passwords_without_headphones" android:summaryOff="@string/summaryOff_pref_speak_passwords_without_headphones" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_pref_category_feedback_settings" android:key="@string/pref_category_feedback_key">
+        <SwitchPreference android:title="@string/title_pref_vibration" android:key="@string/pref_vibration_key" android:defaultValue="@bool/pref_vibration_default" />
+        <SwitchPreference android:title="@string/title_pref_soundback" android:key="@string/pref_soundback_key" android:defaultValue="@bool/pref_soundback_default" />
+        <SwitchPreference android:title="@string/title_pref_use_audio_focus" android:key="@string/pref_use_audio_focus_key" android:summary="@string/summary_pref_use_audio_focus" android:defaultValue="@bool/pref_use_audio_focus_default" />
+        <ListPreference android:entries="@array/pref_soundback_volume_entries" android:title="@string/title_pref_soundback_volume" android:key="@string/pref_soundback_volume_key" android:summary="%s" android:dependency="@string/pref_soundback_key" android:defaultValue="@string/pref_soundback_volume_default" android:dialogTitle="@string/title_pref_soundback_volume" android:entryValues="@array/pref_soundback_volume_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_pref_category_touch_exploration" android:key="@string/pref_category_touch_exploration_key">
+        <SwitchPreference android:title="@string/title_pref_explore_by_touch" android:key="@string/pref_explore_by_touch_reflect_key" android:defaultValue="@bool/pref_explore_by_touch_default" />
+        <SwitchPreference android:title="@string/title_pref_auto_scroll" android:key="@string/pref_auto_scroll_key" android:defaultValue="@bool/pref_auto_scroll_default" />
+        <SwitchPreference android:title="@string/title_pref_single_tap" android:key="@string/pref_single_tap_key" android:summary="@string/summary_pref_single_tap" android:dependency="@string/pref_explore_by_touch_reflect_key" android:defaultValue="@bool/pref_single_tap_default" />
+        <SwitchPreference android:title="@string/title_pref_show_context_menu_as_list" android:key="@string/pref_show_context_menu_as_list_key" android:defaultValue="@bool/pref_show_menu_as_list" />
+        <Preference android:title="@string/title_pref_tutorial" android:key="@string/pref_tutorial_key" android:dependency="@string/pref_explore_by_touch_reflect_key" />
+        <Preference android:title="@string/title_pref_category_manage_gestures" android:key="@string/pref_category_manage_gestures_key" />
+        <PreferenceScreen android:title="@string/title_pref_selector_settings" android:key="@string/pref_selector_category_settings_key">
+            <SwitchPreference android:title="@string/title_pref_selector_activation" android:key="@string/pref_selector_activation_key" android:summary="@string/pref_selector_activation_summary" android:defaultValue="@bool/pref_selector_activation_default" />
+            <PreferenceCategory android:title="@string/title_pref_category_selector_settings_configuration" android:key="@string/pref_category_selector_settings_configuration_key">
+                <SwitchPreference android:title="@string/title_pref_selector_speech_rate" android:key="@string/pref_selector_speech_rate_key" android:defaultValue="@bool/pref_selector_speech_rate_default" />
+                <SwitchPreference android:title="@string/title_pref_selector_verbosity" android:key="@string/pref_selector_verbosity_key" android:defaultValue="@bool/pref_selector_verbosity_default" />
+                <SwitchPreference android:title="@string/title_pref_selector_granularity" android:key="@string/pref_selector_granularity_key" android:defaultValue="@bool/pref_selector_granularity_default" />
+                <SwitchPreference android:title="@string/title_pref_selector_audio_focus" android:key="@string/pref_selector_audio_focus_key" android:defaultValue="@bool/pref_selector_audio_focus_default" />
+            </PreferenceCategory>
+        </PreferenceScreen>
+        <Preference android:title="@string/title_pref_manage_labels" android:key="@string/pref_manage_labels_key" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_pref_category_miscellaneous_settings" android:key="@string/pref_category_miscellaneous_key">
+        <Preference android:title="@string/title_pref_manage_keyboard_shortcuts" android:key="@string/pref_category_manage_keyboard_shortcut_key" />
+        <SwitchPreference android:title="@string/title_pref_two_volume_button_long_click" android:key="@string/pref_two_volume_long_press_key" android:summary="@string/value_long_volume_pressed_suspend_talkback" android:defaultValue="@bool/pref_resume_volume_buttons_long_click_default" />
+        <SwitchPreference android:title="@string/title_dim_screen_when_talkback_enabled" android:key="@string/pref_dim_when_talkback_enabled_key" android:defaultValue="@bool/pref_dim_when_talkback_enabled_default" />
+        <SwitchPreference android:title="@string/title_pref_dim_volume_three_clicks" android:key="@string/pref_dim_volume_three_clicks_key" android:summary="@string/value_dim_volume_three_clicks" android:defaultValue="@bool/pref_dim_volume_three_clicks_default" />
+        <ListPreference android:entries="@array/pref_resume_talkback_entries" android:title="@string/title_pref_resume_talkback" android:key="@string/pref_resume_talkback_key" android:summary="%s" android:defaultValue="@string/pref_resume_talkback_default" android:dialogTitle="@string/title_pref_resume_talkback" android:entryValues="@array/pref_resume_talkback_values" />
+        <PreferenceScreen android:title="@string/title_pref_play_store" android:key="@string/pref_play_store_key" />
+        <PreferenceScreen android:title="@string/title_pref_category_developer_settings" android:key="@string/pref_category_developer_key">
+            <ListPreference android:entries="@array/pref_log_level_entries" android:title="@string/title_pref_log_level" android:key="@string/pref_log_level_key" android:summary="%s" android:defaultValue="@string/pref_log_level_default" android:dialogTitle="@string/title_pref_log_level" android:entryValues="@array/pref_log_level_values" />
+            <SwitchPreference android:title="@string/title_pref_tts_overlay" android:key="@string/pref_tts_overlay_key" android:defaultValue="@bool/pref_tts_overlay_default" />
+            <SwitchPreference android:title="@string/title_pref_tree_debug" android:key="@string/pref_tree_debug_reflect_key" android:defaultValue="@bool/pref_tree_debug_default" />
+            <SwitchPreference android:title="@string/title_pref_performance_stats" android:key="@string/pref_performance_stats_reflect_key" android:defaultValue="@bool/pref_performance_stats_default" />
+            <Preference android:title="@string/title_pref_dump_a11y_event" android:key="@string/pref_dump_a11y_event_key" />
+        </PreferenceScreen>
+        <PreferenceScreen android:key="@string/pref_help_and_feedback_key" />
+        <PreferenceScreen android:title="@string/title_pref_show_privacy_policy" android:key="@string/pref_policy_key" />
+        <PreferenceScreen android:title="@string/title_pref_show_tos" android:key="@string/pref_show_tos_key" />
+    </PreferenceCategory>
+</PreferenceScreen>
