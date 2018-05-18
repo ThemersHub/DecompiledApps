@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="@dimen/large_spacing" android:paddingBottom="@dimen/large_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/narrow_spacing" android:paddingEnd="@dimen/narrow_spacing"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/RedeemPointsTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" style="@style/Text_Headline.Black87" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="72.0dip" android:layout_marginTop="@dimen/large_spacing">
+        <TextView android:ellipsize="marquee" android:gravity="end|bottom|center" android:id="@id/RedeemLabel" android:paddingBottom="@dimen/default_spacing" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/redeem_amount_label" android:singleLine="true" android:layout_weight="3.0" android:labelFor="@id/RedeemAmountEdit" style="@style/Text_Subhead.Black54" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="5.0" android:layout_marginStart="4.0dip">
+            <FrameLayout android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginEnd="4.0dip">
+                <TextView android:textSize="48.0sp" android:id="@id/RedeemAmount" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:color="@color/quantum_black_100" />
+                <EditText android:textSize="48.0sp" android:id="@id/RedeemAmountEdit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:color="@color/quantum_black_100" android:inputType="number" />
+            </FrameLayout>
+            <TextView android:textSize="18.0sp" android:gravity="bottom" android:id="@id/RedeemCurrency" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/tp_card_point" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="72.0dip">
+        <TextView android:ellipsize="marquee" android:gravity="end|bottom|center" android:id="@id/AddToBalanceLabel" android:paddingBottom="@dimen/default_spacing" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/add_to_balance_label" android:singleLine="true" android:layout_weight="3.0" style="@style/Text_Subhead.Black54" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="5.0" android:layout_marginStart="4.0dip">
+            <TextView android:textSize="48.0sp" android:gravity="bottom" android:id="@id/AddToBalanceAmount" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:color="@color/quantum_black_100" android:layout_marginEnd="4.0dip" />
+            <TextView android:textSize="18.0sp" android:gravity="bottom" android:id="@id/AddToBalanceCurrency" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/tp_card_point" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:id="@id/RedeemNowButton" android:layout_marginTop="@dimen/default_spacing" android:text="@string/redeem_now_button_label" style="@style/RedeemNowButton" />
+    <TextView android:textAppearance="@style/Text_Button.Action" android:gravity="center" android:id="@id/RedeemDifferentAmountButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" android:minWidth="@dimen/minimum_touch_target" android:minHeight="@dimen/minimum_touch_target" android:text="@string/redeem_different_amount" android:textAlignment="center" style="@style/ClickableButton" />
+</LinearLayout>

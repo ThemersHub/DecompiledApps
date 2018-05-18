@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/DrawerLayout" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@drawable/home_activity_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.Toolbar android:id="@id/Toolbar" style="@style/Toolbar">
+            <ImageView android:layout_gravity="center" android:id="@id/GooglePayLogo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tp_google_pay_logo_color_72x29dp" android:contentDescription="@null" />
+        </android.support.v7.widget.Toolbar>
+        <android.support.design.widget.CoordinatorLayout android:id="@id/CoordinatorLayout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/BottomNavigation" android:layout_below="@id/Toolbar">
+            <com.google.commerce.tapandpay.android.widgets.viewpager.DisableableViewPager android:id="@id/ViewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <fragment android:name="com.google.commerce.tapandpay.android.widgets.fab.FabFragment" android:id="@id/FabFragment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentEnd="true" />
+        </android.support.design.widget.CoordinatorLayout>
+        <android.support.design.widget.BottomNavigationView android:id="@id/BottomNavigation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" app:itemIconTint="@drawable/bottom_navigation_colors" app:itemTextColor="@drawable/bottom_navigation_colors" style="@style/Widget.GoogleMaterial.BottomNavigationView" />
+    </RelativeLayout>
+    <fragment android:name="com.google.commerce.tapandpay.android.widgets.navdrawer.NavigationDrawerFragment" android:layout_gravity="start" android:id="@id/NavDrawerFragment" android:fitsSystemWindows="false" android:layout_width="@dimen/nav_drawer_width" android:layout_height="fill_parent" />
+</android.support.v4.widget.DrawerLayout>

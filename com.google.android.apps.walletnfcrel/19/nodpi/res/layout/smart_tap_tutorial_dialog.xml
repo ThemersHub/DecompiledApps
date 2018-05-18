@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/googlepay_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.percent.PercentRelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout app:layout_widthPercent="100.0%" app:layout_aspectRatio="132.07397%">
+            <ImageView android:id="@id/SmarttapTutorialImage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/smarttap_tutorial_image" android:contentDescription="@string/smarttap_animation_description" />
+            <ImageView android:id="@id/MerchantLogo" android:layout_width="@dimen/tutorial_logo_size" android:layout_height="@dimen/tutorial_logo_size" android:layout_margin="@dimen/tutorial_logo_margin" android:contentDescription="@string/merchant_logo_description" />
+        </RelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+    <LinearLayout android:orientation="vertical" android:padding="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/TutorialTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text_Label" />
+        <Space android:layout_width="fill_parent" android:layout_height="16.0dip" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/smarttap_tutorial_body" style="@style/Text_Body" />
+        <Space android:layout_width="fill_parent" android:layout_height="24.0dip" />
+        <android.support.design.button.MaterialButton android:layout_gravity="end" android:id="@id/TutorialDismiss" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_got_it" style="@style/Widget.GoogleMaterial.TextButton" />
+    </LinearLayout>
+</LinearLayout>

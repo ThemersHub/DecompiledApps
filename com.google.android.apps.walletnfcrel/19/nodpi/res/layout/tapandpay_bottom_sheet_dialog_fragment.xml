@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="@dimen/medium_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bottom_sheet_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:contentDescription="@null" android:layout_marginEnd="@dimen/medium_spacing" android:layout_alignParentStart="true" />
+    <TextView android:id="@id/bottom_sheet_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_toEndOf="@id/bottom_sheet_image" style="@style/Text_Label" />
+    <TextView android:id="@id/bottom_sheet_message" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/bottom_sheet_title" android:layout_toEndOf="@id/bottom_sheet_image" style="@style/Text_Body" />
+    <android.support.design.button.MaterialButton android:id="@id/bottom_sheet_positive_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/bottom_sheet_dialog_positive_button_max_width" android:layout_below="@id/bottom_sheet_message" android:layout_alignParentEnd="true" />
+    <android.support.design.button.MaterialButton android:id="@id/bottom_sheet_negative_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/bottom_sheet_message" android:layout_marginEnd="@dimen/default_spacing" android:layout_toStartOf="@id/bottom_sheet_positive_button" style="@style/Widget.GoogleMaterial.TextButton" />
+</RelativeLayout>

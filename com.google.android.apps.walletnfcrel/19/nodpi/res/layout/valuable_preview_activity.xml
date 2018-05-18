@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/s2ap_toolbar_layout" />
+    <FrameLayout android:id="@id/ProgressBar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/ContentContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView android:id="@id/ScrollViewContent" android:paddingBottom="@dimen/s2ap_post_save_bottom_button_height" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="24.0dip">
+                <Space android:layout_width="fill_parent" android:layout_height="48.0dip" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <FrameLayout android:id="@id/CardPreviewLayout" android:paddingTop="@dimen/s2ap_half_checkmark_size" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:paddingStart="@dimen/s2ap_half_checkmark_size" android:paddingEnd="@dimen/s2ap_half_checkmark_size">
+                        <com.google.commerce.tapandpay.android.valuable.activity.s2ap.ValuableCardPreview android:id="@id/CardPreview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.5" />
+                    </FrameLayout>
+                    <FrameLayout android:id="@id/Checkmark" android:background="@drawable/checkmark" android:visibility="invisible" android:layout_width="@dimen/s2ap_checkmark_size" android:layout_height="@dimen/s2ap_checkmark_size" android:layout_marginBottom="@dimen/s2ap_negative_checkmark_margin" android:layout_above="@id/CardPreviewLayout" android:layout_marginStart="@dimen/s2ap_negative_checkmark_margin" android:layout_toEndOf="@id/CardPreviewLayout" />
+                </RelativeLayout>
+                <Space android:layout_width="fill_parent" android:layout_height="24.0dip" />
+                <TextView android:gravity="center" android:id="@id/ValuablePreviewMessageHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/s2ap_save_header" style="@style/Text_Headline" />
+                <Space android:layout_width="fill_parent" android:layout_height="16.0dip" />
+                <TextView android:gravity="center" android:id="@id/ValuablePreviewMessageSubheader" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text_Body" />
+            </LinearLayout>
+        </ScrollView>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <include android:id="@id/ActionButtonLayout" layout="@layout/loading_positive_button" />
+            <include android:id="@id/PostSaveLayout" android:visibility="gone" layout="@layout/post_save_button_layout" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <include layout="@layout/s2ap_immediate_save_layout" />
+</LinearLayout>

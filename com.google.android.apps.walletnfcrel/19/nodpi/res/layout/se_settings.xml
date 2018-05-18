@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/SettingsCard" android:padding="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CardViewStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/default_spacing" android:paddingEnd="0.0dip">
+        <TextView android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/large_spacing" android:text="@string/se_setting_title" style="@style/Text_Section_Header_Roboto" />
+        <View android:background="@color/googlepay_gray100" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="0.0dip" android:layout_marginEnd="@dimen/default_spacing" />
+        <RelativeLayout android:id="@id/AutoLoadSetting" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_min_height">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerVertical="true" android:layout_toStartOf="@id/AutoloadActionButton" android:layout_alignParentStart="true">
+                <TextView android:id="@id/AutoLoadSettingLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/se_setting_autoload_label" style="@style/Text_Header" />
+                <TextView android:id="@id/AutoLoadSettingStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text_Subhead" />
+            </LinearLayout>
+            <android.support.design.button.MaterialButton android:id="@id/AutoloadActionButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/se_setting_action_button" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/SettingsButton" />
+        </RelativeLayout>
+        <View android:background="@color/googlepay_gray100" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="0.0dip" android:layout_marginEnd="@dimen/default_spacing" />
+        <RelativeLayout android:id="@id/LowBalanceSetting" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_min_height">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerVertical="true" android:layout_toStartOf="@id/BalanceNotificationActionButton" android:layout_alignParentStart="true">
+                <TextView android:gravity="center_vertical" android:id="@id/LowBalanceSettingLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/se_setting_balance_notification_label" style="@style/Text_Header" />
+                <TextView android:gravity="center_vertical" android:id="@id/LowBalanceSettingStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text_Subhead" />
+            </LinearLayout>
+            <android.support.design.button.MaterialButton android:id="@id/BalanceNotificationActionButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/se_setting_action_button" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/SettingsButton" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

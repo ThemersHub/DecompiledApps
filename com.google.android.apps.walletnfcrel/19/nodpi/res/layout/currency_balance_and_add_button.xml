@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/BalanceGroup" android:paddingTop="@dimen/medium_spacing" android:layout_width="fill_parent" android:layout_height="96.0dip" android:paddingStart="12.0dip" android:paddingEnd="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/BalanceAndTopUpWrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true">
+        <TextView android:textAppearance="@style/Text_Caption" android:textColor="@color/google_white" android:gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/se_card_balance_no_colon" android:includeFontPadding="false" android:textAllCaps="true" android:fontFamily="sans-serif" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textAppearance="@style/Text_Headline" android:textColor="@color/google_white" android:id="@id/LeftCurrencySymbol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" />
+            <TextView android:textColor="@color/google_white" android:gravity="top" android:id="@id/CurrencyBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/Text_Headline" />
+            <TextView android:textAppearance="@style/Text_Headline" android:textColor="@color/google_white" android:id="@id/RightCurrencySymbol" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/BalanceSyncSpinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:src="@drawable/quantum_ic_sync_white_24" android:layout_alignBottom="@id/BalanceAndTopUpWrapper" android:contentDescription="@string/se_card_sync_balance" android:layout_toEndOf="@id/BalanceAndTopUpWrapper" />
+    <android.support.design.button.MaterialButton android:id="@id/TopupButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/se_card_topup_action" android:layout_alignParentEnd="true" app:backgroundTint="@color/google_white" style="@style/Widget.GoogleMaterial.TextButton" />
+    <ProgressBar android:id="@id/TopupButtonProgressBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="6.0dip" android:indeterminate="true" android:layout_alignTop="@id/TopupButton" android:layout_alignBottom="@id/TopupButton" />
+    <View android:id="@id/TopupDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

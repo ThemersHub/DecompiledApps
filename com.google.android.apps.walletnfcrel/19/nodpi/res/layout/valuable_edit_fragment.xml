@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.google.commerce.tapandpay.android.valuable.widgets.barcode.BarcodeView android:id="@id/Barcode" android:layout_width="wrap_content" android:layout_height="64.0dip" android:layout_margin="@dimen/default_spacing" />
+        <com.google.commerce.tapandpay.android.valuable.activity.mutate.widget.ButtonView android:id="@id/ScanButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" custom:icon="@drawable/quantum_ic_photo_camera_black_48" custom:text="@string/scan_card" />
+        <LinearLayout android:orientation="vertical" android:id="@id/UserDataPrompts" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.google.commerce.tapandpay.android.valuable.activity.widget.SwitchView android:id="@id/AutoRedemptionSwitch" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:switch_title="@string/auto_redeem_setting_label" custom:switch_summary="@string/loyalty_auto_redeem_setting_description" custom:switch_checked="true" />
+        <com.google.commerce.tapandpay.android.valuable.activity.widget.SwitchView android:id="@id/NotificationSwitch" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:switch_title="@string/nearby_notification_setting_label" custom:switch_checked="true" />
+    </LinearLayout>
+    <include layout="@layout/full_width_positive_button" />
+</LinearLayout>

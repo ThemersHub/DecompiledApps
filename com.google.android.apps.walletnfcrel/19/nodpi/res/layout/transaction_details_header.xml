@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/TransactionHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/MerchantLogo" android:visibility="gone" android:layout_width="@dimen/merchant_logo_size" android:layout_height="@dimen/merchant_logo_size" android:layout_marginBottom="@dimen/default_spacing" android:layout_centerHorizontal="true" android:contentDescription="@null" />
+    <TextView android:id="@id/Title" android:paddingBottom="@dimen/narrow_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/MerchantLogo" android:layout_centerHorizontal="true" android:textAllCaps="true" style="@style/Text_Body" />
+    <TextView android:id="@id/Amount" android:paddingBottom="@dimen/narrow_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/Title" android:layout_centerHorizontal="true" style="@style/Text_Headline_2" />
+    <TextView android:id="@id/TransactionStatus" android:paddingBottom="@dimen/narrow_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/Amount" android:layout_centerHorizontal="true" android:textAllCaps="true" style="@style/Text_Section_Header" />
+    <LinearLayout android:orientation="vertical" android:id="@id/DateLayout" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/list_item_min_height" android:layout_below="@id/TransactionStatus">
+        <TextView android:id="@id/DateTitle" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/transaction_card_header_date" android:textAllCaps="true" android:textAlignment="viewStart" style="@style/Text_Section_Header" />
+        <TextView android:id="@id/Date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/Text_Label.Regular" />
+    </LinearLayout>
+    <LinearLayout android:gravity="end" android:orientation="vertical" android:id="@id/TimeLayout" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/list_item_min_height" android:layout_below="@id/TransactionStatus" android:layout_alignParentEnd="true">
+        <TextView android:id="@id/TimestampTitle" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/transaction_card_header_time" android:textAllCaps="true" android:textAlignment="viewEnd" style="@style/Text_Section_Header" />
+        <TextView android:id="@id/Timestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewEnd" style="@style/Text_Label.Regular" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/CardLayout" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/list_item_min_height" android:layout_below="@id/DateLayout">
+        <TextView android:id="@id/CardTitle" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/phone_icon_description" android:textAllCaps="true" android:textAlignment="viewStart" style="@style/Text_Section_Header" />
+        <TextView android:id="@id/CardName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/Text_Label.Regular" />
+    </LinearLayout>
+</RelativeLayout>

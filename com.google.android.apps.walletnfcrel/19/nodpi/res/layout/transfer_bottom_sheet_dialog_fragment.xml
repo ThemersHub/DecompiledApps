@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="@dimen/medium_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/BottomSheetContent" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/bottom_sheet_title" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentStart="true" style="@style/Text_Headline" />
+        <TextView android:id="@id/bottom_sheet_message" android:paddingBottom="@dimen/large_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/bottom_sheet_title" style="@style/Text_Body_2.Gray700" />
+        <android.support.v7.widget.RecyclerView android:id="@id/Recycler" android:paddingBottom="@dimen/large_spacing" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/bottom_sheet_title" />
+        <android.support.design.button.MaterialButton android:id="@id/bottom_sheet_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/bottom_sheet_dialog_positive_button_max_width" android:layout_below="@id/bottom_sheet_message" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <ProgressBar android:id="@id/Spinner" android:visibility="gone" android:layout_width="72.0dip" android:layout_height="72.0dip" android:indeterminate="true" android:layout_centerInParent="true" android:importantForAccessibility="no" />
+</RelativeLayout>

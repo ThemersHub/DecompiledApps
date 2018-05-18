@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/inverted" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing" android:layout_marginStart="@dimen/default_spacing" android:layout_marginEnd="@dimen/default_spacing"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/Image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+        <TextView android:textAppearance="@style/Text_Headline.White100" android:layout_gravity="center" android:id="@id/StatusLine" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/Ribbon" android:visibility="gone" android:layout_width="@dimen/seal_size" android:layout_height="@dimen/seal_size" android:layout_marginTop="@dimen/negative_half_seal_size" android:src="@drawable/tp_ribbon_color_56dp" />
+    <View android:id="@id/NoRibbonSpacer" android:layout_width="fill_parent" android:layout_height="@dimen/narrow_spacing" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing">
+        <TextView android:gravity="center_horizontal" android:id="@id/Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text_Headline" />
+        <TextView android:gravity="center_horizontal" android:id="@id/Description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" android:layout_marginBottom="@dimen/narrow_spacing" style="@style/Text_Body.Black54" />
+        <Button android:textAppearance="@style/Text_Button.White100" android:id="@id/RedeemButton" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" android:layout_marginStart="@dimen/redeem_button_horizontal_margin" android:layout_marginEnd="@dimen/redeem_button_horizontal_margin" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/RedeemedIndicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing">
+            <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/quantum_ic_done_grey600_24" />
+            <TextView android:textAppearance="@style/Text_Button.Black38" android:id="@id/RedeemedIndicatorText" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/Text_Caption.Black54" android:gravity="center_horizontal" android:id="@id/FinePrint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" />
+    </LinearLayout>
+</LinearLayout>

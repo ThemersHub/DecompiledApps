@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/Animation" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:contentDescription="@null" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:gravity="center" android:id="@id/HeaderImage" android:layout_width="wrap_content" android:layout_height="96.0dip" android:layout_marginTop="@dimen/large_spacing" android:scaleType="fitCenter" android:contentDescription="@null" />
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:textAppearance="@style/Doodle_Share_Header_Medium" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/Title" android:paddingLeft="@dimen/narrow_spacing" android:paddingRight="@dimen/narrow_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" />
+        <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/Body" android:paddingLeft="@dimen/narrow_spacing" android:paddingRight="@dimen/narrow_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" style="@style/Text_Body.White100" />
+        <Button android:layout_gravity="center_horizontal" android:id="@id/ShareButton" android:layout_width="wrap_content" android:layout_height="@dimen/doodle_share_button_height" android:layout_marginBottom="0.0dip" style="@style/Share_Button" />
+        <ImageView android:gravity="center" android:id="@id/SocialImage" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_margin="@dimen/narrow_spacing" android:contentDescription="@null" />
+        <TextView android:textAppearance="@style/Text_Caption.White100" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/Footer" android:paddingLeft="@dimen/narrow_spacing" android:paddingRight="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/narrow_spacing" />
+    </LinearLayout>
+    <ImageButton android:id="@id/CloseButton" android:padding="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_close_white_24" android:contentDescription="@null" style="@style/ClickableButton" />
+</FrameLayout>

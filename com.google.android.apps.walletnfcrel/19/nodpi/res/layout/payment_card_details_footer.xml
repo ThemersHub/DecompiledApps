@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/AcceptedAtStores" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Tile">
+        <TextView android:textAppearance="@style/Text_Subhead.Black87" android:id="@id/AcceptedAtStoresTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/only_accepted_at_these_stores" />
+        <com.google.commerce.tapandpay.android.widgets.merchants.MerchantsListView android:id="@id/MerchantsList" android:layout_width="fill_parent" android:layout_height="wrap_content" app:merchantLogoSize="40.0dip" app:merchantTextColor="@color/tp_text_black_87_percent" app:merchantTextSize="16.0sp" />
+    </LinearLayout>
+    <include layout="@layout/app_info_card" />
+    <LinearLayout android:orientation="vertical" android:id="@id/FooterListSection" android:padding="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/SelectThisCard" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:description="@string/in_store_purchases" />
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/VirtualAccountNumberLine" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_https_black_24" android:contentDescription="@string/virtual_account_number_accessibility" app:description="@string/virtual_account_number" />
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/TermsAndConditions" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_message_black_24" app:description="@string/view_tocs" />
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/PrivacyNotice" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_assignment_black_24" app:description="@string/view_privacy_notice" />
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/Contact" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_call_black_24" />
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/RemoveCard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_delete_black_24" app:description="@string/remove_card" />
+    </LinearLayout>
+</LinearLayout>

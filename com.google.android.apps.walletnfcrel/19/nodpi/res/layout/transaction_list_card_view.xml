@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/IssuerMessageLayout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView android:id="@id/TransactionsListCard" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CardViewStyle">
+        <LinearLayout android:orientation="vertical" android:id="@id/TransactionsListContainer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/CardTitle" android:paddingTop="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/recent_activity" android:textAllCaps="true" android:paddingStart="@dimen/default_spacing" style="@style/Text_Section_Header_Roboto" />
+            <LinearLayout android:orientation="vertical" android:id="@id/NoTransactionsText" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/small_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing">
+                <TextView android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_transactions_available" style="@style/Text_Subheader.Gray900" />
+                <TextView android:id="@id/NoTransactionsDescription" android:paddingTop="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_transactions_available_description" style="@style/Text_Body.Gray700" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/TransactionItemContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:id="@id/SeeAllButtonDivider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="@dimen/default_spacing" android:layout_marginEnd="@dimen/default_spacing" style="@style/HorizontalDivider" />
+            <TextView android:textAppearance="@style/Text_Button.Blue500" android:gravity="center" android:id="@id/SeeAll" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/minimum_touch_target" android:text="@string/see_all" style="@style/ClickableButton" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

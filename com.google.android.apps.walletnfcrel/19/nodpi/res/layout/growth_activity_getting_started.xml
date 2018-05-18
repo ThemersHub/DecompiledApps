@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/Content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/CloseButton" android:padding="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_close_black_24" android:contentDescription="@string/close_button_description" style="@style/ClickableButton" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ContentViewForTesting" android:paddingTop="24.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true" android:paddingStart="24.0dip" android:paddingEnd="24.0dip">
+            <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/card_204x204" android:contentDescription="@null" />
+            <TextView android:textAppearance="@style/Text_Headline" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:text="@string/growth_lets_get_you_set_up" />
+            <TextView android:textAppearance="@style/Text_Body" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/growth_add_a_payment_method" android:lineSpacingMultiplier="1.2" />
+            <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <android.support.design.button.MaterialButton android:layout_gravity="center_horizontal" android:id="@id/AddCardButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/growth_add_a_card" style="@style/Widget.GoogleMaterial.Button" />
+            <android.support.design.button.MaterialButton android:layout_gravity="center_horizontal" android:id="@id/AddPaypalButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/growth_add_your_paypal_account" style="@style/Widget.GoogleMaterial.TextButton" />
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>
