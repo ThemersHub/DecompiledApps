@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.tvlauncher" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.android.providers.tv.permission.ACCESS_ALL_EPG_DATA"/>
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.NOTIFY_TV_INPUTS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.BIND_APPWIDGET"/>
+    <uses-permission android:name="android.permission.CHANGE_HDMI_CEC_ACTIVE_SOURCE"/>
+    <uses-permission android:name="android.permission.READ_CONTENT_RATING_SYSTEMS"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-feature android:name="android.software.leanback" android:required="true"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA"/>
+    <application android:allowBackup="false" android:banner="@drawable/ic_tv_banner" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.google.android.tvlauncher.application.TvLauncherApplication" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.tvlauncher.LauncherGlideModule" android:value="GlideModule"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.google.android.tvlauncher.MainActivity" android:screenOrientation="landscape" android:taskAffinity=".TvLauncher">
+            <intent-filter android:priority="2">
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.MONKEY"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.tvlauncher.appsview.data.MarketUpdateReceiver" android:permission="com.google.android.tv.permission.ROUTE_MARKET_UPDATE">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.ACTION_PACKAGE_ENQUEUED"/>
+                <action android:name="com.android.launcher.action.ACTION_PACKAGE_DOWNLOADING"/>
+                <action android:name="com.android.launcher.action.ACTION_PACKAGE_INSTALLING"/>
+                <action android:name="com.android.launcher.action.ACTION_PACKAGE_DEQUEUED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:name="com.google.android.tvlauncher.notifications.NotificationsSidePanelActivity" android:noHistory="true" android:screenOrientation="landscape" android:theme="@style/Theme.Settings.SidePanel">
+            <intent-filter>
+                <action android:name="com.android.tvlauncher.NOTIFICATIONS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/add_channels_announcement" android:name="com.google.android.tvlauncher.settings.AppChannelPermissionActivity" android:screenOrientation="landscape" android:theme="@style/Theme.Settings.SidePanel"/>
+        <activity android:name="com.google.android.tvlauncher.settings.FavoriteLaunchItemsActivity" android:screenOrientation="landscape" android:theme="@style/Theme.Settings.SidePanel"/>
+        <activity android:exported="true" android:name="com.google.android.tvlauncher.settings.OpenSourceActivity" android:screenOrientation="landscape" android:theme="@style/Theme.Leanback">
+            <intent-filter>
+                <action android:name="com.android.tv.action.VIEW_LICENSES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:name="com.google.android.tvlauncher.settings.HomeScreenSettingsActivity" android:screenOrientation="landscape" android:theme="@style/Theme.Settings.SidePanel">
+            <intent-filter>
+                <action android:name="com.google.android.leanbacklauncher.SETTINGS"/>
+                <action android:name="com.google.android.tvlauncher.SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.google.android.tvlauncher.inputs.InputsPanelActivity" android:screenOrientation="landscape" android:taskAffinity="" android:theme="@style/Theme.Settings.SidePanel">
+            <intent-filter>
+                <action android:name="com.android.tv.action.VIEW_INPUTS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:label="@string/apps_view_title" android:launchMode="singleTask" android:name="com.google.android.tvlauncher.appsview.AppsViewActivity" android:screenOrientation="landscape" android:taskAffinity="" android:theme="@style/Theme.Settings.SidePanel">
+            <intent-filter>
+                <action android:name="android.intent.action.ALL_APPS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:label="@string/add_app_link_label" android:name="com.google.android.tvlauncher.appsview.AddAppLinkActivity" android:screenOrientation="landscape" android:theme="@style/ConfirmationDialog">
+            <intent-filter android:priority="999">
+                <action android:name="com.android.tv.applink.action.ADD_APP_LINK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:label="@string/remove_app_link_label" android:name="com.google.android.tvlauncher.appsview.RemoveAppLinkActivity" android:screenOrientation="landscape" android:theme="@style/ConfirmationDialog">
+            <intent-filter android:priority="999">
+                <action android:name="com.android.tv.applink.action.REMOVE_APP_LINK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="true" android:name="com.google.android.tvlauncher.appsview.data.StopOutOfBoxOrderingJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>
