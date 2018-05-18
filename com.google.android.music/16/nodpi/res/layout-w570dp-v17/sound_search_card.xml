@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/default_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:background="@color/sound_search_card_bg" android:paddingTop="@dimen/sound_search_card_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/ic_sound_search_card" android:layout_weight="1.0" />
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/sound_search_card_padding" android:layout_marginTop="@dimen/sound_search_card_padding" android:layout_marginRight="@dimen/sound_search_card_padding" android:layout_weight="1.0" android:layout_marginStart="@dimen/sound_search_card_padding" android:layout_marginEnd="@dimen/sound_search_card_padding">
+        <TextView android:textSize="@dimen/sound_search_card_title_font_size" android:id="@id/card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sound_search_card_title" android:lineSpacingMultiplier="1.05" />
+        <TextView android:textSize="@dimen/sound_search_card_content_font_size" android:id="@id/card_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sound_search_card_padding" android:layout_marginBottom="@dimen/sound_search_card_padding" android:text="@string/sound_search_card_content" android:layout_below="@id/card_title" android:lineSpacingMultiplier="1.2" />
+        <LinearLayout android:id="@id/try_btn_wrapper" android:layout_width="fill_parent" android:layout_height="@dimen/sound_search_card_button_height" android:layout_alignParentBottom="true">
+            <ImageView android:background="@drawable/neutral_highlight" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_mic_orange" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/app_color" android:gravity="start|center" android:background="@drawable/neutral_highlight" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/sound_search_card_try_button" />
+        </LinearLayout>
+        <View android:background="@color/signup_divider_background" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/try_btn_wrapper" />
+    </RelativeLayout>
+</LinearLayout>

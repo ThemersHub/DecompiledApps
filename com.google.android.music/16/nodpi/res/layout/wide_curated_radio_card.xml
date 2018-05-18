@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.music.ui.adaptivehome.WideCuratedRadioPlayCard android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="@drawable/play_highlight_round_overlay_light" style="@style/WideCuratedRadioCard"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:music="http://schemas.android.com/apk/res-auto">
+    <com.google.android.music.ui.art.SimpleArtView android:id="@id/art" android:layout_width="fill_parent" android:layout_height="wrap_content" music:artAspectRatio="0.2" />
+    <RelativeLayout android:padding="@dimen/default_padding_large_plus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/art">
+        <com.google.android.music.ui.StateListPlayButton android:layout_gravity="center" android:id="@id/play_button" android:layout_width="@dimen/wide_curated_card_play_button_diameter" android:layout_height="@dimen/wide_curated_card_play_button_diameter" android:layout_marginLeft="@dimen/wide_curated_card_play_button_left_margin" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/StateListPlayButtonStyle" />
+        <RelativeLayout android:orientation="horizontal" android:id="@id/title_with_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/wide_curated_card_offset" android:layout_toLeftOf="@id/play_button" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/WideCuratedRadioCard.Title" />
+                <ImageView android:layout_gravity="top" android:id="@id/explicit_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/thriller_explicit_icon_left_margin" android:layout_marginTop="@dimen/thriller_explicit_icon_top_margin" android:src="@drawable/ic_explicit_small" android:layout_weight="0.0" android:contentDescription="@string/accessibility_explicit_content" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/wide_curated_card_offset" android:layout_marginTop="@dimen/wide_curated_card_description_top_margin" android:layout_marginRight="@dimen/wide_curated_card_description_right_margin" android:layout_marginBottom="@dimen/wide_curated_card_offset" android:layout_below="@id/title_with_icon" style="@style/WideCuratedRadioCard.Description" />
+        <com.google.android.music.ui.cardlib.layout.PlayCardOverflowView android:id="@id/li_overflow" android:layout_marginTop="@dimen/wide_curated_card_overflow_top_margin" android:layout_below="@id/play_button" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/MusicPlayCardOverflow" />
+    </RelativeLayout>
+</com.google.android.music.ui.adaptivehome.WideCuratedRadioPlayCard>

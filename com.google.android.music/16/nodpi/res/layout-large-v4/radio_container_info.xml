@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.music.ui.mylibrary.RadioContainerHeaderView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/spacer" android:layout_width="fill_parent" android:layout_height="@dimen/vertical_offset_for_fab_play_btn_positive" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/title_area" android:background="@color/material_container_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/spacer">
+        <com.google.android.music.ui.art.SimpleArtView android:id="@id/container_art" android:layout_width="@dimen/material_container_art_size" android:layout_height="@dimen/material_container_art_size" android:scaleType="fitCenter" android:layout_below="@id/play_header_spacer" android:layout_alignParentLeft="true" />
+        <include layout="@layout/material_container_info_common" />
+    </LinearLayout>
+    <ImageButton android:id="@id/fab_play" android:layout_below="@id/spacer" android:contentDescription="@string/accessibility_play" style="@style/FabPlay" />
+</com.google.android.music.ui.mylibrary.RadioContainerHeaderView>

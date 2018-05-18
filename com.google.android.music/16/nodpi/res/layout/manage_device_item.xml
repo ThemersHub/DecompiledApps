@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:background="@drawable/neutral_highlight" android:paddingTop="@dimen/default_padding" android:paddingBottom="@dimen/default_padding" android:layout_width="fill_parent" android:layout_height="@dimen/manage_device_list_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/device_art" android:paddingRight="@dimen/default_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <ImageButton android:id="@id/close_btn" android:background="@color/transparent" android:paddingLeft="@dimen/default_padding" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/btn_close_medium" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/deauthorize_device_icon_content_description" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/close_btn" android:layout_toRightOf="@id/device_art">
+        <TextView android:id="@id/device_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ManageDeviceTitle" />
+        <TextView android:id="@id/last_used_time" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PlayCardSubtitle" />
+    </LinearLayout>
+</RelativeLayout>

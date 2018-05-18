@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/widget_frame" android:background="@color/white" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/albumart" android:background="@color/art_loading_color" android:focusable="true" android:layout_width="@dimen/widget_music_small_album_art_size" android:layout_height="@dimen/widget_music_small_album_art_size" android:scaleType="fitXY" android:contentDescription="@string/widget_album_art_accessibility" />
+    <RelativeLayout android:id="@id/info_frame" android:background="@color/white" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <include android:id="@id/button_frame" layout="@layout/music_widget_button_frame" />
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/artist_frame" android:paddingLeft="@dimen/widget_music_small_text_padding" android:paddingTop="@dimen/widget_music_small_text_padding_top" android:paddingRight="@dimen/widget_music_small_text_padding" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/button_frame">
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/nowplaying_widget_track_color" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/trackname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/grey" android:gravity="bottom" android:id="@id/dash" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dash" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/grey" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/artist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

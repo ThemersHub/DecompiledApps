@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/ad_frame" android:background="@color/overlay_ads_background_black_transparent_50_percent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:textColor="@android:color/white" android:gravity="end|center" android:id="@id/btn_close_ads" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/close_ads_button_text" android:layout_alignRight="@id/ads_view_container" android:layout_alignEnd="@id/ads_view_container" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ads_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <com.google.android.gms.ads.doubleclick.PublisherAdView android:id="@id/ads_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nowplaying_ads_top_margin" app:adSize="@string/overlay_ad_size" app:adUnitId="@string/ad_unit_id" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/overlay_ads_drop_shadow_height" android:src="@drawable/top_shadow" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

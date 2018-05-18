@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/dialog_fragment_inner_padding" android:paddingTop="@dimen/dialog_fragment_top_padding" android:paddingRight="@dimen/dialog_fragment_inner_padding" android:paddingBottom="@dimen/dialog_fragment_inner_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/playlist_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_padding" android:hint="@string/playlist_name_hint" android:singleLine="true" android:inputType="textCapSentences">
+        <requestFocus />
+    </EditText>
+    <EditText android:id="@id/playlist_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_padding" android:layout_marginBottom="@dimen/default_padding" android:hint="@string/playlist_description_hint" android:singleLine="true" android:inputType="textCapSentences" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/public_playlist_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_padding_xlarge">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/text_view_public" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/public_title" style="@style/PlayCardTitle" />
+            <TextView android:id="@id/text_view_public_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/public_description_online" style="@style/PlayCardSubtitle" />
+        </LinearLayout>
+        <ProgressBar android:id="@id/spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+        <Switch android:id="@id/switch_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/videoPlayerWithAdPlayback" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/video_player_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.7">
+            <VideoView android:layout_gravity="center" android:id="@id/videoPlayer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/video_upsell_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.3">
+            <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/fragment_upsell_video" />
+        </FrameLayout>
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/create_instant_mix" />
+</FrameLayout>

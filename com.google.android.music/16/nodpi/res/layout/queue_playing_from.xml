@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.music.ui.art.SimpleArtView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitEnd" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <View android:id="@id/overlay" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/playing_from_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/queue_playing_from_margin" android:layout_toLeftOf="@id/refresh_button" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <TextView android:textSize="12.0sp" android:textColor="@color/white_transparent_80" android:id="@id/playing_from" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/playing_from" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:id="@id/container_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:drawablePadding="@dimen/default_padding_small" />
+    </LinearLayout>
+    <ImageView android:id="@id/refresh_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/queue_playing_from_margin" android:layout_alignTop="@id/playing_from_header_text" android:layout_alignParentRight="true" android:contentDescription="@string/refresh_station" />
+</merge>

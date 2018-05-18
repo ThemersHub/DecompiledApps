@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="@dimen/content_padding_lr" android:paddingTop="@dimen/default_padding" android:paddingRight="@dimen/content_padding_lr" android:paddingBottom="@dimen/default_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/content_padding_lr" android:paddingEnd="@dimen/content_padding_lr">
+        <TextView android:gravity="center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="80.0dip" android:layout_marginBottom="@dimen/upsell_element_spacing" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="@style/Gifting.Title" />
+        <TextView android:gravity="center" android:id="@id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/upsell_element_spacing" android:layout_below="@id/title" android:layout_centerHorizontal="true" style="@style/Gifting.Message" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_below="@id/summary">
+            <include android:id="@id/card1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/gift_card" />
+            <include android:id="@id/card2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/gift_card" />
+            <include android:id="@id/card3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/gift_card" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

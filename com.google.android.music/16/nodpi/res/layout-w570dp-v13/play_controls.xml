@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/repeat" android:visibility="gone" android:nextFocusRight="@id/shuffle" android:layout_marginLeft="@dimen/nowplaying_button_margin" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/accessibility_repeat" style="@style/PlaybackControl" />
+    <ImageView android:layout_gravity="center" android:id="@id/shuffle" android:visibility="gone" android:nextFocusLeft="@id/repeat" android:nextFocusRight="@id/prev" android:layout_toRightOf="@id/repeat" android:layout_centerVertical="true" android:contentDescription="@string/accessibility_shuffle" style="@style/PlaybackControl" />
+    <com.google.android.music.ui.common.PlayPauseButton android:layout_gravity="center" android:id="@id/pause" android:nextFocusLeft="@id/prev" android:nextFocusRight="@id/next" android:layout_centerInParent="true" style="@style/PlaybackControl.Play.Light.Fab" />
+    <ImageButton android:layout_gravity="center" android:id="@id/prev" android:nextFocusRight="@id/pause" android:layout_margin="0.0dip" android:layout_toLeftOf="@id/pause" android:layout_centerVertical="true" style="@style/PlaybackControl.Previous.Light" />
+    <ImageButton android:layout_gravity="center" android:id="@id/next" android:nextFocusLeft="@id/pause" android:nextFocusRight="@id/thumbsup" android:layout_margin="0.0dip" android:layout_toRightOf="@id/pause" android:layout_centerVertical="true" style="@style/PlaybackControl.Next.Light" />
+    <include android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" layout="@layout/rating_selector" />
+    <include android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" layout="@layout/skip_time_buttons" />
+</merge>

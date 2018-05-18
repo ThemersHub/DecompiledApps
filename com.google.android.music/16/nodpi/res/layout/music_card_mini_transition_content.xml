@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:music="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/li_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/play_card_content_horizontal_inset_mini" android:layout_marginTop="@dimen/play_card_content_vertical_inset_mini" android:layout_marginRight="@dimen/music_play_card_reason_safe" android:lines="2" style="@style/PlayCardTitle.Mini" />
+    <TextView android:id="@id/li_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/play_card_content_horizontal_inset_mini" android:layout_marginRight="@dimen/music_play_card_reason_safe" android:layout_marginBottom="@dimen/play_card_content_vertical_inset_mini" style="@style/PlayCardSubtitle" />
+    <com.google.android.music.ui.common.KeepOnView android:id="@id/li_pin_button" android:background="@drawable/neutral_highlight" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:layout_marginBottom="@dimen/play_card_content_vertical_inset_mini" music:uiResourceSize="small" music:informationalOnly="true" />
+    <com.google.android.music.ui.cardlib.layout.PlayCardOverflowView android:id="@id/li_overflow" android:nextFocusLeft="@id/play_card" android:layout_marginRight="4.0dip" android:layout_below="@id/li_thumbnail_frame" android:layout_alignParentRight="true" style="@style/MusicPlayCardOverflow" />
+    <FrameLayout android:id="@id/overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

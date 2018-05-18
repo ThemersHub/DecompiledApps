@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_spinner" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/content" android:background="@color/app_background_light" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/header" android:layout_width="fill_parent" android:layout_height="@dimen/family_onboarding_header_height" />
+        <com.google.android.music.ui.art.SignupOfferHeaderArtView android:id="@id/hero_image" android:layout_width="@dimen/family_onboarding_image_dimension" android:layout_height="wrap_content" android:layout_marginRight="@dimen/family_onboarding_image_right_margin" android:scaleType="centerInside" android:layout_alignBottom="@id/header" android:layout_alignParentRight="true" android:layout_marginEnd="@dimen/family_onboarding_image_right_margin" android:layout_alignParentEnd="true" />
+        <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/header" style="@style/FamilyOnboarding.Title" />
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/tutorial_family_onboarding_template_content" />
+    </RelativeLayout>
+</FrameLayout>

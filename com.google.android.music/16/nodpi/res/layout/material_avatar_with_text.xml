@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:music="http://schemas.android.com/apk/res-auto">
+    <com.google.android.music.ui.art.SimpleArtView android:layout_gravity="center_vertical" android:id="@id/avatar" android:visibility="gone" android:layout_width="@dimen/avatar_width" android:layout_height="@dimen/avatar_width" android:layout_marginRight="@dimen/default_padding" android:scaleType="centerCrop" music:is_avatar="true" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/PlayCardTitle.Mini" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/PlayCardSubtitle" android:id="@id/additional_info_first_part" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:textAppearance="@style/PlayCardSubtitle" android:id="@id/additional_info_text_separator" android:paddingLeft="@dimen/material_item_text_separator_margin" android:paddingRight="@dimen/material_item_text_separator_margin" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/material_item_subtitle_duration_separator" android:layout_weight="0.0" android:importantForAccessibility="no" />
+            <TextView android:textAppearance="@style/PlayCardSubtitle" android:id="@id/additional_info_second_part" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

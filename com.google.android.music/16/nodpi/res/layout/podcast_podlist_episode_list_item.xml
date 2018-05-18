@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.music.ui.common.MusicForegroundRelativeLayout android:gravity="center_vertical" android:background="@color/material_container_bg" android:paddingTop="@dimen/track_list_item_vertical_padding" android:paddingBottom="@dimen/track_list_item_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="@drawable/play_highlight_round_overlay_light" android:minHeight="@dimen/material_track_list_row_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/left_content" android:layout_width="@dimen/material_track_list_content_height" android:layout_height="@dimen/material_track_list_content_height" android:layout_marginLeft="@dimen/material_container_info_padding">
+        <com.google.android.music.ui.art.SimpleArtView android:id="@id/icon" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.music.ui.common.PlayingIndicator android:layout_gravity="center" android:id="@id/play_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <include android:layout_width="0.0dip" android:layout_height="@dimen/material_track_list_content_height" android:layout_marginLeft="@dimen/material_container_info_padding" android:layout_toLeftOf="@id/info_button" android:layout_toRightOf="@id/left_content" layout="@layout/material_list_item_text" />
+    <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/info_button" android:layout_width="@dimen/material_track_list_content_height" android:layout_height="@dimen/material_track_list_content_height" android:src="@drawable/ic_info_gray" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/accessibility_podcast_episode_info_button" />
+</com.google.android.music.ui.common.MusicForegroundRelativeLayout>

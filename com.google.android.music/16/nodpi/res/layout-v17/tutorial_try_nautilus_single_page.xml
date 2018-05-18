@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/tutorial_nautilus_single_page_root" android:background="@color/app_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Tutorial.ProgressBar.WhiteSpinner" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <fragment android:name="com.google.android.music.ui.common.AccountPickerFragment" android:id="@id/account_picker" android:tag="@string/AccountPickerFragment_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/upsell_element_spacing" android:layout_marginBottom="@dimen/upsell_element_spacing" />
+        <ImageView android:layout_width="@dimen/upsell_headphones_icon_size" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/upsell_element_spacing" android:src="@drawable/ic_headphone_large" android:scaleType="fitCenter" android:layout_weight="1.0" />
+        <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Tutorial.TextView.WarmWelcomeTitle" />
+        <TextView android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Tutorial.TextView.WarmWelcomeSubTitle" />
+        <TextView android:gravity="center" android:id="@id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/upsell_offer_summary_padding" android:layout_marginTop="@dimen/upsell_offer_summary_margin" android:layout_marginRight="@dimen/upsell_offer_summary_padding" android:layout_marginBottom="@dimen/upsell_offer_summary_margin" android:text="@string/tutorial_try_nautilus_single_summary" android:layout_marginStart="@dimen/upsell_offer_summary_padding" android:layout_marginEnd="@dimen/upsell_offer_summary_padding" style="@style/Upsell.TextView.Summary" />
+        <include android:id="@id/individual_container" layout="@layout/individual_offer_button_container" />
+        <include android:id="@id/individual_with_extra_container" layout="@layout/individual_with_extra_offer_button_container" />
+        <include android:id="@id/dual_shared_container" layout="@layout/dual_shared_offer_button_container" />
+        <Button android:textColor="@color/white" android:id="@id/decline_button" android:layout_width="@dimen/sign_up_button_width" android:layout_height="@dimen/sign_up_button_height" android:layout_margin="@dimen/upsell_button_spacing" android:text="@string/upsell_no_thanks" style="@style/Tutorial.Button.Secondary" />
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/tos_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_padding_xlarge" android:layout_marginRight="@dimen/default_padding_xlarge" android:layout_marginBottom="@dimen/default_padding_large" android:text="@string/tutorial_terms_of_service" android:layout_marginStart="@dimen/default_padding_xlarge" android:layout_marginEnd="@dimen/default_padding_xlarge" style="@style/Upsell.TextView.Legalese" />
+    </LinearLayout>
+</FrameLayout>

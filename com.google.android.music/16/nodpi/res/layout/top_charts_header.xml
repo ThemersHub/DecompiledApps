@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.music.ui.explore.TopChartsHeaderView android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PlayCardViewGroup"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/top_charts_upsell" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/material_container_upsell" />
+    <TextView android:textAppearance="@style/PlayClusterTitle" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/material_container_info_padding" android:layout_marginTop="@dimen/material_container_info_padding" android:text="@string/top_charts_header_title" android:layout_below="@id/top_charts_upsell" />
+    <View android:id="@id/spacer" android:layout_below="@id/title" style="@style/TopChartsSpacer" />
+    <include android:id="@id/header_card_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/spacer" layout="@layout/music_card_row" />
+    <include android:id="@id/header_card_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/header_card_1" layout="@layout/music_card_row" />
+    <include android:id="@id/header_card_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/header_card_2" layout="@layout/music_card_row" />
+    <include android:id="@id/header_card_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/header_card_3" layout="@layout/music_card_row" />
+    <include android:id="@id/header_card_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/header_card_4" layout="@layout/music_card_row" />
+    <View android:gravity="center" android:id="@id/divider2" android:background="@color/material_grey_separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/material_container_info_padding" android:layout_marginTop="@dimen/material_container_info_padding" android:layout_marginRight="@dimen/material_container_info_padding" android:layout_below="@id/header_card_5" />
+    <Button android:id="@id/more_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/top_charts_more_button" android:layout_below="@id/divider2" android:layout_centerHorizontal="true" style="@style/TopChartsMoreButton" />
+</com.google.android.music.ui.explore.TopChartsHeaderView>

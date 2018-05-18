@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/download_icons" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/downloading_icon" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_badge_dl_orange2_12px" />
+        <ImageView android:id="@id/download_complete_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_badge_complete_orange2_12px" />
+    </RelativeLayout>
+    <ProgressBar android:id="@id/download_progress_bar" android:layout_width="@dimen/keep_on_state_badge_progress_width" android:layout_height="@dimen/keep_on_state_badge_progress_height" android:layout_marginBottom="@dimen/keep_on_state_badge_progress_margin" android:max="100" android:progressDrawable="@drawable/keep_on_badge_progress" android:layout_alignBottom="@id/download_icons" android:layout_centerHorizontal="true" style="?android:attr/progressBarStyleHorizontal" />
+</RelativeLayout>

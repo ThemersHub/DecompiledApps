@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/create_instant_mix" android:background="@color/create_mix_background_black_transparent_50_percent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center" android:background="@drawable/create_instant_mix_background" android:layout_width="@dimen/radio_creation_dialog_normal_width" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/container" android:paddingLeft="@dimen/radio_creation_dialog_half_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/radio_creation_dialog_half_padding">
+            <FrameLayout android:layout_gravity="center" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="@dimen/radio_creation_dialog_padding">
+                <ImageView android:id="@id/mix_image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </FrameLayout>
+            <TextView android:textAppearance="@style/PlayCardTitle" android:gravity="start|center" android:layout_gravity="start|center" android:id="@id/text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/radio_creation_dialog_padding" android:layout_weight="1.0" />
+        </LinearLayout>
+        <Button android:textAppearance="?android:textAppearanceMedium" android:id="@id/ok" android:background="@drawable/neutral_highlight" android:padding="@dimen/radio_creation_dialog_half_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/create_instant_mix_btn_ok" android:layout_below="@id/container" />
+        <View android:id="@id/divider" android:background="@color/divider_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/container" />
+    </RelativeLayout>
+</FrameLayout>

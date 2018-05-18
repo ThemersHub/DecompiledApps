@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/empty_screen" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/empty_spinner" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/empty_state_content" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:id="@id/empty_icon" android:visibility="gone" android:layout_width="@dimen/empty_screen_image_dimension" android:layout_height="@dimen/empty_screen_image_dimension" android:layout_marginRight="@dimen/empty_screen_image_end_margin" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="@dimen/empty_screen_info_width" android:layout_height="fill_parent">
+            <TextView android:gravity="start" android:id="@id/empty_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/empty_screen_text_bottom_margin" style="@style/EmptyScreenText" />
+            <TextView android:gravity="start" android:id="@id/empty_sub_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/empty_screen_sub_text_bottom_margin" style="@style/EmptyScreenSubText" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <Button android:id="@id/empty_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/empty_screen_button_height" style="@style/EmptyScreenButton" />
+                <Button android:id="@id/empty_learn_more" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/empty_screen_button_height" android:layout_marginLeft="@dimen/empty_screen_button_margin" style="@style/EmptyScreenButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

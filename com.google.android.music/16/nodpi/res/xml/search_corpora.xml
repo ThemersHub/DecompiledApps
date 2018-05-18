@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppDataSearch xmlns:search="http://schemas.android.com/apk/res-auto">
+    <GlobalSearch search:searchLabel="@string/launcher_name" search:settingsDescription="@string/search_settings_description" search:defaultIntentAction="android.intent.action.SEARCH_RESULT" search:defaultIntentActivity=".ui.search.SearchResultTrampolineActivity" />
+    <Corpus search:corpusId="songs" search:corpusVersion="2" search:contentProviderUri="content://com.google.android.music.icing/appdatasearch/songs" search:trimmable="false" search:schemaOrgType="MusicRecording">
+        <Section search:sectionId="song" search:indexPrefixes="true" search:schemaOrgProperty="name" />
+        <Section search:sectionId="artist" search:noIndex="true" search:schemaOrgProperty="byArtist" />
+        <Section search:sectionId="album_id" search:noIndex="true" />
+        <Section search:sectionId="music_id" search:noIndex="true" />
+        <Section search:sectionId="song_id" search:noIndex="true" />
+        <Section search:sectionId="album" search:noIndex="true" />
+        <Section search:sectionId="local_copy_type" search:noIndex="true" />
+        <GlobalSearchCorpus>
+            <GlobalSearchSection search:sectionType="text1" search:sectionContent="@string/songs_corpus_section_text_1" />
+            <GlobalSearchSection search:sectionType="text2" search:sectionContent="@string/songs_corpus_section_text_2" />
+            <GlobalSearchSection search:sectionType="icon_uri" search:sectionContent="@string/songs_corpus_section_icon_uri" />
+            <GlobalSearchSection search:sectionType="intent_data" search:sectionContent="@string/songs_corpus_section_data" />
+        </GlobalSearchCorpus>
+    </Corpus>
+    <Corpus search:corpusId="albums" search:corpusVersion="2" search:contentProviderUri="content://com.google.android.music.icing/appdatasearch/albums" search:trimmable="false" search:schemaOrgType="MusicAlbum">
+        <Section search:sectionId="album" search:indexPrefixes="true" search:schemaOrgProperty="name" />
+        <Section search:sectionId="artist" search:noIndex="true" search:schemaOrgProperty="byArtist" />
+        <Section search:sectionId="local_copy_type" search:noIndex="true" />
+        <GlobalSearchCorpus>
+            <GlobalSearchSection search:sectionType="text1" search:sectionContent="@string/albums_corpus_section_text_1" />
+            <GlobalSearchSection search:sectionType="text2" search:sectionContent="@string/albums_corpus_section_text_2" />
+            <GlobalSearchSection search:sectionType="icon_uri" search:sectionContent="@string/albums_corpus_section_icon_uri" />
+            <GlobalSearchSection search:sectionType="intent_data" search:sectionContent="@string/albums_corpus_section_data" />
+        </GlobalSearchCorpus>
+    </Corpus>
+    <Corpus search:corpusId="artists" search:corpusVersion="2" search:contentProviderUri="content://com.google.android.music.icing/appdatasearch/artists" search:trimmable="false" search:schemaOrgType="MusicGroup">
+        <Section search:sectionId="artist" search:indexPrefixes="true" search:schemaOrgProperty="name" />
+        <Section search:sectionId="local_copy_type" search:noIndex="true" />
+        <GlobalSearchCorpus>
+            <GlobalSearchSection search:sectionType="text1" search:sectionContent="@string/artists_corpus_section_text_1" />
+            <GlobalSearchSection search:sectionType="text2" search:sectionContent="@string/artists_corpus_section_text_2" />
+            <GlobalSearchSection search:sectionType="icon_uri" search:sectionContent="@string/artists_corpus_section_icon_uri" />
+            <GlobalSearchSection search:sectionType="intent_data" search:sectionContent="@string/artists_corpus_section_data" />
+        </GlobalSearchCorpus>
+    </Corpus>
+    <Corpus search:corpusId="playlists" search:corpusVersion="1" search:contentProviderUri="content://com.google.android.music.icing/appdatasearch/playlists" search:trimmable="false" search:schemaOrgType="MusicPlaylist">
+        <Section search:sectionId="playlist" search:indexPrefixes="true" search:schemaOrgProperty="name" />
+        <GlobalSearchCorpus>
+            <GlobalSearchSection search:sectionType="text1" search:sectionContent="@string/playlists_corpus_section_text_1" />
+            <GlobalSearchSection search:sectionType="icon_uri" search:sectionContent="@string/playlists_corpus_section_icon_uri" />
+            <GlobalSearchSection search:sectionType="intent_data" search:sectionContent="@string/playlists_corpus_section_data" />
+        </GlobalSearchCorpus>
+    </Corpus>
+    <Corpus search:corpusId="top_albums" search:corpusVersion="1" search:contentProviderUri="content://com.google.android.music.icing/appdatasearch/top_albums" search:trimmable="false">
+        <Section search:sectionId="album" search:indexPrefixes="true" search:schemaOrgProperty="name" />
+        <Section search:sectionId="album_id" search:noIndex="true" />
+        <Section search:sectionId="album_url" search:noIndex="true" />
+        <Section search:sectionId="artist" search:noIndex="true" search:schemaOrgProperty="byArtist" />
+        <GlobalSearchCorpus>
+            <GlobalSearchSection search:sectionType="text1" search:sectionContent="@string/top_albums_corpus_section_text_1" />
+            <GlobalSearchSection search:sectionType="text2" search:sectionContent="@string/top_albums_corpus_section_text_2" />
+            <GlobalSearchSection search:sectionType="icon_uri" search:sectionContent="@string/top_albums_corpus_section_icon_uri" />
+            <GlobalSearchSection search:sectionType="intent_activity" search:sectionContent="@string/top_albums_corpus_section_intent_activity" />
+            <GlobalSearchSection search:sectionType="intent_data" search:sectionContent="@string/top_albums_corpus_section_data" />
+        </GlobalSearchCorpus>
+    </Corpus>
+    <Corpus search:corpusId="top_artists" search:corpusVersion="1" search:contentProviderUri="content://com.google.android.music.icing/appdatasearch/top_artists" search:trimmable="false">
+        <Section search:sectionId="artist" search:indexPrefixes="true" search:schemaOrgProperty="name" />
+        <Section search:sectionId="artist_id" search:noIndex="true" />
+        <Section search:sectionId="artist_url" search:noIndex="true" />
+        <GlobalSearchCorpus>
+            <GlobalSearchSection search:sectionType="text1" search:sectionContent="@string/top_artists_corpus_section_text_1" />
+            <GlobalSearchSection search:sectionType="text2" search:sectionContent="@string/top_artists_corpus_section_text_2" />
+            <GlobalSearchSection search:sectionType="icon_uri" search:sectionContent="@string/top_artists_corpus_section_icon_uri" />
+            <GlobalSearchSection search:sectionType="intent_activity" search:sectionContent="@string/top_artists_corpus_section_intent_activity" />
+            <GlobalSearchSection search:sectionType="intent_data" search:sectionContent="@string/top_artists_corpus_section_data" />
+        </GlobalSearchCorpus>
+    </Corpus>
+    <Corpus search:corpusId="top_tracks" search:corpusVersion="1" search:contentProviderUri="content://com.google.android.music.icing/appdatasearch/top_tracks" search:trimmable="false">
+        <Section search:sectionId="track" search:indexPrefixes="true" search:schemaOrgProperty="name" />
+        <Section search:sectionId="track_id" search:noIndex="true" />
+        <Section search:sectionId="track_url" search:noIndex="true" />
+        <Section search:sectionId="artist" search:noIndex="true" />
+        <GlobalSearchCorpus>
+            <GlobalSearchSection search:sectionType="text1" search:sectionContent="@string/top_tracks_corpus_section_text_1" />
+            <GlobalSearchSection search:sectionType="text2" search:sectionContent="@string/top_tracks_corpus_section_text_2" />
+            <GlobalSearchSection search:sectionType="icon_uri" search:sectionContent="@string/top_tracks_corpus_section_icon_uri" />
+            <GlobalSearchSection search:sectionType="intent_activity" search:sectionContent="@string/top_tracks_corpus_section_intent_activity" />
+            <GlobalSearchSection search:sectionType="intent_data" search:sectionContent="@string/top_tracks_corpus_section_data" />
+        </GlobalSearchCorpus>
+    </Corpus>
+</AppDataSearch>

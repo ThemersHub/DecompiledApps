@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/nus_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:scrollbarStyle="outsideOverlay" android:id="@android:id/list" android:paddingLeft="@dimen/nus_grid_padding" android:paddingRight="@dimen/nus_grid_padding" android:paddingBottom="@dimen/nus_done_btn_container_height" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:footerDividersEnabled="false" android:importantForAccessibility="no" />
+    <LinearLayout android:gravity="center_horizontal" android:paddingBottom="@dimen/nus_done_btn_container_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <Button android:id="@id/btn_skip" android:background="@drawable/tutorial_white_button_bg" android:layout_width="@dimen/nus_done_btn_width" android:layout_height="@dimen/nus_done_btn_height" android:layout_marginRight="8.0dip" android:text="@string/quiz_skip" style="@style/UserQuizSkipButton" />
+        <Button android:id="@id/btn_next" android:background="@drawable/tutorial_orange_button_bg" android:layout_width="@dimen/nus_done_btn_width" android:layout_height="@dimen/nus_done_btn_height" android:layout_marginLeft="8.0dip" style="@style/UserQuizDoneButton" />
+    </LinearLayout>
+    <ProgressBar android:id="@id/loading_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progress_bar_spinner" android:layout_centerInParent="true" style="?android:attr/progressBarStyleLarge" />
+</RelativeLayout>

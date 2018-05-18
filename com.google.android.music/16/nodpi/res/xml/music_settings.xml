@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/stream_settings" android:key="stream_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceCategory android:title="@string/settings_catergory_account_caps" android:key="@string/settings_catergory_account_key">
+        <PreferenceScreen android:title="@string/no_account_selected_summary" android:key="@string/account_settings_key" />
+        <PreferenceScreen android:key="@string/account_type_settings_key" />
+        <PreferenceScreen android:title="@string/manage_fop_title" android:key="@string/manage_fop_key" />
+        <PreferenceScreen android:key="@string/manage_family_settings_key" />
+        <PreferenceScreen android:key="@string/manage_nautilus_settings_key" />
+        <PreferenceScreen android:title="@string/refresh_title" android:key="@string/refresh_key" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_catergory_general_caps" android:key="@string/settings_catergory_general_key">
+        <PreferenceScreen android:title="@string/user_quiz_setting_title" android:key="@string/user_quiz_setting_key" />
+        <PreferenceScreen android:title="@string/my_devices_setting_title" android:key="@string/my_devices_setting_key">
+            <intent android:action="com.google.android.music.DeviceManagement" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/send_gift" android:key="@string/gift_subscription_setting_key" android:summary="@string/gift_subscription_setting_summary" />
+        <com.google.android.music.ui.common.CustomA11yPreference android:title="@string/sleep_timer_settings_title" android:key="@string/sleep_timer_settings_key" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_privacy_location_caps" android:key="@string/settings_category_privacy_location_key">
+        <PreferenceScreen android:title="@string/my_history_setting_title" android:key="@string/my_history_setting_key" />
+        <PreferenceScreen android:title="@string/settings_activity_history_title" android:key="@string/settings_activity_history_key" />
+        <PreferenceScreen android:title="@string/loc_reporting_setting_title" android:key="@string/loc_reporting_setting_key" />
+        <PreferenceScreen android:title="@string/delete_recommendation_history_setting_title" android:key="@string/delete_recommendation_history_setting_key" />
+        <PreferenceScreen android:title="@string/delete_my_library_setting_title" android:key="@string/delete_my_library_setting_key" />
+        <PreferenceScreen android:title="@string/privacy_help_center_setting_title" android:key="@string/privacy_help_center_setting_key" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_notifications_caps" android:key="@string/settings_category_notifications_key">
+        <SwitchPreference android:title="@string/marketing_notifications_settings_title" android:key="@string/marketing_notifications_settings_key" android:summary="@string/marketing_notifications_settings_summary" />
+        <SwitchPreference android:key="@string/headphone_notification_settings_key" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_catergory_streaming_caps" android:key="@string/settings_catergory_streaming_key">
+        <PreferenceScreen android:title="@string/equalizer_settings_title" android:key="@string/equalizer_settings_key" android:summary="@string/equalizer_settings_summary" />
+        <SwitchPreference android:title="@string/stream_only_on_wifi_title" android:key="@string/stream_only_on_wifi_key" android:summary="@string/stream_only_on_wifi_summary" android:disableDependentsState="true" />
+        <PreferenceScreen android:title="@string/stream_quality_for_mobile_title" android:key="@string/stream_quality_for_mobile_key" android:summary="@string/stream_quality_normal" android:dependency="@string/stream_only_on_wifi_key" />
+        <PreferenceScreen android:title="@string/stream_quality_for_wifi_title" android:key="@string/stream_quality_for_wifi_key" android:summary="@string/stream_quality_normal" />
+        <SwitchPreference android:title="@string/cache_streamed_title" android:key="@string/cache_streamed_key" />
+        <com.google.android.music.ui.settings.MultilineSwitchPreference android:title="@string/media_key_autoplay_toggle_title" android:key="@string/media_key_autoplay_toggle_key" android:summary="@string/media_key_autoplay_toggle_summary" />
+        <SwitchPreference android:title="@string/content_filter_title_radio" android:key="@string/content_filter_key" android:disableDependentsState="true" />
+        <SwitchPreference android:title="@string/content_filter_show_album_art_on_lockscreen" android:key="@string/content_filter_show_album_art_on_lockscreen_key" android:disableDependentsState="true" />
+        <PreferenceScreen android:title="@string/parental_controls_title" android:key="@string/parental_controls" android:summary="@string/parental_controls_allow_explicit_songs" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_catergory_download_caps" android:key="@string/settings_catergory_download_key">
+        <SwitchPreference android:title="@string/offlinedl_only_on_wifi_title" android:key="@string/offlinedl_only_on_wifi_key" android:summary="@string/offlinedl_only_on_wifi_summary" android:disableDependentsState="true" />
+        <PreferenceScreen android:title="@string/download_quality_title" android:key="@string/download_quality_key" android:summary="@string/stream_quality_normal" />
+        <SwitchPreference android:title="@string/autocache_title" android:key="@string/autocache_key" android:summary="@string/autocache_summary" />
+        <PreferenceScreen android:title="@string/clear_cache_settings_title" android:key="@string/clear_cache_settings_key" />
+        <PreferenceScreen android:title="@string/download_queue_title" android:key="@string/download_queue_key" />
+        <PreferenceScreen android:title="@string/download_location_title" android:key="@string/download_location_key" android:summary="@string/download_location_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_catergory_wear_caps" android:key="@string/settings_catergory_wear_key">
+        <SwitchPreference android:title="@string/sync_to_wear_title" android:key="@string/sync_to_wear_key" android:summary="@string/sync_to_wear_summary" android:defaultValue="false" />
+        <PreferenceScreen android:title="@string/wear_manage_downloads_title" android:key="@string/wear_manage_downloads_key" android:dependency="@string/sync_to_wear_key" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_catergory_developer_caps" android:key="@string/settings_catergory_developer_key">
+        <PreferenceScreen android:title="@string/privacy_policy_title" android:key="@string/privacy_policy_key" />
+        <SwitchPreference android:title="@string/debug_logs_title" android:key="@string/debug_logs_key" android:summary="@string/debug_logs_summary" android:disableDependentsState="true" />
+        <PreferenceScreen android:title="@string/music_version_unknown" android:key="music_version_key" />
+        <PreferenceScreen android:title="@string/apiary_endpoint_title" android:key="@string/apiary_endpoints_screen" android:summary="@string/apiary_endpoint_summary" />
+        <PreferenceScreen android:title="@string/music_pa_endpoint_title" android:key="@string/music_pa_endpoints_screen" android:summary="@string/music_pa_endpoint_summary" />
+        <PreferenceScreen android:title="@string/streamauth_endpoint_title" android:key="@string/streamauth_endpoints_screen" android:summary="@string/streamauth_endpoint_summary" />
+        <PreferenceScreen android:title="@string/cast_app_id_selection_title" android:key="@string/cast_app_id_selection_screen" android:summary="@string/cast_app_id_selection_summary" />
+        <PreferenceScreen android:title="@string/api_stack_indicator_preference_title" android:key="@string/api_stack_indicator_preference_key" android:summary="" />
+        <PreferenceScreen android:title="@string/features_preference_title" android:key="@string/features_preference_key" />
+    </PreferenceCategory>
+</PreferenceScreen>

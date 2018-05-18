@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView android:id="@id/fragment_list" android:paddingLeft="@dimen/content_padding_lr" android:paddingRight="@dimen/content_padding_lr" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/content_padding_lr" android:paddingEnd="@dimen/content_padding_lr" />
+    <TextView android:layout_gravity="end" android:id="@id/text_btn" android:paddingLeft="@dimen/thriller_home_button_side_padding" android:paddingTop="@dimen/thriller_home_button_top_padding" android:paddingRight="@dimen/thriller_home_button_side_padding" android:paddingBottom="@dimen/thriller_home_button_top_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/thriller_home_button_top_margin" android:layout_marginRight="@dimen/thriller_home_button_end_margin" android:paddingStart="@dimen/thriller_home_button_side_padding" android:paddingEnd="@dimen/thriller_home_button_side_padding" android:layout_marginEnd="@dimen/thriller_home_button_end_margin" style="@style/Thriller.RecentsButton" />
+    <com.google.android.music.ui.adaptivehome.AdaptiveHomeReloadButton android:layout_gravity="center|top" android:id="@id/reload_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/adaptive_home_reload_button_top_margin" />
+    <include android:gravity="center" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/thriller_loading_screen" />
+    <include android:gravity="center" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/thriller_error_screen" />
+    <include android:gravity="center" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/empty_screen" />
+</FrameLayout>

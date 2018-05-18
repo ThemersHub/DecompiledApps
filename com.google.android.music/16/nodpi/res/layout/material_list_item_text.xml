@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="start|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.google.android.music.ui.common.StatefulShadowTextView android:id="@id/li_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/TrackTitle" />
+        <ImageView android:layout_gravity="center" android:id="@id/li_explicit_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/material_container_small_padding" android:layout_marginTop="@dimen/material_track_list_text_explicit_icon_nudge_down" android:src="@drawable/ic_explicit_small" android:layout_weight="0.0" android:contentDescription="@string/accessibility_explicit_content" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.google.android.music.ui.common.KeepOnStateBadgeView android:layout_gravity="center_vertical" android:id="@id/li_keepon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/material_container_small_padding" android:layout_marginBottom="@dimen/keep_on_state_badge_text_align_negative_margin" />
+        <com.google.android.music.ui.common.StatefulShadowTextView android:id="@id/li_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/TrackSubtitle" />
+        <com.google.android.music.ui.common.StatefulShadowTextView android:id="@id/subtitle_duration_separator" android:paddingLeft="@dimen/material_item_text_separator_margin" android:paddingRight="@dimen/material_item_text_separator_margin" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/material_item_subtitle_duration_separator" android:layout_weight="0.0" android:importantForAccessibility="no" style="@style/TrackSubtitle" />
+        <com.google.android.music.ui.common.StatefulShadowTextView android:id="@id/li_duration" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.0" style="@style/TrackSubtitle" />
+    </LinearLayout>
+</LinearLayout>

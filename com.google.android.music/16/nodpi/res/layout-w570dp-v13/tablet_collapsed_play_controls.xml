@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.music.ui.common.PlayPauseButton android:layout_gravity="center" android:id="@id/pause" android:nextFocusLeft="@id/prev" android:nextFocusRight="@id/next" android:layout_centerInParent="true" style="@style/PlaybackControl.Play.Light" />
+    <ImageButton android:layout_gravity="center" android:id="@id/prev" android:nextFocusRight="@id/pause" android:layout_margin="0.0dip" android:layout_toLeftOf="@id/pause" android:layout_centerVertical="true" style="@style/PlaybackControl.Previous.Light" />
+    <ImageButton android:layout_gravity="center" android:id="@id/next" android:nextFocusLeft="@id/pause" android:nextFocusRight="@id/thumbsup" android:layout_margin="0.0dip" android:layout_toRightOf="@id/pause" android:layout_centerVertical="true" style="@style/PlaybackControl.Next.Light" />
+    <include android:id="@id/header_rating_views" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" layout="@layout/rating_selector" />
+    <include android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" layout="@layout/skip_time_buttons" />
+</RelativeLayout>
