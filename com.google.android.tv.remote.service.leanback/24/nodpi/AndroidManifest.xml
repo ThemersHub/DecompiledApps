@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.tv.remote.service" platformBuildVersionCode="24" platformBuildVersionName="7.0">
+    <uses-feature android:name="android.software.leanback"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.HDMI_CEC"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.DUMP"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS"/>
+    <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.TV_VIRTUAL_REMOTE_CONTROLLER"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_ROUTING"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.tv.bugreportsender.READ_BUGREPORTS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <application android:icon="@mipmap/ic_launcher_tvremote" android:label="Android TV Remote Service" android:process="com.google.android.remote.tv.services" android:usesCleartextTraffic="false">
+        <uses-library android:name="com.android.media.tv.remoteprovider" android:required="true"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/pin_dialog_label" android:name="com.google.android.tv.remote.service.pairing.PairingCodeActivity" android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.android.tv.remote.service.settings.SettingsActivity" android:theme="@style/Theme.Settings.SidePanel">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/open_source_settings_label" android:name="com.google.android.tv.remote.service.settings.OpenSourceActivity"/>
+        <service android:exported="true" android:name="com.google.android.tv.remote.service.RemoteService">
+            <intent-filter>
+                <action android:name="com.android.athome.START_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.tv.remote.service.BugReporter$CompletionService" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="com.google.android.tv.bugreportsender.BUGREPORT_FINISHED"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.tv.remote.service.DiscoveryService">
+            <intent-filter>
+                <action android:name="com.android.athome.START_SERVICE"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="true" android:exported="true" android:name="com.google.android.tv.remote.service.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:label="@string/ime_input_label" android:name="com.google.android.tv.remote.service.ImeBridgeService" android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod"/>
+            </intent-filter>
+            <meta-data android:name="android.view.im" android:resource="@xml/method"/>
+        </service>
+        <service android:exported="true" android:label="@string/atv_remote_provider_service" android:name="com.google.android.tv.remote.service.AtvRemoteProviderService" android:permission="android.permission.BIND_TV_REMOTE_SERVICE">
+            <intent-filter>
+                <action android:name="com.android.media.tv.remoteprovider.TvRemoteProvider"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:label="@string/atv_remote_search_assist_service" android:name="com.google.android.tv.remote.service.AtvSearchAssistantService" android:permission="android.permission.BIND_TV_REMOTE_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.tv.remote.service.AtvSearchAssistantService"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="true" android:exported="true" android:name="com.google.android.tv.remote.service.PackageReplacedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:label="BleAudioService" android:name="com.google.android.tv.remote.service.bleremote.BleAudioService">
+            <intent-filter>
+                <action android:name="com.android.athome.START_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:label="BleRemoteChatHeadService" android:name="com.google.android.tv.remote.service.bleremote.BleRemoteChatHeadService"/>
+    </application>
+</manifest>
