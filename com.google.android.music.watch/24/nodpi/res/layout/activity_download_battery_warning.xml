@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/left_margin" android:layout_marginEnd="@dimen/left_margin">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/warning_icon" android:layout_width="@dimen/warning_icon_size" android:layout_height="@dimen/warning_icon_size" android:layout_marginTop="@dimen/top_margin" android:layout_marginBottom="6.0dip" android:scaleType="fitCenter" />
+        <TextView android:gravity="center" android:id="@id/warning_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="sans-serif-condensed" style="@style/TextStyle" />
+        <TextView android:gravity="center" android:id="@id/warning_description" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/TextStyle" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <ImageView android:layout_gravity="start" android:id="@id/cancel_button" android:background="@drawable/action_ripple_bg_gray" android:padding="@dimen/warning_action_internal_padding" android:layout_width="@dimen/warning_action_button_size" android:layout_height="@dimen/warning_action_button_size" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_close_white_24dp" android:contentDescription="@string/cancel" />
+            <ImageView android:layout_gravity="end" android:id="@id/continue_button" android:background="@drawable/action_ripple_bg_orange" android:padding="@dimen/warning_action_internal_padding" android:layout_width="@dimen/warning_action_button_size" android:layout_height="@dimen/warning_action_button_size" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_check_wht_24dp" android:contentDescription="@string/continue_label" />
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>

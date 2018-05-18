@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/app_background_light" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.music.ui.NowPlayingArtViewPager android:id="@id/art_pager" android:background="@color/nowplaying_art_bg" android:focusable="false" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/nowplaying_screen_shadow_height" android:src="@drawable/bottom_shadow" android:layout_above="@id/play_controls" />
+    <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/play_controls" layout="@layout/nowplaying_overlay_ads_view" />
+    <FrameLayout android:id="@id/companion_ads_background" android:background="@color/companion_ad_background_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@android:id/progress" android:layout_below="@id/top_wrapper_right" layout="@layout/nowplaying_companion_ads_view" />
+    <include layout="@layout/nowplaying_screen_queue" />
+    <com.google.android.music.ui.NowPlayingTabletHeaderView android:id="@id/tablet_header" android:background="@color/app_background_light" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/nowplaying_screen_info_block_height" />
+    <com.google.android.music.ui.NowPlayingAdsHeaderPageView android:id="@id/tablet_ads_header" android:background="@color/app_background_light" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/nowplaying_screen_info_block_height" />
+    <include android:id="@id/tablet_collapsed_play_controls" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/tablet_header" android:layout_alignRight="@id/tablet_header" android:layout_alignBottom="@id/tablet_header" android:layout_alignEnd="@id/tablet_header" layout="@layout/tablet_collapsed_play_controls" />
+    <include android:id="@id/tablet_collapsed_ad_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/tablet_ads_header" android:layout_alignRight="@id/tablet_ads_header" android:layout_alignBottom="@id/tablet_ads_header" android:layout_alignEnd="@id/tablet_ads_header" layout="@layout/nowplaying_ads_header_page" />
+    <RelativeLayout android:id="@id/top_wrapper_right" android:layout_width="wrap_content" android:layout_height="@dimen/nowplaying_screen_info_block_height" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+        <FrameLayout android:id="@id/cast_icon_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <android.support.v7.app.MediaRouteButton android:id="@id/media_route_picker" android:background="@null" android:focusable="true" android:layout_width="@dimen/nowplaying_screen_info_block_width" android:layout_height="@dimen/nowplaying_screen_info_block_height" android:scaleType="center" />
+        </FrameLayout>
+        <ImageButton android:id="@id/queue_switcher" android:background="@null" android:focusable="true" android:nextFocusLeft="@id/header_metadata" android:layout_width="@dimen/nowplaying_screen_info_block_width" android:layout_height="@dimen/nowplaying_screen_info_block_height" android:src="@drawable/ic_queue_dark" android:scaleType="center" android:layout_toRightOf="@id/cast_icon_wrapper" android:contentDescription="@string/queue_switcher_open_description" android:layout_toEndOf="@id/cast_icon_wrapper" />
+        <ImageButton android:id="@id/overflow" android:background="@null" android:focusable="true" android:layout_width="@dimen/nowplaying_screen_info_block_width" android:layout_height="@dimen/nowplaying_screen_info_block_height" android:src="@drawable/ic_menu_moreoverflow_large" android:scaleType="center" android:layout_toRightOf="@id/queue_switcher" android:contentDescription="@string/overflow_menu_description" android:layout_toEndOf="@id/queue_switcher" />
+    </RelativeLayout>
+    <com.google.android.music.ui.SubscriptionUpsellView android:orientation="vertical" android:id="@id/upsell_now_playing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/default_padding" android:layout_below="@id/tablet_header" style="@style/SubscriptionUpsellLayout" />
+    <RelativeLayout android:layout_gravity="center" android:id="@id/play_controls" android:background="@color/app_background_light_transparent" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/nowplaying_lower_bar_height" android:layout_alignParentBottom="true">
+        <include layout="@layout/play_controls" />
+    </RelativeLayout>
+    <SeekBar android:id="@android:id/progress" android:layout_above="@id/play_controls" style="@style/TrackSeekBar" />
+    <TextView android:id="@id/currenttime" android:layout_below="@android:id/progress" android:layout_alignParentLeft="true" android:importantForAccessibility="no" style="@style/NowPlayingTime" />
+    <TextView android:id="@id/totaltime" android:layout_below="@android:id/progress" android:layout_alignParentRight="true" android:importantForAccessibility="no" style="@style/NowPlayingTime" />
+    <View android:background="@color/divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignBottom="@id/top_wrapper_right" />
+</RelativeLayout>

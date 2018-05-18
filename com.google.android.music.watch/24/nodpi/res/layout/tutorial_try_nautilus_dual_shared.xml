@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/try_nautilus_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="top" android:id="@id/loading_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sign_up_try_nautilus_banner_margin_top" android:scaleType="fitStart" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_spinner" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Tutorial.ProgressBar.WhiteSpinner" />
+    <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <fragment android:name="com.google.android.music.ui.common.AccountPickerFragment" android:layout_gravity="center|top" android:id="@id/account_picker" android:tag="@string/AccountPickerFragment_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_padding_xlarge" />
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:layout_gravity="bottom" android:id="@id/dual_shared_container" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/dual_shared_offer_button_container" />
+        <TextView android:gravity="center" android:id="@id/tos_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_padding_xlarge" android:layout_marginTop="@dimen/default_padding" android:layout_marginRight="@dimen/default_padding_xlarge" android:text="@string/tutorial_terms_of_service" android:layout_marginStart="@dimen/default_padding_xlarge" android:layout_marginEnd="@dimen/default_padding_xlarge" style="@style/Tutorial.TextView.Legalese" />
+        <include layout="@layout/tutorial_signup_page_indicator_container" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.play.drawer.PlayDrawerLayout android:id="@id/drawer_container" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.music.ui.misc.ContentAreaWrapperLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/parent_content" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.design.widget.CoordinatorLayout android:id="@id/content" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <FrameLayout android:id="@id/ad_content" android:background="@color/banner_ads_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <com.google.android.music.ui.common.ExpandingScrollView android:id="@id/bottom_drawer" android:background="@color/shadow_start_color_dark" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/negative_shadow_height" />
+    </com.google.android.music.ui.misc.ContentAreaWrapperLayout>
+    <include layout="@layout/play_drawer_container" />
+</com.google.android.play.drawer.PlayDrawerLayout>

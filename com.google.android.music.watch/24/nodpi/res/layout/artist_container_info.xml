@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.music.ui.mylibrary.ArtistContainerHeaderView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/vertical_offset_for_fab_play_btn"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/spacer" android:layout_width="fill_parent" android:layout_height="@dimen/vertical_offset_for_fab_play_btn_positive" />
+    <RelativeLayout android:id="@id/metadata_container" android:background="@color/material_container_bg" android:paddingLeft="@dimen/material_container_info_padding" android:paddingTop="@dimen/material_container_info_padding" android:paddingRight="@dimen/material_container_info_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/spacer" android:paddingStart="@dimen/material_container_info_padding" android:paddingEnd="@dimen/material_container_info_padding">
+        <TextView android:textAppearance="@style/PlayDetailTitle" android:gravity="center" android:id="@id/title" android:paddingBottom="@dimen/material_container_info_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+        <include android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title" layout="@layout/material_container_description" />
+        <View android:gravity="center" android:id="@id/divider" android:background="@color/material_grey_separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/description" />
+    </RelativeLayout>
+    <ImageButton android:id="@id/fab_play" android:layout_below="@id/spacer" android:contentDescription="@string/menu_shuffle_artist" style="@style/FabPlay" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/material_container_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/metadata_container">
+        <com.google.android.music.ui.common.HeaderActionButton android:id="@id/radio_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/HeaderActionButton" />
+        <com.google.android.music.ui.common.HeaderActionButton android:id="@id/share_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/ic_share_black" android:text="@string/container_share" android:layout_weight="1.0" style="@style/HeaderActionButton" />
+    </LinearLayout>
+</com.google.android.music.ui.mylibrary.ArtistContainerHeaderView>

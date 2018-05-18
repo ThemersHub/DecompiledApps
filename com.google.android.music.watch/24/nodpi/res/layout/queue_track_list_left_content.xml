@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="@dimen/queue_track_list_row_height" android:minWidth="@dimen/queue_track_list_row_height">
+        <ImageView android:id="@id/left_grabber" android:visibility="gone" android:layout_width="@dimen/grab_handle_width" android:layout_height="fill_parent" android:src="@drawable/ic_drag_queue" android:scaleType="center" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="@dimen/queue_track_list_row_height" android:layout_height="@dimen/queue_track_list_row_height">
+        <com.google.android.music.ui.art.SimpleArtView android:id="@id/icon" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@color/unavailable_artwork_overlay" />
+        <com.google.android.music.ui.common.StatefulShadowTextView android:layout_gravity="center" android:id="@id/track_number" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TrackDuration" />
+        <com.google.android.music.ui.common.PlayingIndicator android:layout_gravity="center" android:id="@id/play_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

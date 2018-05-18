@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/media_icon_bg" android:paddingTop="@dimen/vertical_margins" android:paddingBottom="@dimen/vertical_margins" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center" android:id="@id/frame_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/search_icon_left_margin" android:layout_marginRight="@dimen/search_icon_right_margin" android:scaleType="fitCenter" android:layout_alignParentLeft="true">
+        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="@dimen/search_download_progress_bar_size" android:layout_height="@dimen/search_download_progress_bar_size" android:max="100" android:progressDrawable="@drawable/search_download_progress_bar" style="?android:attr/progressBarStyleHorizontal" />
+        <ImageView android:layout_gravity="center" android:id="@id/download_complete_icon" android:visibility="gone" android:layout_width="@dimen/search_download_complete_icon_size" android:layout_height="@dimen/search_download_complete_icon_size" android:src="@drawable/ic_download_complete_wht_24dp" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/title_subtitle_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/frame_icon" android:layout_centerVertical="true">
+        <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/TextStyle.Browse.Title" />
+        <TextView android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/title" style="@style/TextStyle.Browse" />
+    </LinearLayout>
+</RelativeLayout>

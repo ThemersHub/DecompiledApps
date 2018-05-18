@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="@dimen/vertical_margins" android:paddingBottom="@dimen/vertical_margins" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/frame_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="center" android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:paddingStart="@dimen/browse_icon_padding" android:paddingEnd="@dimen/browse_icon_padding" />
+        <ViewStub android:layout_gravity="center" android:id="@id/overlay_icon" android:layout="@layout/download_overlay_icon" android:inflatedId="@id/overlay_icon" android:layout_width="@dimen/browse_overlay_size" android:layout_height="@dimen/browse_overlay_size" />
+        <ViewStub android:layout_gravity="center" android:id="@id/progress_bar" android:layout="@layout/download_progress_bar" android:inflatedId="@id/progress_bar" android:layout_width="@dimen/download_progress_bar_size" android:layout_height="@dimen/download_progress_bar_size" />
+    </FrameLayout>
+    <TextView android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/browse_title_margin_top" android:layout_below="@id/frame_icon" android:paddingStart="@dimen/left_margin" android:paddingEnd="@dimen/left_margin" style="@style/TextStyle.Browse.Title" />
+    <TextView android:gravity="center" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawablePadding="4.0dip" android:layout_below="@id/title" android:paddingStart="@dimen/left_margin" android:paddingEnd="@dimen/left_margin" style="@style/TextStyle.Browse" />
+    <ViewStub android:id="@id/play_button" android:layout="@layout/play_button" android:inflatedId="@id/play_button" android:layout_width="@dimen/browse_play_icon_size" android:layout_height="@dimen/browse_play_icon_size" android:layout_alignBottom="@id/frame_icon" android:layout_alignEnd="@id/frame_icon" />
+</RelativeLayout>
