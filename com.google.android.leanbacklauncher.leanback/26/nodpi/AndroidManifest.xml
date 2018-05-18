@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.leanbacklauncher" platformBuildVersionCode="26" platformBuildVersionName="O">
+    <uses-feature android:name="android.software.leanback" android:required="true"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <meta-data android:name="android.support.VERSION" android:value="25.3.1"/>
+    <application android:allowBackup="false" android:requiredForAllUsers="true">
+        <receiver android:enabled="true" android:exported="true" android:name="com.google.android.leanbacklauncher.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.android.leanbacklauncher.ClearCacheService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    </application>
+</manifest>
