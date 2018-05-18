@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" coreApp="true" package="android.ext.services" platformBuildVersionCode="24" platformBuildVersionName="7.0-3037786">
+    <application android:defaultToDeviceProtectedStorage="true" android:directBootAware="true" android:label="@string/app_name">
+        <library android:name="android.ext.services"/>
+        <service android:exported="true" android:label="@string/notification_ranker" android:name="android.ext.services.notification.Ranker" android:permission="android.permission.BIND_NOTIFICATION_RANKER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationRankerService"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>
