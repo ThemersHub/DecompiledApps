@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/banner_graphic_height_tablet_portrait">
+        <ImageView android:layout_width="@dimen/banner_graphic_width_tablet_portrait" android:layout_height="fill_parent" android:src="@drawable/bg_trustedface_tablet_allset_illustration_header" android:scaleType="centerCrop" />
+        <View android:background="@drawable/banner_tile_side" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:background="@drawable/banner_tile_bottom" android:paddingTop="@dimen/title_top_padding_tablet_portrait" android:paddingBottom="@dimen/title_bottom_padding_tablet_portrait" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/end_screen_title" android:paddingStart="@dimen/title_horizontal_padding" android:paddingEnd="@dimen/title_horizontal_padding" style="@style/HeadlineText" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/banner_bottom_margin_tablet_portrait" android:layout_weight="1.0" android:layout_marginStart="@dimen/body_horizontal_margin" android:layout_marginEnd="@dimen/body_horizontal_margin">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/subheading_bottom_margin_tablet_portrait" android:text="@string/end_screen_body" style="@style/SubheadText" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/bullet_point_bottom_margin">
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/lock_icon_size" android:layout_height="@dimen/lock_icon_size" android:src="@drawable/ic_lock_open_black_24dp" android:scaleType="fitXY" android:alpha="0.54" />
+                    <TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/end_screen_bullet_one_text" android:layout_marginStart="@dimen/bullet_point_start_margin" style="@style/BodyText" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/lock_icon_size" android:layout_height="@dimen/lock_icon_size" android:src="@drawable/ic_lock_black_24dp" android:scaleType="fitXY" android:alpha="0.54" />
+                    <TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/end_screen_bullet_two_text" android:layout_marginStart="@dimen/bullet_point_start_margin" style="@style/BodyText" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/button_bar_height" android:layout_marginTop="@dimen/button_bar_top_margin_tablet_portrait" android:layout_marginBottom="@dimen/button_bar_bottom_margin_tablet_portrait" android:layout_marginStart="@dimen/button_bar_horizontal_margin" android:layout_marginEnd="@dimen/button_bar_horizontal_margin">
+        <Button android:id="@id/licenses_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/end_screen_licenses_label" android:layout_alignParentStart="true" style="@style/SecondaryButton" />
+        <Button android:id="@id/continue_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/end_screen_continue_label" android:layout_alignParentEnd="true" style="@style/PrimaryButton" />
+    </RelativeLayout>
+</LinearLayout>

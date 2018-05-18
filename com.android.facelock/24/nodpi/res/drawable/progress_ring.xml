@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/shadow" android:right="@dimen/progress_ring_drop_shadow_offset">
+        <shape android:shape="ring" android:innerRadiusRatio="@dimen/progress_ring_inner_radius_ratio" android:useLevel="false" android:thickness="@dimen/progress_ring_thickness">
+            <solid android:color="@color/progress_ring_drop_shadow" />
+        </shape>
+    </item>
+    <item android:id="@android:id/background">
+        <shape android:shape="ring" android:innerRadiusRatio="@dimen/progress_ring_inner_radius_ratio" android:useLevel="false" android:thickness="@dimen/progress_ring_thickness">
+            <solid android:color="@color/progress_ring_unfilled" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <shape android:shape="ring" android:innerRadiusRatio="@dimen/progress_ring_inner_radius_ratio" android:thickness="@dimen/progress_ring_thickness">
+            <gradient android:startColor="@color/progress_ring_filled" android:endColor="@color/progress_ring_filled" android:angle="0.0" />
+        </shape>
+    </item>
+    <item android:id="@id/error_circle">
+        <shape android:shape="ring" android:innerRadiusRatio="@dimen/progress_ring_inner_radius_ratio" android:useLevel="false" android:thickness="@dimen/progress_ring_thickness">
+            <solid android:color="@color/error" />
+        </shape>
+    </item>
+</layer-list>

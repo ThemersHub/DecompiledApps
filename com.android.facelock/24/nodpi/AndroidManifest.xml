@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.android.facelock" platformBuildVersionCode="24" platformBuildVersionName="7.0-3037786">
+    <permission android:name="com.google.android.gms.auth.permission.FACE_UNLOCK" android:protectionLevel="signature"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.google.android.gms.auth.permission.FACE_UNLOCK"/>
+    <application android:allowBackup="false" android:hardwareAccelerated="true" android:label="@string/app_name" android:permission="com.google.android.gms.auth.permission.FACE_UNLOCK" android:supportsRtl="true" android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:exported="true" android:label="@string/intro_screen_title" android:name="com.android.facelock.SetupIntro" android:theme="@style/Theme.Setup"/>
+        <activity android:label="@string/instructions_screen_title" android:name="com.android.facelock.SetupInstructionsScreen" android:theme="@style/Theme.Setup"/>
+        <activity android:label="@string/enrollment_screen_title" android:name="com.android.facelock.SetupEnrollmentScreen" android:theme="@style/Theme.Setup"/>
+        <activity android:label="@string/end_screen_title" android:name="com.android.facelock.SetupEndScreen" android:theme="@style/Theme.Setup"/>
+        <activity android:exported="true" android:label="@string/add_to_setup_intro_screen_title" android:name="com.android.facelock.AddToSetup" android:theme="@style/Theme.Setup"/>
+        <service android:exported="true" android:label="@string/trusted_face_service_app_name" android:name="com.android.facelock.TrustedFaceService" android:theme="@android:style/Theme.NoTitleBar"/>
+        <receiver android:exported="true" android:label="@string/receiver_app_name" android:name="com.android.facelock.FaceLockReceiver"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>
