@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/wallpaper_thumbnail"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/tile" android:background="@color/light_grey" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?selectableItemBackground"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/thumbnail" android:background="@color/secondary_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <FrameLayout android:layout_gravity="bottom" android:background="@color/translucent_black_90_alpha" android:padding="@dimen/rotation_tile_desktop_label_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/rotation_tile_desktop_label_text_size" android:textColor="@color/quantum_white_100" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/daily_refresh_tile_title" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/loading_indicator_container" android:background="@color/black_67_alpha" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:id="@id/loading_indicator" android:layout_width="@dimen/tile_desktop_progress_bar_size" android:layout_height="@dimen/tile_desktop_progress_bar_size" android:indeterminate="true" />
+        </FrameLayout>
+    </FrameLayout>
+    <ImageView android:id="@id/check_circle" android:visibility="gone" android:layout_width="@dimen/grid_item_individual_wallpaper_check_circle_size" android:layout_height="@dimen/grid_item_individual_wallpaper_check_circle_size" android:layout_marginTop="@dimen/grid_item_individual_wallpaper_check_circle_offset" android:src="@drawable/check_circle_blue" android:layout_marginStart="@dimen/grid_item_individual_wallpaper_check_circle_offset" />
+</FrameLayout>
