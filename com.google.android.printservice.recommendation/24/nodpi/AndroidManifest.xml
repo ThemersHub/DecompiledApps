@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.android.printservice.recommendation" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:allowBackup="false" android:allowClearUserData="false" android:label="@string/app_label">
+        <service android:name="com.android.printservice.recommendation.RecommendationServiceImpl" android:permission="android.permission.BIND_PRINT_RECOMMENDATION_SERVICE">
+            <intent-filter>
+                <action android:name="android.printservice.recommendation.RecommendationService"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>
