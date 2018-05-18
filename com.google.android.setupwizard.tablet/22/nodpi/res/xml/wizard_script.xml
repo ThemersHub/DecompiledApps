@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WizardScript wizard:firstAction="edu_pre_setup"
+  xmlns:wizard="http://schemas.android.com/apk/res/com.google.android.setupwizard">
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.EDU_PRE_SETUP;end" id="edu_pre_setup">
+        <result wizard:action="oem_pre_setup" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.OEM_PRE_SETUP;end" id="oem_pre_setup">
+        <result wizard:action="welcome" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.WELCOME;end" id="welcome">
+        <result wizard:action="carrier_setup" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.ACTIVATE_PHONE;end" id="activate_phone">
+        <result wizard:action="activate_mobile_data" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.ACTIVATE_MOBILE_DATA;end" id="activate_mobile_data">
+        <result wizard:action="carrier_setup" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.CARRIER_SETUP;end" id="carrier_setup">
+        <result wizard:resultCode="-1" wizard:action="wifi_settings" wizard:name="ok" />
+        <result wizard:resultCode="1" wizard:action="wifi_settings" wizard:name="not_ready" />
+        <result wizard:action="hands_free_activation" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.HANDS_FREE_ACTIVATION;end" id="hands_free_activation">
+        <result wizard:resultCode="-1" wizard:action="sim_setup" wizard:name="ok" />
+        <result wizard:resultCode="2" wizard:action="hands_free_activation" wizard:name="retry" />
+        <result wizard:action="sim_setup" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.SIM_SETUP;end" id="sim_setup">
+        <result wizard:action="wifi_settings" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.WIFI_SETTINGS;end" id="wifi_settings">
+        <result wizard:action="connection_check" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.CONNECTION_CHECK;end" id="connection_check">
+        <result wizard:resultCode="1" wizard:action="no_account_date_time" wizard:name="skip" />
+        <result wizard:action="walled_garden" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.WALLED_GARDEN;end" id="walled_garden">
+        <result wizard:resultCode="1" wizard:action="no_account_date_time" wizard:name="skip" />
+        <result wizard:action="ota_update" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.OTA_UPDATE;end" id="ota_update">
+        <result wizard:resultCode="1" wizard:action="early_update" wizard:name="skip" />
+        <result wizard:action="system_update" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=android.settings.SYSTEM_UPDATE_SETTINGS;end" id="system_update">
+        <result wizard:action="early_update" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.EARLY_UPDATE;end" id="early_update">
+        <result wizard:action="edu_check" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.EDU_CHECK;end" id="edu_check">
+        <result wizard:resultCode="-1" wizard:action="edu_account_pre_check" wizard:name="ok" />
+        <result wizard:action="account_pre_check" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.ACCOUNT_CHECK;end" id="account_pre_check">
+        <result wizard:resultCode="-1" wizard:action="account_exists" wizard:name="ok" />
+        <result wizard:action="account_setup" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.ACCOUNT_EXISTS;end" id="account_exists">
+        <result wizard:action="start_vpa" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.ACCOUNT_SETUP;end" id="account_setup">
+        <result wizard:action="account_post_check" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.ACCOUNT_CHECK;end" id="account_post_check">
+        <result wizard:resultCode="1" wizard:action="no_account_date_time" wizard:name="skip" />
+        <result wizard:resultCode="4" wizard:action="mfm_account_checkin" wizard:name="mfm" />
+        <result wizard:action="account_checkin" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.ACCOUNT_CHECKIN;end" id="account_checkin">
+        <result wizard:action="start_vpa" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.START_VPA;end" id="start_vpa">
+        <result wizard:action="date_time" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.DATE_TIME;end" id="date_time">
+        <result wizard:action="user_name" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.USER_NAME;end" id="user_name">
+        <result wizard:action="restore" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.RESTORE;end" id="restore">
+        <result wizard:action="lock_screen_intro" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.LOCK_SCREEN_INTRO;end" id="lock_screen_intro">
+        <result wizard:action="google_services" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.GOOGLE_SERVICES;end" id="google_services">
+        <result wizard:action="google_now" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.GOOGLE_NOW;end" id="google_now">
+        <result wizard:action="restore_progress" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.RESTORE;B.retry=true;end" id="restore_retry">
+        <result wizard:action="restore_progress" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.RESTORE_PROGRESS;end" id="restore_progress">
+        <result wizard:resultCode="2" wizard:action="restore_retry" wizard:name="retry" />
+        <result wizard:action="start_downloads" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.START_DOWNLOADS;end" id="start_downloads">
+        <result wizard:action="final_hold" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.FINAL_HOLD;end" id="final_hold">
+        <result wizard:action="oem_post_setup" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.ACCOUNT_CHECKIN;end" id="mfm_account_checkin">
+        <result wizard:action="mfm_start_vpa" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.START_VPA;end" id="mfm_start_vpa">
+        <result wizard:action="mfm_date_time" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.DATE_TIME;end" id="mfm_date_time">
+        <result wizard:action="mfm_user_name" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.USER_NAME;end" id="mfm_user_name">
+        <result wizard:action="mfm_restore" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.RESTORE;end" id="mfm_restore">
+        <result wizard:action="mfm_lock_screen_intro" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.LOCK_SCREEN_INTRO;end" id="mfm_lock_screen_intro">
+        <result wizard:action="mfm_google_services" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.GOOGLE_SERVICES;end" id="mfm_google_services">
+        <result wizard:action="mfm_google_now" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.GOOGLE_NOW;end" id="mfm_google_now">
+        <result wizard:action="mfm_restore_progress" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.RESTORE;B.retry=true;end" id="mfm_restore_retry">
+        <result wizard:action="mfm_restore_progress" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.RESTORE_PROGRESS;end" id="mfm_restore_progress">
+        <result wizard:resultCode="2" wizard:action="mfm_restore_retry" wizard:name="retry" />
+        <result wizard:action="mfm_start_downloads" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.START_DOWNLOADS;end" id="mfm_start_downloads">
+        <result wizard:action="mfm_final_hold" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.FINAL_HOLD;end" id="mfm_final_hold">
+        <result wizard:action="oem_post_setup" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.DATE_TIME;end" id="no_account_date_time">
+        <result wizard:action="no_account_user_name" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.USER_NAME;end" id="no_account_user_name">
+        <result wizard:action="no_account_lock_screen_intro" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.LOCK_SCREEN_INTRO;end" id="no_account_lock_screen_intro">
+        <result wizard:action="no_account_google_services" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.GOOGLE_SERVICES;end" id="no_account_google_services">
+        <result wizard:action="oem_post_setup" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.ACCOUNT_CHECK;end" id="edu_account_pre_check">
+        <result wizard:resultCode="-1" wizard:action="edu_lock_pin" wizard:name="ok" />
+        <result wizard:action="edu_account_setup" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.ACCOUNT_SETUP;end" id="edu_account_setup">
+        <result wizard:action="edu_account_post_check" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.ACCOUNT_CHECK;end" id="edu_account_post_check">
+        <result wizard:resultCode="-1" wizard:action="edu_user_name" wizard:name="ok" />
+        <result wizard:action="edu_account_setup" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.USER_NAME;end" id="edu_user_name">
+        <result wizard:action="edu_lock_pin" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.LOCK_PIN;end" id="edu_lock_pin">
+        <result wizard:action="edu_selfie" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.EDU_SELFIE;end" id="edu_selfie">
+        <result wizard:action="edu_completion" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.google.android.setupwizard.EDU_COMPLETION;end" id="edu_completion">
+        <result wizard:action="oem_post_setup" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.OEM_POST_SETUP;end" id="oem_post_setup">
+        <result wizard:action="exit" />
+    </WizardAction>
+    <WizardAction wizard:uri="intent:#Intent;action=com.android.setupwizard.EXIT;launchFlags=0x10208000;end" id="exit" />
+</WizardScript>

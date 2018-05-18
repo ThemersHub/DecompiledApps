@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/progress_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/progress_bar_margin_top" android:indeterminate="true" style="?android:attr/progressBarStyleHorizontal" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/setup_wizard_content_frame">
+        <LinearLayout android:gravity="start|center|top" android:orientation="vertical" android:id="@id/activation_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/activation_text" android:text="@string/activation_text" style="@style/setup_wizard_description" />
+            <TextView android:id="@id/skip_confirmation" android:visibility="gone" android:text="@string/activation_skip_confirmation" style="@style/setup_wizard_description" />
+            <TextView android:id="@id/shutdown_countdown" android:visibility="gone" style="@style/setup_wizard_description" />
+        </LinearLayout>
+        <LinearLayout android:gravity="end" android:orientation="horizontal" android:id="@id/buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/activation_content" android:layout_alignParentBottom="true">
+            <Button android:id="@id/try_again_button" android:visibility="gone" android:text="@string/try_again_button_label" android:layout_marginStart="@dimen/button_horizontal_margin" style="@style/setup_wizard_button" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
