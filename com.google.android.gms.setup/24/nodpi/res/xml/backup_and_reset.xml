@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/backup_settings_activity_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:persistent="false" android:title="@string/backup_settings_activity_backup_title" android:key="drive_backup" android:fragment="com.google.android.gms.backup.settings.DriveBackupSettingsFragment" />
+    <PreferenceScreen android:persistent="false" android:enabled="false" android:title="@string/master_clear_title" android:key="factory_reset">
+        <intent android:targetPackage="com.android.settings" android:action="com.android.settings.action.FACTORY_RESET" android:targetClass="com.android.settings.Settings$FactoryResetActivity" />
+    </PreferenceScreen>
+</PreferenceScreen>
