@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.setupwizard.BaseActivity$ProportionalOuterFrame"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="bottom" android:id="@id/title_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <TextView android:gravity="bottom" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/location_sharing_title" style="@style/setup_wizard_title" />
+        <View android:id="@id/top_divider" android:layout_below="@id/title" style="@style/setup_wizard_top_divider" />
+    </RelativeLayout>
+    <include android:id="@id/buttons" layout="@layout/arrow_buttons" />
+    <com.google.android.setupwizard.BottomScrollView android:id="@id/bottom_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/buttons" android:layout_below="@id/title_area">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:id="@id/location_service_consent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <CheckBox android:id="@id/agree_location_sharing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" style="@style/setup_wizard_checkbox" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setup_wizard_services_location_sharing" style="@style/setup_wizard_checkbox_text" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/location_from_wifi" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <CheckBox android:id="@id/agree_wifi_scan_always_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" style="@style/setup_wizard_checkbox" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setup_wizard_services_location_wifi_scan" style="@style/setup_wizard_checkbox_text" />
+            </LinearLayout>
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setup_wizard_services_location_footnote" style="@style/setup_wizard_services_footnote" />
+        </LinearLayout>
+    </com.google.android.setupwizard.BottomScrollView>
+</view>

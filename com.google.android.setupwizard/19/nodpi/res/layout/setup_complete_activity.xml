@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.setupwizard.BaseActivity$ProportionalOuterFrame"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="bottom" android:id="@id/title_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <TextView android:gravity="bottom" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setup_complete_title" style="@style/setup_wizard_title" />
+        <View android:id="@id/top_divider" android:layout_below="@id/title" style="@style/setup_wizard_top_divider" />
+    </RelativeLayout>
+    <TextView android:id="@id/special_notification_msg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_wizard_vertical_spacing" android:layout_below="@id/title_area" style="@style/setup_wizard_description_text" />
+    <TextView android:id="@id/setup_complete_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_wizard_vertical_spacing" android:text="@string/setup_complete_message" android:layout_below="@id/special_notification_msg" style="@style/setup_wizard_description_text" />
+    <CheckBox android:textAppearance="@style/setup_wizard_text_primary_small" android:id="@id/agree_launch_backup_assistant" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_wizard_vertical_spacing" android:text="@string/backup_assistant_prompt" android:layout_below="@id/setup_complete_msg" />
+    <Button android:id="@id/next_button" android:text="@string/finish_button_label" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" style="@style/setup_wizard_single_button" />
+</view>

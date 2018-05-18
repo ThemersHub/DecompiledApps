@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.setupwizard">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.BACKUP"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CONNECTIVITY_INTERNAL"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_USERS"/>
+    <uses-permission android:name="android.permission.PERFORM_CDMA_PROVISIONING"/>
+    <uses-permission android:name="android.permission.PERSISTENT_ACTIVITY"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.SET_TIME"/>
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
+    <uses-permission android:name="android.permission.SHUTDOWN"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
+    <uses-permission android:name="com.google.android.apps.now.OPT_IN_WIZARD"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.ACCESS_GOOGLE_PASSWORD"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.providers.settings.permission.READ_GSETTINGS"/>
+    <uses-permission android:name="com.google.android.providers.settings.permission.WRITE_GSETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.BACKUP"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <application android:allowClearUserData="false" android:hardwareAccelerated="true" android:label="@string/setup_wizard_title" android:name="SetupWizardApplication" android:supportsRtl="true" android:theme="@style/setup_wizard_theme">
+        <meta-data android:name="android.SETUP_VERSION" android:value="eclair_1"/>
+        <receiver android:name="LoginAccountsMissingReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.googlelogin.LOGIN_ACCOUNTS_MISSING"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="GservicesChangedReceiver">
+            <intent-filter>
+                <action android:name="com.google.gservices.intent.action.GSERVICES_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="MobileConnectivityChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="MobileDataActivity$HfaChangeReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.setupwizard.HFA_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:immersive="true" android:launchMode="singleTop" android:name="SetupWizardActivity" android:theme="@style/InvisibleNoTitle">
+            <intent-filter android:priority="5">
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.DEVICE_INITIALIZATION_WIZARD"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:immersive="true" android:name="ReceiveDomainActivity" android:theme="@style/InvisibleNoTitle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:immersive="true" android:launchMode="singleTop" android:name="SetupWizardTestActivity"/>
+        <activity android:configChanges="layoutDirection|locale" android:immersive="true" android:name="WelcomeActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="layoutDirection|locale" android:immersive="true" android:name="WelcomeUserActivity" android:screenOrientation="behind"/>
+        <activity android:excludeFromRecents="true" android:immersive="true" android:label="@string/activation_title" android:launchMode="singleTop" android:name="ActivationActivity" android:permission="android.permission.PERFORM_CDMA_PROVISIONING" android:screenOrientation="behind" android:taskAffinity="" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.android.phone.PERFORM_VOICELESS_CDMA_PROVISIONING"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:immersive="true" android:label="@string/activation_title" android:launchMode="singleTop" android:name="MobileDataActivity" android:screenOrientation="behind"/>
+        <activity android:immersive="true" android:name="WifiSettingsActivity"/>
+        <activity android:immersive="true" android:name="AccountSetupActivity"/>
+        <activity android:exported="true" android:immersive="true" android:name="GoogleServicesActivity"/>
+        <activity android:immersive="true" android:label="@string/date_time_setup_title" android:name="DateTimeSetupActivity" android:screenOrientation="behind"/>
+        <activity android:immersive="true" android:label="@string/location_sharing_title" android:name="LocationSharingActivity" android:screenOrientation="behind">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:immersive="true" android:label="@string/tos_title" android:name="NoAccountTosActivity"/>
+        <activity android:immersive="true" android:name="GoogleNowActivity" android:theme="@style/InvisibleNoTitle"/>
+        <activity android:immersive="true" android:label="@string/setup_complete_title" android:name="SetupCompleteActivity"/>
+        <activity android:immersive="true" android:label="@string/sim_missing_title" android:name="SimMissingActivity"/>
+        <activity android:immersive="true" android:label="@string/walled_garden_title" android:name="WalledGardenActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:immersive="true" android:name="OtaUpdateActivity"/>
+    </application>
+</manifest>

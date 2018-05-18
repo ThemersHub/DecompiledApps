@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.setupwizard.BaseActivity$ProportionalOuterFrame"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="bottom" android:id="@id/title_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <TextView android:gravity="bottom" android:id="@id/connect_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/walled_garden_title" style="@style/setup_wizard_title" />
+        <View android:id="@id/top_divider" android:layout_below="@id/connect_title" style="@style/setup_wizard_top_divider" />
+    </RelativeLayout>
+    <Button android:id="@id/cancel_button" android:layout_marginTop="@dimen/setup_wizard_margin_bottom" android:text="@string/cancel_button_label" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" style="@style/setup_wizard_single_button" />
+    <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/cancel_button" android:layout_below="@id/title_area" />
+</view>
