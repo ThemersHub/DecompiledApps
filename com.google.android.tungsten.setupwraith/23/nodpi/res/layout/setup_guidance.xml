@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.tungsten.setupwraith.ui.GuidanceRelativeLayout android:id="@id/main_container" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?attr/guidanceContainerStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/guidance_icon" android:layout_above="@id/guidance_title" style="?attr/guidanceIconStyle" />
+    <TextView android:id="@id/guidance_title" style="@style/SetupWraith.DescriptionTitleStyle" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:gravity="start" android:id="@id/guidance_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/guidance_description_margin_top" android:layout_marginBottom="@dimen/guidance_description_margin_top" android:layout_below="@id/guidance_title" android:lineSpacingMultiplier="@dimen/setup_description_line_spacing_multiplier" android:textDirection="locale" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/guidance_footerview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/guidance_description" android:lineSpacingMultiplier="@dimen/setup_description_line_spacing_multiplier" />
+    <include android:visibility="gone" layout="@layout/setup_guidance_logos_container" />
+</com.google.android.tungsten.setupwraith.ui.GuidanceRelativeLayout>

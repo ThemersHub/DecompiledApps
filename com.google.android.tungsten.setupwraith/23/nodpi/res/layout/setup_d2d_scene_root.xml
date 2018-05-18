@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="bottom" android:background="@drawable/bootstrap_bg_chin" android:layout_width="fill_parent" android:layout_height="@dimen/bootstrap_bg_chin_height" />
+    <GridLayout android:orientation="horizontal" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:columnCount="5">
+        <Space android:layout_width="@dimen/bootstrap_blank_column_width" android:layout_height="@dimen/bootstrap_title_height" android:layout_column="0" />
+        <FrameLayout android:layout_width="@dimen/bootstrap_title_width" android:layout_height="@dimen/bootstrap_title_height" android:layout_column="1" android:layout_columnSpan="3">
+            <TextView android:textAppearance="@style/BootstrapTitle" android:gravity="bottom|center" android:id="@id/title_one" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/bootstrap_instruction_title" android:maxLines="2" android:lineSpacingExtra="10.0sp" />
+            <TextView android:textAppearance="@style/BootstrapTitle" android:gravity="bottom|center" android:id="@id/title_two" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/bootstrap_connected_title" android:maxLines="2" android:lineSpacingExtra="10.0sp" />
+        </FrameLayout>
+        <FrameLayout android:paddingTop="@dimen/bootstrap_subtitle_padding_top" android:layout_width="@dimen/bootstrap_title_width" android:layout_height="@dimen/bootstrap_subtitle_height" android:layout_column="1" android:layout_columnSpan="3">
+            <TextView android:textAppearance="@style/BootstrapSubTitle" android:gravity="center|top" android:id="@id/subtitle_one" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+            <TextView android:textAppearance="@style/BootstrapSubTitle" android:gravity="center|top" android:id="@id/subtitle_two" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/phone_tv_container" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="1" android:layout_rowSpan="2">
+            <LinearLayout android:orientation="vertical" android:id="@id/tv_container" android:visibility="gone" android:clipChildren="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <FrameLayout android:id="@id/tv_bezel" android:background="@drawable/bootstrap_tv_bezel" android:paddingTop="@dimen/bootstrap_tv_bezel_border" android:paddingBottom="@dimen/bootstrap_tv_bezel_border" android:layout_width="@dimen/bootstrap_tv_bezel_width" android:layout_height="@dimen/bootstrap_tv_bezel_height" android:paddingStart="@dimen/bootstrap_tv_bezel_border" android:paddingEnd="@dimen/bootstrap_tv_bezel_border">
+                    <include layout="@layout/setup_d2d_progress_screen" />
+                    <com.google.android.tungsten.setupwraith.ui.AnimatedGifView android:id="@id/tv_glass" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </FrameLayout>
+                <Space android:layout_width="@dimen/bootstrap_tv_shadow_width" android:layout_height="@dimen/bootstrap_tv_shadow_padding_top" />
+                <FrameLayout android:id="@id/phone_shadow" android:background="@drawable/d2d_tv_shadow" android:layout_width="@dimen/bootstrap_tv_shadow_width" android:layout_height="@dimen/bootstrap_tv_shadow_height" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/phone_container" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <FrameLayout android:id="@id/phone_bezel" android:background="@drawable/bootstrap_phone_bezel" android:paddingTop="@dimen/bootstrap_phone_bezel_border" android:paddingBottom="@dimen/bootstrap_phone_bezel_border" android:layout_width="@dimen/bootstrap_phone_bezel_width" android:layout_height="@dimen/bootstrap_phone_bezel_height" android:paddingStart="@dimen/bootstrap_phone_bezel_border" android:paddingEnd="@dimen/bootstrap_phone_bezel_border">
+                    <com.google.android.tungsten.setupwraith.ui.AnimatedGifView android:id="@id/phone_glass" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <TextView android:textAppearance="@style/BootstrapPin" android:gravity="center|top" android:id="@id/phone_pin" android:background="@drawable/d2d_code_screen" android:paddingTop="108.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <ImageView android:id="@id/phone_gears" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/gears" />
+                </FrameLayout>
+                <Space android:layout_width="@dimen/bootstrap_phone_shadow_width" android:layout_height="@dimen/bootstrap_phone_shadow_padding_top" />
+                <FrameLayout android:id="@id/phone_shadow" android:background="@drawable/d2d_phone_shadow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="50.0dip" />
+            </LinearLayout>
+        </FrameLayout>
+        <Space android:id="@id/instruction_padding" android:layout_width="wrap_content" android:layout_height="@dimen/bootstrap_subtitle_instruction_padding" android:layout_column="2" android:layout_columnSpan="2" />
+        <FrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="@dimen/bootstrap_instruction_step_container_width" android:layout_height="wrap_content" android:layout_column="2" android:layout_columnSpan="2" android:paddingStart="@dimen/bootstrap_instruction_step_padding_start" android:paddingEnd="@dimen/bootstrap_instruction_step_container_padding_end">
+            <ProgressBar android:layout_gravity="center" android:id="@id/instructions_two_progress" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" style="@android:style/Widget.Material.Light.ProgressBar.Large" />
+            <include layout="@layout/setup_d2d_instructions_one" />
+            <include layout="@layout/setup_d2d_instructions_two" />
+        </FrameLayout>
+    </GridLayout>
+    <FrameLayout android:layout_gravity="bottom|center" android:paddingBottom="@dimen/bootstrap_button_keyline_bottom" android:clipChildren="false" android:clipToPadding="false" android:layout_width="@dimen/bootstrap_title_width" android:layout_height="wrap_content">
+        <include layout="@layout/setup_d2d_buttons_one" />
+        <include layout="@layout/setup_d2d_buttons_two" />
+        <include layout="@layout/setup_d2d_buttons_three" />
+        <TextView android:textAppearance="@style/BootstrapCaption" android:layout_gravity="bottom|center" android:id="@id/source_device_caption" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</FrameLayout>
