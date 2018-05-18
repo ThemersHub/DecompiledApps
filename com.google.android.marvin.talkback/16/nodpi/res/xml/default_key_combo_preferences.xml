@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/keycombo_menu_category_select_keymap" android:key="@string/pref_keymap_category_key">
+        <ListPreference android:entries="@array/pref_select_keymap_entries" android:title="@string/keycombo_menu_select_keymap" android:key="@string/pref_select_keymap_key" android:summary="%s" android:defaultValue="@string/classic_keymap_entry_value" android:entryValues="@array/pref_select_keymap_values" />
+        <ListPreference android:entries="@array/pref_choose_trigger_modifier_entries" android:title="@string/keycombo_menu_choose_trigger_modifier" android:key="@string/pref_default_keymap_trigger_modifier_key" android:summary="%s" android:defaultValue="@string/trigger_modifier_alt_entry_value" android:entryValues="@array/pref_choose_trigger_modifier_values" />
+        <PreferenceScreen android:title="@string/keycombo_menu_reset_keymap" android:key="@string/pref_reset_keymap_key" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/keycombo_menu_category_navigation">
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_navigate_next" android:key="@string/keycombo_shortcut_navigate_next" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_navigate_previous" android:key="@string/keycombo_shortcut_navigate_previous" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_navigate_up" android:key="@string/keycombo_shortcut_navigate_up" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_navigate_down" android:key="@string/keycombo_shortcut_navigate_down" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_navigate_first" android:key="@string/keycombo_shortcut_navigate_first" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_navigate_last" android:key="@string/keycombo_shortcut_navigate_last" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_navigate_next_window" android:key="@string/keycombo_shortcut_navigate_next_window" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_navigate_previous_window" android:key="@string/keycombo_shortcut_navigate_previous_window" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_navigate_next_word" android:key="@string/keycombo_shortcut_navigate_next_word" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_navigate_previous_word" android:key="@string/keycombo_shortcut_navigate_previous_word" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_navigate_next_character" android:key="@string/keycombo_shortcut_navigate_next_character" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_navigate_previous_character" android:key="@string/keycombo_shortcut_navigate_previous_character" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_perform_click" android:key="@string/keycombo_shortcut_perform_click" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_perform_long_click" android:key="@string/keycombo_shortcut_perform_long_click" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/keycombo_menu_category_global">
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_global_back" android:key="@string/keycombo_shortcut_global_back" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_global_home" android:key="@string/keycombo_shortcut_global_home" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_global_recent" android:key="@string/keycombo_shortcut_global_recents" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_global_notifications" android:key="@string/keycombo_shortcut_global_notifications" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_global_suspend" android:key="@string/keycombo_shortcut_global_suspend" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/keycombo_menu_category_other">
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_other_read_from_top" android:key="@string/keycombo_shortcut_other_read_from_top" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_other_read_from_next_item" android:key="@string/keycombo_shortcut_other_read_from_next_item" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_other_global_context_menu" android:key="@string/keycombo_shortcut_other_global_context_menu" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_other_local_context_menu" android:key="@string/keycombo_shortcut_other_local_context_menu" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_other_toggle_search" android:key="@string/keycombo_shortcut_other_toggle_search" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_other_open_manage_keyboard_shortcuts" android:key="@string/keycombo_shortcut_open_manage_keyboard_shortcuts" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_other_open_talkback_settings" android:key="@string/keycombo_shortcut_open_talkback_settings" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/keycombo_menu_category_web">
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_button" android:key="@string/keycombo_shortcut_navigate_next_button" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_button" android:key="@string/keycombo_shortcut_navigate_previous_button" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_control" android:key="@string/keycombo_shortcut_navigate_next_control" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_control" android:key="@string/keycombo_shortcut_navigate_previous_control" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_aria_landmark" android:key="@string/keycombo_shortcut_navigate_next_aria_landmark" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_aria_landmark" android:key="@string/keycombo_shortcut_navigate_previous_aria_landmark" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_edit_field" android:key="@string/keycombo_shortcut_navigate_next_edit_field" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_edit_field" android:key="@string/keycombo_shortcut_navigate_previous_edit_field" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_focusable_item" android:key="@string/keycombo_shortcut_navigate_next_focusable_item" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_focusable_item" android:key="@string/keycombo_shortcut_navigate_previous_focusable_item" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_graphic" android:key="@string/keycombo_shortcut_navigate_next_graphic" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_graphic" android:key="@string/keycombo_shortcut_navigate_previous_graphic" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_heading" android:key="@string/keycombo_shortcut_navigate_next_heading" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_heading" android:key="@string/keycombo_shortcut_navigate_previous_heading" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_heading_1" android:key="@string/keycombo_shortcut_navigate_next_heading_1" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_heading_1" android:key="@string/keycombo_shortcut_navigate_previous_heading_1" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_heading_2" android:key="@string/keycombo_shortcut_navigate_next_heading_2" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_heading_2" android:key="@string/keycombo_shortcut_navigate_previous_heading_2" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_heading_3" android:key="@string/keycombo_shortcut_navigate_next_heading_3" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_heading_3" android:key="@string/keycombo_shortcut_navigate_previous_heading_3" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_heading_4" android:key="@string/keycombo_shortcut_navigate_next_heading_4" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_heading_4" android:key="@string/keycombo_shortcut_navigate_previous_heading_4" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_heading_5" android:key="@string/keycombo_shortcut_navigate_next_heading_5" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_heading_5" android:key="@string/keycombo_shortcut_navigate_previous_heading_5" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_heading_6" android:key="@string/keycombo_shortcut_navigate_next_heading_6" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_heading_6" android:key="@string/keycombo_shortcut_navigate_previous_heading_6" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_list_item" android:key="@string/keycombo_shortcut_navigate_next_list_item" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_list_item" android:key="@string/keycombo_shortcut_navigate_previous_list_item" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_link" android:key="@string/keycombo_shortcut_navigate_next_link" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_link" android:key="@string/keycombo_shortcut_navigate_previous_link" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_list" android:key="@string/keycombo_shortcut_navigate_next_list" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_list" android:key="@string/keycombo_shortcut_navigate_previous_list" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_table" android:key="@string/keycombo_shortcut_navigate_next_table" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_table" android:key="@string/keycombo_shortcut_navigate_previous_table" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_combobox" android:key="@string/keycombo_shortcut_navigate_next_combobox" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_combobox" android:key="@string/keycombo_shortcut_navigate_previous_combobox" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_next_checkbox" android:key="@string/keycombo_shortcut_navigate_next_checkbox" />
+        <com.android.talkback.KeyboardShortcutDialogPreference android:title="@string/keycombo_menu_web_navigate_to_previous_checkbox" android:key="@string/keycombo_shortcut_navigate_previous_checkbox" />
+    </PreferenceCategory>
+</PreferenceScreen>
