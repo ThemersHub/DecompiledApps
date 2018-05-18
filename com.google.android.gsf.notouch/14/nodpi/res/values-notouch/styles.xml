@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Leanback.FormWizard.Blue" parent="@android:style/Theme.Leanback.FormWizard">
+        <item name="android:windowBackground">@drawable/blue_background</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
+        <item name="android:windowShowWallpaper">false</item>
+    </style>
+    <style name="Theme.Leanback.FormWizard.Transparent" parent="@android:style/Theme.Leanback.FormWizard">
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="SettingsWindowAnimationStyle" parent="@android:style/Animation.Activity">
+        <item name="android:fragmentOpenEnterAnimation">@anim/settings_fragment_fade_in</item>
+        <item name="android:fragmentOpenExitAnimation">@anim/settings_fragment_fade_out</item>
+        <item name="android:fragmentCloseEnterAnimation">@anim/settings_fragment_fade_in</item>
+        <item name="android:fragmentCloseExitAnimation">@anim/settings_fragment_fade_out</item>
+    </style>
+    <style name="Theme.Settings" parent="@style/Theme.Leanback">
+        <item name="android:windowBackground">@color/settings_background</item>
+        <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Leanback</item>
+    </style>
+    <style name="Theme.Settings.Transparent" parent="@style/Theme.Settings">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="AccountSignInTitle">
+        <item name="android:textSize">@dimen/account_sign_in_title_text_size</item>
+        <item name="android:textColor">@color/account_sign_in_title</item>
+    </style>
+    <style name="AccountSignInDescription">
+        <item name="android:textSize">@dimen/account_sign_in_description_text_size</item>
+        <item name="android:textColor">@color/account_sign_in_description</item>
+    </style>
+    <style name="AccountSignInBigDescription">
+        <item name="android:textSize">@dimen/account_sign_in_title_text_size</item>
+        <item name="android:textColor">@color/account_sign_in_pin</item>
+    </style>
+    <style name="AccountSignInListItem">
+        <item name="android:textSize">@dimen/account_sign_in_list_item_text_size</item>
+        <item name="android:textColor">@color/list_item</item>
+    </style>
+    <style name="AccountSignInTextInput">
+        <item name="android:textSize">@dimen/account_sign_in_list_item_text_size</item>
+        <item name="android:textColor">@color/account_sign_in_list_item_focused</item>
+        <item name="android:background">@drawable/account_sign_in_text_input_underline</item>
+        <item name="android:textCursorDrawable">@drawable/account_sign_in_text_input_cursor</item>
+    </style>
+    <style name="ActivityProgressTitle">
+        <item name="android:textSize">@dimen/activity_progress_title_text_size</item>
+        <item name="android:textColor">@color/activity_progress_text</item>
+    </style>
+</resources>

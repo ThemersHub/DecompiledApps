@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:sharedUserId="com.google.uid.shared" package="com.google.android.gsf.notouch" platformBuildVersionCode="24" platformBuildVersionName="7.0">
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="com.google.android.sss.permission.SECOND_SCREEN_SETUP"/>
+    <application android:label="@string/app_label" android:supportsRtl="true" android:theme="@style/Theme.Leanback.FormWizard.Blue" android:usesCleartextTraffic="false">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:exported="true" android:label="NoTouchAuthDelegateService" android:name=".NoTouchAuthDelegateService">
+            <intent-filter>
+                <action android:name="com.google.android.gsf.notouch.LAUNCH_AUTH_UI"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:exported="false" android:name=".VerifyPasswordActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:exported="true" android:name=".CreateAccountActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:exported="true" android:name=".AddAccountActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:exported="true" android:name=".NetworkErrorActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:exported="true" android:name=".GetTokenActivity" android:theme="@style/Canvas.TwoPaneActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:exported="true" android:name=".GrantCredentialsWithAclNoTouchActivity" android:theme="@style/Canvas.TwoPaneActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:exported="true" android:name=".CreateOrAddAccountActivity" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.google.android.gsf.notouch.CREATE_ADD_ACCOUNT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:exported="true" android:name=".CreateOrAddAccountTransparentActivity" android:theme="@style/Theme.Leanback.FormWizard.Transparent" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.google.android.gsf.notouch.CREATE_ADD_ACCOUNT_TRANSPARENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:exported="true" android:label="" android:name=".UsageDiagnosticsSettingActivity" android:theme="@style/Theme.Settings.Transparent">
+            <intent-filter>
+                <action android:name="com.google.android.gsf.notouch.USAGE_AND_DIAGNOSTICS_SETTING"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

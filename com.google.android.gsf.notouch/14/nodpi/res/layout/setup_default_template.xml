@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pano="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:gravity="bottom" android:id="@id/title" android:layout_width="@dimen/width_description" android:layout_height="@dimen/setup_title_height" android:layout_marginBottom="@dimen/setup_title_description_distance" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/summary" android:layout_width="@dimen/width_description" android:layout_height="wrap_content" android:layout_below="@id/title" />
+    <ImageView android:id="@id/logo" android:layout_width="wrap_content" android:layout_height="@dimen/large_google_logo_height" android:maxWidth="@dimen/width_action" />
+    <com.google.android.pano.widget.ScrollAdapterView android:enabled="true" android:id="@id/action_list" android:focusable="true" android:clipToPadding="true" android:descendantFocusability="afterDescendants" android:layout_width="@dimen/width_action" android:layout_height="fill_parent" android:layout_below="@id/logo" android:layout_alignParentBottom="true" pano:orientation="vertical" pano:scrollCenterStrategy="fixed" pano:scrollCenterOffset="@dimen/setup_list_center_offset" pano:lowItemTransform="@anim/setup_scroll_adapter" pano:highItemTransform="@anim/setup_scroll_adapter" />
+    <FrameLayout android:id="@id/action" android:layout_width="@dimen/width_action" android:layout_height="wrap_content" android:layout_below="@id/logo" android:layout_alignParentBottom="true" />
+    <TextView android:textAppearance="?android:textAppearanceListItem" android:gravity="start|center" android:id="@id/action_text" android:layout_width="@dimen/width_action" android:layout_height="@dimen/list_item_height" android:layout_alignBottom="@id/title" android:textAllCaps="true" />
+</RelativeLayout>
