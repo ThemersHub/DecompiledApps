@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_gravity="center" android:id="@id/session_card" style="@style/Card"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.libraries.fitness.ui.profileavatar.ProfileAvatar android:id="@id/profile_avatar" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="@dimen/card_internal_padding" android:layout_marginTop="@dimen/card_internal_padding" android:alpha="0.0" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_marginTop="12.0dip" android:text="@string/profile_completion_title" style="@style/ProfileCardTitle" />
+        <TextView android:text="@string/profile_completion_desc" style="@style/ProfileCardRow" />
+        <TextView android:text="@string/preferences_user_gender_title" style="@style/ProfileCardLabel" />
+        <Spinner android:entries="@array/gender_labels" android:id="@id/gender_spinner" style="@style/ProfileCardSpinner" />
+        <TextView android:text="@string/preferences_height_unit_title" style="@style/ProfileCardLabel" />
+        <include android:id="@id/height_container" layout="@layout/value_with_unit" style="@style/ProfileCardValueWithUnit" />
+        <TextView android:text="@string/preferences_weight_unit_title" style="@style/ProfileCardLabel" />
+        <include android:id="@id/weight_container" layout="@layout/value_with_unit" style="@style/ProfileCardValueWithUnit" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+            <View style="@style/FitDivider" />
+            <Button android:id="@id/done" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/save" style="@style/FitBlueButton" />
+        </FrameLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

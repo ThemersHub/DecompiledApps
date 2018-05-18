@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/peek_group" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/icon_selection_bar" android:background="@color/dataviz_graph_background" android:paddingTop="@dimen/dataviz_toggle_vertical_padding" android:paddingBottom="@dimen/dataviz_toggle_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/close_button" android:layout_width="@dimen/dataviz_card_icon_x_width" android:layout_height="@dimen/dataviz_card_icon_x_width" android:layout_marginLeft="@dimen/dataviz_close_button_horizontal_padding" android:src="@drawable/ic_close_dark" android:scaleType="center" android:contentDescription="@string/dataviz_close" android:layout_marginStart="@dimen/dataviz_close_button_horizontal_padding" style="@style/Fitness.SelectableItemBackgroundBorderless" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/toggle_wrapper" android:layout_width="fill_parent" android:layout_height="@dimen/dataviz_card_icon_x_width" android:layout_marginLeft="@dimen/dataviz_toggle_group_horizontal_padding" android:layout_marginRight="@dimen/dataviz_toggle_group_horizontal_padding" android:layout_alignRight="@id/close_button" android:layout_marginStart="@dimen/dataviz_toggle_group_horizontal_padding" android:layout_marginEnd="@dimen/dataviz_toggle_group_horizontal_padding" />
+    </LinearLayout>
+    <ImageView android:id="@id/toolbar_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/bottom_dropshadow" />
+    <LinearLayout android:orientation="vertical" android:id="@id/chart_container" android:paddingTop="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <View android:background="@color/dataviz_graph_divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <include android:layout_width="fill_parent" android:layout_height="@dimen/dataviz_header_height" layout="@layout/dataviz_header" />
+</LinearLayout>

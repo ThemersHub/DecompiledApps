@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="164.0dip" />
+    <com.google.android.libraries.social.ui.views.expandingscrollview.ExpandingScrollView android:id="@id/expanding_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/expanding_scroll_view_content" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:gravity="start|center" android:layout_gravity="start" android:id="@id/title_container" android:paddingLeft="@dimen/workout_summary_header_horizontal_padding" android:paddingTop="@dimen/workout_summary_header_vertical_padding" android:paddingRight="@dimen/workout_summary_header_horizontal_padding" android:paddingBottom="@dimen/workout_summary_header_vertical_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/activity_type_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" />
+                <RelativeLayout android:gravity="start" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/edit_icon" android:layout_toRightOf="@id/activity_type_icon" android:layout_toStartOf="@id/edit_icon" android:layout_toEndOf="@id/activity_type_icon">
+                    <TextView android:id="@id/title" android:paddingLeft="@dimen/workout_summary_header_content_horizontal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/workout_summary_header_content_horizontal_padding" style="@style/WorkoutSummaryTitle.Collapsed" />
+                    <TextView android:id="@id/subtitle" android:paddingLeft="@dimen/workout_summary_header_content_horizontal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/title" android:paddingStart="@dimen/workout_summary_header_content_horizontal_padding" style="@style/WorkoutSummaryTitle.SubTitle" />
+                </RelativeLayout>
+                <ImageButton android:id="@id/edit_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_edit_24" android:layout_alignParentRight="true" android:contentDescription="@string/edit" android:layout_alignParentEnd="true" style="@style/Fitness.SelectableItemBackgroundBorderless" />
+            </RelativeLayout>
+            <android.support.v4.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+                <LinearLayout android:orientation="vertical" android:id="@id/content_container" android:paddingTop="@dimen/workout_summary_content_vertical_padding" android:paddingBottom="@dimen/workout_summary_content_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+    </com.google.android.libraries.social.ui.views.expandingscrollview.ExpandingScrollView>
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ProgressBar" />
+    <RelativeLayout android:gravity="bottom" android:id="@id/toolbar_shadow" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/bottom_dropshadow" />
+    </RelativeLayout>
+    <android.support.v7.widget.Toolbar android:theme="@style/FitToolbarTheme" android:id="@id/fit_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/FitToolbarPopupTheme" />
+    <View android:id="@id/fab_click_interceptor" android:background="@color/fab_click_interceptor_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.fitness.ui.fab.FabMenu android:layout_gravity="end|bottom|center" android:id="@id/fab_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</android.support.design.widget.CoordinatorLayout>

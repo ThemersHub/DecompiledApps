@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" package="com.google.android.apps.fitness" platformBuildVersionCode="27" platformBuildVersionName="P">
+    <permission android:name="com.google.android.apps.fitness.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="com.google.android.apps.fitness.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:name="android.hardware.bluetooth_ble" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <application android:allowBackup="true" android:backupAgent="com.google.android.apps.fitness.backup.FitnessBackupAgent" android:fullBackupContent="@xml/backup_scheme" android:fullBackupOnly="true" android:icon="@mipmap/adaptiveproduct_google_fit" android:label="@string/app_name" android:name="com.google.android.apps.fitness.application.FitnessApplication" android:roundIcon="@mipmap/product_logo_fit_round_launcher_color_48" android:supportsRtl="true" android:theme="@style/FitAppTheme">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyA5182VbzpV2iYGYobSNxdkR4nQPnzoDSM"/>
+        <receiver android:enabled="false" android:name="com.google.android.apps.fitness.activemode.service.ActiveModeSessionRecoveryBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.apps.fitness.activemode.service.ActiveModeService">
+            <intent-filter>
+                <action android:name="com.google.android.apps.fitness.activemode.service.TOGGLE_RESUME_PAUSE"/>
+                <action android:name="com.google.android.apps.fitness.activemode.service.NOTIFICATION_DELETED"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.google.android.apps.fitness.activemode.ui.ActiveModeActivity" android:screenOrientation="portrait" android:theme="@style/FitAppTheme.ActiveMode"/>
+        <activity android:exported="false" android:name="com.google.android.apps.fitness.activityeditor.ActivityEditor" android:theme="@style/FitStatusBarTheme" android:windowSoftInputMode="adjustResize"/>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.api.checksum.ChecksumGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="false" android:name="com.google.android.apps.fitness.api.services.boot.FitnessBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.fitness.api.services.ActivityConnectionReceiver"/>
+        <receiver android:name="com.google.android.apps.fitness.api.services.ActivityUpsamplingReceiver"/>
+        <receiver android:enabled="false" android:name="com.google.android.apps.fitness.api.services.LocationReceiver"/>
+        <receiver android:name="com.google.android.apps.fitness.api.services.WalkFasterActivityReceiver"/>
+        <receiver android:name="com.google.android.apps.fitness.api.services.WalkFasterActivityReceiver$DismissNotificationReceiver"/>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.api.services.ActivityConnectionService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.api.services.WalkFasterService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.api.services.WalkFasterLoggingService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.api.services.TransformationCachingService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.apps.fitness.api.services.HighFidelityLocationFgService"/>
+        <service android:exported="false" android:name="com.google.android.apps.fitness.api.services.summary.ActivitySummaryService"/>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.api.services.summary.ActivitySummaryGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.fitness.api.services.timezone.TimeZoneUpdateService"/>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.api.services.timezone.TimeZoneUpdateGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.api.services.ulr.UlrSettingsGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.api.sessions.SessionQueryService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:enabled="false" android:exported="true" android:name="com.google.android.apps.fitness.api.sync.PlatformSyncBroadcastReceiver"/>
+        <provider android:authorities="com.google.android.apps.fitness" android:enabled="true" android:exported="false" android:label="@string/sync_title" android:name="com.google.android.apps.fitness.database.FitnessContentProvider"/>
+        <activity android:exported="false" android:label="@string/debug_settings_activity_name" android:name="com.google.android.apps.fitness.debugsettings.DebugSettingsActivity" android:theme="@style/FitActionBarTheme.DebugSettings"/>
+        <activity android:exported="false" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.google.android.apps.fitness.fitnessactivity.FitnessActivity" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.apps.fitness.goals.goalcreation.fragments.CustomCountActivity" android:theme="@style/FitStatusBarTheme" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:name="com.google.android.apps.fitness.goals.goalcreation.NewGoalActivity" android:theme="@style/FitAppTheme"/>
+        <activity android:name="com.google.android.apps.fitness.goals.goaledit.GoalEditActivity" android:theme="@style/FitStatusBarTheme"/>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.goals.service.ProgressGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.fitness.goals.service.GoalCacheService"/>
+        <service android:exported="false" android:name="com.google.android.apps.fitness.goals.service.ClearNotificationService"/>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.goals.service.GoalCacheGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <activity android:name="com.google.android.apps.fitness.hydration.LogHydrationActivity" android:theme="@style/FitAppTheme"/>
+        <activity android:label="@string/app_name" android:name="com.google.android.apps.fitness.login.UserLoginActivity" android:theme="@style/FitAppTheme.Launcher">
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.activity/running"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.activity/biking"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.activity/walking"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.activity/other"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.data_type/com.google.step_count.cumulative"/>
+            </intent-filter>
+        </activity>
+        <receiver android:enabled="false" android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.google.android.apps.fitness"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.apps.fitness.net.gcm.services.FitnessGcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:label="@string/sync_title" android:name="com.google.android.apps.fitness.net.sync.services.FitnessAppSyncAdapterService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/fitness_app_sync_adapter"/>
+        </service>
+        <receiver android:enabled="@bool/androidOOrLater" android:name="com.google.android.apps.fitness.notifications.UpdatePhoneChannelsReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.google.android.apps.fitness.onboarding.OnboardingActivity"/>
+        <service android:name="com.google.android.apps.fitness.sessions.sessioneditor.SessionEditorService"/>
+        <activity android:label="@string/settings_ble_devices_title" android:name="com.google.android.apps.fitness.settings.ble.BleDevicesActivity" android:parentActivityName="com.google.android.apps.fitness.settings.SettingsActivity" android:theme="@style/FitActionBarTheme.Ble"/>
+        <activity android:name="com.google.android.apps.fitness.settings.ble.BlePairingActivity" android:parentActivityName="com.google.android.apps.fitness.settings.ble.BleDevicesActivity" android:theme="@style/FitAppTheme.Ble"/>
+        <activity android:exported="false" android:name="com.google.android.apps.fitness.settings.SettingsEditorActivity" android:theme="@style/FitActionBarTheme"/>
+        <service android:exported="false" android:name="com.google.android.apps.fitness.util.engagement.UserEngagementService"/>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.util.engagement.UserEngagementGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.google.android.apps.fitness.util.experiments.services.PhenotypeIntentService"/>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.util.experiments.services.PhenotypeGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.google.android.apps.fitness.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths"/>
+        </provider>
+        <meta-data android:name="com.google.android.wearable.beta.app" android:resource="@xml/wearable_app_desc"/>
+        <service android:exported="true" android:name="com.google.android.apps.fitness.wearable.services.WearableSyncGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="false" android:name="com.google.android.apps.fitness.wearable.WearableSyncReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.fitness.wearables.SYNC_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.apps.fitness.wearable.WearableWatcher">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED"/>
+                <data android:scheme="wear"/>
+            </intent-filter>
+        </service>
+        <activity android:excludeFromRecents="true" android:name="com.google.android.apps.fitness.widget.GoalWidgetConfigurationActivity" android:taskAffinity=".GoalWidgetChooserActivity" android:theme="@style/WidgetConfigurationTheme">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <receiver android:label="@string/app_widget_label" android:name="com.google.android.apps.fitness.widget.TodayStatusWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:exported="false" android:name="android.appwidget.provider" android:resource="@xml/today_status_widget"/>
+        </receiver>
+        <activity android:exported="false" android:label="@string/workout_summary_activity_label" android:name="com.google.android.apps.fitness.workoutsummary.WorkoutSummaryActivity" android:parentActivityName="com.google.android.apps.fitness.fitnessactivity.FitnessActivity" android:theme="@style/FitStatusBarTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.fitness.fitnessactivity.FitnessActivity"/>
+        </activity>
+        <activity android:exported="false" android:name="com.google.android.apps.fitness.workoutsummarychart.WorkoutSummaryChartActivity" android:parentActivityName="com.google.android.apps.fitness.workoutsummary.WorkoutSummaryActivity" android:theme="@style/FitStatusBarTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.fitness.workoutsummary.WorkoutSummaryActivity"/>
+        </activity>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml" android:resource="@xml/phenotype"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.libraries.hats20.SurveyPromptActivity" android:theme="@style/HatsLibPromptTheme" android:windowSoftInputMode="adjustPan"/>
+        <receiver android:exported="true" android:name="com.google.android.libraries.notifications.entrypoints.appupdated.AppUpdatedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.libraries.notifications.entrypoints.bootcompleted.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.libraries.notifications.entrypoints.gcm.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.libraries.notifications.entrypoints.localechanged.LocaleChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.libraries.notifications.entrypoints.scheduled.ScheduledTaskService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.notifications.entrypoints.systemtray.SystemTrayActivity"/>
+        <receiver android:exported="false" android:name="com.google.android.libraries.notifications.entrypoints.systemtray.SystemTrayBroadcastReceiver"/>
+        <receiver android:exported="true" android:name="com.google.android.libraries.notifications.entrypoints.timezonechanged.TimezoneChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.libraries.notifications.executor.impl.basic.ChimeExecutorApiService"/>
+        <service android:exported="false" android:name="com.google.android.libraries.social.async.BackgroundTaskService"/>
+        <service android:exported="false" android:name="com.google.android.libraries.social.async.BackgroundTaskJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <receiver android:exported="false" android:name="com.google.android.libraries.social.silentfeedback.impl.SilentFeedbackReceiver" android:process=":crash_report"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity-alias android:exported="true" android:name="com.google.android.apps.fitness.OpenSourceLicenses" android:targetActivity="com.google.android.libraries.social.licenses.LicenseMenuActivity"/>
+        <activity-alias android:label="@string/app_name" android:name="com.google.android.apps.fitness.welcome.WelcomeActivity" android:targetActivity="com.google.android.apps.fitness.login.UserLoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+        </activity-alias>
+    </application>
+</manifest>

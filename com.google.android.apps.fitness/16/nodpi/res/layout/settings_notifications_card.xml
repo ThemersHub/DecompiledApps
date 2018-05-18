@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/settings_notifications_card" style="@style/SettingsCard"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/settings_notification_card_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_notifications_card_title" style="@style/SettingsCardText.TitleTextStyle" />
+    <LinearLayout android:id="@id/settings_goal_notifications" style="@style/NotificationSettingsItem">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/settings_goal_notifications_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/SettingsCardText.LabelTextStyle" />
+            <Switch android:id="@id/settings_goal_notifications_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_goal_notifications_description" style="@style/SettingsCardText.SummaryTextStyle" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/settings_walk_faster_notifications" android:visibility="gone" style="@style/NotificationSettingsItem">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/settings_walk_faster_notifications_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/SettingsCardText.LabelTextStyle" />
+            <Switch android:id="@id/settings_walk_faster_notifications_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_walk_faster_notifications_description" style="@style/SettingsCardText.SummaryTextStyle" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/settings_afl_notification" android:visibility="gone" style="@style/NotificationSettingsItem">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/settings_afl_notification_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/SettingsCardText.LabelTextStyle" />
+            <Switch android:id="@id/settings_afl_notifications_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_afl_notifications_description" style="@style/SettingsCardText.SummaryTextStyle" />
+    </LinearLayout>
+</LinearLayout>

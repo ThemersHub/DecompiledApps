@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/goal_metric_title" />
+    <include layout="@layout/goal_activity_title" />
+    <include layout="@layout/pill_button_row" />
+    <include layout="@layout/custom_count_button" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/left_keyline" android:layout_marginTop="@dimen/row_vertical_margin" android:layout_marginStart="@dimen/left_keyline">
+        <TextView android:id="@id/every_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/steps_each_description" style="@style/GoalDescription" />
+        <Spinner android:textStyle="bold" android:id="@id/recurrence" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/every_view" />
+    </RelativeLayout>
+</LinearLayout>

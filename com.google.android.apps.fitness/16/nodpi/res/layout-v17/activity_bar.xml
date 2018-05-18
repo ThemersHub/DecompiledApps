@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textStyle="bold" android:id="@id/inactive_calories_title" android:background="?selectableItemBackground" android:paddingTop="@dimen/inactive_calories_title_padding" android:paddingBottom="@dimen/inactive_calories_title_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/inactive_calories_info_title" android:drawablePadding="@dimen/inactive_calories_title_padding" android:drawableStart="@drawable/quantum_ic_info_grey600_18" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/inactive_calories_title">
+        <com.google.android.apps.fitness.timeline.activitybar.ActivityFractionBar android:layout_gravity="center_vertical" android:id="@id/activity_fraction_bar" android:layout_width="0.0dip" android:layout_height="@dimen/timeline_date_separator_duration_bar_height" android:layout_weight="1.0" />
+        <TextView android:textAppearance="@style/TimelineEvent" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/activity_bar_text" android:paddingLeft="@dimen/timeline_date_separator_duration_bar_internal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:textAlignment="viewStart" android:paddingStart="@dimen/timeline_date_separator_duration_bar_internal_padding" />
+    </LinearLayout>
+</merge>

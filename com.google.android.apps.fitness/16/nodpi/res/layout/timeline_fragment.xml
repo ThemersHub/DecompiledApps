@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.fitness.ui.recyclerview.VerticalRecyclerView android:id="@id/timeline" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <android.support.design.widget.AppBarLayout android:id="@id/myfit_app_bar" android:background="@color/timeline_header_color" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll">
+        <android.support.v7.widget.Toolbar android:theme="@style/FitToolbarTheme" android:id="@id/fit_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/FitToolbarPopupTheme">
+            <TextView android:id="@id/timeline_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nav_timeline" style="@style/FitToolbarTextAppearance" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+</android.support.design.widget.CoordinatorLayout>

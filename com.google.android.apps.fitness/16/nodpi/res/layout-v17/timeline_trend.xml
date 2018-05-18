@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center_vertical" android:id="@id/icon" android:paddingLeft="@dimen/timeline_date_separator_padding_side" android:paddingRight="@dimen/timeline_trend_image_right_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/timeline_date_separator_padding_side" android:paddingEnd="@dimen/timeline_trend_image_right_padding" />
+    <TextView android:textAppearance="@style/TimelineEvent.TitleTextStyle" android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/icon" android:layout_toEndOf="@id/icon" />
+    <TextView android:textAppearance="@style/TimelineEvent" android:id="@id/trend_text" android:paddingLeft="@dimen/timeline_date_separator_padding_side_wide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/timeline_trend_arrow_right_padding" android:layout_below="@id/title_text" android:paddingStart="@dimen/timeline_date_separator_padding_side_wide" />
+    <TextView android:textAppearance="@style/TimelineEvent" android:gravity="center_vertical" android:id="@id/attribution_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/icon" android:layout_below="@id/trend_text" android:layout_toEndOf="@id/icon" />
+</merge>

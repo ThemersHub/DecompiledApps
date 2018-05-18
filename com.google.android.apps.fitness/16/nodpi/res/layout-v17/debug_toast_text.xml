@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:layout_width="@dimen/debug_icon_width" android:layout_height="@dimen/debug_icon_width" android:layout_margin="@dimen/debug_message_margin" android:src="@drawable/debug_toast_circle" />
+    <LinearLayout android:orientation="vertical" android:id="@id/message_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/icon" android:layout_toEndOf="@id/icon" />
+    <TextView android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/icon" android:layout_below="@id/message_container" android:layout_toEndOf="@id/icon" style="@style/DebugMessage.TextStyle" />
+</RelativeLayout>

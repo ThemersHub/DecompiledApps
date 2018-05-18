@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/fitness_dialog_content" android:paddingLeft="@dimen/fitness_dialog_side_padding" android:paddingTop="@dimen/fitness_dialog_top_padding" android:paddingBottom="@dimen/fitness_dialog_side_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/fitness_dialog_side_padding" android:paddingEnd="@dimen/fitness_dialog_side_padding">
+        <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/FitnessDialog.TitleTextStyle" />
+        <ScrollView android:id="@id/content_view" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textAppearance="@style/FitnessDialog.ButtonTextStyle" android:textColor="@drawable/fitness_dialog_positive_button_text_color" android:layout_gravity="center" android:id="@id/positive_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/FitnessDialog.ButtonStyle" />
+            <Button android:textAppearance="@style/FitnessDialog.ButtonTextStyle" android:textColor="@drawable/fitness_dialog_negative_button_text_color" android:layout_gravity="center" android:id="@id/negative_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/fitness_dialog_button_margin_between" android:layout_toLeftOf="@id/positive_button" android:layout_marginEnd="@dimen/fitness_dialog_button_margin_between" android:layout_toStartOf="@id/positive_button" style="@style/FitnessDialog.ButtonStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@id/progress_sheet" android:background="@color/fitness_dialog_progress_sheet" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/fitness_dialog_content" android:layout_alignTop="@id/fitness_dialog_content" android:layout_alignRight="@id/fitness_dialog_content" android:layout_alignBottom="@id/fitness_dialog_content" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/ProgressBar.Dark" />
+</RelativeLayout>

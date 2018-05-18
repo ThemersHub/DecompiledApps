@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.NestedScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Spinner android:id="@id/activity_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/line_padding" android:layout_marginRight="@dimen/activity_spinner_padding" />
+            <include layout="@layout/date_time_edit" />
+            <include layout="@layout/title_edit" />
+            <include layout="@layout/duration_edit" />
+            <include layout="@layout/energy_edit" />
+            <include android:id="@id/steps_view" layout="@layout/steps_edit" />
+            <include android:id="@id/distance_view" layout="@layout/distance_edit" />
+            <include android:id="@id/location_edit" android:visibility="gone" layout="@layout/location_edit" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.design.widget.AppBarLayout android:id="@id/app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/app_toolbar_elevation">
+        <android.support.v7.widget.Toolbar android:theme="@style/FitToolbarTheme" android:id="@id/activity_edit_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/FitToolbarPopupTheme">
+            <TextView android:textSize="@dimen/title_text_size" android:textColor="@color/quantum_white_text" android:id="@id/title_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_activity_title" android:fontFamily="sans-serif-medium" style="@style/FitToolbarTextAppearance" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+</android.support.design.widget.CoordinatorLayout>

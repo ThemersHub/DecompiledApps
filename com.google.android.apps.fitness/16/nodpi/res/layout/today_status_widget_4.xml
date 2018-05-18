@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/today_status_widget" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/widget_size_4"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/status_wheel_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/additional_text_view" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/today_status_wheel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:textSize="@dimen/widget_main_text_size_4" android:id="@id/main_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" style="@style/WidgetWheelTextAppearance.Condensed" />
+            <TextView android:textSize="@dimen/widget_unit_text_size_4" android:id="@id/unit_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/main_text_view" android:layout_centerHorizontal="true" style="@style/WidgetWheelTextAppearance" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/widget_additional_text_size_4" android:id="@id/additional_text_view" android:layout_width="@dimen/widget_additional_size_4" android:layout_height="wrap_content" style="@style/WidgetWheelTextAppearance.Shadowed.DescriptionStyle" />
+</RelativeLayout>

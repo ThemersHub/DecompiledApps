@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/category_goal_title" />
+        <RelativeLayout android:id="@id/buttons" android:paddingLeft="@dimen/left_keyline" android:paddingRight="@dimen/left_keyline" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_below="@id/goal_title" android:layout_marginEnd="16.0dip">
+            <LinearLayout android:id="@id/steps_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageButton android:id="@id/steps" android:clickable="false" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:src="@drawable/ic_steps_white" android:importantForAccessibility="no" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quick_goal_steps" style="@style/GoalIconLabel.Horizontal" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/active_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_below="@id/steps_wrapper">
+                <ImageButton android:id="@id/active_time" android:clickable="false" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:src="@drawable/ic_activetime_white" android:importantForAccessibility="no" />
+                <TextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quick_goal_active_time" style="@style/GoalIconLabel.Horizontal" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/run_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_below="@id/active_wrapper">
+                <ImageButton android:id="@id/run" android:clickable="false" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:src="@drawable/ic_running" android:importantForAccessibility="no" />
+                <TextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quick_goal_run" style="@style/GoalIconLabel.Horizontal" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:layout_gravity="center_vertical" android:id="@id/or" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/left_keyline" android:layout_marginTop="32.0dip" android:layout_marginRight="@dimen/left_keyline" android:text="@string/or" android:layout_below="@id/buttons" style="@style/GoalTitle" />
+        <LinearLayout android:id="@id/more_wrapper" android:paddingLeft="@dimen/left_keyline" android:paddingRight="@dimen/left_keyline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_below="@id/or">
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@id/more" android:clickable="false" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:src="@drawable/quantum_ic_add_white_24" android:importantForAccessibility="no" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quick_goal_create_own" style="@style/GoalIconLabel.Horizontal" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

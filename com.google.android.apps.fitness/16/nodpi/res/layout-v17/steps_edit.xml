@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="@dimen/small_icon_size" android:layout_height="@dimen/small_icon_size" android:layout_marginLeft="@dimen/icon_left_margin" android:layout_marginTop="@dimen/icon_top_margin" android:src="@drawable/ic_steps_gray" android:layout_marginStart="@dimen/icon_left_margin" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ActivityEditItem">
+        <com.google.android.apps.fitness.ui.labelededit.LabeledEdit android:id="@id/steps" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/row_height" android:layout_weight="1.0" app:textColorUnfocused="@color/quantum_grey900" app:labelContentDescription="@string/unit_steps_long" app:maxLength="6" app:selectAllOnFocus="true" app:inputType="number" app:imeOptions="actionDone|flagNoExtractUi" />
+        <TextView android:textColor="@color/quantum_black_secondary_text" android:layout_gravity="bottom" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/button_separator" android:layout_marginBottom="6.0dip" android:text="@string/unit_steps_long" android:layout_weight="1.0" android:layout_marginStart="@dimen/button_separator" style="@style/ActivityEditText.Label" />
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

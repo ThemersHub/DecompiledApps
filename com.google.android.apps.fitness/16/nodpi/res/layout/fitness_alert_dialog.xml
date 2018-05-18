@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/header_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:paddingLeft="@dimen/fitness_alert_dialog_padding" android:paddingTop="@dimen/fitness_alert_dialog_padding" android:paddingRight="@dimen/fitness_alert_dialog_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/icon" android:visibility="gone" android:layout_width="@dimen/fitness_alert_dialog_icon_bg_diameter" android:layout_height="@dimen/fitness_alert_dialog_icon_bg_diameter" android:layout_marginRight="@dimen/fitness_alert_dialog_padding" android:layout_alignParentLeft="true" android:importantForAccessibility="no" />
+        <TextView android:id="@id/title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/fitness_alert_dialog_title_padding_bottom" android:layout_toRightOf="@id/icon" style="@style/FitnessAlertDialog.TitleTextStyle" />
+        <FrameLayout android:id="@id/above_msg_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/fitness_alert_dialog_content_padding" android:layout_below="@id/title" />
+        <TextView android:id="@id/message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/fitness_alert_dialog_content_padding" android:layout_below="@id/above_msg_content" style="@style/FitnessAlertDialog.MessageTextStyle" />
+        <FrameLayout android:id="@id/below_msg_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/message" />
+    </RelativeLayout>
+</LinearLayout>

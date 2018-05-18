@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:id="@id/session_info_table" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="1" android:shrinkColumns="0">
+        <TableLayout android:id="@id/strength_training_sets" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="1" android:shrinkColumns="0" />
+        <View android:id="@id/strength_training_divider" android:visibility="gone" style="@style/FitDivider" />
+        <com.google.android.apps.fitness.sessions.sessioninfoview.SessionInfoTableRowView android:id="@id/active_time" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.google.android.apps.fitness.sessions.sessioninfoview.SessionInfoTableRowView android:id="@id/elapsed_time" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.google.android.apps.fitness.sessions.sessioninfoview.SessionInfoTableRowView android:id="@id/distance" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.google.android.apps.fitness.sessions.sessioninfoview.SessionInfoTableRowView android:id="@id/speed" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.google.android.apps.fitness.sessions.sessioninfoview.SessionInfoTableRowView android:id="@id/steps" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.google.android.apps.fitness.sessions.sessioninfoview.SessionInfoTableRowView android:id="@id/calories" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.google.android.apps.fitness.sessions.sessioninfoview.SessionInfoTableRowView android:id="@id/heart_rate_avg" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.google.android.apps.fitness.sessions.sessioninfoview.SessionInfoTableRowView android:id="@id/heart_rate_min_max" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.google.android.apps.fitness.sessions.sessioninfoview.SessionInfoTableRowView android:id="@id/heart_rate_contributor" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </TableLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/debug_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/debug_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_span="2" />
+        <TextView android:id="@id/segment_debug" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_span="2" />
+    </LinearLayout>
+</merge>

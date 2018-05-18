@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SettingsCard"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_basic_info_user_height" style="@style/SettingsCardText.TitleTextStyle" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:gravity="end" android:id="@id/height_input1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-4.0dip" android:minWidth="@dimen/settings_short_edit_text_min_width" android:singleLine="true" android:inputType="number" android:imeOptions="actionNext" />
+        <TextView android:id="@id/height_unit1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_feet_short" android:contentDescription="@string/unit_feet_long" style="@style/SettingsCardText.BasicInfo.UnitLabelTextStyle" />
+        <EditText android:gravity="end" android:id="@id/height_input2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:minWidth="@dimen/settings_short_edit_text_min_width" android:singleLine="true" android:inputType="number" android:imeOptions="actionDone" />
+        <TextView android:id="@id/height_unit2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_inches_short" style="@style/SettingsCardText.BasicInfo.UnitLabelTextStyle" />
+    </LinearLayout>
+    <Spinner android:id="@id/unit" android:layout_width="@dimen/settings_edit_spinner_width" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+</LinearLayout>

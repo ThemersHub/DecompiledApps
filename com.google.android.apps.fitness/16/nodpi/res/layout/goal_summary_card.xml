@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/GoalsCard"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/goal_card_divider" style="@style/FitDivider" />
+    <ImageButton android:layout_gravity="end" android:id="@id/goal_card_menu" android:layout_width="@dimen/overflow_button_touch_side" android:layout_height="@dimen/overflow_button_touch_side" android:src="@drawable/ic_overflow_dark_small" android:scaleType="center" android:contentDescription="@string/overflow_menu" style="@style/Fitness.SelectableItemBackgroundBorderless" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/goal_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/goal_card_icon_margin" />
+        <include android:id="@id/goal_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/goal_card_content_margin" android:layout_marginRight="@dimen/goal_wheel_horizontal_space" android:layout_toRightOf="@id/goal_icon" layout="@layout/goal_summary_header" />
+        <FrameLayout android:id="@id/past_goals_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/goal_card_content_margin" android:layout_marginRight="@dimen/goal_wheel_horizontal_space" android:layout_below="@id/goal_header" />
+        <com.google.android.apps.fitness.goals.myfit.GoalWheelView android:id="@id/goal_wheel" android:layout_width="@dimen/goal_wheel_size" android:layout_height="@dimen/goal_wheel_size" android:layout_marginLeft="@dimen/goal_card_content_margin" android:layout_marginTop="@dimen/goal_card_content_margin" android:layout_marginRight="@dimen/goal_wheel_margin_end" android:layout_marginBottom="@dimen/goal_card_content_margin" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/GoalWheel" />
+        <com.google.android.apps.fitness.goals.myfit.GoalCompleteWheelView android:id="@id/goal_complete_wheel" android:visibility="gone" android:layout_width="@dimen/goal_wheel_size" android:layout_height="@dimen/goal_wheel_size" android:layout_marginLeft="@dimen/goal_card_content_margin" android:layout_marginTop="@dimen/goal_card_content_margin" android:layout_marginRight="@dimen/goal_wheel_margin_end" android:layout_marginBottom="@dimen/goal_card_content_margin" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/GoalWheel" />
+    </RelativeLayout>
+</FrameLayout>

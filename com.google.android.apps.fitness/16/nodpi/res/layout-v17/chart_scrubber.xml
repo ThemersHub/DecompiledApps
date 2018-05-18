@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/dataviz_scrubber_wrapper" android:background="@drawable/tooltip" android:paddingLeft="@dimen/dataviz_scrubber_label_padding_left" android:paddingBottom="@dimen/dataviz_scrubber_label_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dataviz_scrubber_margin_left" android:paddingStart="@dimen/dataviz_scrubber_label_padding_left" android:layout_marginStart="@dimen/dataviz_scrubber_margin_left">
+        <RelativeLayout android:id="@id/dataviz_scrubber_text_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@id/dataviz_scrubber_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Chart.ScrubberText" />
+            <TextView android:id="@id/dataviz_scrubber_attribution" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/dataviz_scrubber_text" style="@style/Chart.ScrubberText" />
+        </RelativeLayout>
+        <ImageView android:id="@id/dataviz_menu" android:visibility="gone" android:layout_width="@dimen/overflow_button_touch_side" android:layout_height="@dimen/overflow_button_touch_side" android:src="@drawable/ic_overflow_dark_small" android:scaleType="center" android:layout_toRightOf="@id/dataviz_scrubber_text_layout" android:contentDescription="@string/overflow_menu" android:layout_toEndOf="@id/dataviz_scrubber_text_layout" style="@style/Fitness.SelectableItemBackgroundBorderless" />
+    </RelativeLayout>
+</merge>

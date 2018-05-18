@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:auto="http://schemas.android.com/apk/res-auto">
+    <com.google.android.libraries.aplos.chart.NumericCartesianChart android:id="@id/inspector_chart" android:paddingLeft="@dimen/dataviz_chart_padding_left" android:paddingTop="0.0dip" android:paddingRight="@dimen/dataviz_chart_padding_right" android:paddingBottom="@dimen/dataviz_chart_padding_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" auto:aplosMarginLeftMin="0.0dip" auto:aplosMarginLeftMax="0.0dip" auto:aplosMarginRightMin="0.0dip" auto:aplosMarginRightMax="0.0dip">
+        <RelativeLayout android:id="@id/inspector_chart_widgets_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.apps.fitness.dataviz.charts.ToolTipLine android:id="@id/chart_scrubber_line" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/inspector_chart_widgets_top" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.apps.fitness.dataviz.charts.ToolTip android:id="@id/chart_scrubber" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </RelativeLayout>
+    </com.google.android.libraries.aplos.chart.NumericCartesianChart>
+    <TextView android:gravity="center" android:id="@id/chart_center_text" android:background="@color/dataviz_background" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/dataviz_chart_no_data_text_width" android:layout_centerInParent="true" style="@style/Dataviz.ChartCenterText" />
+    <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/ProgressBar" />
+</merge>

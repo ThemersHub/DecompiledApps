@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SetupWizardPrimaryTextHeader" />
+        <TextView android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_wizard_text_double_vertical_spacing" android:layout_below="@id/title" style="@style/SetupWizardContentText" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/account_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/welcome_selectuser_avatar_padding_top" android:layout_below="@id/description">
+            <com.google.android.libraries.fitness.ui.profileavatar.ProfileAvatar android:id="@id/welcome_selected_user_avatar" android:layout_width="@dimen/welcome_avatar_size" android:layout_height="@dimen/welcome_avatar_size" />
+            <Spinner android:id="@id/welcome_select_user_account_picker" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <include android:id="@id/single_account_title" android:visibility="gone" layout="@layout/welcome_user_input_spinner_item" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/SetupWizardContentText" android:id="@id/privacy_statement" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/welcome_selectuser_privacy_margin_top" android:layout_marginBottom="@dimen/welcome_selectuser_privacy_margin_bottom" android:text="@string/welcome_opt_in_privacy" android:layout_below="@id/account_selector" android:lineSpacingMultiplier="1.3" android:textAlignment="textStart" />
+    </RelativeLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ProgressBar" />
+</FrameLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/settings_fitness_api_card" style="@style/SettingsCard"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/settings_fitness_api_card_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_card_title" style="@style/SettingsCardText.TitleTextStyle" />
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_fitness_api_account_layout" android:paddingBottom="@dimen/settings_item_spacing_half" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_profile_account_picker_title" style="@style/SettingsCardText.LabelTextStyle" />
+        <Spinner android:id="@id/settings_fitness_api_account_picker" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/settings_card_label_padding_bottom" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_fitness_api_allow_activity_detection" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/settings_item_spacing_half" android:paddingBottom="@dimen/settings_item_spacing_half" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_allow_activity_detection" android:layout_weight="1.0" style="@style/SettingsCardText.LabelTextStyle" />
+            <Switch android:id="@id/settings_fitness_api_allow_activity_detection_switch" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:id="@id/settings_fitness_api_allow_activity_detection_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_allow_activity_detection_description" style="@style/SettingsCardText.SummaryTextStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_fitness_api_high_accuracy" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/settings_item_spacing_half" android:paddingBottom="@dimen/settings_item_spacing_half" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_high_accuracy_title" android:layout_weight="1.0" style="@style/SettingsCardText.LabelTextStyle" />
+            <Switch android:id="@id/settings_fitness_api_high_accuracy_switch" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:id="@id/settings_fitness_api_gps_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_high_accuracy_desc" style="@style/SettingsCardText.SummaryTextStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_fitness_api_body_sensor" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/settings_item_spacing_half" android:paddingBottom="@dimen/settings_item_spacing_half" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_body_sensor_title" android:layout_weight="1.0" style="@style/SettingsCardText.LabelTextStyle" />
+            <Switch android:id="@id/settings_fitness_api_body_sensor_switch" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:id="@id/settings_fitness_api_body_sensor_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_body_sensor_description" style="@style/SettingsCardText.SummaryTextStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_fitness_api_connected_apps" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/settings_item_spacing_half" android:paddingBottom="@dimen/settings_item_spacing_half" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_connected_apps" style="@style/SettingsCardText.LabelTextStyle" />
+        <TextView android:id="@id/settings_fitness_api_connected_apps_value" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_connected_apps_description" style="@style/SettingsCardText.SummaryTextStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_fitness_api_connected_bles" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/settings_item_spacing_half" android:paddingBottom="@dimen/settings_item_spacing_half" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_connected_bles" style="@style/SettingsCardText.LabelTextStyle" />
+        <TextView android:id="@id/settings_fitness_api_connected_bles_value" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SettingsCardText.SummaryTextStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_fitness_api_google_location" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/settings_item_spacing_half" android:paddingBottom="@dimen/settings_item_spacing_half" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_google_location_settings" style="@style/SettingsCardText.LabelTextStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_fitness_api_delete_all" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/settings_item_spacing_half" android:paddingBottom="@dimen/settings_item_spacing_half" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_delete_history" style="@style/SettingsCardText.LabelTextStyle" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_fitness_api_delete_history_description" style="@style/SettingsCardText.SummaryTextStyle" />
+    </LinearLayout>
+</LinearLayout>

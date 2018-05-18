@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="@dimen/weight_card_height" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/weight_chart_card_top_area" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:animateLayoutChanges="true" style="@style/Fitness.SelectableItemBackgroundBorderless">
+        <RelativeLayout android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/fitness_weight_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_weight_maintain" android:tint="@color/quantum_purple800" android:layout_alignParentLeft="true" style="@style/WeightCardIcon" />
+            <TextView android:textAppearance="@style/FitHeaderTextAppearance" android:paddingTop="@dimen/title_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weight_chart_card_title" android:layout_toRightOf="@id/fitness_weight_icon" />
+            <ImageView android:id="@id/weight_trend_line_info" android:paddingLeft="@dimen/weight_card_padding_left_small" android:paddingTop="@dimen/title_padding_top" android:paddingRight="@dimen/weight_card_padding_left_small" android:paddingBottom="@dimen/title_padding_top" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_info_grey600_24" android:layout_alignParentRight="true" android:contentDescription="@string/weight_trend_line_info_accessibility" android:alpha="0.54" style="@style/Fitness.SelectableItemBackgroundBorderless" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/weight_number_container" android:paddingLeft="@dimen/weight_card_padding_left_large" android:paddingBottom="@dimen/weight_card_padding_top_small" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/current_weight_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/WeightCardContentNumberPurple" android:id="@id/current_weight1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textAppearance="@style/WeightCardContentValue" android:id="@id/current_weight_unit1" android:paddingLeft="@dimen/weight_card_value_unit_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textAppearance="@style/WeightCardContentNumberPurple" android:id="@id/current_weight2" android:paddingLeft="@dimen/weight_card_value_unit_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textAppearance="@style/WeightCardContentValue" android:id="@id/current_weight_unit2" android:paddingLeft="@dimen/weight_card_value_unit_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_pounds_short" />
+                </LinearLayout>
+                <TextView android:textAppearance="@style/WeightCardContent" android:id="@id/current_weight_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/current_weight_container" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/trend_weight_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/WeightCardContentNumberBlack" android:id="@id/trend_weight1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textAppearance="@style/WeightCardContentValue" android:id="@id/trend_weight_unit1" android:paddingLeft="@dimen/weight_card_value_unit_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textAppearance="@style/WeightCardContentNumberBlack" android:id="@id/trend_weight2" android:paddingLeft="@dimen/weight_card_value_unit_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textAppearance="@style/WeightCardContentValue" android:id="@id/trend_weight_unit2" android:paddingLeft="@dimen/weight_card_value_unit_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_pounds_short" />
+                </LinearLayout>
+                <TextView android:textAppearance="@style/WeightCardContent" android:id="@id/trend_weight_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/trend_weight_container" />
+            </RelativeLayout>
+        </LinearLayout>
+        <com.google.android.libraries.aplos.chart.line.LineChart android:id="@id/weight_chart_card_chart" android:paddingLeft="@dimen/weight_card_padding_left_small" android:paddingRight="@dimen/weight_card_padding_left_small" android:paddingBottom="@dimen/weight_card_padding_bottom_small" android:layout_width="fill_parent" android:layout_height="150.0dip" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/quantum_grey800" android:id="@id/weight_trend_line_explanation" android:paddingLeft="@dimen/weight_card_padding_left_large" android:paddingRight="@dimen/weight_card_padding_left_small" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/weight_trend_line_explanation" android:lineSpacingMultiplier="1.2" />
+    </LinearLayout>
+    <View android:id="@id/weight_card_divider" style="@style/FitDivider" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/weight_chart_card_button_container" android:layout_width="fill_parent" android:layout_height="@dimen/weight_card_bottom_bar_height">
+        <Button android:layout_gravity="center_vertical" android:id="@id/weight_log" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weight_log" style="@style/FitPurpleButton" />
+        <Button android:layout_gravity="center_vertical" android:id="@id/weight_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weight_details" style="@style/FitGreyButton" />
+    </LinearLayout>
+</LinearLayout>

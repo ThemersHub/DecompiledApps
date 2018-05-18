@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/top_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/session_menu" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/timeline_dot" android:layout_width="@dimen/timeline_event_diameter" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/timeline_event_title_padding" android:scaleType="center" android:minHeight="@dimen/timeline_event_dot_min_height" />
+        <LinearLayout android:orientation="vertical" android:id="@id/title_container" android:paddingLeft="@dimen/timeline_event_title_drawable_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <include layout="@layout/timeline_session_title" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/session_menu" android:visibility="gone" android:layout_width="@dimen/overflow_button_touch_side" android:layout_height="@dimen/overflow_button_touch_side" android:layout_marginTop="@dimen/timeline_overflow_button_end_margin_top" android:layout_marginRight="@dimen/timeline_overflow_button_end_margin" android:src="@drawable/ic_overflow_dark_small" android:scaleType="center" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/overflow_menu" style="@style/Fitness.SelectableItemBackgroundBorderless" />
+    <TextView android:textAppearance="@style/TimelineEvent.SubTitleTextStyle" android:id="@id/content" android:paddingLeft="@dimen/timeline_event_content_padding" android:paddingRight="@dimen/timeline_event_content_item_padding_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/top_container" android:layout_alignParentLeft="true" />
+    <FrameLayout android:background="@color/quantum_grey200" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/timeline_event_content_padding" android:layout_marginTop="8.0dip" android:layout_below="@id/content">
+        <TextView android:id="@id/contributor" android:minWidth="80.0dip" style="@style/ContributorViewButtonStyle" />
+    </FrameLayout>
+</merge>

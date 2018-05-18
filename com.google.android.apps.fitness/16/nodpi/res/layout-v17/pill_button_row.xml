@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/button_row" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/left_keyline" android:layout_marginTop="@dimen/row_vertical_margin" android:layout_marginRight="16.0dip" android:layout_marginStart="@dimen/left_keyline" android:layout_marginEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/unit_one_view" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/unit_one_button" android:layout_width="@dimen/pill_button_width" android:layout_height="@dimen/button_icon_height" />
+            <TextView android:id="@id/unit_one" style="@style/GoalPillButtonLabel" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/unit_two_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_toRightOf="@id/unit_one_view" android:layout_marginStart="15.0dip" android:layout_toEndOf="@id/unit_one_view">
+            <ImageButton android:id="@id/unit_two_button" android:layout_width="@dimen/pill_button_width" android:layout_height="@dimen/button_icon_height" />
+            <TextView android:id="@id/unit_two" style="@style/GoalPillButtonLabel" />
+        </FrameLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/row_vertical_margin">
+        <FrameLayout android:id="@id/unit_three_view" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/unit_three_button" android:layout_width="@dimen/pill_button_width" android:layout_height="@dimen/button_icon_height" />
+            <TextView android:id="@id/unit_three" style="@style/GoalPillButtonLabel" />
+        </FrameLayout>
+        <ImageButton android:id="@id/more_button" android:layout_width="wrap_content" android:layout_height="@dimen/button_icon_height" android:layout_marginLeft="15.0dip" android:src="@drawable/quantum_ic_more_horiz_white_24" android:minWidth="@dimen/pill_button_width" android:layout_toRightOf="@id/unit_three_view" android:layout_centerVertical="true" android:contentDescription="@string/custom_value_content_description_a11y" android:layout_marginStart="15.0dip" android:layout_toEndOf="@id/unit_three_view" />
+    </RelativeLayout>
+</LinearLayout>

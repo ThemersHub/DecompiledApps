@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/map_container_wrapper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/map_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageButton android:id="@id/location_quality_indicator" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/quantum_ic_gps_off_grey600_24" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <com.google.android.apps.fitness.ui.imageheader.FullBleedImageView android:id="@id/non_map_activity_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MaxWidthImageHeader" />
+    <com.google.android.libraries.social.ui.views.expandingscrollview.ExpandingScrollView android:id="@id/expanding_scroll_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/main_content_container" android:background="@color/favorite_activity_third_primary" android:layout_width="fill_parent" android:layout_height="@dimen/active_mode_main_content_default_height">
+            <LinearLayout android:orientation="horizontal" android:id="@id/activity_bar" android:background="@color/favorite_activity_third_secondary" android:layout_width="fill_parent" android:layout_height="@dimen/active_mode_activity_bar_height">
+                <Spinner android:id="@id/activity_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_spinner_padding" android:layout_weight="1.0" android:spinnerMode="dialog" />
+                <include android:layout_gravity="center_horizontal" android:id="@id/activity_bar_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/activity_spinner_item" />
+            </LinearLayout>
+            <include android:id="@id/metrics_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/metrics_table" />
+            <TextView android:textAppearance="@style/StartTextTextAppearance" android:gravity="center" android:id="@id/start_text" android:layout_width="fill_parent" android:layout_height="@dimen/active_mode_start_text_height" android:text="@string/active_mode_start_recording" android:contentDescription="@string/active_mode_start_recording_accessibility" style="@style/Fitness.SelectableItemBackgroundBorderless" />
+            <com.google.android.libraries.fitness.ui.countdown.CountdownView android:layout_gravity="center" android:orientation="vertical" android:id="@id/count_down" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/active_mode_countdown_height" />
+        </LinearLayout>
+    </com.google.android.libraries.social.ui.views.expandingscrollview.ExpandingScrollView>
+    <View android:id="@id/click_interceptor" android:background="@color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/control_bar" />
+</android.support.design.widget.CoordinatorLayout>

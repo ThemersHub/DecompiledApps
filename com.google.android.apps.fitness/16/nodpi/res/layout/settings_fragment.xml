@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.NestedScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/settings_cards" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_gravity="center_vertical" android:background="@color/settings_color_primary" android:layout_width="fill_parent" android:layout_height="@dimen/image_header_height">
+                <com.google.android.apps.fitness.ui.imageheader.FullBleedImageView android:id="@id/settings_header_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/illo_header_profiles" style="@style/MaxWidthImageHeader" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/cards_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/settings_favorites_card" />
+                <include layout="@layout/settings_basic_info_card" />
+                <include layout="@layout/settings_unit_card" />
+                <include layout="@layout/settings_fitness_api_card" />
+                <include layout="@layout/settings_notifications_card" />
+                <include layout="@layout/settings_active_mode_card" />
+                <include layout="@layout/settings_blocked_cards_card" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.design.widget.AppBarLayout android:id="@id/settings_app_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:theme="@style/FitToolbarTheme" android:id="@id/settings_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/FitToolbarPopupTheme">
+            <TextView android:id="@id/toolbar_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_activity_name" style="@style/FitToolbarTextAppearance" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+</FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/goals_primary_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/centered_content_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/title_icon" android:paddingLeft="8.0dip" android:paddingTop="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="8.0dip" />
+            <TextView android:id="@id/title_view" android:paddingTop="@dimen/title_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/left_keyline" android:text="@string/your_goal_title" android:layout_marginStart="@dimen/left_keyline" style="@style/GoalTitle" />
+        </FrameLayout>
+        <TextView android:id="@id/activity_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/left_keyline" android:layout_marginTop="@dimen/row_vertical_margin" android:layout_below="@id/title_layout" android:layout_marginStart="@dimen/left_keyline" android:layout_alignStart="@id/title" style="@style/GoalTitle" />
+        <EditText android:textSize="24.0sp" android:textStyle="bold" android:textColor="@color/quantum_white_text" android:id="@id/number_input" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/custom_count_button_margin" android:minWidth="@dimen/custom_count_edit_min_width" android:layout_below="@id/activity_title" android:inputType="number" android:contentDescription="@string/custom_value_hint_a11y" android:textCursorDrawable="@drawable/white_cursor" android:layout_alignStart="@id/activity_title" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/quantum_white_text" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/title_vertical_padding" android:layout_below="@id/number_input" android:layout_alignStart="@id/number_input" />
+    </RelativeLayout>
+    <LinearLayout android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:paddingEnd="10.0dip">
+        <Button android:textSize="@dimen/button_text_size" android:textColor="@color/quantum_white_text" android:id="@id/cancel_button" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel_button" android:textAllCaps="true" />
+        <Button android:textSize="@dimen/button_text_size" android:textColor="@color/goals_disabled_button_color" android:id="@id/save_button" android:background="?selectableItemBackground" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save_button" android:textAllCaps="true" />
+    </LinearLayout>
+</RelativeLayout>

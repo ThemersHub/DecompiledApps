@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/line" android:layout_width="fill_parent" android:layout_height="@dimen/timeline_divider_height" android:layout_marginLeft="@dimen/timeline_date_separator_line_padding_side" android:layout_marginRight="@dimen/timeline_date_separator_line_padding_side" android:src="@drawable/date_separator_line" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/header_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/timeline_date_separator_padding_side" android:layout_marginTop="@dimen/timeline_date_separator_padding_vertical" android:layout_marginRight="@dimen/timeline_date_separator_padding_side" android:layout_marginBottom="@dimen/timeline_date_separator_contents_padding_vertical" android:layout_below="@id/line">
+        <TextView android:textAppearance="@style/TimelineDate.Date.TextStyle" android:id="@id/date" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textAppearance="@style/TimelineDate.Total.TextStyle" android:layout_gravity="bottom" android:id="@id/total_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/timeline_date_separator_totals_size" />
+    </LinearLayout>
+    <include layout="@layout/date_collapsed" />
+    <include layout="@layout/date_expanded" />
+    <TextView android:id="@id/accessibility_details" android:layout_width="1.0dip" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</merge>

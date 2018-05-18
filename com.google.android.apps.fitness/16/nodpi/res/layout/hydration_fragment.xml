@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.NestedScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="12.0dip">
+            <TextView android:textSize="20.0sp" android:textColor="@color/quantum_black_text" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:text="@string/log_hydration_frag_title" android:layout_centerHorizontal="true" />
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/title">
+                <ImageButton android:id="@id/minus_button" android:background="@drawable/hydration_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/quantum_ic_remove_white_24" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="20.0sp" android:textStyle="bold" android:id="@id/logged_water" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+                <ImageButton android:id="@id/plus_button" android:background="@drawable/hydration_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/quantum_ic_add_white_24" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.design.widget.AppBarLayout android:id="@id/app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/app_toolbar_elevation">
+        <android.support.v7.widget.Toolbar android:theme="@style/FitToolbarTheme" android:id="@id/hydration_edit_toolbar" android:background="@color/quantum_lightblue500" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/FitToolbarPopupTheme">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/log_hydration_title" style="@style/FitToolbarTextAppearance" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+</android.support.design.widget.CoordinatorLayout>

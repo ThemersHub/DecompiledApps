@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/coordinator_layout" android:background="@color/goals_primary_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.NestedScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" layout="@layout/goal_title" />
+            <TextView android:id="@id/activity_title" android:paddingTop="@dimen/metric_title_icon_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/left_keyline" android:layout_marginStart="@dimen/left_keyline" style="@style/GoalDescription" />
+            <FrameLayout android:id="@id/button_row" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <include layout="@layout/custom_count_button" />
+            <TextView android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/left_keyline" android:layout_marginTop="@dimen/row_vertical_margin" android:layout_marginRight="@dimen/left_keyline" android:layout_marginStart="@dimen/left_keyline" android:layout_marginEnd="@dimen/left_keyline" style="@style/GoalDescription" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.design.widget.AppBarLayout android:id="@id/app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/app_toolbar_elevation">
+        <android.support.v7.widget.Toolbar android:theme="@style/FitToolbarTheme" android:id="@id/goal_edit_toolbar" android:background="@color/goals_primary_color" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/FitToolbarPopupTheme">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit_goal_title" style="@style/FitToolbarTextAppearance" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+</android.support.design.widget.CoordinatorLayout>

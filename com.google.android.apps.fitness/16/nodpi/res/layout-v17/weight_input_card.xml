@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="@dimen/weight_card_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/weight_input_card_top_area" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/fitness_weight_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_weight_maintain" android:tint="@color/quantum_purple800" style="@style/WeightCardIcon" />
+            <TextView android:textAppearance="@style/FitHeaderTextAppearance" android:paddingTop="@dimen/title_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weight_input_card_title" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/weight_card_padding_left_large" android:paddingTop="@dimen/weight_input_card_padding_large" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/weight_card_padding_left_large">
+            <LinearLayout android:orientation="vertical" android:id="@id/date_clicker" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weight_date_label" />
+                <EditText android:textAppearance="@style/WeightCardEditText" android:id="@id/date" android:focusable="false" android:longClickable="false" android:layout_width="@dimen/weight_input_card_edit_text_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/edit_text_negative_margin_start" android:singleLine="true" android:importantForAccessibility="no" android:textAlignment="viewStart" android:layout_marginStart="@dimen/edit_text_negative_margin_start" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/time_clicker" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weight_time_label" />
+                <EditText android:textAppearance="@style/WeightCardEditText" android:id="@id/time" android:focusable="false" android:longClickable="false" android:layout_width="@dimen/weight_input_card_edit_text_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/edit_text_negative_margin_start" android:singleLine="true" android:importantForAccessibility="no" android:textAlignment="viewStart" android:layout_marginStart="@dimen/edit_text_negative_margin_start" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@id/weight_label" android:paddingLeft="@dimen/weight_card_padding_left_large" android:paddingTop="@dimen/weight_input_card_padding_large" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weight_input_label" android:paddingStart="@dimen/weight_card_padding_left_large" />
+        <include android:id="@id/weight_input" style="@style/WeightCardInput" layout="@layout/weight_value_with_unit" />
+    </LinearLayout>
+    <View style="@style/FitDivider" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/weight_card_bottom_bar_height">
+        <Button android:id="@id/weight_save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weight_save" style="@style/FitPurpleButton" />
+        <Button android:id="@id/weight_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weight_cancel" style="@style/FitGreyButton" />
+    </LinearLayout>
+</LinearLayout>

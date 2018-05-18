@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/goal_title" />
+    <include layout="@layout/goal_activity_title" />
+    <include layout="@layout/button_row" />
+    <include layout="@layout/custom_count_button" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/left_keyline" android:layout_marginTop="@dimen/row_vertical_margin" android:layout_marginStart="@dimen/left_keyline">
+        <Spinner android:id="@id/type" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@id/every_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/each_description" android:layout_alignBottom="@id/type" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" android:layout_toEndOf="@id/type" style="@style/GoalDescription" />
+        <Spinner android:id="@id/recurrence" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/every_view" />
+    </RelativeLayout>
+</LinearLayout>

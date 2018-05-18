@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/category_goal_title" />
+    <RelativeLayout android:paddingLeft="55.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:paddingStart="55.0dip" android:layout_marginEnd="16.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/steps_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true">
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@id/steps_button" android:layout_width="@dimen/type_icon_diameter" android:layout_height="@dimen/type_icon_diameter" android:src="@drawable/ic_steps_white" android:contentDescription="@string/goalv2_type_steps" />
+            <TextView android:id="@id/steps_title" android:layout_width="@dimen/icon_title_width" android:layout_height="wrap_content" android:text="@string/goalv2_type_steps" style="@style/GoalIconLabel.Vertical" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/run_icon" android:paddingLeft="60.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:paddingStart="60.0dip">
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@id/run_button" android:layout_width="@dimen/type_icon_diameter" android:layout_height="@dimen/type_icon_diameter" android:src="@drawable/ic_running" android:contentDescription="@string/activity_type_running" />
+            <TextView android:id="@id/run_title" android:layout_width="@dimen/icon_title_width" android:layout_height="wrap_content" android:text="@string/activity_type_running" style="@style/GoalIconLabel.Vertical" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/bike_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@id/bike_button" android:layout_width="@dimen/type_icon_diameter" android:layout_height="@dimen/type_icon_diameter" android:src="@drawable/ic_biking" android:contentDescription="@string/activity_type_biking" />
+            <TextView android:id="@id/bike_title" android:layout_width="@dimen/icon_title_width" android:layout_height="wrap_content" android:text="@string/activity_type_biking" style="@style/GoalIconLabel.Vertical" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageButton android:id="@id/more_goal_types" android:layout_width="@dimen/type_icon_diameter" android:layout_height="@dimen/type_icon_diameter" android:layout_marginTop="32.0dip" android:src="@drawable/quantum_ic_more_horiz_white_24" android:contentDescription="@string/more_button_content_description_a11y" android:layout_marginStart="@dimen/left_keyline" />
+</LinearLayout>
