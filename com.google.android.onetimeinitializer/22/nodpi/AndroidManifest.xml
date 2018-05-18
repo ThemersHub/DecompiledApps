@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.onetimeinitializer" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-2168912">
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.google.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.google.android.launcher.permission.WRITE_SETTINGS"/>
+    <permission android:name="com.google.android.onetimeinitializer.permission.ONE_TIME_INITIALIZED" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.onetimeinitializer.permission.ONE_TIME_INITIALIZED"/>
+    <application android:label="@string/app_label">
+        <receiver android:name="com.google.android.onetimeinitializer.OneTimeInitializerReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.onetimeinitializer.OneTimeService"/>
+    </application>
+</manifest>
