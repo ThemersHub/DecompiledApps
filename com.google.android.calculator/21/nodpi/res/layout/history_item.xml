@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/history_divider_padding" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/history_divider" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/history_divider_padding" android:layout_marginBottom="@dimen/history_divider_padding" android:importantForAccessibility="no" />
+    <com.android.calculator2.CopyableTextView android:textSize="14.0dip" android:textColor="?android:colorPrimary" android:id="@id/history_date" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/title_current_expression" android:importantForAccessibility="yes" android:fontFamily="sans-serif-medium" android:paddingStart="@dimen/display_padding" android:paddingEnd="@dimen/display_padding" />
+    <com.android.calculator2.CalculatorScrollView android:id="@id/history_formula_container" android:scrollbars="none" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:overScrollMode="never" android:layoutDirection="ltr">
+        <com.android.calculator2.HistoryFormula android:textColor="@color/display_formula_text_color" android:ellipsize="none" android:id="@id/history_formula" android:layout_width="wrap_content" android:layout_height="fill_parent" android:cursorVisible="false" android:textIsSelectable="true" style="@style/HistoryItemTextStyle" />
+    </com.android.calculator2.CalculatorScrollView>
+    <com.android.calculator2.HistoryResult android:textColor="@color/display_result_text_color" android:id="@id/history_result" android:layout_width="fill_parent" android:layout_height="wrap_content" android:bufferType="spannable" android:maxLines="1" android:layoutDirection="ltr" style="@style/HistoryItemTextStyle" />
+</LinearLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.Compat.Notification" parent="@android:style/TextAppearance.StatusBar.EventContent" />
+    <style name="TextAppearance.Compat.Notification.Info" parent="@style/TextAppearance.Compat.Notification">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Info.Media" parent="@style/TextAppearance.Compat.Notification.Info" />
+    <style name="TextAppearance.Compat.Notification.Media" parent="@style/TextAppearance.Compat.Notification" />
+    <style name="TextAppearance.Compat.Notification.Time" parent="@style/TextAppearance.Compat.Notification">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Time.Media" parent="@style/TextAppearance.Compat.Notification.Time" />
+    <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title" />
+    <style name="TextAppearance.Compat.Notification.Title.Media" parent="@style/TextAppearance.Compat.Notification.Title" />
+    <style name="Widget.Compat.NotificationActionContainer" parent="" />
+    <style name="Widget.Compat.NotificationActionText" parent="" />
+    <style name="PadArrowStyle.Arrow" parent="@style/PadArrowStyle">
+        <item name="android:visibility">visible</item>
+    </style>
+    <style name="PadButtonStyle.Advanced" parent="@style/PadButtonStyle">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@color/pad_button_text_color</item>
+        <item name="android:background">@drawable/pad_button_advanced_background</item>
+    </style>
+    <style name="PadButtonStyle.Advanced.Text" parent="@style/PadButtonStyle.Advanced">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="PadButtonStyle.Numeric" parent="@style/PadButtonStyle">
+        <item name="android:textSize">16.0dip</item>
+    </style>
+    <style name="PadButtonStyle.Numeric.Equals" parent="@style/PadButtonStyle.Numeric">
+        <item name="android:visibility">visible</item>
+    </style>
+    <style name="PadButtonStyle.Operator" parent="@style/PadButtonStyle">
+        <item name="android:textSize">14.0dip</item>
+    </style>
+    <style name="PadButtonStyle.Operator.Text" parent="@style/PadButtonStyle.Operator">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="PadLayoutStyle.Advanced" parent="@style/PadLayoutStyle">
+        <item name="android:paddingTop">2.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:paddingEnd">18.0dip</item>
+        <item name="android:elevation">4.0dip</item>
+    </style>
+    <style name="PadLayoutStyle.Numeric" parent="@style/PadLayoutStyle">
+        <item name="android:paddingTop">2.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_weight">7.0</item>
+        <item name="android:paddingStart">8.0dip</item>
+        <item name="android:paddingEnd">8.0dip</item>
+    </style>
+    <style name="PadLayoutStyle.Operator" parent="@style/PadLayoutStyle">
+        <item name="android:paddingTop">2.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_weight">3.0</item>
+        <item name="android:paddingStart">4.0dip</item>
+        <item name="android:paddingEnd">28.0dip</item>
+    </style>
+    <style name="DisplayTextStyle" parent="@android:style/Widget.Material.Light.TextView">
+        <item name="android:gravity">end|bottom|center</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:inputType">textNoSuggestions</item>
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textAlignment">viewEnd</item>
+    </style>
+    <style name="DisplayTextStyle.Formula" parent="@style/DisplayTextStyle">
+        <item name="android:gravity">bottom</item>
+        <item name="android:paddingTop">@dimen/formula_padding_top</item>
+        <item name="android:paddingBottom">@dimen/formula_padding_bottom</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:bufferType">editable</item>
+        <item name="android:editable">false</item>
+        <item name="android:paddingStart">@dimen/display_padding</item>
+        <item name="android:paddingEnd">@dimen/display_padding</item>
+        <item name="minTextSize">@dimen/formula_min_textsize</item>
+        <item name="maxTextSize">@dimen/formula_max_textsize</item>
+        <item name="stepTextSize">@dimen/formula_step_textsize</item>
+    </style>
+    <style name="DisplayTextStyle.Result" parent="@style/DisplayTextStyle">
+        <item name="android:textSize">@dimen/result_textsize</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:paddingTop">@dimen/result_padding_top</item>
+        <item name="android:paddingBottom">@dimen/result_padding_bottom</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:editable">false</item>
+        <item name="android:inputType">none</item>
+        <item name="android:paddingStart">@dimen/display_padding</item>
+        <item name="android:paddingEnd">@dimen/display_padding</item>
+    </style>
+    <style name="HistoryItemTextStyle" parent="@style/DisplayTextStyle">
+        <item name="android:textSize">@dimen/result_textsize</item>
+        <item name="android:layout_gravity">end|bottom|center</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:paddingTop">@dimen/history_item_text_padding_top</item>
+        <item name="android:paddingBottom">@dimen/history_item_text_padding_bottom</item>
+        <item name="android:editable">false</item>
+        <item name="android:inputType">none</item>
+        <item name="android:paddingStart">@dimen/display_padding</item>
+        <item name="android:paddingEnd">@dimen/display_padding</item>
+    </style>
+    <style name="PadArrowStyle">
+        <item name="android:textColor">@color/pad_button_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">24.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/ic_horiz_caret_expand_24px</item>
+        <item name="android:minWidth">24.0dip</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="layout_gravity">fill</item>
+    </style>
+    <style name="PadButtonStyle" parent="@android:style/Widget.Material.Light.Button.Borderless">
+        <item name="android:textColor">@color/pad_button_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/pad_button_background</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:minHeight">0.0dip</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:onClick">onButtonClick</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="layout_rowWeight">1.0</item>
+        <item name="layout_columnWeight">1.0</item>
+        <item name="layout_gravity">fill</item>
+    </style>
+    <style name="PadLayoutStyle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Line2" parent="@style/TextAppearance.Compat.Notification.Info" />
+    <style name="TextAppearance.Compat.Notification.Line2.Media" parent="@style/TextAppearance.Compat.Notification.Info.Media" />
+    <style name="Theme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="android:colorPrimary">@color/calculator_primary_color</item>
+        <item name="android:colorAccent">@color/calculator_accent_color</item>
+        <item name="android:statusBarColor">@color/calculator_statusbar_color</item>
+    </style>
+    <style name="Theme.Calculator" parent="@style/Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+    <style name="Theme.Licenses" parent="@style/Theme">
+        <item name="android:title">@string/menu_licenses</item>
+    </style>
+    <style name="ThemeOverlay.Popup" parent="@android:style/ThemeOverlay.Material.Light">
+        <item name="android:textDirection">locale</item>
+    </style>
+    <style name="ToolbarTheme" parent="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+</resources>
