@@ -451,6 +451,7 @@ Tätä toimintoa ei voi kumota."</string>
     <string name="dialog_td_will_disappear">Tämä Tiimin Drive poistetaan kaikkien käytöstä, etkä voi kumota tätä toimintoa.</string>
     <string name="dialog_td_will_disappear_files_in_trash">Tämän Tiimin Driven tiedostot ovat Tiimin Driven %1$s roskakorissa. Kukaan käyttäjistä ei voi palauttaa niitä. Tämä Tiimin Drive poistetaan kaikkien käytöstä, etkä voi kumota tätä toimintoa.</string>
     <string name="did_you_mean">Tarkoititko %1$s?</string>
+    <string name="disabled_append">pois käytöstä</string>
     <string name="discussion_accept">Hyväksy</string>
     <string name="discussion_acl_fix_access_role_commenter">Voi kommentoida</string>
     <string name="discussion_acl_fix_access_role_writer">Voi muokata</string>
@@ -562,11 +563,11 @@ Tätä toimintoa ei voi kumota."</string>
     <string name="doclist_date_never_label">Ei koskaan</string>
     <string name="doclist_date_opened_label">Avasin: %s</string>
     <string name="doclist_date_shared_label">Jaettu: %s</string>
-    <string name="doclist_date_shared_with_owner_label" formatted="false">%s · %s</string>
+    <string name="doclist_date_shared_with_owner_label">%1$s · %2$s</string>
     <string name="doclist_date_uploaded_by_me_label">Lähetin: %s</string>
     <string name="doclist_detail_fragment_content_description">Näytä kohteen ominaisuudet</string>
-    <string name="doclist_entry_content_description" formatted="false">%s %s</string>
-    <string name="doclist_entry_content_description_with_color" formatted="false">%s %s väri:%s</string>
+    <string name="doclist_entry_content_description">%1$s %2$s</string>
+    <string name="doclist_entry_content_description_with_color">%1$s %2$s väri:%3$s</string>
     <string name="doclist_open_navigation_drawer_content_description">Avaa navigoinnin vetopaneeli</string>
     <string name="doclist_quota_used_label">Käytetty tallennustila: %s</string>
     <string name="doclist_selected_show_preview">Näytä esikatselu</string>
@@ -669,6 +670,8 @@ Tätä toimintoa ei voi kumota."</string>
     <string name="draft_options_dialog_title">Luonnossivuston asetukset</string>
     <string name="draft_permission_change_anyone_warning">Kun tämä sivuston luonnoksen asetus valitaan, kaikki voivat tarkastella julkaistua kohdetta.</string>
     <string name="draft_permission_change_domain_warning">Kun tämä sivuston luonnoksen asetus valitaan, kaikki verkkotunnuksessa %s voivat tarkastella julkaistua kohdetta.</string>
+    <string name="draft_permission_downgrade_domain_warning">Jos muutat tämän sivuston luonnoksen asetuksen, vain %1$s voi katsoa julkaistun linkin</string>
+    <string name="draft_permission_downgrade_specific_warning">Jos muutat tämän sivuston luonnoksen asetuksen, vain tietyt henkilöt voivat katsoa julkaistun linkin</string>
     <string name="drive_file_stream_disabled">Estä tämän Tiimin Driven tiedostojen avaaminen Drive File Streamilla tai vastaavilla sovelluksilla.</string>
     <string name="drive_file_stream_enabled">Salli tämän Tiimin Driven tiedostojen avaaminen Drive File Streamilla tai vastaavilla sovelluksilla.</string>
     <string name="drive_file_stream_title">Drive File Stream</string>
@@ -811,7 +814,7 @@ Luo uusi dokumentti klikkaamalla +."</string>
     <string name="file_picker_select_a_folder_heading">Valitse kansio</string>
     <string name="file_picker_select_button">Valitse</string>
     <string name="file_picker_storage_permissions_denied_toast">Paikallisen tallennustilan käyttöoikeuksia ei myönnetä.</string>
-    <string name="file_too_large_for_upload" formatted="false">Tiedosto %1s on liian suuri ladattavaksi Google Driveen. Se on %2s, ja tämän tyyppiset tiedostot voivat olla kooltaan enintään %3s. Voit ehkä ladata tiedoston muuntamatta sitä Google Drive -muotoon.</string>
+    <string name="file_too_large_for_upload">Tiedosto %1$s on liian suuri ladattavaksi Google Driveen. Se on %2$s, ja tämän tyyppiset tiedostot voivat olla kooltaan enintään %3$s. Voit ehkä ladata tiedoston muuntamatta sitä Google Drive -muotoon.</string>
     <string name="file_too_large_for_upload_okbtn">Ok</string>
     <string name="file_too_large_for_upload_title">Lataaminen ei onnistu</string>
     <string name="file_was_not_sent">Tiedostoa ei ole jaettu.</string>
@@ -1106,7 +1109,6 @@ Luo uusi dokumentti klikkaamalla +."</string>
     <string name="move_error_target_folder_not_exist">Kohdekansiota ei ole.</string>
     <string name="move_notice_lost_access_shared_folders">Kohteita siirrettiin jaetusta kansiosta.</string>
     <string name="move_notice_lost_access_team_drive_single">%1$s %2$s menetti käyttöoikeuden.</string>
-    <string name="move_notice_lost_access_team_drive_single_fallback">1 kohde siirrettiin Tiimin Drivesta.</string>
     <string name="move_notice_lost_access_team_drives">Kohteita siirrettiin Tiimin Drivesta.</string>
     <string name="native_create_disabled_dialog_message">Tilisi ei tue dokumenttien luomista Google Docsilla.</string>
     <string name="native_create_disabled_dialog_title">Et voi luoda Google-asiakirjoja</string>
@@ -1138,7 +1140,7 @@ Luo uusi dokumentti klikkaamalla +."</string>
     <string name="no_files_in_team_drive_title">Ei tiedostoja kohteessa %1$s</string>
     <string name="no_team_drives_title">Ei Tiimin Driveja</string>
     <string name="no_thanks">Ei kiitos</string>
-    <string name="not_enough_storage_for_upload" formatted="false">Tiedosto %1s on liian suuri ladattavaksi Google Driveen. Sen koko on %2s, mutta käytössäsi on vain %3s tallennustilaa. Päivitä tallennustila ja yritä uudelleen.</string>
+    <string name="not_enough_storage_for_upload">Tiedosto %1$s on liian suuri ladattavaksi Google Driveen. Sen koko on %2$s, mutta käytössäsi on vain %3$s tallennustilaa. Päivitä tallennustila ja yritä uudelleen.</string>
     <string name="notification_channel_name_default">Oletus</string>
     <string name="notification_channel_name_high_priority">Erittäin tärkeä</string>
     <string name="notification_channel_name_low_priority">Vähemmän tärkeät</string>
@@ -1790,7 +1792,7 @@ Luo uusi dokumentti klikkaamalla +."</string>
     <string name="team_drive_empty_list_message_cannot_create">Kun joku lisää sinut Tiimin Driveen, näet sen täällä.</string>
     <string name="team_drive_settings_title">Asetukset</string>
     <string name="team_drive_trash_welcome_snackbar">Tiimin Drivejen roskakorin kohteet poistetaan pysyvästi 30 päivän kuluttua.</string>
-    <string name="teamdrive_members_and_domain" formatted="false">%s • %s</string>
+    <string name="teamdrive_members_and_domain">%1$s • %2$s</string>
     <string name="template_category_a11y_text">%1$s, otsikko</string>
     <string name="template_category_education">Koulutus</string>
     <string name="template_category_freelancer_engagement">Freelancerin osallistuminen</string>
@@ -1866,6 +1868,8 @@ Luo uusi dokumentti klikkaamalla +."</string>
     <string name="unable_to_open_local_document_browse">Etsi tiedosto selaamalla</string>
     <string name="unable_to_open_local_document_message">Se on ehkä siirretty tai poistettu.</string>
     <string name="unable_to_open_local_document_title">Laitteeseen tallennettua tiedostoa ei voi avata</string>
+    <string name="unable_update_published_message">Sivuston julkaisusetusta ei voi muuttaa, ennen kuin luonnossivuston linkin asetus on päivitetty</string>
+    <string name="unable_update_published_title">Asetuksen päivitys epäonnistui</string>
     <string name="undeliverable_acl_changed_dialog_title">Poistetaanko muutokset ja palautetaanko dokumentti?</string>
     <string name="undeliverable_changes_dialog_content">Tekemäsi offline-muutokset ovat ehkä kadonneet. Varmista, että olet kopioinut ne leikepöydälle.</string>
     <string name="undeliverable_changes_dialog_title">Poistetaanko ongelmalliset muutokset ja palautetaanko dokumentti?</string>

@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:background="@android:color/white" android:keyboardNavigationCluster="true" style="@style/insert_tool_heading">
         <ImageButton android:id="@id/insert_tool_back_button" android:src="@drawable/quantum_ic_arrow_back_grey600_24" android:contentDescription="@string/context_menu_back" style="@style/insert_tool_search_actionbar_icon" />
-        <EditText android:id="@id/insert_tool_search" android:layout_marginLeft="@dimen/insert_tool_actionbar_text_margin_left_right" android:inputType="textNoSuggestions" android:privateImeOptions="nm" android:imeOptions="actionSearch|flagNoExtractUi" android:textCursorDrawable="@null" style="@style/insert_tool_search_bar" />
+        <com.google.android.apps.docs.editors.shared.inserttool.view.NoPrimaryActionModeEditText android:id="@id/insert_tool_search" android:layout_marginLeft="@dimen/insert_tool_actionbar_text_margin_left_right" android:inputType="textNoSuggestions" android:privateImeOptions="nm" android:imeOptions="actionSearch|flagNoExtractUi" android:textCursorDrawable="@null" style="@style/insert_tool_search_bar" />
         <ImageButton android:id="@id/insert_tool_voice_button" android:visibility="gone" android:src="@drawable/quantum_ic_mic_grey600_24" android:contentDescription="@string/insert_tool_search_voice" style="@style/insert_tool_search_actionbar_icon" />
         <ImageButton android:id="@id/insert_tool_clear_button" android:visibility="gone" android:src="@drawable/quantum_ic_cancel_grey600_24" android:contentDescription="@string/menu_search_clear" style="@style/insert_tool_search_actionbar_icon" />
     </LinearLayout>
