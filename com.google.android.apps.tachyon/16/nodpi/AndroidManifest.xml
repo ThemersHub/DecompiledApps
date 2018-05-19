@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.apps.tachyon" platformBuildVersionCode="27" platformBuildVersionName="P">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="28" package="com.google.android.apps.tachyon">
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
@@ -99,6 +99,11 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
         </service>
+        <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.tagmanager.TagManagerService"/>
         <activity android:exported="true" android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity" android:noHistory="true">
             <intent-filter>
@@ -125,6 +130,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -155,6 +161,7 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="com.google.android.apps.tachyon.action.ADD_ACCOUNT"/>
+                <action android:name="com.google.android.apps.tachyon.action.OPEN_SETTINGS"/>
                 <action android:name="com.google.android.apps.tachyon.action.REGISTER"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
@@ -255,6 +262,11 @@
             </intent-filter>
         </receiver>
         <service android:exported="false" android:name="com.google.android.apps.tachyon.net.fcm.FcmMessageHandlingService"/>
+        <service android:enabled="false" android:exported="false" android:name="com.google.android.apps.tachyon.net.fcm.FcmReceivingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
         <service android:name="com.google.android.gms.tagmanager.InstallReferrerService"/>
         <service android:exported="false" android:name="com.google.android.apps.tachyon.net.fcm.FcmInstanceIdListenerService">
             <intent-filter>

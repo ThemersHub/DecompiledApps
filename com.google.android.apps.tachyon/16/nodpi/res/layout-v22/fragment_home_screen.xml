@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.tachyon.ui.homescreen.HomeScreenLayout android:id="@id/home_screen_root" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textAlignment="textStart" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/button_bokeh_effect" android:layout_width="@dimen/call_control_button_size" android:layout_height="@dimen/call_control_button_size" android:src="@drawable/quantum_ic_auto_awesome_white_36" android:scaleType="centerInside" android:contentDescription="@string/adjust_bokeh_effect_blur_button" android:tooltipText="@string/bokeh_effect_blur_off" style="@style/TachyonWhiteCircleButton" />
+    <include layout="@layout/mic_check_view" />
+    <View android:id="@id/contacts_card_shadow_helper" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="@dimen/contacts_card_v2_elevation" />
+    <include layout="@layout/contacts_card_view_group" />
+    <RelativeLayout android:id="@id/home_screen_overlay_views_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="@dimen/contacts_card_v2_elevation">
+        <include layout="@layout/overflow_icon" />
+    </RelativeLayout>
+</com.google.android.apps.tachyon.ui.homescreen.HomeScreenLayout>
