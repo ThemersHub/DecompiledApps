@@ -744,7 +744,6 @@
         </receiver>
         <service android:exported="false" android:name="com.google.android.apps.gsa.sidekick.main.entry.EntriesRefreshIntentService" android:process=":search"/>
         <receiver android:exported="false" android:name="com.google.android.apps.gsa.sidekick.main.notifications.NotificationRefreshReceiver" android:process=":search"/>
-        <service android:name="com.google.android.apps.gsa.sidekick.main.notifications.NotificationRefreshService" android:process=":search"/>
         <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.gsa.sidekick.main.optin.OptInActivity" android:process=":search" android:taskAffinity="com.google.android.sidekick.optin" android:theme="@style/Theme.OptIn.UOS">
             <intent-filter>
                 <action android:name="com.google.android.apps.now.OPT_IN"/>
@@ -867,6 +866,7 @@
             <meta-data android:name="WindowManagerPreference:AppControlled" android:value="true"/>
         </activity>
         <uses-library android:name="com.google.android.chromeos" android:required="false"/>
+        <activity android:exported="false" android:label="@string/agenda_hub_title" android:launchMode="singleTask" android:name="com.google.android.apps.gsa.staticplugins.opa.zerostate.hubs.AgendaHubActivity" android:process=":search" android:taskAffinity=""/>
         <activity android:icon="@drawable/opa_app_icon" android:label="@string/opa_title" android:name="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivity" android:process=":search" android:taskAffinity="" android:theme="@style/Theme.Transparent"/>
         <activity-alias android:enabled="false" android:exported="true" android:icon="@drawable/opa_app_icon" android:label="@string/opa_title" android:name="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivityEyesLauncher" android:process=":search" android:targetActivity="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivity"/>
         <activity-alias android:enabled="false" android:icon="@drawable/opa_app_icon" android:label="@string/opa_launcher_icon_text" android:name="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivityFromLauncher" android:process=":search" android:targetActivity="com.google.android.apps.gsa.staticplugins.opa.EnterOpaActivity">

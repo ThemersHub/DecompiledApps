@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <SurfaceView android:id="@id/video_surface" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <FrameLayout android:id="@id/modal_overlay" android:background="@android:color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.5" />
-    <FrameLayout android:id="@id/load_indicator" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:id="@id/third_party_load_indicator" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <ProgressBar android:layout_gravity="center" android:background="@android:color/transparent" android:layout_width="@dimen/fv2_video_load_indicator_size" android:layout_height="@dimen/fv2_video_load_indicator_size" android:indeterminateTint="@android:color/white" />
     </FrameLayout>
     <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/continue_watching" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
@@ -11,5 +11,8 @@
         <FrameLayout android:id="@id/continue_watching_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
     </LinearLayout>
     <com.google.android.apps.gsa.staticplugins.nowcards.util.inlinevideoplayer.thirdparty.EqualizerView android:layout_gravity="end|bottom|center" android:id="@id/equalizer" android:visibility="gone" android:layout_width="@dimen/equalizer_size" android:layout_height="@dimen/equalizer_size" android:layout_marginRight="@dimen/equalizer_margin" android:layout_marginBottom="@dimen/equalizer_margin" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+        <com.google.android.apps.gsa.staticplugins.nowcards.util.inlinevideoplayer.thirdparty.exoplayerui.PlayerControlView android:id="@id/player_controls" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
     <FrameLayout android:id="@id/ads_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
 </com.google.android.libraries.material.aspectratio.FixedAspectRatioFrameLayout>
