@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.wallet.ui.common.MaterialFieldRegionCodeView android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <com.google.android.wallet.ui.common.MaterialFieldLayout android:id="@id/region_code_spinner_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" wallet:internalUicFieldLabel="@string/wallet_uic_address_field_country" style="?attr/internalUicMaterialFieldLayoutStyle">
+        <com.google.android.wallet.ui.common.RegionCodeSelectorSpinner android:gravity="center_vertical" android:id="@id/region_code_spinner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?uicFormVerticalMargin" android:layout_marginBottom="?uicFormVerticalMargin" android:minHeight="?uicFormItemHeight" android:prompt="@string/wallet_uic_select_location" style="?attr/uicFormSpinnerStyle" />
+    </com.google.android.wallet.ui.common.MaterialFieldLayout>
+    <com.google.android.wallet.ui.common.MaterialFieldLayout android:id="@id/region_code_text_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/internalUicMaterialFieldLayoutStyle">
+        <include android:id="@id/region_code_text" android:focusable="true" android:focusableInTouchMode="true" android:visibility="gone" layout="@layout/view_form_non_editable_text" />
+    </com.google.android.wallet.ui.common.MaterialFieldLayout>
+</com.google.android.wallet.ui.common.MaterialFieldRegionCodeView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.wallet.ui.expander.SummaryExpanderWrapper android:id="@id/address_wrapper" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:im="http://schemas.android.com/apk/res-auto">
+    <com.google.android.wallet.ui.common.SummaryTextLayout android:id="@id/address_summary_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="?uicFormVerticalMargin" android:minHeight="?uicFormItemHeight" />
+    <com.google.android.wallet.ui.common.MaterialFieldManagerLinearLayout android:orientation="vertical" android:id="@id/address_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/address_title" layout="@layout/view_form_title_text" />
+        <com.google.android.wallet.ui.common.CheckboxView android:id="@id/hide_address_checkbox" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?uicFormVerticalMargin" android:layout_marginBottom="?uicFormVerticalMargin" />
+        <ViewStub android:id="@id/region_code_view" android:layout="?internalUicRegionCodeViewLayout" android:inflatedId="@id/region_code_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include android:id="@id/dynamic_address_fields_layout" layout="@layout/view_dynamic_address_fields" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/address_read_only_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/address_read_only_text" android:paddingLeft="?internalUicFormNonEditableTextStartMargin" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="?uicFormVerticalMargin" android:layout_marginBottom="?uicFormVerticalMargin" android:minHeight="?uicFormItemHeight" android:freezesText="true" android:layout_weight="1.0" android:paddingStart="?internalUicFormNonEditableTextStartMargin" style="?attr/uicFormCollapsedAddressTextAppearance" />
+            <ImageButton android:id="@id/edit_address_icon" android:background="?uicClickableBackground" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/wallet_uic_margin_touchable" android:minWidth="@dimen/wallet_uic_minimum_tappable_item_size" android:minHeight="@dimen/wallet_uic_minimum_tappable_item_size" android:contentDescription="@string/wallet_uic_content_description_edit_address" android:layout_marginStart="@dimen/wallet_uic_margin_touchable" />
+        </LinearLayout>
+    </com.google.android.wallet.ui.common.MaterialFieldManagerLinearLayout>
+</com.google.android.wallet.ui.expander.SummaryExpanderWrapper>

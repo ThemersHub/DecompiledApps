@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/entry_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/card_entry_padding_start" android:layout_marginEnd="@dimen/card_entry_padding_start"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/location_map_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/shared_location_map_height" android:scaleType="centerCrop" android:adjustViewBounds="true" android:contentDescription="@string/real_time_location_map_content_description" />
+    <TextView android:id="@id/title" android:paddingTop="@dimen/card_content_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/location_map_image" android:fontFamily="sans-serif-medium" android:paddingStart="@dimen/card_entry_padding_start" android:paddingEnd="@dimen/card_entry_padding_start" style="@style/CardEntrySubtext" />
+    <RelativeLayout android:id="@id/location_info" android:paddingTop="@dimen/card_entry_text_padding" android:paddingBottom="@dimen/card_content_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title" android:paddingStart="@dimen/card_entry_padding_start" android:paddingEnd="@dimen/card_entry_padding_start" style="@style/common.Widget.SelectableItem">
+        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/card_entry_padding_start" android:layout_alignParentStart="true" />
+        <TextView android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/icon" style="@style/CardEntryText" />
+        <TextView android:id="@id/subtext" android:paddingTop="@dimen/entry_subtext_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/text" android:layout_toEndOf="@id/icon" style="@style/CardEntrySubtext" />
+    </RelativeLayout>
+</RelativeLayout>

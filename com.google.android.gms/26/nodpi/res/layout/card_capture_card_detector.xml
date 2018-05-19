@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/card_capture_preview_overlay_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:material="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/card_capture_preview_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/card_capture_info_message" android:paddingLeft="@dimen/ocr_default_spacing" android:paddingRight="@dimen/ocr_default_spacing" android:paddingBottom="@dimen/ocr_default_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" style="@style/Theme.CardCapture.InfoMessage" />
+        <LinearLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/card_capture_preview_wrapper" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="40.0dip" android:layout_marginBottom="40.0dip">
+                <FrameLayout android:id="@id/card_capture_region_of_interest_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.google.android.gms.ocr.view.FixedAspectRatioFrameLayout android:id="@id/card_capture_region_of_interest" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ocr_default_spacing" android:layout_marginRight="@dimen/ocr_default_spacing" android:contentDescription="@string/ocr_region_of_interest" material:ocrAspectRatio="@dimen/ocr_iso_iec_7810_card_aspect_ratio" />
+                    <TextView android:layout_gravity="center_vertical" android:id="@id/card_capture_message_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/card_capture_scan_card_details" style="@style/OcrMessageText" />
+                    <com.google.android.gms.ocr.view.FixedAspectRatioFrameLayout android:id="@id/card_capture_image_preview_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ocr_default_spacing" android:layout_marginRight="@dimen/ocr_default_spacing" material:ocrAspectRatio="@dimen/ocr_iso_iec_7810_card_aspect_ratio">
+                        <ImageView android:id="@id/card_capture_image_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    </com.google.android.gms.ocr.view.FixedAspectRatioFrameLayout>
+                </FrameLayout>
+                <TextView android:id="@id/card_capture_preview_text" android:padding="@dimen/card_capture_info_text_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/card_capture_look_good" android:layout_above="@id/card_capture_region_of_interest_wrapper" style="@style/OcrMessageText" />
+                <LinearLayout android:gravity="center" android:id="@id/card_capture_buttons_wrapper" android:visibility="gone" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_below="@id/card_capture_region_of_interest_wrapper">
+                    <android.support.design.widget.FloatingActionButton android:id="@id/card_capture_camera_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_camera_alt_white_24" android:contentDescription="@string/card_capture_button_label" />
+                    <android.support.design.widget.FloatingActionButton android:id="@id/card_capture_redo_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_refresh_white_24" android:contentDescription="@string/ocr_redo_button_label" />
+                    <android.support.design.widget.FloatingActionButton android:id="@id/card_capture_done_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:src="@drawable/quantum_ic_done_white_24" android:contentDescription="@android:string/ok" />
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:id="@id/card_capture_overlay_info_message_wrapper" android:background="@android:color/white" android:padding="@dimen/card_capture_info_text_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <TextView android:id="@id/card_capture_overlay_info_message" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:gravity="center_horizontal" android:id="@id/card_capture_skip_scan_button_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <View android:id="@id/ocrButtonDivider" android:background="@color/ocr_divider" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/ocrSkipScanButton" />
+            <Button android:id="@id/ocrSkipScanButton" android:background="@drawable/ocr_btn_transparent" android:padding="@dimen/ocr_default_spacing" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/Theme.CardCapture.MessageText" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView android:id="@id/card_capture_learn_more" android:background="@android:color/white" android:padding="@dimen/card_capture_info_text_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

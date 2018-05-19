@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.wallet.common.ui.WalletSecureLinearLayout android:orientation="vertical" android:id="@id/wallet_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:theme="?toolbarTheme" android:id="@id/overlay_toolbar" android:background="?toolbarBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.wallet.ui.common.FocusedViewToTopScrollView android:id="@id/content_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+            <FrameLayout android:id="@id/overlay_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.google.android.wallet.ui.common.FocusedViewToTopScrollView>
+        <include android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/wallet_view_color_progress_spinner_large_with_caption" />
+    </FrameLayout>
+    <View android:id="@id/focus_stealer" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+</com.google.android.gms.wallet.common.ui.WalletSecureLinearLayout>

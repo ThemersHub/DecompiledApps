@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.locationsharing.updateshares.TouchListeningViewAnimator android:id="@id/update_shares_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/filler" android:focusable="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:contentDescription="@string/location_sharing_navigate_up" />
+        <ScrollView android:id="@id/bottom_sheet" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/location_sharing_create_journey_shares" />
+                <include layout="@layout/location_sharing_update_shares_body" />
+            </FrameLayout>
+        </ScrollView>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:layout_gravity="bottom" android:id="@id/share_apps_view" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" />
+</com.google.android.gms.locationsharing.updateshares.TouchListeningViewAnimator>

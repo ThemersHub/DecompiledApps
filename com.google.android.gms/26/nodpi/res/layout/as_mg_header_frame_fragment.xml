@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/main_content" android:background="@color/google_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Light" android:id="@id/appbar" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stateListAnimator="@anim/as_mg_appbar_elevated">
+        <android.support.design.widget.TabLayout android:layout_gravity="top" android:id="@id/tab_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabContentStart="@dimen/as_mg_tabs_content_start_inset" app:tabMode="scrollable" app:tabPaddingStart="@dimen/as_mg_tabs_horizontal_padding" app:tabPaddingTop="@dimen/as_mg_tabs_vertical_padding" app:tabPaddingEnd="@dimen/as_mg_tabs_horizontal_padding" style="@style/AsMgHeaderTabLayoutAppearance" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:id="@id/fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <ImageView android:layout_gravity="center|left|top" android:id="@id/header_avatar_image" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="150.0dip" android:elevation="8.0dip" app:layout_behavior="com.google.android.gms.accountsettings.mg.poc.ui.view.HeaderAvatarImageBehavior" />
+</android.support.design.widget.CoordinatorLayout>
