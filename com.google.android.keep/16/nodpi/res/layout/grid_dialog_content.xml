@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:id="@id/tableLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/square_grid_button_and_text" android:background="?android:selectableItemBackground" android:clickable="true" android:layout_marginLeft="@dimen/dialog_button_horizontal_margin" android:layout_marginTop="@dimen/dialog_default_side_margin" app:layout_constraintBottom_toTopOf="@id/rules_grid_button_and_text" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toLeftOf="@id/dot_grid_button_and_text" app:layout_constraintTop_toTopOf="parent" style="@style/DrawingGridDialog">
+        <ImageView android:id="@id/square_grid_button" android:src="@drawable/square_grid_selector" android:contentDescription="@string/square_grid" style="@style/DrawingGridDialog" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/square_grid" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/dot_grid_button_and_text" android:background="?android:selectableItemBackground" android:clickable="true" android:layout_marginTop="@dimen/dialog_default_side_margin" android:layout_marginRight="@dimen/dialog_button_horizontal_margin" app:layout_constraintBottom_toTopOf="@id/none_grid_button_and_text" app:layout_constraintLeft_toRightOf="@id/square_grid_button_and_text" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/DrawingGridDialog">
+        <ImageView android:id="@id/dot_grid_button" android:src="@drawable/dot_grid_selector" android:contentDescription="@string/dot_grid" style="@style/DrawingGridDialog" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dot_grid" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/rules_grid_button_and_text" android:background="?android:selectableItemBackground" android:clickable="true" android:layout_marginLeft="@dimen/dialog_button_horizontal_margin" android:layout_marginBottom="@dimen/dialog_default_side_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toLeftOf="@id/none_grid_button_and_text" app:layout_constraintTop_toBottomOf="@id/square_grid_button_and_text" style="@style/DrawingGridDialog">
+        <ImageView android:id="@id/rules_grid_button" android:src="@drawable/rules_grid_selector" android:contentDescription="@string/rules_grid" style="@style/DrawingGridDialog" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rules_grid" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/none_grid_button_and_text" android:background="?android:selectableItemBackground" android:clickable="true" android:layout_marginRight="@dimen/dialog_button_horizontal_margin" android:layout_marginBottom="@dimen/dialog_default_side_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toRightOf="@id/rules_grid_button_and_text" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/square_grid_button_and_text" style="@style/DrawingGridDialog">
+        <ImageView android:id="@id/none_grid_button" android:src="@drawable/none_grid_selector" android:contentDescription="@string/none_grid" style="@style/DrawingGridDialog" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/none_grid" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
