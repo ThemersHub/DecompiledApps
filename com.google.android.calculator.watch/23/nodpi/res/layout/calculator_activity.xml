@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/content" android:tag="layout/calculator_activity_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.wearable.view.BoxInsetLayout android:id="@id/display" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@dimen/formula_weight" android:elevation="4.0dip">
+        <HorizontalScrollView android:gravity="end|bottom|center" android:id="@id/calculator_result_scrollview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_box="left|right">
+            <TextView android:textSize="18.0sp" android:ellipsize="none" android:gravity="end|bottom|center" android:layout_gravity="end|bottom|center" android:id="@id/calculator_result" android:tag="binding_2" android:paddingLeft="@dimen/display_text_padding" android:paddingRight="@dimen/display_text_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" />
+        </HorizontalScrollView>
+        <HorizontalScrollView android:gravity="end|bottom|center" android:id="@id/calculator_text_scrollview" android:visibility="visible" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_box="left|right">
+            <EditText android:textSize="18.0sp" android:gravity="end|bottom|center" android:layout_gravity="end|bottom|center" android:id="@id/calculator_text" android:tag="binding_3" android:background="@null" android:paddingLeft="@dimen/display_text_padding" android:paddingRight="@dimen/display_text_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:inputType="text" android:contentDescription="@string/desc_formula" />
+        </HorizontalScrollView>
+        <View android:layout_gravity="bottom" android:id="@id/underline" android:tag="binding_4" android:background="@color/calculator_error_color" android:layout_width="fill_parent" android:layout_height="2.0dip" android:elevation="4.0dip" />
+    </android.support.wearable.view.BoxInsetLayout>
+    <android.support.wearable.view.BoxInsetLayout android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@dimen/pad_weight">
+        <com.google.android.calculator.widget.CalculatorPadViewPager android:id="@id/pad_pager" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never">
+            <include android:id="@id/num_pad" layout="@layout/pad_numeric" />
+            <include android:id="@id/fun_shade" layout="@layout/pad_operations" />
+        </com.google.android.calculator.widget.CalculatorPadViewPager>
+        <TextClock android:textSize="18.0sp" android:textColor="@color/ambient_text_color" android:layout_gravity="bottom|center" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_box="bottom" />
+    </android.support.wearable.view.BoxInsetLayout>
+</LinearLayout>
