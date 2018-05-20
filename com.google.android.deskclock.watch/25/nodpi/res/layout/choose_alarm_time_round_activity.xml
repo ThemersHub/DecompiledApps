@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wearable.view.SwipeDismissFrameLayout android:id="@id/swipe_dismiss_layout" android:background="@color/round_ui_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.google.android.deskclock.roundui.common.DurationPickerView android:id="@id/duration_picker_view" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:show_seconds_field="false" />
+    <LinearLayout android:layout_gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="@dimen/round_ui_buttons_panel_height" android:layout_marginBottom="@dimen/round_ui_buttons_panel_bottom_margin">
+        <TextView android:layout_gravity="top" android:id="@id/am_view" android:padding="@dimen/round_ui_small_button_padding" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/round_ui_margin_between_buttons" android:text="@string/alarm_am" style="@style/AmPmLabelStyle" />
+        <ImageButton android:layout_gravity="bottom" android:id="@id/done_button" android:background="@drawable/circle" android:layout_width="@dimen/round_ui_big_button_size" android:layout_height="@dimen/round_ui_big_button_size" android:src="@drawable/quantum_ic_done_vd_theme_24" android:contentDescription="@string/set_alarm" android:backgroundTint="@color/round_ui_done_button_color" />
+        <TextView android:layout_gravity="top" android:id="@id/pm_view" android:padding="@dimen/round_ui_small_button_padding" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/round_ui_margin_between_buttons" android:text="@string/alarm_pm" style="@style/AmPmLabelStyle" />
+    </LinearLayout>
+</android.support.wearable.view.SwipeDismissFrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/wof_dark_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.deskclock.roundui.common.DurationPickerCoverView android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.deskclock.roundui.common.BorderArcView android:id="@id/border_arc" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/alarm_time_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/round_ui_duration_top_margin" style="@style/AlarmTimeStyle" />
+        <TextView android:id="@id/days_of_week_view" android:paddingTop="@dimen/alarm_repeating_days_padding" android:paddingBottom="@dimen/alarm_repeating_days_padding" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/RepeatDaysStyle" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="@dimen/round_ui_buttons_panel_height" android:layout_marginBottom="@dimen/round_ui_buttons_panel_bottom_margin">
+        <ImageButton android:layout_gravity="top" android:id="@id/sound_button" android:background="@null" android:padding="@dimen/round_ui_small_button_padding" android:layout_width="@dimen/round_ui_small_button_size" android:layout_height="@dimen/round_ui_small_button_size" android:layout_marginRight="@dimen/round_ui_margin_between_buttons" />
+        <ImageButton android:layout_gravity="bottom" android:id="@id/done_button" android:background="@drawable/circle" android:layout_width="@dimen/round_ui_big_button_size" android:layout_height="@dimen/round_ui_big_button_size" android:src="@drawable/quantum_ic_done_vd_theme_24" android:contentDescription="@string/set_alarm" android:backgroundTint="@color/round_ui_done_button_color" />
+        <ImageButton android:layout_gravity="top" android:id="@id/vibrate_button" android:background="@null" android:padding="@dimen/round_ui_small_button_padding" android:layout_width="@dimen/round_ui_small_button_size" android:layout_height="@dimen/round_ui_small_button_size" android:layout_marginLeft="@dimen/round_ui_margin_between_buttons" />
+    </LinearLayout>
+</FrameLayout>

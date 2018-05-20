@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.deskclock.WearableRecyclerViewItemLayout android:layout_width="fill_parent" android:layout_height="@dimen/wof_layout_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.wearable.view.CircledImageView android:id="@id/icon" android:layout_width="@dimen/action_icon_diameter_expanded" android:layout_height="@dimen/action_icon_diameter_expanded" android:src="@drawable/ic_action_edit" android:layout_centerVertical="true" android:layout_marginStart="@dimen/wof_item_margin" app:circle_color="@color/button_neutral" app:circle_radius="@dimen/action_icon_radius" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/action_text_margin" android:layout_toStartOf="@id/delete_button" android:layout_toEndOf="@id/icon">
+        <TextView android:textSize="@dimen/alarm_time_text_size" android:textColor="@color/text_color" android:gravity="center_vertical" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="1.0dip" android:fontFamily="sans-serif-condensed-light" />
+        <TextView android:textSize="@dimen/alarm_days_text_size" android:textColor="@color/text_color" android:ellipsize="end" android:id="@id/repeating_days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="sans-serif-condensed-light" />
+    </LinearLayout>
+    <ImageButton android:id="@id/delete_button" android:background="@null" android:layout_width="@dimen/round_ui_delete_button_width" android:layout_height="fill_parent" android:src="@drawable/ic_action_delete" android:tint="@color/round_ui_delete_button_color" android:layout_centerVertical="true" android:contentDescription="@string/delete" android:layout_alignParentEnd="true" />
+</com.google.android.deskclock.WearableRecyclerViewItemLayout>
