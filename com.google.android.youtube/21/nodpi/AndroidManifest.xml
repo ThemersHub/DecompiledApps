@@ -117,6 +117,10 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
             </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.wellbeing.VIEW_APP_USAGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.youtube.app.MainLiveCreationActivity" android:resizeableActivity="false" android:theme="@style/LcAppTheme.NoActionBar" android:windowSoftInputMode="adjustResize"/>
         <activity android:exported="true" android:name="com.google.android.apps.youtube.app.application.Shell$ResultsActivity" android:theme="@android:style/Theme.NoDisplay">
@@ -134,15 +138,7 @@
                 <data android:mimeType="video/*"/>
             </intent-filter>
         </activity>
-        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:label="@string/upload_edit_video_title" android:name="com.google.android.apps.youtube.app.extensions.upload.UploadActivity" android:theme="@style/Theme.YouTube.UploadActivity" android:windowSoftInputMode="stateHidden">
-            <intent-filter>
-                <action android:name="com.google.android.youtube.intent.action.INTERNAL_UPLOAD"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="video/*"/>
-            </intent-filter>
-        </activity>
         <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="com.google.android.apps.youtube.app.extensions.daydream.LaunchYouTubeVrActivity" android:noHistory="true" android:theme="@style/Theme.YouTube.LaunchYouTubeVrActivity"/>
-        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:label="@string/edit_video_form_title" android:name="com.google.android.apps.youtube.app.extensions.upload.EditVideoActivity" android:theme="@style/Theme.YouTube.EditVideoActivity" android:windowSoftInputMode="stateHidden"/>
         <activity android:exported="true" android:name="com.google.android.apps.youtube.app.application.Shell$UrlActivity" android:theme="@style/Theme.YouTube.Launcher"/>
         <activity android:exported="true" android:name="com.google.android.apps.youtube.app.application.Shell$MediaSearchActivity" android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
@@ -269,6 +265,14 @@
         </service>
         <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:launchMode="singleTop" android:name="com.google.android.apps.youtube.app.extensions.reel.activity.ReelWatchActivity" android:screenOrientation="portrait" android:theme="@style/ReelTheme.NoActionBar.FullScreen.Dark" android:windowSoftInputMode="stateHidden"/>
         <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="com.google.android.apps.youtube.app.extensions.reel.activity.ReelCameraActivity" android:screenOrientation="portrait" android:theme="@style/ReelTheme.NoActionBar.FullScreen.Dark" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:label="@string/edit_video_form_title" android:name="com.google.android.apps.youtube.app.extensions.upload.EditVideoActivity" android:theme="@style/Theme.YouTube.EditVideoActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:label="@string/upload_edit_video_title" android:name="com.google.android.apps.youtube.app.extensions.upload.UploadActivity" android:theme="@style/Theme.YouTube.UploadActivity" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.google.android.youtube.intent.action.INTERNAL_UPLOAD"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+        </activity>
         <provider android:authorities="com.google.android.youtube.SuggestionProvider" android:exported="false" android:name="com.google.android.apps.youtube.app.search.suggest.YouTubeSuggestionProvider"/>
         <activity android:exported="false" android:name="com.google.android.apps.youtube.app.settings.developer.DebugShowOfflineQueueActivity"/>
         <activity android:exported="false" android:name="com.google.android.apps.youtube.app.settings.developer.DebugOnlineAdActivity"/>
@@ -306,6 +310,7 @@
             </intent-filter>
         </receiver>
         <activity android:configChanges="keyboardHidden" android:exported="false" android:name="com.google.android.libraries.youtube.mdx.smartpairing.PairWithTvActivity" android:theme="@style/Mdx.Theme.Settings"/>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:name="com.google.android.libraries.youtube.mdx.smartremote.MdxSmartRemoteActivity" android:theme="@style/Mdx.Theme.SmartRemote"/>
         <activity android:configChanges="keyboardHidden" android:exported="false" android:name="com.google.android.libraries.youtube.mdx.tvsignin.TvSignInActivity" android:screenOrientation="portrait" android:theme="@style/Mdx.TvSignIn.FullScreen"/>
         <activity android:exported="false" android:name="com.google.android.libraries.youtube.offline.developer.DebugOfflineActivity"/>
         <activity android:exported="false" android:name="com.google.android.libraries.youtube.offline.developer.DebugOfflineResyncActivity"/>
@@ -314,6 +319,7 @@
         <activity android:exported="false" android:name="com.google.android.libraries.youtube.offline.developer.DebugOfflineDatabaseActivity"/>
         <activity android:exported="false" android:name="com.google.android.libraries.youtube.offline.developer.DebugOfflineStreamsActivity"/>
         <activity android:exported="false" android:name="com.google.android.libraries.youtube.offline.developer.DebugOfflineVideosActivity"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.youtube.offline.developer.DebugOfflineStoreActivity"/>
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
         <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>

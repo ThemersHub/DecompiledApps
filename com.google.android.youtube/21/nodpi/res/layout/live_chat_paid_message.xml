@@ -8,9 +8,15 @@
             <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textSize="14.0sp" android:id="@id/amount" android:layout_width="wrap_content" android:layout_height="wrap_content" res-auto:robotoFont="medium" xmlns:res-auto="http://schemas.android.com/apk/res-auto" />
         </LinearLayout>
     </RelativeLayout>
-    <FrameLayout android:id="@id/bottom_bar" android:background="@drawable/live_chat_paid_message_bottom_background" android:paddingLeft="@dimen/live_chat_message_horizontal_padding" android:paddingTop="@dimen/live_chat_message_body_top_padding" android:paddingRight="@dimen/live_chat_message_horizontal_padding" android:paddingBottom="@dimen/live_chat_message_body_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_bar">
-        <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <TextView android:textSize="15.0sp" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-        </ScrollView>
-    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/bottom_bar" android:background="@drawable/live_chat_paid_message_bottom_background_rounded_corners" android:paddingLeft="@dimen/live_chat_message_horizontal_padding" android:paddingTop="@dimen/live_chat_message_body_top_padding" android:paddingRight="@dimen/live_chat_message_horizontal_padding" android:paddingBottom="@dimen/live_chat_message_body_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_bar">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0sp" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/footer_body" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/live_chat_footer_margin_top">
+            <View android:id="@id/underline" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/live_chat_footer_margin_top" />
+            <TextView android:textSize="@dimen/live_chat_overlay_footer_text_font_size" android:id="@id/footer_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:drawableLeft="@null" android:drawablePadding="8.0dip" android:drawableStart="@null" android:layout_marginStart="8.0dip" />
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
