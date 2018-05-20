@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/calendar_item" android:background="?android:selectableItemBackground" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/small_tile_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="start|center" android:layout_width="@dimen/drawer_icons_size" android:layout_height="@dimen/drawer_icons_size" android:layout_marginLeft="@dimen/first_keyline" android:layout_marginStart="@dimen/first_keyline">
+        <com.google.android.calendar.timely.DrawerColorCheckBox android:id="@id/color_square" android:background="@android:color/transparent" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:duplicateParentState="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/drawer_checkbox_left_margin" android:minWidth="24.0dip" android:minHeight="24.0dip" android:importantForAccessibility="no" android:layout_marginStart="@dimen/drawer_checkbox_left_margin" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/second_keyline" android:layout_marginRight="@dimen/first_keyline" android:layout_marginStart="@dimen/second_keyline" android:layout_marginEnd="@dimen/first_keyline">
+        <TextView android:textSize="@dimen/drawer_text_size" android:textStyle="bold" android:textColor="@color/drawer_calendar_text_color" android:ellipsize="marquee" android:layout_gravity="center_vertical" android:id="@id/calendar_text" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:textAlignment="viewStart" />
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/resync" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_weight="0.0">
+            <ImageButton android:background="@drawable/quantum_ic_refresh_grey600_24" android:clickable="false" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_margin="4.0dip" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

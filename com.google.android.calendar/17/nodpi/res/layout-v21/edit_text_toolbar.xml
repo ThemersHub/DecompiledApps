@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_weight="0.0" android:elevation="@dimen/appbar_elevation" style="@style/EditTextToolbar"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="end|fill_vertical|center" android:orientation="horizontal" android:id="@id/custom_views_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/edit_text_container" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:importantForAccessibility="no">
+            <EditText android:id="@id/search_text" android:layout_weight="1.0" style="@style/EditTextToolbarEditText" />
+            <com.google.android.calendar.common.view.ClickTargetFrameLayout android:layout_gravity="center_vertical" android:id="@id/clear" android:focusable="true" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_weight="0.0" android:contentDescription="@string/accessibility_clear_search" android:layout_marginEnd="@dimen/edit_text_toolbar_clear_search_icon_margin_end">
+                <ImageButton android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_clear_white_24" style="@style/CalendarButton" />
+            </com.google.android.calendar.common.view.ClickTargetFrameLayout>
+        </LinearLayout>
+        <Button android:id="@id/right_button" android:layout_weight="0.0" style="@style/EditTextToolbarToolbarRightButton" />
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>

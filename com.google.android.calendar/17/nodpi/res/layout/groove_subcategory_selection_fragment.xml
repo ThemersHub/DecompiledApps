@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/GrooveOuterFrame"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/subcategory_image_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_alignParentBottom="true" />
+        <RelativeLayout android:id="@id/inset_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/back_button" />
+            <LinearLayout android:orientation="vertical" android:id="@id/text_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/back_arrow">
+                <TextView android:textColor="@android:color/black" android:id="@id/category_title" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GrooveCreationWizardTitle" />
+                <LinearLayout android:orientation="vertical" android:id="@id/subcategory_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

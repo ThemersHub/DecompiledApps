@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ListPreference android:entries="@array/preferences_week_start_day_labels" android:title="@string/preference_edit_week_start_header" android:key="start_of_week" android:entryValues="@array/preferences_week_start_day_values" />
+    <SwitchPreference android:title="@string/preference_edit_use_device_timezone_label" android:key="use_device_timezone" app:allowDividerAbove="true" />
+    <Preference android:title="@string/preference_edit_device_timezone_header" android:key="timezone" />
+    <ListPreference android:entries="@array/preferences_alternate_calendar_labels" android:title="@string/preference_edit_alternate_calendar_header" android:key="alternate_calendar" android:entryValues="@array/preferences_alternate_calendar_values" app:allowDividerAbove="true" />
+    <SwitchPreference android:title="@string/preference_edit_show_week_number" android:key="show_week_number" app:allowDividerAbove="true" />
+    <SwitchPreference android:title="@string/preference_edit_show_declined" android:key="show_declined" />
+    <SwitchPreference android:title="@string/preference_edit_show_more_events_label" android:key="show_more_events" android:summary="@string/preference_edit_show_more_events_description" app:allowDividerAbove="true" />
+    <Preference android:title="@string/settings_default_event_duration_title_spinner" android:key="default_event_duration" app:allowDividerAbove="true" />
+    <PreferenceCategory android:title="@string/preference_edit_notifications_header">
+        <SwitchPreference android:title="@string/preference_edit_notify" android:key="notify_on_this_device" />
+        <SwitchPreference android:title="@string/preference_edit_use_standard" android:key="use_standard_tone" />
+        <Preference android:title="@string/preference_edit_ringtone_header" android:key="ringtone" />
+        <SwitchPreference android:title="@string/preference_edit_vibrate" android:key="vibrate" />
+        <Preference android:title="@string/reminders_channel_description" android:key="calendar_notifications" />
+        <Preference android:title="@string/debug_channel_description" android:key="debug_notifications" />
+        <Preference android:selectable="false" android:summary="@string/preference_edit_notifications_disclaimer" />
+    </PreferenceCategory>
+    <Preference android:title="@string/quick_response_settings" android:key="quick_responses" app:allowDividerAbove="true" />
+    <PreferenceCategory android:title="@string/groove_title" android:key="goals">
+        <Preference android:title="@string/preference_belong_integration_label" android:key="goals_disconnect" />
+    </PreferenceCategory>
+</PreferenceScreen>

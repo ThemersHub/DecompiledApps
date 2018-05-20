@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.calendar.timely.PagedDayView android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Card"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:calendar="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/timely_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/all_day_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.calendar.timely.gridviews.allday.AllDayHeaderArrow android:id="@id/header_arrow" android:layout_width="@dimen/paged_day_header_width" android:layout_height="fill_parent">
+                <ImageView android:id="@id/arrow_view" android:background="@drawable/quantum_ic_expand_more_grey600_24" android:layout_width="wrap_content" android:layout_height="@dimen/allday_arrow_size"
+                  xmlns:android="http://schemas.android.com/apk/res/android" />
+            </com.google.android.calendar.timely.gridviews.allday.AllDayHeaderArrow>
+            <include android:id="@id/separator_vertical" layout="@layout/line_separator_vertical" />
+            <LinearLayout android:orientation="vertical" android:id="@id/all_day_linear_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.calendar.timely.gridviews.WeekHeaderLabelsView android:id="@id/week_header_labels" android:layout_width="fill_parent" android:layout_height="@dimen/week_day_header_height" calendar:count_days="1" />
+                <ScrollView android:id="@id/all_day_scroll_view" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/paged_all_day_start_padding">
+                    <com.google.android.calendar.timely.gridviews.allday.AllDayHeaderView android:id="@id/all_day_header" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:count_days="1" xmlns:custom="http://schemas.android.com/apk/res-auto" />
+                </ScrollView>
+                <TextView android:textColor="@color/week_show_more" android:gravity="center_vertical" android:id="@id/collapse_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/collapse_button_height" android:text="@string/show_less" android:fontFamily="@string/roboto_medium" android:paddingStart="@dimen/first_keyline" android:paddingEnd="@dimen/chip_grid_horizontal_padding" />
+            </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/line_separator_horizontal" />
+        <com.google.android.calendar.timely.PagedScrollView android:id="@id/timely_day_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <com.google.android.calendar.timely.TimelyDayHeaderView android:id="@id/day_header_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <View android:id="@id/hour_mask" android:background="@drawable/hour_mask_gradient" android:layout_width="@dimen/timely_day_header_width" android:layout_height="@dimen/timely_hours_mask_height" android:layout_marginTop="@dimen/timely_day_header_height" />
+</com.google.android.calendar.timely.PagedDayView>

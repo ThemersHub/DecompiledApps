@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0" style="@style/FindTimeFiltersFragmentToolbar" />
+    <FrameLayout android:layout_gravity="start" android:id="@id/timeframe_duration_header" android:layout_weight="0.0" style="@style/FindTimeSubTitle">
+        <TextView android:id="@id/timeframe_duration" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/FindTimeFilterHeader" />
+    </FrameLayout>
+    <ScrollView android:id="@id/scroll_view" android:background="@color/quantum_white_100" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/edit_segment_horizontal_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/duration_header" android:layout_width="fill_parent" android:minHeight="@dimen/find_time_filter_item_min_height" android:text="@string/find_time_duration_picker_title" style="@style/FindTimeFilterHeaders" />
+            <RadioGroup android:id="@id/duration_radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/FindTimeTimeframeDuration" />
+            <TextView android:id="@id/timeframe_header" android:layout_width="fill_parent" android:minHeight="@dimen/find_time_filter_item_min_height" android:text="@string/find_time_timeframe_picker_title" style="@style/FindTimeFilterHeaders" />
+            <RadioGroup android:id="@id/timeframe_radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/FindTimeTimeframeDuration" />
+            <TextView android:id="@id/rooms_header" android:layout_width="fill_parent" android:minHeight="@dimen/find_time_filter_item_min_height" android:text="@string/find_time_room_booking_options_header" style="@style/FindTimeFilterHeaders" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/room_options_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_gravity="start|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/find_a_time_consider_existing_rooms" android:layout_weight="1.0" android:textAlignment="viewStart" android:paddingStart="@dimen/first_keyline" style="@style/Edit.Text" />
+                <Switch android:layout_gravity="end|center" android:id="@id/consider_existing_rooms" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="0.0" android:paddingStart="@dimen/first_keyline" android:paddingEnd="@dimen/first_keyline" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

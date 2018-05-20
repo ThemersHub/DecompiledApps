@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.calendar.newapi.segment.attachment.AttachmentView android:id="@id/attachment_view" android:duplicateParentState="true" android:layout_width="@dimen/attachment_chip_width" android:layout_height="@dimen/attachment_chip_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/empty_description" android:scaleX="@integer/ld_aware_image_mirroring" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/overlay_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/attachment_chip_text_margin_sides" android:layout_marginRight="@dimen/attachment_chip_text_margin_sides">
+        <TextView android:textSize="@dimen/attachment_chip_text_size_medium" android:textColor="@color/attachment_color_chip_dark_text" android:ellipsize="end" android:id="@id/file_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="2" android:lineSpacingMultiplier="1.2" android:fontFamily="sans-serif" android:textAlignment="viewStart" />
+        <TextView android:textSize="@dimen/attachment_chip_text_size_medium" android:textColor="@color/attachment_color_chip_faint_text" android:ellipsize="end" android:id="@id/file_type" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" android:drawablePadding="@dimen/attachment_chip_drawable_padding" android:fontFamily="sans-serif" android:textAlignment="viewStart" />
+    </LinearLayout>
+    <View android:id="@id/ripple_view" android:background="?selectableItemBackground" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+</com.google.android.calendar.newapi.segment.attachment.AttachmentView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/speed_dial_fade" />
+    <RelativeLayout android:gravity="end|bottom|center" android:id="@id/speed_dial_expanded_contents" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/speed_dial_body_ooo" />
+        <include layout="@layout/speed_dial_body_groom" />
+        <LinearLayout android:id="@id/speed_dial_groove_container" style="@style/SpeedDialSmallButtonContainer">
+            <TextView android:id="@id/speed_dial_title" android:text="@string/groove" android:contentDescription="@string/accessibility_speeddial_groove" style="@style/SpeedDialSmallButtonTitle" />
+            <ImageView android:id="@id/speed_dial_icon" android:src="@drawable/speed_dial_groove_button" style="@style/MiniFloatingActionButton" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/speed_dial_task_container" style="@style/SpeedDialSmallButtonContainer">
+            <TextView android:id="@id/speed_dial_title" android:text="@string/reminder" android:contentDescription="@string/accessibility_speeddial_reminder" style="@style/SpeedDialSmallButtonTitle" />
+            <ImageView android:id="@id/speed_dial_icon" android:src="@drawable/speed_dial_task_button" style="@style/MiniFloatingActionButton" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/speed_dial_event_container" style="@style/SpeedDialEventContainer">
+            <TextView android:id="@id/speed_dial_title" android:text="@string/event" android:contentDescription="@string/accessibility_speeddial_event" style="@style/SpeedDialEventTitle" />
+            <ImageView android:id="@id/speed_dial_icon" android:src="@drawable/speed_dial_event_button_rotate" style="@style/SpeedDialEventIcon" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

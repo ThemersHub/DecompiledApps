@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.calendar.timely.animations.TaskBundleAnimation android:id="@id/bundle_animation_view" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/bundle_overlay_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <FrameLayout android:layout_gravity="fill_horizontal" android:orientation="horizontal" android:id="@id/day_header" android:background="@color/timely_background_color" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_height" style="@style/BundleActionBarV21">
+            <TextView android:gravity="center_vertical" android:id="@id/num_reminders" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/BundleActionBarTitleI18n" />
+            <ImageView android:gravity="center_vertical" android:id="@id/action_close" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_thinleft_selectable" android:contentDescription="@string/close_label" style="@style/BundleActionBarImageV21" />
+        </FrameLayout>
+        <View android:id="@id/line_separator" android:background="@color/separator_above_scroll" android:layout_width="fill_parent" android:layout_height="@dimen/day_pop_up_separator_stroke_width" style="@style/BundleActionBarSeparatorV21" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ScrollView android:id="@id/day_scroll" android:background="@color/timely_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

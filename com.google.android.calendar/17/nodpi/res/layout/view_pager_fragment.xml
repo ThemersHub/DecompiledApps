@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/week_container" android:background="@color/timely_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/sticky_hours_container" android:layout_width="@dimen/min_hours_width" android:layout_height="fill_parent">
+            <com.google.android.calendar.timely.gridviews.allday.AllDayHeaderArrow android:id="@id/week_month_header_arrow" android:layout_width="fill_parent" android:layout_height="@dimen/min_hours_width" custom:draw_month_label="false" xmlns:custom="http://schemas.android.com/apk/res-auto">
+                <ImageView android:id="@id/arrow_view" android:background="@drawable/quantum_ic_expand_more_grey600_24" android:layout_width="wrap_content" android:layout_height="@dimen/allday_arrow_size"
+                  xmlns:android="http://schemas.android.com/apk/res/android" />
+            </com.google.android.calendar.timely.gridviews.allday.AllDayHeaderArrow>
+            <include layout="@layout/line_separator_horizontal" />
+            <com.google.android.calendar.timely.PagedScrollView android:id="@id/week_days_scroll" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="noHideDescendants">
+                <com.google.android.calendar.timely.gridviews.GridHourView android:id="@id/grid_hour_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.google.android.calendar.timely.PagedScrollView>
+        </LinearLayout>
+        <include layout="@layout/line_separator_vertical" />
+        <com.google.android.calendar.utils.viewpager.LayoutDirectionAwareViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <include android:id="@id/mini_month_separator" layout="@layout/line_separator_horizontal" />
+    <include layout="@layout/mini_month" />
+</FrameLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/GrooveOuterFrame"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/inset_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/back_button" />
+            <RelativeLayout android:id="@id/text_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <EditText android:textColor="@android:color/black" android:id="@id/title" android:background="@null" android:paddingBottom="@dimen/groove_selection_title_with_divider_padding_bottom" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textCapSentences" android:imeOptions="actionDone" android:textCursorDrawable="@drawable/cursor_black" android:paddingEnd="@dimen/groove_selection_title_padding_right" style="@style/GrooveCreationWizardTitle" />
+                <View android:id="@id/divider" android:layout_width="fill_parent" android:layout_below="@id/title" style="@style/Divider" />
+                <com.google.android.calendar.common.view.fab.FloatingActionButton android:id="@id/floating_action_button" android:layout_marginTop="@dimen/groove_fab_margin_top" android:src="@drawable/quantum_ic_done_white_24" android:layout_below="@id/divider" android:contentDescription="@string/groove_schedule_sessions" android:layout_marginEnd="@dimen/groove_fab_margin_right" android:layout_alignParentEnd="true" style="@style/MiniFloatingActionButton" />
+                <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/divider" android:layout_alignParentBottom="true" android:fadeScrollbars="false">
+                    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/custom_groove_suggestion_padding_top" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <LinearLayout android:orientation="vertical" android:id="@id/subcategory_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>
