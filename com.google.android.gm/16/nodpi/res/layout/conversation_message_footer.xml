@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.browse.MessageFooterView android:orientation="vertical" android:id="@id/attachments" android:background="@color/conversation_view_overlay_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/message_loading_progress_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v4.widget.ContentLoadingProgressBar android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.AppCompat.ProgressBar" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/s4_loading" android:contentDescription="@string/s4_loading" style="@style/MessageLoadingTextStyle" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textColor="@color/conversation_view_text_color_link_blue" android:id="@id/view_entire_message_prompt" android:background="?android:selectableItemBackground" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/view_entire_message" style="@style/AttachmentPaddingStyle" />
+    <com.android.mail.ui.AttachmentTileGrid android:id="@id/attachment_tile_grid" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/locker_frame" android:paddingBottom="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.android.mail.browse.MessageFooterView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/wa_card_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/wa_default_spacing" android:foreground="?selectableItemBackground" android:minWidth="400.0dip" app:cardBackgroundColor="@color/quantum_grey200"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/wa_min_chip_height">
+        <LinearLayout android:gravity="center" android:background="@color/wa_primary" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="64.0dip">
+            <ProgressBar android:id="@id/wa_progress_bar" android:layout_width="38.0dip" android:layout_height="38.0dip" android:indeterminate="true" android:indeterminateBehavior="repeat" />
+            <TextView android:textSize="40.0sp" android:textStyle="bold" android:textColor="@color/wa_currency_symbol_large" android:id="@id/wa_currency_symbol_large" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLength="1" />
+            <ImageView android:id="@id/wa_network_error_symbol" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/quantum_ic_signal_cellular_connected_no_internet_0_bar_white_48" />
+            <ImageView android:id="@id/wa_generic_error_symbol" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/quantum_ic_error_outline_white_48" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/wa_text_block" android:paddingLeft="@dimen/wa_wide_spacing" android:paddingTop="@dimen/wa_default_spacing" android:paddingRight="@dimen/wa_default_spacing" android:paddingBottom="@dimen/wa_default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/wa_min_chip_height">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="20.0sp" android:textColor="@color/quantum_black_text" android:id="@id/wa_currency_symbol_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:includeFontPadding="false" android:layout_alignParentTop="true" android:lineSpacingExtra="0.0dip" />
+                <TextView android:textSize="34.0sp" android:textColor="@color/quantum_black_text" android:id="@id/wa_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_toRightOf="@id/wa_currency_symbol_small" android:lineSpacingExtra="0.0dip" />
+            </RelativeLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/wa_checkmark" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="@dimen/wa_narrow_spacing" android:src="@drawable/quantum_ic_done_black_18" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/quantum_black_text" android:id="@id/wa_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView android:textSize="14.0sp" android:textColor="@color/quantum_black_text" android:id="@id/wa_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/wa_narrow_spacing" android:layout_marginBottom="12.0dip" />
+            <TextView android:textColor="@color/wa_primary" android:id="@id/wa_action" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" style="@style/TextAppearance.AppCompat.Body2" />
+            <View android:id="@id/wa_spacer" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="@dimen/wa_narrow_spacing" />
+            <ImageView android:id="@id/wa_lockup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/wa_default_spacing" android:layout_marginBottom="@dimen/wa_narrow_spacing" app:srcCompat="@drawable/ic_wa_lockup" />
+        </LinearLayout>
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/wa_delete_button" android:background="?selectableItemBackgroundBorderless" android:padding="@dimen/wa_default_spacing" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/quantum_ic_close_grey600_24" android:scaleType="center" android:contentDescription="@string/wa_delete_button_description" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

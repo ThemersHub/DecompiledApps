@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/snooze_dialog_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/snooze_option_custom_time" style="@style/snooze_dialogTitleTextView" />
+    <TextView android:id="@id/date_selector" android:layout_width="fill_parent" android:layout_height="@dimen/snooze_datepicker_row_height" android:textAlignment="viewStart" style="@style/snooze_dialogSpinner" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/snooze_datepicker_spinner_divider_height" style="@style/snooze_dialogSpinnerDivider" />
+    <com.google.android.apps.gmail.featurelibraries.snooze.impl.AlwaysNotifyOnItemSelectedSpinner android:id="@id/time_selector" android:layout_width="fill_parent" android:layout_height="@dimen/snooze_datepicker_row_height" style="@style/snooze_dialogSpinner" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/snooze_datepicker_spinner_divider_height" style="@style/snooze_dialogSpinnerDivider" />
+    <LinearLayout style="@style/snooze_dialogButtonContainer">
+        <TextView android:id="@id/dialog_done_button" android:layout_width="wrap_content" android:layout_height="@dimen/snooze_datepicker_button_height" android:text="@string/snooze_datepicker_done" style="@style/snooze_dialogButton" />
+    </LinearLayout>
+</LinearLayout>

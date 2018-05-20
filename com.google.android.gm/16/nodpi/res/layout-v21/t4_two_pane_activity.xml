@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/toolbar_tasks_view" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?android:windowContentOverlay">
+        <com.android.mail.ui.TaskTwoPaneLayout android:id="@id/inline_drawer_layout" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foregroundGravity="fill_horizontal|center|top">
+            <FrameLayout android:layout_gravity="left" android:id="@id/drawer" android:layout_width="@dimen/two_pane_drawer_width_open" android:layout_height="fill_parent">
+                <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/drawer_fragment" />
+            </FrameLayout>
+            <FrameLayout android:layout_gravity="left" android:id="@id/content_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:touchscreenBlocksFocus="true">
+                <FrameLayout android:id="@id/content_pane" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <include layout="@layout/t4_floating_action_button" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/detail_pane" android:layout_width="0.0dip" android:layout_height="fill_parent" style="@style/ConversationViewForegroundShadowStyle">
+                <ImageView android:layout_gravity="center" android:id="@id/detail_pane_no_task_view" android:visibility="gone" android:layout_width="@dimen/empty_state_icon_size" android:layout_height="@dimen/empty_state_icon_size" app:srcCompat="@drawable/ic_empty_task_mat" />
+            </FrameLayout>
+            <include layout="@layout/t4_floating_action" />
+        </com.android.mail.ui.TaskTwoPaneLayout>
+        <FrameLayout android:layout_gravity="left" android:id="@id/create_pane" android:layout_width="fill_parent" android:layout_height="fill_parent" android:touchscreenBlocksFocus="true" />
+    </FrameLayout>
+</LinearLayout>

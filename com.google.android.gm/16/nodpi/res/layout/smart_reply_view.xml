@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/smart_reply_container" android:paddingBottom="@dimen/smart_reply_bar_vertical_margin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/smart_reply_text_size" android:textStyle="bold" android:textColor="@color/smart_reply_callout_text" android:gravity="center" android:id="@id/smart_reply_callout" android:paddingBottom="@dimen/smart_reply_callout_vertical_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sr_callout" />
+    <TextView android:textColor="@color/smart_reply_red" android:layout_gravity="end" android:id="@id/smart_reply_bad_suggestion" android:paddingLeft="@dimen/smart_reply_bar_horizontal_margin" android:paddingTop="@dimen/smart_reply_bad_suggestion_link_padding" android:paddingRight="@dimen/smart_reply_bar_horizontal_margin" android:paddingBottom="@dimen/smart_reply_bad_suggestion_link_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/smart_reply_bad_suggestion_link_minimum_height" android:text="@string/sr_smartreply_bad_suggestion" android:contentDescription="@string/sr_cd_smartreply_bad_suggestion" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/smart_reply_view" android:paddingLeft="@dimen/smart_reply_bar_horizontal_margin" android:paddingRight="@dimen/smart_reply_bar_horizontal_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/smart_reply_item_min_height">
+        <include layout="@layout/smart_reply_textview" style="@style/SmartReplyItem" />
+        <Space android:layout_width="@dimen/smart_reply_item_horizontal_margin" android:layout_height="fill_parent" />
+        <include layout="@layout/smart_reply_textview" style="@style/SmartReplyItem" />
+        <Space android:layout_width="@dimen/smart_reply_item_horizontal_margin" android:layout_height="fill_parent" />
+        <include layout="@layout/smart_reply_textview" style="@style/SmartReplyItem" />
+    </LinearLayout>
+</LinearLayout>

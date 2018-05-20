@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.browse.ConversationViewHeader android:orientation="vertical" android:id="@id/conversation_header" android:background="@color/conversation_view_overlay_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/snooze_banner" android:background="@color/conversation_view_banner_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/snooze_banner_icon" android:paddingLeft="@dimen/conversation_header_banner_text_horizontal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/snooze_banner_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ConversationSnoozeBannerStyle" />
+    </LinearLayout>
+    <View android:id="@id/banner_divider" android:background="@color/divider_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/trashed_messages_banner" android:background="@color/conversation_view_banner_background_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/trashed_messages_banner_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/ConversationBannerTextStyle" />
+        <TextView android:id="@id/trashed_messages_banner_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/conversation_invisible_trashed_messages_view_all_action" style="@style/ConversationBannerButtonStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="88.0sp" style="@style/ConversationHeaderStyle">
+        <com.android.mail.browse.SubjectAndFolderView android:layout_gravity="center_vertical" android:id="@id/subject_and_folder_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/ConversationSubjectStyle" />
+        <com.android.mail.browse.StarView android:layout_gravity="center_vertical" android:id="@id/conversation_header_star" android:background="?selectableItemBackgroundBorderless" android:visibility="invisible" android:layout_width="@dimen/conversation_header_star_size" android:layout_height="@dimen/conversation_header_star_size" android:src="@drawable/star" android:scaleType="center" />
+    </LinearLayout>
+</com.android.mail.browse.ConversationViewHeader>

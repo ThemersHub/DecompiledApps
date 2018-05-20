@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAutofill="noExcludeDescendants" style="@style/ComposeAreaWrapper"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/wait_fragment" />
+    <com.google.android.apps.work.common.richedittext.RichTextToolbar android:id="@id/rich_text_toolbar" android:visibility="gone" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/RichTextToolbar" />
+    <LinearLayout android:orientation="vertical" android:id="@id/locker_controls_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:orientation="vertical" android:id="@id/compose" android:paddingLeft="@dimen/compose_wrapper_side_padding" android:paddingRight="@dimen/compose_wrapper_side_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" style="@style/ComposeScrollView">
+        <LinearLayout android:paddingTop="@dimen/compose_wrapper_top_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/compose_padding_weight" />
+            <LinearLayout android:orientation="vertical" android:id="@id/content" style="@style/ComposeArea">
+                <com.android.mail.dataprotection.compose.ComposeSecurityBanner android:id="@id/compose_security_banner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/compose_from" />
+                <include layout="@layout/compose_recipients" />
+                <include layout="@layout/compose_subject" />
+                <com.android.mail.ui.WalletAttachmentChip android:id="@id/wa_chip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/wc_compose_body" />
+                <include layout="@layout/pntg_propose_time_view" />
+                <com.android.mail.ui.ComposeAttachmentTileGrid android:id="@id/attachment_tile_grid" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="24.0dip" android:animateLayoutChanges="true" />
+                <ImageButton android:id="@id/wc_respond_inline_button" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:clickable="true" android:layout_width="@dimen/wc_respond_inline_button_width" android:layout_height="@dimen/wc_respond_inline_button_height" android:src="@drawable/quantum_ic_more_horiz_grey600_24" />
+                <View android:id="@id/composearea_tap_trap_bottom" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="noHideDescendants" />
+            </LinearLayout>
+            <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/compose_padding_weight" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

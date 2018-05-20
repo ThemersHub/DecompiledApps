@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/folder_teaser_row" android:background="?android:selectableItemBackground" android:paddingTop="8.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/folder_teaser_item_height" android:paddingEnd="16.0dip">
+        <ImageView android:id="@id/nested_folder_icon" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="@dimen/folder_teaser_start_margin" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:src="@drawable/ic_drawer_folder_24dp" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/right_pane_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <LinearLayout android:orientation="horizontal" android:id="@id/top_pane_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/folder_teaser_main_text" android:ellipsize="end" android:id="@id/folder_textView" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_inbox_section_promo" android:singleLine="true" android:layout_weight="1.0" />
+                <TextView android:textSize="14.0sp" android:id="@id/unseen_count_textView" android:minWidth="57.0sp" android:text="@string/unseen_count" style="@style/UnseenCount" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/bottom_pane_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
+                <com.google.android.gm.ads.LogoStackView android:layout_gravity="center_vertical" android:id="@id/logo_stack" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="43.0dip" android:layout_marginRight="8.0dip" android:layout_marginEnd="8.0dip" />
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/senders_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:id="@id/promo_badge_textView" style="@style/RichTeaserPromoBadgeStyle" />
+                    <TextView android:id="@id/senders_textView" style="@style/RichTeaserSendersTextStyle" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@id/unread_count_textView" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/FolderTeaserUnreadCountTextStyle" />
+    </LinearLayout>
+    <View style="@style/ConversationListDividerStyle" />
+</LinearLayout>

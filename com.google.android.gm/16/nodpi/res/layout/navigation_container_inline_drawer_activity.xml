@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.android.mail.ui.InlineDrawerLayout android:id="@id/inline_drawer_layout" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foregroundGravity="fill_horizontal|center|top">
+        <FrameLayout android:layout_gravity="left" android:id="@id/drawer" android:layout_width="@dimen/two_pane_drawer_width_open" android:layout_height="fill_parent">
+            <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/drawer_fragment" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="left" android:id="@id/content_container" android:background="@android:color/white" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+    </com.android.mail.ui.InlineDrawerLayout>
+</LinearLayout>

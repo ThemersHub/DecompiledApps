@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gm.ads.AdTeaserItemView android:id="@id/ad_teaser_item" android:clickable="true" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/conv_list_card_border_padding" android:minHeight="@dimen/ad_teaser_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/tl_item_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/ad_teaser_item_content" android:paddingLeft="@dimen/conv_list_card_border_padding" android:paddingRight="@dimen/conv_list_card_border_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/contact_image" android:contentDescription="@null" style="@style/ConversationListContactImageStyle" />
+                <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/conv_list_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="16.0sp" android:textColor="@color/senders_text_color" android:ellipsize="end" android:id="@id/senders" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conv_list_padding" android:maxLines="1" android:lines="1" android:includeFontPadding="false" android:layout_weight="1.0" />
+                        <ImageView android:id="@id/info_icon" android:background="?selectableItemBackgroundBorderless" android:paddingTop="@dimen/conv_list_padding" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_ad_info_20dp" android:contentDescription="@string/ad_info_description" style="@style/AdInfoIconStyle" />
+                    </LinearLayout>
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/star" android:paddingBottom="3.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_star_outline_20dp" android:contentDescription="@string/add_star" style="@style/AdTeaserStarStyle" />
+                        <LinearLayout android:orientation="horizontal" android:id="@id/ad_badge_and_subject" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ad_badge_and_subject_margin_top" android:layout_toLeftOf="@id/star" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+                            <com.google.android.gm.ads.AdBadgeView android:textSize="12.0sp" android:ellipsize="end" android:id="@id/ad_badge" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/ad" android:maxLines="1" />
+                            <TextView android:textSize="14.0sp" android:ellipsize="end" android:id="@id/subject" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" />
+                        </LinearLayout>
+                        <TextView android:textSize="14.0sp" android:textStyle="normal" android:textColor="@color/snippet_text_color" android:ellipsize="end" android:id="@id/snippet" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:maxLines="1" android:includeFontPadding="false" android:fontFamily="sans-serif-light" style="@style/AdSnippetStyle" />
+                    </RelativeLayout>
+                    <include android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ad_wta_tooltip_teaser_margin_top" layout="@layout/ad_wta_tooltip_view" style="@style/AdWtaTooltipTeaserStyle" />
+                </LinearLayout>
+            </LinearLayout>
+            <include android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/rich_ad_teaser_card_view" />
+        </LinearLayout>
+        <include layout="@layout/ad_duffy_teaser_survey" />
+        <View android:id="@id/ad_divider_line" android:background="@color/conversation_view_border_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+    </LinearLayout>
+    <include android:id="@id/ad_teaser_separate_line" android:visibility="gone" layout="@layout/conversation_view_border" />
+</com.google.android.gm.ads.AdTeaserItemView>

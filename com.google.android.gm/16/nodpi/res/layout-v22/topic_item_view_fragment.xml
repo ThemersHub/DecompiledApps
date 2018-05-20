@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.NestedScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:id="@id/topic_card_list_view" android:background="@color/quantum_grey200" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.android.mail.ui.ThreadListView android:id="@id/topic_thread_list_view" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keyboardNavigationCluster="true" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <include android:id="@id/topic_item_list_loading_view" layout="@layout/conversation_list_loading_view" />
+    <FrameLayout android:id="@id/animation_view" android:background="@android:color/white" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

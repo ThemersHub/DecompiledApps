@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@drawable/tl_item_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:padding="@dimen/conv_list_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/topic_avatar" android:layout_marginTop="0.0dip" android:contentDescription="@null" style="@style/ConversationListContactImageStyle" />
+        <TextView android:id="@id/topic_date" android:text="@string/date" style="@style/ConversationListDateStyle" />
+        <TextView android:textSize="@dimen/topic_title_text_size" android:id="@id/topic_title" style="@style/TopicItemTextStyle" />
+        <ImageView android:id="@id/topic_star" android:paddingLeft="@dimen/item_list_star_padding_start" android:paddingRight="@dimen/item_list_star_padding_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_star_outline_20dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:contentDescription="@null" />
+        <TextView android:textSize="@dimen/topic_description_text_size" android:id="@id/topic_description" android:paddingTop="@dimen/topic_description_padding_top" android:layout_below="@id/topic_title" style="@style/TopicItemTextStyle" />
+        <TextView android:textSize="@dimen/folder_tl_font_size" android:id="@id/topic_folders" android:paddingTop="@dimen/topic_folders_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/topic_star" android:layout_alignParentBottom="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/topic_summary_updates" android:paddingTop="@dimen/topic_summary_update_padding_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/topic_folders" android:layout_below="@id/topic_description" />
+        <LinearLayout android:orientation="vertical" android:id="@id/topic_action_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/topic_summary_updates" />
+    </RelativeLayout>
+    <View android:layout_gravity="bottom" style="@style/ConversationListDividerStyle" />
+    <View android:id="@id/selected_highlight_bar" android:background="@drawable/visible_item_highlight" android:visibility="gone" android:layout_width="@dimen/conv_list_highlight_width" android:layout_height="fill_parent" />
+</FrameLayout>

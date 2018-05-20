@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:gravity="center_vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shrinkColumns="1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow android:gravity="center_vertical">
+        <ImageView android:id="@id/ces_details_item_icon" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_lock_open_googred_24" android:layout_column="0" android:contentDescription="@null" style="@style/Ces.Icon.Details" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="1" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:id="@id/ces_details_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/long_string" android:lines="1" style="@style/TextAppearance.AppCompat.Body1" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text_color_grey" android:ellipsize="end" android:id="@id/ces_details_item_subtitle" android:paddingTop="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" />
+        </LinearLayout>
+        <ImageView android:id="@id/ces_details_item_avatar" android:layout_width="@dimen/ces_details_item_avatar_width" android:layout_height="@dimen/ces_details_item_avatar_height" android:src="@drawable/quantum_ic_lock_open_googred_24" android:layout_column="2" android:contentDescription="@null" />
+        <RadioButton android:id="@id/ces_details_setting" android:visibility="gone" android:layout_width="@dimen/ces_details_item_group_indicator_width" android:layout_height="wrap_content" android:layout_column="3" />
+        <ImageView android:id="@id/ces_details_group_indicator" android:visibility="gone" android:layout_width="@dimen/ces_details_item_group_indicator_width" android:layout_height="wrap_content" android:layout_column="4" android:contentDescription="@null" />
+    </TableRow>
+    <TableRow>
+        <TextView android:textSize="14.0sp" android:textColor="@color/text_color_grey" android:ellipsize="end" android:id="@id/ces_details_item_description" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="@string/long_string" android:lines="1" />
+    </TableRow>
+    <TableRow>
+        <TextView android:textSize="14.0sp" android:textColor="@color/quantum_googred700" android:ellipsize="end" android:id="@id/ces_details_item_error" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="@string/long_string" android:lines="1" />
+    </TableRow>
+</TableLayout>

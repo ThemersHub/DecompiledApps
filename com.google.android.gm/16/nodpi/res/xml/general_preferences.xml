@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gm="http://schemas.android.com/apk/res-auto">
+    <com.android.mail.ui.settings.FancySummaryListPreference android:persistent="true" android:entries="@array/prefEntries_removal_action" android:title="@string/preference_removal_action_title" android:key="removal-action" android:defaultValue="@string/prefDefault_removal_action" android:dialogTitle="@string/prefDialogTitle_removal_action" android:entryValues="@array/prefValues_removal_action" gm:entrySummaries="@array/prefSummaries_removal_action_summary" />
+    <Preference android:title="@string/preference_manage_notifications_title" android:key="manage-notifications" />
+    <CheckBoxPreference android:persistent="true" android:title="@string/preference_enable_threading_title" android:key="mail-enable-threading" android:summary="@string/preference_enable_threading_description" />
+    <CheckBoxPreference android:persistent="true" android:title="@string/preference_swipe_title" android:key="conversation-list-swipe" android:summary="@string/preference_swipe_description" android:defaultValue="true" />
+    <PreferenceScreen android:title="@string/preference_swipe_title" android:key="swipe-actions" android:summary="@string/custom_swipe_preference_description" android:fragment="com.google.android.gm.preference.SwipeActionsPreferenceFragment" />
+    <CheckBoxPreference android:persistent="true" android:title="@string/preference_sender_image_title" android:key="conversation-list-sender-image" android:summary="@string/preference_sender_image_description" android:defaultValue="true" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/preferences_default_reply_all_title" android:key="default-reply-all" android:summary="@string/preferences_default_reply_all_summary" android:defaultValue="@bool/prefDefault_actionStripActionReplyAll" />
+    <CheckBoxPreference android:persistent="true" android:title="@string/preferences_conversation_mode_title" android:key="conversation-overview-mode" android:summary="@string/preferences_conversation_mode_summary" android:defaultValue="true" />
+    <com.android.mail.ui.settings.FancySummaryListPreference android:persistent="false" android:entries="@array/prefEntries_autoAdvance" android:title="@string/preference_advance_to_title" android:key="auto-advance-widget" android:defaultValue="@string/prefDefault_autoAdvance" android:dialogTitle="@string/prefDialogTitle_autoAdvance" android:entryValues="@array/prefValues_autoAdvance" gm:entrySummaries="@array/prefSummaries_autoAdvance" />
+    <PreferenceCategory android:title="@string/preference_header_action_confirmations" android:key="removal-actions-group">
+        <CheckBoxPreference android:persistent="true" android:title="@string/preference_confirm_before_delete_title" android:key="confirm-delete" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/preference_confirm_before_archive_title" android:key="confirm-archive" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/preference_confirm_before_send_title" android:key="confirm-send" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>
