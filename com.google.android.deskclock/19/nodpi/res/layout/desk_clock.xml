@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/content" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:statusBarBackground="@null"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/app_bar_layout" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStart="0.0dip">
+            <android.support.design.widget.TabLayout android:id="@id/tabs" android:layout_width="fill_parent" android:layout_height="fill_parent" app:tabIndicatorColor="@android:color/transparent" app:tabMode="fixed" app:tabGravity="fill" app:tabMaxWidth="0.0dip" app:tabPaddingStart="0.0dip" app:tabPaddingEnd="0.0dip" />
+        </android.support.v7.widget.Toolbar>
+        <View android:layout_gravity="bottom" android:id="@id/tab_hairline" android:background="@color/hairline" android:layout_width="fill_parent" android:layout_height="@dimen/hairline_height" android:importantForAccessibility="no" />
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.v4.view.ViewPager android:id="@id/desk_clock_pager" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" app:layout_behavior="com.android.deskclock.widget.toast.SnackbarSlidingBehavior">
+        <FrameLayout android:layout_gravity="start|center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:layout_gravity="center" android:id="@id/left_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" style="?attr/borderlessButtonStyle" />
+        </FrameLayout>
+        <android.support.design.widget.FloatingActionButton android:layout_gravity="center" android:id="@id/fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/fab_margin" app:elevation="@dimen/fab_elevation" app:borderWidth="0.0dip" />
+        <FrameLayout android:layout_gravity="end|center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:layout_gravity="center" android:id="@id/right_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" style="?attr/borderlessButtonStyle" />
+        </FrameLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

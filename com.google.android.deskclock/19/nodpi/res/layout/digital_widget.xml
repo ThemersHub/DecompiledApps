@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center|top" android:orientation="vertical" android:id="@id/digital_widget" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextClock android:textAppearance="@style/TextAppearance.AppWidget.TextClock" android:ellipsize="none" android:layout_gravity="center|top" android:id="@id/clock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:format12Hour="@string/lock_screen_12_hour_format" android:format24Hour="@string/lock_screen_24_hour_format" />
+    <LinearLayout android:layout_gravity="center|top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextClock android:textAppearance="@style/TextAppearance.AppWidget.Label" android:ellipsize="none" android:layout_gravity="center" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <ImageView android:layout_gravity="center" android:id="@id/nextAlarmIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:contentDescription="@null" />
+        <TextView android:textAppearance="@style/TextAppearance.AppWidget.Label" android:ellipsize="none" android:layout_gravity="center" android:id="@id/nextAlarm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+    </LinearLayout>
+    <ListView android:layout_gravity="center|top" android:id="@id/world_city_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:divider="@null" />
+</LinearLayout>

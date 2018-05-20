@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="66.0" />
+    <LinearLayout android:orientation="vertical" android:id="@id/selectable_area" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="30.0">
+        <com.android.deskclock.widget.AutoSizingTextClock android:textAppearance="@style/TextAppearance.TextClock" android:gravity="center_horizontal" android:id="@id/digital_clock" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <com.android.deskclock.widget.AnalogClock android:layout_gravity="center_horizontal" android:id="@id/analog_clock" android:layout_width="@dimen/world_clock_analog_size" android:layout_height="@dimen/world_clock_analog_size" android:layout_marginBottom="@dimen/bottom_text_spacing_analog_small" />
+        <include android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/world_clock_city_container" />
+    </LinearLayout>
+    <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/gutter_width_percent" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/saver_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/main_clock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/time_margin_top" android:layout_marginBottom="@dimen/screensaver_margin" android:layout_marginStart="@dimen/screensaver_margin" android:layout_marginEnd="@dimen/screensaver_margin">
+        <com.android.deskclock.widget.AnalogClock android:layout_gravity="center_horizontal" android:id="@id/analog_clock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/bottom_text_spacing_analog" />
+        <TextClock android:textSize="@dimen/main_clock_font_size" android:textColor="@android:color/white" android:ellipsize="none" android:gravity="center" android:layout_gravity="center" android:id="@id/digital_clock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/bottom_text_spacing_digital" android:singleLine="true" android:fontFamily="sans-serif-thin" />
+        <include layout="@layout/date_and_next_alarm_time" />
+    </LinearLayout>
+</FrameLayout>
