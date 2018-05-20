@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/LadderPromotionDetailsLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView android:gravity="center" android:id="@id/PromotionCardView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing" style="@style/FeedItem">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing">
+                <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:titleTextColor="@android:color/white">
+                    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageButton android:layout_gravity="start" android:id="@id/CloseButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_close_black_24" android:contentDescription="@string/close_button_description" style="@style/ClickableButton" />
+                        <ImageView android:layout_gravity="center" android:id="@id/Logo" android:layout_width="113.0dip" android:layout_height="22.0dip" android:scaleType="fitXY" />
+                    </FrameLayout>
+                </android.support.v7.widget.Toolbar>
+                <View android:id="@id/TopDivider" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginRight="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" style="@style/HorizontalDivider" />
+                <TextView android:textAppearance="@style/Text_Section_Header" android:gravity="start|center" android:id="@id/TopStatus" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="40.0dip" android:textAllCaps="true" />
+                <ImageView android:id="@id/ProgressImage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@null" />
+                <ImageView android:id="@id/CardImage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@null" />
+                <LinearLayout android:orientation="vertical" android:id="@id/BottomStatusContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing">
+                    <TextView android:gravity="start|center" android:id="@id/BottomStatusHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/default_spacing" android:layout_marginEnd="@dimen/default_spacing" style="@style/Text_Headline" />
+                    <View android:id="@id/BottomStatusSpacing" android:layout_width="fill_parent" android:layout_height="16.0dip" />
+                    <TextView android:gravity="start|center" android:id="@id/BottomStatus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/default_spacing" android:layout_marginEnd="@dimen/default_spacing" style="@style/Text_Body.Gray700" />
+                </LinearLayout>
+                <android.support.design.button.MaterialButton android:id="@id/RewardButton" android:padding="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing" style="@style/Widget.GoogleMaterial.Button" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textAppearance="@style/Text_Caption" android:gravity="start" android:id="@id/ExpiryTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/medium_spacing" android:layout_marginTop="12.0dip" android:layout_marginRight="@dimen/medium_spacing" />
+        <TextView android:textAppearance="@style/Text_Body.Grey900" android:gravity="start" android:id="@id/ExpiryDetails" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/medium_spacing" android:layout_marginTop="4.0dip" android:layout_marginRight="@dimen/medium_spacing" />
+        <View android:id="@id/ExpiryDivider" android:layout_marginLeft="@dimen/medium_spacing" android:layout_marginTop="12.0dip" android:layout_marginRight="@dimen/medium_spacing" style="@style/HorizontalDivider" />
+        <TextView android:textAppearance="@style/Text_Caption.Small" android:gravity="start" android:id="@id/TosTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/medium_spacing" android:layout_marginTop="12.0dip" android:layout_marginRight="@dimen/medium_spacing" android:text="@string/tos_title" />
+        <TextView android:textAppearance="@style/Text_Caption" android:gravity="start" android:id="@id/TosDetails" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/medium_spacing" android:layout_marginTop="4.0dip" android:layout_marginRight="@dimen/medium_spacing" android:layout_marginBottom="@dimen/default_spacing" />
+    </LinearLayout>
+</ScrollView>

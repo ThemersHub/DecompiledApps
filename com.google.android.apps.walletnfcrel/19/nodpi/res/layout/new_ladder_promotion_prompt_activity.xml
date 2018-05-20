@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/Layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/BackgroundImage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:contentDescription="@null" />
+    <ProgressBar android:id="@id/ProgressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <ScrollView android:id="@id/MainContent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_bar_default_height_material">
+                <ImageView android:layout_gravity="center" android:id="@id/HeaderImage" android:layout_width="wrap_content" android:layout_height="29.0dip" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@null" />
+                <ImageButton android:id="@id/DismissButton" android:padding="@dimen/default_spacing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_close_grey600_24" android:contentDescription="@string/dismiss_button_content_description" style="@style/ClickableButton" />
+            </FrameLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/TopContent" android:paddingLeft="@dimen/medium_spacing" android:paddingRight="@dimen/medium_spacing" android:paddingBottom="@dimen/medium_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/CardsContainer" android:paddingLeft="@dimen/medium_spacing" android:paddingRight="@dimen/medium_spacing" android:paddingBottom="@dimen/medium_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/CenterContent" android:padding="@dimen/medium_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="vertical" android:id="@id/BottomContent" android:paddingLeft="@dimen/medium_spacing" android:paddingRight="@dimen/medium_spacing" android:paddingBottom="@dimen/medium_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ButtonLayout" android:padding="@dimen/material_button_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <android.support.design.button.MaterialButton android:id="@id/ContinueButton" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <android.support.design.button.MaterialButton android:id="@id/CancelButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_no_thanks" style="@style/Widget.GoogleMaterial.TextButton" />
+    </LinearLayout>
+    <ScrollView android:id="@id/FormLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/ButtonLayout" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/large_spacing" android:paddingTop="24.0dip" android:paddingRight="@dimen/large_spacing" android:paddingBottom="24.0dip" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ico_layout_margin_bottom">
+                <ImageView android:id="@id/GooglePayLogo" android:layout_width="@dimen/ico_logo_size" android:layout_height="@dimen/ico_logo_size" android:contentDescription="@string/google_pay_logo" />
+                <ImageView android:id="@id/Arrow" android:layout_width="@dimen/ico_paytoarrow_width" android:layout_height="@dimen/ico_paytoarrow_height" android:src="@drawable/ico_arrow" android:contentDescription="@string/arrow_description" android:layout_marginStart="@dimen/narrow_spacing" android:layout_marginEnd="@dimen/narrow_spacing" />
+                <ImageView android:id="@id/MerchantLogo" android:layout_width="@dimen/ico_logo_size" android:layout_height="@dimen/ico_logo_size" android:contentDescription="@string/merchant_logo" />
+            </LinearLayout>
+            <TextView android:id="@id/ShareConfirmation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/narrow_spacing" style="@style/Text_Headline" />
+            <TextView android:id="@id/SignUpDescription" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/signup_info_description" style="@style/Text_Body_2" />
+            <LinearLayout android:orientation="vertical" android:id="@id/UserDataPrompts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_margin_top" android:layout_marginBottom="@dimen/form_margin_bottom" />
+            <TextView android:id="@id/SignUpAgreement" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text_Caption" />
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar android:id="@id/ProgressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

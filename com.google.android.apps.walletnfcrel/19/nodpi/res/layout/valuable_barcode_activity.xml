@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ValuableBarcodeLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/card_header_view" />
+    </FrameLayout>
+    <FrameLayout android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/card_title_view" />
+    </FrameLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="20.0dip" android:minHeight="280.0dip" android:layout_weight="1.0">
+        <com.google.commerce.tapandpay.android.valuable.widgets.barcode.CombinedBarcodeView android:id="@id/BarcodeLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@string/barcode_description" />
+        <TextView android:textSize="32.0sp" android:gravity="center" android:id="@id/MemberId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:importantForAccessibility="no" style="@style/Text_Headline" />
+    </RelativeLayout>
+</LinearLayout>

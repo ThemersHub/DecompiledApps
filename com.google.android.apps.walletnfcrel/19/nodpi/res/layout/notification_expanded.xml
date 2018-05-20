@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/quantum_grey50" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/Logo" android:padding="@dimen/narrow_spacing" android:layout_width="@dimen/kk_notification_logo_size" android:layout_height="@dimen/kk_notification_logo_size" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_google_white_24" android:scaleType="fitXY" android:tint="@color/quantum_googblue" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ContentSection" android:paddingTop="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:paddingStart="@dimen/narrow_spacing" android:paddingEnd="@dimen/narrow_spacing" android:layout_toEndOf="@id/Logo">
+        <TextView android:textAppearance="@style/KKNotificationTitle" android:id="@id/Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:id="@id/Description" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/TextAppearance.StatusBar.EventContent" />
+    </LinearLayout>
+    <include android:id="@id/Body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ContentSection" layout="@layout/notification_expanded_body" />
+    <ImageView android:id="@id/Divider" android:layout_below="@id/Body" android:layout_toEndOf="@id/Logo" style="@style/HorizontalDivider.Black12" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Divider" android:layout_toEndOf="@id/Logo" layout="@layout/notification_expanded_footer" />
+</RelativeLayout>

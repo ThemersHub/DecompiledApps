@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/StationNames" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text_Headline.White100" />
+    <TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/narrow_spacing" android:stretchColumns="1">
+        <TableRow>
+            <TextView android:textAppearance="@style/Text_Caption.White100" android:textStyle="bold" android:padding="4.0dip" android:text="@string/departure_date_label" android:textAllCaps="true" />
+            <TextView android:textAppearance="@style/Text_Caption.White100" android:textStyle="bold" android:gravity="right" android:padding="4.0dip" android:text="@string/fare_type_label" android:textAllCaps="true" />
+        </TableRow>
+        <TableRow>
+            <TextView android:textAppearance="@style/Text_Body.White100" android:id="@id/DepartureDate" android:padding="4.0dip" />
+            <TextView android:textAppearance="@style/Text_Body.White100" android:gravity="right" android:id="@id/FareType" android:padding="4.0dip" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

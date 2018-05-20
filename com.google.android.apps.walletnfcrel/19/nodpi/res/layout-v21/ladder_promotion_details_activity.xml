@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/LadderPromotionDetailsLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.CoordinatorLayout android:id="@id/CoordinatorLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.design.widget.AppBarLayout android:id="@id/AppBar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.design.widget.CollapsingToolbarLayout android:id="@id/CollapsingToolbar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="exitUntilCollapsed|scroll|snap" app:expandedTitleTextAppearance="@style/LadderPromotionDetailsActivityExpandedHeaderText" app:collapsedTitleTextAppearance="@style/LadderPromotionDetailsActivityCollapsedHeaderText">
+                <com.google.commerce.tapandpay.android.valuable.activity.widget.HeaderCardView android:id="@id/CardView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+        <FrameLayout android:id="@id/ValuableContentFragmentContainer" android:background="@color/quantum_grey200" android:layout_width="fill_parent" android:layout_height="fill_parent" android:transitionGroup="true" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </android.support.design.widget.CoordinatorLayout>
+    <FrameLayout android:id="@id/CardContainerForTransition" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/narrow_spacing" android:paddingEnd="@dimen/narrow_spacing">
+        <FrameLayout android:id="@id/CardViewCropperForTransition" android:paddingTop="?actionBarSize" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.commerce.tapandpay.android.valuable.activity.widget.HeaderCardView android:id="@id/CardViewForTransitionSlide" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <com.google.commerce.tapandpay.android.valuable.activity.widget.HeaderCardView android:id="@id/CardViewForTransitionFade" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?actionBarSize" />
+    </FrameLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/ProgressBar" android:visibility="gone" android:layout_width="@dimen/valuable_action_spinner_size" android:layout_height="@dimen/valuable_action_spinner_size" />
+</FrameLayout>

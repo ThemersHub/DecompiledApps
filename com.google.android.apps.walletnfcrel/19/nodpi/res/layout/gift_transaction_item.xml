@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/quantum_grey50" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ChainImage" android:layout_width="@dimen/chain_logo_size" android:layout_height="@dimen/chain_logo_size" android:layout_marginTop="@dimen/default_spacing" android:src="@drawable/tp_se_pending_gift_logo_color_40dp" android:layout_marginEnd="@dimen/default_spacing" android:layout_alignParentStart="true" />
+    <TextView android:textAppearance="@style/Text_Subhead" android:textStyle="bold" android:textColor="@color/tp_text_black_38_percent" android:id="@id/Amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" />
+    <TextView android:textAppearance="@style/Text_Subhead.Black87" android:ellipsize="end" android:id="@id/Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" android:text="@string/gift_transaction_title" android:maxLines="1" android:layout_alignParentTop="true" android:textAlignment="viewStart" android:layout_toStartOf="@id/Amount" android:layout_toEndOf="@id/ChainImage" />
+    <TextView android:textAppearance="@style/Text_Caption" android:textColor="@color/tp_text_black_38_percent" android:id="@id/SubTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gift_transacton_status_pending" android:layout_below="@id/Title" android:layout_toEndOf="@id/ChainImage" />
+    <ImageView android:id="@id/CloseButton" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="@dimen/default_spacing" android:src="@drawable/quantum_ic_close_black_24" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" />
+    <RelativeLayout android:id="@id/Divider" android:layout_width="fill_parent" android:layout_height="@dimen/default_spacing" android:layout_alignParentTop="true" android:layout_toEndOf="@id/ChainImage">
+        <View android:layout_alignParentTop="true" style="@style/HorizontalDivider" />
+    </RelativeLayout>
+</RelativeLayout>

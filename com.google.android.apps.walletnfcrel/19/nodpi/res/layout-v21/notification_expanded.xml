@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/Logo" android:layout_width="@dimen/kk_notification_logo_size" android:layout_height="@dimen/kk_notification_logo_size">
+        <ImageView android:id="@id/CustomLogo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/notification_logo_padding" android:layout_marginBottom="@dimen/notification_logo_padding" android:scaleType="centerInside" android:layout_marginStart="@dimen/notification_logo_padding" android:layout_marginEnd="@dimen/notification_logo_padding" />
+        <ImageView android:layout_gravity="end|bottom|center" android:id="@id/SmallAndroidLogo" android:padding="@dimen/small_logo_padding" android:visibility="gone" android:layout_width="@dimen/small_logo_size" android:layout_height="@dimen/small_logo_size" android:layout_marginBottom="@dimen/small_logo_margin" android:src="@drawable/quantum_ic_google_white_24" android:scaleType="centerInside" android:tint="@color/quantum_googblue" android:layout_marginEnd="@dimen/small_logo_margin" />
+        <FrameLayout android:id="@id/DefaultLogo" android:layout_width="@dimen/notification_logo_size" android:layout_height="@dimen/notification_logo_size" android:layout_margin="@dimen/notification_logo_padding">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/notification_icon_size" android:layout_height="@dimen/notification_icon_size" android:src="@drawable/quantum_ic_google_white_24" android:scaleType="fitXY" android:tint="@color/quantum_googblue" />
+        </FrameLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ContentSection" android:paddingTop="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_toEndOf="@id/Logo">
+        <TextView android:id="@id/Title" android:paddingTop="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:paddingEnd="@dimen/narrow_spacing" style="@android:style/TextAppearance.Material.Notification.Title" />
+        <TextView android:id="@id/Description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/narrow_spacing" style="@android:style/TextAppearance.Material.Notification" />
+    </LinearLayout>
+    <include android:id="@id/Body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ContentSection" layout="@layout/notification_expanded_body" />
+    <ImageView android:id="@id/Divider" android:layout_below="@id/Body" android:layout_toEndOf="@id/Logo" style="@style/HorizontalDivider.Black12" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Divider" android:layout_toEndOf="@id/Logo" layout="@layout/notification_expanded_footer" />
+</RelativeLayout>

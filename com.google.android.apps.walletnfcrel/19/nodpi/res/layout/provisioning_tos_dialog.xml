@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:background="@color/googlepay_white" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/narrow_spacing">
+        <TextView android:gravity="center" android:layout_gravity="right" android:id="@id/MainMessage" android:layout_width="wrap_content" android:layout_height="@dimen/minimum_touch_target" android:text="@string/tos_dialog_title" android:paddingStart="56.0dip" android:paddingEnd="0.0dip" style="@style/Text_Label" />
+        <ImageButton android:layout_gravity="center|left" android:id="@id/CloseButton" android:background="@android:color/transparent" android:layout_width="@dimen/minimum_touch_target" android:layout_height="@dimen/minimum_touch_target" android:src="@drawable/quantum_ic_arrow_back_black_24" android:contentDescription="@string/close_button_description" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/medium_spacing" android:paddingEnd="@dimen/medium_spacing">
+            <TextView android:id="@id/TosTitle" android:paddingBottom="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/emoney_tos_title" style="@style/Text_Headline" />
+            <TextView android:id="@id/TosMessage" android:paddingBottom="@dimen/default_spacing" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text_Body" />
+            <TextView android:id="@id/GoogleTosTitle" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/google_tos_title" style="@style/Text_Headline" />
+            <TextView android:id="@id/GoogleTosMessage" android:paddingBottom="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text_Body" />
+            <TextView android:id="@id/GoogleTosSubMessage" android:paddingBottom="@dimen/narrow_spacing" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/google_tos_message2" style="@style/Text_Body" />
+        </LinearLayout>
+    </ScrollView>
+    <View android:background="@color/quantum_grey200" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <android.support.design.button.MaterialButton android:layout_gravity="center" android:id="@id/ContinueButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/default_spacing" android:text="@string/tos_dialog_button_accept" android:paddingStart="32.0dip" android:paddingEnd="32.0dip" />
+</LinearLayout>

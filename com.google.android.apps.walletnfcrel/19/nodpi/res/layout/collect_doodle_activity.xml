@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/BackgroundView" android:background="@color/quantum_white_100" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/MainContent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/ContentView" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/CollectImage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" android:contentDescription="@null" />
+            <TextView android:textAppearance="@style/Text_Headline" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/CollectHeader" android:padding="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textAppearance="@style/Text_Subhead" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/CollectBody" android:paddingLeft="@dimen/medium_spacing" android:paddingRight="@dimen/medium_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:layout_gravity="center_horizontal" android:id="@id/ShareButton" android:layout_width="wrap_content" android:layout_height="@dimen/tap_game_button_height" android:layout_marginBottom="@dimen/narrow_spacing" style="@style/Tap_Game_Button" />
+            <ImageView android:gravity="center" android:id="@id/SocialImage" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginBottom="@dimen/narrow_spacing" android:contentDescription="@null" />
+            <TextView android:textColor="@color/quantum_googblue500" android:layout_gravity="center_horizontal" android:id="@id/ProgressButton" android:padding="@dimen/narrow_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" style="@style/Text_Body" />
+            <TextView android:textAppearance="@style/Text_Caption.Black38" android:layout_gravity="center_horizontal" android:id="@id/Footer" android:paddingLeft="@dimen/narrow_spacing" android:paddingRight="@dimen/narrow_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+    <ImageButton android:layout_gravity="center|left|top" android:id="@id/CloseButton" android:padding="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_close_grey600_24" android:contentDescription="@string/tap_game_close" style="@style/ClickableButton" />
+</FrameLayout>

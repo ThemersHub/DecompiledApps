@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/BalanceGroup" android:layout_width="fill_parent" android:layout_height="76.0dip" android:paddingStart="12.0dip" android:paddingEnd="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/BalanceWrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toStartOf="@id/BalanceSyncSpinner" android:layout_alignParentStart="true">
+        <TextView android:textAppearance="@style/Text_Caption" android:textColor="@color/google_grey900" android:gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/se_card_balance_no_colon" android:includeFontPadding="false" android:textAllCaps="true" android:fontFamily="sans-serif" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textAppearance="@style/Text_Headline" android:textColor="@color/google_grey900" android:id="@id/LeftCurrencySymbol" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textColor="@color/google_grey900" android:gravity="top" android:id="@id/CurrencyBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:paddingStart="@dimen/currency_symbol_padding" android:paddingEnd="@dimen/currency_symbol_padding" style="@style/Text_Headline" />
+            <TextView android:textAppearance="@style/Text_Headline" android:textColor="@color/google_grey900" android:id="@id/RightCurrencySymbol" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/BalanceSyncSpinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:src="@drawable/quantum_ic_sync_white_24" android:layout_alignBottom="@id/PointBalanceWrapper" android:layout_centerHorizontal="true" android:contentDescription="@string/se_card_sync_balance" />
+    <LinearLayout android:gravity="end" android:orientation="vertical" android:id="@id/PointBalanceWrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/BalanceSyncSpinner" android:layout_alignParentEnd="true">
+        <TextView android:textAppearance="@style/Text_Caption" android:textColor="@color/google_grey900" android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tp_card_point" android:includeFontPadding="false" android:textAllCaps="true" android:fontFamily="sans-serif" android:textAlignment="viewEnd" />
+        <TextView android:layout_gravity="end" android:id="@id/PointBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:textAlignment="viewEnd" style="@style/Text_Headline" />
+    </LinearLayout>
+</RelativeLayout>

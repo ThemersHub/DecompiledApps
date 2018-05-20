@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/Toolbar" style="@style/Toolbar" />
+    <ScrollView android:id="@id/SettingContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/OrphanSettingsContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/settings_divider" android:showDividers="middle">
+            <RelativeLayout android:id="@id/TransactionSettingContainer" style="@style/SettingContainerStyle">
+                <android.support.v7.widget.SwitchCompat android:id="@id/TransactionSwitch" style="@style/SettingSwitchCompat" />
+                <TextView android:id="@id/TransactionSettingTitle" android:text="@string/transaction_notifications_label" android:layout_toStartOf="@id/TransactionSwitch" style="@style/SettingTitle" />
+                <TextView android:text="@string/transaction_notification_setting_description" android:layout_below="@id/TransactionSettingTitle" android:layout_toStartOf="@id/TransactionSwitch" style="@style/SettingDescription" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/PromoNotificationsSettingContainer" style="@style/SettingContainerStyle">
+                <android.support.v7.widget.SwitchCompat android:id="@id/PromoNotificationsSettingSwitch" style="@style/SettingSwitchCompat" />
+                <TextView android:id="@id/PromoNotificationsTitle" android:text="@string/promo_notifications_label" android:layout_toStartOf="@id/PromoNotificationsSettingSwitch" style="@style/SettingTitle" />
+                <TextView android:text="@string/promo_notifications_description" android:layout_below="@id/PromoNotificationsTitle" android:layout_toStartOf="@id/PromoNotificationsSettingSwitch" style="@style/SettingDescription" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/NfcContainer" style="@style/SettingContainerStyle">
+                <android.support.v7.widget.SwitchCompat android:id="@id/NfcSwitch" style="@style/SettingSwitchCompat" />
+                <TextView android:id="@id/NfcTitle" android:text="@string/store_notifications_title" android:layout_toStartOf="@id/NfcSwitch" style="@style/SettingTitle" />
+                <TextView android:text="@string/store_notifications_description" android:layout_below="@id/NfcTitle" android:layout_toStartOf="@id/NfcSwitch" style="@style/SettingDescription" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/MasterValuableContainer" style="@style/SettingContainerStyle">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <android.support.v7.widget.SwitchCompat android:id="@id/MasterValuableSwitch" style="@style/SettingSwitchCompat" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toStartOf="@id/MasterValuableSwitch">
+                        <TextView android:id="@id/MasterValuableTitle" android:text="@string/item_settings_title" style="@style/SettingTitle" />
+                        <TextView android:id="@id/MasterValuableDescription" android:text="@string/item_settings_description" style="@style/SettingDescription" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/ValuableListContainer" android:paddingTop="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

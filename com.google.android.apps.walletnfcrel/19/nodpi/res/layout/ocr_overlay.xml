@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:material="http://schemas.android.com/apk/res-auto">
+    <Space android:layout_width="fill_parent" android:layout_height="80.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/OcrScannerContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_marginStart="48.0dip" android:layout_marginEnd="48.0dip">
+            <com.google.android.libraries.material.aspectratio.FixedAspectRatioFrameLayout android:id="@id/RegionOfInterest" android:layout_width="fill_parent" android:layout_height="wrap_content" material:aspectRatio="1.0" />
+        </FrameLayout>
+        <TextView android:textColor="@color/googlepay_white" android:gravity="center_horizontal" android:id="@id/BarcodeGuideText" android:paddingBottom="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/valuable_barcode_guide_text" android:layout_above="@id/OcrScannerContainer" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing" style="@style/Text_Label" />
+        <TextView android:textColor="@color/googlepay_white" android:gravity="center" android:id="@id/SkipScanButton" android:background="@drawable/bounded_rippleable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginRight="@dimen/default_spacing" android:layout_marginBottom="24.0dip" android:minHeight="@dimen/minimum_touch_target" android:text="@string/valuable_skip_ocr_image_capture" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing" style="@style/Text_Button" />
+    </RelativeLayout>
+</LinearLayout>

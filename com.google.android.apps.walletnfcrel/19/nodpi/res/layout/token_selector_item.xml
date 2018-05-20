@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.commerce.tapandpay.android.cardview.RoundedCardView android:id="@id/CardView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" app:cardBackgroundColor="@android:color/transparent" app:cardElevation="@dimen/card_unselected_elevation" app:cardPreventCornerOverlap="false">
+        <ImageView android:id="@id/CardImageView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" android:contentDescription="@null" />
+    </com.google.commerce.tapandpay.android.cardview.RoundedCardView>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.airbnb.lottie.LottieAnimationView android:id="@id/Icon" android:background="@drawable/unbounded_rippleable" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_margin="@dimen/nfc_icon_tap_target_padding" android:contentDescription="@null" app:lottie_fileName="nfc_on_off.json" />
+        <TextView android:textAppearance="@style/Text_Body_2.Gray700" android:id="@id/Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/nfc_icon_tap_target_padding" />
+    </LinearLayout>
+</LinearLayout>

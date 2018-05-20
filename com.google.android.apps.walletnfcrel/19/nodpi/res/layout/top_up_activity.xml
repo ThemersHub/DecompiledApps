@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/Toolbar" android:background="@color/googlepay_white" android:paddingBottom="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:paddingStart="@dimen/narrow_spacing" android:paddingEnd="@dimen/narrow_spacing">
+        <TextView android:gravity="center" android:layout_gravity="end" android:id="@id/MainMessage" android:layout_width="wrap_content" android:layout_height="@dimen/minimum_touch_target" android:text="@string/top_up_activity_title" android:paddingStart="@dimen/extra_large_spacing" android:paddingEnd="0.0dip" style="@style/Text_Label" />
+        <ImageButton android:layout_gravity="start|center" android:id="@id/CloseButton" android:background="@android:color/transparent" android:layout_width="@dimen/minimum_touch_target" android:layout_height="@dimen/minimum_touch_target" android:src="@drawable/quantum_ic_arrow_back_black_24" android:contentDescription="@string/close_button_description" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/PaymentInstrumentContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Toolbar" />
+    <FrameLayout android:id="@id/AmountInputContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/PaymentInstrumentContainer" />
+    <android.support.design.button.MaterialButton android:id="@id/AddMoneyButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/default_spacing" android:text="@string/top_up_button_label" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:paddingStart="@dimen/large_spacing" android:paddingEnd="@dimen/large_spacing" />
+</RelativeLayout>

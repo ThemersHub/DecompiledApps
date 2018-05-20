@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" style="@style/PageBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/RootView" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.commerce.tapandpay.android.cardview.RoundedCardView android:id="@id/Card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/narrow_spacing">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/card_header_view" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing">
+                    <include layout="@layout/card_title_view" />
+                    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/TicketStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/narrow_spacing" android:drawableStart="@drawable/quantum_ic_check_circle_white_24" style="@style/Text_Body_2" />
+                    <TextView android:gravity="center" android:id="@id/TicketInfoHeader" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" style="@style/Text_Section_Header" />
+                    <TextView android:gravity="center" android:id="@id/TicketInfoText" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="@dimen/default_spacing" style="@style/Text_Subheader" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/TicketItemsLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/horizontal_line" android:showDividers="beginning|middle" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.commerce.tapandpay.android.cardview.RoundedCardView>
+        <LinearLayout android:orientation="vertical" android:id="@id/MetadataLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/TicketNumberGroup" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" android:layout_marginBottom="@dimen/narrow_spacing" android:divider="@drawable/horizontal_line" android:showDividers="end" android:layout_marginStart="@dimen/medium_spacing" android:layout_marginEnd="@dimen/medium_spacing">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/narrow_spacing" android:text="@string/ticket_number_label" style="@style/Text_Header" />
+                <TextView android:id="@id/TicketNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing" style="@style/Text_Body.Black38" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

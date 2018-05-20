@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:id="@id/AddLoyaltyLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.commerce.tapandpay.android.valuable.activity.widget.HeaderCardView android:id="@id/HeaderCard" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <Space android:layout_width="fill_parent" android:layout_height="@dimen/narrow_spacing" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/PendingValuableLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="18.0sp" android:textColor="@color/quantum_black_text" android:gravity="center" android:id="@id/PendingValuableTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <Space android:layout_width="fill_parent" android:layout_height="@dimen/narrow_spacing" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/quantum_black_secondary_text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pending_valuable_discoverable_subtitle" />
+                <android.support.design.button.MaterialButton android:id="@id/PendingValuableAddButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pending_valuable_discoverable_add_button" />
+            </LinearLayout>
+            <android.support.design.button.MaterialButton android:id="@id/MoreOptionsButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_valuable_more_options" style="@style/Widget.GoogleMaterial.TextButton" />
+            <LinearLayout android:orientation="vertical" android:id="@id/MoreOptionsLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/horizontal_divider" android:showDividers="middle">
+                <com.google.commerce.tapandpay.android.valuable.activity.mutate.widget.ButtonView android:id="@id/SignInButton" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:icon="@drawable/quantum_ic_account_circle_black_48" custom:text="@string/sign_in_to_program" />
+                <com.google.commerce.tapandpay.android.valuable.activity.mutate.widget.ButtonView android:id="@id/SignUpButton" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:icon="@drawable/quantum_ic_add_circle_outline_black_24" custom:text="@string/sign_up_for_program" />
+                <com.google.commerce.tapandpay.android.valuable.activity.mutate.widget.ButtonView android:id="@id/ScanButton" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:icon="@drawable/quantum_ic_photo_camera_black_48" custom:text="@string/scan_card" />
+                <com.google.commerce.tapandpay.android.valuable.activity.mutate.widget.ButtonView android:id="@id/ManualButton" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:icon="@drawable/quantum_ic_keyboard_black_48" custom:text="@string/manual_enter_program" />
+            </LinearLayout>
+        </LinearLayout>
+        <ProgressBar android:id="@id/ProgressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</ScrollView>

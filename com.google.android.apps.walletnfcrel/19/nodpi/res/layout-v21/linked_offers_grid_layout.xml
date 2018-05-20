@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/AppBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:elevation="0.0dip">
+        <android.support.v7.widget.Toolbar android:id="@id/Toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:titleTextColor="@color/googlepay_gray900" />
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView android:id="@id/ScrollView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/AppBar">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ContentContainer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView android:orientation="vertical" android:id="@id/LinkedOffersList" android:scrollbars="none" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ProgressBar android:id="@id/ProgressBar" android:layout_width="fill_parent" android:layout_height="@dimen/linked_offer_list_progress_bar_height" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

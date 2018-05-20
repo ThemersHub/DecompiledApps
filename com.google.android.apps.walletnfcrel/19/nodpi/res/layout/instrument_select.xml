@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="0.0dip" android:paddingEnd="@dimen/medium_spacing"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/LogoContainer" android:layout_width="@dimen/instrument_logo_size" android:layout_height="@dimen/instrument_logo_size" android:layout_marginBottom="@dimen/instrument_logo_bottom_spacing" android:layout_alignBottom="@id/PaymentInstrument" android:layout_marginStart="@dimen/small_spacing" android:layout_marginEnd="@dimen/list_item_icon_margin">
+        <ProgressBar android:id="@id/InstrumentOptionProgress" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/PaymentInstrumentLogo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/payment_instrument_logo_content_desc" />
+    </FrameLayout>
+    <TextView android:textAppearance="@style/Text_Caption.Black54" android:id="@id/PaymentInstrumentLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/input_label_top_spacing" android:layout_marginBottom="@dimen/input_label_bottom_spacing" android:text="@string/payment_method_dropdown_label" android:layout_alignParentTop="true" android:layout_toEndOf="@id/LogoContainer" />
+    <Spinner android:id="@id/PaymentInstrument" android:layout_width="fill_parent" android:layout_height="@dimen/minimum_touch_target" android:layout_marginBottom="@dimen/dropdown_bottom_spacing" android:layout_below="@id/PaymentInstrumentLabel" android:layout_toEndOf="@id/LogoContainer" style="@style/ProcessPaymentDropDown" />
+</RelativeLayout>

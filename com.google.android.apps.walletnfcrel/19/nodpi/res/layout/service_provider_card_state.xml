@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/ServiceProviderStateCard" android:padding="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CardViewStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/Text_Headline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sp_card_state_locked_message" android:layout_centerVertical="true" android:layout_toStartOf="@id/WarningIcon" android:layout_alignParentStart="true" />
+            <ImageView android:id="@id/WarningIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_warning_black_36" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <View android:background="@color/googlepay_gray100" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="@dimen/narrow_spacing" android:layout_marginEnd="@dimen/narrow_spacing" />
+        <android.support.design.button.MaterialButton android:layout_gravity="center" android:id="@id/ResolveCardStateButton" android:layout_width="wrap_content" android:layout_height="@dimen/minimum_touch_target" android:layout_margin="@dimen/narrow_spacing" android:text="@string/sp_card_state_resolve_button" style="@style/Widget.GoogleMaterial.TextButton" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>
