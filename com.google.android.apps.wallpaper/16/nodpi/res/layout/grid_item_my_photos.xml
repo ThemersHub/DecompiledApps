@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/wallpaper_thumbnail"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/tile" android:background="@color/light_grey" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?selectableItemBackground"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/thumbnail" android:background="@color/secondary_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <ImageView android:id="@id/overlay_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <FrameLayout android:background="@color/translucent_black_90_alpha" android:padding="@dimen/rotation_tile_desktop_label_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/rotation_tile_desktop_label_text_size" android:textColor="@color/quantum_white_100" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_photos_category_title" />
+        </FrameLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/wallpaper_thumbnail"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/tile" android:background="@color/light_grey" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?selectableItemBackground">
+        <ImageView android:id="@id/thumbnail" android:background="@color/secondary_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <ImageView android:id="@id/overlay_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <TextView android:textSize="@dimen/abc_text_size_subhead_material" android:textColor="@color/individual_tile_title_text_color" android:id="@id/title" android:background="@color/individual_tile_title_scrim_color" android:padding="@dimen/grid_item_category_label_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+        <FrameLayout android:id="@id/loading_indicator_container" android:background="@color/black_67_alpha" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:id="@id/loading_indicator" android:layout_width="@dimen/tile_desktop_progress_bar_size" android:layout_height="@dimen/tile_desktop_progress_bar_size" android:indeterminate="true" />
+        </FrameLayout>
+    </RelativeLayout>
+    <ImageView android:id="@id/check_circle" android:visibility="gone" android:layout_width="@dimen/grid_item_individual_wallpaper_check_circle_size" android:layout_height="@dimen/grid_item_individual_wallpaper_check_circle_size" android:layout_marginTop="@dimen/grid_item_individual_wallpaper_check_circle_offset" android:src="@drawable/check_circle_blue" />
+</FrameLayout>
