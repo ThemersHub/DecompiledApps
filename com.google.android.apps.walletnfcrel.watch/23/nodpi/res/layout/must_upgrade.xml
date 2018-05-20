@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wearable.view.BoxInsetLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/tp_wear_setup" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_box="all">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing" android:src="@drawable/quantum_ic_play_download_white_24" />
+            <TextView android:layout_marginBottom="@dimen/default_spacing" android:text="@string/must_upgrade_heading" style="@style/WearText.Title" />
+            <TextView android:layout_marginBottom="@dimen/default_spacing" android:text="@string/wear_must_upgrade_message" style="@style/WearText.Body1" />
+            <TextView android:id="@id/upgrade_button" android:text="@string/upgrade_button_text" android:drawablePadding="@dimen/default_spacing" android:drawableStart="@drawable/wear_upgrade_icon" style="@style/WearClickableButton" />
+            <View android:id="@id/close_button" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.wearable.view.BoxInsetLayout>

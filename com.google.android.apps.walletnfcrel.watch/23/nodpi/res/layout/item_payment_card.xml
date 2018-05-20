@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingBottom="@dimen/card_item_spacing" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/card_header_selector" android:id="@id/CardHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/WearText.Body1" />
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/CardShadow" android:background="@drawable/bg_glow" android:layout_width="@dimen/card_bg_width" android:layout_height="@dimen/card_bg_height" android:transitionName="@string/wear_card_bg_transition" />
+        <com.google.commerce.tapandpay.android.cardview.RoundedCardView android:layout_gravity="center" android:id="@id/Card" android:background="?android:selectableItemBackground" android:layout_width="@dimen/card_width" android:layout_height="@dimen/card_height" card_view:cardBackgroundColor="@android:color/transparent" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+            <ImageView android:id="@id/CardImageView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" android:transitionName="@string/wear_card_transition" />
+        </com.google.commerce.tapandpay.android.cardview.RoundedCardView>
+    </FrameLayout>
+</LinearLayout>

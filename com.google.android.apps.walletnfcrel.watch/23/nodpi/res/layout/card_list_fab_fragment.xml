@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_gravity="end|bottom|center" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/FabScrim" android:background="@drawable/fab_fragment_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="end|bottom|center" android:orientation="vertical" android:id="@id/FabMenu" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/fab_menu_bottom_padding" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing" app:layout_behavior="com.google.commerce.tapandpay.android.widgets.fab.FabMenuBehavior" />
+    <LinearLayout android:layout_gravity="end|bottom|center" android:id="@id/FabWithText" app:layout_behavior="com.google.commerce.tapandpay.android.widgets.fab.FabMenuBehavior" style="@style/FabAction">
+        <TextView android:id="@id/AddPaymentCardText" android:visibility="gone" android:text="@string/action_add_payment_card" android:layout_weight="1.0" style="@style/FabActionText" />
+        <android.support.design.widget.FloatingActionButton android:theme="@style/FabTheme" android:id="@id/Fab" android:src="@drawable/quantum_ic_add_grey600_24" android:contentDescription="@string/fab_expand_content_description" style="@style/Fab" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

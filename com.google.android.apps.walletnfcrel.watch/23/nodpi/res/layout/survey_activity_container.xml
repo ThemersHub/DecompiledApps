@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:fadeScrollbars="false">
+        <RelativeLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/survey_question_gutter_padding" android:paddingEnd="@dimen/survey_question_gutter_padding">
+            <ImageButton android:id="@id/close_survey_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" android:src="@drawable/quantum_ic_close_black_24" android:layout_alignParentTop="true" android:contentDescription="@string/survey_close_button_description" android:layout_alignParentStart="true" style="@style/ClickableButton" />
+            <TextView android:id="@id/survey_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/medium_spacing" android:layout_marginBottom="@dimen/narrow_spacing" android:layout_below="@id/close_survey_button" android:paddingStart="@dimen/survey_question_padding_start" android:paddingEnd="@dimen/survey_question_padding_start" style="@style/Text_Headline" />
+            <LinearLayout android:orientation="vertical" android:id="@id/survey_question_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/survey_title" />
+            <TextView android:id="@id/explanation_for_required" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" android:text="@string/question_tile_starred_explanation" android:layout_below="@id/survey_question_container" android:layout_marginStart="@dimen/survey_question_padding_start" android:layout_alignParentStart="true" style="@style/quantum_text_caption_black" />
+        </RelativeLayout>
+    </ScrollView>
+    <android.support.design.button.MaterialButton android:layout_gravity="center_horizontal" android:id="@id/survey_submit_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" android:text="@string/survey_submit_button_text" style="@style/Widget.GoogleMaterial.Button" />
+</LinearLayout>
