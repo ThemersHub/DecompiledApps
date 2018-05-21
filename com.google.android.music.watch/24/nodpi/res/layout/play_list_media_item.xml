@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?android:selectableItemBackground" android:paddingBottom="@dimen/playlist_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/line" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="1.0dip" android:alpha="@dimen/playlist_line_alpha" />
+    <TextView android:id="@id/play_list_item_title" android:paddingTop="@dimen/playlist_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:layout_below="@id/line" android:layout_marginEnd="@dimen/left_margin" style="@style/TextStyle.Playlist" />
+    <TextView android:id="@id/play_list_item_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/play_list_item_title" android:alpha="@dimen/playlist_duration_alpha" android:layout_marginEnd="@dimen/playlist_item_padding" style="@style/TextStyle.Playlist" />
+    <com.google.android.music.wear.ui.views.PlayingIndicator android:id="@id/play_list_playing_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/playlist_duration_height" android:layout_alignBottom="@id/play_list_item_duration" android:contentDescription="@string/now_playing_text" android:layout_toEndOf="@id/play_list_item_duration" />
+</RelativeLayout>
