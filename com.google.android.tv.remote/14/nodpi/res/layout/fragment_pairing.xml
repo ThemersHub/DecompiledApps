@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/pairing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/pairing_label_text_color" android:id="@id/pairing_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/pairing_vertical_margin" android:text="@string/pairing_explanation" android:layout_centerHorizontal="true" style="@style/HubListMessageTextAppearance" />
+    <EditText android:id="@id/pairing_pin" android:background="@null" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/pairing_pin_hint" android:layout_below="@id/pairing_text" android:layout_centerHorizontal="true" style="@style/PairingEditTextAppearance">
+        <requestFocus />
+    </EditText>
+    <View android:id="@id/edit_line" android:background="@color/primary_remote_color" android:layout_width="@dimen/pairing_pin_underline_width" android:layout_height="@dimen/pairing_pin_underline_height" android:layout_below="@id/pairing_pin" android:layout_centerHorizontal="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/pairing_vertical_margin" android:layout_below="@id/edit_line" android:layout_centerHorizontal="true">
+        <Button android:textColor="@color/primary_remote_color" android:id="@id/pairing_cancel" android:background="@drawable/inverted_button_background" android:layout_width="wrap_content" android:layout_height="@dimen/remote_button_height" android:text="@string/pairing_cancel" android:singleLine="true" style="@style/HubListButtonTextAppearance" />
+        <Button android:id="@id/pairing_ok" android:background="@drawable/button_background" android:layout_width="wrap_content" android:layout_height="@dimen/remote_button_height" android:text="@string/pairing_pair" android:singleLine="true" style="@style/HubListButtonTextAppearance" />
+    </LinearLayout>
+</RelativeLayout>

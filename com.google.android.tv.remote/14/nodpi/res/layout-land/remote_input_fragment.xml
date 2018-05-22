@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/container" android:background="@color/remote_input_background" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.tv.remote.SpeechOrbView android:layout_gravity="start|center" android:id="@id/mic_btn" android:layout_width="@dimen/speech_orb_container_size" android:layout_height="@dimen/speech_orb_container_size" />
+    <com.google.android.tv.remote.TrackpadView android:layout_gravity="end|center" android:id="@id/trackpad" android:background="@drawable/trackpad_bg" android:focusable="true" android:focusableInTouchMode="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/track_dpad_landscape_margin" android:layout_marginBottom="@dimen/track_dpad_landscape_margin" android:contentDescription="@string/content_desc_touchpad" />
+    <com.google.android.tv.remote.DpadView android:layout_gravity="end|center" android:id="@id/dpad" android:background="@null" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/track_dpad_landscape_margin" android:layout_marginBottom="@dimen/track_dpad_landscape_margin" style="@style/Dpad" />
+    <LinearLayout android:layout_gravity="end" android:orientation="vertical" android:id="@id/nav_container" android:layout_width="@dimen/nav_button_height" android:layout_height="fill_parent">
+        <ImageButton android:id="@id/play_pause_btn" android:background="@drawable/nav_button_background" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/btn_playpause_normal" android:scaleType="center" android:layout_weight="1.0" android:contentDescription="@string/content_desc_play_pause_button" />
+        <ImageButton android:id="@id/home_btn" android:background="@drawable/nav_button_background" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/btn_home_normal" android:scaleType="center" android:layout_weight="1.0" android:contentDescription="@string/content_desc_home_button" />
+        <ImageButton android:id="@id/back_btn" android:background="@drawable/nav_button_background" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/btn_back_normal_holder" android:scaleType="center" android:layout_weight="1.0" android:contentDescription="@string/content_desc_back_button" />
+    </LinearLayout>
+    <include layout="@layout/gamepad_layout" />
+</FrameLayout>

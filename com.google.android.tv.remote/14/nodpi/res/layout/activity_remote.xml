@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.tv.remote.RemoteDrawerLayout android:id="@id/drawer_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/content_parent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@color/action_bar_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_alignParentTop="true" />
+        <FrameLayout android:id="@id/content" android:background="@color/remote_input_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/action_bar_shadow" android:scaleType="fitXY" android:layout_below="@id/toolbar" />
+    </RelativeLayout>
+    <FrameLayout android:layout_gravity="start" android:id="@id/remote_drawer" android:fitsSystemWindows="true" android:layout_width="@dimen/navigation_drawer_width" android:layout_height="fill_parent">
+        <fragment android:name="com.google.android.tv.remote.NavigationDrawerFragment" android:id="@id/navigation_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</com.google.android.tv.remote.RemoteDrawerLayout>

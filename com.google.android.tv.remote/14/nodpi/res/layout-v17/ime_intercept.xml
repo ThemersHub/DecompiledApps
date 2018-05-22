@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/ime_editor_background_color" android:clickable="true" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/ime_editor_window_background" android:padding="@dimen/ime_editor_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ime_editor_top_inset" android:layout_marginStart="@dimen/ime_editor_horizontal_inset" android:layout_marginEnd="@dimen/ime_editor_horizontal_inset">
+        <ImageView android:id="@id/icon" android:background="@drawable/ime_icon_background" android:layout_width="@dimen/ime_editor_icon_size" android:layout_height="@dimen/ime_editor_icon_size" android:src="@drawable/ic_bar_keyboard" android:scaleType="center" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/ime_editor_icon_right_margin" android:layout_alignParentStart="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toEndOf="@id/icon">
+            <TextView android:textSize="@dimen/ime_editor_hint_text_size" android:textColor="@color/ime_editor_hint_text_color_unfocused" android:id="@id/hint" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ime_editor_edge_vertical_margin" android:fontFamily="sans-serif" />
+            <com.google.android.tv.remote.ImeInterceptView android:textSize="@dimen/ime_editor_text_size" android:textColor="@color/ime_editor_text_color" android:id="@id/ime_intercept" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ime_editor_text_vertical_margin" android:imeOptions="flagNoExtractUi" android:textCursorDrawable="@null" android:fontFamily="sans-serif" />
+            <View android:id="@id/edit_line" android:background="@color/ime_editor_hint_text_color" android:layout_width="fill_parent" android:layout_height="@dimen/ime_editor_underline_height" android:layout_marginTop="@dimen/ime_editor_line_top_margin" android:layout_marginBottom="@dimen/ime_editor_edge_vertical_margin" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
