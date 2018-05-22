@@ -122,7 +122,7 @@
     <string name="back_content_description">Back</string>
     <string name="backup_and_reset">Backup and reset</string>
     <string name="backup_and_reset_summary">Backup settings for your device</string>
-    <string name="backup_content_summary" formatted="false">%s · Last backup: %s</string>
+    <string name="backup_content_summary">%1$s · Last backup: %2$s</string>
     <string name="backup_entity_last_backup">Last backup: %s</string>
     <string name="backup_off_help_card_button">START BACKING UP</string>
     <string name="backup_preferences">Auto-backup for apps</string>
@@ -363,6 +363,7 @@ This action cannot be undone."</string>
     <string name="dialog_td_will_disappear">"This Team Drive will disappear for everyone and you can't undo this action."</string>
     <string name="dialog_td_will_disappear_files_in_trash">"Files from this Team Drive are in the \"%1$s\" bin and no users will be able to restore them. This Team Drive will disappear for everyone and you can't undo this action."</string>
     <string name="did_you_mean">Did you mean: %1$s</string>
+    <string name="disabled_append">disabled,</string>
     <string name="discussion_accept">Accept</string>
     <string name="discussion_acl_fix_access_role_commenter">Can comment</string>
     <string name="discussion_acl_fix_access_role_writer">Can edit</string>
@@ -469,11 +470,11 @@ This action cannot be undone."</string>
     <string name="doclist_date_never_label">Never</string>
     <string name="doclist_date_opened_label">Opened by me: %s</string>
     <string name="doclist_date_shared_label">Shared: %s</string>
-    <string name="doclist_date_shared_with_owner_label" formatted="false">%s · %s</string>
+    <string name="doclist_date_shared_with_owner_label">%1$s · %2$s</string>
     <string name="doclist_date_uploaded_by_me_label">Uploaded by me: %s</string>
     <string name="doclist_detail_fragment_content_description">Show item properties</string>
-    <string name="doclist_entry_content_description" formatted="false">%s %s</string>
-    <string name="doclist_entry_content_description_with_color" formatted="false">%s %s colour: %s</string>
+    <string name="doclist_entry_content_description">%1$s %2$s</string>
+    <string name="doclist_entry_content_description_with_color">%1$s %2$s colour: %3$s</string>
     <string name="doclist_not_starred_state">Not starred</string>
     <string name="doclist_open_navigation_drawer_content_description">Open navigation drawer</string>
     <string name="doclist_quota_used_label">Storage used: %s</string>
@@ -565,6 +566,8 @@ This action cannot be undone."</string>
     <string name="draft_options_dialog_title">Draft site settings</string>
     <string name="draft_permission_change_anyone_warning">Changing to this draft site setting will allow anyone to view when published.</string>
     <string name="draft_permission_change_domain_warning">Changing to this draft site setting will allow anyone in %s to view when published.</string>
+    <string name="draft_permission_downgrade_domain_warning">Changing this draft site setting will mean that the published link can only be viewed by %1$s</string>
+    <string name="draft_permission_downgrade_specific_warning">Changing this draft site setting will mean that the published link can only be viewed by specific people</string>
     <string name="drive_file_stream_disabled">Prevent people from opening files in this Team Drive using drive File Stream or similar applications</string>
     <string name="drive_file_stream_enabled">Allow people to open files in this Team Drive using Drive File Stream or similar applications</string>
     <string name="drive_file_stream_title">Drive File Stream</string>
@@ -606,7 +609,6 @@ This action cannot be undone."</string>
     <string name="ds_pdf_paper_orientation_title">Paper Orientation</string>
     <string name="ds_pdf_paper_size_summary">Choose the paper size for the PDF</string>
     <string name="ds_pdf_paper_size_title">Paper Size</string>
-    <string name="ds_quad_editor_view_content_description">Page editor</string>
     <string name="ds_rename_scan">Rename scan</string>
     <string name="ds_scanned_file_name">Scanned_%1$s</string>
     <string name="ds_scanner_introduction_close_button">Got it</string>
@@ -703,7 +705,7 @@ Click + to create a new drawing."</string>
     <string name="fast_scroll_time_grouper_yesterday">Yesterday</string>
     <string name="fast_scroll_title_grouper_collections">Folders</string>
     <string name="file_in_trash_subtitle">In Bin</string>
-    <string name="file_too_large_for_upload" formatted="false">The file %1s is too large to upload to Google Drive. It is %2s, but the limit for this type of file is %3s. You might be able to upload this file without converting it to Google Drive format.</string>
+    <string name="file_too_large_for_upload">The file %1$s is too large to upload to Google Drive. It is %2$s, but the limit for this type of file is %3$s. You might be able to upload this file without converting it to Google Drive format.</string>
     <string name="file_too_large_for_upload_okbtn">OK</string>
     <string name="file_too_large_for_upload_title">"Can't upload"</string>
     <string name="file_type_apk">APK</string>
@@ -777,10 +779,8 @@ Click + to create a new drawing."</string>
     <string name="internal_release_dialog_line_2">"Please don't talk about it or show people outside Google."</string>
     <string name="internal_release_dialog_ok">OK</string>
     <string name="internal_release_dialog_title">THIS IS CONFIDENTIAL</string>
-    <string name="justification_modified_by_other">Edited by %2$s %1$s</string>
     <string name="justification_modified_by_you">Edited by you %1$s</string>
     <string name="justification_opened_by_you">Opened by you %1$s</string>
-    <string name="justification_shared_with_you">%2$s shared with you %1$s</string>
     <string name="label_page_range">%1$d-%2$d/%3$d</string>
     <string name="label_page_single">%1$d/%2$d</string>
     <string name="label_password_first">Password</string>
@@ -924,10 +924,8 @@ Click + to create a new drawing."</string>
     <string name="move_error_target_folder_not_exist">Target folder does not exist.</string>
     <string name="move_notice_lost_access_shared_folders">Items moved from shared folder. People have lost access.</string>
     <string name="move_notice_lost_access_team_drive_single">%1$s ‘%2$s’ has lost access.</string>
-    <string name="move_notice_lost_access_team_drive_single_fallback">1 item moved from Team Drive. Members have lost access.</string>
     <string name="move_notice_lost_access_team_drives">Items moved from Team Drive. Members have lost access.</string>
     <string name="nav_drawer_title">Navigation drawer opened. Showing account %1$s</string>
-    <string name="nav_panel_more_storage_pending">Redeemed storage pending</string>
     <string name="navigation_filter">Filter: %s</string>
     <string name="navigation_search_results">Search: \"%s\"</string>
     <string name="new_drawing_title">Drawing title</string>
@@ -949,7 +947,7 @@ Click + to create a new drawing."</string>
     <string name="no_connection_carbon">No connection</string>
     <string name="no_files_in_team_drive_title">No files in %1$s</string>
     <string name="no_team_drives_title">No Team Drives</string>
-    <string name="not_enough_storage_for_upload" formatted="false">The file %1s is too large to upload to Google Drive. It is %2s but you only have %3s of storage available. Please upgrade your storage and try again.</string>
+    <string name="not_enough_storage_for_upload">The file %1$s is too large to upload to Google Drive. It is %2$s but you only have %3$s of storage available. Please upgrade your storage and try again.</string>
     <string name="notification_channel_name_default">Default</string>
     <string name="notification_channel_name_high_priority">High priority</string>
     <string name="notification_channel_name_low_priority">Low priority</string>
@@ -1187,8 +1185,10 @@ all your files"</string>
     <string name="prefs_apps_predict_carousel_enabled_setting">Enable quick access</string>
     <string name="prefs_auto_add">Auto Add</string>
     <string name="prefs_auto_add_disabled_message">New photos will no longer be added to your Google Photos folder.</string>
+    <string name="prefs_auto_add_enabled_message">Add photos stored in Google Photos to a folder in Drive?</string>
     <string name="prefs_auto_add_summary_template">"Automatically put Google Photos into a folder in 'My Drive'.
 %1$s"</string>
+    <string name="prefs_auto_add_warning_learn_more">Learn more.</string>
     <string name="prefs_cache_category_title">Documents cache</string>
     <string name="prefs_cache_size">Cache size</string>
     <string name="prefs_cache_size_choice_format_string">%1$d MB</string>
@@ -1280,7 +1280,6 @@ all your files"</string>
     <string name="recent_activity_end">No activity recorded before %1$s</string>
     <string name="recent_activity_failed">"Oops, couldn't load activity. Please try again later."</string>
     <string name="recent_activity_rename_titles_accessibility">Renamed from %1$s to %2$s</string>
-    <string name="recent_activity_users_two">%1$s and %2$s</string>
     <string name="remove_button">Remove</string>
     <string name="remove_button_confirm">Move to Bin</string>
     <string name="remove_button_shared_item_confirm">Remove</string>
@@ -1516,11 +1515,10 @@ all your files"</string>
     <string name="storage_expiring_message_over_quota">"You'll be %1$s over your new capacity"</string>
     <string name="storage_expiring_message_quota_remaining">"You'll have %1$s remaining"</string>
     <string name="storage_full">Drive storage is full</string>
-    <string name="storage_title">Storage</string>
     <string name="storage_upgrade">Upgrade storage</string>
+    <string name="storage_usage_message">"You've used %1$s of %2$s (%3$s%%)"</string>
     <string name="storage_used">%1$s of %2$s used</string>
     <string name="storage_used_unlimited">%1$s used</string>
-    <string name="storage_used_upgrade">%1$s of %2$s used. Upgrade now.</string>
     <string name="suggest_pin_dialog_message">"This file isn't available while offline. Make it available for the next time that you go offline?"</string>
     <string name="suggest_pin_dialog_negative_button">No, thanks</string>
     <string name="suggest_pin_dialog_positive_button">Make available offline</string>
@@ -1552,7 +1550,7 @@ all your files"</string>
     <string name="team_drive_settings_action">Settings</string>
     <string name="team_drive_settings_title">Settings</string>
     <string name="team_drive_trash_welcome_snackbar">Items in Team Drives bin will be deleted permanently after 30 days.</string>
-    <string name="teamdrive_members_and_domain" formatted="false">%s • %s</string>
+    <string name="teamdrive_members_and_domain">%1$s • %2$s</string>
     <string name="thumbnail_open">Open</string>
     <string name="time_range_1_day">1 day</string>
     <string name="time_range_days">%1$d days</string>
@@ -1584,6 +1582,8 @@ You can turn backup on again by going to Settings > Chats > Chat backup in Whats
     <string name="tutorial_upload_complete_header">"You've added a file to Drive"</string>
     <string name="tutorial_upload_fab_hint_text">Tap the Plus icon to add files on this device to Drive and access them from anywhere.</string>
     <string name="unable_to_preview">Unable to preview file.</string>
+    <string name="unable_update_published_message">"The published site setting can't be changed until the draft link setting is updated"</string>
+    <string name="unable_update_published_title">"Can't update setting"</string>
     <string name="unified_actions_add_to_drive">Add to My Drive</string>
     <string name="unified_link_sharing_is_off">Link sharing off</string>
     <string name="unified_link_sharing_is_on">Link sharing on</string>
@@ -1630,6 +1630,7 @@ You can turn backup on again by going to Settings > Chats > Chat backup in Whats
     <string name="upload_waiting_for_wifi">Waiting for Wi-Fi</string>
     <string name="upsell_negbtn">Later</string>
     <string name="upsell_okbtn">Upgrade</string>
+    <string name="user_deleted_name">Deleted user</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
     <string name="verbalize_opened_edit">Opened %1$s with editing permission.</string>
@@ -1639,6 +1640,7 @@ You can turn backup on again by going to Settings > Chats > Chat backup in Whats
     <string name="version_too_old_upgrade">Upgrade</string>
     <string name="view_usage">View usage</string>
     <string name="view_workspace">View workspace</string>
+    <string name="view_workspace_content_desc">View %1$s</string>
     <string name="viewers_can_see_comments">Viewers of this file can see comments and suggestions</string>
     <string name="warm_welcome_done_button">Done</string>
     <string name="warm_welcome_next_button">Next</string>

@@ -274,8 +274,9 @@
             </intent-filter>
         </receiver>
         <service android:exported="false" android:name="com.google.android.apps.docs.appindexing.AppIndexingJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <activity android:exported="false" android:name="com.google.android.apps.docs.billing.googleone.GoogleOneActivity" android:theme="@style/CakemixTheme.AppCompatActivity.NoActionBar.G1"/>
+        <activity android:exported="false" android:label="@string/storage_title" android:name="com.google.android.apps.docs.billing.googleone.GoogleOneActivity" android:theme="@style/CakemixTheme.G1"/>
         <activity android:exported="false" android:label="@string/app_name" android:name="com.google.android.apps.docs.cello.data.ui.PurgeTrashActivity" android:theme="@style/CakemixTheme.Translucent"/>
+        <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="true"/>
         <provider android:authorities="com.google.android.apps.docs" android:exported="false" android:name="com.google.android.apps.docs.doclist.contentprovider.DocListProvider"/>
         <provider android:authorities="com.google.android.apps.docs.doclist.search_suggest" android:exported="true" android:name="com.google.android.apps.docs.doclist.DocListGlobalSearchSuggestionProvider" android:permission="com.google.android.apps.docs.permission.READ_MY_DATA">
             <path-permission android:pathPrefix="/search_suggest_query" android:readPermission="android.permission.GLOBAL_SEARCH"/>
