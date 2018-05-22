@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/qr_scanner_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/connected_to_web_setting" android:background="?android:selectableItemBackground" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_list_item_height" style="@style/ConversationSettingsItemStyle">
+        <LinearLayout android:gravity="start|center" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ditto_settings_connected_to_web_notification_title" android:maxLines="1" style="@style/SettingsListItem" />
+            <TextView android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ditto_settings_connected_to_web_notification_description" android:maxLines="2" style="@style/SettingsListItemDetail" />
+        </LinearLayout>
+        <android.support.v7.widget.SwitchCompat android:id="@id/connected_to_web_switch_button" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="1.0dip" />
+    </LinearLayout>
+    <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/while_using_web_setting" android:background="?android:selectableItemBackground" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ConversationSettingsItemStyle">
+        <LinearLayout android:gravity="start|center" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ditto_settings_while_using_web_notification_title" android:maxLines="1" style="@style/SettingsListItem" />
+            <TextView android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ditto_settings_while_using_web_notification_description" android:maxLines="2" style="@style/SettingsListItemDetail" />
+        </LinearLayout>
+        <android.support.v7.widget.SwitchCompat android:id="@id/while_using_web_switch_button" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="1.0dip" />
+    </LinearLayout>
+    <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

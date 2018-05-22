@@ -15,12 +15,15 @@
     <string name="abc_shareactionprovider_share_with">Կիսվել</string>
     <string name="abc_shareactionprovider_share_with_application">Ուղարկել %s-ին</string>
     <string name="abc_toolbar_collapse_description">Նավարկում դեպի վեր</string>
+    <string name="account_selected">հաշիվն ընտրվել է</string>
     <string name="action_add_contact">Ավելացնել կոնտակտ</string>
     <string name="action_archive">Արխիվացնել</string>
+    <string name="action_back">Հետ</string>
     <string name="action_block">Արգելափակել</string>
     <string name="action_call">Զանգել</string>
     <string name="action_close">Փակել</string>
     <string name="action_confirm_selection">Հաստատել ընտրությունը</string>
+    <string name="action_copy_otp">Պատճենել «%s» կոդը</string>
     <string name="action_delete">Ջնջել</string>
     <string name="action_delete_message">Ջնջել</string>
     <string name="action_download">Ներբեռնել</string>
@@ -33,6 +36,7 @@
     <string name="action_people_and_options">Մասնակիցներ և ընտրանքներ</string>
     <string name="action_scan_qr_code">Messages-ի վեբ տարբերակ</string>
     <string name="action_search">Որոնում</string>
+    <string name="action_search_gifs">GIF պատկերների որոնում</string>
     <string name="action_search_messages">Հաղորդագրությունների որոնում</string>
     <string name="action_selected">Ընտրված է:</string>
     <string name="action_send">Ուղարկել</string>
@@ -50,16 +54,8 @@
     <string name="advanced_settings_activity_title">Լրացուցիչ</string>
     <string name="and_n_more">ու ևս %d</string>
     <string name="and_one_more">ու ևս 1 մասնակից</string>
-    <string name="apn_edit">Խմբագրել մուտքի կետը</string>
     <string name="apn_mcc">MCC</string>
-    <string name="apn_mms_port">MMS միացք</string>
-    <string name="apn_mms_proxy">MMS պրոքսի</string>
-    <string name="apn_mmsc">MMSC</string>
     <string name="apn_mnc">MNC</string>
-    <string name="apn_name">Անուն</string>
-    <string name="apn_not_set">Կարգավորված չէ</string>
-    <string name="apn_settings">APN-ներ</string>
-    <string name="apn_settings_not_available">Մատչման կետի անվան կարգավորումները հասանելի չեն այս օգտատիրոջը</string>
     <string name="app_name">Messages</string>
     <string name="archived_activity_title">Արխիվացված</string>
     <string name="archived_conversation_list_empty_text">Այստեղ կհայտնվեն արխիվացված խոսակցությունները</string>
@@ -104,17 +100,19 @@
     <string name="boew_promo_text">Զրույցի գործառույթներից օգտվելու համար (օրինակ՝ Wi-Fi-ի և բջջային ինտերնետի միջոցով հաղորդագրություններ ուղարկելու և ստանալու համար) միացրեք Messages-ը և թողեք, որ այն աշխատի ֆոնային ռեժիմում:</string>
     <string name="boew_promo_title">Օգտագործեք Messages-ի բոլոր հնարավորությունները</string>
     <string name="broadcast_sms_text">Զանգվածային հաղորդագրություն</string>
-    <string name="bugle_notification_default_channel_name">Կանխադրված</string>
-    <string name="bugle_notification_ditto_channel_name">Վեբ</string>
-    <string name="bugle_notification_silent_default_channel_name">Կանխադրված ալիքը անձայն ռեժիմում</string>
-    <string name="business_action_call_full_content_description" formatted="false">Զանգել %s-ին (%s)</string>
+    <string name="bugle_notification_category_conversations">Խոսակցություններ</string>
+    <string name="bugle_notification_category_web">Messages-ի վեբ տարբերակ</string>
+    <string name="bugle_notification_default_channel_name">Այլ ծանուցումներ</string>
+    <string name="bugle_notification_ditto_channel_name">Միացած է Messages-ի վեբ տարբերակին</string>
+    <string name="bugle_notification_silent_default_channel_name">Ստանալ ծանուցումներ վեբ տարբերակն օգտագործելիս</string>
+    <string name="business_action_call_full_content_description">Զանգել %1$s-ին (%2$s)</string>
     <string name="business_action_call_short_content_description">Զանգել</string>
     <string name="business_action_call_short_text">ԶԱՆԳԵԼ</string>
-    <string name="business_action_email_full_content_description" formatted="false">Ուղարկել նամակ %s-ին (%s)</string>
+    <string name="business_action_email_full_content_description">Ուղարկել նամակ %1$s-ին (%2$s)</string>
     <string name="business_action_email_short_content_description">Ուղարկել նամակ</string>
     <string name="business_action_email_short_text">ԷԼՓՈՍՏ</string>
     <string name="business_action_failed_to_launch">Այս գործողությունը կատարելու համար սարքում ոչ մի հավելված չի գտնվել:</string>
-    <string name="business_action_website_full_content_description" formatted="false">Բացել %s կայքը (%s)</string>
+    <string name="business_action_website_full_content_description">Բացել %1$s կայքը (%2$s)</string>
     <string name="business_action_website_short_content_description">Բացել կայքը</string>
     <string name="business_action_website_short_text">ՎԵԲԿԱՅՔ</string>
     <string name="business_info_email_default_sub_header">Էլփոստ</string>
@@ -127,24 +125,28 @@
     <string name="c2o_category_audio_content_description">Ձայնագրել</string>
     <string name="c2o_category_emoji_content_description">Ավելացնել զմայլիկներ</string>
     <string name="c2o_category_gallery_content_description">Ավելացնել լուսանկարներ</string>
+    <string name="c2o_category_gif_content_description">GIF պատկերների որոնում</string>
     <string name="c2o_category_location_content_description">Հայտնել գտնվելու վայրը</string>
     <string name="c2o_category_money_content_description">Գումարի ուղարկում և ստացում</string>
     <string name="c2o_category_name_audio">Ձայնային հաղորդագրություն</string>
     <string name="c2o_category_name_emojis">Զմայլիկներ</string>
     <string name="c2o_category_name_gallery">Ցուցասրահ</string>
+    <string name="c2o_category_name_gif">GIF ֆայլեր</string>
     <string name="c2o_category_name_location">Գտնվելու վայրը</string>
     <string name="c2o_category_name_money">Google Wallet</string>
     <string name="c2o_category_name_stickers">Կպչուկներ</string>
     <string name="c2o_category_stickers_content_description">Ավելացնել կպչուկներ</string>
     <string name="c2o_customization_activity_title">Գործառույթներ</string>
     <string name="c2o_customization_button_text">Հարմարեցնել</string>
-    <string name="c2o_gpay_money_request_button_text">Հայտ ուղարկել</string>
+    <string name="c2o_gpay_money_request_button_text">Խնդրել</string>
     <string name="c2o_gpay_money_send_button_text">Ուղարկել</string>
     <string name="c2o_location_permission_text">Հպեք՝ տեղադրությունն օգտագործելու թույլտվություն տալու համար</string>
     <string name="c2o_mic_permissions_text">Հպեք՝ խոսափողն օգտագործելու թույլտվություն տալու համար</string>
     <string name="c2o_money_only_one_allowed">Թույլատրվում է միայն մեկ գումարային կցորդ</string>
-    <string name="c2o_money_request_button_text">Գումարի փոխանցման հայտ</string>
+    <string name="c2o_money_request_button_text">Խնդրել գումար</string>
+    <string name="c2o_money_request_message_text">Հենց նոր Google Pay-ի միջոցով գումար է խնդրել ձեզնից: Ուղարկեք գումարը այս հղման օգնությամբ՝ %1$s</string>
     <string name="c2o_money_send_button_text">Գումարի փոխանցում</string>
+    <string name="c2o_money_send_message_text">Հենց նոր Google Pay-ի միջոցով գումար է ուղարկել ձեզ: Ստացեք գումարը այս հղման օգնությամբ՝ %1$s</string>
     <string name="c2o_storage_permissions_text">Հպեք՝ մեդիանյութերն օգտագործելու թույլտվություն տալու համար</string>
     <string name="c2o_video_button_text">Տեսանյութ</string>
     <string name="camera_back_switch_button">Միացնել հետևի տեսախցիկը</string>
@@ -165,6 +167,7 @@
     <string name="cant_send_group_mms_message_when_group_mms_is_disabled">Այս հաղորդագրությունն ուղարկելու համար բացեք կարգավորումները և «խմբային հաղորդագրություններ» պարամետրի համար ընտրեք «խմբային MMS» տարբերակը:</string>
     <string name="cant_send_message_while_loading_attachments">Կցորդները բեռնելիս հնարավոր չէ ուղարկել հաղորդագրությունը:</string>
     <string name="cant_send_message_without_active_subscription">Ցանցը պատրաստ չէ: Նորից փորձեք:</string>
+    <string name="cant_send_mms_sim_has_no_data">Ուղարկելու համար նախ փոփոխեք կարգավորումները՝ «%2$s» քարտի փոխարեն «%1$s»-ն օգտագործելու համար</string>
     <string name="cant_send_rcs_message_when_rcs_disabled">Այս հաղորդագրությունն ուղարկելու համար անցեք կարգավորումներ և միացրեք զրույցի գործառույթները:</string>
     <string name="carrier_send_error">Հնարավոր չէ ուղարկել հաղորդագրությունը %1$s-ի միջոցով: Սխալի կոդ՝ %2$d</string>
     <string name="carrier_send_error_phone_number_format_incorrect">Հաղորդագրությունը չի ուղարկվել: Հեռախոսահամարի ձևաչափը սխալ է:</string>
@@ -186,24 +189,6 @@
     <string name="common_google_play_services_update_title">Թարմացնել Google Play ծառայությունները</string>
     <string name="common_google_play_services_updating_text">%1$s հավելվածը չի աշխատի առանց Google Play ծառայությունների, որոնք այս պահին թարմացվում են:</string>
     <string name="common_google_play_services_wear_update_text">Անհրաժեշտ է Google Play ծառայությունների նոր տարբերակը: Այն շուտով կթարմացվի ավտոմատ կերպով:</string>
-    <string name="common_open_on_phone">Բացել հեռախոսով</string>
-    <string name="compose_message_view_hint_text">Զրույցի հաղորդագրություն</string>
-    <string name="compose_message_view_hint_text_multi_sim_broadcast_sms">Ուղարկեք անհատական տեքստային հաղորդագրություններ&lt;br/>&lt;small> %s&lt;/small> քարտից</string>
-    <string name="compose_message_view_hint_text_multi_sim_mms">Տեքստային հաղորդագրություն&lt;br/>&lt;small> %s&lt;/small> քարտից</string>
-    <string name="compose_message_view_hint_text_multi_sim_rcs">Զրույցի հաղորդագրություն&lt;br/>&lt;small> %s&lt;/small> քարտից</string>
-    <string name="compose_message_view_hint_text_multi_sim_sms">Տեքստային հաղորդագրություն&lt;br/>&lt;small> %s&lt;/small> քարտից</string>
-    <string name="compose_message_view_hint_text_with_attachment">Ավելացնել տեքստ</string>
-    <string name="compose_message_view_mms_hint_text">Տեքստային հաղորդագրություն</string>
-    <string name="compose_message_view_sms_broadcast_hint_text">Ուղարկեք անհատական տեքստային հաղորդագրություններ</string>
-    <string name="compose_message_view_sms_hint_text">Տեքստային հաղորդագրություն</string>
-    <string name="compose_message_view_subject_hint_text">Թեմա</string>
-    <string name="confirm_sms_7bit_encoding_dialog_learn_more">Մանրամասն</string>
-    <string name="confirm_sms_7bit_encoding_dialog_positive">Փոխարկել և ուղարկել</string>
-    <string name="confirm_sms_7bit_encoding_dialog_remember_check">Հիշել իմ ընտրությունը</string>
-    <string name="confirm_sms_7bit_encoding_dialog_text">"Այս հաղորդագրության որոշ գրանշաններ փոխարկվելու են, քանի որ ձեր օպերատորը չի աջակցում դրանք: Այս ընտրանքը կարող եք փոխել Կարգավորումներ բաժնում: "</string>
-    <string name="confirm_sms_7bit_encoding_dialog_title">Միայն պարզ գրանշաններ</string>
-    <string name="confrim_participants_button_content_description">Հաստատեք մասնակիցներին</string>
-    <string name="contact_has_multiple_destinations_phone" formatted="false">%s (+%s այլ համար)</string>
     <string name="notification_reply">Պատասխանել</string>
     <string name="notification_reply_prompt">Պատասխանել</string>
     <string name="notification_call">Զանգել</string>
@@ -229,12 +214,31 @@
     <string name="notification_download_failures_line1_singular">%s-ից հաղորդագրությունը չի ներբեռնվել</string>
     <string name="notification_waiting_for_connection_timeout_line1_singular">Հաղորդագրությունը չի ուղարկվել</string>
     <string name="notification_send_failures_line1_singular">%s-ին հաղորդագրությունը չի ուղարկվել</string>
-    <string name="notification_waiting_for_connection_timeout_line2_singular">1 հաղորդագրություն %s խոսակցությանը չի ուղարկվել</string>
+    <string name="notification_waiting_for_connection_timeout_line2_singular">1 հաղորդագրություն %s զրույցում չի ուղարկվել</string>
     <string name="conversation_list_item_view_sent_from_you_prefix">"Դուք՝ "</string>
     <string name="notification_download_failures_line1_plural">Որոշ հաղորդագրություններ չեն ներբեռնվել Messages-ում</string>
     <string name="notification_waiting_for_connection_timeout_line1_plural">Հաղորդագրությունները չեն ուղարկվել</string>
     <string name="notification_send_failures_line1_plural">Messages-ի որոշ հաղորդագրություններ չեն ուղարկվել</string>
     <string name="enumeration_comma">", "</string>
+    <string name="common_open_on_phone">Բացել հեռախոսով</string>
+    <string name="compose_message_view_hint_text">Զրույցի հաղորդագրություն</string>
+    <string name="compose_message_view_hint_text_multi_sim_broadcast_sms">Ուղարկեք անհատական տեքստային հաղորդագրություններ&lt;br/>&lt;small> %s&lt;/small> քարտից</string>
+    <string name="compose_message_view_hint_text_multi_sim_mms">Տեքստային հաղորդագրություն&lt;br/>&lt;small> %s&lt;/small> քարտից</string>
+    <string name="compose_message_view_hint_text_multi_sim_rcs">Զրույցի հաղորդագրություն&lt;br/>&lt;small> %s&lt;/small> քարտից</string>
+    <string name="compose_message_view_hint_text_multi_sim_sms">Տեքստային հաղորդագրություն&lt;br/>&lt;small> %s&lt;/small> քարտից</string>
+    <string name="compose_message_view_hint_text_with_attachment">Ավելացնել տեքստ</string>
+    <string name="compose_message_view_mms_hint_text">Տեքստային հաղորդագրություն</string>
+    <string name="compose_message_view_sms_broadcast_hint_text">Ուղարկեք անհատական տեքստային հաղորդագրություններ</string>
+    <string name="compose_message_view_sms_hint_text">Տեքստային հաղորդագրություն</string>
+    <string name="compose_message_view_subject_hint_text">Թեմա</string>
+    <string name="confirm_sms_7bit_encoding_dialog_learn_more">Մանրամասն</string>
+    <string name="confirm_sms_7bit_encoding_dialog_positive">Փոխարկել և ուղարկել</string>
+    <string name="confirm_sms_7bit_encoding_dialog_remember_check">Հիշել իմ ընտրությունը</string>
+    <string name="confirm_sms_7bit_encoding_dialog_text">"Այս հաղորդագրության որոշ գրանշաններ փոխարկվելու են, քանի որ ձեր օպերատորը չի աջակցում դրանք: Այս ընտրանքը կարող եք փոխել Կարգավորումներ բաժնում: "</string>
+    <string name="confirm_sms_7bit_encoding_dialog_title">Միայն պարզ գրանշաններ</string>
+    <string name="confrim_participants_button_content_description">Հաստատեք մասնակիցներին</string>
+    <string name="connect_to_gaia_title">Միացրեք ձեր Google հաշիվը</string>
+    <string name="contact_has_multiple_destinations_phone">%1$s (+%2$s այլ համար)</string>
     <string name="contact_has_multiple_destinations_type">Մի քանի</string>
     <string name="contact_list_add_people">Ավելացնել %s համարը</string>
     <string name="contact_list_empty_text">Մուտքագրեք կոնտակտի անունը կամ հեռախոսահամարը՝ նոր հաղորդագրություն սկսելու համար</string>
@@ -264,13 +268,14 @@
     <string name="conversation_creation_failure">Չհաջողվեց սկսել խոսակցությունը</string>
     <string name="conversation_deletion_failed">Չհաջողվեց ջնջել խոսակցությունը</string>
     <string name="conversation_list_dismiss_toast">Ինչպես անջատել iMessage-ը «Օգնություն և հետադարձ կապ» բաժնից</string>
+    <string name="conversation_list_ditto_popup_negative">ՈՉ ՀԻՄԱ</string>
+    <string name="conversation_list_ditto_popup_paragraph">Օգտագործեք Android Messages-ի վեբ տարբերակը</string>
+    <string name="conversation_list_ditto_popup_positive">ՓՈՐՁԵԼ</string>
+    <string name="conversation_list_ditto_popup_title">Նորույթ: SMS-ներ ուղարկեք ձեր համակարգչից</string>
     <string name="conversation_list_empty_text">Երբ նոր խոսակցություն սկսեք, այն կհայտնվի այստեղ</string>
-    <string name="conversation_list_fast_track_paragraph">Ինչպես նաև զրույցի այլ գործառույթներ Google-ից, օրինակ բարձր որակի լուսանկարներով կիսվելու հնարավորություն: Շարունակելով՝ դուք ընդունում եք %1$sը:</string>
-    <string name="conversation_list_fast_track_paragraph_multi_sim">Ինչպես նաև զրույցի այլ գործառույթներ Google-ից «%1$s» ((SIM %2$d)) օպերատորի համար: Շարունակելով՝ դուք ընդունում եք %3$sը:</string>
-    <string name="conversation_list_fast_track_paragraph_multi_sim_without_constellation">Եթե Google-ի զրույցի գործառույթներն ուզում եք միացնել «%1$s» ((SIM %2$d)) օպերատորի համար, ապա պետք է ընդունեք %3$sը և թույլատրեք ձեր օպերատորին ստուգել սարքի մասին տեղեկությունները:</string>
-    <string name="conversation_list_fast_track_paragraph_without_constellation">Google-ի զրույցի գործառույթները միացնելու համար դուք պետք է ընդունեք %1$sը և թույլատրեք ձեր օպերատորին ստուգել սարքի մասին տեղեկությունները:</string>
-    <string name="conversation_list_fast_track_popup_title">Նորույթ: SMS ուղարկեք Wi-Fi-ի և բջջային ինտերնետի միջոցով</string>
-    <string name="conversation_list_fast_track_popup_title_without_constellation">Նորույթ: SMS ուղարկեք Wi-Fi-ի միջոցով և ոչ միայն</string>
+    <string name="conversation_list_fast_track_paragraph">Google-ի զրույցի գործառույթները միացնելու համար դուք պետք է ընդունեք %1$sը և %2$sը:</string>
+    <string name="conversation_list_fast_track_paragraph_multi_sim">Եթե Google-ի զրույցի գործառույթներն ուզում եք միացնել «%1$s» ((SIM %2$d)) օպերատորի համար, ապա պետք է ընդունեք %3$sը և %4$sը:</string>
+    <string name="conversation_list_fast_track_popup_title">Նորույթ: SMS ուղարկեք Wi-Fi-ի միջոցով և ոչ միայն</string>
     <string name="conversation_list_first_empty_search_results">Ոչ մի արդյունք չի գտնվել «%1$s»-ի համար</string>
     <string name="conversation_list_first_sync_text">Խոսակցությունները բեռնվում են…</string>
     <string name="conversation_list_imessage_banner_negative">ՓԱԿԵԼ</string>
@@ -306,7 +311,7 @@
     <string name="conversation_list_snippet_vcard">Կոնտակտի քարտ</string>
     <string name="conversation_list_snippet_video">Տեսանյութ</string>
     <string name="conversation_list_terms_and_conditions_promo_subtitle">Միացրեք զրույցի գործառույթները՝ WiFi-ի միջոցով հաղորդագրություններ ստանալու և այլ առավելություններից օգտվելու համար</string>
-    <string name="conversation_list_terms_and_conditions_promo_title">Եվս մի քայլ...</string>
+    <string name="conversation_list_terms_and_conditions_promo_title">Եվս մի քայլ…</string>
     <string name="conversation_list_tnc_promo_button_positive">ԱՎԱՐՏԵԼ</string>
     <string name="conversation_message_view_subject_content_description">Թեմա՝ %s</string>
     <string name="conversation_message_view_subject_text">"Թեմա՝ "</string>
@@ -321,15 +326,20 @@
     <string name="conversation_suggestion_launch_map_action">Առաջարկվող գործողություն քարտեզում</string>
     <string name="conversation_suggestion_launch_phone_action">Առաջարկվող գործողություն հեռախոսում</string>
     <string name="conversation_suggestion_launch_web_action">Առաջարկվող գործողություն դիտարկիչում</string>
-    <string name="conversation_suggestion_payment_request_action">Վճարման հարցման գործողություն</string>
+    <string name="conversation_suggestion_payment_request_action">Գումարի խնդրանք</string>
+    <string name="conversation_suggestion_payment_request_cannot_process">Չհաջողվեց մշակել</string>
+    <string name="conversation_suggestion_payment_request_completed_toast">Առաջարկն ավարտված է</string>
+    <string name="conversation_suggestion_payment_request_expired_toast">Այլևս հասանելի չէ</string>
     <string name="conversation_suggestion_send_reply">Առաջարկվող պատասխան</string>
     <string name="conversation_suggestion_share_location_action">Առաջարկվող տեղադրության մասին տվյալների փոխանցման գործողություն</string>
     <string name="conversation_suggestion_share_location_action_failure">Սխալ առաջացավ: Ձեր տեղադրության մասին տվյալներ ուղարկելու համար ավելացրեք դրանք նոր հաղորդագրության մեջ:</string>
     <string name="copy_to_clipboard">Պատճենել</string>
     <string name="copy_to_clipboard_dialog_title">Պատճենել սեղմատախտակին</string>
+    <string name="create_account">Ավելացնել հաշիվ</string>
     <string name="create_new_group_message">Messages-ը MMS-ի միջոցով նոր խմբային խոսակցություն կստեղծի, քանի որ դուք SMS-ի նոր հասցեատեր եք ավելացրել: Ձեր սկզբնական խումբը նույնությամբ կպահպանվի:</string>
     <string name="create_new_group_title">Ստեղծե՞լ նոր խումբ:</string>
     <string name="current_country_pref_title">Ձեր ներկայիս երկիրը</string>
+    <string name="dark_mode_pref_title">Մուգ ռեժիմի միացում</string>
     <string name="db_full">Ազատ տարածքը բավարար չէ: Որոշ տվյալներ չեն պահվի:</string>
     <string name="debug_category_pref_title">Կարգաբերում</string>
     <string name="default_sms_app_promo_negative_button_text">ԲԱՑ ԹՈՂՆԵԼ</string>
@@ -362,7 +372,14 @@
     <string name="desktop_browser_type_unknown">Անհայտ</string>
     <string name="disable_group_mms">Ուղարկել SMS հաղորդագրություն բոլոր մասնակիցներին և ստանալ անհատական պատասխաններ (զանգվածային հաղորդագրություն)</string>
     <string name="dismiss_button">Փակել</string>
-    <string name="ditto_foreground_service_notification_title">Միացած է համակարգչին</string>
+    <string name="ditto_activity_label">Messages-ի վեբ տարբերակ</string>
+    <string name="ditto_foreground_service_notification_title">Միացած է Messages-ի վեբ տարբերակին</string>
+    <string name="ditto_persistent_notification_settings">Ծանուցումներ</string>
+    <string name="ditto_settings_action_bar_title">Ծանուցումներ</string>
+    <string name="ditto_settings_connected_to_web_notification_description">«Միացած է Messages-ի վեբ տարբերակին» հաղորդագրությունը հայտնվում է ամեն անգամ, երբ ձեր սարքը միանում է համացանցին</string>
+    <string name="ditto_settings_connected_to_web_notification_title">Մշտական ծանուցման ցուցադրում</string>
+    <string name="ditto_settings_while_using_web_notification_description">Անջատել ձայնն ու թրթռոցը, երբ սարքը միանում է համացանցին</string>
+    <string name="ditto_settings_while_using_web_notification_title">Ծանուցումների ձայնի անջատում</string>
     <string name="dogfood_opt_in_dialog_no">Չեղարկել</string>
     <string name="dogfood_opt_in_dialog_query">"Կցանկանայի՞ք մասնակցել Messages-ի փորձարկմանը:
 
@@ -371,12 +388,11 @@
     <string name="dogfood_opt_in_dialog_yes">Միանալ</string>
     <string name="download_message_failure">Հաղորդագրությունը չներբեռնվեց</string>
     <string name="download_message_failure_airplane_mode">Սարքը Ինքնաթիռի ռեժիմում է: Հաղորդագրությունը կարող եք ներբեռնել այդ ռեժիմից դուրս գալուց հետո։</string>
-    <string name="download_message_failure_no_data">Բջջային ինտերնետն անջատված է: Ստուգեք ձեր կարգավորումները:</string>
     <string name="download_message_failure_no_sim">Հաղորդագրությունը ներբեռնելու համար տեղադրեք SIM քարտ</string>
     <string name="download_message_success">Հաղորդագրությունը բեռնվեց</string>
-    <string name="dump_mms_pref_summary">Տեղափոխել ստացված MMS հաղորդագրությունների չմշակված տվյալները արտաքին հիշողության մեջ</string>
+    <string name="dump_mms_pref_summary">Տեղափոխել ստացված MMS հաղորդագրությունների չմշակված տվյալները արտաքին հիշողություն</string>
     <string name="dump_mms_pref_title">Տեղափոխել MMS հաղորդագրությունները</string>
-    <string name="dump_sms_pref_summary">Տեղափոխել ստացված SMS հաղորդագրությունների չմշակված տվյալները արտաքին հիշողության մեջ</string>
+    <string name="dump_sms_pref_summary">Տեղափոխել ստացված SMS հաղորդագրությունների չմշակված տվյալները արտաքին հիշողություն</string>
     <string name="dump_sms_pref_title">Տեղափոխել SMS հաղորդագրությունները</string>
     <string name="edit_contact_color">Փոխեք կոնտակտի գույնը</string>
     <string name="emoji_keyboard_backspace_content_description">Ջնջել վերջին զմայլիկը</string>
@@ -387,7 +403,7 @@
     <string name="enable_permissions_text">Թույլատրել</string>
     <string name="enable_rcs_fallback_to_sms_title">Կրկին ուղարկել հաղորդագրությունները, եթե չեն առաքվել</string>
     <string name="enable_rcs_fallback_to_xms_title">Կրկին ուղարկել հաղորդագրությունները, եթե չեն առաքվել</string>
-    <string name="enable_rcs_summary_off">Առկայության դեպքում օգտագործեք Wi-Fi կամ բջջային ինտերնետ՝ SMS/MMS հաղորդագրություններ ուղարկելու համար</string>
+    <string name="enable_rcs_summary_off">Հնարավորության դեպքում օգտագործել Wi-Fi կամ բջջային ինտերնետ՝ SMS/MMS հաղորդագրություններ ուղարկելու համար</string>
     <string name="enable_rcs_summary_on">Առկայության դեպքում, SMS/MMS հաղորդագրություններ ուղարկելու համար օգտագործվում է համացանցը</string>
     <string name="enable_rcs_title">Միացնել զրույցի գործառույթները</string>
     <string name="enter_phone_number_hint">Հեռախոսահամար</string>
@@ -395,9 +411,6 @@
     <string name="enter_phone_number_text_for_sim">Messages-ին անհրաժեշտ է «%1$s» SIM քարտի հեռախոսահամարը: Այս մեկանգամյա քայլը կապահովի խմբային հաղորդագրությունների պատշաճ ուղարկումը:</string>
     <string name="enter_phone_number_title">Հաստատեք ձեր հեռախոսահամարը</string>
     <string name="enter_phone_number_title_for_sim">Հաստատեք «%1$s» SIM քարտի հեռախոսահամարը</string>
-    <string name="error_apn_name_empty">Անվանման դաշտը պետք է լրացված լինի:</string>
-    <string name="error_mcc_not3">MCC դաշտը պետք է 3 նիշ ունենա:</string>
-    <string name="error_mnc_not23">MNC դաշտը պետք է լինի առնվազն 2 կամ 3 թվանշան:</string>
     <string name="error_premium_sms_needs_permission">Այս հաղորդագրությունն ուղարկելու համար անցեք սարքի կարգավորումներ և միացրեք վճարովի SMS-ների օգտագործումը</string>
     <string name="error_text_label">"Սխալ՝ "</string>
     <string name="failed_loading_vcard">Չհաջողվեց բեռնել կոնտակտի քարտը</string>
@@ -408,7 +421,8 @@
     <string name="fast_track_popup_accepted_snack_bar_text">Մենք ձեզ կտեղեկացնենք, երբ զրույցի գործառույթները պատրաստ լինեն:</string>
     <string name="fast_track_popup_declined_snack_bar_text">Ցանկացած ժամանակ կարգավորումներում կարող եք միացնել զրույցի գործառույթները:</string>
     <string name="fast_track_positive_button_text">ԱՅՈ, ԸՆԴՈՒՆՈՒՄ ԵՄ</string>
-    <string name="fast_track_terms">Պայմաններ</string>
+    <string name="fast_track_privacy_policy">Գաղտնիության քաղաքականություն</string>
+    <string name="fast_track_terms">Օգտագործման պայմաններ</string>
     <string name="fcm_fallback_notification_channel_label">Զանազան</string>
     <string name="fdn_check_failure">Դուք կարող եք հաղորդագրություններ ուղարկել միայն ձեր ֆիքսված հեռախոսահամարներին</string>
     <string name="file_transfer_via_sms_audio">Ես կիսվել եմ ձեզ հետ մի ձայնահոլովակով</string>
@@ -426,16 +440,18 @@
     <string name="general_settings_title">Ընդհանուր</string>
     <string name="get_messenger_notification_body">Կարդացեք և ուղարկեք տեքստային հաղորդագրություններ ձեր ժամացույցից կամ հեռախոսից</string>
     <string name="get_messenger_notification_header">Տեղադրեք Messages-ը</string>
-    <string name="group_incoming_failed_message_prefix" formatted="false">Չհաջողվեց ստանալ հաղորդագրություն %s-ից՝ %s, %s: Ժամը՝ %s: %s:</string>
-    <string name="group_incoming_successful_message_prefix" formatted="false">Հաղորդագրություն %s-ից՝ %s, %s: Ժամը՝ %s: %s:</string>
-    <string name="group_incoming_urgent_successful_message_prefix" formatted="false">Շտապ հաղորդագրություն %s-ից՝ %s, %s: Ժամը՝ %s: %s:</string>
+    <string name="google_account_pref_title">Google հաշիվ</string>
+    <string name="google_profile_photo">Google պրոֆիլի լուսանկար</string>
+    <string name="group_incoming_failed_message_prefix">Չհաջողվեց ստանալ հաղորդագրություն %1$s-ից՝ %2$s, %3$s: Ժամը՝ %4$s: %5$s:</string>
+    <string name="group_incoming_successful_message_prefix">Հաղորդագրություն %1$s-ից՝ %2$s, %3$s: Ժամը՝ %4$s: %5$s:</string>
+    <string name="group_incoming_urgent_successful_message_prefix">Շտապ հաղորդագրություն %1$s-ից՝ %2$s, %3$s: Ժամը՝ %4$s: %5$s:</string>
     <string name="group_mms_pref_title">Խմբային հաղորդագրություններ</string>
-    <string name="group_outgoing_draft_message_prefix" formatted="false">Չուղարկված հաղորդագրություն %s-ին՝ %s, %s: Ժամը՝ %s:</string>
-    <string name="group_outgoing_failed_message_prefix" formatted="false">Չհաջողվեց ուղարկել հաղորդագրությունը %s-ին՝ %s, %s: Ժամը՝ %s:</string>
-    <string name="group_outgoing_not_yet_delivered_prefix" formatted="false">Հաղորդագրությունը դեռ չի առաքվել %s խմբին. %s, %s: Ժամը՝ %s:</string>
-    <string name="group_outgoing_sending_message_prefix" formatted="false">Հաղորդագրությունն ուղարկվում է %s-ին՝ %s, %s: Ժամը՝ %s:</string>
-    <string name="group_outgoing_successful_message_prefix" formatted="false">Հաղորդագրություն %s-ին՝ %s, %s: Ժամը՝ %s:</string>
-    <string name="group_outgoing_urgent_successful_message_prefix" formatted="false">Շտապ հաղորդագրություն %s-ին՝ %s, %s: Ժամը՝ %s:</string>
+    <string name="group_outgoing_draft_message_prefix">Չուղարկված հաղորդագրություն %1$s-ին՝ %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="group_outgoing_failed_message_prefix">Չհաջողվեց ուղարկել հաղորդագրությունը %1$s-ին՝ %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="group_outgoing_not_yet_delivered_prefix">Հաղորդագրությունը դեռ չի առաքվել %1$s խմբին. %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="group_outgoing_sending_message_prefix">Հաղորդագրությունն ուղարկվում է %1$s-ին՝ %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="group_outgoing_successful_message_prefix">Հաղորդագրություն %1$s-ին՝ %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="group_outgoing_urgent_successful_message_prefix">Շտապ հաղորդագրություն %1$s-ին՝ %2$s, %3$s: Ժամը՝ %4$s:</string>
     <string name="have_attachments_content_description">Մեկ կամ մի քանի կցորդ</string>
     <string name="hidden_sender_address">Թաքնված ուղարկողի հասցեն</string>
     <string name="ignore">Անտեսել</string>
@@ -444,12 +460,13 @@
     <string name="in_conversation_new_message_indicator_text_more">%d+ նոր հաղորդագրություն</string>
     <string name="in_conversation_notify_new_message_action">Դիտել</string>
     <string name="in_conversation_notify_new_message_text">Նոր հաղորդագրություն</string>
-    <string name="incoming_message_announcement" formatted="false">Հաղորդագրություն %s-ից՝ %s, %s:</string>
+    <string name="incoming_link_preview_announcement">Ստացված հղման նախադիտում՝ %s</string>
+    <string name="incoming_message_announcement">Հաղորդագրություն %1$s-ից՝ %2$s, %3$s:</string>
     <string name="incoming_sender_content_description">Հաղորդագրություն %s-ից</string>
     <string name="incoming_text_sender_content_description">%s-ը ասել է</string>
     <string name="incoming_text_unspecified_sender_content_description">Ուղարկողը գրել է</string>
     <string name="incoming_unspecified_sender_description">Հաղորդագրություն անհայտ ուղարկողից</string>
-    <string name="incoming_urgent_message_announcement" formatted="false">Շտապ հաղորդագրություն %s-ից՝ %s, %s:</string>
+    <string name="incoming_urgent_message_announcement">Շտապ հաղորդագրություն %1$s-ից՝ %2$s, %3$s:</string>
     <string name="info_and_options_activity_business_tab_list_header">Բիզնես</string>
     <string name="info_and_options_activity_general_tab_list_header">Ընդհանուր</string>
     <string name="info_and_options_activity_info_tab_content_description">Տեղեկություններ</string>
@@ -460,17 +477,24 @@
     <string name="info_and_options_learn_more_about_business_messaging">Իմանալ ավելին</string>
     <string name="info_and_options_view_privacy_policy">Ծանոթանալ գաղտնիության քաղաքականությանը</string>
     <string name="info_and_options_view_terms_of_service">Դիտել օգտագործման պայմանները</string>
-    <string name="invalid_qr_code_dialog_message">Մուտք գործելու համար սկանավորեք հետևյալ կայքում պատկերված QR կոդը՝ %s</string>
+    <string name="invalid_qr_code_dialog_message">Մուտք գործելու համար սկանավորեք %s էջում պատկերված QR կոդը</string>
     <string name="invalid_qr_code_dialog_positive_button_text">Լավ</string>
     <string name="invalid_qr_code_dialog_title">Կոդը սխալ է</string>
     <string name="keyboard_content_description">Բացել ստեղնաշարը</string>
     <string name="leave_confirmation_text">Այլևս չե՞ք ուզում հաղորդագրություններ ստանալ այս խմբից:</string>
     <string name="leave_confirmation_title">Ընդմիշտ լքել խումբը</string>
     <string name="link_display_format">%1$s (%2$s)</string>
-    <string name="listify_many" formatted="false">%s, %s ու ևս %d</string>
-    <string name="listify_three" formatted="false">%s, %s և %s</string>
-    <string name="listify_two" formatted="false">%s և %s</string>
-    <string name="listify_two_with_comma" formatted="false">%s, %s</string>
+    <string name="link_gaia_explanation">Google հաշվի տվյալների օգտագործման շնորհիվ հավելվածն ավելի անհատականացված կլինի</string>
+    <string name="link_preview_enabled_pref_summary">Միացնել հղումների նախադիտումը հաղորդագրություններում</string>
+    <string name="link_preview_enabled_pref_summary_off">Անջատված է</string>
+    <string name="link_preview_preference_info_text">Google-ը նախադիտման բովանդակությունը ստանում է հղված կայքերից: Նախադիտումը հասանելի է միայն ձեզ ծանոթ կոնտակտներից հղումներ ստանալու դեպքում։ &lt;a href>Մանրամասն&lt;/a></string>
+    <string name="link_preview_preference_title">Հղումների ավտոմատ նախադիտում</string>
+    <string name="link_preview_tap_to_load">Հպեք՝ նախադիտելու համար</string>
+    <string name="link_preview_wifi_only_pref_summary">Նախադիտման տվյալները ներբեռնել միայն Wi-Fi-ով</string>
+    <string name="listify_many">%1$s, %2$s ու ևս %3$d</string>
+    <string name="listify_three">%1$s, %2$s և %3$s</string>
+    <string name="listify_two">%1$s և %2$s</string>
+    <string name="listify_two_with_comma">%1$s, %2$s</string>
     <string name="loading_conversations">Խոսակցությունները բեռնվում են</string>
     <string name="loading_messages">Հաղորդագրությունների բեռնում</string>
     <string name="loading_vcard">Կոնտակտի քարտը բեռնվում է</string>
@@ -490,12 +514,10 @@
     <string name="mediapicker_gallery_title">Ընտրել լուսանկար</string>
     <string name="mediapicker_gallery_video_item_description">տեսանյութ %1$tB %1$te %1$tY %1$tl %1$tM %1$tp</string>
     <string name="mediapicker_gallery_video_item_description_no_date">տեսանյութ</string>
+    <string name="mediapicker_gif_title">GIF պատկերների որոնում</string>
     <string name="mediapicker_location_title">Ընտրեք վայրը</string>
     <string name="mediapicker_sticker_title">Ընտրեք կպչուկ</string>
-    <string name="menu_delete_apn">Ջնջել APN-ը</string>
-    <string name="menu_discard_apn_change">Հրաժարվել</string>
     <string name="menu_license">Բաց կոդով ծրագրերի արտոնագրեր</string>
-    <string name="menu_new_apn">Նոր APN</string>
     <string name="menu_privacy_policy">Գաղտնիության քաղաքականություն</string>
     <string name="menu_restore_default_apn">Վերականգնել կանխադրվածը</string>
     <string name="menu_save_apn">Պահել</string>
@@ -512,6 +534,8 @@
     <string name="message_status_download">Հպեք՝ ներբեռնելու համար</string>
     <string name="message_status_download_error">Հաղորդագրության ժամկետը սպառվել է կամ հասանելի չէ</string>
     <string name="message_status_download_failed">Հպեք՝ նորից փորձելու համար</string>
+    <string name="message_status_download_failed_sim_has_no_data">Պատրաստ է ներբեռնման բջջային ինտերնետի միջոցով: Տեղեկությունների համար հպեք:</string>
+    <string name="message_status_download_failed_sim_has_no_data_popup">Ներբեռնելու համար նախ փոփոխեք կարգավորումները՝ «%2$s» քարտի փոխարեն «%1$s»-ն օգտագործելու համար</string>
     <string name="message_status_download_image">%s չափով պատկեր</string>
     <string name="message_status_download_image_too_large">Պատկերը չափազանց մեծ է ներբեռնելու համար</string>
     <string name="message_status_download_too_large">Հաղորդագրությունը չափազանց մեծ է</string>
@@ -563,11 +587,12 @@
     <string name="mms_phone_number_pref_title">Հեռախոսահամար</string>
     <string name="mms_text">MMS</string>
     <string name="money_attachment_request_type_label">Խնդրանք</string>
-    <string name="money_attachment_send_type_label">Վճարում</string>
+    <string name="money_attachment_send_type_label">Ուղարկել</string>
     <string name="multimedia_message">Մուլտիմեդիա հաղորդագրություն</string>
     <string name="muted_conversation_content_description">Ծանուցումներն անջատված են:</string>
     <string name="navigate_up_button_content_description">Նավարկում դեպի վեր</string>
     <string name="no_connection">Կապ չկա</string>
+    <string name="no_google_account">Ոչ</string>
     <string name="no_preferred_sim_selected">Դուք չեք նշել նախընտրելի SIM քարտը՝ SMS հաղորդագրություններն ուղարկելու համար</string>
     <string name="no_reply_pinned_message_text">Ուղարկողին հնարավոր չէ պատասխանել</string>
     <string name="no_sim_message">SIM քարտում հաղորդագրություններ չկան</string>
@@ -580,7 +605,7 @@
     <string name="notification_separator">"  "</string>
     <string name="notification_sound_pref_title">Ծանուցման ազդանշան</string>
     <string name="notification_space_separator">"  "</string>
-    <string name="notification_subject" formatted="false">%s%s</string>
+    <string name="notification_subject">%1$s%2$s</string>
     <string name="notification_ticker_separator">"՝ "</string>
     <string name="notification_urgent_message">[ՇՏԱՊ]</string>
     <string name="notification_vcard">Կոնտակտի քարտ</string>
@@ -591,25 +616,36 @@
     <string name="notifications_pref_title">Ծանուցումներ</string>
     <string name="numeric_text_keyboard_toggle_button_content_description">Փոխարկել թվեր և տեքստ մուտքագրելու ռեժիմների միջև</string>
     <string name="one_on_one_conversation_created">Խոսակցություն %s-ի հետ</string>
-    <string name="one_on_one_incoming_failed_message_prefix" formatted="false">Չհաջողվեց ստանալ հաղորդագրություն %s-ից՝ %s, %s: Ժամը՝ %s:</string>
-    <string name="one_on_one_incoming_successful_message_prefix" formatted="false">Հաղորդագրություն %s-ից՝ %s, %s: Ժամը՝ %s:</string>
-    <string name="one_on_one_incoming_urgent_successful_message_prefix" formatted="false">Շտապ հաղորդագրություն %s-ից՝ %s, %s: Ժամը՝ %s:</string>
-    <string name="one_on_one_outgoing_draft_message_prefix" formatted="false">Չուղարկված հաղորդագրություն %s-ին՝ %s, %s: Ժամը՝ %s:</string>
-    <string name="one_on_one_outgoing_failed_message_prefix" formatted="false">Չհաջողվեց ուղարկել հաղորդագրությունը %s-ին՝ %s, %s: Ժամը՝ %s:</string>
-    <string name="one_on_one_outgoing_not_yet_delivered_prefix" formatted="false">Հաղորդագրությունը դեռ չի առաքվել %s-ին. %s, %s: Ժամը՝ %s:</string>
-    <string name="one_on_one_outgoing_sending_message_prefix" formatted="false">Հաղորդագրությունն ուղարկվում է %s-ին՝ %s, %s: Ժամը՝ %s:</string>
-    <string name="one_on_one_outgoing_successful_message_prefix" formatted="false">Հաղորդագրություն %s-ին՝ %s, %s: Ժամը՝ %s:</string>
-    <string name="one_on_one_outgoing_urgent_successful_message_prefix" formatted="false">Շտապ հաղորդագրություն %s-ին՝ %s, %s: Ժամը՝ %s:</string>
-    <string name="outgoing_sender_content_description">Դուք հաղորդագրություն եք ուղարկել</string>
+    <string name="one_on_one_incoming_failed_message_prefix">Չհաջողվեց ստանալ հաղորդագրություն %1$s-ից՝ %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="one_on_one_incoming_successful_message_prefix">Հաղորդագրություն %1$s-ից՝ %2$s, %3$s: Ժամը՝ %3$s:</string>
+    <string name="one_on_one_incoming_urgent_successful_message_prefix">Շտապ հաղորդագրություն %1$s-ից՝ %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="one_on_one_outgoing_draft_message_prefix">Չուղարկված հաղորդագրություն %1$s-ին՝ %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="one_on_one_outgoing_failed_message_prefix">Չհաջողվեց ուղարկել հաղորդագրությունը %1$s-ին՝ %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="one_on_one_outgoing_not_yet_delivered_prefix">Հաղորդագրությունը դեռ չի առաքվել %1$s-ին. %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="one_on_one_outgoing_sending_message_prefix">Հաղորդագրությունն ուղարկվում է %1$s-ին՝ %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="one_on_one_outgoing_successful_message_prefix">Հաղորդագրություն %1$s-ին՝ %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="one_on_one_outgoing_urgent_successful_message_prefix">Շտապ հաղորդագրություն %1$s-ին՝ %2$s, %3$s: Ժամը՝ %4$s:</string>
+    <string name="otp_copied_to_clipboard">Կոդը պատճենվեց</string>
+    <string name="outgoing_sender_content_description">Ձեր հաղորդագրությունը</string>
     <string name="outgoing_text_sender_content_description">Դուք ասել եք</string>
-    <string name="p2p_conversation_suggestions_enabled_pref_summary">Առկայության դեպքում ցուցադրել առաջարկվող պատասխանները</string>
+    <string name="p2p_conversation_suggestion_payment_request_action">Գումարի ստացման գործողություն</string>
+    <string name="p2p_conversation_suggestion_payment_request_action_description">Խնդրել</string>
+    <string name="p2p_conversation_suggestion_payment_request_action_description_no_amount">Խնդրել գումար</string>
+    <string name="p2p_conversation_suggestion_payment_send_action">Գումարի ուղարկման գործողություն</string>
+    <string name="p2p_conversation_suggestion_payment_send_action_description">Ուղարկել</string>
+    <string name="p2p_conversation_suggestion_payment_send_action_description_no_amount">Ուղարկել գումար</string>
+    <string name="p2p_conversation_suggestion_share_location_text">Հաղորդել գտնվելու վայրի մասին</string>
+    <string name="p2p_conversation_suggestions_enabled_pref_summary">Առկայության դեպքում ցուցադրել պատասխանի տարբերակներ</string>
     <string name="p2p_conversation_suggestions_enabled_pref_summary_off">Անջատված է</string>
-    <string name="p2p_conversation_suggestions_preference_info_text">Առաջարկվող պատասխանները ցուցադրելու համար Google-ն օգտագործում է ձեր վերջին հաղորդագրությունները, բայց չի պահում դրանք:</string>
+    <string name="p2p_conversation_suggestions_preference_info_text">Առաջարկներ ցուցադրելու համար Google-ն օգտագործում է ձեր վերջին հաղորդագրությունները, բայց չի պահում դրանք:</string>
+    <string name="p2p_conversation_suggestions_preference_info_text_ondevice">Առաջարկներ ցուցադրելու համար «Արագ պատասխան» գործառույթն օգտագործում է ձեր վերջին հաղորդագրությունները, բայց չի պահում դրանք: <a href="https://support.google.com/messages/?p=smart_reply">Մանրամասն</a></string>
     <string name="p2p_conversation_suggestions_preference_title">Արագ պատասխան</string>
-    <string name="p2p_conversation_suggestions_tooltip_text">Project Fi-ի հաճախորդների համար նախատեսված «Արագ պատասխան» գործառույթը կօգնի SMS գրելիս ժամանակ խնայել: Այս գործառույթն անջատելու կամ դրա մասին ավելին իմանալու համար անցեք <u>Կարգավորումներ</u>:</string>
+    <string name="p2p_conversation_suggestions_tooltip_text">Project Fi-ի «Արագ պատասխան» գործառույթը կօգնի SMS գրելիս ժամանակ խնայել: Այս գործառույթն անջատելու կամ դրա մասին ավելին իմանալու համար անցեք <u>Կարգավորումներ</u>:</string>
+    <string name="p2p_conversation_suggestions_tooltip_text_ondevice">«Արագ պատասխան» գործառույթը կօգնի SMS գրելիս ժամանակ խնայել: Գործառույթն անջատելու կամ դրա մասին ավելին իմանալու համար անցեք <u>Կարգավորումներ</u>:</string>
     <string name="p2p_conversation_suggestions_tooltip_title_text">Հաղորդագրություններ ուղարկեք մեկ հպումով</string>
     <string name="paired_desktops_header_text">Միացած համակարգիչներ</string>
     <string name="paired_desktops_last_connection_time">Վերջին գործողությունը՝ %s</string>
+    <string name="paired_desktops_last_connection_time_unknown">անհայտ</string>
     <string name="participant_list_add">Ավելացնել մարդկանց</string>
     <string name="participant_list_leave">Լքել խումբը</string>
     <string name="participant_list_title">Այս խոսակցության մասնակիցները</string>
@@ -638,10 +674,10 @@
     <string name="popup_dismiss_button_text">Փակել</string>
     <string name="posted_just_now">Հենց նոր</string>
     <string name="posted_now">Հիմա</string>
-    <string name="posted_over_a_year" formatted="false">%s%s%s</string>
-    <string name="posted_this_week" formatted="false">%s%s%s</string>
-    <string name="posted_this_year" formatted="false">%s%s%s</string>
-    <string name="posted_yesterday" formatted="false">Երեկ%s%s</string>
+    <string name="posted_over_a_year">%1$s%2$s%3$s</string>
+    <string name="posted_this_week">%1$s%2$s%3$s</string>
+    <string name="posted_this_year">%1$s%2$s%3$s</string>
+    <string name="posted_yesterday">Երեկ%1$s%2$s</string>
     <string name="priority_high">Բարձր</string>
     <string name="priority_label">"Առաջնահերթություն՝ "</string>
     <string name="priority_low">Ցածր</string>
@@ -653,9 +689,12 @@
     <string name="qr_simplified_welcome_banner_url_text">Անցեք &lt;b>%s&lt;/b> ձեր համակարգչով</string>
     <string name="qr_success_text_view">Պատրաստ է:</string>
     <string name="qr_welcome_banner_url_text">Ձեր համակարգչով անցեք %s</string>
-    <string name="qr_welcome_bottom_text">Հեռախոսով սկանավորեք ձեր համակարգչի էկրանին ցուցադրվող QR կոդը</string>
+    <string name="qr_welcome_bottom_text">Հեռախոսով սկանավորեք ձեր համակարգչի էկրանին ցուցադրվող QR կոդը: Շարունակելով՝ դուք ընդունում եք Google-ի %1$sը և %2$sը</string>
     <string name="qr_welcome_button_text">Սկանավորել QR կոդ</string>
+    <string name="qr_welcome_privacy">Գաղտնիության քաղաքականություն</string>
+    <string name="qr_welcome_terms_of_service">Օգտագործման պայմաններ</string>
     <string name="rbm_block_confirmation_message">%s-ից հաղորդագրոթյուններ ստանալիս այլևս չեք ծանուցվի: Այս խոսակցությունը կարխիվացվի:</string>
+    <string name="rbm_block_learn_more_text">Իմանալ ավելին</string>
     <string name="rbm_bot_not_supported_by_carrier">%s-ի հետ հնարավոր չէ հաղորդագրվել, քանի որ ձեր օպերատորը չի աջակցում այդ գործառույթը:</string>
     <string name="rbm_bot_reply_learn_more_message">Իմանալ ավելին</string>
     <string name="rbm_bot_reply_not_available_tombstone_message">Ներկաայումս հնարավոր չէ %s-ի հետ հաղորդագրվել:</string>
@@ -684,6 +723,7 @@
     <string name="rbm_payments_summary_payment_method_title">Վճարման եղանակ</string>
     <string name="rbm_payments_summary_total">Ընդհանուր</string>
     <string name="rbm_payments_swipe_to_pay">ՍԱՀԵՑՐԵՔ ՄԱՏԸ՝ ՎՃԱՐԵԼՈՒ ՀԱՄԱՐ</string>
+    <string name="rbm_payments_tap_to_pay">ՀՊԵՔ՝ ՎՃԱՐԵԼՈՒ ՀԱՄԱՐ</string>
     <string name="rbm_payments_unexpected_error">Անսպասելի սխալ առաջացավ</string>
     <string name="rbm_verification_dialog_close_button_text">ՊԱՐԶ է</string>
     <string name="rbm_verification_dialog_learn_more_link">Իմանալ ավելին</string>
@@ -695,6 +735,8 @@
     <string name="rcs_availability">RCS հասանելիություն</string>
     <string name="rcs_default_sharing_method_title">Կցորդներ ուղարկելու պահուստային ձևաչափ</string>
     <string name="rcs_group_conversation_created">Խմբային խոսակցություն %s-ի հետ</string>
+    <string name="rcs_learn_more_text">Մանրամասն</string>
+    <string name="rcs_learn_more_title">%1$s զրույցի գործառույթների մասին</string>
     <string name="rcs_message">RCS հաղորդագրություն</string>
     <string name="rcs_mobile_data_auto_download_carrier_format_entry">Կանխադրված (%1$s)</string>
     <string name="rcs_mobile_data_auto_download_limit_disable_entry_text">Անջատել</string>
@@ -744,9 +786,11 @@
     <string name="recipient_label">Ում</string>
     <string name="recording_end_announcement">Ձայնագրումը դադարեցված է:</string>
     <string name="recording_start_announcement">Ձայնագրում:</string>
+    <string name="remove_account">Անջատել</string>
+    <string name="remove_account_content_description">Անջատել Google հաշիվը</string>
     <string name="reply_activity_title">Պատասխանել</string>
-    <string name="report_person_delivered" formatted="false">%s-ն ստացել է՝ %s</string>
-    <string name="report_person_read" formatted="false">%s մասնակիցը կարդացել է՝ %s</string>
+    <string name="report_person_delivered">%1$s-ն ստացել է՝ %2$s</string>
+    <string name="report_person_read">%1$s մասնակիցը կարդացել է՝ %2$s</string>
     <string name="report_person_sent">%s մասնակիցը չի ստացել</string>
     <string name="report_spam_checkbox_title">Հաղորդել սպամի մասին</string>
     <string name="report_spam_toast_title">Հաղորդվեց սպամի մասին</string>
@@ -764,8 +808,6 @@
     <string name="resize_service_notification_title_multiple_videos">Ուղարկվում է %d տեսանյութ</string>
     <string name="resize_service_notification_title_single_photo">Ուղարկվում է լուսանկար</string>
     <string name="resize_service_notification_title_single_video">Ուղարկվում է տեսանյութ</string>
-    <string name="restore_default_apn">Լռելյայն APN կարգավորումների վերականգնում:</string>
-    <string name="restore_default_apn_completed">Սկզբնական APN կարգավորումների վերակարգավորումն ավարտված է:</string>
     <string name="retry_call_to_action">Նորից փորձեք</string>
     <string name="save">Պահել</string>
     <string name="search_hint">Որոնել</string>
@@ -788,7 +830,6 @@
     <string name="send_button_xms_long_click_content_description">Ավելացնել վերնագիր և կարգավիճակը նշել «շտապ»</string>
     <string name="send_message_failure">Հաղորդագրությունը չհաջողվեց ուղարկել</string>
     <string name="send_message_failure_airplane_mode">Սարքը Ինքնաթիռի ռեժիմում է: Հաղորդագրությունը կարող եք ուղարկել այդ ռեժիմից դուրս գալուց հետո։</string>
-    <string name="send_message_failure_no_data">Բջջային ինտերնետն անջատված է: Ստուգեք ձեր կարգավորումները:</string>
     <string name="send_message_failure_no_sim">Հաղորդագրությունն ուղարկելու համար տեղադրեք SIM քարտ</string>
     <string name="send_message_success">Հաղորդագրությունն ուղարկվեց</string>
     <string name="send_seen_report_rcs_summary">Թող մյուսներն իմանան, որ կարդացել եք իրենց հաղորդագրությունը</string>
@@ -799,18 +840,17 @@
     <string name="set_as_default_sms_app_promo">Ավելի արագ հաղորդակցվելու համար դարձրեք Messages-ը ձեր SMS-ների կանխադրված հավելվածը:</string>
     <string name="set_as_default_sms_app_title">Արագ և հեշտ հաղորդակցում</string>
     <string name="set_message_priority_description">Կարգավիճակը նշել «շտապ»</string>
-    <string name="set_rcs_mobile_data_auto_download_limit_title">Բջջային ինտերնետով ստացված ֆայլերի ավտոմատ ներբեռնում</string>
-    <string name="setting_fast_track_body">Զրույցի գործառույթները աշխատում են Google-ի ծառայությունների հիմման վրա։ Շարունակելով՝ դուք ընդունում եք %1$sը:</string>
-    <string name="setting_fast_track_body_without_constellation">Շարունակելով՝ դուք ընդունում եք %1$sը և թույլատրում ձեր օպերատորին ստուգել սարքի մասին տեղեկությունները:</string>
+    <string name="set_rcs_mobile_data_auto_download_limit_title">Ավտոմատ ներբեռնել ստացվող ֆայլերը բջջային ինտերնետի միջոցով</string>
+    <string name="setting_fast_track_body">Շարունակելով՝ դուք ընդունում եք %1$sը և %2$sը:</string>
     <string name="settings_activity_title">Կարգավորումներ</string>
-    <string name="settings_fast_track_dialog_title">Միացնե՞լ զրույցի գործառույթները</string>
-    <string name="settings_fast_track_dialog_title_without_constellation">Միացնե՞լ Google-ի զրույցի գործառույթները</string>
+    <string name="settings_fast_track_dialog_title">Միացնե՞լ Google-ի զրույցի գործառույթները</string>
     <string name="share_cancel">Չեղարկել</string>
     <string name="share_intent_activity_label">Ընտրեք խոսակցությունը</string>
     <string name="share_intent_label">Messages</string>
+    <string name="share_location_prefix">%1$s Գտնվելու վայրը՝ %2$s</string>
     <string name="share_new_message">Նոր հաղորդագրություն</string>
-    <string name="share_typing_status_rcs_summary">Թող մյուսներն իմանան, երբ գրում եք նրանց</string>
-    <string name="share_typing_status_rcs_title">Մուտքագրման ցուցիչների ցուցադրում</string>
+    <string name="share_typing_status_rcs_summary">Թող մյուսներն իմանան, երբ իրենց գրում եք</string>
+    <string name="share_typing_status_rcs_title">Ցուցադրել մուտքագրման ցուցիչները</string>
     <string name="shared_location">Տեղադրություն</string>
     <string name="shortcut_disabled_text">Դյուրանցումն այլևս չի աշխատում, քանի որ խոսակցությունը ջնջվել է</string>
     <string name="shortcut_new_message_text">Նոր խոսակցություն</string>
@@ -828,16 +868,15 @@
     <string name="sim_slot_identifier">SIM %d</string>
     <string name="sim_specific_settings">«%s» SIM</string>
     <string name="sim_storage_pref_title">SIM քարտի հաղորդագրություններ</string>
-    <string name="sms_apns_title">Մատչման կետերի անունները</string>
     <string name="sms_broadcast_group_conversation_changed_to">Այս խոսակցությունն այժմ զանգվածային հաղորդագրություն է</string>
     <string name="sms_broadcast_group_conversation_created">Զանգվածային հաղորդագրություն</string>
     <string name="sms_broadcast_group_conversation_details">"Բոլոր ստացողները ձեզնից կստանան SMS հաղորդագրություն
  Պատասխանները կհայտնվեն առանձին խոսակցություններում"</string>
     <string name="sms_disabled">SMS-ն անջատված է</string>
-    <string name="sms_disabled_pref_title">SMS-ների կանխադրված հավելված</string>
+    <string name="sms_disabled_pref_title">SMS-ների կանխադրված հավելվածը</string>
     <string name="sms_disallowed_close_button">Լավ</string>
     <string name="sms_disallowed_message">Այս հավելվածը սարքի սեփականատիրոջ կողմից թույլատրված չէ:</string>
-    <string name="sms_enabled_pref_title">SMS-ների կանխադրված հավելված</string>
+    <string name="sms_enabled_pref_title">SMS-ների կանխադրված հավելվածը</string>
     <string name="sms_encoding_pref_summary">Փոխարկել հատուկ գրանշանները SMS հաղորդագրություններում</string>
     <string name="sms_encoding_pref_title">Օգտագործել պարզ գրանշաններ</string>
     <string name="sms_error_template">Սխալ %1$d. %2$s</string>
@@ -911,6 +950,7 @@
     <string name="to_address_label">"Ում՝ "</string>
     <string name="toast_after_entered_phone_number_for_sending">Ամեն ինչ պատրաստ է: Նորից հպեք Ուղարկել:</string>
     <string name="toast_after_setting_default_sms_app">Messages-ն այժմ SMS-ների կանխադրված հավելվածն է:</string>
+    <string name="tombstone_show_link_previews">Հղումների նախադիտումը միացված է:&lt;br />Այն անջատելու կամ ավելին իմանալու համար անցեք &lt;u>կարգավորումներ&lt;/u>:</string>
     <string name="too_many_participants">Չափից շատ մասնակիցներ կան զրույցին</string>
     <string name="top_contacts_grid_name">★</string>
     <string name="top_contacts_title">Հաճախակի օգտագործվող կոնտակտներ</string>
@@ -922,13 +962,12 @@
     <string name="unknown_phone_number_pref_display_value">Անհայտ է</string>
     <string name="unknown_ringtone_pref_display_value">Անհայտ</string>
     <string name="unknown_sim_question_mark">\?</string>
-    <string name="untitled_apn">Անվերնագիր</string>
     <string name="update_destination_blocked">Արգելափակված է</string>
     <string name="update_destination_unblocked">Արգելաբացված է</string>
     <string name="urgent_incoming_sender_content_description">Շտապ հաղորդագրություն %s-ից</string>
     <string name="urgent_incoming_text_sender_content_description">%s-ն ասել է, որ շտապ է</string>
     <string name="urgent_indicator">[ Շտապ ]</string>
-    <string name="urgent_outgoing_sender_content_description">Դուք շտապ հաղորդագրություն եք ուղարկել</string>
+    <string name="urgent_outgoing_sender_content_description">Ձեր շտապ հաղորդագրությունը</string>
     <string name="urgent_outgoing_text_sender_content_description">Դուք նշել եք, որ շտապ է</string>
     <string name="urgent_snippet">[ՇՏԱՊ]</string>
     <string name="urgent_with_c2o">ՇՏԱՊ</string>

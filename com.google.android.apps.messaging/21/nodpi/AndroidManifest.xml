@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="internalOnly" package="com.google.android.apps.messaging" platformBuildVersionCode="27" platformBuildVersionName="8.1.0">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" android:installLocation="internalOnly" package="com.google.android.apps.messaging" platformBuildVersionCode="27" platformBuildVersionName="P">
     <permission android:name="com.google.android.apps.messaging.services.ACCESS_JIBESERVICE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.READ_SMS"/>
@@ -58,8 +58,7 @@
     <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
     <uses-feature android:name="android.hardware.telephony"/>
     <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
-    <application android:allowBackup="true" android:backupAgent="com.google.android.apps.messaging.backup.BugleBackupAgent" android:fullBackupOnly="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.google.android.apps.messaging.BugleApplication" android:restoreAnyVersion="true" android:supportsRtl="true" android:theme="@style/BugleTheme" android:usesCleartextTraffic="true">
-        <provider android:authorities="com.google.android.apps.messaging.shared.datamodel.BugleContentProvider" android:exported="true" android:label="@string/app_name" android:name="com.google.android.apps.messaging.PhoneContentProvider"/>
+    <application android:allowBackup="true" android:backupAgent="com.google.android.apps.messaging.backup.BugleBackupAgent" android:fullBackupOnly="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.google.android.apps.messaging.release.BugleReleaseApplication" android:restoreAnyVersion="true" android:supportsRtl="true" android:theme="@style/BugleTheme" android:usesCleartextTraffic="true">
         <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:label="@string/app_name" android:name="com.google.android.apps.messaging.ui.conversationlist.ConversationListActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.ConversationListActivity"/>
         <activity-alias android:exported="true" android:label="@string/app_name" android:name="com.google.android.apps.messaging.ui.ConversationListActivity" android:targetActivity="com.google.android.apps.messaging.ui.conversationlist.ConversationListActivity">
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
@@ -94,6 +93,7 @@
         <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="com.google.android.apps.messaging.ui.conversation.ConversationActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversationlist.ConversationListActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.ConversationActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/blocked_contacts_title" android:name="com.google.android.apps.messaging.ui.BlockedParticipantsActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversationlist.ConversationListActivity" android:screenOrientation="user" android:theme="@style/BugleTheme"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/photo_view_activity_title" android:name="com.google.android.apps.messaging.ui.photoviewer.BuglePhotoViewActivity" android:screenOrientation="user" android:theme="@style/BuglePhotoViewTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.google.android.apps.messaging.ui.gaia.LinkGaiaAccountActivity" android:theme="@style/BugleTheme" android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/settings_activity_title" android:name="com.google.android.apps.messaging.ui.appsettings.SettingsActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversationlist.ConversationListActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.SettingsActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/advanced_settings_activity_title" android:name="com.google.android.apps.messaging.ui.appsettings.PerSubscriptionSettingsActivity" android:parentActivityName="com.google.android.apps.messaging.ui.appsettings.SettingsActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.SettingsActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/general_settings_activity_title" android:name="com.google.android.apps.messaging.ui.appsettings.ApplicationSettingsActivity" android:parentActivityName="com.google.android.apps.messaging.ui.appsettings.SettingsActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.SettingsActivity">
@@ -105,6 +105,7 @@
         </activity>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/rcs_settings_activity_title" android:name="com.google.android.apps.messaging.ui.appsettings.RcsSettingsActivity" android:parentActivityName="com.google.android.apps.messaging.ui.appsettings.PerSubscriptionSettingsActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.SettingsActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/p2p_conversation_suggestions_preference_title" android:name="com.google.android.apps.messaging.ui.appsettings.P2pConversationSuggestionsSettingsActivity" android:parentActivityName="com.google.android.apps.messaging.ui.appsettings.SettingsActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.SettingsActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/link_preview_preference_title" android:name="com.google.android.apps.messaging.ui.appsettings.LinkPreviewSettingsActivity" android:parentActivityName="com.google.android.apps.messaging.ui.appsettings.SettingsActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.SettingsActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:documentLaunchMode="always" android:excludeFromRecents="true" android:exported="true" android:name="com.google.android.apps.messaging.ui.conversationlist.ShareIntentActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.DialogActivity">
             <intent-filter android:label="@string/share_intent_label">
                 <action android:name="android.intent.action.SEND"/>
@@ -135,13 +136,12 @@
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/info_and_options_activity_title" android:name="com.google.android.apps.messaging.ui.conversationsettings.InfoAndOptionsActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversation.ConversationActivity" android:screenOrientation="user" android:theme="@style/BugleTheme"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/forward_message_activity_title" android:name="com.google.android.apps.messaging.ui.conversationlist.ForwardMessageActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.DialogActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/vcard_detail_activity_title" android:name="com.google.android.apps.messaging.ui.VCardDetailActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversation.ConversationActivity" android:screenOrientation="user" android:theme="@style/BugleTheme"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/attachment_chooser_activity_title" android:name="com.google.android.apps.messaging.ui.attachmentchooser.AttachmentChooserActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversation.ConversationActivity" android:screenOrientation="user" android:theme="@style/BugleTheme"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/rbm_payments_activity_name" android:name="com.google.android.apps.messaging.ui.businesspayments.PaymentsSummaryActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversation.ConversationActivity" android:screenOrientation="user" android:theme="@style/BugleTheme"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.messaging.ui.TestActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.messaging.ui.debug.DebugMmsConfigActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.DialogActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.messaging.ui.debug.DebugGServiceKeysActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.DialogActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/mediapicker_sticker_title" android:name="com.google.android.apps.messaging.ui.mediapicker.c2o.sticker.StickerBrowserActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversation.ConversationActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/mediapicker_gallery_title" android:name="com.google.android.apps.messaging.ui.mediapicker.c2o.gallery.GalleryBrowserActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversation.ConversationActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/mediapicker_gif_title" android:name="com.google.android.apps.messaging.ui.mediapicker.c2o.gif.GifBrowserActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversation.ConversationActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/mediapicker_location_title" android:name="com.google.android.apps.messaging.ui.mediapicker.c2o.location.LocationBrowserActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversation.ConversationActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/c2o_camera_activity_title" android:name="com.google.android.apps.messaging.ui.mediapicker.c2o.gallery.CameraActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversation.ConversationActivity" android:theme="@style/BugleCameraActivityTheme"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.messaging.ui.debug.DebugStickersActivity" android:screenOrientation="user" android:theme="@style/BugleTheme"/>
@@ -150,8 +150,6 @@
         <activity android:configChanges="keyboardHidden" android:exported="false" android:name="com.google.android.apps.messaging.ui.mediapicker.StickerSetOverviewActivity" android:screenOrientation="user" android:theme="@style/BugleTheme"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:label="@string/class_0_message_activity" android:launchMode="singleTask" android:name="com.google.android.apps.messaging.ui.ClassZeroActivity" android:screenOrientation="user" android:theme="@style/BugleTheme.DialogActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.messaging.ui.SmsStorageLowWarningActivity" android:theme="@style/BugleTheme.DialogActivity"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.messaging.ui.appsettings.ApnSettingsActivity" android:parentActivityName="com.google.android.apps.messaging.ui.appsettings.SettingsActivity" android:screenOrientation="user" android:theme="@style/BugleTheme"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.messaging.ui.appsettings.ApnEditorActivity" android:parentActivityName="com.google.android.apps.messaging.ui.appsettings.ApnSettingsActivity" android:screenOrientation="user" android:theme="@style/BugleTheme"/>
         <activity android:label="@string/app_name" android:name="com.google.android.apps.messaging.ui.WidgetPickConversationActivity" android:theme="@style/BugleTheme">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
@@ -163,7 +161,9 @@
         <activity android:configChanges="keyboardHidden|screenSize" android:exported="false" android:name="com.google.android.apps.messaging.ui.rcs.setup.manual.RcsSetupActivity" android:screenOrientation="userPortrait" android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.android.apps.messaging.ui.rcs.setup.auto.RcsPromoActivity" android:theme="@style/BugleTheme.RcsPromoActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/sim_storage_pref_title" android:name="com.google.android.apps.messaging.ui.appsettings.SimMessagesActivity" android:parentActivityName="com.google.android.apps.messaging.ui.appsettings.PerSubscriptionSettingsActivity" android:screenOrientation="user" android:theme="@style/BugleTheme"/>
-        <activity android:exported="false" android:name="com.google.android.apps.messaging.ui.ditto.DittoActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversationlist.ConversationListActivity" android:theme="@style/BugleTheme"/>
+        <activity android:exported="false" android:label="@string/ditto_activity_label" android:name="com.google.android.apps.messaging.ui.ditto.DittoActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversationlist.ConversationListActivity" android:theme="@style/BugleTheme.DittoActivity"/>
+        <activity android:exported="false" android:name="com.google.android.apps.messaging.ui.ditto.DittoNotificationsActivity" android:parentActivityName="com.google.android.apps.messaging.ui.ditto.DittoActivity" android:theme="@style/BugleTheme.DittoActivity"/>
+        <provider android:authorities="com.google.android.apps.messaging.shared.datamodel.BugleContentProvider" android:exported="true" android:label="@string/app_name" android:name="com.google.android.apps.messaging.shared.datamodel.BugleContentProvider"/>
         <provider android:authorities="com.google.android.rcs.client.businessinfo" android:exported="true" android:name="com.google.android.rcs.client.businessinfo.BusinessInfoContentProvider" android:process=":rcs"/>
         <provider android:authorities="com.google.android.apps.messaging.shared.datamodel.richcard.RichCardMediaFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.apps.messaging.shared.datamodel.richcard.RichCardMediaFileProvider"/>
         <provider android:authorities="com.google.android.apps.messaging.shared.datamodel.MmsFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.apps.messaging.shared.datamodel.MmsFileProvider"/>
@@ -172,10 +172,12 @@
         <provider android:authorities="com.google.android.rcs.service.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/rcs_file_transfer_paths"/>
         </provider>
+        <provider android:authorities="com.google.android.rcs.service.preferences" android:exported="false" android:name="com.google.android.flib.pref.PreferenceFileProvider"/>
         <provider android:authorities="com.google.android.apps.messaging.ui.money.MoneyAttachmentImageProvider" android:exported="true" android:grantUriPermissions="true" android:name="com.google.android.apps.messaging.ui.money.MoneyAttachmentImageProvider"/>
         <provider android:authorities="com.google.android.apps.messaging.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.apps.messaging.ui.mediapicker.c2o.gallery.GalleryCameraFileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/media_paths"/>
         </provider>
+        <provider android:authorities="com.google.android.apps.messaging.shared.ui.avatar.AvatarContentProvider" android:exported="true" android:grantUriPermissions="true" android:name="com.google.android.apps.messaging.shared.ui.avatar.AvatarContentProvider"/>
         <provider android:authorities="com.google.android.rcs.contacts" android:exported="true" android:name="com.google.android.ims.database.ImsContactsProvider" android:process=":rcs"/>
         <provider android:authorities="com.google.android.apps.messaging.shared.datamodel.provider.firebaseinitprovider" android:exported="false" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
         <receiver android:exported="false" android:name="com.google.android.apps.messaging.shared.datamodel.action.PendingActionReceiver"/>
@@ -281,6 +283,11 @@
                 <action android:name="android.intent.action.LOCALE_CHANGED"/>
             </intent-filter>
         </receiver>
+        <receiver android:exported="false" android:name="com.google.android.apps.messaging.shared.receiver.CopyOtpReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.apps.messaging.copy_otp"/>
+            </intent-filter>
+        </receiver>
         <receiver android:exported="false" android:name="com.google.android.apps.messaging.shared.receiver.NotificationReceiver">
             <intent-filter>
                 <action android:name="com.google.android.apps.messaging.reset_notifications"/>
@@ -371,7 +378,12 @@
                 <action android:name="com.google.android.gms.phenotype.UPDATE"/>
             </intent-filter>
         </receiver>
-        <receiver android:exported="true" android:name="com.google.android.ims.library.phenotype.PhenotypeConfigurationReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" android:process=":rcs">
+        <receiver android:exported="true" android:name="com.google.android.ims.library.phenotype.PhenotypeConfigurationReceiver" android:permission="com.google.android.gms.permission.PHENOTYPE_UPDATE_BROADCAST" android:process=":rcs">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.ims.library.rcs.RcsPhenotypeConfigurationReceiver" android:permission="com.google.android.gms.permission.PHENOTYPE_UPDATE_BROADCAST">
             <intent-filter>
                 <action android:name="com.google.android.gms.phenotype.UPDATE"/>
             </intent-filter>
@@ -431,7 +443,13 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
         </service>
+        <service android:exported="false" android:name="com.google.android.apps.messaging.shared.jobs.BugleJobDispatcherService">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
         <service android:exported="false" android:name="com.google.android.apps.messaging.shared.net.DittoForegroundService"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <meta-data android:name="gsma.joyn.client" android:value="true"/>
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
         <meta-data android:name="com.google.android.gms.appdatasearch" android:resource="@xml/search"/>
@@ -467,6 +485,12 @@
         <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
             <intent-filter android:priority="-500">
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/attachment_chooser_activity_title" android:name="com.google.android.apps.messaging.ui.attachmentchooser.AttachmentChooserActivity" android:parentActivityName="com.google.android.apps.messaging.ui.conversation.ConversationActivity" android:screenOrientation="user" android:theme="@style/BugleTheme"/>
+        <service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
         </service>
     </application>

@@ -17,12 +17,15 @@
     <string name="abc_toolbar_collapse_description">Nach oben</string>
     <string name="accessbility_suggestion_dropdown_closed">Keine Vorschläge verfügbar</string>
     <string name="accessbility_suggestion_dropdown_opened">Geöffnete Kontaktvorschläge</string>
+    <string name="account_selected">Konto ausgewählt</string>
     <string name="action_add_contact">Kontakt hinzufügen</string>
     <string name="action_archive">Archivieren</string>
+    <string name="action_back">Zurück</string>
     <string name="action_block">Blockieren</string>
     <string name="action_call">Anrufen</string>
     <string name="action_close">Schließen</string>
     <string name="action_confirm_selection">Auswahl bestätigen</string>
+    <string name="action_copy_otp">\"%s\" kopieren</string>
     <string name="action_delete">Löschen</string>
     <string name="action_delete_message">Löschen</string>
     <string name="action_download">Herunterladen</string>
@@ -33,8 +36,9 @@
     <string name="action_notification_off">Benachrichtigungen deaktivieren</string>
     <string name="action_notification_on">Benachrichtigungen aktivieren</string>
     <string name="action_people_and_options">Personen &amp; Optionen</string>
-    <string name="action_scan_qr_code">Messages für das Web</string>
+    <string name="action_scan_qr_code">Messages Web</string>
     <string name="action_search">Suchen</string>
+    <string name="action_search_gifs">GIFs suchen</string>
     <string name="action_search_messages">In Nachrichten suchen</string>
     <string name="action_selected">Ausgewählt.</string>
     <string name="action_send">Senden</string>
@@ -52,16 +56,8 @@
     <string name="advanced_settings_activity_title">Erweitert</string>
     <string name="and_n_more">und %d andere</string>
     <string name="and_one_more">und 1 weiterer Teilnehmer</string>
-    <string name="apn_edit">Zugangspunkt bearbeiten</string>
     <string name="apn_mcc">MCC</string>
-    <string name="apn_mms_port">MMS-Port</string>
-    <string name="apn_mms_proxy">MMS-Proxy</string>
-    <string name="apn_mmsc">MMSC</string>
     <string name="apn_mnc">MNC</string>
-    <string name="apn_name">Name</string>
-    <string name="apn_not_set">Nicht definiert</string>
-    <string name="apn_settings">APNs</string>
-    <string name="apn_settings_not_available">Die Einstellungen für den Zugangspunkt sind für diesen Nutzer nicht verfügbar.</string>
     <string name="app_name">Messages</string>
     <string name="archived_activity_title">Archiviert</string>
     <string name="archived_conversation_list_empty_text">Archivierte Unterhaltungen erscheinen hier</string>
@@ -106,17 +102,19 @@
     <string name="boew_promo_text">Wenn du Chatfunktionen nutzen möchtest, z. B. Nachrichten über WLAN und mobile Daten, muss Messages im Hintergrund verbunden bleiben.</string>
     <string name="boew_promo_title">Mehr Möglichkeiten mit Messages</string>
     <string name="broadcast_sms_text">Massen-SMS</string>
-    <string name="bugle_notification_default_channel_name">Standard</string>
-    <string name="bugle_notification_ditto_channel_name">Web</string>
-    <string name="bugle_notification_silent_default_channel_name">Standard (lautlos)</string>
-    <string name="business_action_call_full_content_description" formatted="false">%s anrufen (%s)</string>
+    <string name="bugle_notification_category_conversations">Unterhaltungen</string>
+    <string name="bugle_notification_category_web">Messages Web</string>
+    <string name="bugle_notification_default_channel_name">Andere Benachrichtigungen</string>
+    <string name="bugle_notification_ditto_channel_name">Mit Messages Web verbunden</string>
+    <string name="bugle_notification_silent_default_channel_name">Benachrichtigungen bei Verwendung der Webversion erhalten</string>
+    <string name="business_action_call_full_content_description">%1$s anrufen (%2$s)</string>
     <string name="business_action_call_short_content_description">Anrufen</string>
     <string name="business_action_call_short_text">ANRUF</string>
-    <string name="business_action_email_full_content_description" formatted="false">%s eine E-Mail senden (%s)</string>
+    <string name="business_action_email_full_content_description">%1$s eine E-Mail senden (%2$s)</string>
     <string name="business_action_email_short_content_description">E-Mail senden</string>
     <string name="business_action_email_short_text">E-MAIL</string>
     <string name="business_action_failed_to_launch">Für diese Aktion wurde keine App auf dem Gerät gefunden.</string>
-    <string name="business_action_website_full_content_description" formatted="false">Website %s öffnen (%s)</string>
+    <string name="business_action_website_full_content_description">Website %1$s öffnen (%2$s)</string>
     <string name="business_action_website_short_content_description">Website öffnen</string>
     <string name="business_action_website_short_text">WEBSITE</string>
     <string name="business_info_email_default_sub_header">E-Mail</string>
@@ -129,11 +127,13 @@
     <string name="c2o_category_audio_content_description">Audio aufnehmen</string>
     <string name="c2o_category_emoji_content_description">Emojis hinzufügen</string>
     <string name="c2o_category_gallery_content_description">Fotos hinzufügen</string>
+    <string name="c2o_category_gif_content_description">GIFs suchen</string>
     <string name="c2o_category_location_content_description">Standort teilen</string>
     <string name="c2o_category_money_content_description">Geld senden und empfangen</string>
     <string name="c2o_category_name_audio">Sprachnachricht</string>
     <string name="c2o_category_name_emojis">Emojis</string>
     <string name="c2o_category_name_gallery">Galerie</string>
+    <string name="c2o_category_name_gif">Graphics Interchange Format</string>
     <string name="c2o_category_name_location">Standort</string>
     <string name="c2o_category_name_money">Google Wallet</string>
     <string name="c2o_category_name_stickers">Sticker</string>
@@ -146,7 +146,9 @@
     <string name="c2o_mic_permissions_text">Tippen, um Zugriff auf Mikrofon zu erlauben</string>
     <string name="c2o_money_only_one_allowed">Es kann kein weiterer Geldbetrag als Anhang hinzugefügt werden</string>
     <string name="c2o_money_request_button_text">Geld anfordern</string>
+    <string name="c2o_money_request_message_text">Jemand hat gerade über Google Pay Geld von dir angefordert. Über den folgenden Link kannst du es senden: %1$s</string>
     <string name="c2o_money_send_button_text">Geld senden</string>
+    <string name="c2o_money_send_message_text">Jemand hat dir gerade über Google Pay Geld gesendet. Über den folgenden Link kannst du es akzeptieren: %1$s</string>
     <string name="c2o_storage_permissions_text">Tippen, um Zugriff auf Medien zu erlauben</string>
     <string name="c2o_video_button_text">Video</string>
     <string name="camera_back_switch_button">Zu Rückkamera wechseln</string>
@@ -167,6 +169,7 @@
     <string name="cant_send_group_mms_message_when_group_mms_is_disabled">Öffne zum Senden dieser Nachricht die Einstellungen und ändere die Einstellung für Gruppennachrichten in \"Gruppen-MMS\".</string>
     <string name="cant_send_message_while_loading_attachments">Die Nachricht kann nicht gesendet werden, weil die Anhänge noch nicht geladen wurden.</string>
     <string name="cant_send_message_without_active_subscription">Netzwerk ist nicht bereit. Bitte versuche es erneut.</string>
+    <string name="cant_send_mms_sim_has_no_data">Lege vor dem Senden in den Einstellungen fest, dass für mobile Daten \"%1$s\" statt \"%2$s\" verwendet werden soll</string>
     <string name="cant_send_rcs_message_when_rcs_disabled">Öffne zum Senden dieser Nachricht die Einstellungen und aktiviere Chatfunktionen.</string>
     <string name="carrier_send_error">Nachricht kann nicht mit %1$s gesendet werden. Fehler %2$d</string>
     <string name="carrier_send_error_phone_number_format_incorrect">Nachricht wurde nicht gesendet. Falsches Telefonnummernformat.</string>
@@ -194,24 +197,6 @@
     <string name="common_google_play_services_update_title">Google Play-Dienste aktualisieren</string>
     <string name="common_google_play_services_updating_text">Zur Nutzung von %1$s sind Google Play-Dienste erforderlich, die gerade aktualisiert werden.</string>
     <string name="common_google_play_services_wear_update_text">Eine neue Version der Google Play-Dienste wird benötigt. Diese wird in Kürze automatisch aktualisiert.</string>
-    <string name="common_open_on_phone">Auf Smartphone öffnen</string>
-    <string name="compose_message_view_hint_text">Chatnachricht</string>
-    <string name="compose_message_view_hint_text_multi_sim_broadcast_sms">Einzelne Textnachrichten senden&lt;br/>&lt;small>über %s&lt;/small></string>
-    <string name="compose_message_view_hint_text_multi_sim_mms">Textnachricht&lt;br/>&lt;small>über %s&lt;/small></string>
-    <string name="compose_message_view_hint_text_multi_sim_rcs">Chatnachricht&lt;br/>&lt;small>über %s&lt;/small></string>
-    <string name="compose_message_view_hint_text_multi_sim_sms">Textnachricht&lt;br/>&lt;small>über %s&lt;/small></string>
-    <string name="compose_message_view_hint_text_with_attachment">Text hinzufügen</string>
-    <string name="compose_message_view_mms_hint_text">Textnachricht</string>
-    <string name="compose_message_view_sms_broadcast_hint_text">Einzelne Textnachrichten senden</string>
-    <string name="compose_message_view_sms_hint_text">Textnachricht</string>
-    <string name="compose_message_view_subject_hint_text">Betreff</string>
-    <string name="confirm_sms_7bit_encoding_dialog_learn_more">Weitere Informationen</string>
-    <string name="confirm_sms_7bit_encoding_dialog_positive">Konvertieren und senden</string>
-    <string name="confirm_sms_7bit_encoding_dialog_remember_check">Auswahl merken</string>
-    <string name="confirm_sms_7bit_encoding_dialog_text">"Um eine Zustellung durch deinen Anbieter sicherzustellen, werden einige Zeichen in dieser Nachricht konvertiert. Du kannst dieses Verhalten in den Einstellungen ändern. "</string>
-    <string name="confirm_sms_7bit_encoding_dialog_title">Einfache Zeichen verwenden</string>
-    <string name="confrim_participants_button_content_description">Teilnehmer bestätigen</string>
-    <string name="contact_has_multiple_destinations_phone" formatted="false">%s (+ %s weitere)</string>
     <string name="notification_reply">Antworten</string>
     <string name="notification_reply_prompt">Antworten</string>
     <string name="notification_call">Anrufen</string>
@@ -243,6 +228,25 @@
     <string name="notification_waiting_for_connection_timeout_line1_plural">Nachrichten nicht gesendet</string>
     <string name="notification_send_failures_line1_plural">Einige Nachrichten in Messages wurden nicht gesendet</string>
     <string name="enumeration_comma">", "</string>
+    <string name="common_open_on_phone">Auf Smartphone öffnen</string>
+    <string name="compose_message_view_hint_text">Chatnachricht</string>
+    <string name="compose_message_view_hint_text_multi_sim_broadcast_sms">Einzelne Textnachrichten senden&lt;br/>&lt;small>über %s&lt;/small></string>
+    <string name="compose_message_view_hint_text_multi_sim_mms">Textnachricht&lt;br/>&lt;small>über %s&lt;/small></string>
+    <string name="compose_message_view_hint_text_multi_sim_rcs">Chatnachricht&lt;br/>&lt;small>über %s&lt;/small></string>
+    <string name="compose_message_view_hint_text_multi_sim_sms">Textnachricht&lt;br/>&lt;small>über %s&lt;/small></string>
+    <string name="compose_message_view_hint_text_with_attachment">Text hinzufügen</string>
+    <string name="compose_message_view_mms_hint_text">Textnachricht</string>
+    <string name="compose_message_view_sms_broadcast_hint_text">Einzelne Textnachrichten senden</string>
+    <string name="compose_message_view_sms_hint_text">Textnachricht</string>
+    <string name="compose_message_view_subject_hint_text">Betreff</string>
+    <string name="confirm_sms_7bit_encoding_dialog_learn_more">Weitere Informationen</string>
+    <string name="confirm_sms_7bit_encoding_dialog_positive">Konvertieren und senden</string>
+    <string name="confirm_sms_7bit_encoding_dialog_remember_check">Auswahl merken</string>
+    <string name="confirm_sms_7bit_encoding_dialog_text">"Um eine Zustellung durch deinen Anbieter sicherzustellen, werden einige Zeichen in dieser Nachricht konvertiert. Du kannst dieses Verhalten in den Einstellungen ändern. "</string>
+    <string name="confirm_sms_7bit_encoding_dialog_title">Einfache Zeichen verwenden</string>
+    <string name="confrim_participants_button_content_description">Teilnehmer bestätigen</string>
+    <string name="connect_to_gaia_title">Mein Google-Konto verbinden</string>
+    <string name="contact_has_multiple_destinations_phone">%1$s (+ %2$s weitere)</string>
     <string name="contact_has_multiple_destinations_type">Mehrere</string>
     <string name="contact_list_add_people">%s hinzufügen</string>
     <string name="contact_list_empty_text">Gib einen Kontaktnamen oder eine Telefonnummer ein, um eine neue Nachricht zu beginnen.</string>
@@ -272,13 +276,14 @@
     <string name="conversation_creation_failure">Die Unterhaltung konnte nicht gestartet werden.</string>
     <string name="conversation_deletion_failed">Unterhaltung konnte nicht gelöscht werden</string>
     <string name="conversation_list_dismiss_toast">Unter \"Hilfe &amp;Feedback\" findest du Informationen dazu, wie du iMessage jederzeit deaktivieren kannst</string>
+    <string name="conversation_list_ditto_popup_negative">SPÄTER</string>
+    <string name="conversation_list_ditto_popup_paragraph">Mit Android Messages Web</string>
+    <string name="conversation_list_ditto_popup_positive">JETZT AUSPROBIEREN</string>
+    <string name="conversation_list_ditto_popup_title">Neu! Textnachrichten am Computer</string>
     <string name="conversation_list_empty_text">Wenn du eine neue Unterhaltung beginnst, wird sie hier angezeigt</string>
-    <string name="conversation_list_fast_track_paragraph">Außerdem erhältst du Zugriff auf zusätzliche Chatfunktionen von Google, z. B. das Teilen von Fotos in hoher Qualität. Indem du fortfährst, stimmst du den %1$s zu.</string>
-    <string name="conversation_list_fast_track_paragraph_multi_sim">Außerdem erhältst du Zugriff auf zusätzliche Chatfunktionen von Google über \"%1$s\" ((SIM %2$d)). Indem du fortfährst, stimmst du den %3$s zu.</string>
-    <string name="conversation_list_fast_track_paragraph_multi_sim_without_constellation">Wenn du die Chatfunktionen von Google auf \"%1$s\" ((SIM %2$d)) aktivieren möchtest, musst du die %3$s akzeptieren und erlauben, dass Google deine Geräteinformationen beim Mobilfunkanbieter überprüft.</string>
-    <string name="conversation_list_fast_track_paragraph_without_constellation">Wenn du die Chatfunktionen von Google aktivieren möchtest, musst du die %1$s akzeptieren und die Bestätigung deiner Geräteinformationen beim Mobilfunkanbieter erlauben.</string>
-    <string name="conversation_list_fast_track_popup_title">Neu! SMS über WLAN und mobile Daten</string>
-    <string name="conversation_list_fast_track_popup_title_without_constellation">Neu! Textnachrichten über WLAN und weitere Funktionen</string>
+    <string name="conversation_list_fast_track_paragraph">Wenn du die Chatfunktionen von Google aktivieren möchtest, musst du die %1$s und %2$s akzeptieren.</string>
+    <string name="conversation_list_fast_track_paragraph_multi_sim">Wenn du die Chatfunktionen von Google auf \"%1$s\" ((SIM %2$d)) aktivieren möchtest, musst du die %3$s und die %4$s akzeptieren.</string>
+    <string name="conversation_list_fast_track_popup_title">Neu! Textnachrichten über WLAN und weitere Funktionen</string>
     <string name="conversation_list_first_empty_search_results">Keine Ergebnisse für \"%1$s\"</string>
     <string name="conversation_list_first_sync_text">Unterhaltungen werden geladen…</string>
     <string name="conversation_list_imessage_banner_negative">SCHLIEẞEN</string>
@@ -314,7 +319,7 @@
     <string name="conversation_list_snippet_vcard">Kontaktkarte</string>
     <string name="conversation_list_snippet_video">Video</string>
     <string name="conversation_list_terms_and_conditions_promo_subtitle">Schließe die Aktivierung der Chatfunktionen ab, um Nachrichten über WLAN zu senden und vieles mehr</string>
-    <string name="conversation_list_terms_and_conditions_promo_title">Nur noch ein Schritt...</string>
+    <string name="conversation_list_terms_and_conditions_promo_title">Nur noch ein Schritt…</string>
     <string name="conversation_list_tnc_promo_button_positive">FERTIGSTELLEN</string>
     <string name="conversation_message_view_subject_content_description">Betreff: %s</string>
     <string name="conversation_message_view_subject_text">"Betreff: "</string>
@@ -330,14 +335,19 @@
     <string name="conversation_suggestion_launch_phone_action">Vorgeschlagene Telefonaktion</string>
     <string name="conversation_suggestion_launch_web_action">Vorgeschlagene Webaktion</string>
     <string name="conversation_suggestion_payment_request_action">Aktion für Zahlungsanforderung</string>
+    <string name="conversation_suggestion_payment_request_cannot_process">Diese Zahlungsanforderung kann momentan nicht verarbeitet werden</string>
+    <string name="conversation_suggestion_payment_request_completed_toast">Angebot beendet</string>
+    <string name="conversation_suggestion_payment_request_expired_toast">Nicht mehr verfügbar</string>
     <string name="conversation_suggestion_send_reply">Vorgeschlagene Antwort</string>
     <string name="conversation_suggestion_share_location_action">Vorgeschlagene Aktion zur Standortfreigabe</string>
     <string name="conversation_suggestion_share_location_action_failure">Es ist ein Fehler aufgetreten. Wenn du deinen Standort teilen möchtest, füge ihn in einer neuen Nachricht hinzu.</string>
     <string name="copy_to_clipboard">Kopieren</string>
     <string name="copy_to_clipboard_dialog_title">In Zwischenablage kopieren?</string>
+    <string name="create_account">Google-Konto hinzufügen</string>
     <string name="create_new_group_message">Messages erstellt eine neue Gruppenunterhaltung mit MMS, weil du einen neuen SMS-Empfänger hinzugefügt hast. Dies hat keine Auswirkungen auf die ursprüngliche Gruppe.</string>
     <string name="create_new_group_title">Neue Gruppe erstellen?</string>
-    <string name="current_country_pref_title">Dein aktuelles Land</string>
+    <string name="current_country_pref_title">Aktuelles Land</string>
+    <string name="dark_mode_pref_title">Dunklen Hintergrund aktivieren</string>
     <string name="db_full">Wenig freier Speicherplatz. Einige Daten gehen möglicherweise verloren.</string>
     <string name="debug_category_pref_title">Fehlersuche</string>
     <string name="default_sms_app_promo_negative_button_text">ÜBERSPRINGEN</string>
@@ -370,7 +380,14 @@
     <string name="desktop_browser_type_unknown">Unbekannt</string>
     <string name="disable_group_mms">SMS-Antwort an alle Empfänger senden und einzelne Antworten erhalten (Massen-SMS)</string>
     <string name="dismiss_button">Verwerfen</string>
-    <string name="ditto_foreground_service_notification_title">Mit Desktop verbunden</string>
+    <string name="ditto_activity_label">Messages Web</string>
+    <string name="ditto_foreground_service_notification_title">Mit Messages Web verbunden</string>
+    <string name="ditto_persistent_notification_settings">Benachrichtigungen</string>
+    <string name="ditto_settings_action_bar_title">Benachrichtigungen</string>
+    <string name="ditto_settings_connected_to_web_notification_description">\"Mit Messages Web verbunden\" erscheint, wenn dein Gerät mit dem Internet verbunden wird</string>
+    <string name="ditto_settings_connected_to_web_notification_title">Permanente Benachrichtigung anzeigen</string>
+    <string name="ditto_settings_while_using_web_notification_description">Klingelton und Vibration ausschalten, sobald dein Gerät mit dem Internet verbunden ist</string>
+    <string name="ditto_settings_while_using_web_notification_title">Benachrichtigungen stummschalten</string>
     <string name="dogfood_opt_in_dialog_no">Abbrechen</string>
     <string name="dogfood_opt_in_dialog_query">"Möchtest du uns dabei helfen, Messages als Dogfood zu testen?
 
@@ -379,7 +396,6 @@
     <string name="dogfood_opt_in_dialog_yes">Beitreten</string>
     <string name="download_message_failure">Nachricht konnte nicht heruntergeladen werden</string>
     <string name="download_message_failure_airplane_mode">Der Flugmodus ist aktiviert. Wenn du ihn deaktivierst, kannst du die Nachricht herunterladen.</string>
-    <string name="download_message_failure_no_data">Mobile Daten sind deaktiviert. Bitte überprüfe deine Einstellungen.</string>
     <string name="download_message_failure_no_sim">Du kannst die Nachricht nach Einlegen einer SIM-Karte herunterladen</string>
     <string name="download_message_success">Nachricht heruntergeladen</string>
     <string name="dropdown_delete_button_desc">%s aus der Empfängerliste entfernen</string>
@@ -404,9 +420,6 @@
     <string name="enter_phone_number_text_for_sim">Messages benötigt die Telefonnummer für SIM \"%1$s\". Mit diesem einmaligen Schritt wird sichergestellt, dass Gruppennachrichten richtig zugestellt werden.</string>
     <string name="enter_phone_number_title">Telefonnummer bestätigen</string>
     <string name="enter_phone_number_title_for_sim">Telefonnummer für %1$s bestätigen</string>
-    <string name="error_apn_name_empty">Das Namensfeld darf nicht leer sein.</string>
-    <string name="error_mcc_not3">Das MCC-Feld muss 3 Zeichen enthalten.</string>
-    <string name="error_mnc_not23">Das MNC-Feld muss 2 oder 3 Zeichen enthalten.</string>
     <string name="error_premium_sms_needs_permission">Öffne zum Senden dieser Nachricht die Einstellungen auf deinem Gerät und aktiviere den Zugriff für Premium-SMS</string>
     <string name="error_text_label">"Fehler: "</string>
     <string name="failed">Fehler beim Laden des Bildes</string>
@@ -418,6 +431,7 @@
     <string name="fast_track_popup_accepted_snack_bar_text">Du wirst informiert, sobald du die Chatfunktionen nutzen kannst.</string>
     <string name="fast_track_popup_declined_snack_bar_text">Du kannst die Chatfunktionen jederzeit in den Einstellungen aktivieren.</string>
     <string name="fast_track_positive_button_text">JA, ICH BIN DABEI</string>
+    <string name="fast_track_privacy_policy">Datenschutzerklärung</string>
     <string name="fast_track_terms">Nutzungsbedingungen</string>
     <string name="fcm_fallback_notification_channel_label">Sonstiges</string>
     <string name="fdn_check_failure">Du kannst nur Nachrichten an die zugelassenen Rufnummern senden</string>
@@ -436,16 +450,18 @@
     <string name="general_settings_title">Allgemein</string>
     <string name="get_messenger_notification_body">Lies SMS auf deiner Smartwatch oder deinem Smartphone und sende sie von dort</string>
     <string name="get_messenger_notification_header">Messages installieren</string>
-    <string name="group_incoming_failed_message_prefix" formatted="false">Fehler bei Nachricht von %s: %s, %s. Zeit: %s. %s.</string>
-    <string name="group_incoming_successful_message_prefix" formatted="false">Nachricht von %s: %s, %s. Zeit: %s. %s.</string>
-    <string name="group_incoming_urgent_successful_message_prefix" formatted="false">Dringende Nachricht von %s: %s, %s. Zeit: %s. %s.</string>
+    <string name="google_account_pref_title">Google-Konto</string>
+    <string name="google_profile_photo">Google-Profilfoto</string>
+    <string name="group_incoming_failed_message_prefix">Fehler bei Nachricht von %1$s: %2$s, %3$s. Zeit: %4$s. %5$s.</string>
+    <string name="group_incoming_successful_message_prefix">Nachricht von %1$s: %2$s, %3$s. Zeit: %4$s. %5$s.</string>
+    <string name="group_incoming_urgent_successful_message_prefix">Dringende Nachricht von %1$s: %2$s, %3$s. Zeit: %4$s. %5$s.</string>
     <string name="group_mms_pref_title">SMS/MMS an Gruppe senden</string>
-    <string name="group_outgoing_draft_message_prefix" formatted="false">Nicht gesendete Nachricht an %s: %s, %s. Zeit: %s.</string>
-    <string name="group_outgoing_failed_message_prefix" formatted="false">Fehler bei Nachricht an %s: %s, %s. Zeit: %s.</string>
-    <string name="group_outgoing_not_yet_delivered_prefix" formatted="false">Noch nicht zugestellte Nachricht an %s: %s, %s. Zeit: %s.</string>
-    <string name="group_outgoing_sending_message_prefix" formatted="false">Nachricht wird gesendet an %s: %s, %s. Zeit: %s.</string>
-    <string name="group_outgoing_successful_message_prefix" formatted="false">Nachricht an %s: %s, %s. Zeit: %s.</string>
-    <string name="group_outgoing_urgent_successful_message_prefix" formatted="false">Dringende Nachricht an %s: %s, %s. Zeit: %s.</string>
+    <string name="group_outgoing_draft_message_prefix">Nicht gesendete Nachricht an %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="group_outgoing_failed_message_prefix">Fehler bei Nachricht an %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="group_outgoing_not_yet_delivered_prefix">Noch nicht zugestellte Nachricht an %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="group_outgoing_sending_message_prefix">Nachricht wird gesendet an %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="group_outgoing_successful_message_prefix">Nachricht an %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="group_outgoing_urgent_successful_message_prefix">Dringende Nachricht an %1$s: %2$s, %3$s. Zeit: %4$s.</string>
     <string name="hats_lib_close_button_description">Schließen</string>
     <string name="hats_lib_default_prompt_title">Helfen Sie uns bei der Verbesserung von Google.</string>
     <string name="hats_lib_default_star_rating_bar_description">Bewertungsbalken</string>
@@ -466,12 +482,13 @@
     <string name="in_conversation_new_message_indicator_text_more">Mehr als %d neue Nachrichten</string>
     <string name="in_conversation_notify_new_message_action">Ansehen</string>
     <string name="in_conversation_notify_new_message_text">Neue Nachricht</string>
-    <string name="incoming_message_announcement" formatted="false">Nachricht von %s: %s, %s.</string>
+    <string name="incoming_link_preview_announcement">Vorschau für erhaltenen Link: %s</string>
+    <string name="incoming_message_announcement">Nachricht von %1$s: %2$s, %3$s.</string>
     <string name="incoming_sender_content_description">Nachricht von %s</string>
     <string name="incoming_text_sender_content_description">%s hat Folgendes gesagt:</string>
     <string name="incoming_text_unspecified_sender_content_description">Der Absender hat gesagt</string>
     <string name="incoming_unspecified_sender_description">Nachricht vom Absender</string>
-    <string name="incoming_urgent_message_announcement" formatted="false">Dringende Nachricht von %s: %s, %s.</string>
+    <string name="incoming_urgent_message_announcement">Dringende Nachricht von %1$s: %2$s, %3$s.</string>
     <string name="info_and_options_activity_business_tab_list_header">Unternehmen</string>
     <string name="info_and_options_activity_general_tab_list_header">Allgemein</string>
     <string name="info_and_options_activity_info_tab_content_description">Informationen</string>
@@ -489,10 +506,17 @@
     <string name="leave_confirmation_text">Möchtest du wirklich keine Nachrichten mehr von dieser Gruppe erhalten?</string>
     <string name="leave_confirmation_title">Gruppe endgültig verlassen</string>
     <string name="link_display_format">%1$s (%2$s)</string>
-    <string name="listify_many" formatted="false">%s, %s und %d andere</string>
-    <string name="listify_three" formatted="false">%s, %s und %s</string>
-    <string name="listify_two" formatted="false">%s und %s</string>
-    <string name="listify_two_with_comma" formatted="false">%s, %s</string>
+    <string name="link_gaia_explanation">Mithilfe der Informationen aus deinem Google-Konto wird die App an deine Bedürfnisse angepasst</string>
+    <string name="link_preview_enabled_pref_summary">Vorschau in Nachrichten anzeigen</string>
+    <string name="link_preview_enabled_pref_summary_off">Aus</string>
+    <string name="link_preview_preference_info_text">Google ruft den Inhalt für die Vorschau von den verlinkten Seiten ab. Eine Vorschau wird nur für Links von bekannten Absendern angezeigt. &lt;a href>Weitere Informationen&lt;/a></string>
+    <string name="link_preview_preference_title">Automatische Linkvorschau</string>
+    <string name="link_preview_tap_to_load">Zum Laden der Vorschau tippen</string>
+    <string name="link_preview_wifi_only_pref_summary">Vorschau nur bei WLAN-Verbindung herunterladen</string>
+    <string name="listify_many">%1$s, %2$s und %3$d andere</string>
+    <string name="listify_three">%1$s, %2$s und %3$s</string>
+    <string name="listify_two">%1$s und %2$s</string>
+    <string name="listify_two_with_comma">%1$s, %2$s</string>
     <string name="loading_conversations">Unterhaltungen werden geladen</string>
     <string name="loading_messages">Nachrichten werden geladen</string>
     <string name="loading_vcard">Kontaktkarte wird geladen…</string>
@@ -512,12 +536,10 @@
     <string name="mediapicker_gallery_title">Foto auswählen</string>
     <string name="mediapicker_gallery_video_item_description">Video: %1$tB %1$te %1$tY %1$tl %1$tM %1$tp</string>
     <string name="mediapicker_gallery_video_item_description_no_date">Video</string>
+    <string name="mediapicker_gif_title">GIFs suchen</string>
     <string name="mediapicker_location_title">Ort auswählen</string>
     <string name="mediapicker_sticker_title">Sticker wählen</string>
-    <string name="menu_delete_apn">APN löschen</string>
-    <string name="menu_discard_apn_change">Verwerfen</string>
     <string name="menu_license">Open Source-Lizenzen</string>
-    <string name="menu_new_apn">Neuer APN</string>
     <string name="menu_privacy_policy">Datenschutzerklärung</string>
     <string name="menu_restore_default_apn">Auf Standard zurücksetzen</string>
     <string name="menu_save_apn">Speichern</string>
@@ -534,6 +556,8 @@
     <string name="message_status_download">Zum Herunterladen tippen</string>
     <string name="message_status_download_error">Nachricht abgelaufen oder nicht verfügbar</string>
     <string name="message_status_download_failed">Zum Wiederholen tippen</string>
+    <string name="message_status_download_failed_sim_has_no_data">Bereit zum Download über mobile Daten. Für weitere Informationen tippen.</string>
+    <string name="message_status_download_failed_sim_has_no_data_popup">Lege vor dem Herunterladen in den Einstellungen fest, dass \"%1$s\" statt \"%2$s\" verwendet werden soll</string>
     <string name="message_status_download_image">Bild mit %s</string>
     <string name="message_status_download_image_too_large">Bild zu groß zum Herunterladen</string>
     <string name="message_status_download_too_large">Nachricht zu groß</string>
@@ -585,12 +609,13 @@
     <string name="mms_phone_number_pref_title">Telefonnummer</string>
     <string name="mms_text">MMS</string>
     <string name="money_attachment_request_type_label">Forderung</string>
-    <string name="money_attachment_send_type_label">Zahlung</string>
+    <string name="money_attachment_send_type_label">Senden</string>
     <string name="more_string">+%1$d</string>
     <string name="multimedia_message">MMS</string>
     <string name="muted_conversation_content_description">Benachrichtigungen deaktiviert.</string>
     <string name="navigate_up_button_content_description">Nach oben</string>
     <string name="no_connection">Keine Verbindung</string>
+    <string name="no_google_account">Keines</string>
     <string name="no_preferred_sim_selected">Keine bevorzugte SIM für das Senden von SMS ausgewählt</string>
     <string name="no_reply_pinned_message_text">Absender unterstützt keine Antworten</string>
     <string name="no_sim_message">Keine Nachrichten auf der SIM-Karte</string>
@@ -603,7 +628,7 @@
     <string name="notification_separator">"  "</string>
     <string name="notification_sound_pref_title">Benachrichtigungston</string>
     <string name="notification_space_separator">"  "</string>
-    <string name="notification_subject" formatted="false">%s%s</string>
+    <string name="notification_subject">%1$s%2$s</string>
     <string name="notification_ticker_separator">": "</string>
     <string name="notification_urgent_message">[DRINGEND]</string>
     <string name="notification_vcard">Kontaktkarte</string>
@@ -614,25 +639,36 @@
     <string name="notifications_pref_title">Benachrichtigungen</string>
     <string name="numeric_text_keyboard_toggle_button_content_description">Zwischen Text- und Zifferneingabe wechseln</string>
     <string name="one_on_one_conversation_created">Unterhaltung mit %s</string>
-    <string name="one_on_one_incoming_failed_message_prefix" formatted="false">Fehler bei Nachricht von %s: %s, %s. Zeit: %s.</string>
-    <string name="one_on_one_incoming_successful_message_prefix" formatted="false">Nachricht von %s: %s, %s. Zeit: %s.</string>
-    <string name="one_on_one_incoming_urgent_successful_message_prefix" formatted="false">Dringende Nachricht von %s: %s, %s. Zeit: %s.</string>
-    <string name="one_on_one_outgoing_draft_message_prefix" formatted="false">Nicht gesendete Nachricht an %s: %s, %s. Zeit: %s.</string>
-    <string name="one_on_one_outgoing_failed_message_prefix" formatted="false">Fehler bei Nachricht an %s: %s, %s. Zeit: %s.</string>
-    <string name="one_on_one_outgoing_not_yet_delivered_prefix" formatted="false">Noch nicht zugestellte Nachricht an %s: %s, %s. Zeit: %s.</string>
-    <string name="one_on_one_outgoing_sending_message_prefix" formatted="false">Nachricht wird gesendet an %s: %s, %s. Zeit: %s.</string>
-    <string name="one_on_one_outgoing_successful_message_prefix" formatted="false">Nachricht an %s: %s, %s. Zeit: %s.</string>
-    <string name="one_on_one_outgoing_urgent_successful_message_prefix" formatted="false">Dringende Nachricht an %s: %s, %s. Zeit: %s.</string>
-    <string name="outgoing_sender_content_description">Du hast eine Nachricht gesendet.</string>
+    <string name="one_on_one_incoming_failed_message_prefix">Fehler bei Nachricht von %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="one_on_one_incoming_successful_message_prefix">Nachricht von %1$s: %2$s, %3$s. Zeit: %3$s.</string>
+    <string name="one_on_one_incoming_urgent_successful_message_prefix">Dringende Nachricht von %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="one_on_one_outgoing_draft_message_prefix">Nicht gesendete Nachricht an %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="one_on_one_outgoing_failed_message_prefix">Fehler bei Nachricht an %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="one_on_one_outgoing_not_yet_delivered_prefix">Noch nicht zugestellte Nachricht an %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="one_on_one_outgoing_sending_message_prefix">Nachricht wird gesendet an %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="one_on_one_outgoing_successful_message_prefix">Nachricht an %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="one_on_one_outgoing_urgent_successful_message_prefix">Dringende Nachricht an %1$s: %2$s, %3$s. Zeit: %4$s.</string>
+    <string name="otp_copied_to_clipboard">Code wurde kopiert</string>
+    <string name="outgoing_sender_content_description">Meine Nachricht</string>
     <string name="outgoing_text_sender_content_description">Du hast Folgendes gesagt:</string>
-    <string name="p2p_conversation_suggestions_enabled_pref_summary">Antwortvorschläge anzeigen, wenn verfügbar</string>
+    <string name="p2p_conversation_suggestion_payment_request_action">Aktion für Zahlungsanforderung</string>
+    <string name="p2p_conversation_suggestion_payment_request_action_description">Anfordern</string>
+    <string name="p2p_conversation_suggestion_payment_request_action_description_no_amount">Geld anfordern</string>
+    <string name="p2p_conversation_suggestion_payment_send_action">Aktion zum Senden von Zahlungen</string>
+    <string name="p2p_conversation_suggestion_payment_send_action_description">Senden</string>
+    <string name="p2p_conversation_suggestion_payment_send_action_description_no_amount">Geld senden</string>
+    <string name="p2p_conversation_suggestion_share_location_text">Standort teilen</string>
+    <string name="p2p_conversation_suggestions_enabled_pref_summary">Vorschläge anzeigen, wenn verfügbar</string>
     <string name="p2p_conversation_suggestions_enabled_pref_summary_off">Aus</string>
-    <string name="p2p_conversation_suggestions_preference_info_text">Um Antwortvorschläge anzuzeigen, greift Google auf deine letzten Nachrichten zu, speichert sie aber nicht.</string>
+    <string name="p2p_conversation_suggestions_preference_info_text">Um Vorschläge anzuzeigen, greift Google auf deine letzten Nachrichten zu, speichert sie aber nicht.</string>
+    <string name="p2p_conversation_suggestions_preference_info_text_ondevice">Um Vorschläge anzuzeigen, greift die Funktion für intelligente Antworten auf deine letzten Nachrichten zu, speichert sie aber nicht. <a href="https://support.google.com/messages/?p=smart_reply">Weitere Informationen</a></string>
     <string name="p2p_conversation_suggestions_preference_title">Intelligente Antwort</string>
-    <string name="p2p_conversation_suggestions_tooltip_text">Spare Zeit und sende SMS mit intelligenten Antworten, einer Google-Funktion für Project Fi-Kunden. In den <u>Einstellungen</u> findest du weitere Informationen und kannst die Funktion deaktivieren.</string>
+    <string name="p2p_conversation_suggestions_tooltip_text">Mit intelligenten Antworten für Project Fi sparst du Zeit beim Schreiben von Textnachrichten. In den <u>Einstellungen</u> findest du weitere Informationen und kannst die Funktion jederzeit deaktivieren.</string>
+    <string name="p2p_conversation_suggestions_tooltip_text_ondevice">Mit intelligenten Antworten sparst du Zeit beim Schreiben von Textnachrichten. In den <u>Einstellungen</u> findest du weitere Informationen und kannst die Funktion deaktivieren.</string>
     <string name="p2p_conversation_suggestions_tooltip_title_text">SMS mit einem Tipp</string>
     <string name="paired_desktops_header_text">Angemeldete Computer</string>
     <string name="paired_desktops_last_connection_time">Zuletzt aktiv: %s</string>
+    <string name="paired_desktops_last_connection_time_unknown">unbekannt</string>
     <string name="participant_list_add">Personen hinzufügen</string>
     <string name="participant_list_leave">Gruppe verlassen</string>
     <string name="participant_list_title">Personen in dieser Unterhaltung</string>
@@ -662,10 +698,10 @@
     <string name="popup_dismiss_button_text">Schließen</string>
     <string name="posted_just_now">Gerade eben</string>
     <string name="posted_now">Jetzt</string>
-    <string name="posted_over_a_year" formatted="false">%s%s%s</string>
-    <string name="posted_this_week" formatted="false">%s%s%s</string>
-    <string name="posted_this_year" formatted="false">%s%s%s</string>
-    <string name="posted_yesterday" formatted="false">Gestern%s%s</string>
+    <string name="posted_over_a_year">%1$s%2$s%3$s</string>
+    <string name="posted_this_week">%1$s%2$s%3$s</string>
+    <string name="posted_this_year">%1$s%2$s%3$s</string>
+    <string name="posted_yesterday">Gestern%1$s%2$s</string>
     <string name="preferences_license_title">Open Source-Lizenzen</string>
     <string name="priority_high">Hoch</string>
     <string name="priority_label">"Priorität: "</string>
@@ -678,16 +714,19 @@
     <string name="qr_simplified_welcome_banner_url_text">Öffne &lt;b>%s&lt;/b> auf dem Computer</string>
     <string name="qr_success_text_view">Fertig!</string>
     <string name="qr_welcome_banner_url_text">Öffne auf dem Computer %s</string>
-    <string name="qr_welcome_bottom_text">Scanne mit deinem Smartphone den QR-Code auf dem Computerbildschirm</string>
+    <string name="qr_welcome_bottom_text">Scanne mit deinem Smartphone den QR-Code auf dem Computerbildschirm. Wenn du fortfährst, stimmst du damit den %1$s und der %2$s von Google zu.</string>
     <string name="qr_welcome_button_text">QR-Code scannen</string>
+    <string name="qr_welcome_privacy">Datenschutzerklärung</string>
+    <string name="qr_welcome_terms_of_service">Nutzungsbedingungen</string>
     <string name="rbm_block_confirmation_message">Du wirst bei Nachrichten von %s nicht mehr benachrichtigt. Die Unterhaltung wird archiviert.</string>
+    <string name="rbm_block_learn_more_text">Weitere Informationen</string>
     <string name="rbm_bot_not_supported_by_carrier">Dein Mobilfunkanbieter unterstützt Nachrichten von und an %s nicht.</string>
     <string name="rbm_bot_reply_learn_more_message">Weitere Informationen</string>
     <string name="rbm_bot_reply_not_available_tombstone_message">Nachrichten an und von %s sind im Moment nicht verfügbar.</string>
     <string name="rbm_bot_reply_turn_on_rcs_message">Aktivieren</string>
     <string name="rbm_bot_turned_off_from_preferences">Aktiviere Chatfunktionen, um Nachrichten an %s zu senden</string>
     <string name="rbm_payments_activity_name">Zahlungsübersicht</string>
-    <string name="rbm_payments_checkout">KASSE</string>
+    <string name="rbm_payments_checkout">ZUR KASSE</string>
     <string name="rbm_payments_completing_payment">ZAHLUNG WIRD ABGESCHLOSSEN</string>
     <string name="rbm_payments_completing_toast_text">Zahlung in Bearbeitung</string>
     <string name="rbm_payments_error_add_account_alert_message">Füge ein Google-Konto hinzu, um den Kauf abzuschließen</string>
@@ -699,7 +738,7 @@
     <string name="rbm_payments_error_check_status_expired_toast_message">Nicht mehr verfügbar</string>
     <string name="rbm_payments_error_check_status_no_connection_alert_message">Überprüfe deine WLAN- oder Datenverbindung und versuche es noch einmal</string>
     <string name="rbm_payments_error_check_status_no_connection_alert_title">Keine Internetverbindung</string>
-    <string name="rbm_payments_error_send_token_transaction_expired_alert_message">Diese Transaktion ist leider seit Kurzem abgelaufen</string>
+    <string name="rbm_payments_error_send_token_transaction_expired_alert_message">Entschuldigung, diese Transaktion ist vor Kurzem abgelaufen</string>
     <string name="rbm_payments_error_send_token_transaction_failed_alert_message">Überprüfe, ob die Zahlungsinformationen richtig eingegeben wurden. Wenn der Fehler weiterhin auftritt, versuche es mit einer anderen Zahlungsmethode oder wende dich an deine Bank.</string>
     <string name="rbm_payments_error_send_token_transaction_failed_alert_title">Zahlung konnte nicht verarbeitet werden</string>
     <string name="rbm_payments_receipt_title">Zahlungsbeleg</string>
@@ -709,6 +748,7 @@
     <string name="rbm_payments_summary_payment_method_title">Zahlungsmethode</string>
     <string name="rbm_payments_summary_total">Gesamt</string>
     <string name="rbm_payments_swipe_to_pay">ZUM BEZAHLEN WISCHEN</string>
+    <string name="rbm_payments_tap_to_pay">ZUM BEZAHLEN TIPPEN</string>
     <string name="rbm_payments_unexpected_error">Ein unerwarteter Fehler ist aufgetreten</string>
     <string name="rbm_verification_dialog_close_button_text">OK</string>
     <string name="rbm_verification_dialog_learn_more_link">Weitere Informationen</string>
@@ -720,6 +760,8 @@
     <string name="rcs_availability">RCS-Verfügbarkeit</string>
     <string name="rcs_default_sharing_method_title">Sicherungsformat zum Senden von Anhängen</string>
     <string name="rcs_group_conversation_created">Gruppenunterhaltung mit %s</string>
+    <string name="rcs_learn_more_text">Weitere Informationen</string>
+    <string name="rcs_learn_more_title">%1$s zu Chatfunktionen</string>
     <string name="rcs_message">Rich Communication Service-Nachricht</string>
     <string name="rcs_mobile_data_auto_download_carrier_format_entry">Standard (%1$s)</string>
     <string name="rcs_mobile_data_auto_download_limit_disable_entry_text">Deaktivieren</string>
@@ -769,9 +811,11 @@
     <string name="recipient_label">An</string>
     <string name="recording_end_announcement">Die Aufnahme wurde beendet.</string>
     <string name="recording_start_announcement">Wird aufgenommen.</string>
+    <string name="remove_account">Verbindung aufheben</string>
+    <string name="remove_account_content_description">Verbindung zum Google-Konto aufheben</string>
     <string name="reply_activity_title">Antworten</string>
-    <string name="report_person_delivered" formatted="false">Von %s empfangen: %s</string>
-    <string name="report_person_read" formatted="false">Von %s gelesen: %s</string>
+    <string name="report_person_delivered">Von %1$s empfangen: %2$s</string>
+    <string name="report_person_read">Von %1$s gelesen: %2$s</string>
     <string name="report_person_sent">Von %s nicht empfangen</string>
     <string name="report_spam_checkbox_title">Als Spam melden</string>
     <string name="report_spam_toast_title">Spam gemeldet</string>
@@ -789,8 +833,6 @@
     <string name="resize_service_notification_title_multiple_videos">%d Videos werden gesendet</string>
     <string name="resize_service_notification_title_single_photo">Foto wird gesendet</string>
     <string name="resize_service_notification_title_single_video">Video wird gesendet</string>
-    <string name="restore_default_apn">Standard-APN-Einstellungen werden wiederhergestellt</string>
-    <string name="restore_default_apn_completed">Zurücksetzen auf Standard-APN-Einstellungen abgeschlossen</string>
     <string name="retry_call_to_action">Wiederholen</string>
     <string name="save">Speichern</string>
     <string name="search_hint">Suche</string>
@@ -813,7 +855,6 @@
     <string name="send_button_xms_long_click_content_description">Betreff hinzufügen und als dringend kennzeichnen</string>
     <string name="send_message_failure">Nachricht konnte nicht gesendet werden</string>
     <string name="send_message_failure_airplane_mode">Der Flugmodus ist aktiviert. Wenn du ihn deaktivierst, kannst du die Nachricht senden.</string>
-    <string name="send_message_failure_no_data">Mobile Daten sind deaktiviert. Bitte überprüfe deine Einstellungen.</string>
     <string name="send_message_failure_no_sim">Du kannst die Nachricht nach Einlegen einer SIM-Karte senden</string>
     <string name="send_message_success">Nachricht gesendet</string>
     <string name="send_seen_report_rcs_summary">Andere können sehen, dass ich ihre Nachricht gelesen habe</string>
@@ -825,14 +866,13 @@
     <string name="set_as_default_sms_app_title">Schnell und einfach kommunizieren</string>
     <string name="set_message_priority_description">Als dringend kennzeichnen</string>
     <string name="set_rcs_mobile_data_auto_download_limit_title">Über mobile Daten empfangene Dateien automatisch herunterladen</string>
-    <string name="setting_fast_track_body">Die Chatfunktionen werden von Google bereitgestellt. Indem du fortfährst, stimmst du den %1$s zu.</string>
-    <string name="setting_fast_track_body_without_constellation">Indem du fortfährst, stimmst du den %1$s zu und erlaubst, dass Google deine Geräteinformationen bei deinem Mobilfunkanbieter überprüft.</string>
+    <string name="setting_fast_track_body">Wenn du fortfährst, stimmst du den %1$s und der %2$s zu.</string>
     <string name="settings_activity_title">Einstellungen</string>
-    <string name="settings_fast_track_dialog_title">Chatfunktionen aktivieren?</string>
-    <string name="settings_fast_track_dialog_title_without_constellation">Chatfunktionen von Google aktivieren?</string>
+    <string name="settings_fast_track_dialog_title">Chatfunktionen von Google aktivieren?</string>
     <string name="share_cancel">Abbrechen</string>
     <string name="share_intent_activity_label">Unterhaltung auswählen</string>
     <string name="share_intent_label">Messages</string>
+    <string name="share_location_prefix">%1$s Standort: %2$s</string>
     <string name="share_new_message">Neue Nachricht</string>
     <string name="share_typing_status_rcs_summary">Andere können sehen, dass ich gerade schreibe</string>
     <string name="share_typing_status_rcs_title">Anzeigen, dass ich gerade schreibe</string>
@@ -853,7 +893,6 @@
     <string name="sim_slot_identifier">SIM %d</string>
     <string name="sim_specific_settings">SIM \"%s\"</string>
     <string name="sim_storage_pref_title">Nachrichten auf SIM-Karte</string>
-    <string name="sms_apns_title">Zugriffspunktnamen</string>
     <string name="sms_broadcast_group_conversation_changed_to">Diese Unterhaltung ist jetzt eine Massen-SMS</string>
     <string name="sms_broadcast_group_conversation_created">Massen-SMS</string>
     <string name="sms_broadcast_group_conversation_details">"Jeder Empfänger erhält eine SMS von dir
@@ -937,6 +976,7 @@ Antworten werden in Einzelunterhaltungen angezeigt"</string>
     <string name="to_address_label">"An: "</string>
     <string name="toast_after_entered_phone_number_for_sending">Bereit. Zum erneuten Senden tippen.</string>
     <string name="toast_after_setting_default_sms_app">Messages als Standard-SMS-App festgelegt.</string>
+    <string name="tombstone_show_link_previews">Die Linkvorschau ist aktiviert.&lt;br />In den &lt;u>Einstellungen&lt;/u> findest du weitere Informationen und kannst die Funktion deaktivieren.</string>
     <string name="too_many_participants">Zu viele Teilnehmer in der Unterhaltung</string>
     <string name="top_contacts_grid_name">★</string>
     <string name="top_contacts_title">Wichtigste Kontakte</string>
@@ -948,13 +988,12 @@ Antworten werden in Einzelunterhaltungen angezeigt"</string>
     <string name="unknown_phone_number_pref_display_value">Unbekannt</string>
     <string name="unknown_ringtone_pref_display_value">Unbekannt</string>
     <string name="unknown_sim_question_mark">\?</string>
-    <string name="untitled_apn">Unbenannt</string>
     <string name="update_destination_blocked">Blockiert</string>
     <string name="update_destination_unblocked">Blockierung aufgehoben</string>
     <string name="urgent_incoming_sender_content_description">Dringende Nachricht von %s</string>
     <string name="urgent_incoming_text_sender_content_description">Hat %s dringend mitgeteilt</string>
     <string name="urgent_indicator">[ Dringend! ]</string>
-    <string name="urgent_outgoing_sender_content_description">Du hast eine dringende Nachricht gesendet</string>
+    <string name="urgent_outgoing_sender_content_description">Meine dringende Nachricht</string>
     <string name="urgent_outgoing_text_sender_content_description">Hast du dringend mitgeteilt</string>
     <string name="urgent_snippet">[DRINGEND]</string>
     <string name="urgent_with_c2o">DRINGEND</string>
@@ -1012,7 +1051,7 @@ Antworten werden in Einzelunterhaltungen angezeigt"</string>
     <string name="verizon_sms_user_data_size_error">Fehler bei der Nutzerdatengröße</string>
     <string name="verizon_sms_waiting_for_tl_ack">Warten auf Transport-Layer-Bestätigung</string>
     <string name="video_attachment_content_description">Videoanhang</string>
-    <string name="video_attachment_limit_exceeded_when_sending">Pro Nachricht kann nur ein Video gesendet werden. Bitte entferne überzählige Videos und versuche es erneut.</string>
+    <string name="video_attachment_limit_exceeded_when_sending">Pro Nachricht kann nur ein Video gesendet werden. Bitte entferne überzählige Videos und versuche es noch mal.</string>
     <string name="video_thumbnail_view_play_button_content_description">Video abspielen</string>
     <string name="view_more_conversations">Weitere Unterhaltungen anzeigen</string>
     <string name="view_more_messages">Weitere Nachrichten ansehen</string>
