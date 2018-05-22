@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.calendar.timely.TimelineRecyclerView android:id="@id/timely_list" android:background="@color/timely_background_color" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="0.0dip" />
+        <com.google.android.calendar.timely.TimelyDayViewPager android:id="@id/timely_day_view_pager" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include layout="@layout/mini_month" />
+    </FrameLayout>
+</FrameLayout>

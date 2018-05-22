@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/date_picker_button" android:background="?android:selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/date_picker_content" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="start|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="@dimen/action_bar_height" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/actionbar_title_text_size" android:textColor="@color/actionbar_title_text_color" android:gravity="bottom" android:id="@id/date_picker_text_view" android:layout_width="wrap_content" android:layout_height="@dimen/action_bar_height_half" />
+                <com.google.android.calendar.common.view.AutoResizeTextView android:textSize="@dimen/actionbar_title_alternate_month_range_text_size" android:textColor="@color/actionbar_title_text_color" android:gravity="top" android:id="@id/date_picker_alt_month_name" android:layout_width="wrap_content" android:layout_height="@dimen/action_bar_height_half" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/date_picker_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_arrow_drop_down_black_24" android:alpha="@dimen/quantum_grey600_opacity" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/secondary_date_picker_content" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.0">
+            <LinearLayout android:gravity="start|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="@dimen/action_bar_height" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/actionbar_title_text_size" android:textColor="@color/actionbar_title_text_color" android:gravity="bottom" android:id="@id/secondary_date_picker_text_view" android:layout_width="wrap_content" android:layout_height="@dimen/action_bar_height_half" />
+                <com.google.android.calendar.common.view.AutoResizeTextView android:textSize="@dimen/actionbar_title_alternate_month_range_text_size" android:textColor="@color/actionbar_title_text_color" android:gravity="top" android:id="@id/secondary_date_picker_alt_month_name" android:layout_width="wrap_content" android:layout_height="@dimen/action_bar_height_half" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_arrow_drop_down_black_24" android:alpha="@dimen/quantum_grey600_opacity" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

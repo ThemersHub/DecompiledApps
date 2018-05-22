@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/room_tile_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Tile.TwoLine.First" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/second_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
+        <ImageView android:id="@id/capacity_badge" android:layout_width="16.0dip" android:layout_height="16.0dip" />
+        <TextView android:id="@id/capacity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="2.0dip" android:layout_marginEnd="2.0dip" style="@style/RoomTile.SecondaryText" />
+        <include android:id="@id/video" layout="@layout/room_tile_feature_icon" />
+        <include android:id="@id/audio" layout="@layout/room_tile_feature_icon" />
+        <TextView android:id="@id/location_separator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/room_tile_info_separator" android:layout_marginStart="2.0dip" android:layout_marginEnd="2.0dip" style="@style/RoomTile.SecondaryText" />
+        <TextView android:ellipsize="end" android:id="@id/location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="0.0dip" style="@style/TileText.TwoPart.Second" />
+    </LinearLayout>
+</LinearLayout>

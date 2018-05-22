@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.calendar.newapi.segment.time.EventTimeEditSegment android:contentDescription="@string/describe_date_icon" style="@style/NewEditSegmentLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/newapi_start_allday_feature" />
+            <com.google.android.calendar.tiles.view.TextTileView android:id="@id/end_date_tile" app:tile_treat_as_button="true" app:tile_indent_layout="true" app:tile_right_action_layout="@layout/tile_right_action_button" style="@style/Tile.TwoLine" />
+            <com.google.android.calendar.tiles.view.TextTileView android:id="@id/end_time_unspecified_tile" android:visibility="gone" app:tile_treat_as_button="true" app:tile_indent_layout="true" app:tile_primary_text="@string/edit_when_add_end_time" style="@style/Tile.TwoLine" />
+            <com.google.android.calendar.tiles.view.TextTileView android:id="@id/more_options_tile" android:visibility="gone" app:tile_treat_as_button="true" app:tile_indent_layout="true" app:tile_primary_text="@string/more_options" style="@style/Tile.TwoLine" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.calendar.newapi.segment.time.EventTimeEditSegment>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/custom_notification_dialog_title" style="@style/Edit.Text.CustomNotification.Title" />
+    <ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/custom_notification_interval_text_vertical_padding" android:paddingTop="@dimen/custom_notification_interval_text_horizontal_padding" android:paddingRight="@dimen/custom_notification_interval_text_vertical_padding" android:paddingBottom="@dimen/custom_notification_interval_text_horizontal_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/custom_notification_interval_text_vertical_padding" android:paddingEnd="@dimen/custom_notification_interval_text_vertical_padding">
+                <EditText android:textSize="@dimen/edit_text_size" android:textColor="@color/quantum_googblue" android:id="@id/interval" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="2" android:singleLine="true" android:selectAllOnFocus="true" android:maxLength="3" android:inputType="number" />
+                <TextView android:id="@id/interval_error_text" android:paddingTop="@dimen/custom_notification_error_top_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/custom_notification_dialog_edit_text_error_message" style="@style/EditTextInputErrorLabel" />
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="4.0dip" />
+            <include android:id="@id/minutes" layout="@layout/custom_notification_item" />
+            <include android:id="@id/hours" layout="@layout/custom_notification_item" />
+            <include android:id="@id/days" layout="@layout/custom_notification_item" />
+            <include android:id="@id/weeks" layout="@layout/custom_notification_item" />
+            <View android:layout_width="fill_parent" android:layout_height="4.0dip" />
+            <View android:id="@id/unit_divider" android:layout_width="fill_parent" style="@style/Edit.Divider" />
+            <TextView android:id="@id/time" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Edit.Text.CustomNotification.Blue" />
+            <View android:id="@id/time_divider" android:layout_width="fill_parent" style="@style/Edit.Divider" />
+            <LinearLayout android:orientation="vertical" android:id="@id/notification_methods_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                <include android:id="@id/as_notification" layout="@layout/custom_notification_item" />
+                <include android:id="@id/as_email" layout="@layout/custom_notification_item" />
+                <View android:layout_width="fill_parent" android:layout_height="4.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <View android:layout_width="fill_parent" style="@style/Edit.Divider" />
+    <TextView android:id="@id/done" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/action_done" style="@style/Edit.Text.DoneButton" />
+</LinearLayout>

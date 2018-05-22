@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/GrooveOuterFrame"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/schedule_background_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/background_image_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/inset_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/back_button" />
+            <com.google.android.calendar.utils.viewpager.DisablableViewPager android:id="@id/view_pager" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

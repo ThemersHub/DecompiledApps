@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/timely_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/FindTimeGridFragmentToolbarV21">
+            <include layout="@layout/find_time_grid_toolbar" />
+        </android.support.v7.widget.Toolbar>
+        <LinearLayout android:orientation="horizontal" android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/find_time_grid_slab_base_height">
+            <LinearLayout android:orientation="vertical" android:layout_width="@dimen/min_hours_width" android:layout_height="fill_parent">
+                <com.google.android.calendar.timely.gridviews.allday.AllDayHeaderArrow android:id="@id/find_time_header_arrow" android:layout_width="fill_parent" android:layout_height="0.0dip" app:draw_month_label="false">
+                    <ImageView android:id="@id/arrow_view" android:background="@drawable/quantum_ic_expand_more_grey600_24" android:layout_width="wrap_content" android:layout_height="@dimen/allday_arrow_size" />
+                </com.google.android.calendar.timely.gridviews.allday.AllDayHeaderArrow>
+                <include layout="@layout/line_separator_horizontal" />
+                <com.google.android.calendar.timely.PagedScrollView android:id="@id/hours_scroll" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="noHideDescendants">
+                    <com.google.android.calendar.timely.gridviews.GridHourView android:layout_width="fill_parent" android:layout_height="wrap_content" app:text_size="@dimen/find_time_grid_hours_text_size" />
+                </com.google.android.calendar.timely.PagedScrollView>
+            </LinearLayout>
+            <include layout="@layout/line_separator_vertical" />
+            <com.google.android.calendar.timely.gridviews.scroll.HorizontalScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <com.google.android.calendar.timely.gridviews.attendees.AttendeeInfoLayout android:id="@id/attendee_info" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.google.android.calendar.timely.gridviews.allday.AttendeeAllDayHeaderView android:id="@id/all_day_grid" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                    </ScrollView>
+                    <include layout="@layout/line_separator_horizontal" />
+                    <com.google.android.calendar.timely.PagedScrollView android:id="@id/main_grid" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <com.google.android.calendar.timely.gridviews.FindTimeGridViewFrame android:id="@id/attendee_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" app:draw_hours="false" app:indicate_today="false">
+                            <include android:id="@id/suggestion_day_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/find_time_day_content" />
+                        </com.google.android.calendar.timely.gridviews.FindTimeGridViewFrame>
+                    </com.google.android.calendar.timely.PagedScrollView>
+                </LinearLayout>
+            </com.google.android.calendar.timely.gridviews.scroll.HorizontalScrollView>
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.calendar.timely.FindTimeGridViewPager android:layout_gravity="bottom" android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="1.0px" android:importantForAccessibility="no" />
+</FrameLayout>

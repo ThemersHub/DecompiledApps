@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/timely_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/search_no_events_text_size" android:textColor="@color/material_grey_600" android:gravity="center" android:id="@id/no_result_label" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_results_events_and_reminders" />
+            <android.support.v7.widget.RecyclerView android:id="@id/search_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+</LinearLayout>

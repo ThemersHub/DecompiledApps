@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/tile" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/medium_tile_min_height">
+        <ImageView android:layout_gravity="start|center" android:id="@id/group_image" android:layout_width="@dimen/tile_avatar_size" android:layout_height="@dimen/tile_avatar_size" android:layout_marginLeft="@dimen/first_keyline" android:layout_marginStart="@dimen/first_keyline" />
+        <LinearLayout android:layout_gravity="start|center" android:orientation="vertical" android:id="@id/text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/second_keyline" android:layout_marginRight="@dimen/first_keyline" android:layout_marginStart="@dimen/second_keyline" android:layout_marginEnd="@dimen/first_keyline">
+            <TextView android:textSize="@dimen/drawer_text_size" android:textColor="@color/drawer_account_text_color" android:ellipsize="marquee" android:id="@id/group_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:textAlignment="viewStart" />
+            <TextView android:textSize="@dimen/drawer_text_size" android:textColor="@color/drawer_account_text_color" android:id="@id/sync_state_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="start|center" android:id="@id/sync_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tile_horizontal_margin_3rd_item" android:src="@drawable/quantum_ic_sync_disabled_grey600_24" android:layout_marginStart="@dimen/tile_horizontal_margin_3rd_item" />
+        <ImageButton android:layout_gravity="start|center" android:id="@id/resync" android:background="@drawable/quantum_ic_refresh_grey600_24" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="@dimen/tile_horizontal_margin_3rd_item" android:layout_marginStart="@dimen/tile_horizontal_margin_3rd_item" />
+    </FrameLayout>
+</FrameLayout>
