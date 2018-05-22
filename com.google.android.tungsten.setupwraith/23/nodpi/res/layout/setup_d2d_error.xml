@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="bottom" android:background="@drawable/bootstrap_bg_chin" android:layout_width="fill_parent" android:layout_height="@dimen/bootstrap_bg_chin_height" />
+    <GridLayout android:orientation="horizontal" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:columnCount="3">
+        <Space android:layout_width="@dimen/bootstrap_blank_column_width" android:layout_height="@dimen/bootstrap_title_height" android:layout_column="0" />
+        <TextView android:textAppearance="@style/BootstrapTitle" android:gravity="bottom|center" android:id="@id/title" android:layout_width="@dimen/bootstrap_title_width" android:layout_height="@dimen/bootstrap_title_height" android:layout_column="1" android:text="@string/bootstrap_error_title" android:maxLines="2" android:lineSpacingExtra="10.0sp" />
+        <TextView android:textAppearance="@style/BootstrapSubTitle" android:gravity="center|top" android:id="@id/subtitle" android:paddingTop="@dimen/bootstrap_subtitle_padding_top" android:layout_width="@dimen/bootstrap_title_width" android:layout_height="@dimen/bootstrap_subtitle_height" android:layout_column="1" android:text="@string/bootstrap_error_description" />
+        <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/error_icon" android:background="@drawable/d2d_error_icon" android:layout_width="@dimen/bootstrap_error_icon_width" android:layout_height="@dimen/bootstrap_error_icon_height" android:layout_column="1" />
+    </GridLayout>
+    <FrameLayout android:layout_gravity="bottom|center" android:paddingBottom="@dimen/bootstrap_button_keyline_bottom" android:clipChildren="false" android:clipToPadding="false" android:layout_width="@dimen/bootstrap_title_width" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/BootstrapButton" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/button_error" android:background="@drawable/list_item_background" android:paddingTop="@dimen/bootstrap_button_padding_top" android:paddingBottom="@dimen/bootstrap_button_padding_bottom" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bootstrap_error_button" android:paddingStart="@dimen/bootstrap_button_padding_start" android:paddingEnd="@dimen/bootstrap_button_padding_end" />
+    </FrameLayout>
+</FrameLayout>
