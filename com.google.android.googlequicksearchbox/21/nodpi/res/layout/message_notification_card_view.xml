@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/message_notification_card_view" android:background="@drawable/message_notification_card_background" android:padding="@dimen/message_notification_card_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/message_notification_card_normal_text_size" android:id="@id/sender_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <TextView android:textSize="@dimen/message_notification_card_normal_text_size" android:gravity="top" android:id="@id/incoming_message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/sender_name" />
+    <EditText android:textColor="@android:color/black" android:textColorHint="@color/message_notification_input_text_hint" android:gravity="top" android:id="@id/edit_reply_message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/read_notification_edit_message_hint" android:layout_below="@id/sender_name" android:inputType="text" />
+    <TextView android:textSize="@dimen/message_notification_card_normal_text_size" android:gravity="top" android:id="@id/reply_sent_message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/sender_name" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:textSize="@dimen/message_notification_card_small_text_size" android:id="@id/app_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true" />
+        <Button android:textSize="@dimen/message_notification_card_normal_text_size" android:id="@id/reply_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/read_notification_reply_btn" android:layout_alignParentEnd="true" />
+        <Button android:textSize="@dimen/message_notification_card_normal_text_size" android:id="@id/skip_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/read_notification_skip_btn" android:layout_toStartOf="@id/reply_btn" />
+        <Button android:textSize="@dimen/message_notification_card_normal_text_size" android:id="@id/send_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/read_notification_send_btn" android:layout_alignParentEnd="true" />
+        <Button android:textSize="@dimen/message_notification_card_normal_text_size" android:id="@id/cancel_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/read_notification_cancel_btn" android:layout_toStartOf="@id/send_btn" />
+    </RelativeLayout>
+</RelativeLayout>

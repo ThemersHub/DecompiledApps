@@ -209,6 +209,10 @@
         <item name="dialogPreferenceStyle">@style/AssistantSettingsDialogPreference</item>
         <item name="editTextPreferenceStyle">@style/AssistantEditTextPreference</item>
         <item name="dropdownPreferenceStyle">@style/AssistantSettingsDropDownPreference</item>
+        <item name="switchPreferenceCompatStyle">@style/AssistantSettingsSwitchPreference</item>
+    </style>
+    <style name="AssistantSettingsSwitchPreference" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="iconSpaceReserved">false</item>
     </style>
     <style name="AssistantTooltipText">
         <item name="android:textSize">14.0sp</item>
@@ -1202,7 +1206,7 @@
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_light</item>
         <item name="tooltipForegroundColor">@color/foreground_material_light</item>
         <item name="colorError">@color/error_color_material_dark</item>
-        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
+        <item name="viewInflaterClass">android.support.v7.app.AppCompatViewInflater</item>
     </style>
     <style name="Base.V7.Theme.AppCompat.Dialog" parent="@style/Base.Theme.AppCompat">
         <item name="android:colorBackground">?colorBackgroundFloating</item>
@@ -1343,7 +1347,7 @@
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_dark</item>
         <item name="tooltipForegroundColor">@color/foreground_material_dark</item>
         <item name="colorError">@color/error_color_material_light</item>
-        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
+        <item name="viewInflaterClass">android.support.v7.app.AppCompatViewInflater</item>
     </style>
     <style name="Base.V7.Theme.AppCompat.Light.Dialog" parent="@style/Base.Theme.AppCompat.Light">
         <item name="android:colorBackground">?colorBackgroundFloating</item>
@@ -3299,7 +3303,6 @@
         <item name="android:textSize">@dimen/quartz_80sdp</item>
         <item name="android:textColor">@color/quartz_text_color_primary</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:maxLines">2</item>
         <item name="lineSpacing">@dimen/quartz_100sdp</item>
     </style>
     <style name="KnowledgeGenericPropertyTitle" parent="@style/Quartz.Text.T12">
@@ -3311,6 +3314,13 @@
         <item name="android:textColor">@color/quartz_text_color_secondary</item>
         <item name="android:ellipsize">end</item>
         <item name="android:maxLines">2</item>
+    </style>
+    <style name="KnowledgeImageAttribution" parent="@style/Quartz.Text.T15">
+        <item name="android:textColor">@color/quartz_text_color_secondary</item>
+        <item name="android:shadowColor">@color/quartz_text_shadow</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">2.0</item>
+        <item name="android:shadowRadius">4.0</item>
     </style>
     <style name="KnowledgeSecondaryText" parent="@style/Quartz.Text.T6">
         <item name="android:textColor">@color/quartz_text_color_secondary</item>
@@ -3424,7 +3434,6 @@
         <item name="android:textSize">12.0sp</item>
         <item name="android:textColor">#ffffffff</item>
         <item name="android:fontFamily">Roboto</item>
-        <item name="android:paddingEnd">8.0dip</item>
     </style>
     <style name="MediaContactThumbnail">
         <item name="android:layout_width">24.0dip</item>
@@ -4166,8 +4175,8 @@
     </style>
     <style name="Quartz.Badge" parent="@style/Quartz.Text.T13">
         <item name="android:clipToPadding">true</item>
-        <item name="android:layout_width">@dimen/quartz_36sdp</item>
-        <item name="android:layout_height">@dimen/quartz_36sdp</item>
+        <item name="android:layout_width">@dimen/quartz_48sdp</item>
+        <item name="android:layout_height">@dimen/quartz_48sdp</item>
         <item name="android:color">@color/quantum_googblue500</item>
     </style>
     <style name="Quartz.Button" parent="@android:style/Widget.Button">
@@ -4222,6 +4231,38 @@
         <item name="android:fontFamily">@font/google_sans</item>
         <item name="fontFamily">@font/google_sans</item>
     </style>
+    <style name="Quartz.Fallbacks.Query" parent="@style/Quartz.Text.T8">
+        <item name="android:textColor">@color/quartz_grey_600</item>
+        <item name="android:ellipsize">start</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="fontFamily">@font/google_sans</item>
+    </style>
+    <style name="Quartz.Fallbacks.Suggestion" parent="@style/Widget.MaterialComponents.Chip.Action">
+        <item name="android:textAppearance">@style/Quartz.Fallbacks.Suggestion.Text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingLeft">@dimen/quartz_fallbacks_suggestion_bubble_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/quartz_fallbacks_suggestion_bubble_padding_vertical</item>
+        <item name="android:paddingRight">@dimen/quartz_fallbacks_suggestion_bubble_padding_horizontal</item>
+        <item name="android:paddingBottom">@dimen/quartz_fallbacks_suggestion_bubble_padding_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="rippleColor">@color/quartz_grey_900_8p</item>
+        <item name="chipBackgroundColor">@color/quantum_white_100</item>
+        <item name="chipCornerRadius">@dimen/quartz_fallbacks_suggestion_bubble_corner_radius</item>
+        <item name="chipStrokeColor">@color/quartz_grey_300</item>
+        <item name="chipStrokeWidth">@dimen/quartz_fallbacks_suggestion_bubble_stroke_thickness</item>
+    </style>
+    <style name="Quartz.Fallbacks.Suggestion.Text" parent="@style/Quartz.Text.T6">
+        <item name="android:textColor">@color/quartz_grey_800</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="lineSpacing">@dimen/quartz_text_line_height_10</item>
+    </style>
+    <style name="Quartz.Fallbacks.Title" parent="@style/Quartz.Text.T3">
+        <item name="android:textColor">@color/quartz_grey_900</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
     <style name="Quartz.Ganache.Home.Subtitle.WithImage" parent="@style/Quartz.Text.T12">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:ellipsize">end</item>
@@ -4267,6 +4308,7 @@
     </style>
     <style name="Quartz.HomeRecommended.List.Subtitle" parent="@style/Quartz.HomeRecommended.List.Text">
         <item name="android:gravity">top</item>
+        <item name="android:layout_width">0.0dip</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:maxLines">2</item>
     </style>
@@ -4331,48 +4373,12 @@
     <style name="Quartz.Media.Home.Title.Audio" parent="@style/Quartz.Text.T10">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:gravity">center_horizontal</item>
-        <item name="android:maxLines">1</item>
         <item name="android:fontFamily">@font/google_sans_medium</item>
         <item name="fontFamily">@font/google_sans_medium</item>
     </style>
     <style name="Quartz.Media.Home.Title.Video" parent="@style/Quartz.Text.T6">
         <item name="android:textColor">@color/quartz_grey_50</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:gravity">start</item>
-        <item name="android:maxLines">3</item>
-    </style>
-    <style name="Quartz.Noparse.Query" parent="@style/Quartz.Text.T8">
-        <item name="android:textColor">@color/quartz_grey_600</item>
-        <item name="android:ellipsize">start</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:fontFamily">@font/google_sans</item>
-        <item name="fontFamily">@font/google_sans</item>
-    </style>
-    <style name="Quartz.Noparse.Suggestion" parent="@style/Widget.MaterialComponents.Chip.Action">
-        <item name="android:textAppearance">@style/Quartz.Noparse.Suggestion.Text</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:paddingLeft">@dimen/quartz_noparse_suggestion_bubble_padding_horizontal</item>
-        <item name="android:paddingTop">@dimen/quartz_noparse_suggestion_bubble_padding_vertical</item>
-        <item name="android:paddingRight">@dimen/quartz_noparse_suggestion_bubble_padding_horizontal</item>
-        <item name="android:paddingBottom">@dimen/quartz_noparse_suggestion_bubble_padding_vertical</item>
-        <item name="android:singleLine">true</item>
-        <item name="rippleColor">@color/quartz_grey_900_8p</item>
-        <item name="chipBackgroundColor">@color/quantum_white_100</item>
-        <item name="chipCornerRadius">@dimen/quartz_noparse_suggestion_bubble_corner_radius</item>
-        <item name="chipStrokeColor">@color/quartz_grey_300</item>
-        <item name="chipStrokeWidth">@dimen/quartz_noparse_suggestion_bubble_stroke_thickness</item>
-    </style>
-    <style name="Quartz.Noparse.Suggestion.Text" parent="@style/Quartz.Text.T6">
-        <item name="android:textColor">@color/quartz_grey_800</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:maxLines">1</item>
-        <item name="lineSpacing">@dimen/quartz_text_line_height_10</item>
-    </style>
-    <style name="Quartz.Noparse.Title" parent="@style/Quartz.Text.T3">
-        <item name="android:textColor">@color/quartz_grey_900</item>
-        <item name="android:fontFamily">@font/google_sans_medium</item>
-        <item name="fontFamily">@font/google_sans_medium</item>
     </style>
     <style name="Quartz.Notification.CallToAction" parent="@style/Quartz.Text.T9">
         <item name="android:textColor">@color/quartz_blue_500</item>
@@ -4434,10 +4440,15 @@
         <item name="chipCornerRadius">@dimen/quartz_suggestion_chip_background_corner_radius</item>
         <item name="chipStrokeWidth">@dimen/quartz_suggestion_chip_background_stroke_width</item>
     </style>
+    <style name="Quartz.Suggestions.Suggestion.Photos" parent="@style/Quartz.Suggestions.Suggestion">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="chipBackgroundColor">@android:color/transparent</item>
+        <item name="chipStrokeColor">#4ddadce0</item>
+    </style>
     <style name="Quartz.Text" parent="@android:style/TextAppearance" />
     <style name="Quartz.Text.Ambient" parent="@style/Quartz.Text.T10">
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:shadowColor">@color/quartz_ambient_shadow</item>
+        <item name="android:shadowColor">@color/quartz_text_shadow</item>
         <item name="android:shadowDx">0.0</item>
         <item name="android:shadowDy">2.0</item>
         <item name="android:shadowRadius">2.0</item>
@@ -4449,7 +4460,7 @@
         <item name="android:gravity">end</item>
         <item name="android:padding">@dimen/quartz_16sdp</item>
         <item name="android:maxLines">3</item>
-        <item name="android:shadowColor">@color/quartz_ambient_shadow</item>
+        <item name="android:shadowColor">@color/quartz_text_shadow</item>
         <item name="android:shadowDx">0.0</item>
         <item name="android:shadowDy">2.0</item>
         <item name="android:shadowRadius">2.0</item>
@@ -4459,10 +4470,13 @@
     <style name="Quartz.Text.Ambient.Primary" parent="@style/Quartz.Text.Ambient">
         <item name="android:textSize">@dimen/quartz_text_size_1</item>
     </style>
+    <style name="Quartz.Text.Ambient.Primary.Reduced" parent="@style/Quartz.Text.Ambient.Primary">
+        <item name="android:textSize">@dimen/quartz_text_size_2</item>
+    </style>
     <style name="Quartz.Text.Ambient.Secondary" parent="@style/Quartz.Text.Ambient">
         <item name="android:textSize">@dimen/quartz_48sdp</item>
     </style>
-    <style name="Quartz.Text.AmbientScreen.BuildInfo" parent="@style/Quartz.Text.T15">
+    <style name="Quartz.Text.AmbientScreen.BuildInfo" parent="@style/Quartz.Text.T16">
         <item name="android:textColor">@color/quartz_white_80p</item>
         <item name="android:ellipsize">end</item>
         <item name="android:padding">10.0dip</item>
@@ -4575,6 +4589,10 @@
     </style>
     <style name="Quartz.Text.T15" parent="@style/Quartz.Text">
         <item name="android:textSize">@dimen/quartz_text_size_15</item>
+        <item name="android:textColor">@color/quartz_text_color_secondary</item>
+    </style>
+    <style name="Quartz.Text.T16" parent="@style/Quartz.Text">
+        <item name="android:textSize">@dimen/quartz_text_size_16</item>
         <item name="android:textColor">@color/quartz_text_color_secondary</item>
     </style>
     <style name="Quartz.Text.T2" parent="@style/Quartz.Text">
@@ -5601,6 +5619,10 @@
         <item name="textAllCaps">false</item>
         <item name="fontFamily">sans-serif</item>
     </style>
+    <style name="TextAppearance.GoogleMaterial.Caption.BackwardOverride" parent="@style/TextAppearance.GoogleMaterial.Caption">
+        <item name="android:textColor">@color/quantum_black_secondary_text</item>
+        <item name="android:letterSpacing">0.0</item>
+    </style>
     <style name="TextAppearance.GoogleMaterial.Chip.Assistive" parent="@style/TextAppearance.GoogleMaterial.Chip.Suggestive">
         <item name="android:textColor">@color/google_chip_assistive_text_color</item>
     </style>
@@ -5701,6 +5723,13 @@
         <item name="textAllCaps">false</item>
         <item name="fontFamily">@font/google_sans_medium</item>
     </style>
+    <style name="TextAppearance.GoogleMaterial.Subhead2.BackwardOverride" parent="@style/TextAppearance.GoogleMaterial.Subhead2">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
     <style name="TextAppearance.GoogleMaterial.Subtitle1" parent="@style/TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:textSize">16.0sp</item>
         <item name="android:textStyle">bold</item>
@@ -5714,6 +5743,11 @@
         <item name="android:letterSpacing">0.010714286</item>
         <item name="textAllCaps">false</item>
         <item name="fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial.Subtitle2.BackwardOverride" parent="@style/TextAppearance.GoogleMaterial.Subtitle2">
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="fontFamily">sans-serif</item>
     </style>
     <style name="TextAppearance.GoogleMaterial.SubtitleAlt1" parent="@style/TextAppearance.GoogleMaterial.Subhead1" />
     <style name="TextAppearance.GoogleMaterial.SubtitleAlt2" parent="@style/TextAppearance.GoogleMaterial.Subhead2" />
@@ -6027,6 +6061,11 @@
         <item name="windowNoTitle">true</item>
     </style>
     <style name="Theme.GoogleMaterial.Light" parent="@style/Base.Theme.GoogleMaterial.Light" />
+    <style name="Theme.GoogleMaterial.Light.BackwardOverride" parent="@style/Theme.GoogleMaterial.Light">
+        <item name="textAppearanceCaption">@style/TextAppearance.GoogleMaterial.Caption.BackwardOverride</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.GoogleMaterial.Subtitle2.BackwardOverride</item>
+        <item name="textAppearanceSubhead2">@style/TextAppearance.GoogleMaterial.Subhead2.BackwardOverride</item>
+    </style>
     <style name="Theme.GoogleMaterial.Light.BottomSheetDialog" parent="@style/Base.Theme.GoogleMaterial.Light.BottomSheetDialog" />
     <style name="Theme.GoogleMaterial.Light.Dialog" parent="@style/Base.Theme.GoogleMaterial.Light.Dialog" />
     <style name="Theme.GoogleMaterial.Light.Dialog.Alert" parent="@style/Base.Theme.GoogleMaterial.Light.Dialog.Alert" />
@@ -7032,6 +7071,12 @@
         <item name="cornerRadius">@dimen/mtrl_btn_corner_radius</item>
         <item name="backgroundTint">@color/mtrl_btn_bg_color_selector</item>
     </style>
+    <style name="Widget.MaterialComponents.Button.OutlinedButton" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="android:paddingLeft">@dimen/mtrl_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/mtrl_btn_padding_right</item>
+        <item name="strokeColor">@color/mtrl_btn_stroke_color_selector</item>
+        <item name="strokeWidth">@dimen/mtrl_btn_stroke_size</item>
+    </style>
     <style name="Widget.MaterialComponents.Button.TextButton" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.MaterialButton.Secondary</item>
         <item name="android:paddingLeft">@dimen/mtrl_btn_text_btn_padding_left</item>
@@ -7324,6 +7369,11 @@
     <style name="action_card_h2_medium_grey_immersive_actions" parent="@style/action_card_h2_immersive_actions">
         <item name="android:textColor">@color/immersive_actions_text_dynamic_medium_grey</item>
     </style>
+    <style name="action_card_h2_medium_grey_valyrian_immersive_actions" parent="@style/action_card_h2_immersive_actions">
+        <item name="android:textSize">24.0sp</item>
+        <item name="android:textColor">@color/valyrian_immersive_actions_text_dynamic_medium_grey</item>
+        <item name="android:fontFamily">google_sans_medium</item>
+    </style>
     <style name="action_card_h3" parent="@style/action_card_text">
         <item name="android:textSize">14.0sp</item>
         <item name="android:textColor">@color/action_card_light_grey</item>
@@ -7335,6 +7385,11 @@
     </style>
     <style name="action_card_h3_medium_grey" parent="@style/action_card_h3">
         <item name="android:textColor">@color/action_card_medium_grey</item>
+    </style>
+    <style name="action_card_h3_valyrian_immersive_actions" parent="@style/immersive_action_card_text">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/valyrian_immersive_actions_text_dynamic_medium_grey</item>
+        <item name="android:fontFamily">google_sans_medium</item>
     </style>
     <style name="action_card_h4" parent="@style/action_card_text">
         <item name="android:textSize">12.0sp</item>
@@ -7376,6 +7431,16 @@
         <item name="android:layout_marginStart">@dimen/action_card_horizontal_margin</item>
         <item name="android:layout_marginEnd">@dimen/action_card_horizontal_margin</item>
         <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="action_card_time_subtext_valyrian_immersive_actions" parent="@style/immersive_action_card_text">
+        <item name="android:textSize">28.0sp</item>
+        <item name="android:textColor">@color/valyrian_immersive_actions_text_dynamic_medium_grey</item>
+        <item name="android:fontFamily">google_sans_medium</item>
+    </style>
+    <style name="action_card_time_valyrian_immersive_actions" parent="@style/immersive_action_card_text">
+        <item name="android:textSize">64.0sp</item>
+        <item name="android:textColor">@color/valyrian_immersive_actions_text_dynamic_medium_grey</item>
+        <item name="android:fontFamily">google_sans_medium</item>
     </style>
     <style name="add_to_homescreen_explanation" parent="@style/quantum_text_body_1_black">
         <item name="android:textSize">12.0sp</item>
@@ -7483,11 +7548,8 @@
         <item name="android:textAlignment">viewStart</item>
     </style>
     <style name="card_footer_text">
-        <item name="android:textSize">12.0sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/google_blue600</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textAppearance">?textAppearanceSubhead2</item>
+        <item name="android:textColor">?colorSecondary</item>
     </style>
     <style name="closetActionStyle" parent="@style/Settings.ActionButton.Overflow">
         <item name="android:minWidth">@dimen/action_min_size</item>
@@ -7647,19 +7709,15 @@
         <item name="android:background">@color/eames_divider</item>
     </style>
     <style name="episode_subtitle">
-        <item name="android:textSize">12.0sp</item>
-        <item name="android:textColor">@color/quantum_black_secondary_text</item>
+        <item name="android:textAppearance">?textAppearanceCaption</item>
         <item name="android:ellipsize">end</item>
         <item name="android:maxLines">1</item>
-        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textDirection">locale</item>
     </style>
     <style name="episode_title">
-        <item name="android:textSize">14.0sp</item>
-        <item name="android:textColor">@color/quantum_black_text</item>
+        <item name="android:textAppearance">?textAppearanceSubtitle2</item>
         <item name="android:ellipsize">end</item>
         <item name="android:maxLines">1</item>
-        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textDirection">locale</item>
     </style>
     <style name="errorText" parent="@android:style/TextAppearance">
@@ -9137,7 +9195,9 @@
         <item name="scmImageMarginTop">8.0dip</item>
         <item name="scmImageStartMargin">8.0dip</item>
         <item name="scmImageWidth">64.0dip</item>
-        <item name="scmPaddingEnd">16.0dip</item>
+        <item name="scmPaddingBottom">0.0dip</item>
+        <item name="scmPaddingEnd">8.0dip</item>
+        <item name="scmPaddingTop">0.0dip</item>
     </style>
     <style name="small_content_module_article" parent="@style/small_content_module_default">
         <item name="scmImageHeight">@dimen/qp_small_content_module_story_image_size</item>

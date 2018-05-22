@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.apps.gsa.shared.ui.TouchInterceptingFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/quartz_anchor_module" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/quartz_home_anchor_module" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <HorizontalScrollView android:id="@id/quartz_home_scroll_view" android:scrollbars="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" android:paddingStart="@dimen/quartz_home_start_padding" android:paddingEnd="@dimen/quartz_home_end_padding">
-        <com.google.android.flexbox.FlexboxLayout android:id="@id/quartz_home_tiles" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:animateLayoutChanges="true" app:flexDirection="column" app:flexWrap="wrap" app:justifyContent="center" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <View android:id="@id/quartz_home_anchor_dummy" android:visibility="gone" android:layout_width="@dimen/quartz_home_anchor_padding" android:layout_height="fill_parent" />
+            <com.google.android.flexbox.FlexboxLayout android:id="@id/quartz_home_tiles" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:animateLayoutChanges="true" app:flexDirection="column" app:flexWrap="wrap" app:justifyContent="center" />
+        </LinearLayout>
     </HorizontalScrollView>
     <android.support.v7.widget.AppCompatImageButton android:layout_gravity="end|center|top" android:id="@id/quartz_home_mic_open_button" android:background="?android:selectableItemBackgroundBorderless" android:padding="@dimen/quartz_24sdp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_mic_grey600_48dp" android:alpha="0.8" />
     <FrameLayout android:id="@id/quartz_home_loading" android:layout_width="fill_parent" android:layout_height="fill_parent" />
