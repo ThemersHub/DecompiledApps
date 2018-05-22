@@ -173,7 +173,6 @@
     <string name="content_description_movie_image">%1$s 포스터</string>
     <string name="content_description_onboarding_welcome">%1$s에 오신 것을 환영합니다.</string>
     <string name="content_description_play_trailer">%1$s 예고편 재생</string>
-    <string name="content_description_quiz_header">좋아하는 유형을 알려주시면 콘텐츠를 추천해드리는 데 도움이 됩니다. 선택이 끝나면 화면 오른쪽 하단의 %1$s 버튼을 탭하세요.</string>
     <string name="content_description_remove_from_wishlist">관심 목록에 있는 %1$s을(를) 삭제하려면 탭하세요.</string>
     <string name="content_description_song_image">%1$s의 앨범아트</string>
     <string name="content_description_subtitles">자막</string>
@@ -191,6 +190,7 @@
     <string name="delete_show_from_device_dialog_message">&lt;b>%1$s&lt;/b>&lt;br>&lt;br>이 프로그램이 더 이상 이 기기에 표시되지 않습니다. 언제든지 Play 스토어에서 이 프로그램을 검색하여 다시 열 수 있습니다.</string>
     <string name="details">세부정보</string>
     <string name="details_4k">4K</string>
+    <string name="details_audio_languages">{number,plural, =1{오디오 언어}other{오디오 언어}}</string>
     <string name="details_available">이용 가능</string>
     <string name="details_distributor_tooltip">재생 시 사용할 앱 선택</string>
     <string name="details_hdr">HDR</string>
@@ -423,9 +423,9 @@
     <string name="lb_playback_controls_closed_captioning_enable">자막 사용 설정</string>
     <string name="lb_playback_controls_fast_forward">빨리 감기</string>
     <string name="lb_playback_controls_fast_forward_multiplier">%1$d배속 빨리 감기</string>
-    <string name="lb_playback_controls_hidden">미디어 컨트롤이 숨겨져 있습니다. 표시하려면 D-Pad를 누르세요.</string>
-    <string name="lb_playback_controls_high_quality_disable">고화질 사용 중지</string>
-    <string name="lb_playback_controls_high_quality_enable">고화질 사용 설정</string>
+    <string name="lb_playback_controls_hidden">미디어 컨트롤이 숨겨져 있습니다. 표시하려면 D패드를 누르세요.</string>
+    <string name="lb_playback_controls_high_quality_disable">고품질 사용 중지</string>
+    <string name="lb_playback_controls_high_quality_enable">고품질 사용 설정</string>
     <string name="lb_playback_controls_more_actions">추가 작업</string>
     <string name="lb_playback_controls_pause">일시중지</string>
     <string name="lb_playback_controls_picture_in_picture">PIP 모드 시작</string>
@@ -440,10 +440,10 @@
     <string name="lb_playback_controls_shuffle_enable">셔플 사용 설정</string>
     <string name="lb_playback_controls_skip_next">다음으로 건너뛰기</string>
     <string name="lb_playback_controls_skip_previous">이전으로 건너뛰기</string>
-    <string name="lb_playback_controls_thumb_down">비추천 선택 해제</string>
-    <string name="lb_playback_controls_thumb_down_outline">비추천 선택</string>
-    <string name="lb_playback_controls_thumb_up">추천 선택 해제</string>
-    <string name="lb_playback_controls_thumb_up_outline">추천 선택</string>
+    <string name="lb_playback_controls_thumb_down">싫어요 선택 해제</string>
+    <string name="lb_playback_controls_thumb_down_outline">싫어요 선택</string>
+    <string name="lb_playback_controls_thumb_up">좋아요 선택 해제</string>
+    <string name="lb_playback_controls_thumb_up_outline">좋아요 선택</string>
     <string name="lb_playback_time_separator">/</string>
     <string name="lb_search_bar_hint">검색</string>
     <string name="lb_search_bar_hint_speech">음성 검색</string>
@@ -503,15 +503,15 @@ Android 휴대전화나 태블릿을 사용하거나 Chromecast를 사용하여 
     <string name="mr_cast_button_connecting">전송 버튼. 연결 중</string>
     <string name="mr_cast_button_disconnected">전송 버튼. 연결 해제됨</string>
     <string name="mr_chooser_searching">기기를 찾는 중</string>
-    <string name="mr_chooser_title">전송할 기기</string>
+    <string name="mr_chooser_title">전송 대상</string>
     <string name="mr_controller_album_art">앨범아트</string>
     <string name="mr_controller_casting_screen">화면 전송 중</string>
     <string name="mr_controller_close_description">닫기</string>
     <string name="mr_controller_collapse_group">접기</string>
-    <string name="mr_controller_disconnect">연결 해제</string>
-    <string name="mr_controller_expand_group">펼치기</string>
-    <string name="mr_controller_no_info_available">정보가 없습니다.</string>
-    <string name="mr_controller_no_media_selected">선택한 미디어 없음</string>
+    <string name="mr_controller_disconnect">연결 끊기</string>
+    <string name="mr_controller_expand_group">확대</string>
+    <string name="mr_controller_no_info_available">사용할 수 있는 정보 없음</string>
+    <string name="mr_controller_no_media_selected">선택된 미디어 없음</string>
     <string name="mr_controller_pause">일시중지</string>
     <string name="mr_controller_play">재생</string>
     <string name="mr_controller_stop">중지</string>
@@ -556,9 +556,12 @@ Android 휴대전화나 태블릿을 사용하거나 Chromecast를 사용하여 
     <string name="orb_search_action">검색 작업</string>
     <string name="owned">소유함</string>
     <string name="pair_new_device_summary">여기를 탭하여 Roku 또는 스마트 TV의 설정을 완료하세요.</string>
+    <string name="pair_new_device_summary_overwrite">TV에서 설정을 시작하고 여기에서 완료하세요.</string>
     <string name="pair_new_device_title">TV 보기 사용</string>
+    <string name="pair_new_device_title_overwrite">Roku 또는 스마트 TV 설정 완료</string>
     <string name="pair_new_device_title_v2">Roku 또는 스마트 TV 설정</string>
     <string name="pairing_category_title">기기에 로그인</string>
+    <string name="pairing_category_title_overwrite">다른 기기에서 Play 무비/TV 사용</string>
     <string name="pairing_connect">연결</string>
     <string name="pairing_retry">다시 시도</string>
     <string name="pairing_title">기기에 로그인</string>
@@ -630,7 +633,7 @@ Android 휴대전화나 태블릿을 사용하거나 Chromecast를 사용하여 
     <string name="pref_captioning_foreground_opacity">텍스트 불투명도</string>
     <string name="pref_captioning_locale">언어</string>
     <string name="pref_captioning_override_system_settings_title">시스템 캡션 설정 재정의</string>
-    <string name="pref_captioning_preset">캡션 스타일</string>
+    <string name="pref_captioning_preset">자막 스타일</string>
     <string name="pref_captioning_preview_characters">Aa</string>
     <string name="pref_captioning_preview_text">자막이 다음과 같이 표시됩니다.</string>
     <string name="pref_captioning_standard_options_title">표준 옵션</string>
@@ -702,6 +705,8 @@ Android 휴대전화나 태블릿을 사용하거나 Chromecast를 사용하여 
     <string name="prepare_to_download">다운로드 준비중...</string>
     <string name="price_from">최저가: %1$s</string>
     <string name="primary_storage">내부 저장소</string>
+    <string name="primetime_module_dismiss">닫기</string>
+    <string name="primetime_promotional_banner_cta">쿠폰 사용</string>
     <string name="primetime_setup_account_selector_content_description">계정 선택기, 선택된 계정: %1$s</string>
     <string name="primetime_setup_distributor_deselected_accessibitiy">%1$s 선택되지 않음</string>
     <string name="primetime_setup_distributor_installed">설치됨</string>
@@ -729,18 +734,6 @@ Android 휴대전화나 태블릿을 사용하거나 Chromecast를 사용하여 
     <string name="problem_while_playing_with_code_restart">재생하는 동안 오류가 발생했습니다([%1$d]). 문제가 지속되면 기기를 다시 시작해 보세요.</string>
     <string name="problem_while_playing_with_code_restart_new">동영상을 재생하는 동안 오류가 발생했습니다(오류 %1$d). 동영상을 다시 재생하거나 기기를 다시 시작해 보세요.</string>
     <string name="producers_label">제작자</string>
-    <string name="quiz_content_description_removing_item">선택 목록에서 %1$s 삭제됨</string>
-    <string name="quiz_content_description_selected_item">%1$s 선택됨</string>
-    <string name="quiz_content_description_selecting_item">선택 목록에 %1$s 추가됨</string>
-    <string name="quiz_content_description_unselected_item">%1$s 선택되지 않음</string>
-    <string name="quiz_done_button">완료</string>
-    <string name="quiz_get_started_button">시작하기</string>
-    <string name="quiz_message">더 나은 맞춤 동영상을 추천하는 데 도움이 됩니다.</string>
-    <string name="quiz_title">좋아하는 장르 선택</string>
-    <string name="quiz_welcome_done_message">알려주신 선호 콘텐츠를 바탕으로 맞춤 추천 콘텐츠를 선정합니다.</string>
-    <string name="quiz_welcome_done_title">선호 콘텐츠 입력</string>
-    <string name="quiz_welcome_message">좋아하는 영화를 Google에 알려주시면 맞춤 추천 기능이 향상됩니다.</string>
-    <string name="quiz_welcome_title">맞춤 추천 받기</string>
     <string name="read_less">간략히</string>
     <string name="recent">New</string>
     <string name="recent_episodes">{number,plural, =1{최근 에피소드 1개}other{최근 에피소드 #개}}</string>
@@ -778,6 +771,10 @@ Android 휴대전화나 태블릿을 사용하거나 Chromecast를 사용하여 
     <string name="rental_period_expired">동영상의 대여 기간이 만료되었습니다.</string>
     <string name="rental_window_ending_soon_annotation">대여 쿠폰이 곧 종료됨</string>
     <string name="rental_window_ending_soon_notification_text">대여 쿠폰이 곧 종료됩니다.</string>
+    <string name="retail_mode_body">Play 무비 앱에서 수천 가지의 좋아하는 영화를 감상할 수 있습니다.</string>
+    <string name="retail_mode_body_with_tv">Play 무비/TV 앱에서 수천 가지의 좋아하는 영화와 TV 프로그램을 감상할 수 있습니다.</string>
+    <string name="retail_mode_title">데모 모드에서는 Google Play 무비를 사용할 수 없음</string>
+    <string name="retail_mode_title_with_tv">데모 모드에서는 Google Play 무비/TV를 사용할 수 없음</string>
     <string name="retry">재시도</string>
     <string name="review_percent">%1$d%%</string>
     <string name="reward_expire_notification_title">포인트가 곧 만료됨</string>
@@ -795,6 +792,7 @@ Android 휴대전화나 태블릿을 사용하거나 Chromecast를 사용하여 
     <string name="section_shows">내 TV 프로그램</string>
     <string name="section_vod">대여한 영화</string>
     <string name="section_wishlist">관심 목록</string>
+    <string name="see_less">간략히 보기</string>
     <string name="see_more">더보기</string>
     <string name="setting_save_error">설정을 저장할 수 없습니다.</string>
     <string name="setting_saving">설정 저장 중…</string>
@@ -858,7 +856,7 @@ Android 휴대전화나 태블릿을 사용하거나 Chromecast를 사용하여 
     <string name="talkback_unavailable_icon">현재는 사용할 수 없습니다</string>
     <string name="tap_to_retry">다시 시도하려면 탭하세요.</string>
     <string name="toggle_downloaded_only">다운로드 항목만 보기</string>
-    <string name="tooltip_description">평가할 항목을 길게 누르세요.</string>
+    <string name="tooltip_description">평가할 항목을 길게 터치하세요.</string>
     <string name="tooltip_dismiss">평점 제안 닫기</string>
     <string name="trailer">예고편</string>
     <string name="troubleshoot">문제해결</string>
@@ -915,7 +913,7 @@ Android 휴대전화나 태블릿을 사용하거나 Chromecast를 사용하여 
     <string name="vr_play_movie_button_text">재생</string>
     <string name="vr_redeem_gift">라이브러리에 추가</string>
     <string name="vr_screen_reposition_hint">드래그하여 화면을 움직이세요. 위쪽이나 아래쪽으로 스와이프하여 화면 크기를 변경할 수 있습니다.</string>
-    <string name="vr_search_screen_no_keyboard">키보드 앱이 설치되지 않았습니다.</string>
+    <string name="vr_search_screen_no_keyboard">최신 Daydream 키보드 앱을 설치해 주세요.</string>
     <string name="vr_search_screen_no_results">검색결과가 없습니다. 다시 시도하세요.</string>
     <string name="vr_standalone_no_account_message_text">계정을 찾을 수 없습니다. 계속하려면 계정에 로그인하세요.</string>
     <string name="vr_title_card_my_movies">내 영화</string>
@@ -966,7 +964,7 @@ Android 휴대전화나 태블릿을 사용하거나 Chromecast를 사용하여 
     <string name="welcome_title_movies_free">무료 영화 감상하기</string>
     <string name="welcome_title_no_application_name">시작하기</string>
     <string name="welcome_title_shows_free">무료 에피소드 감상하기</string>
-    <string name="welcome_update_needed_application">&lt;a href=%1$s>Play 스토어&lt;/a>에 방문하여 애플리케이션을 최선 버전으로 업데이트하세요.</string>
+    <string name="welcome_update_needed_application">&lt;a href=%1$s>Play 스토어&lt;/a>에서 애플리케이션을 최신 버전으로 업데이트하세요.</string>
     <string name="welcome_update_needed_device">기기에 설치된 시스템 소프트웨어 버전이 너무 오래되어 프리미엄 콘텐츠를 사용할 수 없습니다. 최신 버전으로 업데이트하세요.</string>
     <string name="whats_new">* 안정성 향상 및 버그 수정</string>
     <string name="whats_new_pacific_rim">* 앱 어디에서나 홈페이지, 라이브러리, 관심 목록으로 간편하게 이동할 수 있습니다.</string>

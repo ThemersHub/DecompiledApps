@@ -28,6 +28,7 @@
     <uses-feature android:name="android.hardware.wifi" android:required="false"/>
     <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
     <application android:backupAgent="com.google.android.apps.play.movies.common.service.backup.VideosBackupAgent" android:banner="@mipmap/pano_banner_movies" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher_videos" android:label="@string/long_app_name" android:largeHeap="true" android:name="com.google.android.apps.play.movies.tv.TvVideosApplication" android:restoreAnyVersion="true" android:restrictedAccountType="com.google" android:roundIcon="@mipmap/product_logo_play_movies_round_launcher_color_48" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity android:label="@string/application_name" android:name="com.google.android.apps.play.movies.common.activity.LauncherActivity" android:theme="@style/TvLauncherTheme">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -268,33 +269,31 @@
             <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/sync_adapter"/>
         </service>
         <provider android:authorities="com.google.android.videos.sync" android:exported="false" android:label="@string/sync_purchases_label" android:name="com.google.android.apps.play.movies.common.store.sync.SyncService$DummyContentProvider"/>
-        <service android:exported="false" android:name="com.google.android.apps.play.movies.common.service.drm.RefreshLicenseService"/>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.drm.RefreshLicenseTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
             <intent-filter>
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
         </service>
-        <receiver android:exported="true" android:name="com.google.android.apps.play.movies.common.service.drm.RefreshLicenseTaskService$Initializer">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
-            </intent-filter>
-        </receiver>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.pinning.UnpinnedCleanUpTaskService">
             <intent-filter>
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
         </service>
-        <service android:enabled="true" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.logging.FlushLogsTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+        <service android:enabled="true" android:exported="true" android:name="com.google.android.apps.play.movies.common.FlushLogsTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
             <intent-filter>
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
         </service>
-        <receiver android:exported="true" android:name="com.google.android.apps.play.movies.common.service.logging.FlushLogsTaskService$Initializer">
+        <receiver android:exported="true" android:name="com.google.android.apps.play.movies.common.FlushLogsTaskService$Initializer">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
+        <service android:enabled="true" android:exported="true" android:name="com.google.android.apps.play.movies.common.service.player.logging.QoePingService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.apps.play.movies.common.store.UpdateUserSentimentsTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
             <intent-filter>
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>

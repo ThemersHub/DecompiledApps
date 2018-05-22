@@ -173,7 +173,6 @@
     <string name="content_description_movie_image">Plakat za film %1$s</string>
     <string name="content_description_onboarding_welcome">Pozdravljeni v aplikaciji %1$s.</string>
     <string name="content_description_play_trailer">Predvajajte napovednik za %1$s</string>
-    <string name="content_description_quiz_header">Sporočite nam, kaj vam je všeč. Tako vam bomo lahko prikazovali boljša priporočila. Ko končate, se v spodnjem desnem kotu zaslona dotaknite gumba %1$s.</string>
     <string name="content_description_remove_from_wishlist">%1$s je na seznamu za ogled. Dotaknite se za odstranitev.</string>
     <string name="content_description_song_image">Slika albuma za skladbo %1$s</string>
     <string name="content_description_subtitles">Podnapisi</string>
@@ -191,12 +190,13 @@
     <string name="delete_show_from_device_dialog_message">&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Te oddaje ne bo več v vaši napravi. Poiščete jo lahko v Trgovini Play in jo kadar koli znova odprete.</string>
     <string name="details">Podrobnosti</string>
     <string name="details_4k">4K</string>
+    <string name="details_audio_languages">{number,plural, =1{Jezik zvoka}one{Jeziki zvoka}two{Jeziki zvoka}few{Jeziki zvoka}other{Jeziki zvoka}}</string>
     <string name="details_available">Na voljo</string>
     <string name="details_distributor_tooltip">Izberite, kje želite gledati</string>
     <string name="details_hdr">HDR</string>
     <string name="details_hide_episodes">Skrij</string>
     <string name="details_how_to_play">Navodila za predvajanje</string>
-    <string name="details_how_to_play_message">Vsebino lahko predvajate v &lt;a href=%1$s>podprtih napravah&lt;/a>.</string>
+    <string name="details_how_to_play_message">Vsebino lahko predvajate v &lt;a href=%1$s>podprtih napravah&lt;/a></string>
     <string name="details_install_app">Namesti aplikacijo %1$s</string>
     <string name="details_install_to_watch">Namestite za gledanje</string>
     <string name="details_install_to_watch_for_free">Namestite za brezplačno gledanje</string>
@@ -413,9 +413,9 @@
     <string name="latest_episodes_full">{number,plural, =1{1 najnovejša epizoda}one{# najnovejša epizoda}two{# najnovejši epizodi}few{# najnovejše epizode}other{# najnovejših epizod}}</string>
     <string name="lb_control_display_fast_forward_multiplier">%1$d-kratno</string>
     <string name="lb_control_display_rewind_multiplier">%1$d-kratno</string>
-    <string name="lb_guidedaction_continue_title">Naprej</string>
+    <string name="lb_guidedaction_continue_title">Nadaljuj</string>
     <string name="lb_guidedaction_finish_title">Dokončaj</string>
-    <string name="lb_media_player_error">Koda napake MediaPlayer %1$d dodatno %2$d</string>
+    <string name="lb_media_player_error">Koda napake MediaPlayerja: %1$d, dodatno %2$d</string>
     <string name="lb_navigation_menu_contentDescription">Meni za krmarjenje</string>
     <string name="lb_onboarding_accessibility_next">Naprej</string>
     <string name="lb_onboarding_get_started">ZAČNITE</string>
@@ -427,19 +427,19 @@
     <string name="lb_playback_controls_high_quality_disable">Onemogoči visoko kakovost</string>
     <string name="lb_playback_controls_high_quality_enable">Omogoči visoko kakovost</string>
     <string name="lb_playback_controls_more_actions">Več dejanj</string>
-    <string name="lb_playback_controls_pause">Zaustavi</string>
+    <string name="lb_playback_controls_pause">Začasno ustavi</string>
     <string name="lb_playback_controls_picture_in_picture">Vklop načina za sliko v sliki</string>
     <string name="lb_playback_controls_play">Predvajaj</string>
     <string name="lb_playback_controls_repeat_all">Ponovi vse</string>
-    <string name="lb_playback_controls_repeat_none">Ne ponovi</string>
+    <string name="lb_playback_controls_repeat_none">Brez ponavljanja</string>
     <string name="lb_playback_controls_repeat_one">Ponovi eno</string>
     <string name="lb_playback_controls_rewind">Previj nazaj</string>
     <string name="lb_playback_controls_rewind_multiplier">Previjanje nazaj – %1$d-kratno</string>
     <string name="lb_playback_controls_shown">Kontrolniki predstavnosti so prikazani</string>
     <string name="lb_playback_controls_shuffle_disable">Onemogoči naključno predvajanje</string>
     <string name="lb_playback_controls_shuffle_enable">Omogoči naključno predvajanje</string>
-    <string name="lb_playback_controls_skip_next">Preskoči naslednje</string>
-    <string name="lb_playback_controls_skip_previous">Preskoči prejšnje</string>
+    <string name="lb_playback_controls_skip_next">Preskoči na naslednjega</string>
+    <string name="lb_playback_controls_skip_previous">Preskoči na prejšnjega</string>
     <string name="lb_playback_controls_thumb_down">Prekliči izbor palca dol</string>
     <string name="lb_playback_controls_thumb_down_outline">Izberi palec dol</string>
     <string name="lb_playback_controls_thumb_up">Prekliči izbor palca gor</string>
@@ -448,7 +448,7 @@
     <string name="lb_search_bar_hint">Iskanje</string>
     <string name="lb_search_bar_hint_speech">Izgovorite iskalno poizvedbo</string>
     <string name="lb_search_bar_hint_with_title">Iskanje: %1$s</string>
-    <string name="lb_search_bar_hint_with_title_speech">Izgovorite poizvedbo za iskanje v storitvi %1$s</string>
+    <string name="lb_search_bar_hint_with_title_speech">Izgovorite poizvedbo za iskanje v %1$s</string>
     <string name="learn_more">Več o tem</string>
     <string name="less_like_this">Manj podobnih</string>
     <string name="less_like_this_acknowledged">Prikazali bomo manj podobnih</string>
@@ -505,15 +505,15 @@ Priljubljene filme in oddaje je mogoče takoj gledati v telefonu ali tabličnem 
     <string name="mr_chooser_searching">Iskanje naprav</string>
     <string name="mr_chooser_title">Predvajanje prek:</string>
     <string name="mr_controller_album_art">Naslovnica albuma</string>
-    <string name="mr_controller_casting_screen">Predvajanje zaslona</string>
+    <string name="mr_controller_casting_screen">Predvajanje vsebine zaslona</string>
     <string name="mr_controller_close_description">Zapri</string>
     <string name="mr_controller_collapse_group">Strni</string>
     <string name="mr_controller_disconnect">Prekini povezavo</string>
     <string name="mr_controller_expand_group">Razširi</string>
-    <string name="mr_controller_no_info_available">Podatki niso na voljo</string>
-    <string name="mr_controller_no_media_selected">Ni izbrane predstavnosti</string>
-    <string name="mr_controller_pause">Zaustavi</string>
-    <string name="mr_controller_play">Predvajanje</string>
+    <string name="mr_controller_no_info_available">Ni podatkov</string>
+    <string name="mr_controller_no_media_selected">Predstavnost ni izbrana</string>
+    <string name="mr_controller_pause">Začasno ustavi</string>
+    <string name="mr_controller_play">Predvajaj</string>
     <string name="mr_controller_stop">Ustavi</string>
     <string name="mr_controller_stop_casting">Ustavi predvajanje</string>
     <string name="mr_controller_volume_slider">Drsnik za glasnost</string>
@@ -556,9 +556,12 @@ Priljubljene filme in oddaje je mogoče takoj gledati v telefonu ali tabličnem 
     <string name="orb_search_action">Dejanje iskanja</string>
     <string name="owned">Že kupljeno</string>
     <string name="pair_new_device_summary">Dokončajte nastavitev naprave Roku ali pametnega TV-ja, tako da se dotaknete tu</string>
+    <string name="pair_new_device_summary_overwrite">Začnite nastavitev v televizorju in jo dokončajte tu</string>
     <string name="pair_new_device_title">Omogočanje gledanja televizije</string>
+    <string name="pair_new_device_title_overwrite">Dokončanje nastavitve naprave Roku ali pametnega televizorja</string>
     <string name="pair_new_device_title_v2">Nast. Rokuja ali pamet. TV-ja</string>
     <string name="pairing_category_title">Prijava v napravi</string>
+    <string name="pairing_category_title_overwrite">Uporaba Filmov in TV Google Play v drugi napravi</string>
     <string name="pairing_connect">Poveži</string>
     <string name="pairing_retry">Poskusi znova</string>
     <string name="pairing_title">Prijava v napravi</string>
@@ -702,6 +705,8 @@ Priljubljene filme in oddaje je mogoče takoj gledati v telefonu ali tabličnem 
     <string name="prepare_to_download">Priprava na prenos ...</string>
     <string name="price_from">Od %1$s</string>
     <string name="primary_storage">Notranja shramba</string>
+    <string name="primetime_module_dismiss">Opustitev</string>
+    <string name="primetime_promotional_banner_cta">Izkoristite ponudbo</string>
     <string name="primetime_setup_account_selector_content_description">Izbirnik računov, izbran račun: %1$s</string>
     <string name="primetime_setup_distributor_deselected_accessibitiy">%1$s, ni izbrano</string>
     <string name="primetime_setup_distributor_installed">Nameščeno</string>
@@ -729,18 +734,6 @@ Priljubljene filme in oddaje je mogoče takoj gledati v telefonu ali tabličnem 
     <string name="problem_while_playing_with_code_restart">Težava med predvajanjem [%1$d]. Če težave ne morete odpraviti, poskusite znova zagnati napravo.</string>
     <string name="problem_while_playing_with_code_restart_new">Težava pri predvajanju videoposnetka (napaka %1$d). Poskusite znova predvajati videoposnetek ali znova zagnati napravo.</string>
     <string name="producers_label">Producent:</string>
-    <string name="quiz_content_description_removing_item">Odstranjeno iz izbora: %1$s</string>
-    <string name="quiz_content_description_selected_item">Izbrano: %1$s</string>
-    <string name="quiz_content_description_selecting_item">Dodano v izbor: %1$s</string>
-    <string name="quiz_content_description_unselected_item">%1$s – ni izbrano</string>
-    <string name="quiz_done_button">Končano</string>
-    <string name="quiz_get_started_button">Začnite</string>
-    <string name="quiz_message">Tako vam bomo lahko prikazovali boljša priporočila</string>
-    <string name="quiz_title">Povejte nam, kaj vam je všeč</string>
-    <string name="quiz_welcome_done_message">Pripravili smo vam nekaj priporočil glede na to, kar ste dejali, da vam je všeč</string>
-    <string name="quiz_welcome_done_title">Priporočila vas že čakajo</string>
-    <string name="quiz_welcome_message">Več nam poveste o filmih, ki so vam všeč, boljša priporočila prejemate</string>
-    <string name="quiz_welcome_title">Prejemanje odličnih priporočil</string>
     <string name="read_less">Manj o tem</string>
     <string name="recent">Novo</string>
     <string name="recent_episodes">{number,plural, =1{1 nedavna epiz.}one{# nedavna epiz.}two{# nedavni epiz.}few{# nedavne epiz.}other{# nedavnih ep.}}</string>
@@ -778,8 +771,12 @@ Priljubljene filme in oddaje je mogoče takoj gledati v telefonu ali tabličnem 
     <string name="rental_period_expired">Čas za izposojo tega videoposnetka je potekel.</string>
     <string name="rental_window_ending_soon_annotation">Ponudba za izposojo se bo kmalu iztekla</string>
     <string name="rental_window_ending_soon_notification_text">Ponudba za izposojo se bo kmalu iztekla</string>
+    <string name="retail_mode_body">V aplikaciji Filmi Play je na voljo več tisoč priljubljenih filmov</string>
+    <string name="retail_mode_body_with_tv">V aplikaciji Filmi in TV Google Play je na voljo več tisoč priljubljenih filmov in TV-oddaj</string>
+    <string name="retail_mode_title">Filmi Google Play niso na voljo v predstavitvenem načinu</string>
+    <string name="retail_mode_title_with_tv">Filmi in TV Google Play niso na voljo v predstavitvenem načinu</string>
     <string name="retry">Znova</string>
-    <string name="review_percent">%1$d %%</string>
+    <string name="review_percent">%1$d%%</string>
     <string name="reward_expire_notification_title">Vaša nagrada bo potekla</string>
     <string name="scanning_text_primary">Iskanje naprav v bližini</string>
     <string name="scanning_text_secondary">Zvok televizorja ne sme biti izklopljen, da bo mogoče poslati kodo</string>
@@ -795,6 +792,7 @@ Priljubljene filme in oddaje je mogoče takoj gledati v telefonu ali tabličnem 
     <string name="section_shows">Moje TV-oddaje</string>
     <string name="section_vod">Moje izposoje</string>
     <string name="section_wishlist">Seznam za ogled</string>
+    <string name="see_less">Pokaži manj</string>
     <string name="see_more">Pokaži več</string>
     <string name="setting_save_error">Nastavitve ni bilo mogoče shraniti</string>
     <string name="setting_saving">Shranjevanje nastavitev ...</string>
@@ -915,7 +913,7 @@ Priljubljene filme in oddaje je mogoče takoj gledati v telefonu ali tabličnem 
     <string name="vr_play_movie_button_text">Predvaj.</string>
     <string name="vr_redeem_gift">Dodaj v knjižnico</string>
     <string name="vr_screen_reposition_hint">Povlecite, če želite premakniti zaslon. Povlecite navzgor/navzdol, če želite spremeniti velikost.</string>
-    <string name="vr_search_screen_no_keyboard">Aplikacija za tipkovnico ni nameščena.</string>
+    <string name="vr_search_screen_no_keyboard">Namestite najnovejšo Tipkovnico Daydream.</string>
     <string name="vr_search_screen_no_results">Ni rezultatov. Poskusite znova.</string>
     <string name="vr_standalone_no_account_message_text">Najden ni bil noben račun. Če želite nadaljevati, se prijavite v račun.</string>
     <string name="vr_title_card_my_movies">Moji Filmi</string>
@@ -966,7 +964,7 @@ Priljubljene filme in oddaje je mogoče takoj gledati v telefonu ali tabličnem 
     <string name="welcome_title_movies_free">Začnite z brezplačnimi filmi</string>
     <string name="welcome_title_no_application_name">Začnite</string>
     <string name="welcome_title_shows_free">Začnite z brezplačnimi epizodami</string>
-    <string name="welcome_update_needed_application">Posodobite aplikacijo na najnovejšo različico. To lahko naredite v &lt;a href=%1$s>trgovini Google Play&lt;/a>.</string>
+    <string name="welcome_update_needed_application">Posodobite aplikacijo na najnovejšo različico. To lahko naredite v &lt;a href=%1$s>Trgovini Google Play&lt;/a>.</string>
     <string name="welcome_update_needed_device">Plačljiva vsebina v tej napravi ni na voljo, ker je sistemska programska oprema, nameščena v napravi, prestara. Posodobite jo na najnovejšo različico.</string>
     <string name="whats_new">* Izboljšave stabilnosti in popravki napak</string>
     <string name="whats_new_pacific_rim">* Preprosto odpiranje začetne strani, knjižnice ali seznama za ogled od praktično povsod v aplikaciji</string>

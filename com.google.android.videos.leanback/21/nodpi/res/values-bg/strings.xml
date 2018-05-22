@@ -173,7 +173,6 @@
     <string name="content_description_movie_image">Плакат за „%1$s“</string>
     <string name="content_description_onboarding_welcome">Добре дошли в приложението %1$s</string>
     <string name="content_description_play_trailer">Пускане на трейлъра за „%1$s“</string>
-    <string name="content_description_quiz_header">Кажете ни какво харесвате. Това ще ни помогне да ви предоставяме по-добри препоръки. Когато сте готови, докоснете бутона „%1$s“ в долния десен ъгъл на екрана.</string>
     <string name="content_description_remove_from_wishlist">„%1$s“ е в списъка ви за гледане. Докоснете за премахв.</string>
     <string name="content_description_song_image">Обложка на „%1$s“</string>
     <string name="content_description_subtitles">Субтитри</string>
@@ -191,6 +190,7 @@
     <string name="delete_show_from_device_dialog_message">&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Това предаване вече няма да се показва на устройството. Може да го потърсите в Google Play Магазин и да го отворите отново по всяко време.</string>
     <string name="details">Подробности</string>
     <string name="details_4k">4K</string>
+    <string name="details_audio_languages">{number,plural, =1{Език на говора}other{Езици на говора}}</string>
     <string name="details_available">Налице</string>
     <string name="details_distributor_tooltip">Изберете къде да гледате</string>
     <string name="details_hdr">HDR</string>
@@ -291,7 +291,7 @@
     <string name="easy_auth_disallow_button">Не, благодаря</string>
     <string name="edge_type_default">По подразбиране</string>
     <string name="enabled">Активирано</string>
-    <string name="episode_number_title">%1$s. „%2$s“</string>
+    <string name="episode_number_title">%1$s. „%2$s“﻿</string>
     <string name="episodes_price_from">Епизоди от %1$s</string>
     <string name="error_attempting_to_reconnect">Прави се опит за повторно свързване (%1$s/%2$s)…</string>
     <string name="error_authenticating">Не можа да се удостовери.</string>
@@ -428,8 +428,8 @@
     <string name="lb_playback_controls_high_quality_enable">Активиране на високото качество</string>
     <string name="lb_playback_controls_more_actions">Още действия</string>
     <string name="lb_playback_controls_pause">Поставяне на пауза</string>
-    <string name="lb_playback_controls_picture_in_picture">Вход в режима „Картина в картината“</string>
-    <string name="lb_playback_controls_play">Пускане</string>
+    <string name="lb_playback_controls_picture_in_picture">Преминаване в режим „Картина в картината“</string>
+    <string name="lb_playback_controls_play">Възпроизвеждане</string>
     <string name="lb_playback_controls_repeat_all">Повтаряне на всички</string>
     <string name="lb_playback_controls_repeat_none">Без повтаряне</string>
     <string name="lb_playback_controls_repeat_one">Повтаряне на един елемент</string>
@@ -438,17 +438,17 @@
     <string name="lb_playback_controls_shown">Контролите за мултимедия са показани</string>
     <string name="lb_playback_controls_shuffle_disable">Деактивиране на разбъркването</string>
     <string name="lb_playback_controls_shuffle_enable">Активиране на разбъркването</string>
-    <string name="lb_playback_controls_skip_next">Напред към следващия елемент</string>
-    <string name="lb_playback_controls_skip_previous">Назад към предишния елемент</string>
-    <string name="lb_playback_controls_thumb_down">Премахване на избора от „Не ми харесва“</string>
+    <string name="lb_playback_controls_skip_next">Към следващия елемент</string>
+    <string name="lb_playback_controls_skip_previous">Към предишния елемент</string>
+    <string name="lb_playback_controls_thumb_down">Отмяна на „Не ми харесва“</string>
     <string name="lb_playback_controls_thumb_down_outline">Избиране на „Не ми харесва“</string>
-    <string name="lb_playback_controls_thumb_up">Премахване на избора от „Харесва ми“</string>
+    <string name="lb_playback_controls_thumb_up">Отмяна на „Харесва ми“</string>
     <string name="lb_playback_controls_thumb_up_outline">Избиране на „Харесва ми“</string>
     <string name="lb_playback_time_separator">/</string>
     <string name="lb_search_bar_hint">Търсете</string>
-    <string name="lb_search_bar_hint_speech">Говорете, за да търсите</string>
+    <string name="lb_search_bar_hint_speech">Търсете с глас</string>
     <string name="lb_search_bar_hint_with_title">Търсете в/ъв %1$s</string>
-    <string name="lb_search_bar_hint_with_title_speech">Говорете, за да търсите във: %1$s</string>
+    <string name="lb_search_bar_hint_with_title_speech">Търсете с глас в/ъв %1$s</string>
     <string name="learn_more">Научете повече</string>
     <string name="less_like_this">По-малко като това</string>
     <string name="less_like_this_acknowledged">Ще ви показваме по-малко като това</string>
@@ -500,7 +500,7 @@
     <string name="movie_extras">Допълнително съдържание</string>
     <string name="mr_button_content_description">Бутон за предаване</string>
     <string name="mr_cast_button_connected">Бутон за предаване. Установена е връзка</string>
-    <string name="mr_cast_button_connecting">Бутон за предаване. Свързва се</string>
+    <string name="mr_cast_button_connecting">Бутон за предаване. Установява се връзка</string>
     <string name="mr_cast_button_disconnected">Бутон за предаване. Връзката е прекратена</string>
     <string name="mr_chooser_searching">Търсят се устройства</string>
     <string name="mr_chooser_title">Предаване към</string>
@@ -513,7 +513,7 @@
     <string name="mr_controller_no_info_available">Няма налична информация</string>
     <string name="mr_controller_no_media_selected">Няма избрана мултимедия</string>
     <string name="mr_controller_pause">Поставяне на пауза</string>
-    <string name="mr_controller_play">Пускане</string>
+    <string name="mr_controller_play">Възпроизвеждане</string>
     <string name="mr_controller_stop">Спиране</string>
     <string name="mr_controller_stop_casting">Спиране на предаването</string>
     <string name="mr_controller_volume_slider">Плъзгач за силата на звука</string>
@@ -556,9 +556,12 @@
     <string name="orb_search_action">Действие за търсене</string>
     <string name="owned">Притежавано</string>
     <string name="pair_new_device_summary">Завършете настройването на у-вото си Roku/смарттелевизора си, като докоснете тук</string>
+    <string name="pair_new_device_summary_overwrite">Започнете настройването на телевизора си, след което го завършете тук</string>
     <string name="pair_new_device_title">Гледане на телевизия: Актив.</string>
+    <string name="pair_new_device_title_overwrite">Завършване на настройването на у-во Roku или смарттелевизор</string>
     <string name="pair_new_device_title_v2">У-во Roku/смарттелевизор: Настр.</string>
     <string name="pairing_category_title">Влизане в устройство</string>
+    <string name="pairing_category_title_overwrite">Използване на Play Филми и ТВ на друго устройство</string>
     <string name="pairing_connect">Свързване</string>
     <string name="pairing_retry">Нов опит</string>
     <string name="pairing_title">Влизане в устройство</string>
@@ -702,6 +705,8 @@
     <string name="prepare_to_download">Подготвя се за изтегляне…</string>
     <string name="price_from">От %1$s</string>
     <string name="primary_storage">Вътрешно хранилище</string>
+    <string name="primetime_module_dismiss">Отхвърляне</string>
+    <string name="primetime_promotional_banner_cta">Осребряване на офертата</string>
     <string name="primetime_setup_account_selector_content_description">Инструмент за избор на профили – избран профил: %1$s</string>
     <string name="primetime_setup_distributor_deselected_accessibitiy">неизбрано: %1$s</string>
     <string name="primetime_setup_distributor_installed">Инсталирани</string>
@@ -729,18 +734,6 @@
     <string name="problem_while_playing_with_code_restart">При възпроизвеждането възникна проблем [%1$d]. Ако той не се отстрани, опитайте да рестартирате устройството си.</string>
     <string name="problem_while_playing_with_code_restart_new">При възпроизвеждането на видеоклипа възникна проблем (грешка %1$d). Опитайте да го пуснете отново или рестартирайте устройството си.</string>
     <string name="producers_label">Продуцент</string>
-    <string name="quiz_content_description_removing_item">Премахнахте „%1$s“ от избраните елементи</string>
-    <string name="quiz_content_description_selected_item">Избрахте „%1$s“</string>
-    <string name="quiz_content_description_selecting_item">Добавихте „%1$s“ към избраните елементи</string>
-    <string name="quiz_content_description_unselected_item">Не сте избрали „%1$s“</string>
-    <string name="quiz_done_button">Готово</string>
-    <string name="quiz_get_started_button">Първи стъпки</string>
-    <string name="quiz_message">Това ще ни помогне да ви предоставяме по-добри препоръки</string>
-    <string name="quiz_title">Кажете ни какво харесвате</string>
-    <string name="quiz_welcome_done_message">Въз основа на това, което казахте, че харесвате, изготвихме някои препоръки</string>
-    <string name="quiz_welcome_done_title">Препоръките за вас ви очакват</string>
-    <string name="quiz_welcome_message">Колкото повече информация споделяте за филмите, които харесвате, толкова по-добри стават препоръките</string>
-    <string name="quiz_welcome_title">Получавайте отлични препоръки</string>
     <string name="read_less">Прочетете по-малко</string>
     <string name="recent">Нови</string>
     <string name="recent_episodes">{number,plural, =1{1 скорошен еп.}other{# скорошни еп.}}</string>
@@ -778,6 +771,10 @@
     <string name="rental_period_expired">Периодът на наема за този видеоклип изтече.</string>
     <string name="rental_window_ending_soon_annotation">Офертата за вземане под наем изтича скоро</string>
     <string name="rental_window_ending_soon_notification_text">Офертата за вземане под наем изтича скоро</string>
+    <string name="retail_mode_body">Приложението Play Филми е мястото, където ще откриете хиляди от любимите си филми</string>
+    <string name="retail_mode_body_with_tv">Приложението Google Play Филми и ТВ е мястото, където ще откриете хиляди от любимите си филми и телевизионни предавания</string>
+    <string name="retail_mode_title">Google Play Филми не е налице в демонстрационен режим</string>
+    <string name="retail_mode_title_with_tv">Google Play Филми и ТВ не е налице в демонстрационен режим</string>
     <string name="retry">Нов опит</string>
     <string name="review_percent">%1$d%%</string>
     <string name="reward_expire_notification_title">Наградата ви е на път да изтече</string>
@@ -795,6 +792,7 @@
     <string name="section_shows">Моите телевизионни предавания</string>
     <string name="section_vod">Наети от мен</string>
     <string name="section_wishlist">Списък за гледане</string>
+    <string name="see_less">Преглед на по-малко</string>
     <string name="see_more">Вижте още</string>
     <string name="setting_save_error">Настройката не можа да бъде запазена</string>
     <string name="setting_saving">Настройките се запазват…</string>
@@ -915,7 +913,7 @@
     <string name="vr_play_movie_button_text">Пускане</string>
     <string name="vr_redeem_gift">Добавяне към колекцията</string>
     <string name="vr_screen_reposition_hint">Плъзнете, за да преместите екрана. За да го преоразмерите, прекарайте пръст нагоре/надолу.</string>
-    <string name="vr_search_screen_no_keyboard">Приложението за клавиатура не е инсталирано.</string>
+    <string name="vr_search_screen_no_keyboard">Инстал. най-новата версия на Клавиатура за Daydream.</string>
     <string name="vr_search_screen_no_results">Няма резултати. Моля, опитайте отново.</string>
     <string name="vr_standalone_no_account_message_text">Няма намерен профил. За да продължите, влезте в профила си.</string>
     <string name="vr_title_card_my_movies">Моите филми</string>

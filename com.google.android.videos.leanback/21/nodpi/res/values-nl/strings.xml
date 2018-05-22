@@ -173,7 +173,6 @@
     <string name="content_description_movie_image">Poster voor %1$s</string>
     <string name="content_description_onboarding_welcome">Welkom bij %1$s</string>
     <string name="content_description_play_trailer">Trailer voor %1$s afspelen</string>
-    <string name="content_description_quiz_header">Laat ons weten wat je leuk vindt. Zo kunnen we je betere aanbevelingen geven. Als je klaar bent, tik je op de knop %1$s in de rechterbenedenhoek van het scherm.</string>
     <string name="content_description_remove_from_wishlist">%1$s staat in je kijklijst. Tik om te verwijderen.</string>
     <string name="content_description_song_image">Albumhoes van %1$s</string>
     <string name="content_description_subtitles">Ondertiteling</string>
@@ -191,6 +190,7 @@
     <string name="delete_show_from_device_dialog_message">&lt;b>%1$s&lt;/b>&lt;br>&lt;br>Dit programma wordt niet meer weergegeven op dit apparaat. Je kunt het programma op elk gewenst moment zoeken in de Play Store en opnieuw openen.</string>
     <string name="details">Details</string>
     <string name="details_4k">4K</string>
+    <string name="details_audio_languages">{number,plural, =1{Gesproken taal}other{Gesproken talen}}</string>
     <string name="details_available">Beschikbaar</string>
     <string name="details_distributor_tooltip">Kies waar je wilt kijken</string>
     <string name="details_hdr">HDR</string>
@@ -204,7 +204,7 @@
     <string name="details_more">Meer</string>
     <string name="details_more_information">Meer informatie</string>
     <string name="details_movies_anywhere_eligible">Komt in aanmerking voor Movies Anywhere</string>
-    <string name="details_movies_anywhere_eligible_message">Komt in aanmerking indien gekocht. Gehuurde films komen niet in aanmerking. &lt;a href=%1$s>Meer informatie&lt;/a></string>
+    <string name="details_movies_anywhere_eligible_message">Geschikt als de film wordt gekocht (huurfilms zijn niet geschikt). &lt;a href=%1$s>Meer informatie&lt;/a></string>
     <string name="details_out_of_window_movie">We laten het je weten wanneer films in je kijklijst beschikbaar zijn</string>
     <string name="details_out_of_window_season">Dit seizoen is momenteel niet beschikbaar</string>
     <string name="details_parental_controls_restricted">De aanschaf van dit item wordt beperkt door ouderlijk toezicht.</string>
@@ -216,7 +216,7 @@
     <string name="details_price_sub_yearly">%1$s per jaar</string>
     <string name="details_price_sub_yearly_from">Vanaf %1$s per jaar</string>
     <string name="details_refund_policy">Teruggavebeleid</string>
-    <string name="details_refund_policy_message">Teruggaven vallen onder het &lt;a href=%1$s>Teruggavebeleid van Google Play&lt;/a></string>
+    <string name="details_refund_policy_message">Terugbetalingen vallen onder het &lt;a href=%1$s>teruggavebeleid van Google Play&lt;/a></string>
     <string name="details_rental_expiration">Vervaldatum van huur</string>
     <string name="details_requires_cable">Vereist kabel-tv</string>
     <string name="details_requires_cable_or_satellite">Vereist kabel- of satelliet-tv</string>
@@ -427,7 +427,7 @@
     <string name="lb_playback_controls_high_quality_disable">Hoge kwaliteit uitschakelen</string>
     <string name="lb_playback_controls_high_quality_enable">Hoge kwaliteit inschakelen</string>
     <string name="lb_playback_controls_more_actions">Meer acties</string>
-    <string name="lb_playback_controls_pause">Onderbreken</string>
+    <string name="lb_playback_controls_pause">Pauzeren</string>
     <string name="lb_playback_controls_picture_in_picture">Scherm-in-scherm-modus openen</string>
     <string name="lb_playback_controls_play">Afspelen</string>
     <string name="lb_playback_controls_repeat_all">Alles herhalen</string>
@@ -448,7 +448,7 @@
     <string name="lb_search_bar_hint">Zoeken</string>
     <string name="lb_search_bar_hint_speech">Spreek om te zoeken</string>
     <string name="lb_search_bar_hint_with_title">%1$s zoeken</string>
-    <string name="lb_search_bar_hint_with_title_speech">Spreek om in %1$s te zoeken</string>
+    <string name="lb_search_bar_hint_with_title_speech">Spreek om %1$s te zoeken</string>
     <string name="learn_more">Meer informatie</string>
     <string name="less_like_this">Minder aanbevelingen zoals deze</string>
     <string name="less_like_this_acknowledged">We laten je minder aanbevelingen zoals deze zien</string>
@@ -498,7 +498,7 @@ Bekijk je favoriete films en tv-programma's onmiddellijk op je Android-telefoon 
     <string name="movie_duration">%1$s min.</string>
     <string name="movie_duration_seconds">%1$s sec</string>
     <string name="movie_extras">"Extra's"</string>
-    <string name="mr_button_content_description">Cast-icoon</string>
+    <string name="mr_button_content_description">Cast-knop</string>
     <string name="mr_cast_button_connected">Cast-icoon. Verbonden</string>
     <string name="mr_cast_button_connecting">Cast-icoon. Verbinding maken</string>
     <string name="mr_cast_button_disconnected">Cast-icoon. Verbinding verbroken</string>
@@ -512,7 +512,7 @@ Bekijk je favoriete films en tv-programma's onmiddellijk op je Android-telefoon 
     <string name="mr_controller_expand_group">Uitvouwen</string>
     <string name="mr_controller_no_info_available">Geen informatie beschikbaar</string>
     <string name="mr_controller_no_media_selected">Geen media geselecteerd</string>
-    <string name="mr_controller_pause">Onderbreken</string>
+    <string name="mr_controller_pause">Pauzeren</string>
     <string name="mr_controller_play">Afspelen</string>
     <string name="mr_controller_stop">Stoppen</string>
     <string name="mr_controller_stop_casting">Casten stoppen</string>
@@ -556,9 +556,12 @@ Bekijk je favoriete films en tv-programma's onmiddellijk op je Android-telefoon 
     <string name="orb_search_action">Actie zoeken</string>
     <string name="owned">In eigendom</string>
     <string name="pair_new_device_summary">Voltooi het instellen van je Roku of Smart TV door hier te tikken</string>
+    <string name="pair_new_device_summary_overwrite">Begin met instellen op je tv en voltooi het proces hier</string>
     <string name="pair_new_device_title">Tv-kijken activeren</string>
+    <string name="pair_new_device_title_overwrite">Instellen van een Roku of Smart TV voltooien</string>
     <string name="pair_new_device_title_v2">Een Roku of Smart TV instellen</string>
     <string name="pairing_category_title">Inloggen op een apparaat</string>
+    <string name="pairing_category_title_overwrite">Play Films op een ander apparaat gebruiken</string>
     <string name="pairing_connect">Verbinding maken</string>
     <string name="pairing_retry">Opnieuw proberen</string>
     <string name="pairing_title">Inloggen op apparaat</string>
@@ -702,6 +705,8 @@ Bekijk je favoriete films en tv-programma's onmiddellijk op je Android-telefoon 
     <string name="prepare_to_download">Downloaden voorbereiden…</string>
     <string name="price_from">Vanaf %1$s</string>
     <string name="primary_storage">Interne opslag</string>
+    <string name="primetime_module_dismiss">Sluiten</string>
+    <string name="primetime_promotional_banner_cta">Aanbieding inwisselen</string>
     <string name="primetime_setup_account_selector_content_description">Accountkiezer, geselecteerd account: %1$s</string>
     <string name="primetime_setup_distributor_deselected_accessibitiy">%1$s, niet geselecteerd</string>
     <string name="primetime_setup_distributor_installed">Geïnstalleerd</string>
@@ -729,18 +734,6 @@ Bekijk je favoriete films en tv-programma's onmiddellijk op je Android-telefoon 
     <string name="problem_while_playing_with_code_restart">Er is een probleem opgetreden bij het afspelen van [%1$d]. Als het probleem blijft optreden, start je je apparaat opnieuw op.</string>
     <string name="problem_while_playing_with_code_restart_new">Er is een probleem opgetreden bij het afspelen van de video (fout %1$d). Probeer de video opnieuw af te spelen of start je apparaat opnieuw op.</string>
     <string name="producers_label">Geproduceerd door</string>
-    <string name="quiz_content_description_removing_item">%1$s is verwijderd uit selectie</string>
-    <string name="quiz_content_description_selected_item">%1$s is geselecteerd</string>
-    <string name="quiz_content_description_selecting_item">%1$s is toegevoegd aan selectie</string>
-    <string name="quiz_content_description_unselected_item">%1$s is niet geselecteerd</string>
-    <string name="quiz_done_button">Gereed</string>
-    <string name="quiz_get_started_button">Aan de slag</string>
-    <string name="quiz_message">Dit helpt ons jou betere aanbevelingen te geven</string>
-    <string name="quiz_title">Vertel ons wat je leuk vindt</string>
-    <string name="quiz_welcome_done_message">Op basis van de dingen die je leuk vindt, hebben we enkele aanbevelingen verzameld</string>
-    <string name="quiz_welcome_done_title">Er zijn aanbevelingen voor je beschikbaar</string>
-    <string name="quiz_welcome_message">Hoe meer je ons vertelt over welke films je leuk vindt, hoe beter de aanbevelingen worden</string>
-    <string name="quiz_welcome_title">Ontvang relevante aanbevelingen</string>
     <string name="read_less">Minder lezen</string>
     <string name="recent">Nieuw</string>
     <string name="recent_episodes">{number,plural, =1{1 recente afl.}other{# recente afl.}}</string>
@@ -778,6 +771,10 @@ Bekijk je favoriete films en tv-programma's onmiddellijk op je Android-telefoon 
     <string name="rental_period_expired">De verhuurperiode van deze video is verstreken.</string>
     <string name="rental_window_ending_soon_annotation">Huuraanbieding verloopt binnenkort</string>
     <string name="rental_window_ending_soon_notification_text">De huuraanbieding verloopt binnenkort</string>
+    <string name="retail_mode_body">In de Play Films-app vind je duizenden leuke films en series</string>
+    <string name="retail_mode_body_with_tv">In de Play Films en Tv-app vind je duizenden leuke films en series</string>
+    <string name="retail_mode_title">Google Play Films is niet beschikbaar in de demomodus</string>
+    <string name="retail_mode_title_with_tv">Google Play Films en Tv is niet beschikbaar in de demomodus</string>
     <string name="retry">Opnieuw</string>
     <string name="review_percent">%1$d%%</string>
     <string name="reward_expire_notification_title">Je beloning verloopt bijna</string>
@@ -795,6 +792,7 @@ Bekijk je favoriete films en tv-programma's onmiddellijk op je Android-telefoon 
     <string name="section_shows">"Mijn tv-programma's"</string>
     <string name="section_vod">"Mijn gehuurde video's"</string>
     <string name="section_wishlist">Kijklijst</string>
+    <string name="see_less">Minder weergeven</string>
     <string name="see_more">Meer weergeven</string>
     <string name="setting_save_error">Instelling kan niet worden opgeslagen</string>
     <string name="setting_saving">Instellingen opslaan…</string>
@@ -858,7 +856,7 @@ Bekijk je favoriete films en tv-programma's onmiddellijk op je Android-telefoon 
     <string name="talkback_unavailable_icon">Momenteel niet beschikbaar</string>
     <string name="tap_to_retry">Tik om het opnieuw te proberen</string>
     <string name="toggle_downloaded_only">Alleen gedownload</string>
-    <string name="tooltip_description">Houd een item ingedrukt om het te beoordelen</string>
+    <string name="tooltip_description">Tik op een item en houd het vast om het te beoordelen</string>
     <string name="tooltip_dismiss">Beoordelingssuggestie sluiten</string>
     <string name="trailer">Trailer</string>
     <string name="troubleshoot">Problemen oplossen</string>
@@ -915,7 +913,7 @@ Bekijk je favoriete films en tv-programma's onmiddellijk op je Android-telefoon 
     <string name="vr_play_movie_button_text">Afspelen</string>
     <string name="vr_redeem_gift">Toevoegen aan bibliotheek</string>
     <string name="vr_screen_reposition_hint">Sleep om het scherm te verplaatsen. Veeg omhoog/omlaag om het formaat van het scherm aan te passen.</string>
-    <string name="vr_search_screen_no_keyboard">Geen toetsenbord-app geïnstalleerd.</string>
+    <string name="vr_search_screen_no_keyboard">Installeer de nieuwste Daydream-toetsenbord-app.</string>
     <string name="vr_search_screen_no_results">Geen resultaten. Probeer het opnieuw.</string>
     <string name="vr_standalone_no_account_message_text">Geen account gevonden. Log in op je account om door te gaan.</string>
     <string name="vr_title_card_my_movies">Mijn films</string>
