@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background" android:src="@drawable/welcome_bg" android:contentDescription="@null" style="@style/BackgroundImage" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/anchor" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_centerInParent="true" />
+        <LinearLayout android:gravity="start" android:orientation="vertical" android:id="@id/welcome_land_left_frame" android:paddingLeft="@dimen/setup_wizard_margin_sides" android:paddingRight="@dimen/welcome_land_left_frame_padding_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/anchor" android:layout_alignTop="@id/welcome_land_right_frame" android:layout_alignParentLeft="true" android:layoutDirection="locale">
+            <TextView android:gravity="start" android:id="@id/welcome_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/welcome_message" style="@style/WelcomeTitle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/welcome_land_right_frame" android:paddingLeft="@dimen/welcome_land_right_frame_padding_left" android:paddingRight="@dimen/setup_wizard_margin_sides" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/status_bar_height" android:layout_toRightOf="@id/anchor" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layoutDirection="locale">
+            <ScrollView android:scrollbarStyle="outsideInset" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:fadeScrollbars="false">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/user_added" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_wizard_vertical_spacing" android:text="@string/welcome_secondary_user_added_no_owner_name_text" style="@style/setup_wizard_description" />
+                    <TextView android:id="@id/info_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_wizard_vertical_spacing" android:text="@string/welcome_secondary_user_info_text" style="@style/setup_wizard_description" />
+                </LinearLayout>
+            </ScrollView>
+            <ImageButton android:id="@id/start" android:background="@drawable/start_button_bg" android:layout_marginTop="@dimen/welcome_user_start_button_margin_top" android:layout_marginBottom="@dimen/welcome_user_start_button_margin_bottom" android:src="@drawable/start_arrow" android:contentDescription="@string/start" android:elevation="@dimen/welcome_start_button_elevation" style="@style/FloatingActionButton" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

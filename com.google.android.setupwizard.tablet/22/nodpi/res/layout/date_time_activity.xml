@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/setup_wizard_content_frame"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/date_time_message" style="@style/setup_wizard_description" />
+    <Spinner android:textAppearance="?android:textAppearanceMedium" android:textSize="@dimen/date_time_spinner_text_size" android:id="@id/time_zone_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/date_time_vertical_spacing" android:minWidth="@dimen/date_time_spinner_min_width" />
+    <LinearLayout android:orientation="vertical" android:id="@id/date_text_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/date_time_vertical_spacing">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="@dimen/date_time_label_text_size" android:id="@id/date_text_view_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/date_time_current_date" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/date_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/time_text_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/date_time_vertical_spacing">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="@dimen/date_time_label_text_size" android:id="@id/time_text_view_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/date_time_current_time" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/time_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

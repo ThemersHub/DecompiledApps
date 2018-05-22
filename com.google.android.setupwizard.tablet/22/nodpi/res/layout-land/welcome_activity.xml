@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background" android:src="@drawable/welcome_bg" android:contentDescription="@null" style="@style/BackgroundImage" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/anchor" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_centerInParent="true" />
+        <LinearLayout android:gravity="start" android:orientation="vertical" android:id="@id/welcome_land_left_frame" android:paddingLeft="@dimen/setup_wizard_margin_sides" android:paddingRight="@dimen/welcome_land_left_frame_padding_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/anchor" android:layout_alignTop="@id/welcome_land_right_frame" android:layout_alignParentLeft="true" android:layoutDirection="locale">
+            <TextView android:gravity="start" android:id="@id/welcome_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/welcome_message" style="@style/WelcomeTitle" />
+            <ProgressBar android:layout_gravity="top" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:indeterminate="true" style="?android:attr/progressBarStyleHorizontal" />
+            <TextView android:layout_gravity="top" android:id="@id/wait_msg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wait_msg" style="@style/setup_wizard_description_text" />
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <Button android:textColor="?android:textColorPrimary" android:gravity="start|center" android:id="@id/welcome_emergency_dial" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/welcome_emergency_dial_margin_bottom" android:minHeight="@dimen/welcome_emergency_dial_size" android:text="@string/emergency_dial" android:drawablePadding="@dimen/welcome_emergency_dial_drawable_padding" android:drawableStart="@drawable/ic_emergency_dial" style="?android:attr/borderlessButtonStyle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/welcome_land_right_frame" android:paddingLeft="@dimen/welcome_land_right_frame_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/anchor" android:layout_centerVertical="true">
+            <include android:id="@id/language_picker" layout="@layout/language_picker" />
+            <ImageButton android:id="@id/start" android:background="@drawable/start_button_bg" android:layout_marginTop="@dimen/welcome_start_button_margin_top" android:layout_marginBottom="@dimen/welcome_start_button_margin_bottom" android:src="@drawable/start_arrow" android:contentDescription="@string/start" android:elevation="@dimen/welcome_start_button_elevation" style="@style/FloatingActionButton" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

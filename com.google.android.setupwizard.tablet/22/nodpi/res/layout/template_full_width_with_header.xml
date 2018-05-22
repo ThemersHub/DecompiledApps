@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:wizard="http://schemas.android.com/apk/res/com.google.android.setupwizard">
+    <com.google.android.setupwizard.util.StickyHeaderScrollView android:id="@id/bottom_scroll_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <RelativeLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.setupwizard.util.SetupWizardIllustration android:id="@id/illustration_phone" android:tag="stickyContainer" android:background="@drawable/illustration_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="@drawable/illustration_generic" android:elevation="@dimen/title_area_elevation" wizard:aspectRatio="2.22">
+                <TextView android:id="@id/title" android:tag="sticky" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setup_wizard_title" style="@style/setup_wizard_header_title" />
+            </com.google.android.setupwizard.util.SetupWizardIllustration>
+            <FrameLayout android:id="@id/setup_content" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/illustration_phone" />
+        </RelativeLayout>
+    </com.google.android.setupwizard.util.StickyHeaderScrollView>
+    <fragment android:name="com.android.setupwizard.navigationbar.SetupWizardNavBar" android:id="@id/navigation_bar" style="@style/setup_wizard_navbar_style" />
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background" android:src="@drawable/welcome_bg" android:contentDescription="@null" style="@style/BackgroundImage" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/welcome_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/status_bar_height" android:text="@string/welcome_message" style="@style/WelcomeTitle" />
+        <ScrollView android:scrollbarStyle="outsideInset" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/setup_wizard_margin_sides" android:layout_marginRight="@dimen/setup_wizard_margin_sides" android:fillViewport="true" android:layout_weight="1.0" android:fadeScrollbars="false">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/user_added" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_wizard_vertical_spacing" android:text="@string/welcome_secondary_user_added_no_owner_name_text" style="@style/setup_wizard_description" />
+                <TextView android:id="@id/info_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_wizard_vertical_spacing" android:text="@string/welcome_secondary_user_info_text" style="@style/setup_wizard_description" />
+            </LinearLayout>
+        </ScrollView>
+        <ImageButton android:id="@id/start" android:background="@drawable/start_button_bg" android:layout_marginTop="@dimen/welcome_user_start_button_margin_top" android:layout_marginBottom="@dimen/welcome_user_start_button_margin_bottom" android:src="@drawable/start_arrow" android:contentDescription="@string/start" android:elevation="@dimen/welcome_start_button_elevation" style="@style/FloatingActionButton" />
+    </LinearLayout>
+</FrameLayout>
