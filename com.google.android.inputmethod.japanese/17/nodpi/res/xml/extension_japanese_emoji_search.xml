@@ -2,9 +2,11 @@
 <framework>
     <module class="com.google.android.apps.inputmethod.japanese.symbol.JapaneseEmojiSearchExtension">
         <keyboard_group>
-            <keyboard type="smiley" def="@xml/keyboard_non_prime_smiley" />
             <keyboard type="prime" def="@xml/emoji_keyboard_search" />
-            <keyboard type="search_result" def="@xml/keyboard_emoji" />
         </keyboard_group>
+        <keyboard_types>
+            <keyboard type="@string/keyboard_type_emoji" />
+            <keyboard type="@string/keyboard_type_emoji_search_result" />
+        </keyboard_types>
     </module>
 </framework>

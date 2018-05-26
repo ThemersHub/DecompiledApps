@@ -51,6 +51,9 @@
         <item name="android:textSize">@dimen/text_size_function_key_small_tv</item>
         <item name="android:textColor">?ColorLabelFunctionKeyDeactive</item>
     </style>
+    <style name="Label.Small.TV" parent="@style/Label.Small">
+        <item name="android:textColor">?ColorLabel</item>
+    </style>
     <style name="Label.TV" parent="@style/Label">
         <item name="android:textColor">?ColorLabel</item>
     </style>
@@ -62,7 +65,15 @@
     <style name="Label.TV.phonenumber" parent="@style/Label.TV">
         <item name="android:textColor">?ColorLabelPhonenumber</item>
     </style>
+    <style name="Label.Tiny.TV" parent="@style/Label.Tiny">
+        <item name="android:textColor">?ColorLabel</item>
+    </style>
     <style name="PopupLabel.TV" parent="@style/Label.TV">
+        <item name="android:background">?BgPopupLabelSelector</item>
+        <item name="android:layout_width">32.0dip</item>
+        <item name="android:layout_height">32.0dip</item>
+    </style>
+    <style name="PopupLabelTiny.TV" parent="@style/Label.Tiny.TV">
         <item name="android:background">?BgPopupLabelSelector</item>
         <item name="android:layout_width">32.0dip</item>
         <item name="android:layout_height">32.0dip</item>
@@ -92,11 +103,6 @@
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">0.0dip</item>
     </style>
-    <style name="SoftKey.TV.FunctionKey.Horizontal" parent="@style/SoftKey.TV.FunctionKey">
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_width">28.0dip</item>
-        <item name="android:layout_height">28.0dip</item>
-    </style>
     <style name="SoftKey.TV.Password" parent="@style/SoftKey.TV">
         <item name="android:layout_width">0.0dip</item>
         <item name="android:layout_weight">100.0</item>
@@ -119,14 +125,11 @@
         <item name="android:layout_width">58.0dip</item>
         <item name="android:layout_height">32.0dip</item>
     </style>
-    <style name="SoftKeyViewHost.MoveCursorKey" parent="@style/SoftKeyViewHost">
-        <item name="android:layout_width">28.0dip</item>
-        <item name="android:layout_height">28.0dip</item>
-    </style>
     <style name="TVBody">
         <item name="android:background">?BgKeyboardBody</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">@dimen/keyboard_body_height_for_tv</item>
+        <item name="maskLayerColor">?ColorKeyboardMask</item>
     </style>
     <style name="TVBodyInner">
         <item name="android:orientation">horizontal</item>
@@ -234,6 +237,7 @@
     <style name="TVTheme">
         <item name="BgCandidate">@android:color/transparent</item>
         <item name="BgCandidateLastColumn">@android:color/transparent</item>
+        <item name="BgKeyImeAction">@drawable/bg_transparent</item>
         <item name="BgKeyboardBody">@color/bg_keyboard_body</item>
         <item name="BgPopupBackground">@drawable/bg_transparent</item>
         <item name="BgPopupLabelSelector">@drawable/bg_popup_label_back_material_dark_theme_selector</item>
@@ -244,8 +248,6 @@
         <item name="ColorLabelFunctionKey">@color/label_function_key_material_dark_theme</item>
         <item name="ColorLabelPopup">@color/label_popup_material_dark_theme</item>
         <item name="IconAlpha">153</item>
-        <item name="IconArrowLeft">@drawable/ic_key_arrow_left</item>
-        <item name="IconArrowRight">@drawable/ic_key_arrow_right</item>
         <item name="IconDel">@drawable/ic_key_del</item>
         <item name="IconDisabledAlpha">77</item>
         <item name="IconDone">@drawable/ic_key_ime_action_done</item>
@@ -268,6 +270,8 @@
         <item name="ColorLabelPhonenumber">@color/label_phonenumber</item>
         <item name="ColorSeparator">@color/separator_color</item>
         <item name="ColorSeparatorPhonenumber">@color/separator_color_phonenumber</item>
+        <item name="IconArrowLeft">@drawable/ic_key_arrow_left</item>
+        <item name="IconArrowRight">@drawable/ic_key_arrow_right</item>
         <item name="IconClearAll">@drawable/ic_key_clear_all</item>
     </style>
 </resources>

@@ -21,15 +21,15 @@
             <softkey id="@id/softkey_ja_qwerty_tilde" keycode="PLAIN_TEXT" data="~" />
         </softkey_list>
         <softkey_list splitter=" ">
-            <softkey id="@id/softkey_switch_to_hiragana" layout="@layout/softkey_ja_function" popup_timing="@string/qwerty_popup_timing" content_description="@string/cd_keyboard_kana">
+            <softkey id="@id/softkey_switch_to_hiragana" layout="@attr/LayoutJaFunction" popup_timing="@string/qwerty_popup_timing" content_description="@string/cd_keyboard_kana">
                 <action type="PRESS" keycode="SWITCH_LANGUAGE" data="@string/japanese_language_id" />
-                <icon location="@id/icon" value="@raw/qwerty__function__alphabet__icon" />
+                <icon location="@id/icon" value="@attr/IconJaSwitchToHiragana" />
             </softkey>
-            <softkey id="@id/softkey_switch_to_alphabet" layout="@layout/softkey_ja_function" popup_timing="@string/qwerty_popup_timing" content_description="@string/cd_keyboard_alphabet">
+            <softkey id="@id/softkey_switch_to_alphabet" layout="@attr/LayoutJaFunction" popup_timing="@string/qwerty_popup_timing" content_description="@string/cd_keyboard_alphabet">
                 <action type="PRESS" keycode="SWITCH_LANGUAGE" data="@string/english_language_id" />
-                <icon location="@id/icon" value="@raw/qwerty__function__kana__icon" />
+                <icon location="@id/icon" value="@attr/IconJaSwitchToAlphabet" />
             </softkey>
-            <softkey id="@id/softkey_switch_to_symbols" layout="@layout/softkey_ja_function" content_description="@string/symbol_keyboard_key_content_desc">
+            <softkey id="@id/softkey_ja_switch_to_symbols" layout="@layout/softkey_ja_function" content_description="@string/symbol_keyboard_key_content_desc">
                 <action type="PRESS" keycode="SWITCH_TO_NON_PRIME_KEYBOARD" data="symbol" />
                 <icon location="@id/icon" value="@raw/qwerty__function__number_alphabet__icon" />
             </softkey>

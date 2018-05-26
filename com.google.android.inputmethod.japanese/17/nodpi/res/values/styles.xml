@@ -9,7 +9,7 @@
         <item name="android:layout_height">fill_parent</item>
         <item name="android:layout_marginStart">@dimen/suggestions_strip_access_point_key_width</item>
         <item name="android:layout_marginEnd">@dimen/suggestions_strip_voice_key_width</item>
-        <item name="maxCount">5</item>
+        <item name="maxCount">@integer/access_points_bar_max_count</item>
         <item name="separatorLayout">@layout/access_points_bar_separator</item>
         <item name="itemHolderLayout">@layout/softkeyview_access_point_item</item>
         <item name="itemLayout">@layout/softkey_access_point_item</item>
@@ -40,14 +40,6 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="AlertDialog.AppCompat.Light" parent="@style/Base.AlertDialog.AppCompat.Light" />
-    <style name="AnimatedGif">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:layout_marginTop">@dimen/gif_image_vertical_margin</item>
-        <item name="android:layout_marginBottom">@dimen/gif_image_vertical_margin</item>
-        <item name="android:layout_marginStart">@dimen/gif_image_horizontal_margin</item>
-        <item name="android:layout_marginEnd">@dimen/gif_image_horizontal_margin</item>
-    </style>
     <style name="Animation.AppCompat.Dialog" parent="@style/Base.Animation.AppCompat.Dialog" />
     <style name="Animation.AppCompat.DropDownUp" parent="@style/Base.Animation.AppCompat.DropDownUp" />
     <style name="Animation.AppCompat.Tooltip" parent="@style/Base.Animation.AppCompat.Tooltip" />
@@ -58,6 +50,7 @@
         <item name="multiChoiceItemLayout">@layout/select_dialog_multichoice_material</item>
         <item name="singleChoiceItemLayout">@layout/select_dialog_singlechoice_material</item>
         <item name="listItemLayout">@layout/select_dialog_item_material</item>
+        <item name="buttonIconDimen">@dimen/abc_alert_dialog_button_dimen</item>
     </style>
     <style name="Base.AlertDialog.AppCompat.Light" parent="@style/Base.AlertDialog.AppCompat" />
     <style name="Base.Animation.AppCompat.Dialog" parent="@android:style/Animation">
@@ -69,8 +62,8 @@
         <item name="android:windowExitAnimation">@anim/abc_shrink_fade_out_from_bottom</item>
     </style>
     <style name="Base.Animation.AppCompat.Tooltip" parent="@android:style/Animation">
-        <item name="android:windowEnterAnimation">@anim/tooltip_enter</item>
-        <item name="android:windowExitAnimation">@anim/tooltip_exit</item>
+        <item name="android:windowEnterAnimation">@anim/abc_tooltip_enter</item>
+        <item name="android:windowExitAnimation">@anim/abc_tooltip_exit</item>
     </style>
     <style name="Base.CardView" parent="@android:style/Widget">
         <item name="cardCornerRadius">@dimen/cardview_default_radius</item>
@@ -104,11 +97,13 @@
     <style name="Base.TextAppearance.AppCompat.Button" parent="@style/Base.TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/abc_text_size_button_material</item>
         <item name="android:textColor">?android:textColorPrimary</item>
-        <item name="textAllCaps">true</item>
+        <item name="android:textAllCaps">true</item>
     </style>
     <style name="Base.TextAppearance.AppCompat.Inverse" parent="@style/Base.TextAppearance.AppCompat">
         <item name="android:textColor">?android:textColorPrimaryInverse</item>
+        <item name="android:textColorHighlight">?android:textColorHighlightInverse</item>
         <item name="android:textColorHint">?android:textColorHintInverse</item>
+        <item name="android:textColorLink">?android:textColorLinkInverse</item>
     </style>
     <style name="Base.TextAppearance.AppCompat.Large" parent="@style/Base.TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/abc_text_size_large_material</item>
@@ -116,7 +111,9 @@
     </style>
     <style name="Base.TextAppearance.AppCompat.Large.Inverse" parent="@style/Base.TextAppearance.AppCompat.Large">
         <item name="android:textColor">?android:textColorPrimaryInverse</item>
+        <item name="android:textColorHighlight">?android:textColorHighlightInverse</item>
         <item name="android:textColorHint">?android:textColorHintInverse</item>
+        <item name="android:textColorLink">?android:textColorLinkInverse</item>
     </style>
     <style name="Base.TextAppearance.AppCompat.Medium" parent="@style/Base.TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/abc_text_size_medium_material</item>
@@ -124,7 +121,9 @@
     </style>
     <style name="Base.TextAppearance.AppCompat.Medium.Inverse" parent="@style/Base.TextAppearance.AppCompat.Medium">
         <item name="android:textColor">?android:textColorSecondaryInverse</item>
+        <item name="android:textColorHighlight">?android:textColorHighlightInverse</item>
         <item name="android:textColorHint">?android:textColorHintInverse</item>
+        <item name="android:textColorLink">?android:textColorLinkInverse</item>
     </style>
     <style name="Base.TextAppearance.AppCompat.Menu" parent="@style/Base.TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/abc_text_size_menu_material</item>
@@ -148,7 +147,9 @@
     </style>
     <style name="Base.TextAppearance.AppCompat.Small.Inverse" parent="@style/Base.TextAppearance.AppCompat.Small">
         <item name="android:textColor">?android:textColorTertiaryInverse</item>
+        <item name="android:textColorHighlight">?android:textColorHighlightInverse</item>
         <item name="android:textColorHint">?android:textColorHintInverse</item>
+        <item name="android:textColorLink">?android:textColorLinkInverse</item>
     </style>
     <style name="Base.TextAppearance.AppCompat.Subhead" parent="@style/Base.TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/abc_text_size_subhead_material</item>
@@ -198,74 +199,15 @@
         <item name="android:itemTextAppearance">?android:textAppearanceMedium</item>
     </style>
     <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V7.Theme.AppCompat.Light" />
-    <style name="Base.Theme.AppCompat.Light.DarkActionBar" parent="@style/Base.Theme.AppCompat.Light">
-        <item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
-        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
-        <item name="actionBarWidgetTheme">@null</item>
-        <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
-        <item name="colorPrimary">@color/primary_material_dark</item>
-        <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
-    </style>
     <style name="Base.ThemeOverlay.AppCompat" parent="@style/Platform.ThemeOverlay.AppCompat" />
     <style name="Base.ThemeOverlay.AppCompat.ActionBar" parent="@style/Base.ThemeOverlay.AppCompat">
         <item name="searchViewStyle">@style/Widget.AppCompat.SearchView.ActionBar</item>
         <item name="colorControlNormal">?android:textColorPrimary</item>
     </style>
-    <style name="Base.ThemeOverlay.AppCompat.Dark" parent="@style/Platform.ThemeOverlay.AppCompat.Dark">
-        <item name="android:colorForeground">@color/foreground_material_dark</item>
-        <item name="android:colorBackground">@color/background_material_dark</item>
-        <item name="android:textColorPrimary">@color/abc_primary_text_material_dark</item>
-        <item name="android:textColorPrimaryDisableOnly">@color/abc_primary_text_disable_only_material_dark</item>
-        <item name="android:textColorSecondary">@color/abc_secondary_text_material_dark</item>
-        <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_light</item>
-        <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_light</item>
-        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_light</item>
-        <item name="android:windowBackground">@color/background_material_dark</item>
-        <item name="android:textColorHighlight">@color/highlighted_text_material_dark</item>
-        <item name="android:textColorHint">@color/abc_hint_foreground_material_dark</item>
-        <item name="android:colorForegroundInverse">@color/foreground_material_light</item>
-        <item name="android:textColorTertiary">@color/abc_secondary_text_material_dark</item>
-        <item name="android:textColorTertiaryInverse">@color/abc_secondary_text_material_light</item>
-        <item name="android:colorBackgroundCacheHint">@color/abc_background_cache_hint_selector_material_dark</item>
-        <item name="isLightTheme">false</item>
-        <item name="colorControlNormal">?android:textColorSecondary</item>
-        <item name="colorControlHighlight">@color/ripple_material_dark</item>
-        <item name="colorButtonNormal">@color/button_material_dark</item>
-        <item name="colorSwitchThumbNormal">@color/switch_thumb_material_dark</item>
-        <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
-    </style>
-    <style name="Base.ThemeOverlay.AppCompat.Dark.ActionBar" parent="@style/Base.ThemeOverlay.AppCompat.Dark">
-        <item name="searchViewStyle">@style/Widget.AppCompat.SearchView.ActionBar</item>
-        <item name="colorControlNormal">?android:textColorPrimary</item>
-    </style>
     <style name="Base.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.V7.ThemeOverlay.AppCompat.Dialog" />
     <style name="Base.ThemeOverlay.AppCompat.Dialog.Alert" parent="@style/Base.ThemeOverlay.AppCompat.Dialog">
-        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
-    </style>
-    <style name="Base.ThemeOverlay.AppCompat.Light" parent="@style/Platform.ThemeOverlay.AppCompat.Light">
-        <item name="android:colorForeground">@color/foreground_material_light</item>
-        <item name="android:colorBackground">@color/background_material_light</item>
-        <item name="android:textColorPrimary">@color/abc_primary_text_material_light</item>
-        <item name="android:textColorPrimaryDisableOnly">@color/abc_primary_text_disable_only_material_light</item>
-        <item name="android:textColorSecondary">@color/abc_secondary_text_material_light</item>
-        <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_dark</item>
-        <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_dark</item>
-        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_dark</item>
-        <item name="android:windowBackground">@color/background_material_light</item>
-        <item name="android:textColorHighlight">@color/highlighted_text_material_light</item>
-        <item name="android:textColorHint">@color/abc_hint_foreground_material_light</item>
-        <item name="android:colorForegroundInverse">@color/foreground_material_dark</item>
-        <item name="android:textColorTertiary">@color/abc_secondary_text_material_light</item>
-        <item name="android:textColorTertiaryInverse">@color/abc_secondary_text_material_dark</item>
-        <item name="android:textColorPrimaryInverseDisableOnly">@color/abc_primary_text_disable_only_material_dark</item>
-        <item name="android:colorBackgroundCacheHint">@color/abc_background_cache_hint_selector_material_light</item>
-        <item name="isLightTheme">true</item>
-        <item name="colorControlNormal">?android:textColorSecondary</item>
-        <item name="colorControlHighlight">@color/ripple_material_light</item>
-        <item name="colorButtonNormal">@color/button_material_light</item>
-        <item name="colorSwitchThumbNormal">@color/switch_thumb_material_light</item>
-        <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
     </style>
     <style name="Base.V7.Theme.AppCompat.Light" parent="@style/Platform.AppCompat.Light">
         <item name="android:panelBackground">@android:color/transparent</item>
@@ -314,6 +256,7 @@
         <item name="dialogTheme">@style/ThemeOverlay.AppCompat.Dialog</item>
         <item name="dialogPreferredPadding">@dimen/abc_dialog_padding_material</item>
         <item name="listDividerAlertDialog">@null</item>
+        <item name="dialogCornerRadius">@dimen/abc_dialog_corner_radius_material</item>
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar</item>
         <item name="dropdownListPreferredItemHeight">?listPreferredItemHeightSmall</item>
         <item name="spinnerDropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
@@ -383,7 +326,8 @@
         <item name="listMenuViewStyle">@style/Widget.AppCompat.ListMenuView</item>
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_dark</item>
         <item name="tooltipForegroundColor">@color/foreground_material_dark</item>
-        <item name="colorError">@color/error_color_material</item>
+        <item name="colorError">@color/error_color_material_light</item>
+        <item name="viewInflaterClass">android.support.v7.app.AppCompatViewInflater</item>
     </style>
     <style name="Base.V7.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.ThemeOverlay.AppCompat">
         <item name="android:colorBackground">?colorBackgroundFloating</item>
@@ -398,6 +342,9 @@
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:windowSoftInputMode">adjustPan</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:borderlessButtonStyle">@style/Widget.AppCompat.Button.Borderless</item>
+        <item name="android:buttonBarStyle">@style/Widget.AppCompat.ButtonBar.AlertDialog</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
         <item name="windowActionBar">false</item>
         <item name="windowActionModeOverlay">true</item>
         <item name="windowFixedWidthMajor">@null</item>
@@ -413,11 +360,13 @@
         <item name="android:background">?editTextBackground</item>
         <item name="android:dropDownSelector">?listChoiceBackgroundIndicator</item>
         <item name="android:popupBackground">@drawable/abc_popup_background_mtrl_mult</item>
+        <item name="android:textCursorDrawable">@drawable/abc_text_cursor_material</item>
     </style>
     <style name="Base.V7.Widget.AppCompat.EditText" parent="@android:style/Widget.EditText">
         <item name="android:textAppearance">?android:textAppearanceMediumInverse</item>
         <item name="android:textColor">?editTextColor</item>
         <item name="android:background">?editTextBackground</item>
+        <item name="android:textCursorDrawable">@drawable/abc_text_cursor_material</item>
     </style>
     <style name="Base.V7.Widget.AppCompat.Toolbar" parent="@android:style/Widget">
         <item name="android:paddingLeft">@dimen/abc_action_bar_default_padding_start_material</item>
@@ -675,9 +624,6 @@
         <item name="android:dropDownVerticalOffset">0.0dip</item>
         <item name="overlapAnchor">true</item>
     </style>
-    <style name="Base.Widget.AppCompat.Spinner.Underlined" parent="@style/Base.Widget.AppCompat.Spinner">
-        <item name="android:background">@drawable/abc_spinner_textfield_background_material</item>
-    </style>
     <style name="Base.Widget.AppCompat.TextView.SpinnerItem" parent="@android:style/Widget.TextView.SpinnerItem">
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem</item>
         <item name="android:paddingLeft">8.0dip</item>
@@ -699,32 +645,28 @@
         <item name="BgKeyDarkBottomPaddedLayoutSelector">?BgKeyDark</item>
         <item name="BgKeyDashboardMaskOpaque">@drawable/bg_key_snapshot_mask_opaque</item>
         <item name="BgKeyHeaderOpaque">@drawable/bg_key_header_opaque</item>
-        <item name="BgKeyImeActionBottomPaddedLayoutSelector">?BgKeyImeAction</item>
+        <item name="BgKeyImeActionHolderBottomPaddedLayoutSelector">?BgKeyImeActionHolder</item>
         <item name="BgKeyImeActionOpaque">@drawable/bg_transparent</item>
-        <item name="BgKeyImeActionOpaqueBottom">@drawable/bg_transparent</item>
-        <item name="BgKeyImeActionOpaqueBottomPadded">@drawable/bg_transparent</item>
-        <item name="BgKeyImeActionOpaqueSmallInset">@drawable/bg_transparent</item>
         <item name="BgKeyOpaque">@drawable/bg_key_opaque_big_inset</item>
         <item name="BgKeyOpaqueBottom">@drawable/bg_key_opaque_big_inset</item>
         <item name="BgKeyOpaqueBottomPadded">@drawable/bg_key_opaque_bottom_padded_inset</item>
         <item name="BgKeyOpaqueDenseBigInset">@drawable/bg_key_opaque_dense_big_inset</item>
-        <item name="BgKeyOpaqueDenseSmallInset">@drawable/bg_key_opaque_small_inset</item>
+        <item name="BgKeyOpaqueDenseMiddleInset">@drawable/bg_key_opaque_small_inset</item>
         <item name="BgKeyOpaqueSmallInset">@drawable/bg_key_opaque_small_inset</item>
         <item name="BgKeyRectangleOpaque">@drawable/bg_opaque</item>
         <item name="BgKeyTransparentOpaque">@drawable/bg_key_opaque_big_inset</item>
         <item name="BgPrimePageSwitchOpaque">@drawable/bg_prime_page_switch_opaque</item>
-        <item name="BgSpaceLabelDigitOpaque">@drawable/bg_opaque</item>
         <item name="BgSpaceLabelOpaque">@drawable/bg_key_space_label_opaque_inset</item>
         <item name="BgSpaceTinyOpaque">@drawable/bg_key_space_tiny_normal_opaque</item>
         <item name="ColorBigPanelSeparatorOpaque">@android:color/transparent</item>
         <item name="ColorKeyboardSeparatorOpaque">@color/opaque</item>
         <item name="ColorKeyboardTopSeparator">@android:color/transparent</item>
-        <item name="ColorKeyboardTopSeparatorOpaque">@color/opaque</item>
         <item name="ComposingInnerPadding">0.0dip</item>
         <item name="DigitKeyboardLeftPanelBigPanelBottomMargin">0.0dip</item>
         <item name="DigitKeyboardLeftPanelBigPanelLeftMargin">0.0dip</item>
         <item name="DigitKeyboardLeftPanelBigPanelRightMargin">0.0dip</item>
         <item name="DigitKeyboardLeftPanelBigPanelTopMargin">0.0dip</item>
+        <item name="IsLightTheme">false</item>
         <item name="KeyboardBodyHeight">?BaseKeyboardBodyHeight</item>
         <item name="KeyboardBottomTabWeight">@integer/keyboard_bottom_tab_weight</item>
         <item name="KeyboardBottomWeight">@integer/keyboard_bottom_weight</item>
@@ -737,9 +679,7 @@
     </style>
     <style name="BaseTheme.Layout.Material" parent="@style/BaseTheme.Layout">
         <item name="BgDragConfirmationDropZone">@drawable/bg_confirmation_popup_icon_border</item>
-        <item name="ColorDragConfirmationDraggedBackground">@color/label_popup_pressed_material_dark_theme</item>
         <item name="ColorDragConfirmationOverlayBackground">@color/popup_overlay_background</item>
-        <item name="ColorDragConfirmationPlaceholder">@color/candidate_placeholder</item>
         <item name="ColorDragConfirmationText">@color/popup_confirmation_text</item>
         <item name="IconTrashCan">@drawable/quantum_ic_delete_white_48</item>
         <item name="PopupBubble9KeyLayout">@layout/popup_bubble_material</item>
@@ -755,7 +695,6 @@
         <item name="PopupBubbleRectangularLayout">@layout/popup_bubble_rectangular_material</item>
         <item name="PopupBubbleRectangularSmallLayout">@layout/popup_bubble_rectangular_small_material</item>
         <item name="PopupBubbleUnderlineOnDecodeLayout">@layout/popup_bubble_material</item>
-        <item name="ScaleDragConfirmationDraggedColor">1.0</item>
     </style>
     <style name="BasicPopupView">
         <item name="android:gravity">center|top</item>
@@ -768,26 +707,25 @@
     </style>
     <style name="BigPopupLabel" parent="@style/PopupLabel">
         <item name="android:textSize">@dimen/text_size_big</item>
-        <item name="android:layout_height">@dimen/popup_label_height</item>
-        <item name="android:minWidth">@dimen/popup_label_width</item>
     </style>
     <style name="Body">
         <item name="android:tag">.keyboard-body-area</item>
         <item name="android:background">?BgKeyboardBody</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">?KeyboardBodyHeight</item>
+        <item name="deadZoneLeft">?KeyboardInnerPadding</item>
+        <item name="deadZoneRight">?KeyboardInnerPadding</item>
+        <item name="deadZoneTop">@dimen/keyboard_body_padding_top</item>
+        <item name="deadZoneBottom">?KeyboardInnerPaddingBottom</item>
+    </style>
+    <style name="Body.HandwritingHalfscreen" parent="@style/Body">
+        <item name="android:background">?BgKeyboardBody</item>
     </style>
     <style name="Body.Hard" parent="@style/Body">
         <item name="android:layout_height">0.0dip</item>
     </style>
-    <style name="BodyInner">
+    <style name="BodyInner" parent="@style/BodyInnerPadding">
         <item name="android:orientation">vertical</item>
-        <item name="android:paddingLeft">?KeyboardInnerPadding</item>
-        <item name="android:paddingTop">@dimen/keyboard_body_padding_top</item>
-        <item name="android:paddingRight">?KeyboardInnerPadding</item>
-        <item name="android:paddingBottom">?KeyboardInnerPaddingBottom</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
         <item name="android:baselineAligned">false</item>
         <item name="android:weightSum">@integer/weight_sum</item>
     </style>
@@ -801,6 +739,12 @@
         <item name="android:visibility">gone</item>
         <item name="android:weightSum">@integer/weight_sum</item>
     </style>
+    <style name="BodyInner.Candidates.Japanese" parent="@style/BodyInner.Candidates">
+        <item name="android:paddingTop">0.0dip</item>
+    </style>
+    <style name="BodyInner.Candidates.NoPadding" parent="@style/BodyInner.Candidates">
+        <item name="android:padding">0.0dip</item>
+    </style>
     <style name="BodyInner.FloatingCandidates" parent="@style/BodyInner">
         <item name="android:orientation">horizontal</item>
         <item name="android:id">@id/more_candidates_area</item>
@@ -809,19 +753,32 @@
         <item name="android:visibility">gone</item>
         <item name="android:weightSum">@integer/weight_sum</item>
     </style>
-    <style name="BodyInner.InputArea" parent="@style/BodyInner">
-        <item name="android:layout_gravity">bottom</item>
-        <item name="android:id">@id/input_area</item>
+    <style name="BodyInner.Japanese" parent="@style/BodyInner">
         <item name="android:paddingTop">@dimen/keyboard_body_padding_top</item>
-        <item name="android:layout_height">?KeyboardBodyHeight</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
         <item name="android:weightSum">0.0</item>
         <item name="android:layout_weight">0.0</item>
     </style>
-    <style name="BodyInner.InputArea.Horizontal" parent="@style/BodyInner.InputArea">
+    <style name="BodyInner.Japanese.Horizontal" parent="@style/BodyInner.Japanese">
         <item name="android:orientation">horizontal</item>
     </style>
     <style name="BodyInner.Number" parent="@style/BodyInner">
         <item name="android:weightSum">@integer/weight_sum</item>
+    </style>
+    <style name="BodyInnerPadding">
+        <item name="android:paddingLeft">?KeyboardInnerPadding</item>
+        <item name="android:paddingTop">@dimen/keyboard_body_padding_top</item>
+        <item name="android:paddingRight">?KeyboardInnerPadding</item>
+        <item name="android:paddingBottom">?KeyboardInnerPaddingBottom</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="BodyInnerPadding.Candidates" parent="@style/BodyInnerPadding">
+        <item name="android:paddingTop">?KeyboardCandidateBodyPaddingTop</item>
+    </style>
+    <style name="BodyInnerPadding.Candidates.Japanese" parent="@style/BodyInnerPadding.Candidates">
+        <item name="android:paddingTop">0.0dip</item>
     </style>
     <style name="BodyInnerWrapper">
         <item name="android:gravity">bottom</item>
@@ -838,36 +795,36 @@
         <item name="BgKeyDarkBottom">@drawable/bg_key_dark_bordered_dark_theme_bottom_inset</item>
         <item name="BgKeyDarkBottomPadded">@drawable/bg_key_dark_bordered_dark_theme_bottom_padded_inset</item>
         <item name="BgKeyDarkDenseBigInset">@drawable/bg_key_dark_bordered_dark_theme_dense_big_inset</item>
-        <item name="BgKeyDarkDenseSmallInset">@drawable/bg_key_dark_bordered_dark_theme_dense_small_inset</item>
+        <item name="BgKeyDarkDenseMiddleInset">@drawable/bg_key_dark_bordered_dark_theme_dense_middle_inset</item>
+        <item name="BgKeyDarkMiddleInset">@drawable/bg_key_dark_bordered_dark_theme_middle_inset</item>
         <item name="BgKeyDarkSmallInset">@drawable/bg_key_dark_bordered_dark_theme_small_inset</item>
         <item name="BgKeyDenseBigInset">@drawable/bg_key_bordered_dark_theme_dense_big_inset</item>
-        <item name="BgKeyDenseSmallInset">@drawable/bg_key_bordered_dark_theme_dense_small_inset</item>
-        <item name="BgKeyImeAction">@drawable/bg_key_action_bordered_dark_theme_big_inset</item>
-        <item name="BgKeyImeActionBottom">@drawable/bg_key_action_bordered_dark_theme_bottom_inset</item>
-        <item name="BgKeyImeActionBottomPadded">@drawable/bg_key_action_bordered_dark_theme_bottom_padded_inset</item>
-        <item name="BgKeyImeActionSmallInset">@drawable/bg_key_action_bordered_dark_theme_small_inset</item>
+        <item name="BgKeyDenseMiddleInset">@drawable/bg_key_bordered_dark_theme_dense_middle_inset</item>
+        <item name="BgKeyImeAction">@drawable/bg_key_action_bordered_dark_theme_selector</item>
+        <item name="BgKeyImeActionHolder">@drawable/bg_key_action_holder_bordered_dark_theme_big_inset</item>
+        <item name="BgKeyImeActionHolderBottom">@drawable/bg_key_action_holder_bordered_dark_theme_bottom_inset</item>
+        <item name="BgKeyImeActionHolderBottomPadded">@drawable/bg_key_action_holder_bordered_dark_theme_bottom_padded_inset</item>
+        <item name="BgKeyImeActionHolderMiddleInset">@drawable/bg_key_action_holder_bordered_dark_theme_middle_inset</item>
+        <item name="BgKeyImeActionHolderSmallInset">@drawable/bg_key_action_holder_bordered_dark_theme_small_inset</item>
+        <item name="BgKeyMiddleInset">@drawable/bg_key_bordered_dark_theme_middle_inset</item>
+        <item name="BgKeyNumberRow">@drawable/bg_key_bordered_dark_theme_number_row_inset</item>
         <item name="BgKeyRectPressedSelector">@drawable/bg_key_dark_bordered_dark_theme_pressed_selector</item>
         <item name="BgKeySmallInset">@drawable/bg_key_bordered_dark_theme_small_inset</item>
         <item name="BgKeySpaceBottom">@drawable/bg_key_bordered_dark_theme_bottom_inset</item>
         <item name="ColorLabelSpace">@color/label_space_bordered_dark_theme</item>
     </style>
     <style name="BorderedTheme">
-        <item name="BgKeyImeActionOpaque">@drawable/bg_key_bordered_opaque_big_inset</item>
-        <item name="BgKeyImeActionOpaqueBottom">@drawable/bg_key_bordered_opaque_bottom_inset</item>
-        <item name="BgKeyImeActionOpaqueBottomPadded">@drawable/bg_key_bordered_opaque_bottom_padded_inset</item>
-        <item name="BgKeyImeActionOpaqueSmallInset">@drawable/bg_key_bordered_opaque_small_inset</item>
+        <item name="BgKeyImeActionOpaque">@drawable/bg_key_bordered_opaque</item>
         <item name="BgKeyOpaque">@drawable/bg_key_bordered_opaque_big_inset</item>
         <item name="BgKeyOpaqueBottom">@drawable/bg_key_bordered_opaque_bottom_inset</item>
         <item name="BgKeyOpaqueBottomPadded">@drawable/bg_key_bordered_opaque_bottom_padded_inset</item>
         <item name="BgKeyOpaqueDenseBigInset">@drawable/bg_key_bordered_opaque_dense_big_inset</item>
-        <item name="BgKeyOpaqueDenseSmallInset">@drawable/bg_key_bordered_opaque_dense_small_inset</item>
+        <item name="BgKeyOpaqueDenseMiddleInset">@drawable/bg_key_bordered_opaque_dense_middle_inset</item>
         <item name="BgKeyOpaqueSmallInset">@drawable/bg_key_bordered_opaque_small_inset</item>
         <item name="BgKeySpaceOpaqueBottom">@drawable/bg_key_bordered_opaque_bottom_inset</item>
         <item name="BgPrimePageSwitch">@android:color/transparent</item>
         <item name="BgPrimePageSwitchOpaque">@android:color/transparent</item>
         <item name="BgSpaceLabel">@android:color/transparent</item>
-        <item name="BgSpaceLabelDigit">@android:color/transparent</item>
-        <item name="BgSpaceLabelDigitOpaque">@android:color/transparent</item>
         <item name="BgSpaceLabelOpaque">@android:color/transparent</item>
         <item name="ColorBigPanelSeparator">@color/keyboard_separator_material_dark_theme</item>
         <item name="ColorBigPanelSeparatorOpaque">@drawable/bg_opaque</item>
@@ -915,19 +872,27 @@
     <style name="CardViewerQueryText.Emoji" parent="@style/CardViewerQueryText">
         <item name="android:hint">@string/emoji_search_results_hint</item>
     </style>
+    <style name="Chevron2GAnimation">
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">20.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginStart">6.5dip</item>
+    </style>
     <style name="CommonElements">
-        <item name="AutocompleteQueryIcon">@drawable/quantum_ic_search_black_24</item>
+        <item name="AutocompleteQueryIcon">@drawable/quantum_ic_search_grey600_24</item>
         <item name="BgKeyboardSearchHeader">?BgKeyboardBody</item>
         <item name="ColorGifHeaderDivider">@color/gif_search_candidate_divider_material_light</item>
         <item name="ColorGifSuggestionText">@color/gif_search_candidate_text_color_material_light</item>
-        <item name="DefaultQueryIcon">@drawable/quantum_ic_search_black_24</item>
-        <item name="RecentQueryIcon">@drawable/quantum_ic_query_builder_black_24</item>
+        <item name="DefaultQueryIcon">@drawable/quantum_ic_search_grey600_24</item>
+        <item name="RecentC2QCandidateIcon">@drawable/quantum_ic_search_googblue_24</item>
+        <item name="RecentQueryIcon">@drawable/quantum_ic_query_builder_grey600_24</item>
     </style>
     <style name="CompatMaterialDarkTheme">
         <item name="BgReadingTextCandidatesScrollerThumb">@drawable/bg_reading_text_candidate_scroller_thumb</item>
     </style>
     <style name="CompatMaterialLightTheme">
         <item name="BgReadingTextCandidatesScrollerThumb">@drawable/bg_reading_text_candidate_scroller_thumb</item>
+        <item name="IsLightTheme">true</item>
     </style>
     <style name="CompatMozcDrawableMaterialLightTheme">
         <item name="BgKeySlide">@drawable/bg_ja_key_slide_selector_material_light_theme</item>
@@ -940,10 +905,10 @@
         <item name="ColorKeyIconGuideLight">#9937474f</item>
         <item name="ColorKeyIconMain">#ff37474f</item>
         <item name="ColorKeyIconMainHighlight">#ff37474f</item>
-        <item name="ColorKeyIconQwertyFunction">#9937474f</item>
+        <item name="ColorKeyIconQwertyFunction">#b337474f</item>
         <item name="ColorKeyIconQwertyShiftOnArrow">#ff4db6ac</item>
-        <item name="ColorKeyIconTwelvekeysFunction">#9937474f</item>
-        <item name="ColorKeyIconTwelvekeysGlobe">#9937474f</item>
+        <item name="ColorKeyIconTwelvekeysFunction">#b337474f</item>
+        <item name="ColorKeyIconTwelvekeysGlobe">#b337474f</item>
     </style>
     <style name="ComposingText">
         <item name="android:textSize">@dimen/text_size_composing</item>
@@ -959,6 +924,20 @@
         <item name="android:singleLine">true</item>
     </style>
     <style name="DigitKeyboard" parent="@style/Linear.Horizontal" />
+    <style name="DigitKeyboardBigPanelHorizontalSeparator">
+        <item name="android:tag">.divider.horizontal.for-numpad-big-panel</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0dip</item>
+        <item name="android:src">?ColorBigPanelSeparator</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="DigitKeyboardBigPanelVerticalSeparator">
+        <item name="android:tag">.divider.vertical.for-numpad-big-panel</item>
+        <item name="android:layout_width">1.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:src">?ColorBigPanelSeparator</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
     <style name="DigitKeyboardLeftPanel">
         <item name="android:scrollbarThumbVertical">?BgReadingTextCandidatesScrollerThumb</item>
         <item name="android:scrollbarStyle">insideOverlay</item>
@@ -966,12 +945,48 @@
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
     </style>
+    <style name="DigitKeyboardLeftPanel.BigPanel" parent="@style/DigitKeyboardLeftPanel">
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginLeft">?DigitKeyboardLeftPanelBigPanelLeftMargin</item>
+        <item name="android:layout_marginTop">?DigitKeyboardLeftPanelBigPanelTopMargin</item>
+        <item name="android:layout_marginRight">?DigitKeyboardLeftPanelBigPanelRightMargin</item>
+        <item name="android:layout_marginBottom">?DigitKeyboardLeftPanelBigPanelBottomMargin</item>
+    </style>
     <style name="DigitKeyboardMiddlePanel" parent="@style/Linear.WidthWeighted.Vertical">
         <item name="android:weightSum">@integer/weight_sum</item>
         <item name="android:layout_weight">@integer/keyboard_9key_middle_column_weight_sum</item>
     </style>
+    <style name="DigitKeyboardMiddlePanel.BigPanel" parent="@style/DigitKeyboardMiddlePanel">
+        <item name="android:tag">.keytop.for-numpad-big-panel-holder</item>
+        <item name="android:background">?BgKeySmallInset</item>
+    </style>
     <style name="DigitKeyboardRow" parent="@style/KeyboardRow">
         <item name="android:layout_weight">@integer/digit_keyboard_row_weight</item>
+    </style>
+    <style name="EmojiHandwritingInputView">
+        <item name="android:layout_gravity">top</item>
+        <item name="android:paddingTop">1.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="EmojiHintStyleIcon">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:tag">.icon</item>
+        <item name="android:layout_width">96.0dip</item>
+        <item name="android:layout_height">96.0dip</item>
+        <item name="android:src">?EmojiHandwritingHintIcon</item>
+        <item name="android:alpha">0.63</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="EmojiHintStyleText">
+        <item name="android:textColor">?EmojiHandwritingHintColor</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:tag">.label.for-emoji-handwriting-hint</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/draw_an_emoji_here</item>
+        <item name="android:alpha">0.63</item>
+        <item name="android:importantForAccessibility">no</item>
     </style>
     <style name="ExtensionBodyViewHolder">
         <item name="android:id">@id/extension_body_view_holder</item>
@@ -1291,6 +1306,16 @@
     <style name="FirstRunViewPager.FeaturesPage" parent="@style/FirstRunViewPager">
         <item name="android:background">@color/feature_page_background</item>
     </style>
+    <style name="FunctionKeyColumns">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="FunctionKeyColumns.Left" parent="@style/FunctionKeyColumns">
+        <item name="android:layout_weight">@integer/keyboard_handwriting_left_column_weight</item>
+    </style>
+    <style name="FunctionKeyColumns.Right" parent="@style/FunctionKeyColumns">
+        <item name="android:layout_weight">@integer/keyboard_handwriting_right_column_weight</item>
+    </style>
     <style name="GBoardEditText">
         <item name="android:textSize">@dimen/search_box_font_size</item>
         <item name="android:textColor">@android:color/black</item>
@@ -1303,11 +1328,7 @@
     </style>
     <style name="GBoardEditText.EmojiSearch" parent="@style/GBoardEditText">
         <item name="android:id">@id/emoji_edit_text_search_box</item>
-        <item name="android:inputType">textNoSuggestions</item>
-    </style>
-    <style name="GBoardEditText.GifSearch" parent="@style/GBoardEditText">
-        <item name="android:id">@id/gif_edit_text_search_box</item>
-        <item name="android:inputType">textNoSuggestions</item>
+        <item name="android:inputType">textFilter|textAutoCorrect</item>
     </style>
     <style name="GBoardErrorCard">
         <item name="android:gravity">center</item>
@@ -1336,7 +1357,6 @@
     </style>
     <style name="GoogleBlueTheme">
         <item name="BgReadingTextCandidatesScrollerThumb">@drawable/bg_reading_text_candidate_scroller_thumb</item>
-        <item name="ColorDragConfirmationDraggedBackground">@color/label_popup_pressed_google_blue_theme</item>
     </style>
     <style name="Header">
         <item name="android:tag">.keyboard-header-area</item>
@@ -1348,7 +1368,7 @@
         <item name="android:layout_gravity">top</item>
         <item name="android:orientation">vertical</item>
     </style>
-    <style name="HeaderClearIcon">
+    <style name="HeaderClearIcon" parent="@style/TouchAware">
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_width">@dimen/header_icon_size</item>
@@ -1437,34 +1457,41 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-    <style name="Icon.AccessPointPanelItem" parent="@style/Icon">
-        <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:tag">.icon.access-points-panel-item</item>
-        <item name="android:background">?BgAccessPointPanelItem</item>
-        <item name="android:layout_marginLeft">15.0dip</item>
-        <item name="android:layout_marginRight">15.0dip</item>
-        <item name="android:scaleType">centerInside</item>
+    <style name="Icon.AccessPoint" parent="@style/Icon.Center">
+        <item name="android:layout_gravity">start|center</item>
+        <item name="android:layout_marginStart">6.6999817dip</item>
     </style>
-    <style name="Icon.Bottom" parent="@style/Icon">
-        <item name="android:layout_gravity">bottom|center</item>
-        <item name="android:layout_marginBottom">?IconBottomMarginBottom</item>
+    <style name="Icon.AccessPointPanelItem" parent="@style/Icon">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">5.0dip</item>
+        <item name="android:scaleType">centerInside</item>
     </style>
     <style name="Icon.Center" parent="@style/Icon">
         <item name="android:layout_gravity">center</item>
         <item name="android:scaleType">centerInside</item>
         <item name="android:layout_centerInParent">true</item>
     </style>
+    <style name="Icon.Center.Active" parent="@style/Icon.Center">
+        <item name="android:tag">.icon.active</item>
+    </style>
+    <style name="Icon.Center.Active.Shift" parent="@style/Icon.Center.Active">
+        <item name="android:tag">.icon.active.for-function-key.for-shift-key</item>
+    </style>
+    <style name="Icon.Center.FunctionKey" parent="@style/Icon.Center">
+        <item name="android:tag">.icon.for-function-key</item>
+    </style>
     <style name="Icon.Center.Hint" parent="@style/Icon.Center">
+        <item name="android:tag">.icon.for-function-key</item>
         <item name="android:layout_width">@dimen/icon_top_height_material_theme</item>
         <item name="android:layout_height">0.0dip</item>
     </style>
     <style name="Icon.Center.ImeAction" parent="@style/Icon.Center">
         <item name="android:gravity">center</item>
-        <item name="android:tag">.icon.for-action-key</item>
         <item name="android:layout_marginBottom">?IconImeActionMarginBottom</item>
         <item name="android:scaleType">center</item>
     </style>
     <style name="Icon.Center.MainCategory" parent="@style/Icon.Center">
+        <item name="android:tag">.icon.for-function-key</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
         <item name="android:scaleType">centerInside</item>
@@ -1478,15 +1505,26 @@
         <item name="android:layout_marginBottom">?IconImeActionMarginBottom</item>
         <item name="android:src">?IconImeActionBack</item>
     </style>
+    <style name="Icon.Center.Shift" parent="@style/Icon.Center">
+        <item name="android:tag">.icon.for-function-key.for-shift-key</item>
+    </style>
     <style name="Icon.Center.SubCategory" parent="@style/Icon.Center">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
         <item name="android:scaleType">center</item>
     </style>
+    <style name="Icon.Center.VoiceKey" parent="@style/Icon.Center">
+        <item name="android:tag">.icon.for-voice-key</item>
+    </style>
+    <style name="Icon.MicEncloser" parent="@style/Icon">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
     <style name="Icon.OneTapToSearch" parent="@style/Icon.Center">
         <item name="android:tag">@null</item>
-        <item name="android:layout_marginStart">@dimen/one_tap_to_search_icon_margin</item>
-        <item name="android:layout_marginEnd">@dimen/one_tap_to_search_icon_margin</item>
     </style>
     <style name="Icon.Top" parent="@style/Icon">
         <item name="android:layout_gravity">center|top</item>
@@ -1494,8 +1532,17 @@
         <item name="android:scaleType">centerInside</item>
     </style>
     <style name="Icon.Top.Hint" parent="@style/Icon.Top">
+        <item name="android:tag">.icon.for-function-key</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">@dimen/icon_top_height_material_theme</item>
+    </style>
+    <style name="IconAccessPointPanelItemBackground">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:tag">.background.access-point-panel-item</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">?BgAccessPointPanelItem</item>
+        <item name="android:scaleType">centerInside</item>
     </style>
     <style name="IconBarImageView">
         <item name="android:visibility">gone</item>
@@ -1528,10 +1575,24 @@
     <style name="InputArea.Qwerty" parent="@style/InputArea">
         <item name="android:orientation">vertical</item>
     </style>
+    <style name="InputAreaFrame">
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:id">@id/input_area</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">?KeyboardBodyHeight</item>
+    </style>
+    <style name="JaFlickableBackgroundIcon">
+        <item name="android:tag">.icon.action-color-bg</item>
+        <item name="android:background">?BgKeySlide</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
     <style name="JapaneseImeSpecificMaterialDarkTheme">
         <item name="IconSubCategorySymbolFullwidth">@drawable/ic_key_sub_category_full_material_dark</item>
+        <item name="PopupBubbleCoversSoftKey">@bool/japanese_popup_covers_soft_key</item>
+        <item name="PopupBubbleRectangularCoversSoftKey">@bool/japanese_popup_covers_soft_key</item>
     </style>
-    <style name="JapaneseMaterialDarkTheme">
+    <style name="JapaneseMaterialDarkTheme" parent="@style/JapaneseMozcDrawableTheme">
         <item name="BgKeySlide">@drawable/bg_ja_key_slide_selector_material_dark_theme</item>
         <item name="ColorKeyIconBound">#66ffffff</item>
         <item name="ColorKeyIconEnter">#ffffffff</item>
@@ -1542,25 +1603,42 @@
         <item name="ColorKeyIconGuideLight">?ColorLabelSupLight</item>
         <item name="ColorKeyIconMain">?ColorLabel</item>
         <item name="ColorKeyIconMainHighlight">?ColorLabel</item>
-        <item name="ColorKeyIconQwertyFunction">#99ffffff</item>
+        <item name="ColorKeyIconQwertyFunction">#b3ffffff</item>
         <item name="ColorKeyIconQwertyShiftOnArrow">#ff80cbc4</item>
-        <item name="ColorKeyIconTwelvekeysFunction">#99ffffff</item>
-        <item name="ColorKeyIconTwelvekeysGlobe">#99ffffff</item>
+        <item name="ColorKeyIconTwelvekeysFunction">#b3ffffff</item>
+        <item name="ColorKeyIconTwelvekeysGlobe">#b3ffffff</item>
         <item name="ColorKeyPopupHighlight">@android:color/transparent</item>
         <item name="ColorKeySlideIndicator">@color/slide_indicator_material_dark_theme</item>
         <item name="ColorKeyboardFoldingButtonBackgroundDefault">@android:color/transparent</item>
         <item name="ColorKeyboardFoldingButtonBackgroundScrolled">#cc384248</item>
-        <item name="ColorLabelSecondaryAnnocation">#66ffffff</item>
         <item name="ColorSymbolMajorSelected">#ffffffff</item>
         <item name="ColorSymbolMinorSelected">#ffffffff</item>
-        <item name="KeyboardCandidateBodyPaddingTop">0.0dip</item>
-        <item name="PopupBubbleCoversSoftKey">@bool/japanese_popup_covers_soft_key</item>
-        <item name="PopupBubbleRectangularCoversSoftKey">@bool/japanese_popup_covers_soft_key</item>
+    </style>
+    <style name="JapaneseMozcDrawableTheme">
+        <item name="IconJaSwitchToAlphabet">@raw/qwerty__function__kana__icon</item>
+        <item name="IconJaSwitchToHiragana">@raw/qwerty__function__alphabet__icon</item>
+        <item name="LayoutJaFunction">@layout/softkey_ja_function</item>
     </style>
     <style name="KeyTop">
         <item name="android:tag">.keytop</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="KeyTop.BigPanel" parent="@style/KeyTop">
+        <item name="android:tag">.keytop.for-numpad.for-numpad-big-panel</item>
+        <item name="android:background">?BgKeySmallInset</item>
+    </style>
+    <style name="KeyTop.BigPanel.BottomLeftCorner" parent="@style/KeyTop.BigPanel">
+        <item name="android:tag">.keytop.for-numpad.for-numpad-big-panel.corner-bottom-left</item>
+    </style>
+    <style name="KeyTop.BigPanel.BottomRightCorner" parent="@style/KeyTop.BigPanel">
+        <item name="android:tag">.keytop.for-numpad.for-numpad-big-panel.corner-bottom-right</item>
+    </style>
+    <style name="KeyTop.BigPanel.TopLeftCorner" parent="@style/KeyTop.BigPanel">
+        <item name="android:tag">.keytop.for-numpad.for-numpad-big-panel.corner-top-left</item>
+    </style>
+    <style name="KeyTop.BigPanel.TopRightCorner" parent="@style/KeyTop.BigPanel">
+        <item name="android:tag">.keytop.for-numpad.for-numpad-big-panel.corner-top-right</item>
     </style>
     <style name="KeyTop.Candidate" parent="@style/KeyTop">
         <item name="android:tag">.keytop.for-candidate-key</item>
@@ -1569,6 +1647,10 @@
     <style name="KeyTop.HeaderKey" parent="@style/KeyTop">
         <item name="android:tag">.keytop.transparent</item>
         <item name="android:background">?BgKeyHeader</item>
+    </style>
+    <style name="KeyTop.ImeActionInner" parent="@style/KeyTop">
+        <item name="android:gravity">center</item>
+        <item name="android:background">?BgKeyImeAction</item>
     </style>
     <style name="KeyTop.Rectangle" parent="@style/KeyTop">
         <item name="android:tag">.keytop.transparent</item>
@@ -1658,10 +1740,10 @@
     </style>
     <style name="KeyboardLayoutItemCardView">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">114.0dip</item>
-        <item name="android:foreground">@drawable/bg_keyboard_layout_candidate_selector</item>
-        <item name="cardBackgroundColor">@color/candidate_placeholder</item>
-        <item name="cardCornerRadius">2.0dip</item>
+        <item name="android:layout_height">104.0dip</item>
+        <item name="android:layout_margin">@dimen/keyboard_layout_item_margin</item>
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+        <item name="cardCornerRadius">6.0dip</item>
         <item name="cardElevation">2.0dip</item>
         <item name="cardUseCompatPadding">false</item>
     </style>
@@ -1670,7 +1752,7 @@
         <item name="BaseKeyboardBodyHeight">@dimen/keyboard_body_height</item>
         <item name="BgKeyBottomPaddedLayoutSelector">?BgKey</item>
         <item name="BgKeyDarkBottomPaddedLayoutSelector">?BgKeyDark</item>
-        <item name="BgKeyImeActionBottomPaddedLayoutSelector">?BgKeyImeAction</item>
+        <item name="BgKeyImeActionHolderBottomPaddedLayoutSelector">?BgKeyImeActionHolder</item>
         <item name="KeyboardBottomTabWeight">@integer/keyboard_bottom_tab_weight</item>
         <item name="KeyboardBottomWeight">@integer/keyboard_bottom_weight</item>
         <item name="KeyboardInputAreaWeight">@integer/keyboard_input_area_weight</item>
@@ -1770,22 +1852,25 @@
     </style>
     <style name="Label.AccessPointPanelItem" parent="@style/Label">
         <item name="android:textSize">12.0sp</item>
+        <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_marginTop">12.0dip</item>
     </style>
     <style name="Label.Big" parent="@style/Label">
         <item name="android:textSize">@dimen/text_size_big</item>
+        <item name="android:tag">.label.text-size-big</item>
     </style>
     <style name="Label.Candidate" parent="@style/Label">
         <item name="android:textSize">@dimen/text_size_candidate</item>
         <item name="android:textColor">?ColorLabelCandidate</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:tag">.label.for-candidate-key</item>
+        <item name="android:tag">.label.for-candidate-key.text-size-candidate</item>
         <item name="android:paddingLeft">@dimen/softkey_candidate_padding_left</item>
         <item name="android:paddingRight">@dimen/softkey_candidate_padding_right</item>
         <item name="android:layout_width">fill_parent</item>
     </style>
     <style name="Label.Digit" parent="@style/Label">
         <item name="android:textSize">@dimen/text_size_digit</item>
+        <item name="android:tag">.label.text-size-digit</item>
     </style>
     <style name="Label.Digit.PhoneNumber" parent="@style/Label.Digit">
         <item name="android:gravity">center|right</item>
@@ -1795,10 +1880,11 @@
     </style>
     <style name="Label.Emoji" parent="@style/Label">
         <item name="android:textSize">@dimen/text_size_emoji</item>
-        <item name="autoSizeTextType">uniform</item>
+        <item name="android:tag">.label.text-size-emoji</item>
     </style>
     <style name="Label.Emoji.Header" parent="@style/Label.Emoji">
         <item name="android:textSize">@dimen/text_size_emoji_header</item>
+        <item name="android:tag">.label.text-size-emoji-header</item>
     </style>
     <style name="Label.Emoji.Search" parent="@style/Label.Emoji">
         <item name="android:textColor">@color/label_material_light_theme</item>
@@ -1807,14 +1893,16 @@
     <style name="Label.FunctionKey" parent="@style/Label">
         <item name="android:textSize">@dimen/text_size_function_key</item>
         <item name="android:textColor">?ColorLabelFunctionKey</item>
-        <item name="android:tag">.label.for-function-key</item>
+        <item name="android:tag">.label.for-function-key.text-size-function-key</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="Label.FunctionKey.Medium" parent="@style/Label.FunctionKey">
         <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:tag">.label.for-function-key.text-size-medium</item>
     </style>
     <style name="Label.Medium" parent="@style/Label">
         <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:tag">.label.text-size-medium</item>
     </style>
     <style name="Label.Medium.Bottom" parent="@style/Label.Medium">
         <item name="android:layout_gravity">bottom|center</item>
@@ -1841,11 +1929,13 @@
     </style>
     <style name="Label.QwertyCenter" parent="@style/Label">
         <item name="android:textSize">@dimen/text_size_qwerty_label</item>
+        <item name="android:tag">.label.text-size-qwerty</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
     </style>
     <style name="Label.Small" parent="@style/Label">
         <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:tag">.label.text-size-small</item>
     </style>
     <style name="Label.Small.NonPrimeHeader" parent="@style/Label.Small">
         <item name="android:layout_width">fill_parent</item>
@@ -1869,14 +1959,15 @@
     </style>
     <style name="Label.Small.SpaceKeyText" parent="@style/Label.Small">
         <item name="android:textColor">?ColorLabelSpace</item>
-        <item name="android:tag">.label.for-space-key</item>
+        <item name="android:tag">.label.for-space-key.text-size-small</item>
     </style>
     <style name="Label.Tiny" parent="@style/Label">
         <item name="android:textSize">@dimen/text_size_tiny</item>
+        <item name="android:tag">.label.text-size-tiny</item>
     </style>
     <style name="Label.Tiny.SpaceKeyText" parent="@style/Label.Tiny">
         <item name="android:textColor">?ColorLabelSpace</item>
-        <item name="android:tag">.label.for-space-key</item>
+        <item name="android:tag">.label.for-space-key.text-size-tiny</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
     </style>
@@ -1884,7 +1975,7 @@
         <item name="android:textSize">@dimen/text_size_very_tiny</item>
         <item name="android:typeface">sans</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:tag">.label</item>
+        <item name="android:tag">.label.text-size-very-tiny</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">sans-serif</item>
@@ -1892,7 +1983,7 @@
     <style name="LabelSecondary.9Key" parent="@style/LabelSecondary">
         <item name="android:textColor">?ColorLabelSecondary</item>
         <item name="android:layout_gravity">center|right|top</item>
-        <item name="android:tag">.label.secondary</item>
+        <item name="android:tag">.label.secondary.text-size-very-tiny</item>
         <item name="android:paddingRight">@dimen/label_sup_right_padding</item>
     </style>
     <style name="LabelSecondary.Sub" parent="@style/LabelSecondary">
@@ -1902,9 +1993,9 @@
     </style>
     <style name="LabelSecondary.Sub.Annotation" parent="@style/LabelSecondary.Sub">
         <item name="android:textSize">@dimen/text_size_annotation</item>
-        <item name="android:textColor">?ColorLabelSecondaryAnnocation</item>
+        <item name="android:textColor">?ColorLabelSecondaryAnnotation</item>
         <item name="android:gravity">bottom</item>
-        <item name="android:tag">.label.secondary</item>
+        <item name="android:tag">.label.secondary.text-size-annotation</item>
         <item name="android:paddingLeft">@dimen/label_annotation_horizontal_padding</item>
         <item name="android:paddingRight">@dimen/label_annotation_horizontal_padding</item>
         <item name="android:paddingBottom">@dimen/label_annotation_bottom_padding</item>
@@ -1912,11 +2003,11 @@
     </style>
     <style name="LabelSecondary.Sub.Candidate" parent="@style/LabelSecondary.Sub">
         <item name="android:textColor">#ff888888</item>
-        <item name="android:tag">.label.secondary</item>
+        <item name="android:tag">.label.secondary.text-size-very-tiny</item>
     </style>
     <style name="LabelSecondary.Sup" parent="@style/LabelSecondary">
         <item name="android:layout_gravity">center|right|top</item>
-        <item name="android:tag">.label.secondary</item>
+        <item name="android:tag">.label.secondary.text-size-very-tiny</item>
         <item name="android:paddingRight">@dimen/label_sup_right_padding</item>
     </style>
     <style name="LabelSecondary.Sup.Dark" parent="@style/LabelSecondary.Sup">
@@ -2015,23 +2106,23 @@
         <item name="BgKeyDarkBottom">@drawable/bg_key_material_dark_theme_big_inset</item>
         <item name="BgKeyDarkBottomPadded">@drawable/bg_key_material_dark_theme_bottom_padded_inset</item>
         <item name="BgKeyDarkDenseBigInset">@drawable/bg_key_material_dark_theme_dense_big_inset</item>
-        <item name="BgKeyDarkDenseSmallInset">@drawable/bg_key_material_dark_theme_small_inset</item>
+        <item name="BgKeyDarkDenseMiddleInset">@drawable/bg_key_material_dark_theme_middle_inset</item>
+        <item name="BgKeyDarkMiddleInset">@drawable/bg_key_material_dark_theme_middle_inset</item>
         <item name="BgKeyDarkSmallInset">@drawable/bg_key_material_dark_theme_small_inset</item>
         <item name="BgKeyDashboardMask">@drawable/bg_key_snapshot_mask_material_dark_theme_selector</item>
         <item name="BgKeyDashboardPrevious">@drawable/bg_key_dashboard_previous_material_dark_theme</item>
         <item name="BgKeyDenseBigInset">@drawable/bg_key_material_dark_theme_dense_big_inset</item>
-        <item name="BgKeyDenseSmallInset">@drawable/bg_key_material_dark_theme_small_inset</item>
+        <item name="BgKeyDenseMiddleInset">@drawable/bg_key_material_dark_theme_middle_inset</item>
         <item name="BgKeyHeader">@drawable/bg_key_material_dark_theme_selector</item>
         <item name="BgKeyHeaderTabActive">@drawable/bg_key_header_tab_active_material_dark_theme_selector</item>
         <item name="BgKeyImeAction">@drawable/bg_transparent</item>
-        <item name="BgKeyImeActionBottom">@drawable/bg_transparent</item>
-        <item name="BgKeyImeActionOpaqueBottomPadded">@drawable/bg_transparent</item>
-        <item name="BgKeyImeActionSmallInset">@drawable/bg_transparent</item>
-        <item name="BgKeyMainCategoryActive">@drawable/bg_key_main_category_active_material_dark_theme_inset</item>
-        <item name="BgKeyMainCategoryDeactive">@drawable/bg_key_main_category_deactive_material_dark_theme_inset</item>
-        <item name="BgKeyNonPrimeHeaderActive">@drawable/bg_key_non_prime_header_active_material_dark_theme_selector</item>
-        <item name="BgKeyNonPrimeHeaderDeactive">@drawable/bg_key_material_dark_theme_selector</item>
-        <item name="BgKeyPressedSelector">@drawable/bg_key_material_dark_theme_selector</item>
+        <item name="BgKeyImeActionHolder">@drawable/bg_transparent</item>
+        <item name="BgKeyImeActionHolderBottom">@drawable/bg_transparent</item>
+        <item name="BgKeyImeActionHolderBottomPadded">@drawable/bg_transparent</item>
+        <item name="BgKeyImeActionHolderMiddleInset">@drawable/bg_transparent</item>
+        <item name="BgKeyImeActionHolderSmallInset">@drawable/bg_transparent</item>
+        <item name="BgKeyMiddleInset">@drawable/bg_key_material_dark_theme_middle_inset</item>
+        <item name="BgKeyNumberRow">@drawable/bg_key_material_dark_theme_number_row_inset</item>
         <item name="BgKeyRectPressedSelector">@drawable/bg_key_material_dark_theme_selector</item>
         <item name="BgKeyRectangle">@drawable/bg_key_material_dark_theme_selector</item>
         <item name="BgKeySmallInset">@drawable/bg_key_material_dark_theme_small_inset</item>
@@ -2057,7 +2148,6 @@
         <item name="BgSeparator">@drawable/ic_header_separator_material_dark_theme</item>
         <item name="BgShowMoreCandidatesButton">@drawable/bg_key_show_more_candidates_material_dark_theme_selector</item>
         <item name="BgSpaceLabel">@drawable/bg_key_space_label_material_dark_theme_inset</item>
-        <item name="BgSpaceLabelDigit">@drawable/bg_key_material_dark_theme_selector</item>
         <item name="BgSpaceTiny">@drawable/bg_key_space_tiny_normal_material_dark_theme</item>
         <item name="BgT9TabletMoreCandidatesHolder">@drawable/bg_transparent</item>
         <item name="BgT9TabletMoreCandidatesHolderRow">@drawable/bg_transparent</item>
@@ -2084,6 +2174,7 @@
         <item name="ColorLabelPopupFooter">@color/label_popup_footer_material_dark_theme</item>
         <item name="ColorLabelReadingTextCandidate">@color/label_reading_text_candidate_material_dark_theme</item>
         <item name="ColorLabelSecondary">@color/label_secondary_material_dark_theme</item>
+        <item name="ColorLabelSecondaryAnnotation">#66ffffff</item>
         <item name="ColorLabelSpace">@color/label_space_material_dark_theme</item>
         <item name="ColorLabelSupDark">@color/label_sup_dark_material_dark_theme</item>
         <item name="ColorLabelSupLight">@color/label_sup_light_material_dark_theme</item>
@@ -2091,8 +2182,8 @@
         <item name="ColorTranslateBoardLabel">@color/color_translate_board_label_material_dark_theme</item>
         <item name="IconAccessPointAnimationDot">@drawable/ic_access_points_animation_dot_dark_theme</item>
         <item name="IconAccessPointCloseOneHanded">@drawable/ic_access_point_close_one_handed_dark_theme</item>
-        <item name="IconAccessPointHandwriting">@drawable/ic_access_point_handwriting_dark_theme</item>
         <item name="IconAccessPointOneHanded">@drawable/ic_access_point_one_handed_dark_theme</item>
+        <item name="IconAccessPointQualityBugReport">@drawable/quantum_ic_bug_report_white_24</item>
         <item name="IconAccessPointSearch">@drawable/ic_access_point_search_dark_theme</item>
         <item name="IconAccessPointSetting">@drawable/ic_access_point_setting_dark_theme</item>
         <item name="IconAccessPointTextEditing">@drawable/ic_access_point_text_editing_dark_theme</item>
@@ -2101,10 +2192,9 @@
         <item name="IconAccessPointsCloseMenu">@drawable/ic_close_access_points_dark_theme</item>
         <item name="IconAccessPointsMenu">@drawable/ic_open_access_points_dark_theme</item>
         <item name="IconAlpha">179</item>
+        <item name="IconAlphaOpaque">179</item>
         <item name="IconArrowDown">@drawable/ic_key_arrow_down_enabled</item>
         <item name="IconArrowDownDisabled">@drawable/ic_key_arrow_down_disabled_dark_theme</item>
-        <item name="IconArrowLeft">@drawable/ic_key_arrow_left_selector_dark_theme</item>
-        <item name="IconArrowRight">@drawable/ic_key_arrow_right_selector_dark_theme</item>
         <item name="IconArrowUp">@drawable/ic_key_arrow_up_enabled</item>
         <item name="IconArrowUpDisabled">@drawable/ic_key_arrow_up_disabled_dark_theme</item>
         <item name="IconBarGreen">@drawable/ic_bar_green_material_dark_theme</item>
@@ -2151,8 +2241,6 @@
         <item name="IconShiftOn">@drawable/ic_key_shift_narrow_on_material_dark</item>
         <item name="IconShowMoreCandidatesClose">@drawable/ic_key_show_more_candidates_close_material_dark_theme</item>
         <item name="IconShowMoreCandidatesOpen">@drawable/ic_key_show_more_candidates_open_material_dark_theme</item>
-        <item name="IconSmiley">@drawable/ic_key_main_category_smiley_dark_theme</item>
-        <item name="IconSmileyActive">@drawable/ic_key_main_category_smiley_dark_theme</item>
         <item name="IconSpaceKey">@drawable/ic_key_space_white</item>
         <item name="IconSpaceKeyBadging">@drawable/ic_key_space_badging_material_dark_theme</item>
         <item name="IconStartEditingKeyboard">@drawable/ic_start_editing_keyboard_material_dark_theme</item>
@@ -2176,6 +2264,7 @@
         <item name="IconSwitchOneHandedAlpha">0.5</item>
         <item name="IconSwitchToEmoticon">@drawable/ic_key_main_category_emoticon_dark_theme</item>
         <item name="IconSwitchToEmoticonAsAction">@drawable/ic_key_main_category_emoticon_dark_theme</item>
+        <item name="IconSwitchToEmoticonPopupWithSymbols">@drawable/ic_key_main_category_emoticon_popup</item>
         <item name="IconSwitchToLeftHanded">@drawable/ic_key_switch_to_left_handed_mode_material_dark_theme</item>
         <item name="IconSwitchToLeftHandedArrow">@drawable/ic_one_handed_left_arrow_material_dark_theme</item>
         <item name="IconSwitchToLeftHandedDarkKey">@drawable/ic_key_switch_to_left_handed_mode</item>
@@ -2185,6 +2274,7 @@
         <item name="IconSwitchToRightHandedDarkKey">@drawable/ic_key_switch_to_right_handed_mode</item>
         <item name="IconSwitchToSmiley">@drawable/ic_key_main_category_smiley_dark_theme</item>
         <item name="IconSwitchToSmileyAsAction">@drawable/ic_key_main_category_smiley_dark_theme</item>
+        <item name="IconSwitchToSmileyPopupWithSymbols">@drawable/ic_key_main_category_smiley_popup</item>
         <item name="IconSymbolKeyboardPage1Flip">@drawable/ic_key_symbol_keyboard_page_1_flip_material_dark_theme</item>
         <item name="IconSymbolKeyboardPage2Flip">@drawable/ic_key_symbol_keyboard_page_2_flip_material_dark_theme</item>
         <item name="IconTapArrow">@drawable/ic_tap_arrow_dark_theme</item>
@@ -2199,13 +2289,6 @@
         <item name="OneHandedBgKeyboardBody">@drawable/bg_one_handed_keyboard_body_material_dark_theme</item>
         <item name="OneHandedBgMoreCandidatesHolder">@drawable/bg_one_handed_keyboard_more_candidates_holder_material_dark_theme</item>
     </style>
-    <style name="MaterialPopupContent" parent="@style/MaterialPopupView">
-        <item name="android:tag">.popup</item>
-        <item name="android:background">?BgPopupBackground</item>
-        <item name="android:paddingLeft">2.0dip</item>
-        <item name="android:paddingRight">2.0dip</item>
-        <item name="android:layout_margin">@dimen/material_popup_bubble_margin</item>
-    </style>
     <style name="MaterialPopupFooter" parent="@style/Label.Small">
         <item name="android:textColor">?ColorLabelPopupFooter</item>
         <item name="android:layout_gravity">bottom|center|right</item>
@@ -2217,11 +2300,19 @@
     </style>
     <style name="MaterialPopupImage">
         <item name="android:gravity">center</item>
+        <item name="android:tag">.icon.for-popup-item</item>
         <item name="android:scrollbars">none</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/material_popup_content_height</item>
         <item name="android:scaleType">center</item>
         <item name="android:minWidth">@dimen/material_popup_bubble_width</item>
+    </style>
+    <style name="MaterialPopupImage.JaTwelveKeys" parent="@style/MaterialPopupImage">
+        <item name="android:tag">.label</item>
+        <item name="android:padding">@dimen/keyboard_twelvekeys_popup_image_padding</item>
+        <item name="android:layout_width">@dimen/keyboard_twelvekeys_default_height</item>
+        <item name="android:layout_height">@dimen/keyboard_twelvekeys_default_height</item>
+        <item name="android:scaleType">fitCenter</item>
     </style>
     <style name="MaterialPopupLabel" parent="@style/Label">
         <item name="android:textSize">@dimen/text_size_huge</item>
@@ -2231,8 +2322,22 @@
         <item name="android:scrollbars">none</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/material_popup_content_height</item>
-        <item name="android:minWidth">@dimen/material_popup_bubble_width</item>
         <item name="android:lines">1</item>
+    </style>
+    <style name="MaterialPopupLabel.JaTwelveKeys" parent="@style/MaterialPopupLabel">
+        <item name="android:layout_width">@dimen/keyboard_twelvekeys_default_height</item>
+        <item name="android:layout_height">@dimen/keyboard_twelvekeys_default_height</item>
+    </style>
+    <style name="MaterialPopupOutline" parent="@style/MaterialPopupView">
+        <item name="android:tag">.popup</item>
+        <item name="android:background">?BgPopupBackground</item>
+        <item name="android:paddingLeft">2.0dip</item>
+        <item name="android:paddingRight">2.0dip</item>
+        <item name="android:layout_margin">@dimen/material_popup_bubble_margin</item>
+    </style>
+    <style name="MaterialPopupOutline.JaTwelveKeys" parent="@style/MaterialPopupOutline">
+        <item name="android:paddingLeft">0.0dip</item>
+        <item name="android:paddingRight">0.0dip</item>
     </style>
     <style name="MaterialPopupView">
         <item name="android:gravity">center|top</item>
@@ -2242,10 +2347,16 @@
         <item name="android:minWidth">@dimen/material_popup_bubble_width</item>
         <item name="android:minHeight">@dimen/material_popup_bubble_height</item>
     </style>
-    <style name="MaterialRectangularPopupContent">
-        <item name="android:layout_gravity">top</item>
+    <style name="MaterialPopupView.JaTwelveKeys" parent="@style/MaterialPopupView" />
+    <style name="MaterialRectangularPopupContentInner">
         <item name="android:orientation">vertical</item>
-        <item name="android:tag">.popup</item>
+        <item name="android:tag">.popup.for-popup-content-inner</item>
+        <item name="android:background">@drawable/bg_transparent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="MaterialRectangularPopupContentOuter">
+        <item name="android:tag">.popup.for-popup-content-outer</item>
         <item name="android:background">?BgPopupRectangularInset</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -2271,6 +2382,22 @@
         <item name="android:layout_width">0.0dip</item>
         <item name="android:layout_height">fill_parent</item>
     </style>
+    <style name="MoreCandidatesRightPanel">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">@integer/more_candidates_right_column_weight</item>
+    </style>
+    <style name="MoreCandidatesSeparator">
+        <item name="android:tag">.divider.vertical.for-candidate-side-panel</item>
+        <item name="android:paddingTop">@dimen/keyboard_body_padding_top</item>
+        <item name="android:paddingBottom">@dimen/more_candidates_side_panel_padding_bottom</item>
+        <item name="android:layout_width">1.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:src">?ColorMoreCandidatesSeparator</item>
+    </style>
+    <style name="MoreCandidatesSeparator.OnLeft" parent="@style/MoreCandidatesSeparator">
+        <item name="android:layout_gravity">left</item>
+    </style>
     <style name="MorePanelAccessPointsHolderView">
         <item name="android:gravity">center</item>
         <item name="android:orientation">horizontal</item>
@@ -2278,6 +2405,7 @@
         <item name="android:paddingRight">6.0dip</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
+        <item name="android:weightSum">@integer/weight_sum</item>
     </style>
     <style name="MorePanelShowMoreAppsButton">
         <item name="android:layout_gravity">bottom|center</item>
@@ -2318,7 +2446,7 @@
         <item name="MaxPageableCandidatesPerRow">@integer/one_handed_max_pageable_candidates_per_row</item>
         <item name="OneHandedKeyboardBodyHeight">?OneHandedKeyboardBodyHeightNormal</item>
     </style>
-    <style name="Platform.AppCompat.Light" parent="@android:style/Theme.Light">
+    <style name="Platform.AppCompat.Light" parent="@android:style/Theme.Holo.Light">
         <item name="android:colorForeground">@color/foreground_material_light</item>
         <item name="android:colorBackground">@color/background_material_light</item>
         <item name="android:backgroundDimAmount">0.6</item>
@@ -2352,25 +2480,25 @@
         <item name="android:textSelectHandleLeft">@drawable/abc_text_select_handle_left_mtrl_light</item>
         <item name="android:textSelectHandleRight">@drawable/abc_text_select_handle_right_mtrl_light</item>
         <item name="android:textSelectHandle">@drawable/abc_text_select_handle_middle_mtrl_light</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:textColorAlertDialogListItem">@color/abc_primary_text_material_light</item>
+        <item name="android:actionModeCutDrawable">?actionModeCutDrawable</item>
+        <item name="android:actionModeCopyDrawable">?actionModeCopyDrawable</item>
+        <item name="android:actionModePasteDrawable">?actionModePasteDrawable</item>
+        <item name="android:borderlessButtonStyle">?borderlessButtonStyle</item>
+        <item name="android:buttonBarStyle">?buttonBarStyle</item>
+        <item name="android:buttonBarButtonStyle">?buttonBarButtonStyle</item>
+        <item name="android:textColorHighlightInverse">@color/highlighted_text_material_dark</item>
+        <item name="android:textColorLinkInverse">?colorAccent</item>
+        <item name="android:actionModeSelectAllDrawable">?actionModeSelectAllDrawable</item>
+        <item name="android:listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="android:listPreferredItemPaddingRight">@dimen/abc_list_item_padding_horizontal_material</item>
     </style>
     <style name="Platform.ThemeOverlay.AppCompat" parent="" />
-    <style name="Platform.ThemeOverlay.AppCompat.Dark" parent="@style/Platform.ThemeOverlay.AppCompat">
-        <item name="android:autoCompleteTextViewStyle">@style/Widget.AppCompat.AutoCompleteTextView</item>
-        <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
-        <item name="actionBarItemBackground">@drawable/abc_item_background_holo_dark</item>
-        <item name="actionDropDownStyle">@style/Widget.AppCompat.Spinner.DropDown.ActionBar</item>
-        <item name="selectableItemBackground">@drawable/abc_item_background_holo_dark</item>
-    </style>
-    <style name="Platform.ThemeOverlay.AppCompat.Light" parent="@style/Platform.ThemeOverlay.AppCompat">
-        <item name="android:autoCompleteTextViewStyle">@style/Widget.AppCompat.Light.AutoCompleteTextView</item>
-        <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
-        <item name="actionBarItemBackground">@drawable/abc_item_background_holo_light</item>
-        <item name="actionDropDownStyle">@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar</item>
-        <item name="selectableItemBackground">@drawable/abc_item_background_holo_light</item>
-    </style>
-    <style name="Platform.Widget.AppCompat.Spinner" parent="@android:style/Widget.Spinner" />
+    <style name="Platform.Widget.AppCompat.Spinner" parent="@android:style/Widget.Holo.Spinner" />
     <style name="PopupImage">
         <item name="android:gravity">center</item>
+        <item name="android:tag">.icon.for-popup-item</item>
         <item name="android:scrollbars">none</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/popup_content_height</item>
@@ -2385,8 +2513,7 @@
         <item name="android:tag">.label.for-popup-item</item>
         <item name="android:scrollbars">none</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">@dimen/popup_content_height</item>
-        <item name="android:minWidth">@dimen/popup_bubble_width</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:lines">1</item>
     </style>
     <style name="Preference">
@@ -2489,25 +2616,10 @@
         <item name="android:weightSum">@integer/weight_sum</item>
     </style>
     <style name="ResultHeader">
-        <item name="android:tag">.keyboard-search-header-area.keyboard-body-area</item>
-        <item name="android:background">?BgKeyboardSearchHeader</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">@dimen/keyboard_header_height</item>
     </style>
     <style name="RtlOverlay.DialogWindowTitle.AppCompat" parent="@style/Base.DialogWindowTitle.AppCompat" />
-    <style name="RtlOverlay.Widget.AppCompat.ActionBar.TitleItem" parent="@android:style/Widget">
-        <item name="android:layout_gravity">center|left</item>
-        <item name="android:paddingRight">8.0dip</item>
-    </style>
-    <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem" parent="@android:style/Widget">
-        <item name="android:paddingRight">16.0dip</item>
-    </style>
-    <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.InternalGroup" parent="@android:style/Widget">
-        <item name="android:layout_marginLeft">16.0dip</item>
-    </style>
-    <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.Text" parent="@android:style/Widget">
-        <item name="android:layout_alignParentLeft">true</item>
-    </style>
     <style name="RtlOverlay.Widget.AppCompat.Search.DropDown" parent="@android:style/Widget">
         <item name="android:paddingLeft">@dimen/abc_dropdownitem_text_padding_left</item>
         <item name="android:paddingRight">4.0dip</item>
@@ -2555,15 +2667,6 @@
         <item name="OneHandedKeyboardBottomShadow">0.0dip</item>
     </style>
     <style name="SearchBorderedMaterialDarkTheme" parent="@style/SearchMaterialDarkTheme" />
-    <style name="SearchCandidateListHolder">
-        <item name="android:orientation">vertical</item>
-        <item name="android:id">@id/search_candidate_list_holder</item>
-        <item name="android:visibility">gone</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:divider">@drawable/search_candidate_divider</item>
-        <item name="android:showDividers">middle</item>
-    </style>
     <style name="SearchHeader">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -2571,15 +2674,6 @@
     <style name="SearchHeader.NonPrime" parent="@style/SearchHeader">
         <item name="android:tag">.keyboard-search-header-area.keyboard-body-area</item>
         <item name="android:background">?BgKeyboardSearchHeader</item>
-    </style>
-    <style name="SearchHeaderInnerView">
-        <item name="android:orientation">vertical</item>
-        <item name="android:id">@id/search_header_inner_view</item>
-        <item name="android:background">@android:color/white</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:divider">@drawable/search_box_divider</item>
-        <item name="android:showDividers">middle</item>
     </style>
     <style name="SearchMaterialDarkTheme" parent="@style/CommonElements">
         <item name="AddIcon">@drawable/quantum_ic_add_white_18</item>
@@ -2593,11 +2687,14 @@
         <item name="IconKeyboardBackspace">@drawable/quantum_ic_keyboard_backspace_white_24</item>
         <item name="IconSearchMagnifier">@drawable/quantum_ic_search_white_24</item>
         <item name="IconTabBitmoji">@drawable/ic_tab_dark_theme_bitmoji</item>
+        <item name="IconTabCamera">@drawable/quantum_ic_photo_camera_white_24</item>
         <item name="IconTabEmotion">@drawable/ic_tab_dark_theme_emoticon</item>
         <item name="IconTabGif">@drawable/ic_tab_dark_theme_gif</item>
         <item name="IconTabGifDisabled">@drawable/ic_tab_dark_theme_gif_disabled</item>
         <item name="IconTabSmiley">@drawable/ic_tab_dark_theme_emoji</item>
         <item name="IconTabSticker">@drawable/quantum_ic_sticker_white_18</item>
+        <item name="IconTabUniversalMedia">@drawable/ic_universal_search_black_24dp</item>
+        <item name="IconTabUniversalMediaDisabled">@drawable/ic_universal_search_disabled_black_24dp</item>
         <item name="NoConnectionIcon">@drawable/quantum_ic_cloud_off_white_48</item>
         <item name="NoStickerPackIcon">@drawable/ic_sticker_sad</item>
         <item name="RecentImagesIcon">@drawable/quantum_ic_query_builder_white_18</item>
@@ -2632,6 +2729,8 @@
         <item name="apLabel">@string/label_settings_access_point</item>
         <item name="apContentDescription">@string/settings_access_point_content_desc</item>
     </style>
+    <style name="SettingsButton" parent="@android:style/Widget.Holo.Button" />
+    <style name="SettingsButtonBorderlessColored" parent="@android:style/Widget.Holo.Button.Borderless" />
     <style name="SettingsButtonColored">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:background">@drawable/bg_settings_button_inset</item>
@@ -2647,15 +2746,12 @@
     <style name="SmallPopupLabel" parent="@style/PopupLabel">
         <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:layout_height">@dimen/popup_small_label_height</item>
-        <item name="android:minWidth">@dimen/popup_small_label_width</item>
     </style>
-    <style name="SmallSquarePopupLabel" parent="@style/Label">
+    <style name="SmallSquareAlwaysPressedPopupLabel" parent="@style/Label">
         <item name="android:textSize">@dimen/text_size_small</item>
         <item name="android:textColor">?ColorLabelPopup</item>
         <item name="android:gravity">center</item>
-        <item name="android:tag">.label.for-popup-item</item>
-        <item name="android:background">?BgPopupSquareHighlight</item>
+        <item name="android:tag">.label.for-popup-item.always-pressed-popup-item</item>
         <item name="android:paddingLeft">@dimen/popup_small_square_label_left_right_padding</item>
         <item name="android:paddingTop">@dimen/popup_small_square_label_top_bottom_padding</item>
         <item name="android:paddingRight">@dimen/popup_small_square_label_left_right_padding</item>
@@ -2686,12 +2782,21 @@
         <item name="android:tag">.keytop.dark</item>
         <item name="android:background">?BgKeyDark</item>
     </style>
+    <style name="SoftKey.BigInset.Dark.InColumn" parent="@style/SoftKey.BigInset.Dark">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
+    </style>
     <style name="SoftKey.BigInset.DelayPressEffect" parent="@style/SoftKey.BigInset">
         <item name="DelayPressEffect">true</item>
     </style>
     <style name="SoftKey.BigInset.ImeAction" parent="@style/SoftKey.BigInset">
-        <item name="android:tag">.keytop.for-action-key</item>
-        <item name="android:background">?BgKeyImeAction</item>
+        <item name="android:tag">.keytop.for-action-key-holder</item>
+        <item name="android:background">?BgKeyImeActionHolder</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+    <style name="SoftKey.BigInset.ImeAction.InColumn" parent="@style/SoftKey.BigInset.ImeAction">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
     </style>
     <style name="SoftKey.Bottom" parent="@style/SoftKey">
         <item name="android:background">?BgKeyBottom</item>
@@ -2700,31 +2805,22 @@
         <item name="android:tag">.keytop.dark</item>
         <item name="android:background">?BgKeyDarkBottom</item>
     </style>
+    <style name="SoftKey.Bottom.Dark.InColumn" parent="@style/SoftKey.Bottom.Dark">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
+    </style>
     <style name="SoftKey.Bottom.ImeAction" parent="@style/SoftKey.Bottom">
-        <item name="android:tag">.keytop.for-action-key</item>
-        <item name="android:background">?BgKeyImeActionBottom</item>
+        <item name="android:tag">.keytop.for-action-key-holder</item>
+        <item name="android:background">?BgKeyImeActionHolderBottom</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+    <style name="SoftKey.Bottom.ImeAction.InColumn" parent="@style/SoftKey.Bottom.ImeAction">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
     </style>
     <style name="SoftKey.Bottom.Space" parent="@style/SoftKey.Bottom">
+        <item name="android:tag">.keytop.for-space-bar</item>
         <item name="android:background">?BgKeySpaceBottom</item>
-    </style>
-    <style name="SoftKey.BottomPadded" parent="@style/SoftKey">
-        <item name="android:background">?BgKeyBottomPaddedLayoutSelector</item>
-    </style>
-    <style name="SoftKey.BottomPadded.Dark" parent="@style/SoftKey.BottomPadded">
-        <item name="android:tag">.keytop.dark</item>
-        <item name="android:background">?BgKeyDarkBottomPaddedLayoutSelector</item>
-    </style>
-    <style name="SoftKey.BottomPadded.Dark.InColumn" parent="@style/SoftKey.BottomPadded.Dark">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">0.0dip</item>
-    </style>
-    <style name="SoftKey.BottomPadded.ImeAction" parent="@style/SoftKey.BottomPadded">
-        <item name="android:tag">.keytop.for-action-key</item>
-        <item name="android:background">?BgKeyImeActionBottomPaddedLayoutSelector</item>
-    </style>
-    <style name="SoftKey.BottomPadded.ImeAction.InColumn" parent="@style/SoftKey.BottomPadded.ImeAction">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">0.0dip</item>
     </style>
     <style name="SoftKey.SmallInset" parent="@style/SoftKey">
         <item name="android:background">?BgKeySmallInset</item>
@@ -2737,13 +2833,29 @@
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">0.0dip</item>
     </style>
+    <style name="SoftKey.SmallInset.Dark.InColumn.Numpad" parent="@style/SoftKey.SmallInset.Dark.InColumn">
+        <item name="android:tag">.keytop.dark.for-numpad</item>
+    </style>
+    <style name="SoftKey.SmallInset.Dark.Numpad" parent="@style/SoftKey.SmallInset.Dark">
+        <item name="android:tag">.keytop.dark.for-numpad</item>
+    </style>
     <style name="SoftKey.SmallInset.ImeAction" parent="@style/SoftKey.SmallInset">
-        <item name="android:tag">.keytop.for-action-key</item>
-        <item name="android:background">?BgKeyImeActionSmallInset</item>
+        <item name="android:tag">.keytop.for-action-key-holder</item>
+        <item name="android:background">?BgKeyImeActionHolderSmallInset</item>
+        <item name="android:clipToPadding">false</item>
     </style>
     <style name="SoftKey.SmallInset.ImeAction.InColumn" parent="@style/SoftKey.SmallInset.ImeAction">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">0.0dip</item>
+    </style>
+    <style name="SoftKey.SmallInset.ImeAction.InColumn.Numpad" parent="@style/SoftKey.SmallInset.ImeAction.InColumn">
+        <item name="android:tag">.keytop.for-action-key-holder.for-numpad</item>
+    </style>
+    <style name="SoftKey.SmallInset.ImeAction.Numpad" parent="@style/SoftKey.SmallInset.ImeAction">
+        <item name="android:tag">.keytop.for-action-key-holder.for-numpad</item>
+    </style>
+    <style name="SoftKey.SmallInset.Numpad" parent="@style/SoftKey.SmallInset">
+        <item name="android:tag">.keytop.for-numpad</item>
     </style>
     <style name="SoftKey.Transparent" parent="@style/SoftKey">
         <item name="android:tag">.keytop.transparent</item>
@@ -2835,17 +2947,24 @@
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
     </style>
-    <style name="SquarePopupImage" parent="@style/PopupImage">
+    <style name="SquareAlwaysPressedPopupContent">
+        <item name="android:tag">.popup-item.always-pressed-popup-item</item>
         <item name="android:background">?BgPopupSquareHighlight</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="SquareAlwaysPressedPopupImage" parent="@style/PopupImage">
+        <item name="android:tag">.icon.for-popup-item.always-pressed-popup-item</item>
         <item name="android:paddingBottom">@dimen/square_popup_padding_bottom</item>
         <item name="android:layout_height">@dimen/square_popup_content_height</item>
     </style>
-    <style name="SquarePopupLabel" parent="@style/PopupLabel">
-        <item name="android:background">?BgPopupSquareHighlight</item>
+    <style name="SquareAlwaysPressedPopupLabel" parent="@style/PopupLabel">
+        <item name="android:tag">.label.for-popup-item.always-pressed-popup-item</item>
         <item name="android:paddingLeft">8.0dip</item>
         <item name="android:paddingRight">8.0dip</item>
         <item name="android:paddingBottom">@dimen/square_popup_padding_bottom</item>
         <item name="android:layout_height">@dimen/square_popup_content_height</item>
+        <item name="android:minWidth">@dimen/popup_bubble_width</item>
     </style>
     <style name="StyleSheetTheme">
         <item name="BgAccessPointIcon">@drawable/bg_access_point_icon_opaque</item>
@@ -2861,16 +2980,13 @@
         <item name="BgKeyDarkBottom">?BgKeyOpaqueBottom</item>
         <item name="BgKeyDarkBottomPadded">?BgKeyOpaqueBottomPadded</item>
         <item name="BgKeyDarkDenseBigInset">?BgKeyOpaqueDenseBigInset</item>
-        <item name="BgKeyDarkDenseSmallInset">?BgKeyOpaqueDenseSmallInset</item>
+        <item name="BgKeyDarkDenseMiddleInset">?BgKeyOpaqueDenseMiddleInset</item>
         <item name="BgKeyDarkSmallInset">?BgKeyOpaqueSmallInset</item>
         <item name="BgKeyDashboardMask">?BgKeyDashboardMaskOpaque</item>
         <item name="BgKeyDenseBigInset">?BgKeyOpaqueDenseBigInset</item>
-        <item name="BgKeyDenseSmallInset">?BgKeyOpaqueDenseSmallInset</item>
+        <item name="BgKeyDenseMiddleInset">?BgKeyOpaqueDenseMiddleInset</item>
         <item name="BgKeyHeader">?BgKeyHeaderOpaque</item>
         <item name="BgKeyImeAction">?BgKeyImeActionOpaque</item>
-        <item name="BgKeyImeActionBottom">?BgKeyImeActionOpaqueBottom</item>
-        <item name="BgKeyImeActionBottomPadded">?BgKeyImeActionOpaqueBottomPadded</item>
-        <item name="BgKeyImeActionSmallInset">?BgKeyImeActionOpaqueSmallInset</item>
         <item name="BgKeyRectangle">?BgKeyRectangleOpaque</item>
         <item name="BgKeySmallInset">?BgKeyOpaqueSmallInset</item>
         <item name="BgKeySpaceBottom">?BgKeySpaceOpaqueBottom</item>
@@ -2879,7 +2995,6 @@
         <item name="BgPrimePageSwitch">?BgPrimePageSwitchOpaque</item>
         <item name="BgReadingTextCandidatesScrollerThumb">@drawable/bg_reading_text_candidate_scroller_thumb_style_sheet_theme</item>
         <item name="BgSpaceLabel">?BgSpaceLabelOpaque</item>
-        <item name="BgSpaceLabelDigit">?BgSpaceLabelDigitOpaque</item>
         <item name="BgSpaceTiny">?BgSpaceTinyOpaque</item>
         <item name="BgTextEditingBodySoftKey">@color/opaque</item>
         <item name="BgTextEditingSeparator">@color/opaque</item>
@@ -2891,6 +3006,7 @@
         <item name="ColorKeyboardTopSeparator">@color/opaque</item>
         <item name="ColorLabelComposingText">@color/label_composing_text_style_sheet_theme</item>
         <item name="ColorMoreCandidatesSeparator">@color/opaque</item>
+        <item name="IconAlphaOpaque">255</item>
         <item name="IconNonPrimeKeyboardPageIndicator">@drawable/bg_opaque</item>
         <item name="IconOneTapToSearchAlpha">255</item>
         <item name="IconSpaceKeyBadging">@drawable/ic_key_space_badging_opaque</item>
@@ -2917,6 +3033,10 @@
         <item name="android:layout_width">0.0dip</item>
         <item name="android:layout_height">fill_parent</item>
         <item name="android:layout_weight">@integer/keyboard_9key_left_panel_weight</item>
+    </style>
+    <style name="T9KeyboardLeftPanel.BigPanel" parent="@style/T9KeyboardLeftPanel">
+        <item name="android:tag">.keytop.dark.for-scrollable-key-holder.for-numpad</item>
+        <item name="android:background">?BgKeyDarkSmallInset</item>
     </style>
     <style name="T9KeyboardRightPanel">
         <item name="android:layout_width">0.0dip</item>
@@ -3051,17 +3171,8 @@
     <style name="TextAppearance.LeanbackBase" parent="@android:style/TextAppearance.Holo" />
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle" />
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Title" parent="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title" />
-    <style name="TextCategory" parent="@style/TouchAware.Borderless">
-        <item name="android:textSize">@dimen/minimum_candidate_text_size</item>
-        <item name="android:textColor">?CategoryTextLabelColor</item>
-        <item name="android:id">@id/category_text_label</item>
-        <item name="android:tag">.label.for-category-key.for-gif-keyboard</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
     <style name="Theme.AppCompat.CompactMenu" parent="@style/Base.Theme.AppCompat.CompactMenu" />
     <style name="Theme.AppCompat.Light" parent="@style/Base.Theme.AppCompat.Light" />
-    <style name="Theme.AppCompat.Light.DarkActionBar" parent="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
     <style name="Theme.Leanback" parent="@style/Theme.LeanbackBase">
         <item name="browsePaddingStart">@dimen/lb_browse_padding_start</item>
         <item name="browsePaddingEnd">@dimen/lb_browse_padding_end</item>
@@ -3239,21 +3350,25 @@
     <style name="ThemeDetailsDeleteButton">
         <item name="android:id">@id/theme_details_button_delete_theme</item>
         <item name="android:background">?android:selectableItemBackground</item>
-        <item name="android:padding">12.0dip</item>
+        <item name="android:paddingLeft">12.0dip</item>
+        <item name="android:paddingRight">12.0dip</item>
         <item name="android:visibility">gone</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:src">@drawable/quantum_ic_delete_grey600_24</item>
+        <item name="android:minHeight">48.0dip</item>
         <item name="android:contentDescription">@string/theme_builder_delete_button_text</item>
     </style>
     <style name="ThemeDetailsEditButton">
         <item name="android:id">@id/theme_details_button_edit_theme</item>
         <item name="android:background">?android:selectableItemBackground</item>
-        <item name="android:padding">12.0dip</item>
+        <item name="android:paddingLeft">12.0dip</item>
+        <item name="android:paddingRight">12.0dip</item>
         <item name="android:visibility">gone</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:src">@drawable/quantum_ic_edit_grey600_24</item>
+        <item name="android:minHeight">48.0dip</item>
         <item name="android:contentDescription">@string/theme_builder_edit_button_text</item>
     </style>
     <style name="ThemeDetailsKeyBorderSwitch">
@@ -3287,6 +3402,7 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="ThemeDetailsSwitchHolder">
+        <item name="android:gravity">center_vertical</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">#ffffffff</item>
         <item name="android:paddingLeft">24.0dip</item>
@@ -3295,17 +3411,6 @@
         <item name="android:paddingBottom">12.0dip</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
-    </style>
-    <style name="ThemeListingCategoryText">
-        <item name="android:gravity">bottom</item>
-        <item name="android:paddingLeft">8.0dip</item>
-        <item name="android:paddingTop">8.0dip</item>
-        <item name="android:paddingRight">8.0dip</item>
-        <item name="android:paddingBottom">6.0dip</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:minWidth">48.0dip</item>
-        <item name="android:minHeight">48.0dip</item>
     </style>
     <style name="ThemeListingItemCardView">
         <item name="android:layout_width">@dimen/theme_listing_item_width</item>
@@ -3317,10 +3422,8 @@
         <item name="cardUseCompatPadding">false</item>
     </style>
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="@style/Base.ThemeOverlay.AppCompat.ActionBar" />
-    <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="ThemeOverlay.AppCompat.Dialog" parent="@style/Base.ThemeOverlay.AppCompat.Dialog" />
     <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="@style/Base.ThemeOverlay.AppCompat.Dialog.Alert" />
-    <style name="ThemeOverlay.AppCompat.Light" parent="@style/Base.ThemeOverlay.AppCompat.Light" />
     <style name="ThemeSelectorCandidate">
         <item name="android:layout_width">@dimen/theme_selector_candidate_width</item>
         <item name="android:layout_height">@dimen/theme_selector_candidate_height</item>
@@ -3466,13 +3569,12 @@
     </style>
     <style name="ThreePartRowFrame.End" parent="@style/ThreePartRowFrame">
         <item name="android:layout_gravity">end|center</item>
+        <item name="android:layout_centerVertical">true</item>
         <item name="android:layout_marginStart">4.0dip</item>
         <item name="android:layout_marginEnd">5.0dip</item>
+        <item name="android:layout_alignParentEnd">true</item>
     </style>
     <style name="TouchAware">
-        <item name="android:background">@android:color/transparent</item>
-    </style>
-    <style name="TouchAware.Borderless" parent="@style/TouchAware">
         <item name="android:background">@android:color/transparent</item>
     </style>
     <style name="UserDictionaryToolDialog">
@@ -3509,7 +3611,6 @@
     <style name="Widget.AppCompat.Light.ActionBar.TabView" parent="@style/Base.Widget.AppCompat.Light.ActionBar.TabView" />
     <style name="Widget.AppCompat.Light.ActionButton" parent="@style/Widget.AppCompat.ActionButton" />
     <style name="Widget.AppCompat.Light.ActionButton.Overflow" parent="@style/Widget.AppCompat.ActionButton.Overflow" />
-    <style name="Widget.AppCompat.Light.AutoCompleteTextView" parent="@style/Widget.AppCompat.AutoCompleteTextView" />
     <style name="Widget.AppCompat.Light.PopupMenu" parent="@style/Base.Widget.AppCompat.Light.PopupMenu" />
     <style name="Widget.AppCompat.Light.PopupMenu.Overflow" parent="@style/Base.Widget.AppCompat.Light.PopupMenu.Overflow" />
     <style name="Widget.AppCompat.Light.SearchView" parent="@style/Widget.AppCompat.SearchView" />
@@ -3528,7 +3629,6 @@
     <style name="Widget.AppCompat.Spinner" parent="@style/Base.Widget.AppCompat.Spinner" />
     <style name="Widget.AppCompat.Spinner.DropDown" parent="@style/Widget.AppCompat.Spinner" />
     <style name="Widget.AppCompat.Spinner.DropDown.ActionBar" parent="@style/Widget.AppCompat.Spinner.DropDown" />
-    <style name="Widget.AppCompat.Spinner.Underlined" parent="@style/Base.Widget.AppCompat.Spinner.Underlined" />
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="@style/Base.Widget.AppCompat.TextView.SpinnerItem" />
     <style name="Widget.AppCompat.Toolbar" parent="@style/Base.Widget.AppCompat.Toolbar" />
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="@style/Base.Widget.AppCompat.Toolbar.Button.Navigation" />
@@ -3987,6 +4087,7 @@
     </style>
     <style name="Widget.LeanbackBase" parent="@android:style/Widget.Holo" />
     <item type="style" name="APKTOOL_DUMMY_4">false</item>
+    <item type="style" name="APKTOOL_DUMMY_6">false</item>
     <item type="style" name="APKTOOL_DUMMY_b">false</item>
     <item type="style" name="APKTOOL_DUMMY_16">false</item>
     <item type="style" name="APKTOOL_DUMMY_18">false</item>
@@ -4008,11 +4109,15 @@
     <item type="style" name="APKTOOL_DUMMY_46">false</item>
     <item type="style" name="APKTOOL_DUMMY_47">false</item>
     <item type="style" name="APKTOOL_DUMMY_48">false</item>
+    <item type="style" name="APKTOOL_DUMMY_4a">false</item>
     <item type="style" name="APKTOOL_DUMMY_4b">false</item>
     <item type="style" name="APKTOOL_DUMMY_4c">false</item>
     <item type="style" name="APKTOOL_DUMMY_4d">false</item>
     <item type="style" name="APKTOOL_DUMMY_4e">false</item>
     <item type="style" name="APKTOOL_DUMMY_4f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_52">false</item>
+    <item type="style" name="APKTOOL_DUMMY_53">false</item>
+    <item type="style" name="APKTOOL_DUMMY_56">false</item>
     <item type="style" name="APKTOOL_DUMMY_57">false</item>
     <item type="style" name="APKTOOL_DUMMY_58">false</item>
     <item type="style" name="APKTOOL_DUMMY_5a">false</item>
@@ -4025,182 +4130,171 @@
     <item type="style" name="APKTOOL_DUMMY_8a">false</item>
     <item type="style" name="APKTOOL_DUMMY_8b">false</item>
     <item type="style" name="APKTOOL_DUMMY_92">false</item>
-    <item type="style" name="APKTOOL_DUMMY_9e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_94">false</item>
+    <item type="style" name="APKTOOL_DUMMY_9d">false</item>
     <item type="style" name="APKTOOL_DUMMY_9f">false</item>
-    <item type="style" name="APKTOOL_DUMMY_a3">false</item>
-    <item type="style" name="APKTOOL_DUMMY_b0">false</item>
-    <item type="style" name="APKTOOL_DUMMY_b1">false</item>
-    <item type="style" name="APKTOOL_DUMMY_ba">false</item>
-    <item type="style" name="APKTOOL_DUMMY_bb">false</item>
-    <item type="style" name="APKTOOL_DUMMY_bd">false</item>
-    <item type="style" name="APKTOOL_DUMMY_bf">false</item>
-    <item type="style" name="APKTOOL_DUMMY_c1">false</item>
-    <item type="style" name="APKTOOL_DUMMY_c2">false</item>
-    <item type="style" name="APKTOOL_DUMMY_c3">false</item>
-    <item type="style" name="APKTOOL_DUMMY_c4">false</item>
-    <item type="style" name="APKTOOL_DUMMY_cb">false</item>
-    <item type="style" name="APKTOOL_DUMMY_cd">false</item>
-    <item type="style" name="APKTOOL_DUMMY_d6">false</item>
-    <item type="style" name="APKTOOL_DUMMY_db">false</item>
-    <item type="style" name="APKTOOL_DUMMY_de">false</item>
-    <item type="style" name="APKTOOL_DUMMY_e7">false</item>
-    <item type="style" name="APKTOOL_DUMMY_ed">false</item>
+    <item type="style" name="APKTOOL_DUMMY_a6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_b6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_b7">false</item>
+    <item type="style" name="APKTOOL_DUMMY_c9">false</item>
+    <item type="style" name="APKTOOL_DUMMY_d2">false</item>
+    <item type="style" name="APKTOOL_DUMMY_d4">false</item>
+    <item type="style" name="APKTOOL_DUMMY_dd">false</item>
+    <item type="style" name="APKTOOL_DUMMY_e2">false</item>
+    <item type="style" name="APKTOOL_DUMMY_e5">false</item>
     <item type="style" name="APKTOOL_DUMMY_ee">false</item>
-    <item type="style" name="APKTOOL_DUMMY_ef">false</item>
-    <item type="style" name="APKTOOL_DUMMY_f0">false</item>
-    <item type="style" name="APKTOOL_DUMMY_f1">false</item>
-    <item type="style" name="APKTOOL_DUMMY_f9">false</item>
-    <item type="style" name="APKTOOL_DUMMY_fb">false</item>
+    <item type="style" name="APKTOOL_DUMMY_f4">false</item>
+    <item type="style" name="APKTOOL_DUMMY_f5">false</item>
+    <item type="style" name="APKTOOL_DUMMY_f6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_f7">false</item>
+    <item type="style" name="APKTOOL_DUMMY_f8">false</item>
+    <item type="style" name="APKTOOL_DUMMY_100">false</item>
     <item type="style" name="APKTOOL_DUMMY_102">false</item>
-    <item type="style" name="APKTOOL_DUMMY_103">false</item>
-    <item type="style" name="APKTOOL_DUMMY_104">false</item>
-    <item type="style" name="APKTOOL_DUMMY_105">false</item>
     <item type="style" name="APKTOOL_DUMMY_109">false</item>
-    <item type="style" name="APKTOOL_DUMMY_10d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_10a">false</item>
     <item type="style" name="APKTOOL_DUMMY_110">false</item>
-    <item type="style" name="APKTOOL_DUMMY_117">false</item>
-    <item type="style" name="APKTOOL_DUMMY_11a">false</item>
-    <item type="style" name="APKTOOL_DUMMY_120">false</item>
-    <item type="style" name="APKTOOL_DUMMY_123">false</item>
-    <item type="style" name="APKTOOL_DUMMY_129">false</item>
-    <item type="style" name="APKTOOL_DUMMY_12c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_111">false</item>
+    <item type="style" name="APKTOOL_DUMMY_115">false</item>
+    <item type="style" name="APKTOOL_DUMMY_118">false</item>
+    <item type="style" name="APKTOOL_DUMMY_11f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_122">false</item>
+    <item type="style" name="APKTOOL_DUMMY_128">false</item>
+    <item type="style" name="APKTOOL_DUMMY_12b">false</item>
     <item type="style" name="APKTOOL_DUMMY_132">false</item>
+    <item type="style" name="APKTOOL_DUMMY_133">false</item>
+    <item type="style" name="APKTOOL_DUMMY_134">false</item>
     <item type="style" name="APKTOOL_DUMMY_135">false</item>
-    <item type="style" name="APKTOOL_DUMMY_138">false</item>
     <item type="style" name="APKTOOL_DUMMY_13f">false</item>
-    <item type="style" name="APKTOOL_DUMMY_141">false</item>
-    <item type="style" name="APKTOOL_DUMMY_142">false</item>
-    <item type="style" name="APKTOOL_DUMMY_143">false</item>
-    <item type="style" name="APKTOOL_DUMMY_144">false</item>
     <item type="style" name="APKTOOL_DUMMY_145">false</item>
-    <item type="style" name="APKTOOL_DUMMY_147">false</item>
     <item type="style" name="APKTOOL_DUMMY_149">false</item>
-    <item type="style" name="APKTOOL_DUMMY_14e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_14f">false</item>
     <item type="style" name="APKTOOL_DUMMY_150">false</item>
     <item type="style" name="APKTOOL_DUMMY_151">false</item>
-    <item type="style" name="APKTOOL_DUMMY_152">false</item>
     <item type="style" name="APKTOOL_DUMMY_153">false</item>
     <item type="style" name="APKTOOL_DUMMY_154">false</item>
-    <item type="style" name="APKTOOL_DUMMY_166">false</item>
+    <item type="style" name="APKTOOL_DUMMY_155">false</item>
+    <item type="style" name="APKTOOL_DUMMY_157">false</item>
+    <item type="style" name="APKTOOL_DUMMY_158">false</item>
     <item type="style" name="APKTOOL_DUMMY_167">false</item>
     <item type="style" name="APKTOOL_DUMMY_168">false</item>
     <item type="style" name="APKTOOL_DUMMY_169">false</item>
-    <item type="style" name="APKTOOL_DUMMY_179">false</item>
-    <item type="style" name="APKTOOL_DUMMY_17a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_16a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_17c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_17d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_17e">false</item>
     <item type="style" name="APKTOOL_DUMMY_17f">false</item>
-    <item type="style" name="APKTOOL_DUMMY_185">false</item>
-    <item type="style" name="APKTOOL_DUMMY_18b">false</item>
     <item type="style" name="APKTOOL_DUMMY_18f">false</item>
     <item type="style" name="APKTOOL_DUMMY_190">false</item>
-    <item type="style" name="APKTOOL_DUMMY_192">false</item>
-    <item type="style" name="APKTOOL_DUMMY_19d">false</item>
-    <item type="style" name="APKTOOL_DUMMY_19e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_19f">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1a0">false</item>
+    <item type="style" name="APKTOOL_DUMMY_195">false</item>
+    <item type="style" name="APKTOOL_DUMMY_19b">false</item>
     <item type="style" name="APKTOOL_DUMMY_1a1">false</item>
     <item type="style" name="APKTOOL_DUMMY_1a5">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1a6">false</item>
     <item type="style" name="APKTOOL_DUMMY_1a8">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1a9">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1b8">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1bc">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1b3">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1b4">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1b5">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1b6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1b7">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1bb">false</item>
     <item type="style" name="APKTOOL_DUMMY_1be">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1c9">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1ca">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1cb">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1cc">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1cd">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1bf">false</item>
     <item type="style" name="APKTOOL_DUMMY_1ce">false</item>
     <item type="style" name="APKTOOL_DUMMY_1d2">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1d3">false</item>
     <item type="style" name="APKTOOL_DUMMY_1d4">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1d5">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1d6">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1da">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1e4">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1df">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1e5">false</item>
     <item type="style" name="APKTOOL_DUMMY_1e6">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1e9">false</item>
     <item type="style" name="APKTOOL_DUMMY_1ea">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1ec">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1ed">false</item>
     <item type="style" name="APKTOOL_DUMMY_1ee">false</item>
     <item type="style" name="APKTOOL_DUMMY_1ef">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1f0">false</item>
     <item type="style" name="APKTOOL_DUMMY_1f1">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1f3">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1f2">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1f4">false</item>
     <item type="style" name="APKTOOL_DUMMY_1f5">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1f6">false</item>
     <item type="style" name="APKTOOL_DUMMY_1f7">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1fa">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1fd">false</item>
-    <item type="style" name="APKTOOL_DUMMY_201">false</item>
-    <item type="style" name="APKTOOL_DUMMY_202">false</item>
-    <item type="style" name="APKTOOL_DUMMY_203">false</item>
-    <item type="style" name="APKTOOL_DUMMY_205">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1f9">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1fc">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1ff">false</item>
+    <item type="style" name="APKTOOL_DUMMY_200">false</item>
     <item type="style" name="APKTOOL_DUMMY_206">false</item>
-    <item type="style" name="APKTOOL_DUMMY_207">false</item>
+    <item type="style" name="APKTOOL_DUMMY_208">false</item>
     <item type="style" name="APKTOOL_DUMMY_20b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_21d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_20c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_20e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_210">false</item>
+    <item type="style" name="APKTOOL_DUMMY_211">false</item>
+    <item type="style" name="APKTOOL_DUMMY_213">false</item>
+    <item type="style" name="APKTOOL_DUMMY_215">false</item>
+    <item type="style" name="APKTOOL_DUMMY_217">false</item>
+    <item type="style" name="APKTOOL_DUMMY_219">false</item>
+    <item type="style" name="APKTOOL_DUMMY_21c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_21f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_223">false</item>
+    <item type="style" name="APKTOOL_DUMMY_224">false</item>
     <item type="style" name="APKTOOL_DUMMY_225">false</item>
-    <item type="style" name="APKTOOL_DUMMY_226">false</item>
     <item type="style" name="APKTOOL_DUMMY_227">false</item>
     <item type="style" name="APKTOOL_DUMMY_228">false</item>
+    <item type="style" name="APKTOOL_DUMMY_229">false</item>
+    <item type="style" name="APKTOOL_DUMMY_22c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_22d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_22e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_22f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_230">false</item>
     <item type="style" name="APKTOOL_DUMMY_231">false</item>
-    <item type="style" name="APKTOOL_DUMMY_232">false</item>
-    <item type="style" name="APKTOOL_DUMMY_235">false</item>
-    <item type="style" name="APKTOOL_DUMMY_236">false</item>
-    <item type="style" name="APKTOOL_DUMMY_239">false</item>
-    <item type="style" name="APKTOOL_DUMMY_23b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_242">false</item>
-    <item type="style" name="APKTOOL_DUMMY_243">false</item>
-    <item type="style" name="APKTOOL_DUMMY_244">false</item>
-    <item type="style" name="APKTOOL_DUMMY_245">false</item>
+    <item type="style" name="APKTOOL_DUMMY_23d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_240">false</item>
+    <item type="style" name="APKTOOL_DUMMY_241">false</item>
+    <item type="style" name="APKTOOL_DUMMY_24a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_24b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_24c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_24d">false</item>
     <item type="style" name="APKTOOL_DUMMY_256">false</item>
-    <item type="style" name="APKTOOL_DUMMY_257">false</item>
     <item type="style" name="APKTOOL_DUMMY_25b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_25f">false</item>
-    <item type="style" name="APKTOOL_DUMMY_260">false</item>
+    <item type="style" name="APKTOOL_DUMMY_262">false</item>
+    <item type="style" name="APKTOOL_DUMMY_263">false</item>
     <item type="style" name="APKTOOL_DUMMY_264">false</item>
+    <item type="style" name="APKTOOL_DUMMY_265">false</item>
     <item type="style" name="APKTOOL_DUMMY_266">false</item>
     <item type="style" name="APKTOOL_DUMMY_267">false</item>
+    <item type="style" name="APKTOOL_DUMMY_268">false</item>
+    <item type="style" name="APKTOOL_DUMMY_269">false</item>
+    <item type="style" name="APKTOOL_DUMMY_26a">false</item>
     <item type="style" name="APKTOOL_DUMMY_26b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_26c">false</item>
     <item type="style" name="APKTOOL_DUMMY_26d">false</item>
     <item type="style" name="APKTOOL_DUMMY_26e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_26f">false</item>
-    <item type="style" name="APKTOOL_DUMMY_270">false</item>
-    <item type="style" name="APKTOOL_DUMMY_271">false</item>
-    <item type="style" name="APKTOOL_DUMMY_272">false</item>
-    <item type="style" name="APKTOOL_DUMMY_276">false</item>
-    <item type="style" name="APKTOOL_DUMMY_277">false</item>
-    <item type="style" name="APKTOOL_DUMMY_27d">false</item>
-    <item type="style" name="APKTOOL_DUMMY_27e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_27f">false</item>
-    <item type="style" name="APKTOOL_DUMMY_280">false</item>
-    <item type="style" name="APKTOOL_DUMMY_281">false</item>
-    <item type="style" name="APKTOOL_DUMMY_282">false</item>
-    <item type="style" name="APKTOOL_DUMMY_283">false</item>
     <item type="style" name="APKTOOL_DUMMY_284">false</item>
     <item type="style" name="APKTOOL_DUMMY_285">false</item>
-    <item type="style" name="APKTOOL_DUMMY_286">false</item>
-    <item type="style" name="APKTOOL_DUMMY_28c">false</item>
-    <item type="style" name="APKTOOL_DUMMY_28e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_289">false</item>
+    <item type="style" name="APKTOOL_DUMMY_28b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_28f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_290">false</item>
+    <item type="style" name="APKTOOL_DUMMY_291">false</item>
     <item type="style" name="APKTOOL_DUMMY_292">false</item>
+    <item type="style" name="APKTOOL_DUMMY_293">false</item>
     <item type="style" name="APKTOOL_DUMMY_294">false</item>
-    <item type="style" name="APKTOOL_DUMMY_296">false</item>
     <item type="style" name="APKTOOL_DUMMY_298">false</item>
     <item type="style" name="APKTOOL_DUMMY_29b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_29c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_29f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2a1">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2a2">false</item>
     <item type="style" name="APKTOOL_DUMMY_2a3">false</item>
     <item type="style" name="APKTOOL_DUMMY_2a4">false</item>
     <item type="style" name="APKTOOL_DUMMY_2a5">false</item>
     <item type="style" name="APKTOOL_DUMMY_2a6">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2a7">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2a8">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2a9">false</item>
     <item type="style" name="APKTOOL_DUMMY_2aa">false</item>
     <item type="style" name="APKTOOL_DUMMY_2ab">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2ac">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2b6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2b8">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2bc">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2be">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2c0">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2c2">false</item>
     <item type="style" name="APKTOOL_DUMMY_2c5">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2c9">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2cb">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2cc">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2c6">false</item>
     <item type="style" name="APKTOOL_DUMMY_2cd">false</item>
     <item type="style" name="APKTOOL_DUMMY_2ce">false</item>
     <item type="style" name="APKTOOL_DUMMY_2cf">false</item>
@@ -4210,83 +4304,106 @@
     <item type="style" name="APKTOOL_DUMMY_2d3">false</item>
     <item type="style" name="APKTOOL_DUMMY_2d4">false</item>
     <item type="style" name="APKTOOL_DUMMY_2d5">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2d8">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2d9">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2da">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2db">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2dc">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2dd">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2df">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2e0">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2e1">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2e3">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2e4">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2e6">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2e7">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2d6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2ef">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2f2">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2f3">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2f5">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2f6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2f7">false</item>
     <item type="style" name="APKTOOL_DUMMY_2f8">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2f9">false</item>
     <item type="style" name="APKTOOL_DUMMY_2fa">false</item>
-    <item type="style" name="APKTOOL_DUMMY_308">false</item>
-    <item type="style" name="APKTOOL_DUMMY_319">false</item>
-    <item type="style" name="APKTOOL_DUMMY_31a">false</item>
-    <item type="style" name="APKTOOL_DUMMY_31b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_31c">false</item>
-    <item type="style" name="APKTOOL_DUMMY_31d">false</item>
-    <item type="style" name="APKTOOL_DUMMY_31e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_31f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2fb">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2fc">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2fd">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2fe">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2ff">false</item>
+    <item type="style" name="APKTOOL_DUMMY_301">false</item>
+    <item type="style" name="APKTOOL_DUMMY_302">false</item>
+    <item type="style" name="APKTOOL_DUMMY_303">false</item>
+    <item type="style" name="APKTOOL_DUMMY_304">false</item>
+    <item type="style" name="APKTOOL_DUMMY_305">false</item>
+    <item type="style" name="APKTOOL_DUMMY_306">false</item>
+    <item type="style" name="APKTOOL_DUMMY_307">false</item>
+    <item type="style" name="APKTOOL_DUMMY_309">false</item>
+    <item type="style" name="APKTOOL_DUMMY_30a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_30b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_30d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_30e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_310">false</item>
+    <item type="style" name="APKTOOL_DUMMY_311">false</item>
     <item type="style" name="APKTOOL_DUMMY_320">false</item>
-    <item type="style" name="APKTOOL_DUMMY_321">false</item>
+    <item type="style" name="APKTOOL_DUMMY_322">false</item>
     <item type="style" name="APKTOOL_DUMMY_324">false</item>
-    <item type="style" name="APKTOOL_DUMMY_326">false</item>
-    <item type="style" name="APKTOOL_DUMMY_327">false</item>
+    <item type="style" name="APKTOOL_DUMMY_325">false</item>
     <item type="style" name="APKTOOL_DUMMY_328">false</item>
-    <item type="style" name="APKTOOL_DUMMY_329">false</item>
-    <item type="style" name="APKTOOL_DUMMY_32a">false</item>
-    <item type="style" name="APKTOOL_DUMMY_335">false</item>
-    <item type="style" name="APKTOOL_DUMMY_340">false</item>
-    <item type="style" name="APKTOOL_DUMMY_342">false</item>
+    <item type="style" name="APKTOOL_DUMMY_332">false</item>
+    <item type="style" name="APKTOOL_DUMMY_343">false</item>
     <item type="style" name="APKTOOL_DUMMY_344">false</item>
+    <item type="style" name="APKTOOL_DUMMY_345">false</item>
     <item type="style" name="APKTOOL_DUMMY_346">false</item>
+    <item type="style" name="APKTOOL_DUMMY_347">false</item>
     <item type="style" name="APKTOOL_DUMMY_348">false</item>
+    <item type="style" name="APKTOOL_DUMMY_349">false</item>
     <item type="style" name="APKTOOL_DUMMY_34a">false</item>
-    <item type="style" name="APKTOOL_DUMMY_34c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_34b">false</item>
     <item type="style" name="APKTOOL_DUMMY_34d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_34e">false</item>
     <item type="style" name="APKTOOL_DUMMY_34f">false</item>
     <item type="style" name="APKTOOL_DUMMY_350">false</item>
-    <item type="style" name="APKTOOL_DUMMY_351">false</item>
-    <item type="style" name="APKTOOL_DUMMY_35b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_35c">false</item>
-    <item type="style" name="APKTOOL_DUMMY_35d">false</item>
-    <item type="style" name="APKTOOL_DUMMY_35e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_35f">false</item>
-    <item type="style" name="APKTOOL_DUMMY_366">false</item>
+    <item type="style" name="APKTOOL_DUMMY_352">false</item>
+    <item type="style" name="APKTOOL_DUMMY_353">false</item>
+    <item type="style" name="APKTOOL_DUMMY_354">false</item>
+    <item type="style" name="APKTOOL_DUMMY_355">false</item>
+    <item type="style" name="APKTOOL_DUMMY_356">false</item>
+    <item type="style" name="APKTOOL_DUMMY_361">false</item>
+    <item type="style" name="APKTOOL_DUMMY_36c">false</item>
     <item type="style" name="APKTOOL_DUMMY_36e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_36f">false</item>
-    <item type="style" name="APKTOOL_DUMMY_386">false</item>
+    <item type="style" name="APKTOOL_DUMMY_370">false</item>
+    <item type="style" name="APKTOOL_DUMMY_372">false</item>
+    <item type="style" name="APKTOOL_DUMMY_374">false</item>
+    <item type="style" name="APKTOOL_DUMMY_376">false</item>
+    <item type="style" name="APKTOOL_DUMMY_378">false</item>
+    <item type="style" name="APKTOOL_DUMMY_379">false</item>
+    <item type="style" name="APKTOOL_DUMMY_37a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_37b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_37c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_37d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_387">false</item>
     <item type="style" name="APKTOOL_DUMMY_388">false</item>
+    <item type="style" name="APKTOOL_DUMMY_389">false</item>
+    <item type="style" name="APKTOOL_DUMMY_38a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_38b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_392">false</item>
     <item type="style" name="APKTOOL_DUMMY_396">false</item>
-    <item type="style" name="APKTOOL_DUMMY_397">false</item>
-    <item type="style" name="APKTOOL_DUMMY_398">false</item>
-    <item type="style" name="APKTOOL_DUMMY_399">false</item>
     <item type="style" name="APKTOOL_DUMMY_39a">false</item>
     <item type="style" name="APKTOOL_DUMMY_39b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_39c">false</item>
-    <item type="style" name="APKTOOL_DUMMY_39d">false</item>
-    <item type="style" name="APKTOOL_DUMMY_39e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3bc">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3bd">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3be">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3bf">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3c1">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3b2">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3b4">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3c2">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3c3">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3c4">false</item>
     <item type="style" name="APKTOOL_DUMMY_3c5">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3c6">false</item>
     <item type="style" name="APKTOOL_DUMMY_3c7">false</item>
     <item type="style" name="APKTOOL_DUMMY_3c8">false</item>
     <item type="style" name="APKTOOL_DUMMY_3c9">false</item>
     <item type="style" name="APKTOOL_DUMMY_3ca">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3cc">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3ce">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3d0">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3d2">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3d4">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3d6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3e8">false</item>
     <item type="style" name="APKTOOL_DUMMY_3e9">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3ea">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3eb">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3ec">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3ed">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3ee">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3f0">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3f2">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3f4">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3f6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3f8">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3fa">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3fd">false</item>
+    <item type="style" name="APKTOOL_DUMMY_408">false</item>
+    <item type="style" name="APKTOOL_DUMMY_412">false</item>
 </resources>

@@ -15,8 +15,8 @@
             <action type="PRESS" keycode="SWITCH_TO_NON_PRIME_KEYBOARD" data="symbol" />
             <label location="@id/label" value="\?123" />
         </softkey>
-        <softkey id="@id/softkey_switch_to_next_language" layout="@layout/softkey_icon" content_description="@string/next_language_key_content_desc" alpha="@attr/IconAlpha"> disable_lift_to_tap="true">
-<action type="PRESS" keycode="SWITCH_TO_NEXT_LANGUAGE" data="globe" />
+        <softkey id="@id/softkey_switch_to_next_language" layout="@layout/softkey_function_key_icon" content_description="@string/next_language_key_content_desc" alpha="@attr/IconAlphaOpaque" disable_lift_to_tap="true">
+            <action type="PRESS" keycode="SWITCH_TO_NEXT_LANGUAGE" data="globe" />
             <action type="LONG_PRESS" keycode="SHOW_SYSTEM_IME_PICKER" action_on_down="true" data="globe" />
             <icon location="@id/icon" value="@attr/IconGlobeEnabled" />
         </softkey>
@@ -24,20 +24,16 @@
             <action type="LONG_PRESS" keycode="SHOW_SYSTEM_IME_PICKER" action_on_down="true" />
             <icon location="@id/icon" value="@attr/IconGlobeDisabled" />
         </softkey>
-        <softkey id="@id/softkey_switch_to_en" layout="@layout/softkey_icon" content_description="@string/english_keyboard_key_content_desc">
-            <action type="PRESS" keycode="SWITCH_TO_NEXT_LANGUAGE" />
-            <icon location="@id/icon" value="@drawable/ic_key_switch_to_en" />
-        </softkey>
         <softkey id="@id/softkey_back" layout="@layout/softkey_function_key_label" multi_touch="true" content_description="@string/letter_keyboard_key_content_desc">
             <action type="PRESS" keycode="SWITCH_KEYBOARD" data="prime" />
             <label location="@id/label" value="@string/label_back_key" />
         </softkey>
-        <softkey id="@id/softkey_del" layout="@layout/softkey_icon_padding" multi_touch="false" content_description="@string/delete_key_content_desc" alpha="@attr/IconAlpha">
+        <softkey id="@id/softkey_del" layout="@layout/softkey_function_key_icon" multi_touch="false" content_description="@string/delete_key_content_desc" alpha="@attr/IconAlphaOpaque">
             <action type="PRESS" keycode="DEL" repeatable="true" />
             <action type="UP" keycode="DELETE_FINISH" />
             <icon location="@id/icon" value="@attr/IconDel" />
         </softkey>
-        <softkey id="@id/softkey_del_composing" layout="@layout/softkey_icon_padding" multi_touch="false" popup_timing="ON_GESTURE" slide_sensitivity="LESS" content_description="@string/delete_key_content_desc" alpha="@attr/IconAlpha">
+        <softkey id="@id/softkey_del_composing" layout="@layout/softkey_function_key_icon" multi_touch="false" popup_timing="ON_GESTURE" slide_sensitivity="LESS" content_description="@string/delete_key_content_desc" alpha="@attr/IconAlphaOpaque">
             <action type="PRESS" keycode="DEL" repeatable="true" />
             <action type="UP" keycode="DELETE_FINISH" />
             <action type="SLIDE_LEFT" keycode="CLEAR_ALL" popup_label="@string/label_clear_key" popup_layout="@layout/popup_small_square_bubble_no_cancelable" />
@@ -47,29 +43,21 @@
             <action type="PRESS" keycode="CLEAR_ALL" />
             <label location="@id/label" value="@string/label_clear_key" />
         </softkey>
-        <softkey id="@id/softkey_page_up_disabled" layout="@layout/softkey_icon" content_description="" alpha="@attr/IconAlpha">
+        <softkey id="@id/softkey_page_up_disabled" layout="@layout/softkey_function_key_icon" content_description="" alpha="@attr/IconAlphaOpaque">
             <icon location="@id/icon" value="@attr/IconArrowUpDisabled" />
         </softkey>
-        <softkey id="@id/softkey_page_down_disabled" layout="@layout/softkey_icon" content_description="" alpha="@attr/IconAlpha">
+        <softkey id="@id/softkey_page_down_disabled" layout="@layout/softkey_function_key_icon" content_description="" alpha="@attr/IconAlphaOpaque">
             <icon location="@id/icon" value="@attr/IconArrowDownDisabled" />
         </softkey>
-        <softkey id="@id/softkey_page_up" layout="@layout/softkey_icon" content_description="@string/page_up_key_content_desc" alpha="@attr/IconAlpha">
+        <softkey id="@id/softkey_page_up" layout="@layout/softkey_function_key_icon" content_description="@string/page_up_key_content_desc" alpha="@attr/IconAlphaOpaque">
             <action type="PRESS" keycode="PAGE_UP" />
             <icon location="@id/icon" value="@attr/IconArrowUp" />
         </softkey>
-        <softkey id="@id/softkey_page_down" layout="@layout/softkey_icon" content_description="@string/page_down_key_content_desc" alpha="@attr/IconAlpha">
+        <softkey id="@id/softkey_page_down" layout="@layout/softkey_function_key_icon" content_description="@string/page_down_key_content_desc" alpha="@attr/IconAlphaOpaque">
             <action type="PRESS" keycode="PAGE_DOWN" />
             <icon location="@id/icon" value="@attr/IconArrowDown" />
         </softkey>
-        <softkey id="@id/softkey_page_left" layout="@layout/softkey_icon" content_description="@string/page_up_key_content_desc" alpha="@attr/IconAlpha">
-            <action type="PRESS" keycode="PAGE_UP" />
-            <icon location="@id/icon" value="@attr/IconArrowLeft" />
-        </softkey>
-        <softkey id="@id/softkey_page_right" layout="@layout/softkey_icon" content_description="@string/page_down_key_content_desc" alpha="@attr/IconAlpha">
-            <action type="PRESS" keycode="PAGE_DOWN" />
-            <icon location="@id/icon" value="@attr/IconArrowRight" />
-        </softkey>
-        <softkey id="@id/softkey_move_cursor" layout="@layout/softkey_icon" popup_timing="@string/qwerty_popup_timing" touch_action_repeat_start_delay="300" touch_action_repeat_interval="150" slide_sensitivity="HIGH" alpha="@attr/IconAlpha">
+        <softkey id="@id/softkey_move_cursor" layout="@layout/softkey_function_key_icon" popup_timing="@string/qwerty_popup_timing" touch_action_repeat_start_delay="300" touch_action_repeat_interval="150" slide_sensitivity="HIGH" alpha="@attr/IconAlphaOpaque">
             <action type="PRESS" keycode="DPAD_CENTER" popup_icon="@attr/IconMoveCursorNone" />
             <action type="SLIDE_UP" keycode="DPAD_UP" popup_icon="@attr/IconMoveCursorUp" repeatable="true" />
             <action type="SLIDE_DOWN" keycode="DPAD_DOWN" popup_icon="@attr/IconMoveCursorDown" repeatable="true" />
@@ -81,11 +69,11 @@
             <action type="PRESS" keycode="LAUNCH_PREFERENCE_ACTIVITY" data="" />
             <icon location="@id/icon" value="@attr/IconSetting" />
         </softkey>
-        <softkey id="@id/softkey_switch_to_emoji" layout="@layout/softkey_icon" content_description="@string/emoji_keyboard_key_content_desc" alpha="@attr/IconAlpha">
+        <softkey id="@id/softkey_switch_to_emoji" layout="@layout/softkey_function_key_icon" content_description="@string/emoji_keyboard_key_content_desc" alpha="@attr/IconAlphaOpaque">
             <action type="PRESS" keycode="SWITCH_KEYBOARD" data="@string/action_key_popup_emoji_data" />
             <icon location="@id/icon" value="@attr/IconSwitchToSmiley" />
         </softkey>
-        <softkey id="@id/softkey_switch_to_emoticon" layout="@layout/softkey_icon" content_description="@string/emoticon_keyboard_key_content_desc" alpha="@attr/IconAlpha">
+        <softkey id="@id/softkey_switch_to_emoticon" layout="@layout/softkey_function_key_icon" content_description="@string/emoticon_keyboard_key_content_desc" alpha="@attr/IconAlphaOpaque">
             <action type="PRESS" keycode="SWITCH_KEYBOARD" data="@string/action_key_popup_emoticon_data" />
             <icon location="@id/icon" value="@attr/IconSwitchToEmoticon" />
         </softkey>
