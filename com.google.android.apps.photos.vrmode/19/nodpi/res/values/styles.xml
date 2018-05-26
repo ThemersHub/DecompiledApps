@@ -475,6 +475,8 @@
         <item name="materialButtonStyle">@style/Widget.GoogleMaterial.Button</item>
         <item name="materialCardViewStyle">@style/Widget.GoogleMaterial.CardView.Light</item>
         <item name="navigationViewStyle">@style/Widget.GoogleMaterial.NavigationView</item>
+        <item name="openSearchBarStyle">@style/Widget.GoogleMaterial.OpenSearchBar</item>
+        <item name="openSearchViewStyle">@style/Widget.GoogleMaterial.OpenSearchView</item>
         <item name="scrimBackground">@color/google_scrim</item>
         <item name="tabStyle">@style/Widget.GoogleMaterial.TabLayout</item>
         <item name="textAppearanceBody1">@style/TextAppearance.GoogleMaterial.Body1</item>
@@ -536,6 +538,8 @@
         <item name="materialButtonStyle">@style/Widget.GoogleMaterial.Button</item>
         <item name="materialCardViewStyle">@style/Widget.GoogleMaterial.CardView.Light</item>
         <item name="navigationViewStyle">@style/Widget.GoogleMaterial.NavigationView</item>
+        <item name="openSearchBarStyle">@style/Widget.GoogleMaterial.OpenSearchBar</item>
+        <item name="openSearchViewStyle">@style/Widget.GoogleMaterial.OpenSearchView</item>
         <item name="scrimBackground">@color/google_scrim</item>
         <item name="tabStyle">@style/Widget.GoogleMaterial.TabLayout</item>
         <item name="textAppearanceBody1">@style/TextAppearance.GoogleMaterial.Body1</item>
@@ -791,7 +795,7 @@
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_light</item>
         <item name="tooltipForegroundColor">@color/foreground_material_light</item>
         <item name="colorError">@color/error_color_material_dark</item>
-        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
+        <item name="viewInflaterClass">android.support.v7.app.AppCompatViewInflater</item>
     </style>
     <style name="Base.V7.Theme.AppCompat.Light" parent="@style/Platform.AppCompat.Light">
         <item name="android:panelBackground">@android:color/transparent</item>
@@ -911,7 +915,7 @@
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_dark</item>
         <item name="tooltipForegroundColor">@color/foreground_material_dark</item>
         <item name="colorError">@color/error_color_material_light</item>
-        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
+        <item name="viewInflaterClass">android.support.v7.app.AppCompatViewInflater</item>
     </style>
     <style name="Base.V7.Theme.AppCompat.Light.Dialog" parent="@style/Base.Theme.AppCompat.Light">
         <item name="android:colorBackground">?colorBackgroundFloating</item>
@@ -2939,6 +2943,20 @@
         <item name="backgroundTint">@color/google_white</item>
     </style>
     <style name="Widget.GoogleMaterial.NavigationView" parent="@style/Widget.MaterialComponents.NavigationView" />
+    <style name="Widget.GoogleMaterial.OpenSearchBar" parent="@android:style/Widget">
+        <item name="android:textSize">@dimen/google_opensearchbar_text_size</item>
+        <item name="android:textColor">@color/google_opensearchbar_text_color</item>
+        <item name="android:textColorHint">@color/google_opensearchbar_hint_text_color</item>
+        <item name="android:background">@drawable/open_search_bar_background</item>
+        <item name="android:minHeight">@dimen/google_opensearchbar_height</item>
+        <item name="defaultMarginsEnabled">true</item>
+        <item name="hideNavigationIcon">false</item>
+    </style>
+    <style name="Widget.GoogleMaterial.OpenSearchView" parent="@android:style/Widget">
+        <item name="android:textSize">@dimen/google_opensearchbar_text_size</item>
+        <item name="android:textColor">@color/google_opensearchbar_text_color</item>
+        <item name="android:textColorHint">@color/google_opensearchbar_hint_text_color</item>
+    </style>
     <style name="Widget.GoogleMaterial.TabLayout" parent="@style/Widget.MaterialComponents.TabLayout">
         <item name="tabIndicator">@drawable/google_tabs_rounded_line_indicator</item>
         <item name="tabIndicatorFullWidth">false</item>
@@ -3078,7 +3096,7 @@
         <item name="contentInsetStart">@dimen/photos_theme_actionbar_title_padding</item>
     </style>
     <style name="Widget.Photos.ActionBar.Black.TextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
-        <item name="android:textSize">@dimen/text_size_20</item>
+        <item name="android:textSize">20.0sp</item>
         <item name="android:textColor">@color/quantum_black_text</item>
     </style>
     <style name="Widget.Photos.ActionBar.Inverse.Overflow" parent="@android:style/Widget.Holo.Light.ActionButton.Overflow">
@@ -3095,7 +3113,7 @@
         <item name="android:singleLine">false</item>
     </style>
     <style name="Widget.Photos.ActionBar.White.TextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
-        <item name="android:textSize">@dimen/text_size_20</item>
+        <item name="android:textSize">20.0sp</item>
         <item name="android:textColor">@color/quantum_white_text</item>
     </style>
     <style name="Widget.Photos.ActionModeActionBar" parent="@style/Widget.AppCompat.ActionBar">
@@ -3157,6 +3175,11 @@
     <style name="Widget.Photos.ProgressBar.IndeterminateBlue" parent="@style/Widget.Photos.ProgressBar.Indeterminate" />
     <style name="Widget.Photos.ProgressBar.IndeterminateWhite" parent="@style/Widget.Photos.ProgressBar.Indeterminate" />
     <style name="Widget.SendKit.ProgressBar.Indeterminate.White" parent="@android:style/Widget.Holo.ProgressBar" />
+    <style name="Widget.Subscriptions.G1ProfileView" parent="">
+        <item name="profileSize">40.0dip</item>
+        <item name="profileSrc">@drawable/product_logo_avatar_circle_blue_color_120</item>
+        <item name="showRing">true</item>
+    </style>
     <style name="Widget.Support.CoordinatorLayout" parent="@android:style/Widget">
         <item name="statusBarBackground">#ff000000</item>
     </style>
@@ -3244,6 +3267,9 @@
         <item name="android:layout_width">0.0dip</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="peoplekit_avatars_white_tint">
+        <item name="colorControlNormal">@color/quantum_white_100</item>
     </style>
     <style name="photo_action_bar">
         <item name="android:paddingLeft">@dimen/photo_action_bar_horizontal_padding</item>
@@ -3830,39 +3856,38 @@
     <item type="style" name="APKTOOL_DUMMY_328">false</item>
     <item type="style" name="APKTOOL_DUMMY_32a">false</item>
     <item type="style" name="APKTOOL_DUMMY_32b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_32d">false</item>
-    <item type="style" name="APKTOOL_DUMMY_32e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_32f">false</item>
     <item type="style" name="APKTOOL_DUMMY_330">false</item>
-    <item type="style" name="APKTOOL_DUMMY_334">false</item>
-    <item type="style" name="APKTOOL_DUMMY_335">false</item>
+    <item type="style" name="APKTOOL_DUMMY_332">false</item>
     <item type="style" name="APKTOOL_DUMMY_336">false</item>
     <item type="style" name="APKTOOL_DUMMY_337">false</item>
-    <item type="style" name="APKTOOL_DUMMY_33a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_338">false</item>
+    <item type="style" name="APKTOOL_DUMMY_339">false</item>
     <item type="style" name="APKTOOL_DUMMY_33c">false</item>
-    <item type="style" name="APKTOOL_DUMMY_344">false</item>
-    <item type="style" name="APKTOOL_DUMMY_346">false</item>
-    <item type="style" name="APKTOOL_DUMMY_34b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_34d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_33e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_341">false</item>
+    <item type="style" name="APKTOOL_DUMMY_347">false</item>
+    <item type="style" name="APKTOOL_DUMMY_349">false</item>
     <item type="style" name="APKTOOL_DUMMY_34e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_34f">false</item>
-    <item type="style" name="APKTOOL_DUMMY_366">false</item>
-    <item type="style" name="APKTOOL_DUMMY_378">false</item>
-    <item type="style" name="APKTOOL_DUMMY_37b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3a6">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3a8">false</item>
+    <item type="style" name="APKTOOL_DUMMY_350">false</item>
+    <item type="style" name="APKTOOL_DUMMY_351">false</item>
+    <item type="style" name="APKTOOL_DUMMY_352">false</item>
+    <item type="style" name="APKTOOL_DUMMY_37e">false</item>
     <item type="style" name="APKTOOL_DUMMY_3a9">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3aa">false</item>
     <item type="style" name="APKTOOL_DUMMY_3ab">false</item>
     <item type="style" name="APKTOOL_DUMMY_3ac">false</item>
     <item type="style" name="APKTOOL_DUMMY_3ad">false</item>
     <item type="style" name="APKTOOL_DUMMY_3ae">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3b3">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3b9">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3be">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3bf">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3c0">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3af">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3b0">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3b1">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3b6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3bc">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3c1">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3c2">false</item>
     <item type="style" name="APKTOOL_DUMMY_3c3">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3cf">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3d0">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3c6">false</item>
     <item type="style" name="APKTOOL_DUMMY_3d2">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3d3">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3d5">false</item>
 </resources>

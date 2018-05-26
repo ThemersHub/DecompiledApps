@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="auto" package="com.google.android.apps.photos" platformBuildVersionCode="28" platformBuildVersionName="9">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="28" android:installLocation="auto" package="com.google.android.apps.photos" platformBuildVersionCode="28" platformBuildVersionName="28">
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
@@ -448,6 +448,7 @@
         <activity android:exported="false" android:name="com.google.android.apps.photos.permissions.required.RequiredRuntimePermissionsCheckerActivity" android:theme="@style/Theme.Photos.Transparent"/>
         <activity android:exported="false" android:name="com.google.android.apps.photos.photobook.confirmation.OrderConfirmationActivity" android:theme="@style/Theme.PhotoBook"/>
         <activity android:exported="false" android:label="@string/photos_photobook_impl_activity_label" android:name="com.google.android.apps.photos.photobook.impl.PrintPhotoBookActivity" android:resizeableActivity="true" android:theme="@style/Theme.PhotoBook" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <receiver android:exported="false" android:name="com.google.android.apps.photos.photobook.notification.DismissNotificationBroadcastReceiver"/>
         <activity android:exported="false" android:label="@string/photos_picker_impl_label_media_picker" android:name="com.google.android.apps.photos.photobook.picker.impl.PhotoBookPickerActivity" android:theme="@style/Theme.Photos.NoTitle"/>
         <activity android:description="@string/photos_photobook_storefront_title" android:exported="true" android:label="" android:launchMode="singleTop" android:name="com.google.android.apps.photos.photobook.storefront.PhotoBookStoreFrontActivity" android:parentActivityName="com.google.android.apps.photos.home.HomeActivity" android:theme="@style/Theme.Photos.PhotoBook.StoreFront"/>
         <activity-alias android:enabled="false" android:exported="true" android:label="@string/photos_photobook_storefront_title" android:name="com.google.android.apps.photos.photobook.storefront.PhotoBookStoreFrontActivityAlias" android:parentActivityName="com.google.android.apps.photos.home.HomeActivity" android:targetActivity="com.google.android.apps.photos.photobook.storefront.PhotoBookStoreFrontActivity">
@@ -500,6 +501,7 @@
             </intent-filter>
         </service>
         <service android:exported="false" android:name="com.google.android.apps.photos.registration.ReachabilityJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.google.android.apps.photos.restore.service.RestoreServiceInternal"/>
         <activity android:exported="false" android:launchMode="singleTop" android:name="com.google.android.apps.photos.retentiveactions.DesktopUploaderActionActivity" android:parentActivityName="com.google.android.apps.photos.home.HomeActivity" android:screenOrientation="portrait"/>
         <activity android:exported="false" android:launchMode="singleTop" android:name="com.google.android.apps.photos.retentiveactions.RetentiveActionNotificationRedirectActivity" android:parentActivityName="com.google.android.apps.photos.home.HomeActivity"/>
         <receiver android:exported="false" android:name="com.google.android.apps.photos.retentiveactions.RetentiveActionsNotificationController$RetentiveActionsNotificationAlarmReceiver"/>
@@ -638,6 +640,13 @@
                 <data android:mimeType="application/vnd.google.panorama360+jpg"/>
                 <data android:mimeType="image/*"/>
                 <data android:mimeType="video/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:enabled="@bool/photos_deviceconfig_is_video_editing_enabled" android:exported="true" android:launchMode="singleTop" android:name="com.google.android.apps.photos.videoeditor.partner.PartnerVideoStabilizeEditActivity" android:theme="@style/Theme.Photos.VideoEditor">
+            <intent-filter>
+                <action android:name="com.google.android.apps.photos.editor.STABILIZE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/mp4" android:scheme="content"/>
             </intent-filter>
         </activity>
         <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:enabled="@bool/photos_deviceconfig_is_video_editing_enabled" android:exported="false" android:label="@string/photos_videoeditor_video_editor_name" android:name="com.google.android.apps.photos.videoeditor.VideoEditorActivity" android:theme="@style/Theme.Photos.VideoEditor"/>
