@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" package="com.google.android.apps.fitness" platformBuildVersionCode="27" platformBuildVersionName="P">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="28" package="com.google.android.apps.fitness" platformBuildVersionCode="28" platformBuildVersionName="28">
     <permission android:name="com.google.android.apps.fitness.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -169,8 +169,6 @@
         </receiver>
         <activity android:name="com.google.android.apps.fitness.onboarding.OnboardingActivity"/>
         <service android:name="com.google.android.apps.fitness.sessions.sessioneditor.SessionEditorService"/>
-        <activity android:label="@string/settings_ble_devices_title" android:name="com.google.android.apps.fitness.settings.ble.BleDevicesActivity" android:parentActivityName="com.google.android.apps.fitness.settings.SettingsActivity" android:theme="@style/FitActionBarTheme.Ble"/>
-        <activity android:name="com.google.android.apps.fitness.settings.ble.BlePairingActivity" android:parentActivityName="com.google.android.apps.fitness.settings.ble.BleDevicesActivity" android:theme="@style/FitAppTheme.Ble"/>
         <activity android:exported="false" android:name="com.google.android.apps.fitness.settings.SettingsEditorActivity" android:theme="@style/FitActionBarTheme"/>
         <service android:exported="false" android:name="com.google.android.apps.fitness.util.engagement.UserEngagementService"/>
         <service android:exported="true" android:name="com.google.android.apps.fitness.util.engagement.UserEngagementGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
@@ -223,6 +221,21 @@
         </activity>
         <meta-data android:name="com.google.android.gms.phenotype.registration.xml" android:resource="@xml/phenotype"/>
         <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.libraries.hats20.SurveyPromptActivity" android:theme="@style/HatsLibPromptTheme" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="false" android:name="com.google.android.libraries.hats20.ShowSurveyActivity" android:theme="@style/TransparentActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="true" android:name="com.google.android.libraries.notifications.entrypoints.accountchanged.AccountChangedReceiver">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.libraries.notifications.entrypoints.accountchanged.AccountRemovedReceiver">
+            <intent-filter>
+                <action android:name="android.accounts.action.ACCOUNT_REMOVED"/>
+            </intent-filter>
+        </receiver>
         <receiver android:exported="true" android:name="com.google.android.libraries.notifications.entrypoints.appupdated.AppUpdatedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
@@ -257,6 +270,9 @@
         <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:theme="@style/Theme.AppCompat.Light"/>
         <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@style/Theme.AppCompat.Light"/>
         <receiver android:exported="false" android:name="com.google.android.libraries.social.silentfeedback.impl.SilentFeedbackReceiver" android:process=":crash_report"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
         <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
