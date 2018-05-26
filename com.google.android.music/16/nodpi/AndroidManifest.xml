@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" package="com.google.android.music" platformBuildVersionCode="27" platformBuildVersionName="P">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.google.android.music" platformBuildVersionCode="28" platformBuildVersionName="9">
     <original-package android:name="com.android.music"/>
     <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
     <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
@@ -399,7 +399,7 @@
         </service>
         <service android:exported="false" android:name="com.google.android.music.sync.google.gcm.DeviceGroupNotificationIntentService"/>
         <activity android:name="com.google.android.music.sync.google.gcm.DeviceGroupNotificationRoutingActivity" android:process=":ui"/>
-        <service android:name="com.google.android.music.wear.MusicWearableListenerService" android:process=":main">
+        <service android:enabled="@bool/enableWearDataTransfer" android:name="com.google.android.music.wear.MusicWearableListenerService" android:process=":main">
             <intent-filter>
                 <action android:name="com.google.android.gms.wearable.DATA_CHANGED"/>
                 <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED"/>
@@ -407,24 +407,24 @@
                 <data android:host="*" android:scheme="wear"/>
             </intent-filter>
         </service>
-        <service android:exported="false" android:name="com.google.android.music.wear.WearDataTransferConnectionService" android:process=":main">
+        <service android:enabled="@bool/enableWearDataTransfer" android:exported="false" android:name="com.google.android.music.wear.WearDataTransferConnectionService" android:process=":main">
             <intent-filter>
                 <action android:name="com.google.android.wearable.datatransfer.CONNECTION"/>
             </intent-filter>
         </service>
-        <service android:name="com.google.android.wearable.datatransfer.DataSyncService"/>
+        <service android:enabled="@bool/enableWearDataTransfer" android:name="com.google.android.wearable.datatransfer.DataSyncService"/>
         <service android:exported="true" android:name="com.google.android.music.sync.google.MusicGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" android:process=":main">
             <intent-filter>
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
         </service>
-        <receiver android:enabled="true" android:name="com.google.android.wearable.datatransfer.DataSyncEventReceiver">
+        <receiver android:enabled="@bool/enableWearDataTransfer" android:name="com.google.android.wearable.datatransfer.DataSyncEventReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_LOW"/>
                 <action android:name="android.intent.action.BATTERY_OKAY"/>
             </intent-filter>
         </receiver>
-        <receiver android:exported="false" android:name="com.google.android.music.wear.WearBroadcastReceiver">
+        <receiver android:enabled="@bool/enableWearDataTransfer" android:exported="false" android:name="com.google.android.music.wear.WearBroadcastReceiver">
             <intent-filter>
                 <action android:name="com.android.music.metachanged"/>
                 <action android:name="com.google.android.music.NEW_SHOULDKEEPON"/>
