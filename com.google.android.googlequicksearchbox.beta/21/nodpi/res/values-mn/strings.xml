@@ -103,12 +103,12 @@
     <string name="as_show_account_list">Бүртгэлийг харуулах</string>
     <string name="as_sign_in">Нэвтрэх</string>
     <string name="audio_player_notification_channel">Аудио тоглуулагч</string>
-    <string name="author_format">%1$s оруулсан</string>
     <string name="auto_add_shortcuts_description">Шинэ аппад зориулсан</string>
     <string name="auto_add_shortcuts_label">Нүүр хуудаст дүрс тэмдэг нэмэх</string>
     <string name="available_pick_up">Очиж авах боломжтой</string>
     <string name="back">Буцах</string>
     <string name="cached_desc">Энэ хуудсыг офлайнаар ашиглах боломжтой.</string>
+    <string name="cancel">Цуцлах</string>
     <string name="cancel_favorites_selection">Цуцлах</string>
     <string name="cancelled">Цуцалсан</string>
     <string name="cast_notification_connected_message">%1$s-тай холбогдсон</string>
@@ -126,6 +126,7 @@
     <string name="common_google_play_services_install_button">Суулгах</string>
     <string name="common_google_play_services_install_text">Таны төхөөрөмжид Google Play үйлчилгээ байхгүй тул %1$s ажиллахгүй.</string>
     <string name="common_google_play_services_install_title">Google Play үйлчилгээг авах</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play-н үйлчилгээнүүдийн боломжит байдал</string>
     <string name="common_google_play_services_notification_ticker">Google Наадаан үйлчилгээний алдаа</string>
     <string name="common_google_play_services_unknown_issue">%1$s-г Google Play-н үйлчилгээгээр ашиглахад асуудал гарлаа. Дахин оролдоно уу.</string>
     <string name="common_google_play_services_unsupported_text">Таны төхөөрөмж Google Play үйлчилгээг дэмждэггүй учир %1$s ажиллахгүй.</string>
@@ -165,6 +166,7 @@
     <string name="deeplink_not_installed">Аппыг суулгаагүй</string>
     <string name="default_scroll_format">%2$d-н %1$d хуудас</string>
     <string name="delayed">Хоцорсон</string>
+    <string name="delete_download">Таталтыг устгах</string>
     <string name="delete_favorites">Сонгосон подкастыг устгах</string>
     <string name="delete_target_label">Хасах</string>
     <string name="delete_target_uninstall_label">Устгах</string>
@@ -186,11 +188,14 @@
     <string name="downloading">Татаж байна...</string>
     <string name="downloads">Татаж авсан файл</string>
     <string name="edit">Засах</string>
-    <string name="edit_favorites_title">Подкастыг засах</string>
+    <string name="edit_favorites_title">Подкастаа засах</string>
     <string name="endByDate">; %s хүртэл</string>
     <string name="end_of_recents">Саяхны хайлтын төгсгөл</string>
     <string name="entry_desc">%2$d-н %1$d оролт.</string>
     <string name="episode_completed">Гүйцээсэн</string>
+    <string name="episode_date">%1$s</string>
+    <string name="episode_list_title_text">Available episodes</string>
+    <string name="episode_page_section_title">Анги</string>
     <string name="episode_subtitle_format">%1$s ⸱ %2$s</string>
     <string name="episodes_for_you">Танд зориулсан</string>
     <string name="error">Алдаа</string>
@@ -398,6 +403,10 @@
     <string name="longpress_menu_share">Зураг хуваалцах</string>
     <string name="longpress_menu_visit_site">@string/image_viewer_visit_site</string>
     <string name="mark_as_completed">Бүрэн тоглуулсан гэж тэмдэглэх</string>
+    <string name="media_route_chooser_dialog_title">Дараахад дамжуулах</string>
+    <string name="media_route_chooser_searching">Төхөөрөмж хайж байна…</string>
+    <string name="media_route_controller_cancel">Цуцлах</string>
+    <string name="media_route_controller_stop_casting">Дамжуулахыг зогсоох</string>
     <string name="menu_get_help">Тусламж авах</string>
     <string name="menu_search_by_image">Зургаар хайх</string>
     <string name="menu_send_feedback">Санал хүсэлт илгээх</string>
@@ -414,6 +423,8 @@
     <string name="migration_cling_title">Таны апп дүрсүүдийг хуулах</string>
     <string name="migration_cling_use_default">ШИНЭЭР ЭХЛЭХ</string>
     <string name="minute_picker_description">Минут гүйлгэгч</string>
+    <string name="minutes_remaining">%1$s минут үлдсэн</string>
+    <string name="minutes_symbol">%1$sминут</string>
     <string name="mismatching_value_eir_code">Хаягтай тохирох ёстой</string>
     <string name="mismatching_value_pin_code">Хаягтай тохирох ёстой</string>
     <string name="mismatching_value_postal_code">Хаягтай тохирох ёстой</string>
@@ -499,6 +510,7 @@ Google-н бүх хайлт, бусад зүйлийг Миний үйл ажи�
     <string name="place_autocomplete_search_hint">Хайх</string>
     <string name="place_group_header">Газар</string>
     <string name="play">Тоглуулах</string>
+    <string name="play_episode">Ангийг тоглуулах</string>
     <string name="play_this_episode">Энэ ангийг тоглуулах</string>
     <string name="playback_error_cancel">Цуцлах</string>
     <string name="playback_error_message">Энэ ангийг тоглуулах боломжгүй байна. Дараа дахин оролдоно уу.</string>
@@ -642,17 +654,11 @@ https://www.google.com/search?q=%1$s&amp;tbm=%2$s-н хайлтын илэрц"<
     <string name="request_storage_permission_dialog_message">Ангиудыг татаж авахын тулд Google таны төхөөрөмжийн хадгалах санд хандах шаардлагатай</string>
     <string name="request_storage_permission_dialog_title">Хадгалах санд хандахыг зөвшөөрөх</string>
     <string name="reservation_group_header">Захиалга</string>
+    <string name="retry">Дахин оролдох</string>
     <string name="retry_failed_download">Татаж авах үйлдлийг дахин хийх</string>
     <string name="returned">Буцаасан</string>
     <string name="review_count_text">(%d)</string>
     <string name="rewind">Буцаах</string>
-    <string name="s1">Зураг хадгалах</string>
-    <string name="s2">Зарыг Зургийн цомогт зураг хадгалахыг зөвшөөрөх үү?</string>
-    <string name="s3">Зөвшөөрөх</string>
-    <string name="s4">Татгалзах</string>
-    <string name="s5">Хуанлийн үйл явдал үүсгэх</string>
-    <string name="s6">Зарыг хуанлийн үйл явдал үүсгэхийг зөвшөөрөх үү?</string>
-    <string name="s7">Тест зар</string>
     <string name="safemode_shortcut_error">Татаж авсан апп-г Аюулгүй горим дотроос идэвхгүйжүүлсэн</string>
     <string name="safemode_widget_error">Safe горимд виджетүүдийг идэвхгүйжүүлсэн</string>
     <string name="save_carousel_view_all">Бүгдийг харах</string>
@@ -684,7 +690,7 @@ https://www.google.com/search?q=%1$s&amp;tbm=%2$s-н хайлтын илэрц"<
     <string name="select_hours">Цаг сонгоно уу</string>
     <string name="select_minutes">Минут сонгоно уу</string>
     <string name="select_year">Жилийг сонгоно уу</string>
-    <string name="send_feedback">Санал хүсэлт илгээх</string>
+    <string name="send_feedback">Аппын талаар санал хүсэлт илгээх</string>
     <string name="settings">Тохиргоо</string>
     <string name="settings_button_text">Тохиргоо</string>
     <string name="sharebear_screenshot_not_found">Дэлгэцийн зураг олдсонгүй</string>
@@ -698,6 +704,7 @@ https://www.google.com/search?q=%1$s&amp;tbm=%2$s-н хайлтын илэрц"<
     <string name="show_error_message">"Алдаа гарлаа.
 Энэ шоу одоогоор боломжгүй байна."</string>
     <string name="show_more_search_results">Хайлтын бусад илэрцийг харуулах</string>
+    <string name="show_notes">Тэмдэглэлийг харуулах</string>
     <string name="sign_in_accept">Нэвтрэх</string>
     <string name="sign_in_message">Бусад төхөөрөмжөөр подкаст захиалах болон сонссон түүхдээ хандахын тулд нэвтэрнэ үү.</string>
     <string name="sign_in_reject">Одоо биш</string>
