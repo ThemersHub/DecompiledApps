@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <attr name="adBackground1" format="reference|color" />
-    <attr name="adBackground2" format="reference|color" />
     <attr name="adBlue" format="reference|color" />
     <attr name="adMutedBackground" format="reference|color" />
     <attr name="adSeparator1" format="reference|color" />
-    <attr name="adSeparator2" format="reference|color" />
     <attr name="adText1" format="reference|color" />
     <attr name="adText2" format="reference|color" />
     <attr name="adText3" format="reference|color" />
@@ -300,8 +298,9 @@
     <attr name="ytIconActiveOther" format="reference|color" />
     <attr name="ytIconDisabled" format="reference|color" />
     <attr name="ytIconInactive" format="reference|color" />
-    <attr name="ytOverlayBackgroundPrimary" format="reference|color" />
-    <attr name="ytOverlayBackgroundSecondary" format="reference|color" />
+    <attr name="ytOverlayBackgroundHeavy" format="reference|color" />
+    <attr name="ytOverlayBackgroundLight" format="reference|color" />
+    <attr name="ytOverlayBackgroundMedium" format="reference|color" />
     <attr name="ytOverlayButtonActive" format="reference|color" />
     <attr name="ytOverlayButtonInactive" format="reference|color" />
     <attr name="ytOverlayTextPrimary" format="reference|color" />
@@ -452,6 +451,9 @@
     <attr name="autoSizeMinTextSize" format="dimension" />
     <attr name="autoSizeMaxTextSize" format="dimension" />
     <attr name="fontFamily" format="string" />
+    <attr name="lineHeight" format="dimension" />
+    <attr name="firstBaselineToTopHeight" format="dimension" />
+    <attr name="lastBaselineToBottomHeight" format="dimension" />
     <attr name="windowActionBar" format="boolean" />
     <attr name="windowNoTitle" format="boolean" />
     <attr name="windowActionBarOverlay" format="boolean" />
@@ -833,8 +835,16 @@
         <enum name="light" value="1" />
     </attr>
     <attr name="avatarDiameter" format="dimension" />
+    <attr name="badgeDiameter" format="dimension" />
+    <attr name="badgeOffsetFromEnd" format="dimension" />
+    <attr name="badgeOffsetFromBottom" format="dimension" />
+    <attr name="badgeGapWidth" format="dimension" />
     <attr name="ringStrokeWidth" format="dimension" />
     <attr name="ringGapWidth" format="dimension" />
+    <attr name="badgeAnimationType">
+        <enum name="linear" value="1" />
+        <enum name="overshoot" value="0" />
+    </attr>
     <attr name="textSize" format="float" />
     <attr name="bar_height" format="dimension" />
     <attr name="touch_target_height" format="dimension" />
@@ -1069,6 +1079,7 @@
     <attr name="latLngBoundsSouthWestLongitude" format="float" />
     <attr name="latLngBoundsNorthEastLatitude" format="float" />
     <attr name="latLngBoundsNorthEastLongitude" format="float" />
+    <attr name="iconSize" format="dimension" />
     <attr name="iconPadding" format="dimension" />
     <attr name="iconTint" format="color" />
     <attr name="additionalPaddingStartForIcon" format="dimension" />
@@ -1131,6 +1142,7 @@
     <attr name="playerViewId" format="reference" />
     <attr name="playerControlsViewId" format="reference" />
     <attr name="playerControlsTimeBarId" format="reference" />
+    <attr name="tabletMetadataViewId" format="reference" />
     <attr name="metadataViewId" format="reference" />
     <attr name="maxWidthRatio" format="float" />
     <attr name="defaultDrawable" format="reference" />
@@ -1155,6 +1167,7 @@
     <attr name="hide_during_ads" format="boolean" />
     <attr name="auto_show" format="boolean" />
     <attr name="show_buffering" format="boolean" />
+    <attr name="keep_content_on_player_reset" format="boolean" />
     <attr name="seasonsViewId" format="reference" />
     <attr name="renderThumbnailAsSquare" format="boolean" />
     <attr name="labelTextSize" format="dimension" />
@@ -1401,6 +1414,9 @@
     <attr name="tabRippleColor" format="color" />
     <attr name="tabUnboundedRipple" format="boolean" />
     <attr name="background_dark" format="color" />
+    <attr name="border_color" format="color" />
+    <attr name="border_color_dark" format="color" />
+    <attr name="border_size" format="dimension" />
     <attr name="tab_scroll_margin" format="dimension" />
     <attr name="tab_highlight_height" format="dimension" />
     <attr name="tab_content_color" format="color" />
@@ -1605,13 +1621,13 @@
         <enum name="small" value="1" />
     </attr>
     <attr name="mtrlIndeterminateProgressStyle">
-        <enum name="circular" value="0" />
         <enum name="linear" value="1" />
+        <enum name="circular" value="0" />
         <enum name="linearReverse" value="2" />
     </attr>
     <attr name="mtrlDeterminateProgressStyle">
-        <enum name="circular" value="0" />
         <enum name="linear" value="1" />
+        <enum name="circular" value="0" />
     </attr>
     <attr name="mtrlLinearGrowFrom">
         <enum name="bottom" value="0" />

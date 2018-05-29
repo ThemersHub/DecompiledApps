@@ -2,7 +2,9 @@
 <FrameLayout android:layout_width="wrap_content" android:layout_height="@dimen/edit_filter_preview_item_height"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <FrameLayout android:id="@id/filter_thumbnail_container" android:layout_width="@dimen/edit_filter_preview_selected_thumbnail_width" android:layout_height="@dimen/edit_filter_preview_selected_thumbnail_height" android:layout_marginTop="@dimen/edit_filter_preview_item_top_margin" android:layout_marginStart="@dimen/edit_filter_preview_item_left_margin" android:layout_marginEnd="@dimen/edit_filter_preview_item_right_margin">
-        <View android:layout_gravity="center" android:id="@id/filter_thumbnail_background" android:background="?ytOverlayButtonInactive" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:layout_gravity="center" android:id="@id/filter_thumbnail_background" android:background="?ytOverlayButtonInactive" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:id="@id/filter_thumbnail_spinner" android:visibility="gone" android:layout_width="@dimen/edit_filter_preview_spinner_size" android:layout_height="@dimen/edit_filter_preview_spinner_size" style="@style/EditFilterLoadingSpinner" />
+        </FrameLayout>
     </FrameLayout>
     <TextureView android:id="@id/filter_thumbnail" android:layout_width="@dimen/edit_filter_preview_selected_thumbnail_width" android:layout_height="@dimen/edit_filter_preview_selected_thumbnail_height" android:layout_marginTop="@dimen/edit_filter_preview_item_top_margin" android:layout_marginStart="@dimen/edit_filter_preview_item_left_margin" android:layout_marginEnd="@dimen/edit_filter_preview_item_right_margin" />
     <RelativeLayout android:layout_gravity="bottom" android:layout_width="@dimen/edit_filter_preview_selected_thumbnail_width" android:layout_height="@dimen/edit_filter_preview_item_text_view_height">
