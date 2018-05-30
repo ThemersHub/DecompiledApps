@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.tvrecommendations" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.tvrecommendations">
     <permission android:name="com.google.android.tv.permission.ROUTE_MARKET_UPDATE" android:protectionLevel="signature"/>
     <uses-feature android:name="android.software.leanback" android:required="true"/>
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
@@ -17,7 +17,15 @@
     <uses-permission android:name="android.permission.RECEIVE_MEDIA_RESOURCE_USAGE"/>
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
     <uses-permission android:name="com.google.android.tv.permission.ROUTE_MARKET_UPDATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application android:allowBackup="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.google.android.tvrecommendations.application.TvRecommendationsApplication" android:supportsRtl="true">
+        <provider android:authorities="tvrecs.config" android:exported="true" android:name="com.google.android.tvrecommendations.promos.config.ConfigurationProvider"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml" android:resource="@xml/phenotype"/>
+        <receiver android:name="com.google.android.tvrecommendations.phenotype.PhenotypeBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
         <service android:label="@string/app_name" android:name="com.google.android.tvrecommendations.NotificationsService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService"/>
@@ -110,6 +118,7 @@
                 <action android:name="com.google.android.tvrecommendations.CHANNEL_ORDER_CHANGE_LOG_EVENT"/>
             </intent-filter>
         </receiver>
+        <service android:label="Job service for syncing configuration from the server" android:name="com.google.android.tvrecommendations.promos.config.SyncJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <service android:exported="true" android:name="com.google.android.tvrecommendations.WakeUpPackagesJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <receiver android:exported="false" android:name="com.google.android.libraries.social.silentfeedback.nobinder.SilentFeedbackReceiver" android:process=":crash_report"/>
         <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
