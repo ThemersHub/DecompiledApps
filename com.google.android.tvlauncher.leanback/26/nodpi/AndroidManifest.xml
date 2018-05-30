@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.tvlauncher" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.tvlauncher">
     <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -15,19 +15,39 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
     <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="com.google.android.assistant.READ_HOTWORD_STATE"/>
     <uses-feature android:name="android.software.leanback" android:required="true"/>
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
     <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA"/>
     <application android:allowBackup="false" android:banner="@drawable/ic_tv_banner" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.google.android.tvlauncher.application.TvLauncherApplication" android:supportsRtl="true" android:theme="@style/AppTheme">
         <meta-data android:name="com.google.android.tvlauncher.LauncherGlideModule" android:value="GlideModule"/>
         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.google.android.tvlauncher.MainActivity" android:screenOrientation="landscape" android:taskAffinity=".TvLauncher">
-            <intent-filter android:priority="2">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.HOME"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.MONKEY"/>
             </intent-filter>
+            <meta-data android:name="enabled_for_home" android:value="true"/>
+            <meta-data android:name="enabled_for_standalone" android:value="true"/>
         </activity>
+        <activity-alias android:exported="true" android:name="com.google.android.tvlauncher.AppLauncher" android:targetActivity="com.google.android.tvlauncher.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="enabled_for_home" android:value="false"/>
+            <meta-data android:name="enabled_for_standalone" android:value="true"/>
+        </activity-alias>
+        <activity-alias android:enabled="true" android:exported="true" android:name="com.google.android.tvlauncher.HomeScreen" android:targetActivity="com.google.android.tvlauncher.MainActivity">
+            <intent-filter android:priority="2">
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.HOME"/>
+            </intent-filter>
+            <meta-data android:name="enabled_for_home" android:value="true"/>
+            <meta-data android:name="enabled_for_standalone" android:value="false"/>
+        </activity-alias>
         <receiver android:name="com.google.android.tvlauncher.appsview.data.MarketUpdateReceiver" android:permission="com.google.android.tv.permission.ROUTE_MARKET_UPDATE">
             <intent-filter>
                 <action android:name="com.android.launcher.action.ACTION_PACKAGE_ENQUEUED"/>
@@ -37,52 +57,79 @@
                 <data android:scheme="package"/>
             </intent-filter>
         </receiver>
-        <activity android:excludeFromRecents="true" android:name="com.google.android.tvlauncher.notifications.NotificationsSidePanelActivity" android:noHistory="true" android:screenOrientation="landscape" android:theme="@style/Theme.Settings.SidePanel">
+        <receiver android:name="com.google.android.tvlauncher.LauncherConfigurationReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PRE_BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:name="com.google.android.tvlauncher.notifications.NotificationsSidePanelActivity" android:noHistory="true" android:theme="@style/Theme.Settings.SidePanel">
             <intent-filter>
                 <action android:name="com.android.tvlauncher.NOTIFICATIONS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+            <meta-data android:name="enabled_for_home" android:value="true"/>
+            <meta-data android:name="enabled_for_standalone" android:value="false"/>
         </activity>
-        <activity android:label="@string/add_channels_announcement" android:name="com.google.android.tvlauncher.settings.AppChannelPermissionActivity" android:screenOrientation="landscape" android:theme="@style/Theme.Settings.SidePanel"/>
-        <activity android:name="com.google.android.tvlauncher.settings.FavoriteLaunchItemsActivity" android:screenOrientation="landscape" android:theme="@style/Theme.Settings.SidePanel"/>
+        <activity android:label="@string/add_channels_announcement" android:name="com.google.android.tvlauncher.settings.AppChannelPermissionActivity" android:theme="@style/Theme.Settings.SidePanel">
+            <meta-data android:name="enabled_for_home" android:value="true"/>
+            <meta-data android:name="enabled_for_standalone" android:value="true"/>
+        </activity>
+        <activity android:name="com.google.android.tvlauncher.settings.FavoriteLaunchItemsActivity" android:theme="@style/Theme.Settings.SidePanel">
+            <meta-data android:name="enabled_for_home" android:value="true"/>
+            <meta-data android:name="enabled_for_standalone" android:value="false"/>
+        </activity>
         <activity android:exported="true" android:name="com.google.android.tvlauncher.settings.OpenSourceActivity" android:screenOrientation="landscape" android:theme="@style/Theme.Leanback">
             <intent-filter>
                 <action android:name="com.android.tv.action.VIEW_LICENSES"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+            <meta-data android:name="enabled_for_home" android:value="true"/>
+            <meta-data android:name="enabled_for_standalone" android:value="true"/>
         </activity>
-        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:name="com.google.android.tvlauncher.settings.HomeScreenSettingsActivity" android:screenOrientation="landscape" android:theme="@style/Theme.Settings.SidePanel">
+        <activity android:configChanges="keyboard|keyboardHidden|navigation" android:excludeFromRecents="true" android:name="com.google.android.tvlauncher.settings.HomeScreenSettingsActivity" android:theme="@style/Theme.Settings.SidePanel">
             <intent-filter>
                 <action android:name="com.google.android.leanbacklauncher.SETTINGS"/>
                 <action android:name="com.google.android.tvlauncher.SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+            <meta-data android:name="enabled_for_home" android:value="true"/>
+            <meta-data android:name="enabled_for_standalone" android:value="true"/>
         </activity>
-        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.google.android.tvlauncher.inputs.InputsPanelActivity" android:screenOrientation="landscape" android:taskAffinity="" android:theme="@style/Theme.Settings.SidePanel">
+        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.google.android.tvlauncher.inputs.InputsPanelActivity" android:taskAffinity="" android:theme="@style/Theme.Settings.SidePanel">
             <intent-filter>
                 <action android:name="com.android.tv.action.VIEW_INPUTS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+            <meta-data android:name="enabled_for_home" android:value="true"/>
+            <meta-data android:name="enabled_for_standalone" android:value="false"/>
         </activity>
-        <activity android:excludeFromRecents="true" android:label="@string/apps_view_title" android:launchMode="singleTask" android:name="com.google.android.tvlauncher.appsview.AppsViewActivity" android:screenOrientation="landscape" android:taskAffinity="" android:theme="@style/Theme.Settings.SidePanel">
+        <activity android:excludeFromRecents="true" android:label="@string/apps_view_title" android:launchMode="singleTask" android:name="com.google.android.tvlauncher.appsview.AppsViewActivity" android:taskAffinity="" android:theme="@style/Theme.Settings.SidePanel">
             <intent-filter>
                 <action android:name="android.intent.action.ALL_APPS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+            <meta-data android:name="enabled_for_home" android:value="true"/>
+            <meta-data android:name="enabled_for_standalone" android:value="false"/>
         </activity>
-        <activity android:excludeFromRecents="true" android:label="@string/add_app_link_label" android:name="com.google.android.tvlauncher.appsview.AddAppLinkActivity" android:screenOrientation="landscape" android:theme="@style/ConfirmationDialog">
+        <activity android:excludeFromRecents="true" android:label="@string/add_app_link_label" android:name="com.google.android.tvlauncher.appsview.AddAppLinkActivity" android:theme="@style/ConfirmationDialog">
             <intent-filter android:priority="999">
                 <action android:name="com.android.tv.applink.action.ADD_APP_LINK"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+            <meta-data android:name="enabled_for_home" android:value="true"/>
+            <meta-data android:name="enabled_for_standalone" android:value="false"/>
         </activity>
-        <activity android:excludeFromRecents="true" android:label="@string/remove_app_link_label" android:name="com.google.android.tvlauncher.appsview.RemoveAppLinkActivity" android:screenOrientation="landscape" android:theme="@style/ConfirmationDialog">
+        <activity android:excludeFromRecents="true" android:label="@string/remove_app_link_label" android:name="com.google.android.tvlauncher.appsview.RemoveAppLinkActivity" android:theme="@style/ConfirmationDialog">
             <intent-filter android:priority="999">
                 <action android:name="com.android.tv.applink.action.REMOVE_APP_LINK"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+            <meta-data android:name="enabled_for_home" android:value="true"/>
+            <meta-data android:name="enabled_for_standalone" android:value="false"/>
         </activity>
         <service android:exported="true" android:name="com.google.android.tvlauncher.appsview.data.StopOutOfBoxOrderingJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.google.android.tvlauncher.LauncherConfigurationService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.google.android.tvlauncher.instantvideo.media.impl.RemoteYoutubePlayerService" android:process=":youtube"/>
         <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
     </application>
