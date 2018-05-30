@@ -20,6 +20,8 @@
         <item name="materialButtonStyle">@style/Widget.GoogleMaterial.Button</item>
         <item name="materialCardViewStyle">@style/Widget.GoogleMaterial.CardView.Light</item>
         <item name="navigationViewStyle">@style/Widget.GoogleMaterial.NavigationView</item>
+        <item name="openSearchBarStyle">@style/Widget.GoogleMaterial.OpenSearchBar</item>
+        <item name="openSearchViewStyle">@style/Widget.GoogleMaterial.OpenSearchView</item>
         <item name="scrimBackground">@color/google_scrim</item>
         <item name="tabStyle">@style/Widget.GoogleMaterial.TabLayout</item>
         <item name="textAppearanceBody1">@style/TextAppearance.GoogleMaterial.Body1</item>
@@ -80,12 +82,28 @@
         <item name="android:statusBarColor">@color/status_bar_color</item>
         <item name="android:navigationBarColor">@android:color/black</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
     <style name="OpaValuePropScrollContainer">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
         <item name="android:fillViewport">true</item>
         <item name="android:scrollIndicators">bottom|top</item>
+    </style>
+    <style name="StandaloneZeroState.Theme.Base" parent="@style/Theme.Velvet">
+        <item name="android:backgroundDimAmount">0.58</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:popupMenuStyle">@style/Opa.PopupMenu</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small</item>
+        <item name="android:statusBarColor">@color/standalone_zs_status_bar</item>
+        <item name="android:navigationBarColor">@color/standalone_zs_navigation_bar</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
     <style name="SuwAlertDialogTheme" parent="@android:style/Theme.DeviceDefault.Dialog.Alert" />
     <style name="SuwAlertDialogTheme.Light" parent="@android:style/Theme.DeviceDefault.Light.Dialog.Alert" />

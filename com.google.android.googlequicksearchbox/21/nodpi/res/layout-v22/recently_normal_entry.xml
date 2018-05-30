@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.gsa.plugins.recents.entry.EntryFrameLayout android:id="@id/screenshot_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="@dimen/screenshot_width" android:layout_height="wrap_content" android:foreground="@drawable/entry_forground" android:elevation="2.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/entry_decorations_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:id="@id/circular_loading_indicator" android:paddingTop="32.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="80.0dip" android:indeterminate="true" android:indeterminateTint="#ff9e9e9e" style="?android:attr/progressBarStyleLarge" />
+        <ImageView android:id="@id/no_screenshot_available_icon" android:paddingTop="32.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_panorama_grey600_48" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff666666" android:gravity="center" android:id="@id/page_title" android:paddingBottom="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:elevation="1.0dip" android:paddingHorizontal="32.0dip" />
+        <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="left" android:id="@id/recently_read_later_label" android:background="@color/recently_accent_color" android:padding="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/recent_read_later" android:drawableLeft="@drawable/quantum_ic_library_books_white_18" android:drawablePadding="8.0dip" android:textAllCaps="true" />
+        <include layout="@layout/recently_entry_bottom_bar" />
+    </LinearLayout>
+    <include layout="@layout/recently_entry_fake_shadow" />
+</com.google.android.apps.gsa.plugins.recents.entry.EntryFrameLayout>

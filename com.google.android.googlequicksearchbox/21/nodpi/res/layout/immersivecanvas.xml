@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/immersivecanvas_root" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_gravity="top" android:orientation="horizontal" android:id="@id/title_bar_container" android:background="@drawable/title_bar_selector" android:paddingLeft="@dimen/title_bar_padding_horizontal" android:paddingTop="@dimen/title_bar_padding_vertical" android:paddingRight="@dimen/title_bar_padding_horizontal" android:paddingBottom="@dimen/title_bar_padding_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/title_bar_height" android:paddingStart="@dimen/title_bar_padding_horizontal" android:paddingEnd="@dimen/title_bar_padding_horizontal">
+            <ImageView android:id="@id/agent_icon" android:background="@android:color/transparent" android:layout_width="@dimen/agent_icon_width" android:layout_height="@dimen/agent_icon_height" android:layout_alignParentLeft="true" android:contentDescription="@string/agent_icon_description" />
+            <TextView android:textSize="@dimen/title_bar_text_size" android:textColor="#ffffffff" android:id="@id/agent_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/agent_name" android:layout_toRightOf="@id/agent_icon" android:fontFamily="@string/title_bar_font_family" android:layout_marginStart="@dimen/agent_name_margin_start" android:layout_toStartOf="@id/close_button" android:layout_toEndOf="@id/agent_icon" />
+            <ImageButton android:id="@id/close_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_close_white_24" android:scaleType="center" android:layout_alignParentRight="true" android:contentDescription="@string/canvas_close" android:layout_toEndOf="@id/agent_name" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/canvas_container" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/canvas_mic_plate_container" android:background="@drawable/round_fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/mic_fab_margin" android:elevation="@dimen/fab_elevation">
+        <com.google.android.libraries.gsa.logoview.LogoView android:id="@id/mic_button" android:focusable="true" android:clickable="true" android:layout_width="@dimen/logo_view_width" android:layout_height="@dimen/logo_view_height" />
+    </FrameLayout>
+</FrameLayout>
