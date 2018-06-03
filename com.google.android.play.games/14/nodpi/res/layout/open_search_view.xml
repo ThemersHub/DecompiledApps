@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/open_search_view_scrim" android:background="?scrimBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+    <com.google.android.libraries.material.internal.ClippableRoundedCornerLayout android:id="@id/open_search_view_root" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@color/google_opensearchview_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:id="@id/open_search_view_status_bar_spacer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <android.support.v7.widget.Toolbar android:id="@id/open_search_view_toolbar" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStartWithNavigation="0.0dip" app:navigationIcon="@drawable/quantum_ic_arrow_back_vd_theme_24" app:navigationContentDescription="@string/opensearchview_navigation_content_description">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <EditText android:id="@id/open_search_view_edit_text" android:background="@null" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_weight="1.0" android:inputType="textNoSuggestions" android:privateImeOptions="nm" android:imeOptions="actionSearch|flagNoExtractUi" />
+                    <ImageButton android:id="@id/open_search_view_clear_button" android:background="?actionBarItemBackground" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:contentDescription="@string/opensearchview_clear_text_content_description" app:srcCompat="@drawable/quantum_ic_clear_vd_theme_24" />
+                </LinearLayout>
+            </android.support.v7.widget.Toolbar>
+            <View android:id="@id/open_search_view_divider" android:background="@color/google_opensearchview_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/google_opensearchview_divider_size" />
+            <com.google.android.libraries.material.internal.TouchObserverFrameLayout android:id="@id/open_search_view_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </com.google.android.libraries.material.internal.ClippableRoundedCornerLayout>
+</merge>

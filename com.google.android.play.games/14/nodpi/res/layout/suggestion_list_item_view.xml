@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.libraries.material.aspectratio.FixedAspectRatioFrameLayout android:id="@id/image_container" android:layout_width="@dimen/replay__search__suggestions__small_icon_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/replay__search__suggestions__image_horizontal_margin" android:layout_marginRight="@dimen/replay__search__suggestions__image_horizontal_margin">
+        <ImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+    </com.google.android.libraries.material.aspectratio.FixedAspectRatioFrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:id="@id/suggestion_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/TextStyle.Replay.Subtitle.2" />
+        <TextView android:ellipsize="end" android:id="@id/subtitle_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/replay__search__suggestions__subtitle_top_padding" android:maxLines="1" style="@style/TextStyle.Replay.Caption" />
+    </LinearLayout>
+</merge>

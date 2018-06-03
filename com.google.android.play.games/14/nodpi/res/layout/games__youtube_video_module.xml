@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="start" android:orientation="vertical" android:id="@id/youtube_video_module_container" android:background="?selectableItemBackground" android:paddingBottom="24.0dip" android:focusable="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="start|center" android:id="@id/module_title_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:minHeight="56.0dip" style="@style/TextStyle.Replay.Headline.6" />
+    <include layout="@layout/games__module_header_section" />
+    <View android:id="@id/top_module_padding" android:layout_width="fill_parent" android:layout_height="24.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip">
+        <include android:id="@id/youtube_embedded_player_layout" layout="@layout/youtube_embedded_player_layout" />
+        <TextView android:ellipsize="end" android:gravity="start" android:id="@id/title_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:maxLines="2" style="@style/TextStyle.Replay.Subhead.1" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/metadata_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:baselineAligned="false" android:weightSum="1.0">
+            <TextView android:ellipsize="end" android:gravity="start" android:id="@id/publisher_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:lines="1" android:layout_weight="1.0" style="@style/TextStyle.Replay.Caption" />
+            <include layout="@layout/games__youtube_video_middle_dot_text_view" />
+            <TextView android:gravity="start" android:id="@id/views_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" style="@style/TextStyle.Replay.Caption" />
+            <include layout="@layout/games__youtube_video_middle_dot_text_view" />
+            <TextView android:gravity="start" android:id="@id/published_time_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" style="@style/TextStyle.Replay.Caption" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
