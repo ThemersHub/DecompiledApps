@@ -456,20 +456,6 @@
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar</item>
         <item name="selectableItemBackground">@drawable/abc_item_background_holo_light</item>
     </style>
-    <style name="TextAppearance.AppCompat.Notification" parent="@android:style/TextAppearance.StatusBar.EventContent" />
-    <style name="TextAppearance.AppCompat.Notification.Info" parent="@style/TextAppearance.AppCompat.Notification">
-        <item name="android:textSize">12.0sp</item>
-        <item name="android:textColor">?android:textColorSecondary</item>
-    </style>
-    <style name="TextAppearance.AppCompat.Notification.Info.Media" parent="@style/TextAppearance.AppCompat.Notification.Info" />
-    <style name="TextAppearance.AppCompat.Notification.Media" parent="@style/TextAppearance.AppCompat.Notification" />
-    <style name="TextAppearance.AppCompat.Notification.Time" parent="@style/TextAppearance.AppCompat.Notification">
-        <item name="android:textSize">12.0sp</item>
-        <item name="android:textColor">?android:textColorSecondary</item>
-    </style>
-    <style name="TextAppearance.AppCompat.Notification.Time.Media" parent="@style/TextAppearance.AppCompat.Notification.Time" />
-    <style name="TextAppearance.AppCompat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title" />
-    <style name="TextAppearance.AppCompat.Notification.Title.Media" parent="@style/TextAppearance.AppCompat.Notification.Title" />
     <style name="TextAppearance.Compat.Notification" parent="@android:style/TextAppearance.StatusBar.EventContent" />
     <style name="TextAppearance.Compat.Notification.Info" parent="@style/TextAppearance.Compat.Notification">
         <item name="android:textSize">12.0sp</item>
@@ -519,6 +505,11 @@
     <style name="Base.TextAppearance.AppCompat.Widget.Button.Colored" parent="@style/Base.TextAppearance.AppCompat.Widget.Button">
         <item name="android:textColor">@color/abc_btn_colored_text_material</item>
     </style>
+    <style name="Theme.Settings" parent="@android:style/Theme.DeviceDefault.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/material_blue_grey_900</item>
+        <item name="android:colorPrimaryDark">@color/material_blue_grey_950</item>
+        <item name="android:colorAccent">@color/material_teal_500</item>
+    </style>
     <style name="Base.Widget.AppCompat.Toolbar" parent="@style/Base.V7.Widget.AppCompat.Toolbar" />
     <style name="AlertDialog.AppCompat" parent="@style/Base.AlertDialog.AppCompat" />
     <style name="AlertDialog.AppCompat.Light" parent="@style/Base.AlertDialog.AppCompat.Light" />
@@ -531,6 +522,7 @@
         <item name="multiChoiceItemLayout">@layout/select_dialog_multichoice_material</item>
         <item name="singleChoiceItemLayout">@layout/select_dialog_singlechoice_material</item>
         <item name="listItemLayout">@layout/select_dialog_item_material</item>
+        <item name="buttonIconDimen">@dimen/abc_alert_dialog_button_dimen</item>
     </style>
     <style name="Base.AlertDialog.AppCompat.Light" parent="@style/Base.AlertDialog.AppCompat" />
     <style name="Base.Animation.AppCompat.Dialog" parent="@android:style/Animation">
@@ -542,8 +534,8 @@
         <item name="android:windowExitAnimation">@anim/abc_shrink_fade_out_from_bottom</item>
     </style>
     <style name="Base.Animation.AppCompat.Tooltip" parent="@android:style/Animation">
-        <item name="android:windowEnterAnimation">@anim/tooltip_enter</item>
-        <item name="android:windowExitAnimation">@anim/tooltip_exit</item>
+        <item name="android:windowEnterAnimation">@anim/abc_tooltip_enter</item>
+        <item name="android:windowExitAnimation">@anim/abc_tooltip_exit</item>
     </style>
     <style name="Base.DialogWindowTitle.AppCompat" parent="@android:style/Widget">
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
@@ -698,6 +690,7 @@
         <item name="dialogTheme">@style/ThemeOverlay.AppCompat.Dialog</item>
         <item name="dialogPreferredPadding">@dimen/abc_dialog_padding_material</item>
         <item name="listDividerAlertDialog">@null</item>
+        <item name="dialogCornerRadius">@dimen/abc_dialog_corner_radius_material</item>
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Spinner.DropDown.ActionBar</item>
         <item name="dropdownListPreferredItemHeight">?listPreferredItemHeightSmall</item>
         <item name="spinnerDropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
@@ -768,6 +761,7 @@
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_light</item>
         <item name="tooltipForegroundColor">@color/foreground_material_light</item>
         <item name="colorError">@color/error_color_material</item>
+        <item name="viewInflaterClass">android.support.v7.app.AppCompatViewInflater</item>
     </style>
     <style name="Base.V7.Theme.AppCompat.Dialog" parent="@style/Base.Theme.AppCompat">
         <item name="android:colorBackground">?colorBackgroundFloating</item>
@@ -834,6 +828,7 @@
         <item name="dialogTheme">@style/ThemeOverlay.AppCompat.Dialog</item>
         <item name="dialogPreferredPadding">@dimen/abc_dialog_padding_material</item>
         <item name="listDividerAlertDialog">@null</item>
+        <item name="dialogCornerRadius">@dimen/abc_dialog_corner_radius_material</item>
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar</item>
         <item name="dropdownListPreferredItemHeight">?listPreferredItemHeightSmall</item>
         <item name="spinnerDropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
@@ -904,6 +899,7 @@
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_dark</item>
         <item name="tooltipForegroundColor">@color/foreground_material_dark</item>
         <item name="colorError">@color/error_color_material</item>
+        <item name="viewInflaterClass">android.support.v7.app.AppCompatViewInflater</item>
     </style>
     <style name="Base.V7.Theme.AppCompat.Light.Dialog" parent="@style/Base.Theme.AppCompat.Light">
         <item name="android:colorBackground">?colorBackgroundFloating</item>
@@ -1091,8 +1087,6 @@
     <style name="TextAppearance.AppCompat.Medium" parent="@style/Base.TextAppearance.AppCompat.Medium" />
     <style name="TextAppearance.AppCompat.Medium.Inverse" parent="@style/Base.TextAppearance.AppCompat.Medium.Inverse" />
     <style name="TextAppearance.AppCompat.Menu" parent="@style/Base.TextAppearance.AppCompat.Menu" />
-    <style name="TextAppearance.AppCompat.Notification.Line2" parent="@style/TextAppearance.AppCompat.Notification.Info" />
-    <style name="TextAppearance.AppCompat.Notification.Line2.Media" parent="@style/TextAppearance.AppCompat.Notification.Info.Media" />
     <style name="TextAppearance.AppCompat.SearchResult.Subtitle" parent="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle" />
     <style name="TextAppearance.AppCompat.SearchResult.Title" parent="@style/Base.TextAppearance.AppCompat.SearchResult.Title" />
     <style name="TextAppearance.AppCompat.Small" parent="@style/Base.TextAppearance.AppCompat.Small" />
@@ -1144,11 +1138,6 @@
     <style name="Theme.AppCompat.NoActionBar" parent="@style/Theme.AppCompat">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-    </style>
-    <style name="Theme.Settings" parent="@android:style/Theme.DeviceDefault.Light.DarkActionBar">
-        <item name="android:colorPrimary">@color/material_blue_grey_900</item>
-        <item name="android:colorPrimaryDark">@color/material_blue_grey_950</item>
-        <item name="android:colorAccent">@color/material_teal_500</item>
     </style>
     <style name="Theme.Transluscent.TranslucentStatusAndNavBars" parent="@android:style/Theme.Translucent.NoTitleBar">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
@@ -1236,4 +1225,7 @@
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="@style/Base.Widget.AppCompat.TextView.SpinnerItem" />
     <style name="Widget.AppCompat.Toolbar" parent="@style/Base.Widget.AppCompat.Toolbar" />
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="@style/Base.Widget.AppCompat.Toolbar.Button.Navigation" />
+    <style name="Widget.Support.CoordinatorLayout" parent="@android:style/Widget">
+        <item name="statusBarBackground">#ff000000</item>
+    </style>
 </resources>
