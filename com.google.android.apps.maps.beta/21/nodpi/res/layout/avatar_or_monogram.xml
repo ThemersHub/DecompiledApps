@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/peoplekit_avatars_avatar_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.google.android.libraries.social.peoplekit.avatars.viewcontrollers.AvatarView android:id="@id/peoplekit_avatars_avatar" android:layout_width="@dimen/peoplekit_avatar_default_size" android:layout_height="@dimen/peoplekit_avatar_default_size" />
+        <include android:id="@id/peoplekit_avatars_monogram" android:visibility="gone" android:layout_width="@dimen/peoplekit_avatar_default_size" android:layout_height="@dimen/peoplekit_avatar_default_size" layout="@layout/monogram" />
+        <android.support.v7.widget.AppCompatImageView android:theme="@style/peoplekit_avatars_white_tint" android:id="@id/peoplekit_avatars_selected_avatar" android:background="@drawable/peoplekit_avatar_circle" android:padding="@dimen/peoplekit_avatar_selected_avatar_padding" android:visibility="gone" android:layout_width="@dimen/peoplekit_avatar_default_size" android:layout_height="@dimen/peoplekit_avatar_default_size" app:srcCompat="@drawable/quantum_ic_check_vd_theme_24" />
+    </RelativeLayout>
+    <ImageView android:id="@id/peoplekit_avatars_in_app_indicator" android:background="@drawable/peoplekit_avatar_circle" android:padding="@dimen/peoplekit_avatar_in_app_indicator_padding" android:visibility="gone" android:layout_width="@dimen/peoplekit_avatar_in_app_indicator_size" android:layout_height="@dimen/peoplekit_avatar_in_app_indicator_size" android:layout_alignBottom="@id/peoplekit_avatars_avatar_wrapper" android:contentDescription="@null" android:translationY="@dimen/peoplekit_avatar_in_app_indicator_offset" android:layout_alignEnd="@id/peoplekit_avatars_avatar_wrapper" style="@style/peoplekit_avatars_white_tint" />
+</RelativeLayout>
