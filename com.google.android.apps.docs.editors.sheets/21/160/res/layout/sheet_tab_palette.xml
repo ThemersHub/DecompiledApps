@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:menu="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/palette_tab_heading_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/header_elevation">
+        <include layout="@layout/separator_horizontal" />
+        <include layout="@layout/sheet_tab_palette_header" />
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout style="@style/Palette">
+            <com.google.android.apps.docs.editors.menu.components.PaletteRowButton android:id="@id/sheet_tab_palette_duplicate" android:layout_width="fill_parent" android:layout_height="@dimen/palette_row_height" android:text="@string/sheet_tab_palette_duplicate" style="@style/ClickablePaletteRowButton" />
+            <com.google.android.apps.docs.editors.menu.components.PaletteRowButton android:id="@id/sheet_tab_palette_delete" android:layout_width="fill_parent" android:layout_height="@dimen/palette_row_height" android:text="@string/sheet_tab_palette_delete" style="@style/ClickablePaletteRowButton" />
+            <com.google.android.apps.docs.editors.menu.components.PaletteRowButton android:id="@id/sheet_tab_palette_rename" android:layout_width="fill_parent" android:layout_height="@dimen/palette_row_height" android:text="@string/sheet_tab_palette_rename" style="@style/ClickablePaletteRowButton" />
+            <com.google.android.apps.docs.editors.menu.components.PaletteRowButton android:id="@id/sheet_tab_palette_hide" android:layout_width="fill_parent" android:layout_height="@dimen/palette_row_height" android:text="@string/sheet_tab_palette_hide" style="@style/ClickablePaletteRowButton" />
+            <com.google.android.apps.docs.editors.menu.components.PaletteSubmenuButtonColorDisplay android:id="@id/sheet_tab_palette_tab_color" android:layout_width="fill_parent" android:layout_height="@dimen/palette_row_height" android:text="@string/color_palette_sheet_tab_color" menu:none_color_label="@string/color_palette_none_none" style="@style/ClickablePaletteRowButton" />
+            <com.google.android.apps.docs.editors.menu.components.SwitchRow android:id="@id/sheet_tab_palette_rtl" android:layout_width="fill_parent" android:layout_height="@dimen/palette_row_height" android:text="@string/sheet_tab_palette_rtl" style="@style/ClickablePaletteRowButton" />
+            <com.google.android.apps.docs.editors.menu.components.SwitchRow android:id="@id/sheet_tab_palette_gridlines" android:layout_width="fill_parent" android:layout_height="@dimen/palette_row_height" android:text="@string/sheet_tab_palette_gridlines" style="@style/ClickablePaletteRowButton" />
+            <include layout="@layout/separator_horizontal" />
+            <include layout="@layout/sheet_tab_palette_move_buttons" />
+            <include layout="@layout/separator_horizontal" />
+            <include android:id="@id/sheet_tab_palette_freeze_rows" layout="@layout/sheet_tab_palette_freeze_row" />
+            <include android:id="@id/sheet_tab_palette_freeze_columns" layout="@layout/sheet_tab_palette_freeze_row" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

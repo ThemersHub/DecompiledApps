@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/quantum_white_100" android:paddingLeft="5.0dip" android:paddingTop="7.0dip" android:paddingRight="7.0dip" android:paddingBottom="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="5.0dip" android:paddingEnd="7.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/conditional_formatting_rule_body" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:id="@id/conditional_formatting_reorder_rule" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_drag_handle_grey600_24" android:contentDescription="@string/ritz_conditional_formatting_reorder_rule_icon_description" />
+        <com.google.android.apps.docs.editors.ritz.view.conditionalformat.BooleanFormatPreview android:id="@id/boolean_format_preview" android:visibility="gone" style="@style/ConditionalFormatPreviewInList" />
+        <com.google.android.apps.docs.editors.ritz.view.conditionalformat.GradientFormatPreview android:id="@id/gradient_format_preview" android:visibility="gone" android:text="@string/ritz_conditional_formatting_rule_format_preview" style="@style/ConditionalFormatPreviewInList" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingRight="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="12.0dip" android:paddingEnd="7.0dip">
+            <TextView android:textSize="@dimen/abc_text_size_medium_material" android:textColor="@android:color/black" android:ellipsize="end" android:id="@id/conditional_formatting_rule_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+            <TextView android:ellipsize="end" android:id="@id/conditional_formatting_rule_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/conditional_formatting_delete_rule" android:padding="7.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_delete_grey600_24" android:contentDescription="@string/ritz_conditional_formatting_delete_rule_button_description" />
+</LinearLayout>

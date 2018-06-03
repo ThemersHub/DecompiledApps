@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@id/team_drive_swipe_to_refresh_view" android:background="@color/team_drive_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/team_drive_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/team_drive_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/TeamDriveListView" />
+        <ViewStub android:id="@id/empty_state_view_stub" android:visibility="gone" android:layout="@layout/team_drive_empty_state_view" android:inflatedId="@id/team_drive_empty_state_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/doclist_sticky_header_shadow" style="@style/StickyHeaderShadow" />
+    </FrameLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

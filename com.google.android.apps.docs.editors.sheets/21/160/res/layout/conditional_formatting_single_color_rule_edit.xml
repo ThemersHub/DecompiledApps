@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/cf_single_color_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/conditional_formatting_single_color_main_layout" style="@style/ConditionalFormattingRuleEditLayout">
+            <com.google.android.apps.docs.editors.ritz.view.conditionalformat.EditRangeLayout android:id="@id/conditional_formatting_single_color_range_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/ritz_conditional_formatting_edit_fields_minimum_width">
+                <TextView android:text="@string/ritz_conditional_formatting_format_condition_subtitle" style="@style/ConditionalFormattingRuleEditHeading" />
+                <com.google.android.apps.docs.editors.ritz.view.conditions.ConditionLayout android:id="@id/conditional_formatting_single_color_condition_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView android:text="@string/ritz_conditional_formatting_format_style_subtitle" style="@style/ConditionalFormattingRuleEditHeading" />
+            <com.google.android.apps.docs.editors.ritz.view.conditionalformat.DefaultFormatsGridView android:id="@id/single_color_default_formats" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:text="@string/ritz_conditional_formatting_format_custom_style_subtitle" style="@style/ConditionalFormattingRuleEditHeading" />
+            <com.google.android.apps.docs.editors.ritz.view.conditionalformat.BooleanFormatPreview android:id="@id/single_color_custom_format_button" style="@style/CustomConditionalFormatPreview" />
+            <Space android:layout_width="wrap_content" android:layout_height="@dimen/ritz_conditional_formatting_save_add_another_button_height" />
+        </LinearLayout>
+        <LinearLayout style="@style/ConditionalFormatSaveAddAnotherButtonLayout">
+            <Button android:id="@id/conditional_formatting_save_and_add_new_single_color" style="@style/ConditionalFormatSaveAddAnotherButton" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/fade_layer" android:background="@color/fab_fade_layer" android:visibility="gone" android:clickable="true" android:layout_width="0.0dip" android:layout_height="0.0dip" android:contentDescription="@string/close_menu" />
+    <TableLayout android:layout_gravity="end|bottom|center" android:id="@id/fab_menu" android:paddingRight="@dimen/fab_menu_end_margin" android:paddingBottom="@dimen/fab_menu_bottom_margin" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/fab_menu_end_margin">
+        <TableRow android:id="@id/fab_choose_template_menu_row" android:visibility="gone" android:clipChildren="false">
+            <TextView android:text="@string/fab_choose_template" style="@style/FabMenuText" />
+            <FrameLayout style="@style/FabImageWrapper.Mini">
+                <android.support.design.widget.FloatingActionButton android:src="@drawable/ic_choose_template_24" android:contentDescription="@string/fab_choose_template" app:backgroundTint="@color/fab_choose_template_button_background" style="@style/FabMenuButton.Mini" />
+            </FrameLayout>
+        </TableRow>
+        <TableRow android:id="@id/fab_create_office_doc_menu_row" android:visibility="gone" android:clipChildren="false">
+            <TextView android:text="@string/fab_office_document" style="@style/FabMenuText" />
+            <FrameLayout style="@style/FabImageWrapper.Mini">
+                <android.support.design.widget.FloatingActionButton android:src="@drawable/fab_office_document" android:contentDescription="@string/fab_office_document" app:backgroundTint="@color/fab_create_office_doc_button_background" style="@style/FabMenuButton.Mini" />
+            </FrameLayout>
+        </TableRow>
+        <TableRow android:id="@id/fab_create_google_doc_menu_row" android:clipChildren="false" android:layout_marginTop="-4.0dip">
+            <TextView android:visibility="gone" android:text="@string/fab_google_document" style="@style/FabMenuText" />
+            <FrameLayout style="@style/FabImageWrapper.Normal">
+                <android.support.design.widget.FloatingActionButton android:id="@id/fab_base_button" android:src="@drawable/fab_plus_to_google_document_drawable" android:contentDescription="@string/fab_new_document_menu_announce" app:backgroundTint="@color/quantum_googred500" style="@style/FabMenuButton.Normal" />
+            </FrameLayout>
+        </TableRow>
+    </TableLayout>
+</FrameLayout>

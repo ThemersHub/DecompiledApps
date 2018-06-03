@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/button_ripple_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask" android:left="@dimen/contextual_toolbar_button_margin" android:top="@dimen/contextual_toolbar_button_margin" android:right="@dimen/contextual_toolbar_button_margin" android:bottom="@dimen/contextual_toolbar_button_margin">
+        <shape>
+            <solid android:color="@android:color/white" />
+            <corners android:radius="@dimen/contextual_toolbar_background_radius" />
+        </shape>
+    </item>
+    <item android:left="@dimen/contextual_toolbar_button_margin" android:top="@dimen/contextual_toolbar_button_margin" android:right="@dimen/contextual_toolbar_button_margin" android:bottom="@dimen/contextual_toolbar_button_margin">
+        <selector>
+            <item android:state_checked="true" android:drawable="@drawable/contextual_toolbar_button_checked_background" />
+            <item android:drawable="@android:color/transparent" />
+        </selector>
+    </item>
+</ripple>

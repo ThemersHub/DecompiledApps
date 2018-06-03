@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/filter_header" android:background="@color/palette_tab_heading_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/closeButton" android:background="@drawable/button_ripple_bg" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/dialog_dismiss_button_bg" android:contentDescription="@string/dismiss_button_content_desc" />
+        <TextView android:textAppearance="@style/PaletteSingleTabHeadingText" android:gravity="start|center" android:layout_width="0.0dip" android:layout_height="@dimen/palette_heading_height" android:text="@string/ritz_named_ranges_dialog_title" android:layout_weight="1.0" android:paddingStart="15.0dip" />
+    </LinearLayout>
+    <include layout="@layout/separator_horizontal" />
+    <android.support.v7.widget.RecyclerView android:id="@id/named_range_dialog_ranges" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:gravity="center" android:id="@id/named_range_dialog_no_ranges" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/ritz_no_named_ranges_message" />
+</LinearLayout>

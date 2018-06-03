@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/card_view" android:background="@drawable/promo_background" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" card_view:cardBackgroundColor="@android:color/white" card_view:cardCornerRadius="2.0dip" card_view:cardUseCompatPadding="true" card_view:cardPreventCornerOverlap="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/card_start" android:paddingLeft="16.0dip" android:paddingTop="21.0dip" android:paddingRight="16.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center|top" android:id="@id/miniwelcome_app_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:src="@drawable/miniwelcome_logo" android:scaleType="centerInside" />
+            <Space android:layout_width="8.0dip" android:layout_height="fill_parent" />
+            <LinearLayout android:layout_gravity="start|center" android:orientation="vertical" android:id="@id/miniwelcome_message_layout" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:importantForAccessibility="yes">
+                <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:id="@id/miniwelcome_header_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="9.0dip" android:text="@string/promo_snackbar_heading" android:alpha="0.87" android:fontFamily="sans-serif-medium" />
+                <TextView android:textSize="14.0sp" android:textColor="@android:color/black" android:id="@id/miniwelcome_body_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="13.0dip" android:lineSpacingExtra="4.0sp" android:alpha="0.87" style="@style/PromoBody" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="end|center" android:orientation="horizontal" android:id="@id/miniwelcome_buttons_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/snackbar_action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/promo_snackbar_learn_more" android:textAllCaps="true" style="@style/PromoButton" />
+            <Space android:layout_width="12.0dip" android:layout_height="fill_parent" />
+            <FrameLayout android:id="@id/miniwelcome_button_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip">
+                <android.support.v7.widget.CardView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" card_view:cardBackgroundColor="@color/quantum_googblue500" card_view:cardCornerRadius="2.0dip" card_view:cardElevation="0.0dip" card_view:cardPreventCornerOverlap="true">
+                    <Button android:layout_gravity="center_horizontal" android:id="@id/snackbar_a11y_button" android:visibility="visible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="84.0dip" android:text="@string/promo_snackbar_got_it" android:textAllCaps="true" style="@style/PromoButton.Inverse" />
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

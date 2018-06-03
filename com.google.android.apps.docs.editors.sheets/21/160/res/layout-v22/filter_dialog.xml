@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyboardNavigationCluster="true">
+        <ImageButton android:id="@id/exit_search" android:background="@drawable/button_ripple_bg" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_arrow_back_grey600_24" android:contentDescription="@string/ritz_filter_back_description" />
+        <EditText android:textColor="@android:color/black" android:textColorHint="#ff9e9e9e" android:gravity="center_vertical" android:id="@id/search" android:background="@null" android:clickable="true" android:layout_width="0.0dip" android:layout_height="@dimen/palette_heading_height" android:hint="@string/ritz_filter_search_button_hint" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="actionDone" />
+        <ImageButton android:id="@id/clear_search" android:background="@drawable/button_ripple_bg" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_clear_grey600_24" android:adjustViewBounds="true" android:contentDescription="@string/ritz_filter_clear_description" />
+    </LinearLayout>
+    <include layout="@layout/separator_horizontal" />
+    <include layout="@layout/filter_option_buttons" />
+    <include layout="@layout/separator_horizontal" />
+    <android.support.v7.widget.RecyclerView android:id="@id/filter_options" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keyboardNavigationCluster="true" />
+</LinearLayout>

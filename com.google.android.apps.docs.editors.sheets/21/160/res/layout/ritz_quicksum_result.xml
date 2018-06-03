@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.docs.editors.ritz.view.quicksum.QuickSumResultBarView android:layout_gravity="start|bottom|center" android:orientation="horizontal" android:id="@id/quicksum_result" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/formula_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/quicksum_toggle_formula" android:background="@drawable/quicksum_bordered_result_bg" android:paddingLeft="12.0dip" android:paddingTop="13.0dip" android:paddingRight="12.0dip" android:paddingBottom="14.0dip" android:layout_width="@dimen/quicksum_fx_button_width" android:layout_height="fill_parent" android:layout_marginLeft="-1.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="0.0dip" android:layout_marginBottom="-1.0dip" android:src="@drawable/ic_btn_fx_checked" android:tint="@color/quicksum_fx_tint" android:contentDescription="@string/ritz_formula_button_description" />
+    <com.google.android.apps.docs.editors.ritz.view.quicksum.QuickSumHorizontalScrollView android:id="@id/quicksum_result_scroll" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="horizontal" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.google.android.apps.docs.editors.ritz.view.quicksum.QuickSumResultChipView android:id="@id/quicksum_sum" style="@style/QuickSumResult" />
+            <com.google.android.apps.docs.editors.ritz.view.quicksum.QuickSumResultChipView android:id="@id/quicksum_average" style="@style/QuickSumResult" />
+            <com.google.android.apps.docs.editors.ritz.view.quicksum.QuickSumResultChipView android:id="@id/quicksum_max" style="@style/QuickSumResult" />
+            <com.google.android.apps.docs.editors.ritz.view.quicksum.QuickSumResultChipView android:id="@id/quicksum_min" style="@style/QuickSumResult" />
+            <com.google.android.apps.docs.editors.ritz.view.quicksum.QuickSumResultChipView android:id="@id/quicksum_count" style="@style/QuickSumResult" />
+            <com.google.android.apps.docs.editors.ritz.view.quicksum.QuickSumResultChipView android:id="@id/quicksum_equals" android:layout_width="@dimen/ritz_icon_size" android:contentDescription="@string/ritz_enter_function_description" style="@style/QuickSumResult" />
+        </LinearLayout>
+    </com.google.android.apps.docs.editors.ritz.view.quicksum.QuickSumHorizontalScrollView>
+</com.google.android.apps.docs.editors.ritz.view.quicksum.QuickSumResultBarView>

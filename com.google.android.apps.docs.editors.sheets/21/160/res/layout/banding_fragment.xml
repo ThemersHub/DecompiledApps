@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/RitzFullscreenDialogWithGreyEdgeEffect" android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/banding_fragment_toolbar" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_height" app:titleTextAppearance="@style/RitzFullscreenDialogToolbarGrey.Title" style="@style/RitzFullscreenDialogToolbarGrey" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.docs.editors.ritz.view.shared.ViewFlipperWithRestorableState android:id="@id/banding_fragment_view_flipper" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/KeyboardNavigationCluster">
+            <include layout="@layout/banding_main_view" />
+            <include layout="@layout/banding_color_scheme_edit_view" />
+            <include layout="@layout/banding_color_picker_view" />
+        </com.google.android.apps.docs.editors.ritz.view.shared.ViewFlipperWithRestorableState>
+        <View android:background="@drawable/action_bar_drop_shadow" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</LinearLayout>

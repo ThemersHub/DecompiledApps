@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/list_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/list_view" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/filter" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/filter_row" />
+        <view android:id="@id/sticky_header" android:layout_width="fill_parent" android:layout_height="wrap_content" class="com.google.android.apps.docs.doclist.stickyheader.StickyHeaderView" />
+    </LinearLayout>
+    <com.google.android.libraries.docs.view.ElevationSkrim android:id="@id/skrim" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

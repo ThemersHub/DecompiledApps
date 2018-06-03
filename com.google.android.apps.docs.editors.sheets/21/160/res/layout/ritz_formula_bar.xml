@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.docs.editors.ritz.view.celleditor.FormulaBarView android:orientation="vertical" android:id="@id/formula_bar" android:background="@drawable/formula_bar_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.docs.editors.ritz.view.celleditor.FormulaSuggestionsBarView android:id="@id/function_suggestions_bar" android:background="@drawable/formula_bar_suggestions_bg" android:visibility="gone" android:scrollbars="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/data_validation_dropdown" />
+    <LinearLayout android:background="@drawable/formula_bar_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/ritz_keyboard_bar_cell_editor" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layoutDirection="ltr">
+            <ImageButton android:id="@id/go_left_button" android:background="@drawable/button_ripple_bg" android:visibility="gone" android:layout_width="@dimen/ritz_icon_size" android:layout_height="@dimen/formula_bar_height" android:src="@drawable/quantum_ic_keyboard_arrow_left_grey600_24" android:contentDescription="@string/ritz_keyboard_bar_go_left" />
+            <ImageButton android:id="@id/go_right_button" android:background="@drawable/button_ripple_bg" android:visibility="gone" android:layout_width="@dimen/ritz_icon_size" android:layout_height="@dimen/formula_bar_height" android:src="@drawable/quantum_ic_keyboard_arrow_right_grey600_24" android:contentDescription="@string/ritz_keyboard_bar_go_right" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.apps.docs.editors.ritz.view.celleditor.FormulaShortcutBarView android:orientation="horizontal" android:id="@id/formula_shortcut_bar" android:background="@drawable/formula_shortcut_bar_list_button_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/formula_bar_height" />
+    <include layout="@layout/rich_text_bar" />
+</com.google.android.apps.docs.editors.ritz.view.celleditor.FormulaBarView>

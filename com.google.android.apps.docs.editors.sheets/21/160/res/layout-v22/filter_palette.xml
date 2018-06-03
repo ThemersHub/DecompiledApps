@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/separator_horizontal" />
+    <LinearLayout android:id="@id/filter_header" android:background="@color/palette_tab_heading_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyboardNavigationCluster="true">
+        <ImageButton android:id="@id/closeButton" android:background="@drawable/button_ripple_bg" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/dialog_dismiss_button_bg" android:contentDescription="@string/dismiss_button_content_desc" />
+        <TextView android:textAppearance="@style/PaletteSingleTabHeadingText" android:gravity="start|center" android:layout_width="0.0dip" android:layout_height="@dimen/palette_heading_height" android:text="@string/ritz_filter_menu_title" android:layout_weight="1.0" android:paddingStart="15.0dip" />
+        <ImageButton android:id="@id/search" android:background="@drawable/button_ripple_bg" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_search_grey600_24" android:contentDescription="@string/ritz_search_button_description" />
+    </LinearLayout>
+    <include layout="@layout/separator_horizontal" />
+    <RelativeLayout android:id="@id/filter_loading_view" android:background="@color/ritz_filter_loading_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ritz_filter_loading_text" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/filter_palette_content" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/filter_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyboardNavigationCluster="true">
+            <LinearLayout style="@style/PaletteRow">
+                <Button android:typeface="sans" android:gravity="center_vertical" android:id="@id/button_font_sortAToZ" android:background="@drawable/button_ripple_bg" android:text="@string/ritz_filter_sort_text_ascending_button_text" android:drawablePadding="15.0dip" android:contentDescription="@string/ritz_filter_sort_ascending_description" android:textAllCaps="false" android:drawableStart="@drawable/quantum_ic_vertical_align_bottom_grey600_24" android:paddingStart="10.0dip" style="@style/PaletteImageButton" />
+                <include android:id="@id/text_palette_alignment_separator_view" layout="@layout/separator_vertical" />
+                <Button android:typeface="sans" android:gravity="center_vertical" android:id="@id/button_font_sortZToA" android:background="@drawable/button_ripple_bg" android:text="@string/ritz_filter_sort_text_descending_button_text" android:drawablePadding="15.0dip" android:contentDescription="@string/ritz_filter_sort_descending_description" android:textAllCaps="false" android:drawableStart="@drawable/quantum_ic_vertical_align_top_grey600_24" android:paddingStart="10.0dip" style="@style/PaletteImageButton" />
+            </LinearLayout>
+            <include layout="@layout/separator_horizontal" />
+            <LinearLayout style="@style/PaletteRow">
+                <Button android:typeface="sans" android:textColor="@android:color/black" android:gravity="center_vertical" android:id="@id/conditionalFilter" android:background="@drawable/button_ripple_bg" android:clickable="true" android:drawablePadding="15.0dip" android:textAllCaps="false" android:drawableStart="@drawable/quantum_ic_tune_grey600_24" android:paddingStart="10.0dip" style="@style/PaletteImageButton" />
+            </LinearLayout>
+            <include layout="@layout/separator_horizontal" />
+            <include layout="@layout/filter_option_buttons" />
+            <include layout="@layout/separator_horizontal" />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/filter_options" android:padding="5.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyboardNavigationCluster="true" />
+    </LinearLayout>
+</LinearLayout>

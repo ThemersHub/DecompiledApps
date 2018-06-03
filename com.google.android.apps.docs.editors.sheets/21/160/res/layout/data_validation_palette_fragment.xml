@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/dismiss_dialog_view" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:contentDescription="@string/ritz_dismiss_dialog_description" />
+    <include layout="@layout/tab_view_drop_shadow" />
+    <include layout="@layout/separator_horizontal" />
+    <LinearLayout android:id="@id/data_validation_header" android:background="@color/palette_tab_heading_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/PaletteSingleTabHeadingText" android:gravity="start|center" android:id="@id/data_validation_header_label" android:layout_width="wrap_content" android:layout_height="@dimen/palette_heading_height" android:text="@string/ritz_data_validation_drop_down_label" android:paddingStart="15.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <ImageView android:id="@id/switch_to_input_button" android:background="?android:selectableItemBackground" android:padding="8.0dip" android:focusable="true" android:layout_width="@dimen/ritz_icon_size" android:layout_height="@dimen/ritz_icon_size" android:src="@drawable/quantum_ic_keyboard_black_24" android:contentDescription="@string/ritz_data_validation_switch_to_input" android:alpha="0.6" />
+    </LinearLayout>
+    <include layout="@layout/separator_horizontal" />
+    <ScrollView android:id="@id/data_validation_options_container" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/palette_content_height">
+        <LinearLayout android:orientation="vertical" android:id="@id/data_validation_options" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Palette" />
+    </ScrollView>
+</LinearLayout>

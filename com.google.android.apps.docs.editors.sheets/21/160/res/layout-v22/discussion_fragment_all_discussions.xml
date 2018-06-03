@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/discussion_all_discussions_container" android:background="@color/discussion_container_background_open_all_discussions" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" docs_discussion:layout_minHeightForSplitMode="600.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:docs_discussion="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:keyboardNavigationCluster="true" style="@style/discussion_all_discussions_header_style">
+            <ImageView android:id="@id/action_all_close" android:background="?android:selectableItemBackground" android:src="@drawable/quantum_ic_close_grey600_24" android:contentDescription="@string/discussion_close_comments" style="@style/discussion_all_discussions_close_button_style" />
+            <TextView android:textAppearance="@style/discussion_label_text_style_large" android:text="@string/discussion_comments_title" android:layout_centerVertical="true" android:layout_toEndOf="@id/action_all_close" style="@style/discussion_wrap_width_wrap_height" />
+            <Button android:id="@id/action_new" android:focusable="true" android:visibility="gone" android:text="@string/discussion_new" android:layout_alignParentEnd="true" style="@style/discussion_all_discussions_new_button_style" />
+        </RelativeLayout>
+        <View android:background="@drawable/discussion_separator_background" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <ListView android:id="@android:id/list" android:listSelector="@drawable/discussion_list_selector" android:drawSelectorOnTop="true" android:divider="@null" android:keyboardNavigationCluster="true" style="@style/discussion_list_style" />
+    </LinearLayout>
+    <com.google.android.libraries.docs.view.JellybeanProgressBar android:id="@id/discussion_loading_spinner" android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminate="true" android:layout_centerInParent="true" style="@android:style/Widget.Holo.ProgressBar" />
+    <TextView android:id="@id/discussion_no_comments" android:text="@string/discussion_no_comments" android:contentDescription="@string/discussion_no_comments" style="@style/discussion_message_style" />
+    <TextView android:id="@id/discussion_error_loading" android:text="@string/discussion_sync_error" android:contentDescription="@string/discussion_sync_error" style="@style/discussion_message_style" />
+</RelativeLayout>

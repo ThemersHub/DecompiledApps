@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/ritz_main_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/spreadsheet_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/half_screen_landscape_container" android:layout_above="@id/half_screen_portrait_container" android:layout_toStartOf="@id/half_screen_landscape_container">
+            <FrameLayout android:id="@id/ritz_contextual_toolbar_animation_container_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ViewStub android:layout_gravity="bottom" android:id="@id/contextual_toolbar_stub_view_top" android:layout="@layout/contextual_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <include layout="@layout/ritz_sheet_container" />
+            <FrameLayout android:id="@id/phone_findreplace_popup_holder" android:background="@android:color/white" android:visibility="gone" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="@dimen/find_replace_replace_bar_height" android:keyboardNavigationCluster="true" />
+            <View android:id="@id/default_popup_anchor" android:visibility="gone" android:layout_width="@android:dimen/app_icon_size" android:layout_height="0.0dip" />
+            <View android:id="@id/accessibility_view" android:layout_width="0.0dip" android:layout_height="0.0dip" android:importantForAccessibility="yes" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/half_screen_portrait_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/ritz_bottom_part">
+            <FrameLayout android:id="@id/half_screen_fragment_portrait" style="@style/RitzHalfScreenFragmentPortrait" />
+            <com.google.android.libraries.docs.discussion.PortraitLayout android:id="@id/half_screen_docos_portrait" android:background="@drawable/half_screen_fragment_portrait_bg" android:paddingTop="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" docs_discussion:minHeightResId="@dimen/ritz_discussion_pane_portrait_min_height" docs_discussion:preferredHeightResId="@dimen/ritz_discussion_pane_portrait_preferred_height" docs_discussion:minOverheadHeightResId="@dimen/ritz_discussion_pane_portrait_min_document_height" xmlns:docs_discussion="http://schemas.android.com/apk/res-auto" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/half_screen_landscape_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_above="@id/ritz_bottom_part" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+            <FrameLayout android:id="@id/half_screen_fragment_wide_landscape" style="@style/RitzHalfScreenFragmentWideLandscape" />
+            <FrameLayout android:id="@id/half_screen_fragment_landscape" style="@style/RitzHalfScreenFragmentLandscape" />
+            <FrameLayout android:id="@id/half_screen_docos_landscape" style="@style/RitzHalfScreenFragmentLandscape" />
+        </LinearLayout>
+        <include android:id="@id/layout_calc_progress_light" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-8.0dip" android:progress="0" android:layout_alignParentTop="true" layout="@layout/ritz_calc_progress_bar" />
+        <FrameLayout android:id="@id/discussion_state" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ViewStub style="@style/BannerParent.Card.Stub" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/toggleButtons" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/formula_bar_height" android:layout_above="@id/ritz_bottom_part" android:keyboardNavigationCluster="true">
+            <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.google.android.apps.docs.editors.ritz.view.celleditor.DatePickerToggleButton android:id="@id/datepicker_launcher" android:background="@drawable/circle_button_ripple_bg" android:visibility="gone" android:layout_width="@dimen/ritz_icon_size" android:layout_height="@dimen/ritz_icon_size" android:src="@drawable/datepicker_launcher_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@string/ritz_date_picker" />
+            <com.google.android.apps.docs.editors.ritz.view.celleditor.KeyboardToggleButton android:id="@id/keyboard_toggle" android:background="@drawable/circle_button_ripple_bg" android:layout_width="@dimen/ritz_icon_size" android:layout_height="@dimen/ritz_icon_size" android:src="@drawable/abc_keyboard_unchecked_bg" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@string/ritz_keyboard_toggle_text_description" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/ritz_bottom_part" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:id="@id/phone_popup_container" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:translationZ="5.0dip" />
+            <include layout="@layout/ritz_bottom_bars" />
+        </FrameLayout>
+    </RelativeLayout>
+    <FrameLayout android:id="@id/charts_editing_fragment_placeholder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.docs.editors.ritz.view.datasheet.SheetViewContainerView android:id="@id/ritz_sheet_content_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/ritz_sheet_content_placeholder" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.libraries.docs.view.JellybeanProgressBar android:background="@android:color/white" android:layout_width="@dimen/ritz_progressbar_size" android:layout_height="@dimen/ritz_progressbar_size" android:indeterminate="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <com.google.android.apps.docs.editors.ritz.view.celleditor.FormulaParamAutoCompleteView android:textSize="18.0sp" android:layout_gravity="start|bottom|center" android:id="@id/formula_param_help" android:background="@drawable/formula_param_autocomplete_bg" android:paddingLeft="12.0dip" android:paddingTop="6.0dip" android:paddingRight="12.0dip" android:paddingBottom="12.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ritz_formula_short_help_margin" android:layout_marginRight="96.0dip" android:layout_marginBottom="@dimen/ritz_formula_short_help_margin" android:layout_marginStart="@dimen/ritz_formula_short_help_margin" android:layout_marginEnd="96.0dip" android:keyboardNavigationCluster="true" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/toggleButtons" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/formula_bar_height" android:keyboardNavigationCluster="true">
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <com.google.android.apps.docs.editors.ritz.view.celleditor.DatePickerToggleButton android:id="@id/datepicker_launcher" android:background="@drawable/circle_button_ripple_bg" android:visibility="gone" android:layout_width="@dimen/ritz_icon_size" android:layout_height="@dimen/ritz_icon_size" android:src="@drawable/datepicker_launcher_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@string/ritz_date_picker" />
+        <com.google.android.apps.docs.editors.ritz.view.celleditor.KeyboardToggleButton android:id="@id/keyboard_toggle" android:background="@drawable/circle_button_ripple_bg" android:layout_width="@dimen/ritz_icon_size" android:layout_height="@dimen/ritz_icon_size" android:src="@drawable/abc_keyboard_unchecked_bg" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@string/ritz_keyboard_toggle_text_description" />
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="bottom|center" android:id="@id/snackbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyboardNavigationCluster="true" />
+    <include layout="@layout/tab_view_drop_shadow" />
+    <include layout="@layout/ritz_quicksum_floating_toggle" />
+    <View android:id="@id/discussion_dismiss" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.google.android.apps.docs.editors.ritz.view.datasheet.SheetViewContainerView>

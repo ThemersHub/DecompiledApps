@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/cf_color_scale_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/conditional_formatting_color_scale_main_layout" style="@style/ConditionalFormattingRuleEditLayout">
+            <com.google.android.apps.docs.editors.ritz.view.conditionalformat.EditRangeLayout android:id="@id/conditional_formatting_color_scale_range_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:text="@string/ritz_conditional_formatting_format_style_subtitle" style="@style/ConditionalFormattingRuleEditHeading" />
+            <com.google.android.apps.docs.editors.ritz.view.conditionalformat.DefaultFormatsGridView android:id="@id/color_scale_default_formats" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:text="@string/ritz_conditional_formatting_format_custom_style_subtitle" style="@style/ConditionalFormattingRuleEditHeading" />
+            <com.google.android.apps.docs.editors.ritz.view.conditionalformat.GradientFormatPreview android:id="@id/color_scale_custom_format_preview" style="@style/CustomConditionalFormatPreview" />
+            <com.google.android.apps.docs.editors.ritz.view.conditionalformat.ColorScaleRuleParameterLayout android:id="@id/conditional_formatting_color_scale_minimum" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ritz_conditional_formatting_color_scale_param_margin_top" app:labelName="@string/ritz_conditional_formatting_color_scale_minimum_label" />
+            <com.google.android.apps.docs.editors.ritz.view.conditionalformat.ColorScaleRuleParameterLayout android:id="@id/conditional_formatting_color_scale_midpoint" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ritz_conditional_formatting_color_scale_param_margin_top" app:labelName="@string/ritz_conditional_formatting_color_scale_midpoint_label" />
+            <com.google.android.apps.docs.editors.ritz.view.conditionalformat.ColorScaleRuleParameterLayout android:id="@id/conditional_formatting_color_scale_maximum" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ritz_conditional_formatting_color_scale_param_margin_top" app:labelName="@string/ritz_conditional_formatting_color_scale_maximum_label" />
+            <Space android:layout_width="wrap_content" android:layout_height="@dimen/ritz_conditional_formatting_save_add_another_button_height" />
+        </LinearLayout>
+        <LinearLayout style="@style/ConditionalFormatSaveAddAnotherButtonLayout">
+            <Button android:id="@id/conditional_formatting_save_and_add_new_color_scale" style="@style/ConditionalFormatSaveAddAnotherButton" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
