@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/app_snippet" android:background="?android:colorPrimary" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:elevation="@dimen/headerElevation">
+        <ImageView android:id="@id/app_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:scaleType="fitCenter" android:layout_marginStart="16.0dip" />
+        <TextView android:textAppearance="?android:titleTextStyle" android:ellipsize="end" android:id="@id/app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginStart="32.0dip" android:layout_marginEnd="16.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_width="92.0dip" android:layout_height="92.0dip" android:layout_marginBottom="12.0dip" android:src="@drawable/ic_file_download" android:tint="@color/bigIconColor" android:contentDescription="@null" />
+        <ProgressBar android:id="@id/progress_bar" android:layout_width="250.0dip" android:layout_height="wrap_content" android:indeterminate="false" style="?android:progressBarStyleHorizontal" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center_horizontal" android:id="@id/center_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/installing" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/buttons_panel" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:measureWithLargestChild="true" style="?android:buttonBarStyle">
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <Button android:id="@id/cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel" android:maxLines="2" style="?android:buttonBarButtonStyle" />
+    </LinearLayout>
+</LinearLayout>
