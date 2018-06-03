@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TextView android:paddingTop="@dimen/license_screen_title_top_padding" android:paddingBottom="@dimen/license_screen_title_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/license_screen_title" style="@style/DialogTitleText" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/license_screen_header" style="@style/DialogSubtitleText" />
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/license_screen_description" style="@style/DialogSubheadText" />
+                <TextView android:paddingTop="@dimen/license_screen_notices_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/license_screen_notices_header" style="@style/DialogSubtitleText" />
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/license_screen_body" style="@style/DialogSubheadText" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <View android:background="@color/license_screen_divider" android:layout_width="fill_parent" android:layout_height="@dimen/license_screen_divider_thickness" android:layout_marginTop="@dimen/license_screen_divider_top_margin" android:alpha="0.1" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/license_screen_button_bar_height">
+        <Button android:id="@id/continue_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/license_screen_continue_label" style="@style/PrimaryButton" />
+    </RelativeLayout>
+</LinearLayout>

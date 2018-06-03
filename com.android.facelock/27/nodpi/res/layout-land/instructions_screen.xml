@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="bottom" android:background="@drawable/banner_tile_bottom" android:paddingTop="@dimen/title_top_padding_phone_landscape" android:paddingBottom="@dimen/title_bottom_padding_phone_landscape" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/instructions_screen_title" style="@style/HeadlineText" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/banner_bottom_margin_phone_landscape" android:layout_weight="1.0">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/subheading_bottom_margin_phone_landscape" android:text="@string/instructions_screen_header" style="@style/SubheadText" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/bullet_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/instructions_screen_bullets" style="@style/SubheadText" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/button_bar_height" android:layout_marginTop="@dimen/button_bar_top_margin_phone_landscape" android:layout_marginBottom="@dimen/button_bar_bottom_margin_phone_landscape">
+        <Button android:id="@id/continue_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/instructions_screen_continue_label" style="@style/PrimaryButton" />
+        <Button android:id="@id/cancel_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/shared_cancel_label" style="@style/PrimaryButton" />
+    </RelativeLayout>
+</LinearLayout>
