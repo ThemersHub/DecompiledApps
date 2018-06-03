@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/custom_swipe_pref_layout" android:paddingTop="@dimen/swipe_action_pref_vertical_padding" android:paddingBottom="@dimen/swipe_action_pref_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/swipe_action_pref_side_padding" android:paddingEnd="@dimen/swipe_action_pref_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="start" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/swipe_action_title" android:layout_width="wrap_content" android:layout_height="@dimen/swipe_action_pref_title_height" style="@style/swipeActionsPrefTitleText" />
+            <TextView android:id="@id/swipe_action_summary" android:layout_width="wrap_content" android:layout_height="@dimen/swipe_action_pref_summary_height" style="@style/swipeActionsPrefSummaryText" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="@dimen/swipe_action_pref_change_button_height" android:text="@string/swipe_action_pref_item_change" style="@style/swipeActionsPrefChangeButton" />
+    </LinearLayout>
+    <ViewStub android:id="@id/swipe_action_demo_viewstub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:layout_gravity="start" android:id="@id/swipe_action_warning_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/swipe_action_pref_in_between_vertical_margin" style="@style/swipeActionsPrefWarningText" />
+</LinearLayout>

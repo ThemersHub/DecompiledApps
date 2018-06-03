@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="P" package="com.google.android.gm" platformBuildVersionCode="28" platformBuildVersionName="P">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="28" package="com.google.android.gm" platformBuildVersionCode="28" platformBuildVersionName="28">
     <permission android:description="@string/permission_read_attachment_desc" android:label="@string/permission_read_attachment_label" android:name="com.google.android.gm.email.permission.READ_ATTACHMENT" android:permissionGroup="android.permission-group.MESSAGES" android:protectionLevel="signature"/>
     <permission android:description="@string/permission_access_provider_desc" android:label="@string/permission_access_provider_label" android:name="com.google.android.gm.email.permission.ACCESS_PROVIDER" android:protectionLevel="signature"/>
     <permission android:description="@string/permission_update_auth_notification_desc" android:label="@string/permission_update_auth_notification_label" android:name="com.google.android.gm.email.permission.UPDATE_AUTH_NOTIFICATION" android:protectionLevel="signature"/>
@@ -422,6 +422,11 @@
         <receiver android:exported="true" android:name="com.android.mail.receivers.AppIndexingUpdateReceiver" android:permission="com.google.android.gms.permission.APPINDEXING">
             <intent-filter>
                 <action android:name="com.google.firebase.appindexing.UPDATE_INDEX"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.android.gm.ads.CustomTabBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gm.ads.DISMISS"/>
             </intent-filter>
         </receiver>
         <service android:exported="false" android:name="com.google.android.gm.accounttransfer.EmailAccountTransferService"/>
