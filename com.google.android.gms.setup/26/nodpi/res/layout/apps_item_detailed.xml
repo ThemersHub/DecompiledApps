@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SuwItemContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="start" android:layout_gravity="top" android:id="@id/suw_items_icon_container" android:layout_width="@dimen/suw_items_icon_container_width" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/app_icon_margin_right">
+        <com.android.volley.toolbox.NetworkImageView android:id="@id/suw_items_icon" android:layout_width="@dimen/app_icon_size" android:layout_height="@dimen/app_icon_size" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/item_content" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/suw_items_verbose_padding_bottom_extra" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/switch_container" android:layout_toEndOf="@id/suw_items_icon_container">
+        <com.android.setupwizardlib.view.RichTextView android:gravity="start" android:id="@id/suw_items_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/SuwItemTitle" />
+        <com.android.setupwizardlib.view.RichTextView android:gravity="start" android:id="@id/suw_items_summary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/SuwItemSummary" />
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="center_vertical" android:id="@id/switch_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/suw_items_icon_container" android:layout_alignBottom="@id/suw_items_icon_container" android:layout_alignParentEnd="true">
+        <android.support.v7.widget.SwitchCompat android:id="@id/suw_items_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/app_summary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/item_content" android:layout_alignStart="@id/item_content" style="@style/AppSummary">
+        <com.android.setupwizardlib.view.RichTextView android:gravity="start" android:id="@id/in_app_purchases" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_has_in_app_purchases" android:textAlignment="viewStart" style="@style/InAppPurchases" />
+        <com.android.setupwizardlib.view.RichTextView android:gravity="start" android:id="@id/permissions" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/AppPermissions" />
+        <com.android.setupwizardlib.view.RichTextView android:gravity="start" android:id="@id/runtime_permissions" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_has_runtime_permissions" android:textAlignment="viewStart" style="@style/AppRuntimePermissions" />
+    </LinearLayout>
+</RelativeLayout>

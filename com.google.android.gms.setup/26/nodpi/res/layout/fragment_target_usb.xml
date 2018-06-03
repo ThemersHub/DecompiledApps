@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.setupwizardlib.GlifLayout android:icon="@drawable/quantum_ic_restore_googblue_48" android:layout_width="fill_parent" android:layout_height="fill_parent" app:suwFooter="@layout/fragment_target_usb_footer"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewFlipper android:id="@id/title_flipper" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <include android:id="@id/first_flipper" layout="@layout/fragment_usb_animated_title" />
+            <include android:id="@id/second_flipper" layout="@layout/fragment_usb_animated_title_2" />
+        </ViewFlipper>
+        <ViewFlipper android:id="@id/animation_flipper" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/initial_flipper" layout="@layout/fragment_sub_initial_state" />
+            <include android:id="@id/initial_loop_flipper" layout="@layout/fragment_usb_initial_state_loop" />
+            <include android:id="@id/initial_loop_flipper" layout="@layout/fragment_usb_cables_state" />
+            <include android:id="@id/use_other_phone_flipper" layout="@layout/fragment_usb_use_other_phone_state" />
+            <include android:id="@id/connect_adapter_and_cable_flipper" layout="@layout/fragment_usb_connect_adapter_and_cable_state" />
+            <include android:id="@id/connect_both_phones_flipper" layout="@layout/fragment_usb_connect_both_phones_state" />
+            <include android:id="@id/unlock_your_old_phone_flipper" layout="@layout/fragment_usb_unlock_your_old_phone" />
+        </ViewFlipper>
+    </LinearLayout>
+</com.android.setupwizardlib.GlifLayout>

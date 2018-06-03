@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/device_backup_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:persistent="false" android:title="@string/backup_data_title" android:key="backup_data" android:fragment="com.google.android.gms.backup.settings.ToggleBackupSettingFragment" />
+    <PreferenceScreen android:persistent="false" android:title="@string/backup_configure_account_title" android:key="configure_account">
+        <intent android:targetPackage="com.google.android.gms" android:action="com.google.android.gms.backup.SetBackupAccountActivity" android:targetClass="com.google.android.gms.backup.SetBackupAccountActivity" />
+    </PreferenceScreen>
+    <android.support.v7.preference.SwitchPreferenceCompat android:title="@string/auto_restore_title" android:key="auto_restore" android:summary="@string/auto_restore_summary" />
+</PreferenceScreen>

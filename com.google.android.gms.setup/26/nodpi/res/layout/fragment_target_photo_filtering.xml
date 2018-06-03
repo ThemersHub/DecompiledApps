@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.setupwizardlib.GlifLayout android:icon="@drawable/quantum_ic_photos_googblue_48" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SuwContentFrame">
+        <TextView android:id="@id/photos_filtering_description" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SuwDescription" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/suwItemDescriptionStyle">
+            <FrameLayout android:gravity="start" android:layout_gravity="center_vertical" android:layout_width="@dimen/suw_items_icon_container_width" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/photos_all_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" style="@style/SuwRadioButton" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textAppearance="@style/TextAppearance.SuwDescription" android:gravity="start" android:id="@id/photos_all_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/photos_filtering_option_all" android:lineSpacingExtra="@dimen/suw_description_line_spacing_extra" android:textAlignment="viewStart" style="@style/SuwItemTitle" />
+                <TextView android:gravity="start" android:id="@id/photos_all_summary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/SuwItemSummary" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/suwItemDescriptionStyle">
+            <FrameLayout android:gravity="start" android:layout_gravity="center_vertical" android:layout_width="@dimen/suw_items_icon_container_width" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/photos_6months_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SuwRadioButton" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textAppearance="@style/TextAppearance.SuwDescription" android:gravity="start" android:id="@id/photos_6months_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/suw_description_line_spacing_extra" android:textAlignment="viewStart" style="@style/SuwItemTitle" />
+                <TextView android:gravity="start" android:id="@id/photos_6months_summary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/SuwItemSummary" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/suwItemDescriptionStyle">
+            <FrameLayout android:gravity="start" android:layout_gravity="center_vertical" android:layout_width="@dimen/suw_items_icon_container_width" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/photos_3months_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SuwRadioButton" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textAppearance="@style/TextAppearance.SuwDescription" android:gravity="start" android:id="@id/photos_3months_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/suw_description_line_spacing_extra" android:textAlignment="viewStart" style="@style/SuwItemTitle" />
+                <TextView android:gravity="start" android:id="@id/photos_3months_summary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/SuwItemSummary" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/suwItemDescriptionStyle">
+            <FrameLayout android:gravity="start" android:layout_gravity="center_vertical" android:layout_width="@dimen/suw_items_icon_container_width" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/photos_none_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SuwRadioButton" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textAppearance="@style/TextAppearance.SuwDescription" android:gravity="start" android:id="@id/photos_none_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/photos_filtering_option_none" android:lineSpacingExtra="@dimen/suw_description_line_spacing_extra" android:textAlignment="viewStart" style="@style/SuwItemTitle" />
+                <TextView android:gravity="start" android:id="@id/photos_none_summary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/SuwItemSummary" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true">
+            <TextView android:textAppearance="@style/TextAppearance.SuwDescription" android:id="@id/photos_include_videos_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/photos_videos_check_box" android:lineSpacingExtra="@dimen/suw_description_line_spacing_extra" android:textAlignment="viewStart" android:layout_alignParentStart="true" style="@style/SuwItemTitle" />
+            <CheckBox android:id="@id/photos_videos_check_box" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_alignParentEnd="true" style="@style/SuwCheckBox" />
+        </RelativeLayout>
+        <TextView android:id="@id/photos_filtering_cloud_disclaimer_description" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SuwDescription" />
+        <Button android:textColor="@color/suw_color_accent_dark" android:layout_gravity="start" android:id="@id/start_transfer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/suw_items_preferred_height" android:text="@string/common_ok" android:drawablePadding="@dimen/suw_glif_margin_sides" android:drawableStart="@drawable/quantum_ic_arrow_forward_googblue_24" style="?android:attr/borderlessButtonStyle" />
+    </LinearLayout>
+</com.android.setupwizardlib.GlifLayout>

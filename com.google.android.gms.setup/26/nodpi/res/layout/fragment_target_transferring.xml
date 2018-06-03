@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.setupwizardlib.GlifLayout android:icon="@drawable/quantum_ic_restore_googblue_48" android:layout_width="fill_parent" android:layout_height="fill_parent" app:suwFooter="@layout/fragment_target_transferring_footer"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SuwContentFrame">
+            <ViewStub android:id="@id/transferring_progressbar_stub" android:layout="@layout/suw_progress_bar" android:inflatedId="@id/transferring_progressbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/suw_glif_progress_bar_margin_vertical" android:layout_marginBottom="@dimen/suw_glif_progress_bar_margin_vertical" />
+            <TextView android:id="@id/transferring_time_estimation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SuwItemSummary" />
+            <TextView android:textColor="@color/quantum_googred" android:id="@id/transferring_fragment_reconnect" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textAppearance="@style/TextAppearance.SuwDescription" android:id="@id/transferring_fragment_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/suw_description_margin_top" />
+            <TextView android:textAppearance="@style/TextAppearance.SuwDescription" android:id="@id/transferring_fragment_description_extended" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/suw_description_margin_bottom" />
+        </LinearLayout>
+        <RelativeLayout android:layout_gravity="top" android:id="@id/transferring_fragment_animation_frame" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/transferring_fragment_animation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="false" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.android.setupwizardlib.GlifLayout>

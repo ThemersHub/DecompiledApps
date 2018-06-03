@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.setupwizardlib.GlifLayout android:id="@id/source_success_main" android:background="@color/backgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent" app:suwHeaderText=""
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:gravity="center" android:id="@id/success_title_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/source_success_screen_title" style="@style/SuccessCardTitle" />
+        <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/source_success_screen_gradient_left" android:adjustViewBounds="true" android:layout_weight="1.0" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/source_success_screen_gradient_right" android:adjustViewBounds="true" android:layout_weight="1.0" />
+            </LinearLayout>
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/source_success_screen_mask" android:scaleType="centerCrop" android:layout_weight="1.0" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/source_success_screen_girl" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:id="@id/success_description_text" android:paddingTop="@dimen/source_success_text_description_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/source_success_description" style="@style/SuccessCardDescription" />
+                <Button android:theme="@style/SuccessScreenButton" android:layout_gravity="center" android:id="@id/success_done_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_ok" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</com.android.setupwizardlib.GlifLayout>
