@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wizard="http://schemas.android.com/apk/res-auto">
+    <com.google.android.setupwizard.util.StickyHeaderScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/header_for_template_with_header" />
+            <FrameLayout android:id="@id/setup_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/illustration_phone" />
+        </RelativeLayout>
+    </com.google.android.setupwizard.util.StickyHeaderScrollView>
+    <fragment android:name="com.android.setupwizard.navigationbar.SetupWizardNavBar" android:id="@id/navigation_bar" style="@style/setup_wizard_navbar_style" />
+</LinearLayout>
