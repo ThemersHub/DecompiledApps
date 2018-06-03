@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageButton android:layout_gravity="end|center|top" android:id="@id/help_button" android:background="?selectableItemBackgroundBorderless" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:layout_marginTop="5.0dip" android:src="@drawable/ic_help_outline_24" android:contentDescription="@string/action_help_and_feedback" />
+        <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/profile_image" android:layout_width="@dimen/self_profile_image_size" android:layout_height="@dimen/self_profile_image_size" android:src="@drawable/large_generic_avatar" android:contentDescription="@string/self_profile_image_content_description" />
+            <android.support.design.widget.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/capture" android:layout_width="@dimen/fab_size" android:layout_height="@dimen/fab_size" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:contentDescription="@string/welcome_profile_back_to_selfie" app:backgroundTint="#ffffffff" />
+        </FrameLayout>
+    </FrameLayout>
+    <TextView android:gravity="center_vertical" android:layout_gravity="bottom" android:id="@id/selfie_privacy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="@string/selfie_long_privacy" style="@style/Welcome.Subtitle" />
+    <LinearLayout android:theme="@style/Welcome.Theme.Dark" android:layout_gravity="bottom" android:background="@color/quantum_cyan700" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <EditText android:textColorHint="#ccffffff" android:layout_gravity="start|center" android:id="@id/profile_edit_name" android:background="@color/transparent" android:layout_width="0.0dip" android:layout_height="@dimen/min_touch_target_size" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:hint="@string/your_name_text_hint" android:maxLength="@integer/max_profile_name_length" android:layout_weight="1.0" android:inputType="textPersonName|textCapWords" style="@style/Welcome.ProfileNameEditText" />
+        <Button android:layout_gravity="center_vertical" android:id="@id/action_next" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/next" android:drawableRight="@drawable/quantum_ic_navigate_next_white_24" android:drawableEnd="@drawable/quantum_ic_navigate_next_white_24" style="@style/Welcome.Footer.Button" />
+    </LinearLayout>
+</LinearLayout>

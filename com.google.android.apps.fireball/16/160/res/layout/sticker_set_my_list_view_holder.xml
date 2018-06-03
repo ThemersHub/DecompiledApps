@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/sticker_default_theme_color" android:layout_width="fill_parent" android:layout_height="@dimen/sticker_market_sets_list_divider_height" />
+    <ViewSwitcher android:id="@id/sticker_set_my_list_view_switcher" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/sticker_market_side_margin" android:layout_marginRight="@dimen/sticker_market_side_margin">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:paddingTop="@dimen/sticker_market_my_sets_operation_hint_padding" android:paddingBottom="@dimen/sticker_market_my_sets_operation_hint_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sticker_market_my_sets_operation_hint" style="@style/StickerSetMyListViewHintTextStyle" />
+            <View android:background="@color/sticker_market_sets_list_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/sticker_market_sets_list_divider_height" />
+            <com.mobeta.android.dslv.DragSortListView android:id="@id/sticker_sets_my_list_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/sticker_market_sets_list_divider_color" android:dividerHeight="@dimen/sticker_market_sets_list_divider_height" dslv:drag_scroll_start="0.33" dslv:max_drag_scroll_speed="1.0" dslv:float_alpha="0.6" dslv:drag_enabled="true" dslv:use_default_controller="false" xmlns:dslv="http://schemas.android.com/apk/res-auto" />
+        </LinearLayout>
+        <ScrollView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/sticker_market_empty_view_side_padding" android:paddingRight="@dimen/sticker_market_empty_view_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:paddingBottom="@dimen/sticker_market_empty_image_padding" android:layout_width="@dimen/sticker_market_empty_image_size" android:layout_height="@dimen/sticker_market_empty_image_size" android:src="@drawable/empty_sticker_packs" android:scaleType="fitCenter" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sticker_my_list_view_no_stickers_headline" style="@style/MediaChooserPermissionsHeadlineStyle" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sticker_my_list_view_no_stickers_hint" style="@style/MediaChooserPermissionsTextStyle" />
+            </LinearLayout>
+        </ScrollView>
+    </ViewSwitcher>
+</LinearLayout>

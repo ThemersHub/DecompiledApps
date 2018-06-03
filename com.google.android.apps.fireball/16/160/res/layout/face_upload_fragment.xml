@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:lottie="http://schemas.android.com/apk/res-auto">
+    <android.opengl.GLSurfaceView android:id="@id/avatar_preview" android:layout_width="@dimen/sticker_preview_hidden_size" android:layout_height="@dimen/sticker_preview_hidden_size" />
+    <ImageView android:id="@id/selfie" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <FrameLayout android:background="@drawable/loading_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/eyck_creation_gradient_height" />
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/loading" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/eyck_creation_selfie_overlay_margin_bottom" android:scaleType="fitCenter" lottie:lottie_autoPlay="true" lottie:lottie_loop="true" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/eyck_creation_header_margin_bottom">
+        <TextView android:textSize="@dimen/eyck_creation_title_text_size" android:textColor="@color/quantum_white_100" android:gravity="center_horizontal" android:id="@id/creating_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/eyck_creation_header_margin_horizontal" android:layout_marginRight="@dimen/eyck_creation_header_margin_horizontal" android:text="@string/avatar_creation_wait_text" />
+        <TextView android:textSize="@dimen/eyck_creation_subtitle_text_size" android:textColor="@color/quantum_white_100" android:gravity="center_horizontal" android:id="@id/creating_text_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/eyck_creation_header_margin_horizontal" android:layout_marginTop="@dimen/eyck_creation_subtitle_margin_top" android:layout_marginRight="@dimen/eyck_creation_header_margin_horizontal" />
+    </LinearLayout>
+</FrameLayout>

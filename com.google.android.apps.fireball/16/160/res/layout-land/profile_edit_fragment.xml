@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+            <android.support.design.widget.AppBarLayout android:id="@id/appbar" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.4" app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/backdrop" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/self_profile_image_content_description" />
+                    <ImageView android:layout_gravity="center" android:id="@id/default_avatar" android:layout_width="@dimen/default_avatar_backdrop_size" android:layout_height="@dimen/default_avatar_backdrop_size" android:src="@drawable/ic_default_profile_large" android:contentDescription="@string/self_profile_image_content_description" />
+                    <ImageButton android:enabled="false" android:layout_gravity="center" android:id="@id/change_avatar" android:background="@drawable/edit_photo_gray_oval_bg" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:src="@drawable/quantum_ic_photo_camera_white_24" android:contentDescription="@string/self_profile_change_image" />
+                    <View android:layout_gravity="top" android:id="@id/top_gradient" android:background="@drawable/header_darkener_gradient_top" android:layout_width="fill_parent" android:layout_height="@dimen/header_darkener_height" />
+                </FrameLayout>
+            </android.support.design.widget.AppBarLayout>
+            <FrameLayout android:fitsSystemWindows="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.6" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <android.support.text.emoji.widget.EmojiEditText android:id="@id/edit_name" android:paddingTop="24.0dip" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="?actionBarSize" android:layout_marginRight="16.0dip" android:maxLines="3" android:maxLength="@integer/max_profile_name_length" android:inputType="textPersonName|textCapWords" android:imeOptions="flagNoExtractUi" style="@style/NameEditText" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar android:layout_gravity="top" android:id="@id/toolbar" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStart="0.0dip" app:contentInsetLeft="0.0dip" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:layout_collapseMode="pin" />
+            <View android:background="@drawable/action_bar_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/new_action_bar_elevation" />
+        </LinearLayout>
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

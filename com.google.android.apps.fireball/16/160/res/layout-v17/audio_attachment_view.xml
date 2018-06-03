@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/player_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip">
+        <com.google.android.apps.fireball.ui.components.AudioAttachmentPlayPauseButton android:layout_gravity="center" android:id="@id/play_pause_button" android:layout_width="40.0dip" android:layout_height="36.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/play_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_play_arrow_white_24" android:contentDescription="@string/audio_play_content_description" />
+            <ImageView android:layout_gravity="center" android:id="@id/pause_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_pause_white_24" android:keepScreenOn="true" android:contentDescription="@string/audio_pause_content_description" />
+        </com.google.android.apps.fireball.ui.components.AudioAttachmentPlayPauseButton>
+        <com.google.android.apps.fireball.ui.components.AudioPlaybackProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="@dimen/audio_progress_bar_width" android:layout_height="wrap_content" android:maxHeight="4.0dip" android:minHeight="44.0dip" android:layout_weight="1.0" android:layoutDirection="ltr" />
+        <com.google.android.apps.fireball.ui.conversation.components.PausableChronometer android:layout_gravity="center" android:id="@id/timer" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AudioAttachmentTimerText" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/transcription_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <view android:ellipsize="end" android:id="@id/transcription" android:paddingLeft="16.0dip" android:paddingTop="10.0dip" android:paddingRight="16.0dip" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="250.0dip" android:maxLines="2" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" class="com.google.android.apps.fireball.ui.conversation.AudioAttachmentView$CustomTextView" style="@style/AudioTranscription" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/transcription_open_close_container" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="250.0dip">
+            <TextView android:layout_gravity="center_vertical" android:id="@id/transcription_open_close_hint_text" android:paddingLeft="16.0dip" android:paddingTop="10.0dip" android:paddingRight="16.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minWidth="250.0dip" android:text="@string/view_transcription" android:maxLines="2" android:layout_weight="1.0" android:textAllCaps="false" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/quantum_text_menu_grey" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/transcription_open_close" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/quantum_ic_expand_more_grey600_24" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textColor="#ffffffff" android:id="@id/tooltip" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/audio_transcription_tooltip" />
+</LinearLayout>

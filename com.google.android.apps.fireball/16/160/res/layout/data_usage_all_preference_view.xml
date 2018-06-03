@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" card_view:cardCornerRadius="2.0dip" card_view:cardElevation="2.0dip" card_view:contentPadding="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textStyle="bold" android:textColor="?android:textColorPrimary" android:id="@id/data_usage_preference_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textColor="?android:textColorSecondary" android:id="@id/data_usage_preference_incoming" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/data_usage_preference_title" android:textIsSelectable="true" />
+        <TextView android:textColor="?android:textColorSecondary" android:id="@id/data_usage_preference_outgoing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/data_usage_preference_incoming" android:textIsSelectable="true" />
+        <TextView android:textColor="?android:textColorSecondary" android:id="@id/data_usage_preference_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/data_usage_preference_outgoing" android:textIsSelectable="true" />
+        <TextView android:textColor="?android:textColorSecondary" android:layout_gravity="center" android:id="@id/data_usage_preference_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/data_usage_preference_loading_error" />
+        <com.google.android.libraries.material.progress.MaterialProgressBar android:layout_gravity="center" android:id="@id/data_usage_preference_loading_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.GoogleLib.Progress.Circular.Indeterminate.Medium" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/rating_prompt_bg" android:paddingTop="@dimen/rating_prompt_content_padding" android:paddingBottom="@dimen/rating_prompt_content_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/rating_prompt_image_padding_landscape" android:layout_marginRight="@dimen/rating_prompt_image_padding_landscape" android:src="@drawable/ratings_dialog_image_01" android:contentDescription="@string/rating_prompt_image_desc" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/rating_prompt_content_padding">
+        <TextView android:gravity="start|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/rating_prompt_action_text_padding" android:text="@string/rating_prompt_title" style="@style/RatingPromptDialog.Title" />
+        <TextView android:gravity="start|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rating_prompt_subtitle" style="@style/RatingPromptDialog.Subtitle" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/rating_prompt_action_padding" android:layout_marginRight="@dimen/rating_prompt_action_padding">
+        <Button android:id="@id/action_rate" android:text="@string/rating_prompt_action_rate" style="@style/RatingPromptDialog.Action" />
+        <Space android:layout_width="@dimen/rating_prompt_action_spacing" android:layout_height="fill_parent" />
+        <Button android:id="@id/action_feedback" android:text="@string/rating_prompt_action_feedback" style="@style/RatingPromptDialog.Action" />
+        <Space android:layout_width="@dimen/rating_prompt_action_spacing" android:layout_height="fill_parent" />
+        <Button android:id="@id/action_decline" android:text="@string/rating_prompt_action_decline" style="@style/RatingPromptDialog.Action" />
+    </LinearLayout>
+</LinearLayout>

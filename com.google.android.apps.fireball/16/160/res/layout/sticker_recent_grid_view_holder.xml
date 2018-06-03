@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/recent_stickers_holder_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:enabled="false" android:gravity="center_vertical" android:orientation="vertical" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:indeterminate="true">
+        <ProgressBar android:enabled="false" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="40.0dip" android:indeterminate="true" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/no_recent_sticker_layout" android:paddingBottom="@dimen/sticker_grid_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:paddingTop="20.0dip" android:paddingBottom="@dimen/picker_permissions_icon_bottom_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/empty_recentsticker" android:contentDescription="@null" />
+        <TextView android:layout_gravity="center" android:id="@id/no_recent_stickers_text" android:paddingLeft="@dimen/picker_permissions_side_padding" android:paddingRight="@dimen/picker_permissions_side_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sticker_recent_grid_view_no_stickers_headline" style="@style/MediaChooserPermissionsHeadlineStyle" />
+        <TextView android:layout_gravity="center" android:id="@id/no_recent_stickers_subtext" android:paddingLeft="@dimen/picker_permissions_side_padding" android:paddingRight="@dimen/picker_permissions_side_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sticker_recent_grid_view_no_stickers_hint" style="@style/MediaChooserPermissionsTextStyle" />
+    </LinearLayout>
+    <ScrollView android:scrollbarStyle="insideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/sticker_grid_view" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/sticker_grid_view" />
+    </ScrollView>
+</FrameLayout>

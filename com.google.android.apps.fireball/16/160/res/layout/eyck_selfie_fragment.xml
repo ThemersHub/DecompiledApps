@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/capture_image_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/eyck_overlay_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:background="@drawable/eyck_creation_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/eyck_creation_gradient_height" />
+        <ImageView android:id="@id/eyck_selfie_top_image" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/eyck_selfie_bottom_image" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_alignParentBottom="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/text_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/eyck_creation_header_margin_horizontal" android:layout_marginTop="@dimen/eyck_creation_header_margin_top" android:layout_marginRight="@dimen/eyck_creation_header_margin_horizontal">
+            <TextView android:textSize="@dimen/eyck_creation_title_text_size" android:textColor="@color/quantum_white_100" android:gravity="center_horizontal" android:id="@id/align_face_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/eyck_align_face" />
+            <TextView android:textSize="@dimen/eyck_creation_subtitle_text_size" android:textColor="@color/quantum_white_100" android:gravity="center_horizontal" android:id="@id/take_photo_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/eyck_take_a_photo" />
+        </LinearLayout>
+        <ImageView android:id="@id/eyck_selfie_eye_alignment_image" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/eyck_creation_selfie_overlay_margin_bottom" android:scaleType="fitCenter" />
+        <android.support.design.widget.FloatingActionButton android:id="@id/camera_capture_button" android:background="@drawable/transparent_button_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/eyck_creation_camera_margin_bottom" android:src="@drawable/quantum_ic_camera_alt_white_24" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:contentDescription="@string/eyck_take_photo_button_description" app:elevation="5.0dip" app:fabSize="normal" app:useCompatPadding="false" app:backgroundTint="@color/sticker_default_theme_color" />
+    </RelativeLayout>
+</FrameLayout>

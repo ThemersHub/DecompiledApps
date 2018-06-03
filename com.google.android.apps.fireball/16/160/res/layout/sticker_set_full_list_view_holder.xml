@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/sticker_default_theme_color" android:layout_width="fill_parent" android:layout_height="@dimen/sticker_market_sets_list_divider_height" />
+    <ViewSwitcher android:id="@id/sticker_sets_full_list_view_switcher" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/sticker_market_sets_list_divider_color" android:dividerHeight="@dimen/sticker_market_sets_list_divider_height" />
+        <ScrollView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/sticker_market_empty_view_side_padding" android:paddingRight="@dimen/sticker_market_empty_view_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:paddingBottom="@dimen/sticker_market_empty_image_padding" android:layout_width="@dimen/sticker_market_empty_image_size" android:layout_height="@dimen/sticker_market_empty_image_size" android:src="@drawable/empty_sticker_download" android:scaleType="fitCenter" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sticker_market_empty_view_headline" style="@style/MediaChooserPermissionsHeadlineStyle" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sticker_market_empty_view_text" style="@style/MediaChooserPermissionsTextStyle" />
+                <TextView android:id="@id/sticker_sets_full_list_retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/min_touch_target_size" android:minHeight="@dimen/min_touch_target_size" android:text="@string/sticker_market_empty_view_retry_text" style="@style/MediaChooserPermissionsEnableButtonStyle" />
+            </LinearLayout>
+        </ScrollView>
+    </ViewSwitcher>
+</LinearLayout>

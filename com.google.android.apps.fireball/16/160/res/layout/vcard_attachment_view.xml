@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.fireball.ui.conversation.components.VcardAttachmentView android:background="@drawable/link_preview_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/vcard_attachment_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/contact_card_top_container" android:background="@drawable/vcard_attachment_background" android:paddingTop="@dimen/vcard_info_padding" android:paddingBottom="@dimen/vcard_info_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="start|center" android:id="@id/vcard_contact_profile_icon" android:layout_width="@dimen/vcard_profile_image_size" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/vcard_profile_image_margin" android:layout_marginRight="@dimen/vcard_profile_image_margin" android:scaleType="fitCenter" android:contentDescription="@string/vcard_view_contact_profile_image_description" />
+            <LinearLayout android:orientation="vertical" android:id="@id/contact_card_info" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/contact_card_name" android:paddingBottom="@dimen/vcard_info_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FireballVcardAttachmentTextStyle" />
+                <TextView android:id="@id/contact_phone_number" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FireballVcardAttachmentTextStyle" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="end|center" android:id="@id/contact_card_footer" android:background="@drawable/vcard_attachment_footer_background" android:paddingLeft="@dimen/vcard_info_left_right_padding" android:paddingTop="@dimen/vcard_info_top_bottom_padding" android:paddingRight="@dimen/vcard_info_left_right_padding" android:paddingBottom="@dimen/vcard_info_top_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/contact_card_top_container">
+            <TextView android:textAppearance="@style/FireballVcardAttachmentActionTextStyle" android:id="@id/contact_card_footer_text" android:layout_width="wrap_content" android:layout_height="@dimen/vcard_info_footer_container_height" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.google.android.apps.fireball.ui.conversation.components.VcardAttachmentView>

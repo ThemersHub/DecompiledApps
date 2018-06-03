@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <SurfaceView android:id="@id/camera_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.apps.fireball.ui.desktop.QrScannerOverlayView android:id="@id/qr_scanner_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TextView android:textSize="@dimen/qr_code_scanner_hint_text_size" android:textColor="@color/quantum_white_100" android:layout_gravity="center_horizontal" android:id="@id/qr_scanner_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qr_code_scanner_hint_text_margin_top" android:text="@string/qr_code_scanner_hint_text" android:fontFamily="sans-serif" />
+    </FrameLayout>
+    <include android:id="@id/camera_permission_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/camera_permission_view" />
+</ViewSwitcher>

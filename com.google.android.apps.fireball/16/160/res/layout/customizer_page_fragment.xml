@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/preview_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/avatarPreviewContainer" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <android.opengl.GLSurfaceView android:layout_gravity="center" android:id="@id/avatarPreview" android:paddingBottom="@dimen/avatar_preview_bottom_space_height" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/separator" />
+                <ImageView android:layout_gravity="center" android:id="@id/avatarPreviewImageView" android:paddingBottom="@dimen/avatar_preview_bottom_space_height" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/separator" />
+                <ProgressBar android:id="@id/avatarPreviewProgressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true" />
+                <FrameLayout android:id="@id/separator" android:layout_width="fill_parent" android:layout_height="@dimen/avatar_preview_bottom_space_height" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <android.support.design.widget.FloatingActionButton android:layout_gravity="bottom|center|right" android:id="@id/camera" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_camera_alt_white_24" android:contentDescription="@string/camera_button_description" app:elevation="5.0dip" app:fabSize="normal" app:useCompatPadding="true" app:backgroundTint="@color/fireball_blue" />
+        </FrameLayout>
+        <View android:layout_gravity="bottom" android:background="@drawable/avatar_preview_background_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/avatar_preview_background_shadow_size" />
+        <fragment android:id="@id/customization" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" class="com.google.android.libraries.eyck.customizer.CustomizerOptionsFragment" />
+    </LinearLayout>
+</FrameLayout>

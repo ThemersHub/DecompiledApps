@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.fireball.ui.conversation.ConversationFragmentView android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/conversation_contents_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/search_details_container" android:background="#ff333333" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/action_bar_height">
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/search_details_textview" android:paddingLeft="32.0dip" android:paddingRight="0.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageButton android:id="@id/search_prev" android:layout_width="wrap_content" android:layout_height="@dimen/min_touch_target_size" android:src="@drawable/ic_keyboard_arrow_left_light" android:contentDescription="@string/search_prev_content_description" style="?android:attr/borderlessButtonStyle" />
+            <ImageButton android:id="@id/search_next" android:layout_width="wrap_content" android:layout_height="@dimen/min_touch_target_size" android:src="@drawable/ic_keyboard_arrow_right_light" android:contentDescription="@string/search_next_content_description" style="?android:attr/borderlessButtonStyle" />
+        </LinearLayout>
+        <FrameLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:id="@android:id/list" android:paddingTop="@dimen/action_bar_height" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/transparent" />
+            <include android:id="@id/whisper_shout_promo" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/whisper_shout_promo" />
+            <include android:id="@id/auto_awesome_emoji_promo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/auto_awesome_emoji_promo" />
+            <FrameLayout android:id="@id/theme_picker_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <FrameLayout android:id="@id/contents_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:id="@id/compose_message_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <include android:id="@id/message_compose_view_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/compose_message_view" />
+                    <include android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true" layout="@layout/above_compose_bar_container" />
+                </RelativeLayout>
+                <TextView android:gravity="center_horizontal" android:layout_gravity="bottom" android:id="@id/read_only_banner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ReadOnlyBanner" />
+                <com.google.android.apps.fireball.ui.conversation.compose.SendButtonPromoView android:layout_gravity="end|bottom|center" android:id="@id/send_button_promo_view" android:layout_width="@dimen/send_button_width" android:layout_height="@dimen/send_button_height" android:layout_margin="@dimen/send_button_margin" />
+                <com.google.android.apps.fireball.ui.conversation.compose.SendButtonView android:layout_gravity="end|bottom|center" android:id="@id/send_message_view" android:layout_width="@dimen/send_button_width" android:layout_height="@dimen/send_button_height" android:layout_margin="@dimen/send_button_margin" />
+                <include layout="@layout/audio_record_view" />
+                <com.google.android.apps.fireball.ui.conversation.compose.QuickSelfieView android:layout_gravity="end|bottom|center" android:id="@id/quick_selfie_view" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="@dimen/quick_selfie_outer_button_width" android:layout_height="@dimen/quick_selfie_outer_button_height" android:layout_margin="0.0dip" />
+                <include layout="@layout/speech_recognizer_view" />
+                <include android:layout_gravity="bottom|center" android:id="@id/preview_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/bot_preview" />
+                <View android:layout_gravity="bottom" android:id="@id/bottom_shadow" android:background="@drawable/top_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+            </FrameLayout>
+            <include android:layout_gravity="bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/conversation_attachments_container" />
+            <FrameLayout android:id="@id/selected_message_overlay_bg" android:background="@color/message_annotation_overlay_color" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/highlight_message_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                <FrameLayout android:id="@id/long_press_menu_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/empty_view_for_keyboard" android:background="@color/quantum_bluegrey50" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </ScrollView>
+        <fragment android:tag="mediapicker" android:layout_width="fill_parent" android:layout_height="wrap_content" class="com.google.android.apps.fireball.ui.mediapicker.MediaPicker" />
+        <include layout="@layout/emoji_gallery_container" />
+    </FrameLayout>
+</com.google.android.apps.fireball.ui.conversation.ConversationFragmentView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.fireball.ui.sticker.StickerViewPager android:id="@id/sticker_details_view_pager" android:background="@drawable/pill_background_with_shadow" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/minimode_picker_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@null" android:layout_width="fill_parent" android:layout_height="@dimen/smart_compose_sticker_eyebrow_height"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/close_picker" android:paddingTop="3.0dip" android:paddingBottom="3.0dip" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:src="@drawable/quantum_ic_close_white_24" android:tint="@color/smart_compose_close_icon" android:contentDescription="@string/back" style="@style/Widget.AppCompat.Button.Borderless" />
+        <com.google.android.apps.fireball.ui.sticker.StickerViewPagerTabs android:orientation="horizontal" android:id="@id/sticker_view_pager_tabs" android:background="@null" android:layout_width="0.0dip" android:layout_height="@dimen/smart_compose_sticker_eyebrow_height" android:layout_weight="1.0" />
+        <FrameLayout android:layout_gravity="end|center" android:id="@id/market_button_container" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/launch_sticker_market_button" android:background="@drawable/sticker_grid_item_view_background_selector" android:padding="@dimen/sticker_view_pager_tab_padding" android:clickable="true" android:layout_width="@dimen/sticker_view_pager_tab_width" android:layout_height="@dimen/sticker_view_pager_tab_height" android:layout_marginLeft="@dimen/sticker_view_pager_tab_margin" android:layout_marginRight="6.0dip" android:scaleType="center" />
+        </FrameLayout>
+    </LinearLayout>
+    <android.support.v4.view.ViewPager android:id="@id/pager" android:background="@drawable/smart_compose_sticker_gridview_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</com.google.android.apps.fireball.ui.sticker.StickerViewPager>

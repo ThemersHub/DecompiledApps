@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/quantum_black_100" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:id="@id/sengine_fragment" android:background="@color/quantum_black_100" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.research.ink.core.SEngineSupportFragment" />
+    <fragment android:id="@id/text_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.research.ink.annotate.InkTextFragment" />
+    <LinearLayout android:orientation="vertical" android:id="@id/speech_bubble_edit_text_view" android:background="@color/suggestion_space_background_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:focusable="false" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0">
+            <com.google.research.ink.annotate.InkEditText android:textSize="@dimen/suggestion_space_speech_bubble_text_input_size" android:textColor="@color/quantum_white_100" android:layout_gravity="bottom" android:id="@id/speech_bubble_edit_text" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLength="@integer/suggestion_space_speech_bubble_char_limit" android:inputType="textLongMessage|textAutoCorrect|textCapSentences|textMultiLine" android:imeOptions="flagNoExtractUi" />
+        </FrameLayout>
+        <View android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0" />
+    </LinearLayout>
+    <com.google.android.apps.fireball.ui.common.WindowInsetsAwareLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:applyInsetTop="true" app:applyInsetsLeftRight="true" app:consumeInsets="false">
+        <FrameLayout android:id="@id/top_buttons_container" android:background="@drawable/ink_header_gradient" android:paddingLeft="4.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/ink_top_buttons_container_height">
+            <LinearLayout android:layout_gravity="end|center|top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageButton android:id="@id/info_button" android:background="@null" android:visibility="gone" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:src="@drawable/quantum_ic_info_outline_white_24" android:scaleType="center" android:contentDescription="@string/ink_web_stickers_attribution" />
+                <ImageButton android:id="@id/share_button" android:background="@null" android:visibility="gone" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:src="@drawable/quantum_ic_share_white_24" android:scaleType="center" android:contentDescription="@string/action_share" />
+                <ImageButton android:id="@id/send_button" android:background="@drawable/ink_send_button_background" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:layout_marginLeft="20.0dip" android:src="@drawable/quantum_ic_send_white_24" android:scaleType="center" android:contentDescription="@string/action_send" />
+            </LinearLayout>
+            <ImageButton android:layout_gravity="end|center|top" android:id="@id/done_button" android:background="@drawable/ink_send_button_background" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:layout_marginLeft="20.0dip" android:src="@drawable/quantum_ic_done_white_24" android:scaleType="center" android:contentDescription="@string/done_drawing_description" />
+            <ImageButton android:layout_gravity="start|center|top" android:id="@id/delete_button" android:background="@color/transparent" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:src="@drawable/quantum_ic_clear_white_24" android:contentDescription="@android:string/cancel" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/ink_suggestion_space_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/suggestion_space_side_margins" android:layout_marginRight="@dimen/suggestion_space_side_margins" android:layout_marginBottom="@dimen/suggestion_space_distance_from_toolbar">
+                <fragment android:id="@id/ink_suggestion_space_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" class="com.google.android.apps.fireball.ui.mediapicker.ink.InkSuggestionSpaceFragment" />
+            </FrameLayout>
+            <fragment android:id="@id/bottom_toolbar_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" class="com.google.android.apps.fireball.ui.mediapicker.ink.InkToolbarFragment" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/stickers_fragment_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/image_attribution_fragment_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.google.android.apps.fireball.ui.common.WindowInsetsAwareLayout>
+</FrameLayout>

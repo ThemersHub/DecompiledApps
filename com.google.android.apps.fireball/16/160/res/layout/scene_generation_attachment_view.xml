@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.fireball.ui.conversation.attachments.scenegeneration.SceneGenerationAttachmentView android:orientation="vertical" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="@dimen/short_minimode_height">
+        <ImageButton android:id="@id/close" android:background="@drawable/pill_background_top_left_gray" android:paddingTop="@dimen/short_minimode_close_padding_vertical" android:paddingBottom="@dimen/short_minimode_close_padding_vertical" android:layout_width="@dimen/short_minimode_close_width" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_close_white_24" android:contentDescription="@string/scene_generation_attachment_back_content_description" />
+        <FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textColor="@color/quantum_bluegrey600" android:gravity="center" android:id="@id/empty_state_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/scene_generation_empty_state" />
+            <TextView android:textColor="@color/quantum_error_light" android:gravity="center" android:id="@id/error_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/scene_generation_error" />
+            <android.support.v7.widget.RecyclerView android:id="@id/suggestions" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.google.android.libraries.material.progress.MaterialProgressBar android:layout_gravity="center" android:id="@id/spinner" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Widget.GoogleLib.Progress.Circular.Indeterminate.Large" />
+        </FrameLayout>
+    </LinearLayout>
+    <View android:background="@color/gif_attachment_divider" android:layout_width="fill_parent" android:layout_height="@dimen/content_wizard_divider_height" />
+</com.google.android.apps.fireball.ui.conversation.attachments.scenegeneration.SceneGenerationAttachmentView>

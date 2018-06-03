@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_height">
+        <ImageButton android:id="@id/back_button" android:layout_width="@dimen/min_touch_target_size" android:layout_height="@dimen/min_touch_target_size" android:src="@drawable/ic_arrow_back_24" android:contentDescription="@string/back" style="@style/Widget.AppCompat.Button.Borderless" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/country_hint" style="@style/Welcome.Title" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/bar_shadow" android:background="@drawable/action_bar_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/new_action_bar_elevation" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:id="@id/country_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>
