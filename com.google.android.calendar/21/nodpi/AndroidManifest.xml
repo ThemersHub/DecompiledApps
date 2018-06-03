@@ -211,7 +211,7 @@
             </intent-filter>
         </receiver>
         <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.calendar.timely.report.ViewDebugReportActivity" android:noHistory="true" android:taskAffinity="" android:theme="@style/CalendarTheme"/>
-        <receiver android:enabled="false" android:name="com.google.android.calendar.timely.report.DebugCleanupReceiver">
+        <receiver android:enabled="false" android:exported="true" android:name="com.google.android.calendar.timely.report.DebugCleanupReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
@@ -414,6 +414,13 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <receiver android:exported="true" android:name="com.google.android.libraries.internal.growth.growthkit.inject.GrowthKitBootCompletedBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
         <receiver android:exported="true" android:name="com.google.android.libraries.internal.growth.growthkit.internal.experiments.impl.PhenotypeBroadcastReceiver">
             <intent-filter>
                 <action android:name="com.google.android.gms.phenotype.UPDATE"/>
@@ -433,6 +440,11 @@
         </receiver>
         <activity android:exported="true" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:theme="@style/Theme.AppCompat.Light"/>
         <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.calendar.v2a.android.provider.sync.syncer.ProviderSyncJobService">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
         <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <activity android:exported="false" android:label="@string/preferences_title" android:name="com.google.android.calendar.settings.SettingsActivity" android:theme="@style/PreferenceTheme.Compat" android:windowSoftInputMode="stateHidden"/>
         <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIPz70fPFN-Vh8aLIBafEEbpyQlT1Tr5WXGoJ2Vw"/>

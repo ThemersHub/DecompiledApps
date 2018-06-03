@@ -241,7 +241,7 @@
     <string name="custom_notification_override_announcement">값이 %s(으)로 변경되었습니다.</string>
     <string name="date_duration_accessibility_description">%s에 종료</string>
     <string name="date_duration_label">%s</string>
-    <string name="date_space_dash">" -"</string>
+    <string name="date_space_dash">-</string>
     <string name="date_time_fmt">%1$s, %2$s</string>
     <string name="day_picker_description">월별 바둑판식 날짜 표시</string>
     <string name="day_view">일</string>
@@ -257,7 +257,7 @@
     <string name="deletion_scope_selection_title">반복 일정 삭제</string>
     <string name="deletion_scope_selection_title_reminder">반복 알림 삭제</string>
     <string name="demo_account_name">데모 계정</string>
-    <string name="demo_calendar_name">데모 캘린더</string>
+    <string name="demo_calendar_name">캘린더 데모</string>
     <string name="describe_attachments_icon">첨부파일</string>
     <string name="describe_availability_icon">한가함/바쁨</string>
     <string name="describe_calendar_icon">캘린더 이름</string>
@@ -332,12 +332,14 @@
     <string name="email_organizer_label">이메일 관리도구</string>
     <string name="email_picker_label">이메일:</string>
     <string name="email_response_dialog_title">이메일 회신</string>
-    <string name="email_separator">", "</string>
+    <string name="email_separator">,</string>
     <string name="email_task_assist">이메일</string>
     <string name="endByDate">, %s까지</string>
     <string name="end_label">반복 종료 시점:</string>
     <string name="end_time_min">%d분</string>
     <string name="error_loading_report">오류: 보고서를 로드할 수 없습니다.</string>
+    <string name="error_offline_subtitle">Please check your connection and try again.</string>
+    <string name="error_offline_title">You appear to be offline</string>
     <string name="error_state_body">잠시 후 다시 시도해 주세요.</string>
     <string name="error_state_title">오류 발생</string>
     <string name="event">일정</string>
@@ -378,15 +380,14 @@
     <string name="find_time_custom_duration_minute_input">분</string>
     <string name="find_time_duration_custom_option">맞춤설정...</string>
     <string name="find_time_duration_hour_label_abbrev">%d시간</string>
-    <string name="find_time_duration_hour_minute_word_break">" "</string>
+    <string name="find_time_duration_hour_minute_word_break" />
     <string name="find_time_duration_minute_label_abbrev">%d분</string>
     <string name="find_time_duration_picker_title">기간</string>
     <string name="find_time_empty_list_failed_load_calendars_body_title">캘린더를 로드하지 못했습니다. 나중에 다시 시도해 주세요.</string>
     <string name="find_time_empty_list_failed_load_calendars_label_title">추천 시간 없음</string>
     <string name="find_time_empty_list_label_body">더 나은 결과를 얻으려면 아래에서 시간대 또는 기간을 변경해 보세요.</string>
     <string name="find_time_empty_list_label_title">모두 바쁨</string>
-    <string name="find_time_empty_list_offline_body_title">인터넷에 연결되어 있는지 확인하고 다시 시도해 보세요.</string>
-    <string name="find_time_empty_list_offline_label_title">오프라인 상태인 것 같음</string>
+    <string name="find_time_empty_list_not_found_all_calendars_body_title">참석자의 캘린더에 액세스할 수 없습니다.</string>
     <string name="find_time_everyone_everyone_is_busy_snackbar_label">모두 다른 일정이 있습니다.</string>
     <string name="find_time_everyone_is_busy_snackbar_action">찾기</string>
     <string name="find_time_find_later_on_snackbar_label">나중에 적합한 시간을 찾을까요?</string>
@@ -406,7 +407,7 @@
     <string name="find_time_timeframe_picker_on_a_date_label">%s</string>
     <string name="find_time_timeframe_picker_title">시간대</string>
     <string name="find_time_timeframe_picker_within_a_date_label">%s 즈음</string>
-    <string name="find_time_two_info">%1$s %2$s</string>
+    <string name="find_time_two_info">%1$s %2$s﻿</string>
     <string name="find_time_two_lines_short_layout">%1$s: %2$s</string>
     <string name="find_time_you_are_unavailable">참석할 수 없습니다.</string>
     <string name="find_time_you_do_not_take_meetings_at_this_time">나는 보통 이 시간에 회의를 참석하지 않습니다.</string>
@@ -432,8 +433,6 @@
     <string name="gms_core_unrecoverable_error">Google Play 서비스 오류로 캘린더를 시작할 수 없습니다.</string>
     <string name="goal_custom_duration_min_error_msg">최소 1분 이상이어야 합니다.</string>
     <string name="goal_deferred">세션이 %1$s(으)로 이동했습니다.</string>
-    <string name="goal_marked_as_done_week_complete">이번 주 목표를 달성했습니다.</string>
-    <string name="goal_marked_as_done_week_incomplete">잘하셨습니다. 이번 주 세션 %2$d개 중 %1$d개를 완료했습니다.</string>
     <string name="goal_session_deferred">다른 시간을 찾는 중...</string>
     <string name="goal_session_deferred_offline">오프라인 상태입니다. 온라인 상태일 때 세션 일정이 다시 예약됩니다.</string>
     <string name="goal_undeferrable">더 이상 적절한 시간이 없습니다.</string>
@@ -634,6 +633,7 @@
     <string name="list_week_view_3days_label">3일</string>
     <string name="loading">로드 중...</string>
     <string name="location_adapter_name_address_format">%1$s, %2$s</string>
+    <string name="location_adapter_name_format">%s</string>
     <string name="location_time">%s(현지 시간)</string>
     <string name="map_label">지도</string>
     <string name="maps_not_available">이 위치를 표시할 수 있는 애플리케이션이 없습니다.</string>

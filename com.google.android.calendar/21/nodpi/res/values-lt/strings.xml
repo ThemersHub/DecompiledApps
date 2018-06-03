@@ -241,7 +241,7 @@ Nustatymuose vėl įjunkite Kalendoriaus saugyklą."</string>
     <string name="custom_notification_override_announcement">Vertė pakeista į %s</string>
     <string name="date_duration_accessibility_description">Baigiasi %s</string>
     <string name="date_duration_label">%s</string>
-    <string name="date_space_dash">" –"</string>
+    <string name="date_space_dash">–</string>
     <string name="date_time_fmt">%1$s, %2$s</string>
     <string name="day_picker_description">Mėnesio dienų tinklelis</string>
     <string name="day_view">Diena</string>
@@ -332,12 +332,14 @@ Nustatymuose vėl įjunkite Kalendoriaus saugyklą."</string>
     <string name="email_organizer_label">El. pašto tvarkymo priemonė</string>
     <string name="email_picker_label">Siųsti el. paštu su</string>
     <string name="email_response_dialog_title">Atsakymo siuntimas el. paštu</string>
-    <string name="email_separator">", "</string>
+    <string name="email_separator">,</string>
     <string name="email_task_assist">Siųsti el. laišką</string>
     <string name="endByDate">, iki %s</string>
     <string name="end_label">Baigiasi</string>
     <string name="end_time_min">%d min.</string>
     <string name="error_loading_report">Klaida: nepavyko įkelti ataskaitos.</string>
+    <string name="error_offline_subtitle">Patikrinkite ryšį ir bandykite dar kartą.</string>
+    <string name="error_offline_title">Esate neprisijungę</string>
     <string name="error_state_body">Vėliau bandykite dar kartą.</string>
     <string name="error_state_title">Įvyko klaida</string>
     <string name="event">Įvykis</string>
@@ -363,7 +365,7 @@ Nustatymuose vėl įjunkite Kalendoriaus saugyklą."</string>
     <string name="find_a_time_button_label_more_to_grid">Mygtukas „Daugiau“ – kalendoriaus tinklelyje rodomas laiko pasiūlymas</string>
     <string name="find_a_time_consider_existing_rooms">Atsižvelgti į esamus kambarius</string>
     <string name="find_a_time_duration_timeframe_filter_around_custom">maždaug %s</string>
-    <string name="find_a_time_duration_timeframe_filter_format">%1$s, %2$s</string>
+    <string name="find_a_time_duration_timeframe_filter_format">%1$s %2$s</string>
     <string name="find_a_time_duration_timeframe_filter_on_custom">%s</string>
     <string name="find_a_time_event_busy">Užsiėmęs (-usi)</string>
     <string name="find_a_time_event_no_status">Nėra būsenos</string>
@@ -378,7 +380,7 @@ Nustatymuose vėl įjunkite Kalendoriaus saugyklą."</string>
     <string name="find_time_custom_duration_minute_input">min.</string>
     <string name="find_time_duration_custom_option">Tinkintas...</string>
     <string name="find_time_duration_hour_label_abbrev">%d val.</string>
-    <string name="find_time_duration_hour_minute_word_break">" "</string>
+    <string name="find_time_duration_hour_minute_word_break" />
     <string name="find_time_duration_minute_label_abbrev">%d min.</string>
     <string name="find_time_duration_picker_title">Trukmė</string>
     <string name="find_time_empty_list_failed_load_calendars_body_title">Nepavyko įkelti kalendorių. Vėliau bandykite dar kartą.</string>
@@ -386,8 +388,6 @@ Nustatymuose vėl įjunkite Kalendoriaus saugyklą."</string>
     <string name="find_time_empty_list_label_body">Pakeiskite toliau pateiktą laikotarpį arba trukmę, kad sulauktumėte geresnių rezultatų</string>
     <string name="find_time_empty_list_label_title">Visi užimti</string>
     <string name="find_time_empty_list_not_found_all_calendars_body_title">Neturite prieigos prie jokio svečio kalendoriaus.</string>
-    <string name="find_time_empty_list_offline_body_title">Patikrinkite ryšį ir bandykite dar kartą.</string>
-    <string name="find_time_empty_list_offline_label_title">Esate neprisijungęs (-usi)</string>
     <string name="find_time_everyone_everyone_is_busy_snackbar_label">Visi užimti.</string>
     <string name="find_time_everyone_is_busy_snackbar_action">RASTI</string>
     <string name="find_time_find_later_on_snackbar_label">Rasti pasiūlymų vėliau?</string>
@@ -407,7 +407,7 @@ Nustatymuose vėl įjunkite Kalendoriaus saugyklą."</string>
     <string name="find_time_timeframe_picker_on_a_date_label">%s</string>
     <string name="find_time_timeframe_picker_title">Laikotarpis</string>
     <string name="find_time_timeframe_picker_within_a_date_label">Maždaug %s</string>
-    <string name="find_time_two_info">%1$s %2$s</string>
+    <string name="find_time_two_info">%1$s %2$s﻿</string>
     <string name="find_time_two_lines_short_layout">%1$s: %2$s</string>
     <string name="find_time_you_are_unavailable">Jūs nepasiekiamas (-a)</string>
     <string name="find_time_you_do_not_take_meetings_at_this_time">Jūs paprastai nedalyvaujate susitikimuose tokiu metu</string>
@@ -433,8 +433,6 @@ Kur: %5$s
     <string name="gms_core_unrecoverable_error">Nepavyko paleisti kalendoriaus dėl „Google Play“ paslaugų klaidos.</string>
     <string name="goal_custom_duration_min_error_msg">Turi būti mažiausiai 1 min.</string>
     <string name="goal_deferred">Sesija perkelta į %1$s</string>
-    <string name="goal_marked_as_done_week_complete">Puiku! Šią savaitę pasiekėte savo tikslą.</string>
-    <string name="goal_marked_as_done_week_incomplete">Nuostabu! Šią savaitę užbaigėte sesijų: %1$d iš %2$d.</string>
     <string name="goal_session_deferred">Ieškoma kito laiko…</string>
     <string name="goal_session_deferred_offline">Esate neprisijungę. Sesija bus suplanuota iš naujo, kai prisijungsite.</string>
     <string name="goal_undeferrable">Nerasta daugiau jokių tinkamų laikų.</string>
@@ -623,6 +621,7 @@ Kur: %5$s
     <string name="list_week_view_3days_label">3 dienos</string>
     <string name="loading">Įkeliama…</string>
     <string name="location_adapter_name_address_format">„%1$s“, %2$s</string>
+    <string name="location_adapter_name_format">%s</string>
     <string name="location_time">%s (vietos laiku)</string>
     <string name="map_label">Žemėlapis</string>
     <string name="maps_not_available">Nerasta jokių programų, kurias naudojant būtų galima peržiūrėti šią vietą.</string>
