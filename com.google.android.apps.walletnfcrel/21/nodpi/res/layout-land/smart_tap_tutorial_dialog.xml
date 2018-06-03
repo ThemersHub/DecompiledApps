@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/googlepay_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/SmarttapTutorialImage" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/smarttap_tutorial_image" android:contentDescription="@string/smarttap_animation_description" />
+        <ImageView android:id="@id/MerchantLogo" android:layout_width="@dimen/chain_logo_size" android:layout_height="@dimen/chain_logo_size" android:layout_margin="@dimen/tutorial_logo_margin" android:contentDescription="@string/merchant_logo_description" android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="24.0dip">
+        <TextView android:id="@id/TutorialTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text_Label" />
+        <Space android:layout_width="fill_parent" android:layout_height="16.0dip" />
+        <TextView android:id="@id/TutorialBody" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text_Body" />
+        <Space android:layout_width="fill_parent" android:layout_height="24.0dip" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.design.button.MaterialButton android:id="@id/TutorialDismiss" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_got_it" android:layout_alignParentEnd="true" style="@style/Widget.GoogleMaterial.TextButton" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="0.0dip" android:paddingEnd="@dimen/medium_spacing"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/AmountIcon" android:layout_width="@dimen/dropdown_icon_size" android:layout_height="@dimen/dropdown_icon_size" android:layout_marginBottom="@dimen/dropdown_icon_bottom_spacing" android:layout_alignBottom="@id/EntryContainer" android:layout_marginStart="@dimen/medium_spacing" android:layout_marginEnd="@dimen/default_spacing" />
+    <TextView android:textAppearance="@style/Text_Caption.Black54" android:id="@id/AmountLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/input_label_top_spacing" android:layout_marginBottom="@dimen/input_label_bottom_spacing" android:text="@string/top_up_amount_label" android:layout_alignParentTop="true" android:layout_toEndOf="@id/AmountIcon" />
+    <FrameLayout android:id="@id/EntryContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/AmountLabel" android:layout_toEndOf="@id/AmountIcon">
+        <Spinner android:id="@id/SelectAmount" android:layout_width="fill_parent" android:layout_height="@dimen/minimum_touch_target" style="@style/ProcessPaymentDropDown" />
+    </FrameLayout>
+    <TextView android:textAppearance="@style/Text_Caption.Black54" android:gravity="top" android:id="@id/CurrentBalance" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dropdown_bottom_spacing" android:layout_below="@id/EntryContainer" android:layout_toEndOf="@id/AmountIcon" />
+</RelativeLayout>

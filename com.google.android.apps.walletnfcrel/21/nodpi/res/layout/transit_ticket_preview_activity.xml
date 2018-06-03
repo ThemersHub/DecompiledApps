@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/ContentContainer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/Toolbar" layout="@layout/s2ap_toolbar_layout" />
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/BottomContent" android:layout_below="@id/Toolbar" android:layout_marginStart="@dimen/medium_spacing" android:layout_marginEnd="@dimen/medium_spacing">
+        <LinearLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.constraint.ConstraintLayout android:layout_gravity="center_horizontal" android:paddingTop="@dimen/extra_large_spacing" android:paddingBottom="@dimen/s2ap_half_checkmark_size" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/s2ap_half_checkmark_size" android:paddingEnd="@dimen/s2ap_half_checkmark_size">
+                <android.support.v7.widget.CardView android:gravity="center_horizontal" android:id="@id/CardViewFrame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/s2ap_half_checkmark_size" android:layout_marginStart="@dimen/s2ap_half_checkmark_size" app:cardBackgroundColor="@color/google_grey100" app:cardCornerRadius="@dimen/card_corner_radius" app:cardElevation="@dimen/card_elevation">
+                    <ImageView android:id="@id/CardImageView" android:visibility="gone" android:layout_width="@dimen/s2apt_card_width" android:layout_height="@dimen/s2apt_card_height" android:adjustViewBounds="true" android:contentDescription="@null" />
+                </android.support.v7.widget.CardView>
+                <android.support.v4.widget.Space android:id="@id/marginSpacer" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="@dimen/s2ap_half_checkmark_size" android:layout_marginEnd="@dimen/s2ap_half_checkmark_size" app:layout_constraintEnd_toEndOf="@id/CardViewFrame" app:layout_constraintTop_toTopOf="@id/CardViewFrame" />
+                <FrameLayout android:id="@id/Checkmark" android:background="@drawable/checkmark" android:visibility="invisible" android:layout_width="@dimen/s2ap_checkmark_size" android:layout_height="@dimen/s2ap_checkmark_size" android:elevation="@dimen/card_elevation" app:layout_constraintBottom_toTopOf="@id/marginSpacer" app:layout_constraintStart_toEndOf="@id/marginSpacer" />
+                <FrameLayout android:id="@id/ErrorBadge" android:background="@drawable/error" android:visibility="invisible" android:layout_width="@dimen/s2ap_checkmark_size" android:layout_height="@dimen/s2ap_checkmark_size" android:elevation="@dimen/card_elevation" app:layout_constraintBottom_toTopOf="@id/marginSpacer" app:layout_constraintStart_toEndOf="@id/marginSpacer" />
+                <RelativeLayout android:id="@id/MultipleCardView" android:padding="@dimen/narrow_spacing" android:visibility="gone" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <android.support.v7.widget.CardView android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardBackgroundColor="@color/google_grey100" app:cardCornerRadius="@dimen/card_corner_radius" app:cardElevation="@dimen/default_elevation">
+                        <ImageView android:id="@id/BottomCardImageView" android:layout_width="@dimen/s2apt_small_card_width" android:layout_height="@dimen/s2apt_small_card_height" android:adjustViewBounds="true" android:contentDescription="@null" />
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/s2apt_small_card_offset" android:layout_marginStart="@dimen/s2apt_small_card_offset" app:cardBackgroundColor="@color/google_grey100" app:cardCornerRadius="@dimen/card_corner_radius" app:cardElevation="@dimen/card_elevation">
+                        <ImageView android:id="@id/TopCardImageView" android:layout_width="@dimen/s2apt_small_card_width" android:layout_height="@dimen/s2apt_small_card_height" android:adjustViewBounds="true" android:contentDescription="@null" />
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+            </android.support.constraint.ConstraintLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/Text_Headline.Black87" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/HeaderText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" />
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/BodyText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/minimum_touch_target" style="@style/Text_Body.Black87" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/BottomContent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/medium_spacing" android:layout_marginEnd="@dimen/medium_spacing">
+        <TextView android:textColorLink="@color/tp_action" android:layout_gravity="center_horizontal" android:id="@id/LegalText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="center" android:layout_marginStart="@dimen/default_spacing" android:layout_marginEnd="@dimen/default_spacing" style="@style/Text_Caption" />
+        <include android:id="@id/ActionButtonsLayout" android:visibility="gone" android:text="@string/button_save" layout="@layout/loading_positive_button_and_secondary_button" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/ProgressBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</RelativeLayout>

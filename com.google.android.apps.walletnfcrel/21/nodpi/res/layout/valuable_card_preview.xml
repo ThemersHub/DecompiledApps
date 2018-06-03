@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/Card" android:layout_width="224.0dip" android:layout_height="wrap_content" android:elevation="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="24.0dip">
+            <ImageView android:id="@id/MerchantLogo" android:layout_width="@dimen/card_preview_logo_size" android:layout_height="@dimen/card_preview_logo_size" android:layout_marginTop="16.0dip" android:contentDescription="@string/merchant_logo_description" />
+            <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+            <TextView android:gravity="center" android:id="@id/TitleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text_Caption" />
+            <TextView android:gravity="center" android:id="@id/SubtitleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text_Value" />
+            <TextView android:gravity="center" android:id="@id/TitleCaptionText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text_Caption" />
+        </LinearLayout>
+        <ImageView android:id="@id/NfcLogo" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_margin="16.0dip" android:scaleType="fitXY" android:contentDescription="@string/nfc_logo_description" app:srcCompat="@drawable/nfc_logo" />
+        <com.google.commerce.tapandpay.android.valuable.widgets.barcode.CombinedBarcodeView android:id="@id/BarcodeLayout" android:layout_width="wrap_content" android:layout_height="80.0dip" android:layout_margin="16.0dip" android:contentDescription="@string/barcode_description" />
+        <android.support.v7.widget.CardView android:id="@id/RedemptionCard" android:layout_width="192.0dip" android:layout_height="48.0dip" android:layout_margin="16.0dip" android:elevation="12.0dip">
+            <TextView android:ellipsize="end" android:gravity="center" android:id="@id/MemberId" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" android:layout_centerInParent="true" android:importantForAccessibility="no" style="@style/Text_Value" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

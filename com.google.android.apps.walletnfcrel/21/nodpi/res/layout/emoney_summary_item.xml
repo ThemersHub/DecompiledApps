@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/list_item_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/Logo" android:layout_width="@dimen/row_icon_width" android:layout_height="@dimen/row_icon_width" android:layout_centerInParent="true" android:contentDescription="@null" android:layout_marginStart="@dimen/default_spacing" android:layout_marginEnd="@dimen/default_spacing" android:layout_alignParentStart="true" />
+    <TextView android:textAppearance="@style/Text_Headline" android:id="@id/Balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_toEndOf="@id/Logo" />
+    <TextView android:textAppearance="@style/LoyaltyPointBalanceText" android:id="@id/LoyaltyPointDivider" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/emoney_summary_value_separator" android:layout_centerInParent="true" android:layout_marginStart="@dimen/narrow_spacing" android:layout_marginEnd="@dimen/narrow_spacing" android:layout_toEndOf="@id/Balance" />
+    <TextView android:textAppearance="@style/LoyaltyPointBalanceText" android:id="@id/LoyaltyPointBalance" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_toEndOf="@id/LoyaltyPointDivider" />
+    <android.support.design.button.MaterialButton android:id="@id/AddMoneyButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/emoney_add_money_button_label" android:layout_centerInParent="true" android:layout_alignParentEnd="true" style="@style/AddMoneyButton" />
+</RelativeLayout>

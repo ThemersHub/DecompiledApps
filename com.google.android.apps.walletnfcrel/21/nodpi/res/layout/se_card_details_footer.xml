@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/app_info_card" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/horizontal_divider" android:showDividers="end">
+        <com.google.commerce.tapandpay.android.widgets.componentlayouts.MessageView android:id="@id/AccountNumberMessage" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ContactSection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/narrow_spacing" android:paddingEnd="@dimen/narrow_spacing">
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/AcceptanceLocations" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/suica_globe" app:description="@string/suica_acceptance_label" app:iconTint="@color/google_transparent" />
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/TermsAndConditions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_message_black_24" app:description="@string/edy_terms_policies_link_label" />
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/PrivacyNotice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_assignment_black_24" app:description="@string/sp_privacy_policy_link_label" />
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/LegalNotice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_assignment_black_24" app:description="@string/edy_legal_notice_title" />
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/Contact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_public_black_24" app:description="@string/contact_nanaco_support" />
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/HowToUse" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_public_black_24" app:description="@string/how_to_use_service_provider" />
+        <com.google.commerce.tapandpay.android.paymentcard.FooterItemView android:id="@id/RemoveCard" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_delete_black_24" />
+    </LinearLayout>
+</LinearLayout>

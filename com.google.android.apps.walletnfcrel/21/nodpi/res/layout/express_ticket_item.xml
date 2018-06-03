@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="@dimen/edit_field_spacing" android:paddingBottom="@dimen/edit_field_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/googlepay_white" android:id="@id/StationNames" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text_Headline" />
+    <TextView android:textAppearance="@style/Text_Section_Header" android:textColor="@color/googlepay_white" android:id="@id/TrainName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/small_ticket_item_spacing" />
+    <TableLayout android:id="@id/ReservedTrainInfo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/large_ticket_item_spacing" android:stretchColumns="1">
+        <TableRow>
+            <TextView android:textAppearance="@style/Text_Section_Header" android:textColor="@color/googlepay_white" android:padding="@dimen/train_table_content_padding" android:text="@string/departure_time_label" />
+            <TextView android:textAppearance="@style/Text_Section_Header" android:textColor="@color/googlepay_white" android:gravity="right" android:padding="@dimen/train_table_content_padding" android:text="@string/arrival_time_label" />
+        </TableRow>
+        <TableRow>
+            <TextView android:textAppearance="@style/Text_Subheader" android:textColor="@color/googlepay_white" android:id="@id/DepartureTime" android:padding="@dimen/train_table_content_padding" />
+            <TextView android:textAppearance="@style/Text_Subheader" android:textColor="@color/googlepay_white" android:gravity="right" android:id="@id/ArrivalTime" android:padding="@dimen/train_table_content_padding" />
+        </TableRow>
+        <TableRow android:paddingTop="@dimen/large_ticket_item_spacing">
+            <TextView android:textAppearance="@style/Text_Section_Header" android:textColor="@color/googlepay_white" android:padding="@dimen/train_table_content_padding" android:text="@string/train_car_label" />
+            <TextView android:textAppearance="@style/Text_Section_Header" android:textColor="@color/googlepay_white" android:gravity="right" android:padding="@dimen/train_table_content_padding" android:text="@string/seat_number_label" />
+        </TableRow>
+        <TableRow>
+            <TextView android:textAppearance="@style/Text_Subheader" android:textColor="@color/googlepay_white" android:id="@id/TrainCarName" android:padding="@dimen/train_table_content_padding" />
+            <TextView android:textAppearance="@style/Text_Subheader" android:textColor="@color/googlepay_white" android:gravity="right" android:id="@id/SeatNumber" android:padding="@dimen/train_table_content_padding" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

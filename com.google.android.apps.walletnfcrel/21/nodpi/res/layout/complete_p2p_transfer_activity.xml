@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.commerce.tapandpay.android.widgets.checkmarkprogress.CheckmarkProgress android:id="@id/Spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/large_spacing" android:importantForAccessibility="no" />
+    <RelativeLayout android:id="@id/single_recipient_layout" android:paddingTop="@dimen/large_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:id="@id/recipient_avatar" android:layout_width="@dimen/complete_transfer_avatar_size" android:layout_height="@dimen/complete_transfer_avatar_size" android:layout_marginBottom="@dimen/default_spacing" android:adjustViewBounds="true" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:contentDescription="@null" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/multiple_recipient_layout" android:paddingTop="@dimen/large_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <include android:id="@id/MultipleContacts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" android:layout_alignParentTop="true" layout="@layout/at_most_five_contacts_layout" />
+    </RelativeLayout>
+    <RelativeLayout android:paddingBottom="@dimen/medium_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+            <com.google.android.libraries.walletp2p.moneyentry.MoneyEntryLayout android:id="@id/money_entry_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing" />
+            <TextView android:textAppearance="@style/Text_Label" android:id="@id/recipient_confirmation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" android:paddingStart="@dimen/extra_large_spacing" android:paddingEnd="@dimen/extra_large_spacing" />
+            <TextView android:textAppearance="@style/Text_Label.Regular_2" android:id="@id/memo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="center" android:paddingStart="@dimen/extra_large_spacing" android:paddingEnd="@dimen/extra_large_spacing" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/Text_Subhead" android:gravity="center" android:id="@id/default_instrument_set" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/default_spacing" android:text="@string/default_instrument_set" android:layout_above="@id/done_button" />
+        <android.support.design.button.MaterialButton android:id="@id/reminders_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/narrow_spacing" android:minWidth="@dimen/complete_button_min_width" android:text="@string/button_set_a_reminder" android:layout_above="@id/done_button" android:layout_centerHorizontal="true" style="@style/Widget.GoogleMaterial.StrokedButton" />
+        <android.support.design.button.MaterialButton android:id="@id/done_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/complete_button_min_width" android:text="@string/done_button" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/Widget.GoogleMaterial.Button" />
+    </RelativeLayout>
+</LinearLayout>

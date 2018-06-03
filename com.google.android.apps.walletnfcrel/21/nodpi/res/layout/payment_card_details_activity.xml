@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/CardDetailsContainer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.NestedScrollView android:id="@id/CardDetailsLayout" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" style="@style/PageBackground">
+        <LinearLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar android:id="@id/Toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:navigationIcon="@drawable/quantum_ic_close_grey600_24" />
+            <LinearLayout android:orientation="vertical" android:id="@id/CardViewContainer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.commerce.tapandpay.android.cardview.RoundedCardView android:id="@id/Card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/medium_spacing" android:layout_marginRight="@dimen/medium_spacing" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="16.0dip" app:cardElevation="@dimen/card_elevation">
+                    <ImageView android:id="@id/CardView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+                </com.google.commerce.tapandpay.android.cardview.RoundedCardView>
+                <TextView android:gravity="center" android:id="@id/HoldNearTerminalText" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="@dimen/narrow_spacing" android:layout_marginBottom="@dimen/default_spacing" android:text="@string/hold_phone_near_terminal_to_pay" style="@style/Text_Value.Gray700" />
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView android:orientation="vertical" android:id="@id/Content" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</FrameLayout>

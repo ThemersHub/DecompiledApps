@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/TransactionsListCard" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/FeedItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/TitleText" android:paddingTop="@dimen/title_top_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing" style="@style/Text_Section_Header" />
+        <LinearLayout android:orientation="vertical" android:id="@id/NoTransactionsText" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/small_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing">
+            <TextView android:gravity="center_vertical" android:id="@id/NoTransactionsHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text_Subheader.Gray900" />
+            <TextView android:id="@id/NoTransactionsBody" android:paddingTop="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text_Body.Gray700" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/TransactionItemContainer" android:paddingTop="@dimen/narrow_spacing" android:paddingBottom="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-15.0dip">
+            <include layout="@layout/button_container" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

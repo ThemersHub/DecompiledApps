@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/IssuerMessage" style="@style/DetailMessage"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:ellipsize="end" android:id="@id/MessageHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text_Caption" />
+        <com.google.commerce.tapandpay.android.widgets.componentlayouts.ExpandableTextView android:ellipsize="end" android:id="@id/MessageBody" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:collapsedLines="2" custom:clickListener="true" style="@style/Text_Header" />
+    </LinearLayout>
+    <ImageView android:id="@id/NavigateImage" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="12.0dip" android:src="@drawable/quantum_ic_navigation_googblue_24" android:layout_weight="0.0" android:contentDescription="@string/navigate_image_description" />
+</LinearLayout>

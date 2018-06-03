@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/Toolbar" style="@style/Toolbar" />
+    <ScrollView android:id="@id/SettingContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/OrphanSettingsContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/settings_divider" android:showDividers="middle">
+            <TextView android:textAppearance="@style/Text_Header" android:id="@id/Notifications" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_notifications_label" style="@style/SettingContainerStyle" />
+            <RelativeLayout android:id="@id/PromoEmailsSettingContainer" style="@style/SettingContainerStyle">
+                <android.support.v7.widget.SwitchCompat android:id="@id/PromoEmailsSettingSwitch" style="@style/SwitchCompatStyle" />
+                <TextView android:id="@id/PromoEmailsTitle" android:text="@string/promo_emails_setting_label" android:layout_toStartOf="@id/PromoEmailsSettingSwitch" style="@style/SettingTitle" />
+                <TextView android:text="@string/promo_emails_setting_description" android:layout_below="@id/PromoEmailsTitle" android:layout_toStartOf="@id/PromoEmailsSettingSwitch" style="@style/SettingDescription" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/NonAndroidPayTransactions" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SettingContainerStyle">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/payment_card_setting_heading" style="@style/SettingTitle" />
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/payment_card_setting_subheading" style="@style/SettingDescription" />
+                <LinearLayout android:orientation="vertical" android:id="@id/PaymentCardContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

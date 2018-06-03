@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/CardInfoAndActionGroup" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:gravity="center" android:orientation="horizontal" android:id="@id/TopActionTile" android:background="@drawable/button_rounded_corners" android:paddingLeft="@dimen/narrow_spacing" android:paddingTop="@dimen/narrow_spacing" android:paddingRight="@dimen/narrow_spacing" android:paddingBottom="@dimen/narrow_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/bulletin_logo_size">
+        <Button android:id="@id/RegisterCardButton" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/se_card_register_card_action" style="@style/RegisterCardButton" />
+        <ProgressBar android:id="@id/RegisterCardProgressBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/narrow_spacing" android:indeterminate="true" />
+    </FrameLayout>
+    <include android:id="@id/PointLinkageCard" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_view_margin" layout="@layout/text_card" />
+    <LinearLayout android:orientation="vertical" android:id="@id/PointsGroup" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/PointsOnlyGroup" android:paddingLeft="8.0dip" android:paddingTop="16.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Tile">
+            <LinearLayout android:layout_gravity="center|left" android:orientation="horizontal" android:id="@id/PointsWrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="0.0dip" android:paddingEnd="4.0dip">
+                <TextView android:textSize="34.0sp" android:textColor="@color/tp_text_black_87_percent" android:id="@id/PointsBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="sans-serif-light" style="@style/Text_Headline" />
+                <TextView android:textAppearance="@style/Text_Caption" android:textColor="@color/tp_text_black_54_percent" android:layout_gravity="center_vertical" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tp_card_point" android:includeFontPadding="false" android:textAllCaps="true" android:fontFamily="sans-serif" />
+            </LinearLayout>
+            <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <View style="@style/WalletTabHorizontalDivider" />
+            <RelativeLayout android:id="@id/RedeemPointsButtonWrapper" android:layout_width="124.0dip" android:layout_height="48.0dip">
+                <TextView android:textAppearance="@style/Text_Button.Action" android:gravity="center" android:id="@id/RedeemPointsButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/minimum_touch_target" android:minHeight="@dimen/minimum_touch_target" android:text="@string/se_card_redeem_action" android:layout_centerInParent="true" android:textAlignment="center" style="@style/ClickableButton" />
+                <ProgressBar android:id="@id/RedeemPointsProgressBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="6.0dip" android:indeterminate="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <include android:id="@id/IssuerMessageCard" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_view_margin" layout="@layout/text_card" />
+</LinearLayout>

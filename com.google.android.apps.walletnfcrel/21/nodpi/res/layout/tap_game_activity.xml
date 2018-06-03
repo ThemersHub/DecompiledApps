@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/BackgroundView" android:background="@color/tap_game_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/StartView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.airbnb.lottie.LottieAnimationView android:layout_gravity="top" android:id="@id/StartLottieAnimation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@null" />
+            <LinearLayout android:orientation="vertical" android:id="@id/StartLadderView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/tap_game_margin_small" android:layout_marginTop="@dimen/tap_game_header_margin" android:layout_marginRight="@dimen/tap_game_margin_small" android:layout_marginBottom="@dimen/tap_game_margin_small">
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/StartHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text_Headline" />
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/StartBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" style="@style/Text_Body.Gray700" />
+                <View android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/StartSpacer" android:layout_width="wrap_content" android:layout_height="240.0dip" android:layout_weight="1.0" />
+                <Button android:layout_gravity="center_horizontal" android:id="@id/PlayButton" android:layout_width="wrap_content" android:layout_height="@dimen/tap_game_button_height" android:layout_marginBottom="@dimen/narrow_spacing" style="@style/Tap_Game_Button" />
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/TosText" android:paddingTop="@dimen/tap_game_margin_small" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text_Caption.Black54" />
+                <TextView android:textColorLink="@color/quantum_teal500" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/OptOutText" android:paddingTop="@dimen/tap_game_margin_small" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text_Body.Gray700" />
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@id/WarmupView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.airbnb.lottie.LottieAnimationView android:layout_gravity="top" android:id="@id/WarmupLottieAnimation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@null" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/RewardView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.airbnb.lottie.LottieAnimationView android:layout_gravity="top" android:id="@id/RewardLottieAnimation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@null" />
+            <com.airbnb.lottie.LottieAnimationView android:layout_gravity="top" android:id="@id/TryAgainLottieAnimation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:contentDescription="@null" />
+            <ImageView android:id="@id/ShareImage" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:contentDescription="@null" />
+            <LinearLayout android:orientation="vertical" android:id="@id/RewardControlView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/tap_game_margin_medium" android:layout_marginTop="@dimen/tap_game_header_margin" android:layout_marginRight="@dimen/tap_game_margin_medium" android:layout_marginBottom="@dimen/tap_game_margin_small">
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/RewardHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text_Headline" />
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/RewardSubheader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" style="@style/Text_Body.Gray700" />
+                <View android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/RewardAnimationPlaceholder" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/RewardBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/narrow_spacing" style="@style/Text_Body.Gray700" />
+                <Button android:layout_gravity="center_horizontal" android:id="@id/RewardButton" android:layout_width="wrap_content" android:layout_height="@dimen/tap_game_button_height" style="@style/Tap_Game_Button" />
+                <android.support.design.button.MaterialButton android:layout_gravity="center_horizontal" android:id="@id/OpenAnotherButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/minimum_touch_target" style="@style/Widget.GoogleMaterial.TextButton" />
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ErrorView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/tap_game_margin_medium" android:layout_marginRight="@dimen/tap_game_margin_medium">
+            <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ErrorHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/medium_spacing" style="@style/Text_Headline" />
+            <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ErrorSubheader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" style="@style/Text_Body.Gray700" />
+            <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ErrorBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" style="@style/Text_Body.Gray700" />
+            <Button android:layout_gravity="center_horizontal" android:id="@id/ErrorButton" android:layout_width="wrap_content" android:layout_height="@dimen/tap_game_button_height" android:layout_marginTop="@dimen/tap_game_margin_medium" style="@style/Tap_Game_Button" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/CampaignLogo" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/tap_game_campaign_logo_height" android:layout_marginTop="@dimen/default_spacing" android:contentDescription="@null" />
+        <ImageButton android:id="@id/CloseButton" android:padding="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_close_grey600_24" android:contentDescription="@string/tap_game_close" style="@style/ClickableButton" />
+    </FrameLayout>
+</ScrollView>

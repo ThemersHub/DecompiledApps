@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/FeedItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/NearbyStoresCardView" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/TitleContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" layout="@layout/title_container" />
+        <TextView android:textColorLink="@color/tp_action" android:id="@id/BodyText" android:paddingBottom="@dimen/default_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/TitleContainer" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing" style="@style/Text_Body" />
+        <ImageView android:id="@id/NearbyStoresImageView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/illustration_overlap_height_negative" android:adjustViewBounds="true" android:minHeight="@dimen/illustration_overlap_height_positive" android:layout_below="@id/NearbyStores" android:contentDescription="@null" />
+        <LinearLayout android:orientation="vertical" android:id="@id/NearbyStores" android:paddingTop="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/BodyText" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ButtonContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/NearbyStoresImageView">
+            <android.support.design.button.MaterialButton android:layout_gravity="center_horizontal" android:id="@id/RaisedButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/raised_button_top_margin" android:layout_marginBottom="@dimen/raised_button_bottom_margin" />
+            <android.support.design.button.MaterialButton android:layout_gravity="center_horizontal" android:id="@id/FlatButton" android:layout_width="fill_parent" android:layout_height="@dimen/minimum_touch_target" android:insetTop="0.0dip" android:insetBottom="0.0dip" style="@style/Widget.GoogleMaterial.TextButton" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

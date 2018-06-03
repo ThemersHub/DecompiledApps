@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/RewardRow" android:background="@color/google_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/medium_spacing">
+        <ImageView android:id="@id/RewardIcon" android:layout_width="@dimen/list_item_icon_size" android:layout_height="@dimen/list_item_icon_size" android:layout_centerVertical="true" android:contentDescription="@string/reward_icon_description" android:layout_marginStart="@dimen/list_item_margin" android:layout_marginEnd="@dimen/list_item_margin" android:layout_alignParentStart="true" />
+        <TextView android:textAppearance="@style/Text_Button" android:id="@id/RedeemLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true" android:paddingStart="@dimen/narrow_spacing" android:paddingEnd="@dimen/default_spacing" android:layout_toStartOf="@id/RedeemLabel" android:layout_toEndOf="@id/RewardIcon">
+            <TextView android:gravity="center_horizontal" android:id="@id/Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text_Header" />
+            <TextView android:gravity="center_horizontal" android:id="@id/Description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" android:layout_marginBottom="@dimen/narrow_spacing" style="@style/Text_Subhead" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/Divider" android:layout_marginStart="@dimen/medium_spacing" android:layout_marginEnd="@dimen/medium_spacing" style="@style/HorizontalDivider" />
+</LinearLayout>

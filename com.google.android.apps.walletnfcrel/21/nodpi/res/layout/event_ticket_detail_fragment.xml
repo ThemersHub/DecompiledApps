@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:id="@id/DetailsFragmentContent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/SmarttapLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/horizontal_divider" android:showDividers="end">
+            <include layout="@layout/card_nfc_info_view" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/MessagesLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/horizontal_divider" android:showDividers="middle">
+            <com.google.commerce.tapandpay.android.widgets.componentlayouts.MessageView android:id="@id/VenueAddress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:header="@string/venue_address_title" />
+            <com.google.commerce.tapandpay.android.widgets.componentlayouts.MessageView android:id="@id/DoorsOpenTime" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:header="@string/doors_open_date_time_title" />
+            <com.google.commerce.tapandpay.android.widgets.componentlayouts.MessageView android:id="@id/EventStartDateTime" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:header="@string/event_start_date_time_title" />
+            <com.google.commerce.tapandpay.android.widgets.componentlayouts.MessageView android:id="@id/EventEndDateTime" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:header="@string/event_end_date_time_title" />
+            <com.google.commerce.tapandpay.android.widgets.componentlayouts.MessageView android:id="@id/BarcodeNumber" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:header="@string/barcode_number" />
+        </LinearLayout>
+        <com.google.commerce.tapandpay.android.widgets.componentlayouts.MainImageLayout android:id="@id/MainImageLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:id="@id/IssuerMessagesLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/DetailLineItemLayout">
+            <com.google.commerce.tapandpay.android.widgets.componentlayouts.MessageView android:id="@id/ConfirmationNumber" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:header="@string/confirmation_number_title" />
+            <com.google.commerce.tapandpay.android.widgets.componentlayouts.MessageView android:id="@id/EventTicketNumber" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:header="@string/event_ticket_number_title" />
+            <com.google.commerce.tapandpay.android.widgets.componentlayouts.MessageView android:id="@id/EventTicketType" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:header="@string/event_ticket_type_title" />
+            <com.google.commerce.tapandpay.android.widgets.componentlayouts.MessageView android:id="@id/EvenTicketFaceValue" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:header="@string/event_ticket_face_value_title" />
+            <com.google.commerce.tapandpay.android.widgets.componentlayouts.MessageView android:id="@id/EventTicketTerms" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:header="@string/event_ticket_terms_title" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/LinksLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/DetailActionableLineItemLayout" />
+        <LinearLayout android:id="@id/SwitchesLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/DetailActionableLineItemLayout">
+            <com.google.commerce.tapandpay.android.valuable.activity.widget.SwitchView android:id="@id/AutoRedemptionSwitch" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:switch_title="@string/auto_redeem_setting_label" custom:switch_summary="@string/offer_auto_redeem_setting_description" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/ButtonsLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/DetailActionableLineItemLayout">
+            <com.google.commerce.tapandpay.android.widgets.componentlayouts.ButtonView android:id="@id/ShowBarcodeButton" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:text="@string/show_barcode" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

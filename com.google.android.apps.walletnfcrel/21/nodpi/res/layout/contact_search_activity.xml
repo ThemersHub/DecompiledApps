@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/Toolbar" style="@style/Toolbar">
+        <ImageView android:layout_gravity="center" android:id="@id/GooglePayLogo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tp_google_pay_logo_color_72x29dp" android:contentDescription="@null" />
+    </android.support.v7.widget.Toolbar>
+    <com.google.commerce.tapandpay.android.p2p.contacts.ContactSearchLayout android:id="@id/ContactSearch" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <android.support.design.button.MaterialButton android:layout_gravity="center" android:id="@id/EnableContactsButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/default_spacing" android:text="@string/turn_on_local_contacts" style="@style/Widget.GoogleMaterial.Button" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/CreateGroupRequest" android:background="@drawable/bounded_rippleable" android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/Icon" android:background="@drawable/blue_oval" android:layout_width="@dimen/default_contact_avatar_size" android:layout_height="@dimen/default_contact_avatar_size" android:src="@drawable/quantum_ic_people_white_24" android:scaleType="center" android:contentDescription="@null" android:layout_marginEnd="@dimen/default_spacing" />
+        <TextView android:textAppearance="@style/Text_Header" android:id="@id/Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/create_group_request" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/ContactList" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ListView android:id="@id/LocalContactList" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

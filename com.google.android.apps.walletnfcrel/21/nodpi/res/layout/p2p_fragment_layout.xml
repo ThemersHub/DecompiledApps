@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="0.0dip" app:cardElevation="2.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/Text_Headline" android:gravity="center" android:id="@id/p2p_title" android:padding="@dimen/medium_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/p2p_title" />
+                <com.google.commerce.tapandpay.android.p2p.contacts.ContactSearchLayout android:id="@id/ContactSearch" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <fragment android:name="com.google.commerce.tapandpay.android.p2p.contacts.SuggestedContactsFragment" android:id="@id/suggested_contacts" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <FrameLayout android:id="@id/recent_transactions_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include android:id="@id/reminders_card_view" layout="@layout/reminders_card_view" />
+        <TextView android:textAppearance="@style/Text_Subhead" android:gravity="bottom|center" android:id="@id/legal_string" android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/legal_string" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

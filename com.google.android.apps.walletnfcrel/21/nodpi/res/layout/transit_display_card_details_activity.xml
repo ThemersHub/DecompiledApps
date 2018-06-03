@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@android:color/white" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/RootView" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.commerce.tapandpay.android.cardview.RoundedCardView android:id="@id/Card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/narrow_spacing" android:elevation="4.0dip">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/card_header_view" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing">
+                    <include layout="@layout/card_title_view" />
+                    <TextView android:gravity="center" android:id="@id/TicketInfoHeader" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" style="@style/Text_Section_Header" />
+                    <TextView android:gravity="center" android:id="@id/TicketInfoText" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="@dimen/default_spacing" style="@style/Text_Subheader" />
+                    <android.support.design.button.MaterialButton android:layout_gravity="center" android:id="@id/Button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" android:layout_marginBottom="@dimen/default_spacing" app:backgroundTint="@color/google_white" style="@style/Widget.GoogleMaterial.TextButton" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/TicketItemsLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/horizontal_line" android:showDividers="middle" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.commerce.tapandpay.android.cardview.RoundedCardView>
+        <include layout="@layout/card_nfc_info_view" />
+        <android.support.v7.widget.CardView android:id="@id/StationMapCard" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CardViewStyle">
+            <TextView android:id="@id/MapContainer" android:paddingTop="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/station_map_title" android:drawablePadding="@dimen/default_spacing" android:textAllCaps="true" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing" style="@style/Text_Section_Header_Roboto" />
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.RecyclerView android:id="@id/Transactions" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:id="@id/ContactInfoHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" android:text="@string/contact_info_header" android:layout_marginStart="@dimen/medium_spacing" android:layout_marginEnd="@dimen/medium_spacing" style="@style/Text_Section_Header" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ContactInfoLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

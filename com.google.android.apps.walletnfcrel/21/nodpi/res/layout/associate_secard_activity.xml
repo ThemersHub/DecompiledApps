@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/RootView" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/Toolbar" style="@style/Toolbar" />
+    <View android:background="@color/googlepay_gray100" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginRight="@dimen/default_spacing" />
+    <ListView android:layout_gravity="top" android:id="@id/Providers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@color/google_grey200" android:dividerHeight="1.0dip" android:paddingStart="@dimen/default_spacing" android:paddingEnd="@dimen/default_spacing" />
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/ChipLockedWarning" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tp_smart_lock_color_104x134dp" android:importantForAccessibility="no" />
+        <TextView android:textAppearance="@style/Text_Headline.Black87" android:textSize="20.0sp" android:gravity="center_horizontal" android:paddingLeft="@dimen/narrow_spacing" android:paddingTop="@dimen/default_spacing" android:paddingRight="@dimen/narrow_spacing" android:paddingBottom="@dimen/narrow_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/felica_lock_title" android:fontFamily="sans-serif-medium" />
+        <TextView android:textAppearance="@style/Text_Headline.Black87" android:textSize="16.0sp" android:gravity="center_horizontal" android:paddingLeft="@dimen/narrow_spacing" android:paddingTop="@dimen/narrow_spacing" android:paddingRight="@dimen/narrow_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/felica_locked_message" />
+        <android.support.design.button.MaterialButton android:layout_gravity="center" android:id="@id/OpenNfcSettings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/narrow_spacing" android:text="@string/change_settings_button" android:paddingStart="32.0dip" android:paddingEnd="32.0dip" style="@style/ClickableButton" />
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <ScrollView android:id="@id/ToSScrollView" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/TosMessage" android:padding="@dimen/default_spacing" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text_Body" />
+    </ScrollView>
+    <android.support.design.button.MaterialButton android:enabled="false" android:layout_gravity="center" android:id="@id/ContinueButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/narrow_spacing" android:text="@string/tos_dialog_button_accept" android:paddingStart="32.0dip" android:paddingEnd="32.0dip" />
+</LinearLayout>
