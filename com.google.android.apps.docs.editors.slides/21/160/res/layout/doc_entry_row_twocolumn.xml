@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.docs.doclist.view.DocEntryRowRelativeLayout android:id="@id/doc_entry_root" android:background="@drawable/state_selector_opaque_background" android:focusable="true" android:nextFocusRight="@id/more_actions_button" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/doc_entry_container" android:background="@drawable/state_selector_background" android:focusable="false" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <View android:background="@color/default_list_divider" android:focusable="false" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/doc_entry" android:focusable="false" android:layout_width="0.0dip" android:layout_height="@dimen/doclist_entry_height" android:layout_weight="1.0" app:dimWhenUnavailable="true">
+            <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/doc_icon_wrapper" android:padding="@dimen/m_entry_icon_padding" android:layout_width="@dimen/m_entry_icon_size" android:layout_height="@dimen/m_entry_icon_size" android:scaleType="center" android:layout_centerVertical="true" android:layout_marginStart="@dimen/m_grid_2x">
+                <com.google.android.apps.docs.view.SimpleThumbnailView android:id="@id/doc_icon" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" />
+                <com.google.android.apps.docs.view.SimpleThumbnailView android:id="@id/doc_icon_type" android:focusable="false" android:layout_width="@dimen/m_entry_icon_type_size" android:layout_height="@dimen/m_entry_icon_type_size" android:scaleType="center" android:layout_alignBottom="@id/doc_icon" android:visible="false" android:layout_alignEnd="@id/doc_icon" />
+            </RelativeLayout>
+            <com.google.android.apps.docs.view.FixedSizeTextView android:gravity="center_vertical" android:layout_gravity="start|center" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="0.0dip" android:layout_weight="1.0" android:textDirection="locale" style="@style/ListEntryTitle.DocList" />
+            <FrameLayout android:gravity="end|center" android:layout_marginStart="@dimen/m_grid_2x" style="@style/EntryLabelFrame">
+                <TextView android:textSize="@dimen/m_entry_text_size_primary" android:gravity="center_vertical" android:id="@id/statusLabels" android:layout_height="fill_parent" android:layout_marginEnd="0.0dip" style="@style/EntryLabel" />
+            </FrameLayout>
+            <FrameLayout android:gravity="end|center" style="@style/EntryLabelFrame">
+                <TextView android:textSize="@dimen/m_entry_text_size_primary" android:gravity="end|center" android:id="@id/sortLabel" android:layout_height="fill_parent" android:minWidth="150.0dip" android:layout_marginEnd="0.0dip" style="@style/EntryLabel" />
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/m_entry_text_size_primary" android:gravity="center_vertical" android:id="@id/offline_status" android:minWidth="@dimen/doclist_second_column_width" android:layout_marginStart="@dimen/m_grid_2x" style="@style/EntryLabel" />
+        <ProgressBar android:id="@id/progress" android:layout_width="@dimen/m_grid_13x" style="@style/EntryProgress.List" />
+        <ImageButton android:id="@id/cancel_button" android:nextFocusLeft="@id/doc_entry_root" android:src="@drawable/quantum_ic_cancel_black_24" style="@style/EntryButton.List" />
+        <ImageButton android:id="@id/resume_button" android:nextFocusLeft="@id/doc_entry_root" android:src="@drawable/quantum_ic_refresh_white_24" style="@style/EntryButton.List" />
+        <ImageButton android:id="@id/pause_button" android:nextFocusLeft="@id/doc_entry_root" android:src="@drawable/quantum_ic_pause_white_24" style="@style/EntryButton.List" />
+        <FrameLayout android:id="@id/more_actions_button_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/pin_mode_selected" android:focusable="false" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/m_grid_4x" android:layout_alignParentEnd="true" />
+        <View android:background="@color/default_list_divider" android:focusable="false" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="end|center" android:id="@id/details_triangle" android:background="@drawable/details_triangle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/m_touch_target_size" android:layout_below="@id/group_title_container" android:layout_alignParentEnd="true" />
+    <include layout="@layout/doc_entry_select_layout" />
+    <include layout="@layout/doc_entry_folder_select_layout" />
+    <include layout="@layout/doc_list_divider" />
+</com.google.android.apps.docs.doclist.view.DocEntryRowRelativeLayout>

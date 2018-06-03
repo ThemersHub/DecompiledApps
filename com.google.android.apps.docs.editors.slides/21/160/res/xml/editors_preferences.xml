@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/prefs_title" android:key="editors_preference_screen"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.libraries.docs.accessibility.AccessiblePreferenceCategory android:title="@string/prefs_notification_category" android:key="editors_preference_screen.notifications" android:order="@integer/prefs_notifications_category_order">
+        <Preference android:persistent="false" android:title="@string/prefs_notification_settings_title" android:key="editors_preference_screen.notification_settings" android:order="@integer/prefs_notification_settings_order" />
+    </com.google.android.libraries.docs.accessibility.AccessiblePreferenceCategory>
+    <com.google.android.libraries.docs.accessibility.AccessiblePreferenceCategory android:title="@string/prefs_language_category" android:key="editors_preference_screen.language" android:order="@integer/prefs_language_category_order">
+        <CheckBoxPreference android:title="@string/prefs_show_rtl_controls_title" android:key="shared_preferences.show_rtl_controls" android:summary="@string/prefs_show_rtl_controls_summary" android:defaultValue="false" />
+    </com.google.android.libraries.docs.accessibility.AccessiblePreferenceCategory>
+    <com.google.android.libraries.docs.accessibility.AccessiblePreferenceCategory android:title="@string/prefs_sync_category" android:key="docs_preference_screen.relevance_sync" android:order="@integer/prefs_sync_category_order">
+        <SwitchPreference android:persistent="false" android:title="@string/prefs_sync_relevant_automatically_title" android:key="shared_preferences.sync_relevant_automatically" android:summary="@string/prefs_sync_relevant_automatically_summary" android:defaultValue="true" />
+    </com.google.android.libraries.docs.accessibility.AccessiblePreferenceCategory>
+    <com.google.android.libraries.docs.accessibility.AccessiblePreferenceCategory android:title="@string/prefs_devtools_category" android:key="editors_preference_screen.dev_tools" android:order="999">
+        <Preference android:persistent="false" android:title="@string/prefs_devtools_flag_overrides" android:key="editors_preference_screen.flag_overrides" />
+        <SwitchPreference android:persistent="false" android:title="@string/prefs_use_integrated_js_binary_title" android:key="editors_preference_screen.prefs_use_integrated_js_binary" android:summary="@string/prefs_use_integrated_js_binary_summary" android:defaultValue="false" />
+    </com.google.android.libraries.docs.accessibility.AccessiblePreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/m_app_alert_fullscreen" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/sharing_scroll" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:importantForAccessibility="no">
+        <LinearLayout android:orientation="vertical" android:id="@id/sharing_container" android:padding="@dimen/m_grid_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:id="@id/blocos_warning" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/m_grid_1x" android:paddingBottom="@dimen/m_grid_1x" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="@dimen/m_grid_6x" android:minHeight="@dimen/m_grid_6x">
+                <ImageView android:paddingTop="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_info_outline_grey600_18" android:paddingStart="@dimen/m_grid_half" android:paddingEnd="@dimen/m_grid_half" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sharing_warning_blocos_viewer" style="@style/TextAppearanceSecondary" />
+                    <TextView android:textSize="@dimen/m_entry_text_size_secondary" android:textColor="@color/quantum_googblue500" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sharing_warning_learn_more" />
+                </LinearLayout>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout android:id="@id/message_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+                <android.support.design.widget.TextInputEditText android:textAppearance="@style/TextAppearancePrimary" android:id="@id/message" android:paddingBottom="@dimen/m_grid_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/m_grid_2x" android:minHeight="@dimen/default_list_item_height" android:hint="@string/sharing_message_title" android:inputType="textLongMessage|textCapSentences|textMultiLine" />
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="vertical" android:id="@id/access_list" android:background="@drawable/state_selector_background" android:paddingBottom="@dimen/m_grid_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_grid_2x" android:paddingStart="@dimen/m_grid_half" android:paddingEnd="@dimen/m_grid_half">
+                <TextView android:id="@id/access_list_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/m_grid_2x" android:text="@string/share_card_title" android:contentDescription="@string/sharing_show_who_has_access" style="@style/TextAppearanceSecondary" />
+                <include layout="@layout/who_has_access_list" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/sharing_progress_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+        <TextView android:gravity="center" android:id="@id/sharing_progress_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_grid_2x" android:text="@string/sharing_progress_saving_message" android:contentDescription="@string/sharing_progress_saving_message" style="@style/TextAppearancePrimary" />
+    </LinearLayout>
+</RelativeLayout>

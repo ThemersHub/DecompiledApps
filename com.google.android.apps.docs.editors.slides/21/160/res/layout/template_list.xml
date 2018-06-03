@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/template_picker_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/templates_toolbar" />
+    <include layout="@layout/action_bar_progress" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:id="@id/template_loading_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/template_recycler_view" android:paddingLeft="@dimen/template_grid_side_margin" android:paddingRight="@dimen/template_grid_side_margin" android:visibility="gone" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false" />
+    </FrameLayout>
+</LinearLayout>

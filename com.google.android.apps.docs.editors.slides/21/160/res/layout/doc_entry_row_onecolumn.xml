@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.docs.doclist.view.DocEntryRowRelativeLayout android:id="@id/doc_entry_root" android:background="@color/m_entry" android:focusable="true" android:nextFocusRight="@id/more_actions_button" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/doclist_entry_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/main_body" android:background="@drawable/state_selector_background" android:focusable="false" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/doclist_entry_height" android:layout_alignParentTop="true" />
+    <include layout="@layout/doc_entry_select_layout" />
+    <include layout="@layout/doc_entry_folder_select_layout" />
+    <RelativeLayout android:id="@id/doc_icon_wrapper" android:padding="@dimen/m_entry_icon_padding" android:focusable="false" android:duplicateParentState="true" android:layout_width="@dimen/m_entry_icon_size" android:layout_height="@dimen/m_entry_icon_size" android:scaleType="center" android:layout_centerVertical="true" android:layout_marginStart="@dimen/m_grid_2x" app:dimWhenUnavailable="true">
+        <com.google.android.apps.docs.view.SimpleThumbnailView android:id="@id/doc_icon" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" />
+        <com.google.android.apps.docs.view.SimpleThumbnailView android:id="@id/doc_icon_type" android:focusable="false" android:layout_width="@dimen/m_entry_icon_type_size" android:layout_height="@dimen/m_entry_icon_type_size" android:scaleType="center" android:layout_alignBottom="@id/doc_icon" android:visible="false" android:layout_alignEnd="@id/doc_icon" />
+    </RelativeLayout>
+    <LinearLayout android:id="@id/buttons" android:layout_width="wrap_content" android:layout_height="@dimen/doclist_entry_height" android:layout_alignTop="@id/main_body" android:layout_alignBottom="@id/main_body" android:layout_alignEnd="@id/main_body">
+        <ImageButton android:id="@id/cancel_button" android:visibility="visible" android:src="@drawable/quantum_ic_cancel_black_24" style="@style/EntryButton.List" />
+        <ImageButton android:id="@id/resume_button" android:visibility="gone" android:src="@drawable/quantum_ic_refresh_white_24" style="@style/EntryButton.List" />
+        <ImageButton android:id="@id/pause_button" android:visibility="visible" android:src="@drawable/quantum_ic_pause_white_24" style="@style/EntryButton.List" />
+        <FrameLayout android:id="@id/more_actions_button_container" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/main_body" android:layout_centerVertical="true" android:layout_toStartOf="@id/buttons" app:dimWhenUnavailable="true">
+        <com.google.android.apps.docs.view.FixedSizeTextView android:gravity="center_vertical" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" style="@style/ListEntryTitle.DocList.Relative" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/m_grid_2x" android:layout_marginStart="@dimen/m_grid_9x">
+            <TextView android:gravity="center_vertical" android:id="@id/sortLabel" style="@style/EntryLabel" />
+            <com.google.android.apps.docs.view.FixedSizeTextView android:gravity="center_vertical" android:id="@id/statusLabels" android:layout_width="0.0px" android:layout_weight="1.0" style="@style/EntryLabel" />
+            <TextView android:gravity="center_vertical" android:id="@id/offline_status" style="@style/EntryLabel" />
+            <ProgressBar android:gravity="center_vertical" android:id="@id/progress" android:layout_width="0.0px" android:layout_weight="1.0" style="@style/EntryProgress.List" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/doc_list_divider" />
+</com.google.android.apps.docs.doclist.view.DocEntryRowRelativeLayout>

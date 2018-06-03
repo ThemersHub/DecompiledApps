@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/empty_view_stub" android:layout="@layout/layout_priority_empty" android:inflatedId="@id/empty_state_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.docs.view.MaterialSwipeRefreshLayout android:id="@id/swipe_to_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.docs.driveintelligence.priority.view.DisablingRecyclerView android:id="@id/recyclerview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.google.android.apps.docs.view.MaterialSwipeRefreshLayout>
+    <com.google.android.apps.docs.driveintelligence.common.loading.ShimmerOverlay android:id="@id/shimmer_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.docs.driveintelligence.common.debug.DebugIndicatorView android:layout_gravity="center|right|top" android:id="@id/debug_indicator" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" />
+</FrameLayout>

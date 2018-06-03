@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/doclist_entry_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/select_button_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/m_grid_1.5x">
+        <RelativeLayout android:layout_width="@dimen/m_touch_target_size" android:layout_height="fill_parent" android:layout_alignParentStart="true">
+            <com.google.android.apps.docs.view.RoundImageView android:id="@id/select_button" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/select_list_unselected" android:contentDescription="@string/selection_item_select_button" android:layout_alignParentStart="true" />
+            <ImageView android:id="@id/type_icon" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_drive_file_googblue_24" android:scaleType="center" android:layout_centerInParent="true" app:dimWhenUnavailable="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/unselect_button_background" android:background="@drawable/doclist_selected_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/m_grid_1.5x">
+        <com.google.android.apps.docs.view.RoundImageView android:id="@id/unselect_button" android:focusable="true" android:layout_width="@dimen/m_touch_target_size" android:layout_height="fill_parent" android:src="@drawable/select_list_selected" android:contentDescription="@string/selection_item_unselect_button" android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <ImageButton android:id="@id/show_preview_button" android:background="@drawable/active_state_selector_background" android:focusable="true" android:visibility="invisible" android:layout_width="@dimen/m_touch_target_size" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_remove_red_eye_grey600_18" android:contentDescription="@string/doclist_selected_show_preview" android:paddingStart="@dimen/m_grid_2x" android:paddingEnd="@dimen/m_grid_2x" android:layout_alignParentEnd="true" />
+</RelativeLayout>

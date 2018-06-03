@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/default_popup_anchor" android:visibility="visible" android:layout_width="@android:dimen/app_icon_size" android:layout_height="0.0dip" />
+    <com.google.android.apps.docs.editors.punch.MinimumHeightLayout android:orientation="vertical" android:id="@id/phone_scale_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" punch:maximizableView="focused"
+      xmlns:punch="http://punch.google.com/com.google.android.apps.docs.editors.punch">
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/punch_main_view" />
+        <FrameLayout android:id="@id/phone_popup_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.google.android.apps.docs.editors.punch.MinimumHeightLayout>
+    <include layout="@layout/action_bar_progress" />
+    <ViewStub style="@style/BannerParent.Card.Stub" />
+</merge>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/invite_people_dialog_title_bar" android:background="#ffe0e0e0" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_alignParentTop="true">
+        <ImageButton android:id="@id/invite_people_dialog_close" android:background="@color/transparent" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_arrow_back_black_24" android:layout_centerVertical="true" android:contentDescription="@string/action_bar_up_navigation_button_desc" />
+        <TextView android:textSize="16.0sp" android:textColor="#df000000" android:id="@id/invite_people_dialog_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/invite_people_dialog_close" android:layout_centerVertical="true" android:fontFamily="sans-serif-medium" android:layout_toEndOf="@id/invite_people_dialog_close" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/invite_people_dialog_button" android:layout_below="@id/invite_people_dialog_title_bar">
+        <ListView android:id="@id/invite_people_dialog_list" android:background="#ffffffff" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@color/quantum_black_divider" android:dividerHeight="1.0dip" android:layout_alignParentTop="true" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:id="@id/invite_people_dialog_empty_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hangouts_no_one_here" android:layout_centerInParent="true" android:alpha="0.7" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/invite_people_dialog_button" android:background="#ff4285f4" android:layout_width="fill_parent" android:layout_height="75.0dip" android:layout_alignParentBottom="true">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@id/invite_people_dialog_icon" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_person_add_white_24" android:paddingEnd="16.0dip" />
+            <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hangouts_add_people" android:layout_toRightOf="@id/invite_people_dialog_icon" android:textAllCaps="true" android:layout_toEndOf="@id/invite_people_dialog_icon" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/main_canvas_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/punch_main_canvas_and_bottom_bars" />
+    <com.google.android.apps.docs.editors.punch.ui.EmptyDocumentOverlay android:id="@id/empty_document_overlay" android:background="#ffcccccc" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.docs.editors.sketchy.SketchyProgressOverlay android:background="@color/sketchy_default_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.libraries.docs.view.JellybeanProgressBar android:layout_gravity="center" android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminate="true" />
+    </com.google.android.apps.docs.editors.sketchy.SketchyProgressOverlay>
+    <ViewStub android:id="@id/punch_loading_overlay_stub" android:layout="@layout/punch_loading_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>
