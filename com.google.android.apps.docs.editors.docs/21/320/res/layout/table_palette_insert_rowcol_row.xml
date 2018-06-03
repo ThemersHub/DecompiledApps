@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/palette_tab_heading_text_size" android:gravity="center" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/table_palette_insert_column" android:importantForAccessibility="no" style="@style/PaletteTextAllCaps" />
+        <LinearLayout style="@style/PaletteRow">
+            <ImageButton android:id="@id/table_palette_insert_column_left" android:src="@drawable/ic_table_insert_column_before_normal_24" android:contentDescription="@string/table_palette_insert_column_left" style="@style/PaletteImageButton" />
+            <ImageButton android:id="@id/table_palette_insert_column_right" android:src="@drawable/ic_table_insert_column_after_normal_24" android:contentDescription="@string/table_palette_insert_column_right" style="@style/PaletteImageButton" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/separator_vertical" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/palette_tab_heading_text_size" android:gravity="center" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/table_palette_insert_row" android:importantForAccessibility="no" style="@style/PaletteTextAllCaps" />
+        <LinearLayout style="@style/PaletteRow">
+            <ImageButton android:id="@id/table_palette_insert_row_above" android:src="@drawable/ic_table_insert_row_before_normal_24" android:contentDescription="@string/table_palette_insert_row_above" style="@style/PaletteImageButton" />
+            <ImageButton android:id="@id/table_palette_insert_row_below" android:src="@drawable/ic_table_insert_row_after_normal_24" android:contentDescription="@string/table_palette_insert_row_below" style="@style/PaletteImageButton" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

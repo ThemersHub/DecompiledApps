@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/table_palette_layout" style="@style/Palette"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/table_palette_controls" android:visibility="gone" style="@style/Palette">
+        <include layout="@layout/table_palette_insert_rowcol_row" />
+        <include layout="@layout/separator_horizontal" />
+        <include layout="@layout/table_palette_row_height_row" />
+        <include layout="@layout/separator_horizontal" />
+        <include layout="@layout/table_palette_column_width_row" />
+        <include android:id="@id/table_palette_merge_cells_switch_separator" layout="@layout/separator_horizontal" />
+        <com.google.android.apps.docs.editors.menu.components.SwitchRow android:id="@id/table_palette_merge_cells_switch" android:layout_width="fill_parent" android:layout_height="@dimen/palette_row_height" android:text="@string/table_palette_merge_cells_text" />
+    </LinearLayout>
+    <include android:id="@id/table_palette_no_table_message" layout="@layout/table_palette_no_table" />
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/insert_tool_search_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/insert_tool_actionbar_and_searchbar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/insert_tool_actionbar" android:background="@color/insert_tool_actionbar" style="@style/insert_tool_heading">
+            <ImageView android:id="@id/insert_tool_explore_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_explore_white_24" style="@style/insert_tool_actionbar_icon" />
+            <TextView android:layout_width="0.0dip" android:text="@string/insert_tool" android:layout_weight="1.0" style="@style/insert_tool_actionbar_zero_search_title" />
+            <include android:layout_width="wrap_content" android:layout_height="fill_parent" layout="@layout/insert_tool_actionbar_close_white" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/insert_tool_zero_search_fake_search_bar" android:background="@android:color/white" style="@style/insert_tool_heading">
+            <LinearLayout android:id="@id/insert_tool_search_button" android:focusable="true" android:layout_width="0.0dip" android:layout_weight="1.0" android:paddingEnd="@dimen/insert_tool_search_button_margin_left" style="@style/insert_tool_touch_focusable_heading">
+                <ImageView android:src="@drawable/quantum_ic_search_grey600_24" style="@style/insert_tool_actionbar_icon" />
+                <TextView android:textColor="@color/insert_tool_search_text" android:id="@id/insert_tool_search_text" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_marginLeft="@dimen/insert_tool_actionbar_text_margin_left_right" android:layout_marginStart="@dimen/insert_tool_actionbar_text_margin_left_right" style="@style/insert_tool_search_bar" />
+            </LinearLayout>
+            <ImageButton android:id="@id/insert_tool_voice_button" android:src="@drawable/quantum_ic_mic_grey600_24" android:contentDescription="@string/insert_tool_search_voice" style="@style/insert_tool_search_actionbar_icon" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/insert_tool_actionbar_and_searchbar">
+        <include android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/insert_tool_retry_message" />
+        <FrameLayout android:id="@id/insert_tool_online_holder" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ScrollView android:scrollbarStyle="insideOverlay" android:id="@id/insert_tool_zero_search_with_results" android:visibility="gone" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+                <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/insert_tool_cards_holder_padding_top" android:paddingBottom="@dimen/insert_tool_cards_holder_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <FrameLayout android:id="@id/insert_tool_zero_search_topics_card_holder" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <FrameLayout android:id="@id/insert_tool_zero_search_images_card_holder" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <FrameLayout android:id="@id/insert_tool_zero_search_snippets_card_holder" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </ScrollView>
+            <RelativeLayout android:layout_gravity="center" android:id="@id/insert_tool_zero_search_no_results" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/insert_tool_splash_icon" android:layout_width="@dimen/insert_tool_explore_splash_icon_size" android:layout_height="@dimen/insert_tool_explore_splash_icon_size" android:layout_marginBottom="@dimen/insert_tool_splash_title_margin_bottom" android:src="@drawable/ic_explore_black_48" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:alpha="0.54" />
+                <TextView android:textSize="@dimen/insert_tool_splash_title_text_size" android:textColor="@color/insert_tool_label_text" android:gravity="center" android:id="@id/insert_tool_splash_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/insert_tool_splash_margin_left_right" android:layout_marginRight="@dimen/insert_tool_splash_margin_left_right" android:layout_marginBottom="@dimen/insert_tool_splash_title_margin_bottom" android:text="@string/insert_tool_zero_search_splash_title" android:layout_below="@id/insert_tool_splash_icon" android:fontFamily="sans-serif-medium" android:layout_marginStart="@dimen/insert_tool_splash_margin_left_right" android:layout_marginEnd="@dimen/insert_tool_splash_margin_left_right" style="@style/insert_tool_title" />
+                <TextView android:gravity="center" android:id="@id/insert_tool_zero_search_splash_snippet" android:paddingBottom="@dimen/insert_tool_splash_title_margin_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/insert_tool_splash_margin_left_right" android:layout_marginRight="@dimen/insert_tool_splash_margin_left_right" android:layout_marginBottom="@dimen/insert_tool_explore_splash_icon_size" android:text="@string/insert_tool_zero_search_splash_snippet" android:layout_below="@id/insert_tool_splash_title" android:layout_marginStart="@dimen/insert_tool_splash_margin_left_right" android:layout_marginEnd="@dimen/insert_tool_splash_margin_left_right" style="@style/insert_tool_label" />
+            </RelativeLayout>
+        </FrameLayout>
+        <ProgressBar android:layout_gravity="top" style="@style/insert_tool_progress_bar" />
+        <FrameLayout android:layout_gravity="top" style="@style/insert_tool_heading_shadow" />
+    </FrameLayout>
+</RelativeLayout>

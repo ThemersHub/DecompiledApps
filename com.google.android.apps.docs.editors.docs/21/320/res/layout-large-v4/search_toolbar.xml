@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:paddingStart="8.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:rslayout="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <include layout="@layout/search_bar" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/findreplace_replace_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <View android:layout_gravity="center_vertical" android:id="@id/findreplace_tablet_replace_bar_separator" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" style="@style/findreplace_tablet_full_vertical_separator" />
+        <Button android:layout_gravity="center_vertical" android:id="@id/findreplace_replaceall" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="8.0dip" android:text="@string/replace_all" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/findreplace_button_style" />
+        <View android:layout_gravity="center_vertical" android:id="@id/findreplace_tablet_replaceall_separator" android:layout_toLeftOf="@id/findreplace_replaceall" android:layout_toStartOf="@id/findreplace_replaceall" style="@style/findreplace_tablet_vertical_separator" />
+        <Button android:layout_gravity="center_vertical" android:id="@id/findreplace_replace" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="8.0dip" android:text="@string/replace" android:layout_toLeftOf="@id/findreplace_tablet_replaceall_separator" android:layout_toStartOf="@id/findreplace_tablet_replaceall_separator" style="@style/findreplace_button_style" />
+        <View android:layout_gravity="center_vertical" android:id="@id/findreplace_tablet_replace_separator" android:layout_toLeftOf="@id/findreplace_replace" android:layout_toStartOf="@id/findreplace_replace" style="@style/findreplace_tablet_vertical_separator" />
+        <EditText android:id="@id/findreplace_replace_text" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/replace_hint" android:maxLines="1" android:layout_toLeftOf="@id/findreplace_tablet_replace_separator" android:layout_toRightOf="@id/findreplace_tablet_replace_bar_separator" android:inputType="textNoSuggestions" android:imeOptions="actionDone|flagNoExtractUi" android:layout_toStartOf="@id/findreplace_tablet_replace_separator" android:layout_toEndOf="@id/findreplace_tablet_replace_bar_separator" />
+    </RelativeLayout>
+</LinearLayout>

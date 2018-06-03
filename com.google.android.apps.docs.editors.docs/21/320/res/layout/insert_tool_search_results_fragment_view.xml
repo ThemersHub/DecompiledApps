@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/insert_tool_search_background" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Palette"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@color/insert_tool_actionbar" style="@style/insert_tool_heading">
+        <include layout="@layout/insert_tool_actionbar_back_white" />
+        <include layout="@layout/insert_tool_actionbar_query_bar" />
+        <include layout="@layout/insert_tool_actionbar_insert_text" />
+        <include layout="@layout/insert_tool_actionbar_search_white" />
+        <include layout="@layout/insert_tool_actionbar_document_list_results" />
+        <include layout="@layout/insert_tool_actionbar_document_grid_results" />
+        <include layout="@layout/insert_tool_actionbar_divider" />
+        <include layout="@layout/insert_tool_actionbar_close_white" />
+    </LinearLayout>
+    <TabHost android:id="@id/search_results_tab_host" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TabWidget android:id="@android:id/tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="none" />
+            <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>

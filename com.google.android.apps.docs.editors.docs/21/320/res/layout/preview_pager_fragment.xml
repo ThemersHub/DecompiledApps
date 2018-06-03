@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/m_app_primary_inverse_text" android:layout_gravity="center" android:id="@id/no_preview_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:text="@string/error_opening_document" android:drawableTop="@drawable/ic_proj_no_thumbnail" android:drawablePadding="@dimen/m_grid_2x" android:contentDescription="@string/error_opening_document" />
+    <FrameLayout android:id="@id/page_container" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/loading_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ProgressBarSpinner" />
+    <include android:id="@id/no_preview_open_in_another_app" android:visibility="gone" layout="@layout/preview_offline_open_in_another_app" />
+</FrameLayout>

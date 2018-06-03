@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/select_button_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/doc_grid_title_height">
+        <include layout="@layout/doc_grid_entry_select_button" />
+        <View android:layout_width="fill_parent" style="@style/GridFooter" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/unselect_button_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/doc_grid_entry_unselect_button" />
+        <View android:layout_gravity="end" android:background="@color/selection_selected_file_mask" android:layout_width="fill_parent" style="@style/GridFooter" />
+    </LinearLayout>
+    <ImageButton android:id="@id/show_preview_button" style="@style/SelectionPreviewButton" />
+</RelativeLayout>

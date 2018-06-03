@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/palette_tab_heading_background" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Palette"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/insert_tool_actionbar" style="@style/insert_tool_heading">
+        <include android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" layout="@layout/insert_tool_actionbar_back_white" />
+        <Button android:id="@id/insert_tool_image_button" android:nextFocusDown="@id/insert_tool_image_pager" android:clickable="false" android:text="@string/insert_tool_insert_button" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/insert_tool_heading_text_button" />
+    </RelativeLayout>
+    <com.google.android.apps.docs.editors.shared.inserttool.view.ImageViewPager android:id="@id/insert_tool_image_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/insert_tool_retry_message" />
+</LinearLayout>

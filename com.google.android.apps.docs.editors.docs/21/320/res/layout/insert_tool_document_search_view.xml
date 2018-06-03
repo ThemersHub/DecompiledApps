@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/insert_tool_doclist_and_retry_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewSwitcher android:id="@id/insert_tool_doclist_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/insert_tool_doc_results_list_view" android:background="@drawable/transparent_state_selector_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="true" android:divider="@color/quantum_black_divider" android:dividerHeight="1.0dip" />
+            <GridView android:id="@id/insert_tool_doc_results_grid_view" android:background="@drawable/transparent_state_selector_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="true" android:horizontalSpacing="@dimen/insert_tool_document_search_grid_view_spacing" android:verticalSpacing="@dimen/insert_tool_document_search_grid_view_spacing" android:stretchMode="columnWidth" android:numColumns="auto_fit" />
+        </ViewSwitcher>
+        <com.google.android.apps.docs.view.emptystate.EmptyStateView android:id="@id/insert_tool_empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:background="@drawable/insert_tool_overlap_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/editor_overlap_shadow_height" android:layout_alignParentTop="true" />
+    <include layout="@layout/insert_tool_retry_message" />
+    <ProgressBar android:layout_alignParentTop="true" style="@style/insert_tool_progress_bar" />
+</RelativeLayout>
