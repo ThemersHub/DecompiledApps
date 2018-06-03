@@ -2,8 +2,11 @@
 <FrameLayout android:id="@id/zero_state_home_automation_card_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:orientation="vertical" android:id="@id/zero_state_home_automation_card" android:background="@drawable/zero_state_card_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/zero_state_card_gap_margin">
-        <LinearLayout android:orientation="vertical" android:padding="@dimen/zero_state_card_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <TextView android:id="@id/ha_card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/zero_state_card_padding" android:text="@string/ha_card_title" style="@style/ZeroStateHomeAutomationHeaderText" />
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/zero_state_card_gap_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/zero_state_card_padding">
+                <TextView android:id="@id/ha_card_title" android:padding="@dimen/zero_state_card_gap_margin" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ha_card_title" android:layout_weight="1.0" style="@style/ZeroStateHomeAutomationHeaderText" />
+                <ImageView android:id="@id/overflow_menu_icon" android:padding="@dimen/zero_state_menu_icon_accessibility_padding" android:visibility="gone" android:layout_width="@dimen/zero_state_menu_icon_size" android:layout_height="@dimen/zero_state_menu_icon_size" android:src="@drawable/quantum_ic_more_vert_white_24" android:scaleType="centerInside" android:tint="#ff8f8f8f" android:contentDescription="@null" />
+            </LinearLayout>
             <LinearLayout android:orientation="horizontal" android:id="@id/action_coin_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
         </LinearLayout>
         <android.support.v7.widget.RecyclerView android:id="@id/suggestion_chips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/zero_state_card_padding" />
