@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" package="com.google.android.apps.plus" platformBuildVersionCode="27" platformBuildVersionName="P">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.google.android.apps.plus" platformBuildVersionCode="28" platformBuildVersionName="9">
     <permission android:name="com.google.android.apps.plus.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
     <permission android:name="com.android.gallery3d.filtershow.permission.READ" android:protectionLevel="signature"/>
     <permission android:name="com.android.gallery3d.filtershow.permission.WRITE" android:protectionLevel="signature"/>
@@ -83,13 +83,6 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:exported="true" android:label="@string/stream_one_up_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.HostStreamOneUpActivity" android:theme="@style/StreamOneUp" android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="com.google.android.apps.plus.widget.ACTIVITY_ACTION"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:exported="false" android:logo="@mipmap/quantum_logo_photos_launcher_color_48" android:name="com.google.android.apps.plus.phone.PhotoStreamOneUpActivity" android:taskAffinity="@string/photos_affinity" android:theme="@style/PhotoStreamOneUp" android:windowSoftInputMode="adjustResize"/>
         <activity android:exported="false" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.EditCommentActivity" android:theme="@style/Theme.Arkham.TabletCircleBrowserTheme" android:windowSoftInputMode="stateVisible"/>
         <activity android:exported="false" android:label="@string/edit_post" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.EditPostActivity" android:theme="@style/Theme.Arkham.TabletCircleBrowserTheme" android:windowSoftInputMode="stateVisible"/>
         <activity android:exported="false" android:label="@string/event_activity_title" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.phone.HostEventInviteeListActivity" android:parentActivityName="com.google.android.apps.plus.phone.EventActivity" android:theme="@style/Theme.Arkham.TabletCircleBrowserTheme"/>
@@ -322,6 +315,7 @@
         <activity android:exported="false" android:label="@string/oneup_stream_activity_label" android:logo="@drawable/actionbar_gplus_logo" android:name="com.google.android.apps.plus.stream.oneup.OneUpStreamActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Plus"/>
         <activity android:exported="false" android:name="com.google.android.apps.plus.stream.oneup.OneUpVanityTransitionalActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.OneUp.Stream"/>
         <activity android:exported="false" android:launchMode="singleTop" android:name="com.google.android.apps.plus.stream.postactivities.PostActivitiesActivity" android:theme="@style/Theme.PostActivities"/>
+        <activity android:exported="false" android:label="Tags" android:name="com.google.android.apps.plus.tags.management.TagManagementActivity" android:parentActivityName="com.google.android.apps.plus.phone.HomeActivity" android:theme="@style/Theme.Plus"/>
         <provider android:authorities="com.google.android.apps.plus.content.EsProvider;com.google.android.apps.plus" android:exported="false" android:label="@string/es_data" android:name="com.google.android.apps.plus.content.EsProvider">
             <path-permission android:path="/search_suggest_query" android:readPermission="android.permission.GLOBAL_SEARCH"/>
             <grant-uri-permission android:pathPattern=".*"/>

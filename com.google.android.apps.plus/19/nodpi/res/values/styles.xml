@@ -433,10 +433,7 @@
         <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
         <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
         <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
-        <item name="colorPrimaryLight">?colorPrimary</item>
         <item name="colorSecondary">?colorPrimary</item>
-        <item name="colorSecondaryDark">?colorPrimaryDark</item>
-        <item name="colorSecondaryLight">?colorPrimaryLight</item>
         <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
         <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
         <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
@@ -472,10 +469,7 @@
         <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
         <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
         <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
-        <item name="colorPrimaryLight">?colorPrimary</item>
         <item name="colorSecondary">?colorPrimary</item>
-        <item name="colorSecondaryDark">?colorPrimaryDark</item>
-        <item name="colorSecondaryLight">?colorPrimaryLight</item>
         <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
         <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
         <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
@@ -511,10 +505,7 @@
         <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
         <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
         <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
-        <item name="colorPrimaryLight">?colorPrimary</item>
         <item name="colorSecondary">?colorPrimary</item>
-        <item name="colorSecondaryDark">?colorPrimaryDark</item>
-        <item name="colorSecondaryLight">?colorPrimaryLight</item>
         <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
         <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
         <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
@@ -550,10 +541,7 @@
         <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
         <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
         <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
-        <item name="colorPrimaryLight">?colorPrimary</item>
         <item name="colorSecondary">?colorPrimary</item>
-        <item name="colorSecondaryDark">?colorPrimaryDark</item>
-        <item name="colorSecondaryLight">?colorPrimaryLight</item>
         <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
         <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
         <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
@@ -1221,6 +1209,7 @@
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Chip</item>
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
+        <item name="android:text">@null</item>
         <item name="android:checkable">false</item>
         <item name="rippleColor">@color/mtrl_chip_ripple_color</item>
         <item name="chipBackgroundColor">@color/mtrl_chip_background_color</item>
@@ -1228,7 +1217,6 @@
         <item name="chipCornerRadius">16.0dip</item>
         <item name="chipStrokeColor">#00000000</item>
         <item name="chipStrokeWidth">0.0dip</item>
-        <item name="chipText">@null</item>
         <item name="chipIconEnabled">true</item>
         <item name="chipIcon">@null</item>
         <item name="chipIconSize">24.0dip</item>
@@ -2014,12 +2002,18 @@
     </style>
     <style name="Preference.Category.Material" parent="@style/Preference.Category">
         <item name="android:layout">@layout/preference_category_material</item>
+        <item name="allowDividerAbove">true</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.CheckBoxPreference" parent="@style/Preference">
         <item name="android:widgetLayout">@layout/preference_widget_checkbox</item>
     </style>
     <style name="Preference.CheckBoxPreference.Material" parent="@style/Preference.CheckBoxPreference">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.DialogPreference" parent="@style/Preference">
         <item name="android:positiveButtonText">@android:string/ok</item>
@@ -2030,15 +2024,25 @@
     </style>
     <style name="Preference.DialogPreference.EditTextPreference.Material" parent="@style/Preference.DialogPreference.EditTextPreference">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="singleLineTitle">false</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.DialogPreference.Material" parent="@style/Preference.DialogPreference">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.DropDown" parent="@style/Preference">
         <item name="android:layout">@layout/preference_dropdown</item>
     </style>
     <style name="Preference.DropDown.Material" parent="@style/Preference.DropDown">
         <item name="android:layout">@layout/preference_dropdown_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.Information" parent="@style/Preference">
         <item name="android:enabled">false</item>
@@ -2052,10 +2056,17 @@
     </style>
     <style name="Preference.Material" parent="@style/Preference">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="singleLineTitle">false</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.PreferenceScreen" parent="@style/Preference" />
     <style name="Preference.PreferenceScreen.Material" parent="@style/Preference.PreferenceScreen">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.SeekBarPreference" parent="@style/Preference">
         <item name="android:layout">@layout/preference_widget_seekbar</item>
@@ -2064,6 +2075,9 @@
     </style>
     <style name="Preference.SeekBarPreference.Material" parent="@style/Preference.SeekBarPreference">
         <item name="android:layout">@layout/preference_widget_seekbar_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
         <item name="adjustable">true</item>
         <item name="showSeekBarValue">true</item>
     </style>
@@ -2074,6 +2088,10 @@
     </style>
     <style name="Preference.SwitchPreference.Material" parent="@style/Preference.SwitchPreference">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="singleLineTitle">false</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.SwitchPreferenceCompat" parent="@style/Preference">
         <item name="android:widgetLayout">@layout/preference_widget_switch_compat</item>
@@ -2082,6 +2100,9 @@
     </style>
     <style name="Preference.SwitchPreferenceCompat.Material" parent="@style/Preference.SwitchPreferenceCompat">
         <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="PreferenceFragment">
         <item name="android:paddingLeft">0.0dip</item>
@@ -2090,6 +2111,7 @@
     </style>
     <style name="PreferenceFragment.Material" parent="@style/PreferenceFragment">
         <item name="android:divider">@drawable/preference_list_divider_material</item>
+        <item name="allowDividerAfterLastItem">false</item>
     </style>
     <style name="PreferenceFragmentList">
         <item name="android:paddingLeft">16.0dip</item>
@@ -2118,6 +2140,7 @@
         <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
     </style>
     <style name="PreferenceThemeOverlay.v14.Material" parent="@style/PreferenceThemeOverlay.v14">
+        <item name="android:scrollbars">vertical</item>
         <item name="preferenceScreenStyle">@style/Preference.PreferenceScreen.Material</item>
         <item name="preferenceFragmentStyle">@style/PreferenceFragment.Material</item>
         <item name="preferenceFragmentCompatStyle">@style/PreferenceFragment.Material</item>
@@ -2183,11 +2206,17 @@
     <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.InternalGroup" parent="@android:style/Widget">
         <item name="android:layout_marginLeft">16.0dip</item>
     </style>
+    <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.Shortcut" parent="@android:style/Widget">
+        <item name="android:layout_marginLeft">16.0dip</item>
+    </style>
     <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.SubmenuArrow" parent="@android:style/Widget">
         <item name="android:layout_marginLeft">8.0dip</item>
     </style>
     <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.Text" parent="@android:style/Widget">
         <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.Title" parent="@android:style/Widget">
+        <item name="android:layout_marginLeft">16.0dip</item>
     </style>
     <style name="RtlOverlay.Widget.AppCompat.Search.DropDown" parent="@android:style/Widget">
         <item name="android:paddingLeft">@dimen/abc_dropdownitem_text_padding_left</item>
@@ -2242,14 +2271,6 @@
     <style name="SharecutsSlideUpDownAnimation">
         <item name="android:windowEnterAnimation">@anim/sharecuts_enter</item>
         <item name="android:windowExitAnimation">@anim/sharecuts_exit</item>
-    </style>
-    <style name="SnackbarButtonText">
-        <item name="android:textSize">@dimen/snackbar_button_one_up_textSize</item>
-        <item name="android:textColor">@android:color/white</item>
-    </style>
-    <style name="SnackbarDescriptionText">
-        <item name="android:textSize">@dimen/snackbar_description_one_up_textSize</item>
-        <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="SpinnerItem">
         <item name="android:textAppearance">@style/quantum_text_body_2_black</item>
@@ -2633,6 +2654,10 @@
         <item name="android:textSize">@dimen/textsize_20</item>
         <item name="android:textColor">@color/quantum_black_text</item>
     </style>
+    <style name="TextStyle.CardHat.TitleText14" parent="@style/TextStyle.Regular">
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:textColor">@color/quantum_black_text</item>
+    </style>
     <style name="TextStyle.CardHatWithButton" parent="@style/TextStyle.Medium">
         <item name="android:textSize">@dimen/textsize_14</item>
     </style>
@@ -2884,6 +2909,9 @@
         <item name="android:textColor">@color/quantum_black_hint_text</item>
     </style>
     <style name="TextStyle.SocialPost.Text" parent="@style/quantum_text_body_1_black" />
+    <style name="TextStyle.SocialPost.TextTitle" parent="@style/quantum_text_subhead_black">
+        <item name="android:textStyle">bold</item>
+    </style>
     <style name="TextStyle.SocialPost.Timestamp" parent="@style/TextStyle.Regular">
         <item name="android:textSize">@dimen/textsize_12</item>
         <item name="android:textColor">@color/quantum_grey</item>
@@ -4558,6 +4586,16 @@
         <item name="android:background">@null</item>
         <item name="android:minWidth">0.0dip</item>
         <item name="android:minHeight">0.0dip</item>
+    </style>
+    <style name="post_title_hint_text">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="post_title_text">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="quantum_text_black_dark">
         <item name="android:textColor">@color/quantum_black_text</item>
