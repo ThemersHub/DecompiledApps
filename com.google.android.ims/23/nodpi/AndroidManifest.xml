@@ -24,9 +24,10 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.PACKET_KEEPALIVE_OFFLOAD"/>
     <uses-permission android:name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <permission android:name="com.google.android.ims.providers.ACCESS_DATA" android:protectionLevel="signatureOrSystem"/>
     <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
-    <application android:allowBackup="false" android:extractNativeLibs="false" android:icon="@drawable/common_ic_googleplayservices" android:label="Carrier Services" android:name="com.google.android.ims.CarrierServicesReleaseApp">
+    <application android:allowBackup="false" android:extractNativeLibs="false" android:icon="@drawable/common_ic_googleplayservices" android:label="Carrier Services" android:name="com.google.android.ims.CarrierServicesReleaseApp" android:usesCleartextTraffic="true">
         <meta-data android:name="ProvisioningManagerApiVersions" android:value="1,"/>
         <meta-data android:name="CallComposerManagerApiVersions" android:value="1,"/>
         <meta-data android:name="PostCallManagerApiVersions" android:value="1,"/>
@@ -47,7 +48,7 @@
         <meta-data android:name="ChatServiceVersions" android:value="1,"/>
         <meta-data android:name="EnrichedCallServiceVersions" android:value="1,"/>
         <meta-data android:name="PresenceServiceVersions" android:value="1,"/>
-        <meta-data android:name="SignupServiceVersions" android:value="1,2,"/>
+        <meta-data android:name="SignupServiceVersions" android:value="1,2,3"/>
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity android:excludeFromRecents="true" android:exported="true" android:label="@string/settings_label" android:name="com.google.android.ims.ui.WifiCallingSettingsActivity" android:theme="@style/DialerLibSettingsStyle">
             <intent-filter>
@@ -89,12 +90,17 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
-        <receiver android:exported="true" android:name="com.google.android.ims.library.phenotype.PhenotypeConfigurationReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+        <receiver android:exported="true" android:name="com.google.android.ims.receivers.AirplaneModeChangedReceiver">
             <intent-filter>
-                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+                <action android:name="android.intent.action.ACTION_AIRPLANE_MODE_CHANGED"/>
             </intent-filter>
         </receiver>
-        <receiver android:exported="true" android:name="com.google.android.ims.library.rcs.RcsPhenotypeConfigurationReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+        <receiver android:exported="true" android:name="com.google.android.ims.receivers.ServiceStateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.SERVICE_STATE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.ims.library.phenotype.PhenotypeConfigurationReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
             <intent-filter>
                 <action android:name="com.google.android.gms.phenotype.UPDATE"/>
             </intent-filter>
