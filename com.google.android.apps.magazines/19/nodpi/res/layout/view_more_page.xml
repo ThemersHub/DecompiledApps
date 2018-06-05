@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:text="@string/world_cup_2018" style="@style/WorldcupSubHeader" />
+    <TextView android:text="@string/all_games_title" style="@style/WorldcupHeadline" />
+    <include android:id="@id/game_view" layout="@layout/default_game" />
+    <RelativeLayout android:id="@id/timeline_group" android:paddingTop="@dimen/card_inner_content_half_padding" android:paddingBottom="@dimen/card_inner_content_2x_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView android:id="@id/timeline" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/timeline_highlight" android:layout_width="@dimen/timeline_item_height" android:layout_height="@dimen/timeline_item_height" android:layout_marginTop="@dimen/card_inner_content_padding" android:src="@drawable/timeline_highlight" android:layout_alignTop="@id/timeline" android:layout_centerHorizontal="true" />
+        <TextView android:id="@id/timeline_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/timeline" android:layout_centerHorizontal="true" style="@style/WorldcupTitle2" />
+    </RelativeLayout>
+    <FrameLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="22.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/follow_tournament" android:layout_marginStart="@dimen/card_inner_content_2x_padding" android:layout_marginEnd="@dimen/card_inner_content_2x_padding" style="@style/Text.Headline" />
+            <TextView android:id="@id/topic_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_inner_content_padding" android:text="@string/go_to_worldcup_topic" android:layout_marginStart="@dimen/card_inner_content_2x_padding" android:layout_marginEnd="@dimen/card_inner_content_2x_padding" style="@style/Widget.GoogleMaterial.Button" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

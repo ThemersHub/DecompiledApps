@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/world_cup_card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:text="@string/world_cup_2018" style="@style/WorldcupSubHeader" />
+        <TextView android:text="@string/teams_page_title" style="@style/WorldcupHeadline" />
+        <android.support.v7.widget.RecyclerView android:id="@id/teams_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/card_inner_content_2x_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/card_inner_content_padding">
+        <TextView android:textColor="@color/white" android:id="@id/team_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text.Headline" />
+        <ImageView android:id="@id/eliminated_separator" android:layout_width="14.0dip" android:layout_height="14.0dip" android:src="@drawable/quantum_ic_arrow_right_white_24" android:scaleType="centerInside" android:alpha="0.5" android:layout_marginStart="@dimen/card_inner_content_quarter_padding" android:layout_marginEnd="@dimen/card_inner_content_quarter_padding" />
+        <TextView android:textColor="@color/world_cup_secondary_text" android:id="@id/eliminated_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/team_eliminated" style="@style/Text.Headline" />
+    </LinearLayout>
+    <com.google.apps.dots.android.modules.worldcup.views.WorldCupTeamProgressView android:id="@id/progress_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:paddingStart="@dimen/card_inner_content_padding" android:paddingEnd="@dimen/card_inner_content_padding" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.apps.dots.android.modules.worldcup.games.GamesRecyclerView android:id="@id/games" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/card_inner_content_padding" />
+        <include layout="@layout/arrow" />
+    </FrameLayout>
+</LinearLayout>

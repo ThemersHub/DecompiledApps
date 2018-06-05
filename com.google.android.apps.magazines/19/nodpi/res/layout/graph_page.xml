@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:text="@string/world_cup_2018" style="@style/WorldcupSubHeader" />
+    <com.google.apps.dots.android.modules.worldcup.views.CountDownView android:id="@id/countdown" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/card_inner_content_three_quarter_padding" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/header_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/group_title" android:paddingBottom="0.0dip" android:text="@string/graph_header_group" style="@style/WorldcupHeadline" />
+        <ImageView android:id="@id/title_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_arrow_right_white_24" android:alpha="0.3" />
+        <TextView android:id="@id/knockout_title" android:paddingBottom="0.0dip" android:text="@string/graph_header_knockout" style="@style/WorldcupHeadline" />
+    </LinearLayout>
+    <com.google.apps.dots.android.modules.worldcup.views.WorldCupGraphView android:id="@id/graph_view" android:paddingTop="@dimen/card_inner_content_three_halves_padding" android:paddingBottom="@dimen/card_inner_content_three_halves_padding" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:paddingStart="@dimen/card_inner_content_half_padding" android:paddingEnd="@dimen/card_inner_content_half_padding" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.apps.dots.android.modules.worldcup.games.GamesRecyclerView android:id="@id/games" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/card_inner_content_padding" />
+        <include layout="@layout/arrow" />
+    </FrameLayout>
+</LinearLayout>

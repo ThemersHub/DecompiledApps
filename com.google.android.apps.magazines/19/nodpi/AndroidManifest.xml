@@ -148,7 +148,8 @@
         <activity android:configChanges="keyboardHidden" android:exported="false" android:launchMode="singleTop" android:name="com.google.apps.dots.android.newsstand.home.HomeActivity" android:theme="@style/HomeActivityTheme"/>
         <activity android:configChanges="keyboardHidden" android:exported="false" android:launchMode="singleTop" android:name="com.google.apps.dots.android.newsstand.psv.PsvChallengeActivity" android:theme="@style/NSTheme.Light"/>
         <activity android:configChanges="keyboardHidden" android:exported="false" android:launchMode="singleTop" android:name="com.google.apps.dots.android.newsstand.pii.UserDataCollectionActivity" android:theme="@style/NSTheme.FullScreenDialog"/>
-        <activity android:configChanges="keyboardHidden" android:exported="false" android:launchMode="singleTop" android:name="com.google.apps.dots.android.newsstand.reading.ArticleReadingActivity" android:theme="@style/NSTheme.Light.CustomToolbar.TransparentBackground"/>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:launchMode="singleTop" android:name="com.google.apps.dots.android.newsstand.reading.ArticleReadingActivity" android:theme="@style/NSTheme.Light.CustomToolbar"/>
+        <activity android:configChanges="keyboardHidden" android:exported="false" android:launchMode="singleTop" android:name="com.google.apps.dots.android.newsstand.reading.SwipeArticleReadingActivity" android:theme="@style/NSTheme.Light.CustomToolbar.TransparentBackground"/>
         <activity android:configChanges="keyboardHidden" android:exported="false" android:name="com.google.apps.dots.android.newsstand.activity.HeaderEditionActivity" android:theme="@style/NSTheme.Light.CustomToolbar"/>
         <activity android:configChanges="keyboardHidden" android:exported="false" android:name="com.google.apps.dots.android.newsstand.activity.MagazinePagerActivity" android:theme="@style/NSTheme.Light.CustomToolbar"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.apps.dots.android.newsstand.edition.VideoEditionActivity" android:theme="@style/VideoEditionActivityTheme"/>
@@ -244,6 +245,7 @@
         <service android:exported="false" android:name="com.google.apps.dots.android.newsstand.notifications.NotificationActionIntentService"/>
         <service android:exported="false" android:name="com.google.apps.dots.android.newsstand.notifications.ShowNotificationIntentService"/>
         <service android:exported="false" android:name="com.google.apps.dots.android.newsstand.notifications.NotificationKnownActionIntentService"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.google.apps.dots.android.modules.worldcup.WorldCupActivity" android:theme="@style/WorldCupTheme"/>
         <meta-data android:name="com.google.android.libraries.glide.fife.module.FifeGlideModule" android:value="GlideModule"/>
         <activity android:exported="false" android:label="@string/primes_debug_activity_label" android:name="com.google.android.libraries.performance.primes.debug.PrimesEventActivity" android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
             <intent-filter>
@@ -255,6 +257,9 @@
         <activity android:exported="false" android:label="@string/preferences_license_title" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@style/Theme.AppCompat.Light"/>
         <meta-data android:name="com.google.android.libraries.social.peoplekit.avatars.viewcontrollers.glide.FifeGlideModule" android:value="GlideModule"/>
         <activity android:exported="false" android:name="com.google.android.libraries.social.sendkit.ui.SendKitActivity" android:theme="@style/AppTheme.SendKitActivity"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
         <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>

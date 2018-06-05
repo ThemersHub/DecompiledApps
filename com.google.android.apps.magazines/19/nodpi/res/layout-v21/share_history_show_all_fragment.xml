@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/share_all_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="bottom|center" android:id="@id/bottom_sheet_container" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" ns:behavior_peekHeight="@dimen/article_pivots_activity_initial_peek_height" ns:behavior_hideable="true" ns:layout_behavior="@string/bottom_sheet_behavior" style="?attr/bottomSheetStyle">
+        <com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout android:orientation="vertical" android:id="@id/shares_sheet" android:background="@drawable/rounded_top_corners_bg" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="0.0dip" android:paddingEnd="0.0dip" android:elevation="8.0dip">
+            <com.google.apps.dots.android.modules.widgets.bound.NSTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/shares" style="@style/ShareBottomSheetTitle" />
+            <View android:background="@color/card_divider_dark" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <com.google.apps.dots.android.newsstand.card.NSRecyclerView android:id="@id/play_header_listview" android:layout_width="fill_parent" android:layout_height="fill_parent" ns:layout_behavior="@string/appbar_scrolling_view_behavior" style="@style/NSRecyclerViewStyle.NoBackground" />
+        </com.google.apps.dots.android.modules.widgets.bound.viewgroup.NSLinearLayout>
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>
