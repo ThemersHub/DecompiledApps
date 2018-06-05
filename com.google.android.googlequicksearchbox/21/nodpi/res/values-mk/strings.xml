@@ -103,12 +103,12 @@
     <string name="as_show_account_list">Прикажи сметки</string>
     <string name="as_sign_in">Најави се</string>
     <string name="audio_player_notification_channel">Аудиоплеер</string>
-    <string name="author_format">Од %1$s</string>
     <string name="auto_add_shortcuts_description">За нови апликации</string>
     <string name="auto_add_shortcuts_label">Додај икона на почетниот екран</string>
     <string name="available_pick_up">Достапна за подигнување</string>
     <string name="back">Назад</string>
     <string name="cached_desc">Страницава е достапна офлајн.</string>
+    <string name="cancel">Откажи</string>
     <string name="cancel_favorites_selection">Откажи</string>
     <string name="cancelled">Откажана</string>
     <string name="cast_notification_connected_message">Поврзан на %1$s</string>
@@ -126,6 +126,7 @@
     <string name="common_google_play_services_install_button">Инсталирај</string>
     <string name="common_google_play_services_install_text">%1$s нема да се извршува без услугите на Google Play што ги нема на уредот.</string>
     <string name="common_google_play_services_install_title">Преземи ги услугите на Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Достапност на услугите на Google Play</string>
     <string name="common_google_play_services_notification_ticker">Грешка на услугите на Google Play</string>
     <string name="common_google_play_services_unknown_issue">%1$s има проблеми со услугите на Google Play. Обидете се повторно.</string>
     <string name="common_google_play_services_unsupported_text">%1$s нема да се извршува без услугите на Google Play, што не се подржани од уредов.</string>
@@ -165,6 +166,7 @@
     <string name="deeplink_not_installed">Апликацијата не е инсталирана</string>
     <string name="default_scroll_format">Страница %1$d од %2$d</string>
     <string name="delayed">Одложена</string>
+    <string name="delete_download">Избриши ја преземената</string>
     <string name="delete_favorites">Избриши ги избраните поткасти</string>
     <string name="delete_target_label">Отстрани</string>
     <string name="delete_target_uninstall_label">Деинсталирај</string>
@@ -186,11 +188,14 @@
     <string name="downloading">Се презема…</string>
     <string name="downloads">Преземања</string>
     <string name="edit">Изменете</string>
-    <string name="edit_favorites_title">Уредете ги поткастите</string>
+    <string name="edit_favorites_title">Изменување на поткастите</string>
     <string name="endByDate">; до %s</string>
     <string name="end_of_recents">Крај на неодамнешни пребарувања</string>
     <string name="entry_desc">Запис %1$d од %2$d.</string>
     <string name="episode_completed">Завршено</string>
+    <string name="episode_date">%1$s</string>
+    <string name="episode_list_title_text">Достапни епизоди</string>
+    <string name="episode_page_section_title">Епизода</string>
     <string name="episode_subtitle_format">%1$s ⸱ %2$s</string>
     <string name="episodes_for_you">За вас</string>
     <string name="error">Грешка</string>
@@ -398,6 +403,10 @@
     <string name="longpress_menu_share">Сподели ја сликата</string>
     <string name="longpress_menu_visit_site">@string/image_viewer_visit_site</string>
     <string name="mark_as_completed">Означи како завршено</string>
+    <string name="media_route_chooser_dialog_title">Емитувај на</string>
+    <string name="media_route_chooser_searching">Се пребаруваат уреди…</string>
+    <string name="media_route_controller_cancel">Откажи</string>
+    <string name="media_route_controller_stop_casting">Запри емитување</string>
     <string name="menu_get_help">Добијте помош</string>
     <string name="menu_search_by_image">Пребарување со слика</string>
     <string name="menu_send_feedback">Испрати повратни информации</string>
@@ -414,6 +423,8 @@
     <string name="migration_cling_title">Копирај икони за апликација</string>
     <string name="migration_cling_use_default">СТАРТУВАЈ ОД ПОЧЕТОК</string>
     <string name="minute_picker_description">Приказ на минути во круг</string>
+    <string name="minutes_remaining">Преостануваат %1$s минути</string>
+    <string name="minutes_symbol">%1$s мин.</string>
     <string name="mismatching_value_eir_code">Не одговара на адр.</string>
     <string name="mismatching_value_pin_code">Не одговара на адр.</string>
     <string name="mismatching_value_postal_code">Не одговара на адр.</string>
@@ -499,6 +510,7 @@
     <string name="place_autocomplete_search_hint">Пребарај</string>
     <string name="place_group_header">Места</string>
     <string name="play">Пушти</string>
+    <string name="play_episode">Пушти епизода</string>
     <string name="play_this_episode">Пушти ја оваа епизода</string>
     <string name="playback_error_cancel">Откажи</string>
     <string name="playback_error_message">Епизодава не може да се пушти. Обидете се повторно подоцна.</string>
@@ -517,8 +529,8 @@
     <string name="recent_music_group_header">Неодамнешна музика</string>
     <string name="recent_myactivity">Моја активност</string>
     <string name="recent_onboarding">Упатство</string>
-    <string name="recent_only_read_later">Само прочитај подоцна</string>
-    <string name="recent_read_later">Прочитај подоцна</string>
+    <string name="recent_only_read_later">Само читајте подоцна</string>
+    <string name="recent_read_later">Читајте подоцна</string>
     <string name="recent_screenshot_category">Слика од екранот</string>
     <string name="recent_screenshot_title_prefix">Слика од екранот за</string>
     <string name="recent_search_result_url">google.com</string>
@@ -642,17 +654,11 @@ https://www.google.com/search?q=%1$s&amp;tbm=%2$s"</string>
     <string name="request_storage_permission_dialog_message">За преземање епизоди, на Google му е потребен пристап до меморијата на уредот</string>
     <string name="request_storage_permission_dialog_title">Дозволете пристап до меморијата</string>
     <string name="reservation_group_header">Резервации</string>
+    <string name="retry">Обиди се повторно</string>
     <string name="retry_failed_download">Обиди се да преземеш повторно</string>
     <string name="returned">Вратена</string>
     <string name="review_count_text">(%d)</string>
     <string name="rewind">Премотување наназад</string>
-    <string name="s1">Зачувај ја сликата</string>
-    <string name="s2">Дали дозволувате рекламата да ја зачува сликата во „Галеријата со слики“?</string>
-    <string name="s3">Прифати</string>
-    <string name="s4">Одбиј</string>
-    <string name="s5">Создај настан во календарот</string>
-    <string name="s6">Дали дозволувате рекламата да создаде настан во календарот?</string>
-    <string name="s7">Тестирај ја рекламата</string>
     <string name="safemode_shortcut_error">Преземената апликација е оневозможена во безбеден режим</string>
     <string name="safemode_widget_error">Додатоците се оневозможени во безбеден режим</string>
     <string name="save_carousel_view_all">Прикажи ги сите</string>
@@ -684,7 +690,7 @@ https://www.google.com/search?q=%1$s&amp;tbm=%2$s"</string>
     <string name="select_hours">Изберете часови</string>
     <string name="select_minutes">Изберете минути</string>
     <string name="select_year">Изберете година</string>
-    <string name="send_feedback">Повратни информации</string>
+    <string name="send_feedback">Испратете повратни информации за апликацијата</string>
     <string name="settings">Поставки</string>
     <string name="settings_button_text">Поставки</string>
     <string name="sharebear_screenshot_not_found">Не е најдена слика од екранот</string>
@@ -698,6 +704,7 @@ https://www.google.com/search?q=%1$s&amp;tbm=%2$s"</string>
     <string name="show_error_message">"Нешто тргна наопаку.
 Серијава не е достапна во моментов."</string>
     <string name="show_more_search_results">Прикажи повеќе резултати од пребарување</string>
+    <string name="show_notes">Прикажи белешки</string>
     <string name="sign_in_accept">Најави се</string>
     <string name="sign_in_message">Најавете се за да се претплатите на поткастите и да пристапувате до историјата на слушање на други уреди.</string>
     <string name="sign_in_reject">Не сега</string>
