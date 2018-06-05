@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" package="com.google.android.apps.docs.editors.docs" platformBuildVersionCode="27" platformBuildVersionName="P">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="28" package="com.google.android.apps.docs.editors.docs" platformBuildVersionCode="28" platformBuildVersionName="28">
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -69,7 +69,7 @@
                 <data android:mimeType="application/vnd.ms-word.template.macroenabled.12"/>
             </intent-filter>
         </activity-alias>
-        <activity android:exported="false" android:name="com.google.android.apps.docs.billing.googleone.GoogleOneActivity" android:theme="@style/CakemixTheme.G1"/>
+        <activity android:exported="false" android:label="@string/storage_title" android:name="com.google.android.apps.docs.billing.googleone.GoogleOneActivity" android:theme="@style/CakemixTheme.G1"/>
         <activity android:exported="false" android:label="@string/app_name" android:name="com.google.android.apps.docs.cello.data.ui.PurgeTrashActivity" android:theme="@style/CakemixTheme.Translucent"/>
         <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="true"/>
         <provider android:authorities="com.google.android.apps.docs.editors.kix" android:exported="false" android:name="com.google.android.apps.docs.doclist.contentprovider.DocListProvider"/>
@@ -172,8 +172,6 @@
             <meta-data android:name="com.google.android.apps.docs.crossAppStateSyncEnabled" android:value="true"/>
         </provider>
         <activity android:exported="false" android:label="@string/team_drive_settings_title" android:name="com.google.android.apps.docs.doclist.teamdrive.settings.TeamDriveSettingsActivity" android:theme="@style/CakemixTheme.Preferences.AppCompat.NoActionBar.ProtectedTeamDrives"/>
-        <activity android:exported="false" android:label="@string/spark_navigation_tab_name" android:name="com.google.android.apps.docs.driveintelligence.spark.SparkActivity" android:theme="@style/Theme.GoogleMaterial.Light.NoActionBar"/>
-        <activity android:exported="false" android:name="com.google.android.apps.docs.driveintelligence.workspaces.details.WorkspaceDetailsActivity" android:theme="@style/Theme.GoogleMaterial.Light.NoActionBar"/>
         <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.apps.docs.editors.changeling.common.ChangelingDispatcher" android:theme="@style/CakemixTheme.Translucent" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
         <service android:exported="false" android:name="com.google.android.apps.docs.editors.changeling.kix.ChangelingKixExportService" android:permission="android.permission.WRITE_EXTERNAL_STORAGE"/>
         <provider android:authorities="com.google.android.apps.docs.editors.kix.storage.legacy" android:exported="true" android:name="com.google.android.apps.docs.storagebackend.LegacyStorageBackendContentProvider"/>
