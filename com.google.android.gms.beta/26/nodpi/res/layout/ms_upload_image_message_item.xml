@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/upload_image_message_container" android:paddingLeft="@dimen/message_item_view_padding" android:paddingRight="@dimen/message_item_view_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/message_item_view_padding" android:paddingEnd="@dimen/message_item_view_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/upload_image_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+        <FrameLayout android:id="@id/message_upload_image_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/message_upload_image_view" android:background="@android:color/transparent" android:focusable="true" android:clickable="true" android:layout_width="@dimen/image_message_dimen" android:layout_height="wrap_content" android:layout_marginRight="@dimen/read_receipt_size" android:scaleType="fitCenter" android:maxHeight="@dimen/image_message_dimen" android:contentDescription="@string/ms_link_image" android:layout_marginEnd="@dimen/read_receipt_size" />
+            <com.google.android.libraries.material.progress.MaterialProgressBar android:layout_gravity="center" android:id="@id/uploading_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:contentDescription="@null" android:importantForAccessibility="no" />
+            <ImageButton android:layout_gravity="bottom|center|left" android:id="@id/upload_error_retry" android:background="@android:color/transparent" android:focusable="true" android:visibility="visible" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginBottom="13.0dip" android:src="@drawable/quantum_ic_refresh_vd_theme_24" android:contentDescription="@null" android:layout_marginStart="18.0dip" />
+        </FrameLayout>
+        <include android:layout_gravity="bottom|center|right" android:layout_width="@dimen/read_receipt_size" android:layout_height="@dimen/read_receipt_size" layout="@layout/ms_read_receipt_layout" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/upload_image_layout" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+        <include layout="@layout/ms_message_status" />
+        <include layout="@layout/ms_message_sender_timestamp" />
+    </LinearLayout>
+</RelativeLayout>

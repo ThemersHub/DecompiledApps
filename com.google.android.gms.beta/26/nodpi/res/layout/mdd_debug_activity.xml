@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
+<LinearLayout android:orientation="vertical" android:id="@id/mdd_debug_container" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/mdd_debug_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-</merge>
+    <Button android:id="@id/refresh_file_group_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Refresh File Group List" />
+    <Button android:id="@id/delete_all_downloaded_files" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Delete All Downloaded Files" />
+    <Button android:id="@id/trigger_download" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Trigger Download" />
+    <TextView android:textSize="20.0sp" android:layout_gravity="center|right" android:id="@id/file_groups" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="File Groups" />
+    <ListView android:id="@id/file_group_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="File Group List" />
+</LinearLayout>

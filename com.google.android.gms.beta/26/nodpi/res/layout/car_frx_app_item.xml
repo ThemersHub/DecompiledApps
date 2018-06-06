@@ -8,6 +8,8 @@
     </FrameLayout>
     <LinearLayout android:orientation="vertical" android:id="@id/text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
         <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toEndOf="@id/app_icon" style="@style/TextAppearance.FrxBody.Bold" />
-        <TextView android:id="@id/status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title" android:layout_toEndOf="@id/app_icon" style="@style/TextAppearance.FrxBody" />
+        <TextView android:id="@id/subtitle_1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title" android:lineSpacingMultiplier="1.0" android:alpha="0.7" android:layout_toEndOf="@id/app_icon" style="@style/TextAppearance.FrxBody" />
+        <TextView android:id="@id/subtitle_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title" android:lineSpacingMultiplier="1.0" android:alpha="0.7" android:layout_toEndOf="@id/app_icon" style="@style/TextAppearance.FrxBody" />
     </LinearLayout>
+    <ImageView android:id="@id/app_info_button" android:background="@drawable/car_frx_app_info_button_ripple" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/car_frx_app_item_size" android:layout_marginRight="@dimen/car_frx_app_icon_margin" android:src="@drawable/car_app_info_button" android:scaleType="center" android:contentDescription="@null" android:alpha="0.6" android:importantForAccessibility="no" />
 </LinearLayout>

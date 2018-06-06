@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.setupwizardlib.GlifLayout android:id="@id/setup_wizard_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:suwFooter="@layout/car_driving_mode_frx_footer"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/SuwContentFrame">
+        <TextView android:id="@id/body" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SuwDescription.Glif" />
+        <ViewStub android:id="@id/layout_progress_stub" android:layout="@layout/suw_progress_bar" android:inflatedId="@id/suw_layout_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/suw_glif_progress_bar_margin_vertical" android:layout_marginBottom="@dimen/suw_glif_progress_bar_margin_vertical" />
+        <com.android.setupwizardlib.view.FillContentLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/illustration" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerInside" android:contentDescription="@null" android:importantForAccessibility="no" style="@style/SuwContentIllustration" />
+        </com.android.setupwizardlib.view.FillContentLayout>
+        <Button android:id="@id/tertiary_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SuwGlifButton.Tertiary" />
+    </LinearLayout>
+</com.android.setupwizardlib.GlifLayout>

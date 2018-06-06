@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:theme="@style/DevicesList.AppBarOverlay" android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:theme="@style/DevicesList.ToolbarOverlay" android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/DevicesList.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:listDivider" android:showDividers="middle">
+            <android.support.v7.widget.SwitchCompat android:textSize="18.0sp" android:id="@id/notifications" android:paddingTop="@dimen/devices_padding_top" android:paddingBottom="@dimen/devices_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/devices_notifications_toggle" android:paddingStart="@dimen/devices_padding_start" android:paddingEnd="@dimen/devices_padding_end" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="@dimen/devices_padding_top" android:paddingBottom="@dimen/devices_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/devices_padding_start" android:paddingEnd="@dimen/devices_padding_end">
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="?colorAccent" android:id="@id/list_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/devices_list_title" android:layout_weight="1.0" />
+                    <ProgressBar android:id="@id/scanning_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateOnly="true" style="?android:attr/progressBarStyleSmallTitle" />
+                </LinearLayout>
+                <TextView android:textSize="18.0sp" android:id="@id/error" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/devices_padding_start" android:paddingEnd="@dimen/devices_padding_end" />
+                <android.support.v7.widget.RecyclerView android:id="@id/list" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

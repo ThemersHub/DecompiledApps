@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/auth_screen_margin_sides" android:layout_marginRight="@dimen/auth_screen_margin_sides" android:layout_marginBottom="@dimen/auth_screen_margin_sides" style="@style/LoginActivityOuterFrame"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+-->
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/auth_title_indent" android:layout_marginRight="@dimen/auth_title_indent" android:layout_below="@id/top_divider" android:layout_centerHorizontal="true" style="@style/InputFieldView">
+        <TextView android:textAppearance="@style/Title" android:textSize="@dimen/auth_title_text_size" android:gravity="bottom" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/auth_title_height" android:text="@string/auth_pre_wipe_title" android:layout_alignParentLeft="true" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="18.0sp" android:id="@id/pre_frp_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/auth_description_margin_top" android:text="@string/auth_pre_wipe_credential_desc_text" />
+        <CheckBox android:textAppearance="?android:textAppearanceMedium" android:textSize="18.0sp" android:id="@id/check_cred" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/auth_description_margin_top" android:checked="true" android:text="@string/auth_pre_wipe_credential_check_text" android:onClick="onCheckCredClicked" />
+    </LinearLayout>
+    <Button android:paddingRight="@dimen/auth_description_margin_top" android:paddingBottom="@dimen/auth_description_margin_top" android:text="@string/common_continue" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:onClick="onContinue" style="@style/Button" />
+</RelativeLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android">
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <ListPreference android:entries="@array/car_app_mode_labels" android:title="@string/car_app_mode" android:key="car_app_mode" android:summary="%s" android:dialogTitle="@string/car_app_mode" />
     <ListPreference android:entries="@array/car_day_night_mode_labels" android:title="@string/car_day_night_mode" android:key="car_day_night_mode" android:summary="%s" android:dialogTitle="@string/car_day_night_mode" />
     <Preference android:title="@string/car_share_screenshot" android:key="car_share_screenshot">
@@ -20,4 +20,9 @@
     <CheckBoxPreference android:title="@string/car_allow_720p_video" android:key="car_allow_720p_video" android:defaultValue="false" />
     <CheckBoxPreference android:title="@string/car_allow_1080p_video" android:key="car_allow_1080p_video" android:defaultValue="false" />
     <CheckBoxPreference android:title="@string/allow_unknown_sources" android:key="allow_unknown_sources" android:defaultValue="false" />
+    <PreferenceScreen android:title="Touchpad tuning" android:key="touchpad_tuning">
+        <SeekBarPreference android:max="10" android:title="Touchpad base fraction denominator" android:key="touchpad_base_fraction" android:defaultValue="6" app:min="3" />
+        <SeekBarPreference android:max="15" android:title="Minimum threshold size (mm)" android:key="touchpad_min_size_mm" android:defaultValue="4" app:min="0" />
+        <SeekBarPreference android:max="15" android:title="Multimove threshold bump (mm)" android:key="touchpad_multimove_penalty_mm" android:defaultValue="4" app:min="0" />
+    </PreferenceScreen>
 </PreferenceScreen>

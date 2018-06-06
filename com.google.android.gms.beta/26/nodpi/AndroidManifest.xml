@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" android:sharedUserId="com.google.uid.shared" android:sharedUserLabel="@LEMON_transformed_from_string/common_app_name" package="com.google.android.gms" platformBuildVersionCode="27" platformBuildVersionName="P">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="P" android:sharedUserId="com.google.uid.shared" android:sharedUserLabel="@LEMON_transformed_from_string/common_app_name" package="com.google.android.gms" platformBuildVersionCode="28" platformBuildVersionName="P">
     <uses-feature android:name="android.hardware.location" android:required="false"/>
     <uses-feature android:name="android.hardware.location.network" android:required="false"/>
     <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
@@ -21,6 +21,7 @@
     <uses-permission android:name="android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS"/>
     <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
     <uses-permission android:name="android.permission.MANAGE_SOUND_TRIGGER"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <permission android:name="com.google.android.gms.permission.INTERNAL_BROADCAST" android:protectionLevel="signature"/>
     <uses-permission android:name="com.google.android.gms.permission.INTERNAL_BROADCAST"/>
     <permission android:name="com.google.android.gms.common.internal.SHARED_PREFERENCES_PERMISSION" android:protectionLevel="signature"/>
@@ -112,9 +113,13 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
     <permission android:description="@LEMON_transformed_from_string/nearby_setup_transfer_wifi_credential_permission_description" android:label="@LEMON_transformed_from_string/nearby_setup_transfer_wifi_credential_permission_label" android:name="com.google.android.gms.permission.TRANSFER_WIFI_CREDENTIAL" android:protectionLevel="normal"/>
     <uses-permission android:name="com.google.android.gms.permission.TRANSFER_WIFI_CREDENTIAL"/>
+    <permission android:name="com.google.android.gms.permission.NEARBY_START_DISCOVERER" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.gms.permission.NEARBY_START_DISCOVERER"/>
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
     <permission android:name="com.google.android.gms.auth.cryptauth.permission.KEY_CHANGE" android:protectionLevel="signature"/>
     <uses-permission android:name="com.google.android.gms.auth.cryptauth.permission.KEY_CHANGE"/>
+    <permission android:name="com.google.android.gms.auth.proximity.permission.SMS_CONNECT_SETUP_REQUESTED" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.gms.auth.proximity.permission.SMS_CONNECT_SETUP_REQUESTED"/>
     <permission android:name="com.google.android.gms.magictether.permission.CLIENT_TETHERING_PREFERENCE_CHANGED" android:protectionLevel="signature"/>
     <permission android:name="com.google.android.gms.magictether.permission.CONNECTED_HOST_CHANGED" android:protectionLevel="signature"/>
     <permission android:name="com.google.android.gms.magictether.permission.DISABLE_SOFT_AP" android:protectionLevel="signature"/>
@@ -125,6 +130,8 @@
     <uses-permission android:name="com.google.android.gms.magictether.permission.CONNECTED_HOST_CHANGED"/>
     <uses-permission android:name="com.google.android.gms.magictether.permission.DISABLE_SOFT_AP"/>
     <uses-permission android:name="com.google.android.gms.magictether.permission.SCANNED_DEVICE"/>
+    <uses-permission android:name="android.permission.CONTROL_DISPLAY_SATURATION"/>
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="android.permission.REAL_GET_TASKS"/>
     <uses-permission android:name="android.permission.READ_CALL_LOG"/>
@@ -143,7 +150,7 @@
     <uses-permission android:name="android.permission.SCORE_NETWORKS"/>
     <uses-permission android:name="android.permission.OVERRIDE_WIFI_CONFIG"/>
     <uses-permission android:name="android.car.permission.ADJUST_CAR_CABIN"/>
-    <uses-permission android:name="android.car.permission.ADJUST_CAR_CLIMATE"/>
+    <uses-permission android:name="android.car.permission.CONTROL_CAR_CLIMATE"/>
     <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
     <uses-permission android:name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
     <uses-permission android:name="android.permission.MANAGE_USB"/>
@@ -170,6 +177,7 @@
     <permission android:name="com.google.android.gms.googlehelp.LAUNCH_SUPPORT_SCREENSHARE" android:protectionLevel="signatureOrSystem"/>
     <uses-permission android:name="com.google.android.gms.googlehelp.LAUNCH_SUPPORT_SCREENSHARE"/>
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="com.google.android.clockwork.settings.SHOW_FACTORY_RESET_CONFIRMATION"/>
     <uses-permission android:name="com.google.android.wearable.READ_SETTINGS"/>
     <permission android:name="com.google.android.gms.cloudsave.BIND_EVENT_BROADCAST" android:protectionLevel="signatureOrSystem"/>
     <uses-permission android:name="com.google.android.gms.cloudsave.BIND_EVENT_BROADCAST"/>
@@ -182,8 +190,6 @@
     <permission android:name="com.google.android.gms.chimera.permission.QUERY_MODULES" android:protectionLevel="signature"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
     <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
-    <uses-permission android:name="android.permission.SET_TIME"/>
-    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
     <uses-permission android:name="android.permission.MANAGE_SUBSCRIPTION_PLANS"/>
     <permission android:name="com.google.android.gms.permission.PHENOTYPE_UPDATE_BROADCAST" android:protectionLevel="signature"/>
     <uses-permission android:name="com.google.android.gms.permission.PHENOTYPE_UPDATE_BROADCAST"/>
@@ -251,7 +257,7 @@
     <permission android:name="com.google.android.gms.chimera.permission.CONFIG_CHANGE" android:protectionLevel="signature"/>
     <uses-permission android:name="com.google.android.gms.chimera.permission.CONFIG_CHANGE"/>
     <permission android:description="@LEMON_transformed_from_string/common_car_permission_desc" android:label="@LEMON_transformed_from_string/common_car_permission_label" android:name="com.google.android.gms.permission.CAR" android:protectionLevel="signature"/>
-    <application android:allowBackup="false" android:debuggable="false" android:extractNativeLibs="true" android:icon="@drawable/common_ic_googleplayservices" android:label="@LEMON_transformed_from_string/common_app_name" android:manageSpaceActivity="@string/common_manage_space_activity" android:multiArch="true" android:name="com.google.android.gms.common.app.GmsApplication" android:networkSecurityConfig="@xml/network_security_config" android:requiredForAllUsers="true" android:restrictedAccountType="com.google" android:supportsRtl="true">
+    <application android:allowBackup="false" android:debuggable="false" android:extractNativeLibs="false" android:icon="@drawable/common_ic_googleplayservices" android:label="@LEMON_transformed_from_string/common_app_name" android:manageSpaceActivity="@string/common_manage_space_activity" android:multiArch="true" android:name="com.google.android.gms.common.app.GmsApplication" android:networkSecurityConfig="@xml/network_security_config" android:requiredForAllUsers="true" android:restrictedAccountType="com.google" android:supportsRtl="true">
         <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:process="com.google.android.gms.ui" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <library android:name="com.google.android.gms"/>
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
@@ -534,7 +540,7 @@
         <activity android:enabled="true" android:exported="false" android:name="com.google.android.gms.auth.frp.FreUnlockActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light"/>
         <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:enabled="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_login_task_title" android:name="com.google.android.gms.auth.frp.FrpInterstitialActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/LoginActivityTask"/>
         <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:enabled="false" android:exported="false" android:label="@LEMON_transformed_from_string/auth_login_task_title" android:name="com.google.android.gms.auth.login.CheckinInterstitialActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/LoginActivityTask"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:enabled="false" android:exported="true" android:hardwareAccelerated="true" android:label="@LEMON_transformed_from_string/auth_pre_factory_reset_title" android:name="com.google.android.gms.auth.uiflows.factoryreset.PreFactoryResetActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:enabled="true" android:exported="true" android:hardwareAccelerated="true" android:label="@LEMON_transformed_from_string/auth_pre_factory_reset_title" android:name="com.google.android.gms.auth.uiflows.factoryreset.PreFactoryResetActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true">
             <intent-filter android:priority="-100">
                 <action android:name="android.accounts.action.PRE_FACTORY_RESET"/>
             </intent-filter>
@@ -555,7 +561,7 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
             </intent-filter>
         </activity>
-        <activity android:enabled="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_d2d_target_title" android:name="com.google.android.gms.auth.setup.d2d.SmartDeviceActivity" android:process="com.google.android.gms.ui" android:theme="@style/SuwThemeMaterial"/>
+        <activity android:enabled="true" android:exported="false" android:label="" android:name="com.google.android.gms.auth.setup.d2d.SmartDeviceActivity" android:process="com.google.android.gms.ui" android:theme="@style/SuwThemeMaterial"/>
         <activity android:configChanges="orientation|screenSize" android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_d2d_source_title" android:name="com.google.android.gms.auth.setup.d2d.SourceActivity" android:process="com.google.android.gms.ui" android:theme="@style/Auth.Theme.Setup.D2D.Source"/>
         <activity android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:label="@LEMON_transformed_from_string/auth_d2d_source_title" android:name="com.google.android.gms.auth.setup.d2d.SourceNfcHandlerActivity" android:process="com.google.android.gms.ui" android:theme="@style/AppCompatNoDisplay.Light">
             <intent-filter>
@@ -565,21 +571,21 @@
             </intent-filter>
         </activity>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:enabled="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_ui_activity_title_browser_signin" android:name="com.google.android.gms.auth.uiflows.addaccount.BrowserSignInActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/BrowserTheme"/>
-        <activity android:enabled="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_ui_add_account_title" android:name="com.google.android.gms.auth.uiflows.addaccount.PreAddAccountActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light">
+        <activity android:enabled="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_ui_add_account_title" android:name="com.google.android.gms.auth.uiflows.addaccount.PreAddAccountActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterialLight">
             <intent-filter android:priority="-1">
                 <action android:name="com.google.android.gms.auth.addaccount.PRE_ADD_ACCOUNT"/>
             </intent-filter>
         </activity>
         <activity android:enabled="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_uncertified_notification_title" android:name="com.google.android.gms.auth.uiflows.addaccount.UncertifiedNotificationActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light"/>
         <activity android:enabled="false" android:excludeFromRecents="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_uncertified_notification_title" android:name="com.google.android.gms.auth.uiflows.addaccount.UncertifiedSecondaryNotificationActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/TranslucentNoActionBar"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:enabled="true" android:exported="false" android:hardwareAccelerated="true" android:label="@LEMON_transformed_from_string/auth_ui_activity_title_browser_signin" android:name="com.google.android.gms.auth.uiflows.minutemaid.MinuteMaidActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light" android:windowSoftInputMode="adjustResize"/>
-        <activity android:enabled="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_gls_name_checking_info_title" android:name="com.google.android.gms.auth.uiflows.addaccount.AddAccountActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:enabled="true" android:exported="false" android:hardwareAccelerated="true" android:label="@LEMON_transformed_from_string/auth_ui_activity_title_browser_signin" android:name="com.google.android.gms.auth.uiflows.minutemaid.MinuteMaidActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterialLight" android:windowSoftInputMode="adjustResize"/>
+        <activity android:enabled="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_gls_name_checking_info_title" android:name="com.google.android.gms.auth.uiflows.addaccount.AddAccountActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterialLight"/>
         <activity android:enabled="false" android:exported="false" android:label="@LEMON_transformed_from_string/auth_device_management_title" android:name="com.google.android.gms.auth.uiflows.addaccount.DmDownloadInstallActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light"/>
         <activity android:enabled="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_device_management_title" android:name="com.google.android.gms.auth.uiflows.addaccount.DmSetScreenlockActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light"/>
         <activity android:enabled="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_account_removed_default_title" android:name="com.google.android.gms.auth.uiflows.addaccount.RemoveAccountActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light"/>
-        <activity android:enabled="true" android:exported="false" android:name="com.google.android.gms.auth.uiflows.addaccount.ErrorActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light"/>
+        <activity android:enabled="true" android:exported="false" android:name="com.google.android.gms.auth.uiflows.addaccount.ErrorActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterialLight"/>
         <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.uiflows.addaccount.CantAddWorkAccountActivity" android:process="com.google.android.gms.ui" android:theme="@style/TranslucentNoActionBar"/>
-        <activity android:enabled="true" android:exported="true" android:label="@LEMON_transformed_from_string/auth_setup_wizard_services_activity_title" android:name="com.google.android.gms.auth.uiflows.addaccount.GoogleServicesActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light" android:visibleToInstantApps="true">
+        <activity android:enabled="false" android:exported="true" android:label="@LEMON_transformed_from_string/auth_setup_wizard_services_activity_title" android:name="com.google.android.gms.auth.uiflows.addaccount.GoogleServicesActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light" android:visibleToInstantApps="true">
             <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
             <intent-filter android:priority="-1">
                 <action android:name="com.google.android.gms.auth.GOOGLE_SERVICES"/>
@@ -592,7 +598,7 @@
         <activity android:enabled="true" android:exported="true" android:label="@LEMON_transformed_from_string/auth_setup_wizard_account_added_activity_title" android:name="com.google.android.gms.auth.uiflows.addaccount.AccountAddedActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light" android:visibleToInstantApps="true">
             <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
         </activity>
-        <activity android:enabled="true" android:exported="false" android:label="" android:name="com.google.android.gms.auth.uiflows.addaccount.WrapperControlledActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light"/>
+        <activity android:enabled="true" android:exported="false" android:label="" android:name="com.google.android.gms.auth.uiflows.addaccount.WrapperControlledActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterialLight"/>
         <activity android:enabled="true" android:exported="false" android:label="" android:name="com.google.android.gms.auth.uiflows.removeaccount.GetAccountRemovalAllowedActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@android:style/Theme.NoDisplay"/>
         <activity android:enabled="false" android:exported="true" android:name="com.google.android.gms.auth.uiflows.common.PhoneskyDpcInstallActivity" android:permission="android.permission.DISPATCH_PROVISIONING_MESSAGE" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/SuwThemeMaterial.Light">
             <intent-filter>
@@ -832,13 +838,6 @@
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.auth.api.credentials.ui.AutoSignInSnackbarService" android:process="com.google.android.gms.ui"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.auth.api.credentials.ui.AutoSignInWarmWelcomeService" android:process="com.google.android.gms.ui"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.auth.api.credentials.ui.AutoSaveSnackbarService" android:process="com.google.android.gms.ui"/>
-        <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.auth.api.credentials.CredentialsService" android:visibleToInstantApps="true">
-            <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
-            <intent-filter>
-                <action android:name="com.google.android.gms.auth.api.credentials.service.START"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </service>
         <service android:enabled="false" android:exported="false" android:name="com.google.android.gms.auth.api.credentials.be.CredentialsUiIntentService"/>
         <service android:enabled="false" android:exported="false" android:name="com.google.android.gms.auth.api.credentials.be.CredentialsIntentService">
             <intent-filter>
@@ -978,7 +977,7 @@
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
         </service>
-        <service android:enabled="false" android:exported="false" android:name="com.google.android.gms.auth.folsom.service.GcmReceiverService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.auth.folsom.service.GcmReceiverService"/>
         <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.magictether.client.ActiveHostInfoDialogActivity" android:process="com.google.android.gms.ui" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
         <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:finishOnTaskLaunch="true" android:launchMode="singleTop" android:name="com.google.android.gms.magictether.client.ConnectToHostDialogActivity" android:process="com.google.android.gms.ui" android:taskAffinity=".magictether.client.ConnectToHostDialogActivity" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
         <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.magictether.host.FirstTimeSetupDialogActivity" android:process="com.google.android.gms.ui" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
@@ -1041,6 +1040,11 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </service>
+        <service android:enabled="@bool/platformIsAtLeastO" android:exported="false" android:name="com.google.android.gms.autofill.events.AutofillGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" android:process="@string/common_persistent_process">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
         <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@LEMON_transformed_from_string/header_set_backup_account" android:name="com.google.android.gms.backup.SetBackupAccountActivity" android:process="com.google.android.gms.ui" android:theme="@style/SetBackupAccountActivity"/>
         <activity android:enabled="false" android:exported="false" android:name="com.google.android.gms.backup.base.component.GenericActivity" android:process="com.google.android.gms.ui"/>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.backup.BackupAccountManagerService" android:process="@string/backup_services_process">
@@ -1061,7 +1065,6 @@
         <activity android:enabled="false" android:exported="false" android:name="com.google.android.gms.backup.component.EmmRestoreFlowActivity" android:process="com.google.android.gms.ui" android:theme="@style/SuwThemeGlif.Light"/>
         <activity android:enabled="false" android:exported="false" android:name="com.google.android.gms.backup.component.KeyRecoveryLockScreenInstructionActivity" android:process="com.google.android.gms.ui" android:theme="@style/SuwThemeGlif.Light"/>
         <activity android:enabled="false" android:exported="false" android:name="com.google.android.gms.backup.component.KeyRecoveryLockScreenEntryActivity" android:process="com.google.android.gms.ui" android:theme="@style/SuwThemeGlif.Light"/>
-        <activity android:enabled="false" android:exported="false" android:name="com.google.android.gms.backup.cloudrestore.component.GenericActivity" android:process="com.google.android.gms.ui"/>
         <service android:enabled="false" android:exported="true" android:name="com.google.android.gms.backup.component.RestoreSessionV0Service">
             <intent-filter>
                 <action android:name="com.google.android.gms.backup.RESTORE_SESSION_V0"/>
@@ -1096,6 +1099,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:enabled="false" android:exported="false" android:name="com.google.android.gms.backup.component.BackupSettingsOptInActivity" android:process="com.google.android.gms.ui" android:theme="@style/SuwThemeGlif.Light"/>
         <activity android:enabled="false" android:exported="true" android:icon="@drawable/quantum_ic_backup_googblue_48" android:label="@LEMON_transformed_from_string/backup_set_backup_account_activity_name" android:name="com.google.android.gms.backup.component.BackupSettingsActivity" android:process="com.google.android.gms.ui" android:theme="@style/BackupSettingsTheme">
             <intent-filter>
                 <action android:name="com.google.android.gms.backup.ACTION_BACKUP_SETTINGS"/>
@@ -1141,6 +1145,7 @@
             </intent-filter>
         </service>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.backup.component.GmsBackupSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:enabled="false" android:exported="false" android:name="com.google.android.gms.backup.component.MmsBackupSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.beacon.BleService" android:process="com.google.android.gms.persistent">
             <intent-filter>
                 <action android:name="com.google.android.gms.beacon.internal.IBleService.START"/>
@@ -1234,11 +1239,26 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.category" android:value="com.android.settings.category.ia.device"/>
             <meta-data android:name="com.android.settings.title" android:resource="@LEMON_transformed_from_string/car_connected_devices_car_setting"/>
+            <meta-data android:name="com.android.settings.summary" android:value=""/>
+            <meta-data android:name="com.android.settings.icon" android:resource="@drawable/quantum_ic_directions_car_black_24"/>
+        </activity>
+        <activity android:enabled="false" android:exported="true" android:label="@LEMON_transformed_from_string/car_connected_devices_car_setting" android:name="com.google.android.gms.carsetup.DrivingModeConnectSettingsActivity" android:process="com.google.android.gms.ui" android:taskAffinity="com.google.android.gms.common.settings" android:theme="@style/DrivingModeSettingsTheme">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.action.SETTINGS"/>
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category" android:value="com.android.settings.category.ia.connect"/>
+            <meta-data android:name="com.android.settings.title" android:resource="@LEMON_transformed_from_string/car_connected_devices_car_setting"/>
+            <meta-data android:name="com.android.settings.summary" android:value=""/>
             <meta-data android:name="com.android.settings.icon" android:resource="@drawable/quantum_ic_directions_car_black_24"/>
         </activity>
         <activity android:enabled="false" android:exported="true" android:label="@LEMON_transformed_from_string/car_driving_mode_options_car_setting" android:name="com.google.android.gms.carsetup.DrivingModeBehaviorSettingsActivity" android:process="com.google.android.gms.ui" android:taskAffinity="com.google.android.gms.common.settings" android:theme="@style/DrivingModeSettingsTheme"/>
         <activity android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:label="@LEMON_transformed_from_string/car_connected_devices_car_setting" android:name="com.google.android.gms.carsetup.DrivingModeFrxActivity" android:process="com.google.android.gms.ui" android:taskAffinity="com.google.android.gms.common.settings" android:theme="@style/DrivingModeFrxTheme"/>
         <activity android:enabled="true" android:exported="true" android:label="@string/car_app_name" android:name="com.google.android.gms.carsetup.DrivingModeToggleActivity" android:process=":car" android:taskAffinity="com.google.android.gms.common.settings" android:theme="@android:style/Theme.NoDisplay"/>
+        <provider android:authorities="com.google.android.gms.carsetup.drivingmode.provider" android:enabled="false" android:exported="false" android:name="com.google.android.gms.carsetup.DrivingModeProvider" android:process=":car"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.carsetup.CarSetupService" android:process=":car"/>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.carsetup.wifi.CarWifiConnectionService" android:process=":car">
             <intent-filter>
@@ -1268,7 +1288,7 @@
         </service>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.cast.service.CastPersistentService"/>
         <uses-library android:name="com.android.media.remotedisplay" android:required="false"/>
-        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.checkin.CheckinServiceClockworkFallbackReceiver"/>
+        <receiver android:enabled="false" android:exported="false" android:name="com.google.android.gms.checkin.CheckinServiceClockworkFallbackReceiver"/>
         <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.checkin.CheckinServiceTriggerReceiver">
             <intent-filter>
                 <action android:name="com.google.android.gms.auth.GOOGLE_ACCOUNT_CHANGE"/>
@@ -1328,18 +1348,6 @@
                 <category android:name="com.google.android.gms.auth.category.ACCOUNT_MUTATED"/>
             </intent-filter>
         </receiver>
-        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.chromesync.service.ChromeSyncApiService">
-            <intent-filter>
-                <action android:name="com.google.android.gms.chromesync.service.START"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </service>
-        <service android:enabled="false" android:exported="false" android:name="com.google.android.gms.chromesync.service.ChromeSyncOperationService">
-            <intent-filter>
-                <action android:name="com.google.android.gms.chromesync.service.INTENT"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </service>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.chromesync.sync.SyncReceiverService">
             <intent-filter>
                 <action android:name="com.google.android.gms.chromesync.GSYNC_TICKLE"/>
@@ -1358,13 +1366,6 @@
                 <action android:name="android.intent.action.TIME_SET"/>
             </intent-filter>
         </receiver>
-        <service android:directBootAware="false" android:enabled="true" android:exported="true" android:name="com.google.android.gms.clearcut.service.ClearcutLoggerService" android:process="@string/common_persistent_process" android:visibleToInstantApps="true">
-            <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
-            <intent-filter>
-                <action android:name="com.google.android.gms.clearcut.service.START"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </service>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.clearcut.uploader.QosUploaderService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" android:process="@string/common_persistent_process" android:visibleToInstantApps="true">
             <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
             <intent-filter>
@@ -1377,21 +1378,21 @@
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
         </service>
-        <activity android:excludeFromRecents="true" android:exported="true" android:label="@LEMON_transformed_from_string/common_choose_account_label" android:name="com.google.android.gms.common.account.SimpleAccountPickerActivity" android:process="com.google.android.gms.ui" android:theme="@style/Theme.AppCompat.Dialog.Alert" android:visibleToInstantApps="true">
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:label="@LEMON_transformed_from_string/common_choose_account_label" android:name="com.google.android.gms.common.account.SimpleAccountPickerActivity" android:process="com.google.android.gms.ui" android:theme="@style/Theme.AppCompat.Dialog.Alert" android:visibleToInstantApps="true">
             <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
             <intent-filter>
                 <action android:name="com.google.android.gms.common.account.CHOOSE_ACCOUNT"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:excludeFromRecents="true" android:exported="true" android:label="@LEMON_transformed_from_string/common_choose_account_label" android:name="com.google.android.gms.common.account.AccountChipAccountPickerActivity" android:process="com.google.android.gms.ui" android:theme="@style/Theme.AppCompat.Dialog.Alert" android:visibleToInstantApps="true">
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:label="@LEMON_transformed_from_string/common_choose_account_label" android:name="com.google.android.gms.common.account.AccountChipAccountPickerActivity" android:process="com.google.android.gms.ui" android:theme="@style/Theme.AppCompat.Dialog.Alert" android:visibleToInstantApps="true">
             <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
             <intent-filter>
                 <action android:name="com.google.android.gms.common.account.CHOOSE_ACCOUNT_USERTILE"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:excludeFromRecents="true" android:exported="false" android:label="@LEMON_transformed_from_string/common_choose_account_label" android:name="com.google.android.gms.common.account.AccountTypePickerActivity" android:process="com.google.android.gms.ui" android:theme="@style/common.Theme.NoAppCompat.DialogWhenLarge"/>
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@LEMON_transformed_from_string/common_choose_account_label" android:name="com.google.android.gms.common.account.AccountTypePickerActivity" android:process="com.google.android.gms.ui" android:theme="@style/common.Theme.NoAppCompat.DialogWhenLarge"/>
         <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:enabled="true" android:exported="false" android:icon="@drawable/common_red_banner_settings_icon" android:name="com.google.android.gms.common.download.DownloadServiceSettingsActivity" android:parentActivityName="com.google.android.gms.app.settings.GoogleSettingsLink" android:process="com.google.android.gms.ui" android:taskAffinity="com.google.android.gms.common.settings" android:theme="@style/common.Theme.GoogleSettings">
             <intent-filter>
                 <action android:name="com.google.android.gms.common.download.DOWNLOAD_SETTINGS"/>
@@ -1530,6 +1531,7 @@
             </intent-filter>
         </activity>
         <activity android:enabled="false" android:exported="false" android:name="com.google.android.gms.chimera.test.EmptyActivity" android:process="com.google.android.gms.ui"/>
+        <provider android:authorities="com.google.android.gms.chimera.empty.provider" android:enabled="false" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.gms.chimera.test.EmptyProvider"/>
         <receiver android:enabled="false" android:exported="false" android:name="com.google.android.gms.chimera.test.EmptyReceiver"/>
         <service android:enabled="false" android:exported="true" android:name="com.google.android.gms.chimera.test.EmptyService"/>
         <activity android:enabled="false" android:exported="true" android:label="@LEMON_transformed_from_string/fm_family_setup" android:name="com.google.android.gms.family.create.FamilyCreationActivity" android:process="com.google.android.gms.ui" android:theme="@style/Theme.FamilyManagement">
@@ -1620,10 +1622,12 @@
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
         </service>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:enabled="true" android:exported="false" android:name="com.google.android.gms.fido.fido2.ui.AuthenticateActivity" android:process="com.google.android.gms.ui" android:theme="@style/common.Theme.Light.Dialog"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:enabled="false" android:exported="false" android:name="com.google.android.gms.fido.fido2.ui.Fido2FullScreenActivity" android:process="com.google.android.gms.ui" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:enabled="false" android:exported="false" android:name="com.google.android.gms.fido.fido2.ui.AuthenticateActivity" android:process="com.google.android.gms.ui" android:theme="@style/common.Theme.Light.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:enabled="true" android:exported="false" android:name="com.google.android.gms.fido.fido2.ui.Fido2FullScreenActivity" android:process="com.google.android.gms.ui" android:theme="@style/common.Theme.Light.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:enabled="false" android:exported="false" android:name="com.google.android.gms.fido.fido2.ui.PolluxActivity" android:process="com.google.android.gms.ui" android:theme="@style/Theme.AppCompat.Light"/>
         <activity android:enabled="false" android:exported="false" android:name="com.google.android.gms.fido.fido2.ui.GenericActivity" android:process="com.google.android.gms.ui"/>
         <service android:enabled="false" android:exported="false" android:name="com.google.android.gms.fido.fido2.pollux.CableAuthenticatorService" android:process="@string/common_persistent_or_gapps_process"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.fido.fido2.pollux.GcmReceiverService"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:enabled="true" android:exported="false" android:name="com.google.android.gms.fido.u2f.ui.AuthenticateActivity" android:process="com.google.android.gms.ui" android:theme="@style/Theme.AppCompat.Light"/>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.fido.u2f.U2fService">
             <intent-filter>
@@ -1929,17 +1933,7 @@
                 <action android:name="com.google.android.talk.MCS_CONNECTION_SERVICE_STARTED"/>
             </intent-filter>
         </receiver>
-        <receiver android:enabled="false" android:exported="false" android:name="com.google.android.gms.gcm.GcmPackageTracker$GcmPackageChangeReceiver" android:process="@string/common_persistent_process">
-            <intent-filter>
-                <action android:name="com.google.android.gms.backup.ACTION_FULL_DATA_RESTORE"/>
-            </intent-filter>
-        </receiver>
         <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.gcm.nts.SchedulerReceiver" android:process="@string/common_persistent_process">
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
-                <data android:scheme="package"/>
-            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.USER_REMOVED"/>
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
@@ -1967,7 +1961,7 @@
                 <action android:name="com.google.android.gms.gcm.WEARABLE"/>
             </intent-filter>
         </service>
-        <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.gcm.GcmService" android:permission="com.google.android.gtalkservice.permission.GTALK_SERVICE" android:process="@string/common_persistent_process"/>
+        <service android:directBootAware="false" android:enabled="true" android:exported="true" android:name="com.google.android.gms.gcm.GcmService" android:permission="com.google.android.gtalkservice.permission.GTALK_SERVICE" android:process="@string/common_persistent_process"/>
         <service android:enabled="false" android:exported="false" android:name="com.google.android.gms.gcm.gmsproc.GcmReceiverService"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.gcm.gmsproc.GcmInGmsTaskService">
             <intent-filter>
@@ -1982,7 +1976,7 @@
         </service>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.gcm.GcmReceiverService" android:permission="com.google.android.gtalkservice.permission.GTALK_SERVICE" android:process="@string/common_persistent_process"/>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.gcm.http.GoogleHttpService" android:process="@string/common_persistent_process"/>
-        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.gcm.HeartbeatAlarm$ConnectionInfoPersistService" android:process="@string/common_persistent_process">
+        <service android:directBootAware="false" android:enabled="true" android:exported="false" android:name="com.google.android.gms.gcm.HeartbeatAlarm$ConnectionInfoPersistService" android:process="@string/common_persistent_process">
             <intent-filter>
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
@@ -1993,19 +1987,16 @@
                 <action android:name="com.google.android.gms.gcm.ACTION_SCHEDULE_WAKEUP"/>
             </intent-filter>
         </service>
-        <activity android:enabled="true" android:exported="true" android:name="com.google.android.gms.gconnect.ui.ConnectionWizardActivity" android:process="com.google.android.gms.ui" android:screenOrientation="portrait" android:theme="@style/SuwThemeGlif.Light">
+        <activity android:enabled="true" android:exported="true" android:label="" android:name="com.google.android.gms.gconnect.ui.ConnectionWizardActivity" android:process="com.google.android.gms.ui" android:screenOrientation="portrait" android:theme="@style/SuwThemeGlif.Light">
             <intent-filter>
                 <action android:name="com.google.android.gms.gconnect.CONNECT"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:enabled="true" android:exported="true" android:name="com.google.android.gms.gconnect.ui.PhoneNumberTosActivity" android:process="com.google.android.gms.ui" android:screenOrientation="portrait" android:theme="@style/SuwThemeGlif.Light"/>
-        <activity android:enabled="true" android:exported="true" android:name="com.google.android.gms.gconnect.ui.SmsEntryActivity" android:process="com.google.android.gms.ui" android:screenOrientation="portrait" android:theme="@style/SuwThemeGlif.Light"/>
-        <activity android:enabled="true" android:exported="true" android:name="com.google.android.gms.gconnect.ui.ConnectionCompletionActivity" android:process="com.google.android.gms.ui" android:screenOrientation="portrait" android:theme="@style/SuwThemeGlif.Light"/>
-        <activity android:enabled="true" android:exported="true" android:name="com.google.android.gms.gconnect.ui.ErrorActivity" android:process="com.google.android.gms.ui" android:screenOrientation="portrait" android:theme="@style/SuwThemeGlif.Light"/>
-        <activity android:configChanges="orientation|screenSize" android:enabled="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.android.gms.gconnect.ui.UserSettingsActivity" android:parentActivityName="com.google.android.gms.app.settings.GoogleSettingsLink" android:process="com.google.android.gms.ui" android:taskAffinity="com.google.android.gms.common.settings" android:theme="@style/common.Theme.GoogleSettings">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".app.settings.GoogleSettingsActivity"/>
-        </activity>
+        <activity android:enabled="true" android:exported="true" android:label="" android:name="com.google.android.gms.gconnect.ui.PhoneNumberTosActivity" android:process="com.google.android.gms.ui" android:screenOrientation="portrait" android:theme="@style/SuwThemeGlif.Light"/>
+        <activity android:enabled="true" android:exported="true" android:label="" android:name="com.google.android.gms.gconnect.ui.SmsEntryActivity" android:process="com.google.android.gms.ui" android:screenOrientation="portrait" android:theme="@style/SuwThemeGlif.Light"/>
+        <activity android:enabled="true" android:exported="true" android:label="" android:name="com.google.android.gms.gconnect.ui.ConnectionCompletionActivity" android:process="com.google.android.gms.ui" android:screenOrientation="portrait" android:theme="@style/SuwThemeGlif.Light"/>
+        <activity android:enabled="true" android:exported="true" android:label="" android:name="com.google.android.gms.gconnect.ui.ErrorActivity" android:process="com.google.android.gms.ui" android:screenOrientation="portrait" android:theme="@style/SuwThemeGlif.Light"/>
         <activity android:enabled="true" android:exported="true" android:label="@string/gh_device_signals_export_activity_title" android:launchMode="singleTask" android:name="com.google.android.gms.googlehelp.helpactivities.DeviceSignalsExportActivity" android:process="com.google.android.gms.ui" android:theme="@style/gh_ActivityStyle"/>
         <activity android:enabled="true" android:exported="false" android:label="@LEMON_transformed_from_string/common_list_apps_menu_help" android:launchMode="singleTask" android:name="com.google.android.gms.googlehelp.helpactivities.OpenHelpRtcActivity" android:process="com.google.android.gms.ui" android:theme="@android:style/Theme.Translucent"/>
         <activity android:configChanges="orientation|screenSize" android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:hardwareAccelerated="true" android:label="@LEMON_transformed_from_string/common_list_apps_menu_help" android:name="com.google.android.gms.googlehelp.helpactivities.HelpActivity" android:process="com.google.android.gms.ui" android:theme="@style/gh_ActivityStyle" android:uiOptions="splitActionBarWhenNarrow">
@@ -2053,7 +2044,15 @@
             </intent-filter>
         </service>
         <activity android:enabled="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.android.gms.growth.ui.GrowthDebugActivity" android:process="com.google.android.gms.ui" android:taskAffinity="com.google.android.gms.common.settings" android:theme="@style/common.Theme.GoogleSettings"/>
-        <activity android:enabled="false" android:exported="false" android:launchMode="singleTask" android:name="com.google.android.gms.growth.notifications.NotificationActionActivity" android:noHistory="true" android:process="com.google.android.gms.ui" android:theme="@android:style/Theme.NoDisplay"/>
+        <activity android:enabled="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.android.gms.growth.ui.webview.GrowthWebViewActivity" android:process="com.google.android.gms.ui" android:theme="@style/common.Theme.GoogleSettings">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="gds.google.com" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:enabled="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.android.gms.growth.notifications.NotificationActionActivity" android:noHistory="true" android:process="com.google.android.gms.ui" android:theme="@android:style/Theme.NoDisplay"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.growth.service.GrowthTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
             <intent-filter>
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
@@ -2177,7 +2176,7 @@
                 <action android:name="com.google.firebase.appindexing.UPDATE_INDEX"/>
             </intent-filter>
         </service>
-        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.google.android.gms.kids.chimera.RegisterProfileOwnerActivityProxy" android:process="com.google.android.gms.ui" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:name="com.google.android.gms.kids.chimera.RegisterProfileOwnerActivityProxy" android:process="com.google.android.gms.ui" android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
                 <action android:name="com.google.android.gms.kids.action.PROFILE_OWNER_CONSENT"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -2196,6 +2195,10 @@
                 <action android:name="com.google.android.gms.auth.addaccount.DM_PRE_ADD_ACCOUNT"/>
                 <action android:name="com.google.android.gms.auth.removeaccount.DM_PRE_REMOVE_ACCOUNT"/>
             </intent-filter>
+            <meta-data android:name="handle.managed.account.category" android:value="kids"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.account.HANDLE_MANAGED"/>
+            </intent-filter>
         </activity>
         <activity-alias android:enabled="false" android:exported="true" android:name="com.google.android.gms.kids.SyncTailTrapperActivity" android:targetActivity="com.google.android.gms.kids.KidSetupActivity">
             <intent-filter>
@@ -2213,20 +2216,20 @@
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
             </intent-filter>
         </receiver>
-        <service android:exported="false" android:name="com.google.android.gms.kids.GcmReceiverService"/>
-        <service android:exported="true" android:name="com.google.android.gms.kids.chimera.KidsServiceProxy">
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.kids.GcmReceiverService"/>
+        <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.kids.chimera.KidsServiceProxy">
             <intent-filter>
                 <action android:name="com.google.android.gms.kids.service.START"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </service>
-        <service android:exported="false" android:name="com.google.android.gms.kids.SupervisionService" android:permission="android.permission.BIND_DEVICE_ADMIN" android:process="@string/common_persistent_process">
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.kids.SupervisionService" android:permission="android.permission.BIND_DEVICE_ADMIN" android:process="@string/common_persistent_process">
             <intent-filter>
                 <action android:name="android.app.action.DEVICE_ADMIN_SERVICE"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </service>
-        <service android:exported="false" android:name="com.google.android.gms.kids.JobService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.kids.JobService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
             <intent-filter>
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
@@ -2419,6 +2422,7 @@
             </intent-filter>
         </activity>
         <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.location.settings.LocationSettingsOffDialogActivity" android:process="com.google.android.gms.ui" android:taskAffinity="com.google.android.location.settings.LocationSettingsOffDialogActivity" android:theme="@style/AlertThemeSelector"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.location.settings.WifiScanningPrePConsentActivity" android:process="com.google.android.gms.ui" android:taskAffinity="" android:theme="@style/AlertThemeSelector"/>
         <receiver android:enabled="true" android:exported="false" android:name="com.google.android.location.internal.LocationProviderEnabler" android:process="@string/location_process"/>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.location.wearable.WearableLocationService" android:process="@string/location_process">
             <intent-filter>
@@ -2616,6 +2620,16 @@
                 <action android:name="com.google.android.gms.mobiledataplan.ui.SETTING"/>
                 <category android:name="android.intent.category.SERVICES"/>
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.telephony.action.MANAGE_SUBSCRIPTION_PLANS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="mobiledataplan.gms.android.google.com" android:path="/startui" android:scheme="mobiledataplan"/>
+            </intent-filter>
         </activity>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:name="com.google.android.gms.mobiledataplan.ui.MobileDataPlanDetailActivity" android:parentActivityName="com.google.android.gms.mobiledataplan.ui.MobileDataPlanSettingsActivity" android:process="com.google.android.gms.ui" android:taskAffinity="com.google.android.gms.common.settings" android:theme="@style/common.Theme.GoogleSettings">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".mobiledataplan.ui.MobileDataPlanSettingsActivity"/>
@@ -2630,6 +2644,13 @@
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
         </service>
+        <activity android:enabled="true" android:exported="true" android:icon="@drawable/quantum_ic_devices_other_googblue_36" android:label="@LEMON_transformed_from_string/devices_product_name" android:name="com.google.android.gms.nearby.discovery.devices.DevicesListActivity" android:parentActivityName="com.google.android.gms.app.settings.GoogleSettingsLink" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:taskAffinity=".nearby.discovery.devices.DevicesListActivity" android:theme="@style/DevicesListActivityStyle">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".app.settings.GoogleSettingsLink"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.settings.DEVICES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
         <activity android:enabled="true" android:exported="true" android:icon="@drawable/product_logo_google_nearby_color_36" android:label="Nearby" android:launchMode="singleTask" android:name="com.google.android.gms.nearby.discovery.ui.DiscoveryListActivity" android:parentActivityName="com.google.android.gms.app.settings.GoogleSettingsLink" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:taskAffinity=".nearby.discovery.ui.DiscoveryListActivity" android:theme="@style/DiscoveryListActivityStyle">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".app.settings.GoogleSettingsLink"/>
             <intent-filter>
@@ -2653,7 +2674,7 @@
         <activity android:enabled="true" android:exported="true" android:icon="@drawable/product_logo_google_nearby_color_36" android:label="Nearby" android:launchMode="singleTask" android:name="com.google.android.gms.nearby.discovery.ui.NotificationSettingsActivity" android:parentActivityName="com.google.android.gms.nearby.discovery.ui.DiscoveryListActivity" android:process="com.google.android.gms.ui" android:taskAffinity=".nearby.discovery.ui.DiscoveryListActivity" android:theme="@style/DiscoveryListActivityStyle">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".nearby.discovery.ui.DiscoveryListActivity"/>
         </activity>
-        <activity android:enabled="true" android:exported="false" android:icon="@drawable/product_logo_google_nearby_color_36" android:label="@LEMON_transformed_from_string/report_abuse_label" android:name="com.google.android.libraries.abuse.reporting.ReportAbuseActivity" android:process="com.google.android.gms.ui" android:taskAffinity=".nearby.discovery.ui.DiscoveryListActivity"/>
+        <activity android:enabled="true" android:exported="false" android:icon="@drawable/product_logo_google_nearby_color_36" android:label="@LEMON_transformed_from_string/discovery_report_abuse_label" android:name="com.google.android.libraries.abuse.reporting.ReportAbuseActivity" android:process="com.google.android.gms.ui" android:taskAffinity=".nearby.discovery.ui.DiscoveryListActivity"/>
         <activity android:enabled="true" android:exported="false" android:icon="@drawable/product_logo_google_nearby_color_36" android:label="Nearby" android:launchMode="singleTask" android:name="com.google.android.gms.nearby.discovery.ui.ReportAbuseHelperActivity" android:process="com.google.android.gms.ui" android:taskAffinity=".nearby.discovery.ui.DiscoveryListActivity" android:theme="@style/DiscoveryTransparentActivityStyle"/>
         <activity android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTop" android:name="com.google.android.gms.nearby.messages.settings.NearbyMessagesAppOptInActivity" android:process="com.google.android.gms.ui" android:taskAffinity=".nearby.messages.settings.NearbyMessagesAppOptInActivity" android:theme="@style/common.Theme.GoogleSettings.Dialog"/>
         <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@LEMON_transformed_from_string/nearby_setup_wifi_consent_dialog_label" android:launchMode="singleTask" android:name="com.google.android.gms.nearby.setup.ui.WifiConsentActivity" android:process="com.google.android.gms.ui" android:theme="@style/NearbySetupWifiConsentDialogTheme"/>
@@ -2675,7 +2696,7 @@
             </intent-filter>
         </service>
         <service android:enabled="true" android:exported="true" android:name="com.google.location.nearby.direct.service.NearbyDirectService" android:process="@string/common_persistent_process"/>
-        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.nearby.discovery.service.DiscoveryService" android:process="@string/common_persistent_process"/>
+        <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.nearby.discovery.service.DiscoveryService" android:permission="com.google.android.gms.permission.NEARBY_START_DISCOVERER" android:process="@string/common_persistent_process"/>
         <service android:enabled="true" android:exported="true" android:icon="@drawable/ic_nearby_discovery" android:label="Nearby" android:name="com.google.android.gms.nearby.discovery.ui.DiscoveryTileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:process="com.google.android.gms.ui">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
@@ -2718,12 +2739,8 @@
         <activity android:configChanges="orientation|screenSize" android:enabled="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.android.gms.notifications.GunsBrowserActivity" android:process="com.google.android.gms.ui" android:theme="@style/common.Activity.Light.NoTitleBar"/>
         <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.notifications.GcmBroadcastReceiver" android:permission="com.google.android.gms.permission.C2D_MESSAGE" android:process="@string/common_persistent_process"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.notifications.GunsService" android:process="@string/common_persistent_process"/>
-        <receiver android:enabled="false" android:exported="true" android:name="com.google.android.gms.herrevad.receivers.CaptivePortalReceiver">
-            <intent-filter>
-                <action android:name="android.net.conn.NETWORK_CONDITIONS_MEASURED"/>
-            </intent-filter>
-        </receiver>
         <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.herrevad.services.BackgroundObservationReceiver"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.herrevad.services.PersistentBackgroundObservationReceiver" android:process="@string/common_persistent_process"/>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.mdm.services.NetworkQualityAndroidService">
             <intent-filter>
                 <action android:name="com.google.android.gms.mdm.services.START"/>
@@ -2742,6 +2759,13 @@
             </intent-filter>
         </service>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.herrevad.services.ImmediateRemoteReportsRefreshService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.herrevad.services.ProcessReportsService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.herrevad.services.ImmediateProcessReportsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.herrevad.services.CaptivePortalReportService"/>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.herrevad.services.LightweightNetworkQualityAndroidService" android:process="@string/common_persistent_process">
             <intent-filter>
                 <action android:name="com.google.android.gms.herrevad.services.LightweightNetworkQualityAndroidService.START"/>
@@ -2753,13 +2777,6 @@
                 <action android:name="com.google.android.gms.herrevad.LIGHTWEIGHT_NETWORK_QUALITY_WORKER_SERVICE"/>
             </intent-filter>
         </service>
-        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.herrevad.services.ProcessReportsService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
-            <intent-filter>
-                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
-            </intent-filter>
-        </service>
-        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.herrevad.services.ImmediateProcessReportsService"/>
-        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.herrevad.services.CaptivePortalReportService"/>
         <activity android:enabled="false" android:exported="true" android:name="com.google.android.gms.ocr.SecuredCreditCardOcrActivity" android:process="com.google.android.gms.ui" android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
                 <action android:name="com.google.android.gms.ocr.ACTION_CREDIT_CARD_OCR"/>
@@ -2832,12 +2849,6 @@
             </intent-filter>
         </activity>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:enabled="true" android:exported="true" android:label="@LEMON_transformed_from_string/panorama_viewer_title" android:name="com.google.android.gms.panorama.PanoramaViewActivity" android:process="com.google.android.gms.ui" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-        <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.panorama.service.PanoramaAndroidService">
-            <intent-filter>
-                <action android:name="com.google.android.gms.panorama.service.START"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </service>
         <activity android:enabled="false" android:exported="false" android:label="Mitosis Debug" android:name="com.google.android.gms.peerdownloadmanager.common.DebugActivity" android:theme="@style/common.Theme.GoogleSettings"/>
         <activity android:configChanges="orientation|screenSize" android:enabled="true" android:exported="true" android:name="com.google.android.gms.people.profile.AvatarActivity" android:process="com.google.android.gms.ui" android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
@@ -2922,15 +2933,12 @@
                 <action android:name="com.google.android.gms.phenotype.FLAG_OVERRIDE"/>
             </intent-filter>
         </receiver>
-        <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.phenotype.service.PhenotypeService" android:process="@string/common_persistent_process" android:visibleToInstantApps="true">
-            <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.phenotype.service.sync.PhenotypeConfigurator" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" android:process="@string/common_persistent_process">
             <intent-filter>
-                <action android:name="com.google.android.gms.phenotype.service.START"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
         </service>
-        <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.phenotype.service.sync.PhenotypeConfigurator" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" android:process="@string/common_persistent_process" android:visibleToInstantApps="true">
-            <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
+        <service android:enabled="false" android:exported="false" android:name="com.google.android.gms.phenotype.service.sync.PackageUpdateTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
             <intent-filter>
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
@@ -3356,7 +3364,7 @@
                 <data android:host="*" android:pathPrefix="/com.google.android.gms.mdm" android:scheme="wear"/>
             </intent-filter>
         </service>
-        <activity android:enabled="true" android:exported="true" android:icon="@drawable/ic_google" android:label="@string/location_settings_frequent_locations_activity_title" android:name="com.google.android.gms.semanticlocation.settings.FrequentLocationsSettingsActivity" android:process="com.google.android.gms.ui" android:taskAffinity="com.google.android.gms.common.settings" android:theme="@style/common.Theme.GoogleSettings" android:visibleToInstantApps="true">
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:icon="@drawable/ic_google" android:label="@string/location_settings_frequent_locations_activity_title" android:name="com.google.android.gms.semanticlocation.settings.FrequentLocationsSettingsActivity" android:process="com.google.android.gms.ui" android:taskAffinity="com.google.android.gms.common.settings" android:theme="@style/common.Theme.GoogleSettings" android:visibleToInstantApps="true">
             <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
             <intent-filter>
                 <action android:name="com.google.android.gms.semanticlocation.settings.FREQUENT_LOCATIONS_SETTINGS"/>
@@ -3370,7 +3378,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.semanticlocation.settings.FrequentLocationsSettingInjectorService" android:process="@string/location_process">
+        <service android:enabled="false" android:exported="true" android:name="com.google.android.gms.semanticlocation.settings.FrequentLocationsSettingInjectorService" android:process="@string/location_process">
             <intent-filter>
                 <action android:name="android.location.SettingInjectorService"/>
             </intent-filter>
@@ -3513,12 +3521,19 @@
                 <action android:name="com.google.android.gms.stats.ACTION_UPLOAD_DROPBOX_ENTRIES"/>
             </intent-filter>
         </service>
+        <service android:enabled="false" android:exported="false" android:name="com.google.android.gms.stats.eastworld.EastworldService" android:process="@string/common_persistent_process"/>
         <provider android:authorities="com.google.android.gms.subscribedfeeds" android:enabled="true" android:exported="true" android:multiprocess="false" android:name="com.google.android.gms.subscribedfeeds.GmsSubscribedFeedsProvider"/>
         <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.subscribedfeeds.SyncService">
             <intent-filter>
                 <action android:name="android.content.SyncAdapter"/>
             </intent-filter>
-            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/syncadapter"/>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/subscribedfeeds_gsfsyncadapter"/>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.subscribedfeeds.GmsFeedsSyncService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/subscribedfeeds_gmssyncadapter"/>
         </service>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.subscribedfeeds.GcmReceiverService"/>
         <activity android:enabled="true" android:exported="false" android:icon="@drawable/common_red_banner_settings_icon" android:name="com.google.android.gms.subscriptions.settings.GoogleOneSettingsActivity" android:parentActivityName="com.google.android.gms.app.settings.GoogleSettingsActivity" android:process="com.google.android.gms.ui" android:taskAffinity="com.google.android.gms.common.settings" android:theme="@style/IdentityBlueAppTheme">
@@ -3574,7 +3589,7 @@
         <activity android:enabled="true" android:exported="false" android:icon="@drawable/tp_logo_google_pay_color_48dp" android:label="@LEMON_transformed_from_string/tp_google_pay" android:name="com.google.android.gms.tapandpay.tokenization.UnsupportedCardActivity" android:parentActivityName="com.google.android.gms.tapandpay.tokenization.TokenizePanActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/TpActivityTheme.NoActionBar"/>
         <activity android:enabled="true" android:exported="false" android:icon="@drawable/tp_logo_google_pay_color_48dp" android:label="@LEMON_transformed_from_string/tp_google_pay" android:name="com.google.android.gms.tapandpay.tokenization.VisaCheckoutSetupDoneActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/TpActivityTheme.NoActionBar.Translucent"/>
         <activity android:enabled="true" android:exported="false" android:icon="@drawable/tp_logo_google_pay_color_48dp" android:label="@LEMON_transformed_from_string/tp_google_pay" android:name="com.google.android.gms.tapandpay.tokenization.CollectUserSignatureActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/TpActivityTheme"/>
-        <activity android:enabled="true" android:exported="false" android:icon="@drawable/tp_logo_google_pay_color_48dp" android:label="@LEMON_transformed_from_string/tp_google_pay" android:name="com.google.android.gms.tapandpay.tokenization.SummaryActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/TpActivityTheme"/>
+        <activity android:enabled="true" android:exported="false" android:icon="@drawable/tp_logo_google_pay_color_48dp" android:label="@LEMON_transformed_from_string/tp_google_pay" android:name="com.google.android.gms.tapandpay.tokenization.SummaryActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/TpActivityTheme.NoActionBar"/>
         <activity android:enabled="true" android:exported="false" android:icon="@drawable/tp_logo_google_pay_color_48dp" android:label="@LEMON_transformed_from_string/tp_google_pay" android:name="com.google.android.gms.tapandpay.settings.DisplayUserSignatureActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/TpActivityTheme"/>
         <activity android:enabled="true" android:exported="false" android:icon="@drawable/tp_logo_google_pay_color_48dp" android:label="@LEMON_transformed_from_string/tp_google_pay" android:name="com.google.android.gms.tapandpay.transaction.WalletTransactionDetailsActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/TpActivityTheme.NoActionBar.Translucent">
             <intent-filter>
@@ -3598,7 +3613,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:enabled="true" android:exported="false" android:icon="@drawable/tp_logo_google_pay_color_48dp" android:label="@LEMON_transformed_from_string/tp_google_pay" android:name="com.google.android.gms.tapandpay.ui.SplashScreenActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:enabled="true" android:exported="false" android:icon="@drawable/tp_logo_google_pay_color_48dp" android:label="@LEMON_transformed_from_string/tp_google_pay" android:name="com.google.android.gms.tapandpay.ui.SplashScreenActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/TpActivityTheme.NoActionBar"/>
         <activity android:enabled="true" android:exported="false" android:icon="@drawable/tp_logo_google_pay_color_48dp" android:label="@LEMON_transformed_from_string/tp_google_pay" android:name="com.google.android.gms.tapandpay.ui.WarmWelcomeActivity" android:process="com.google.android.gms.ui" android:resizeableActivity="true" android:theme="@style/TpActivityTheme.NoActionBar">
             <intent-filter>
                 <action android:name="com.google.android.gms.tapandpay.ACTION_WARM_WELCOME"/>
@@ -3637,7 +3652,8 @@
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
             </intent-filter>
         </service>
-        <service android:enabled="@bool/platformIsAtLeastKitKat" android:exported="true" android:name="com.google.android.gms.tapandpay.service.TapAndPayService" android:process="@string/common_persistent_process">
+        <service android:enabled="@bool/platformIsAtLeastKitKat" android:exported="true" android:name="com.google.android.gms.tapandpay.service.TapAndPayService" android:process="@string/common_persistent_process" android:visibleToInstantApps="true">
+            <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
             <intent-filter>
                 <action android:name="com.google.android.gms.tapandpay.service.BIND"/>
             </intent-filter>
@@ -3654,7 +3670,6 @@
                 <data android:host="*" android:pathPrefix="/tapandpay/proxy" android:scheme="wear"/>
             </intent-filter>
         </service>
-        <service android:enabled="@bool/platformIsAtLeastKitKat" android:exported="false" android:name="com.google.android.gms.tapandpay.secard.FelicaService" android:process="@string/common_persistent_process"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.telephonyspam.sync.SpamListSyncTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
             <intent-filter>
                 <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
@@ -3742,12 +3757,6 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </service>
-        <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.trustagent.speech.service.VoiceUnlockService" android:process="@string/common_persistent_process">
-            <intent-filter>
-                <action android:name="com.google.android.gms.speech.service.START"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </service>
         <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@LEMON_transformed_from_string/auth_trust_agent_pref_face_unlock_title" android:launchMode="singleTask" android:name="com.google.android.gms.trustagent.GoogleTrustAgentFaceUnlockSettings" android:process="com.google.android.gms.ui" android:theme="@style/TrustAgentSettingsTheme">
             <intent-filter>
                 <action android:name="com.google.android.gms.trustlet.face.ui.FaceUnlockSettingsActivity.START"/>
@@ -3760,6 +3769,12 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <service android:enabled="true" android:exported="true" android:name="com.google.android.gms.trustagent.speech.service.VoiceUnlockService" android:process="@string/common_persistent_process">
+            <intent-filter>
+                <action android:name="com.google.android.gms.speech.service.START"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:enabled="true" android:exported="false" android:name="com.google.android.gms.udc.ui.AuthenticatingWebViewActivity" android:process="com.google.android.gms.ui" android:theme="@style/UdcAppTheme"/>
         <activity android:enabled="true" android:exported="true" android:label="@LEMON_transformed_from_string/udc_settings_title" android:name="com.google.android.gms.udc.ui.UdcSettingsListActivity" android:parentActivityName="com.google.android.gms.app.settings.GoogleSettingsLink" android:process="com.google.android.gms.ui" android:theme="@style/UdcAppTheme">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".app.settings.GoogleSettingsLink"/>
@@ -4228,6 +4243,12 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:exported="false" android:name="com.google.android.gms.chimera.container.ui.ModuleDownloadActivity" android:process="com.google.android.gms.ui">
+            <intent-filter>
+                <action android:name="com.google.android.chimera.container.REQUEST_FEATURES_WITH_UI"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
         <provider android:authorities="com.google.android.chimera;com.google.android.gms.chimera" android:directBootAware="false" android:exported="true" android:name="com.google.android.gms.chimera.container.GmsModuleProvider" android:process="@string/common_persistent_process" android:visibleToInstantApps="true">
             <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
         </provider>
@@ -4246,6 +4267,7 @@
                 <action android:name="com.google.android.gms.common.images.LOAD_IMAGE"/>
                 <action android:name="com.google.android.gms.backup.MANDATORY_BACKUP_ACCOUNT_CHANGED"/>
                 <action android:name="com.google.vr.powerpolicy.action.ACTION_POLICY_CHANGED"/>
+                <action android:name="com.google.android.gms.fitness.SEEDING"/>
                 <action android:name="com.google.android.gms.fitness.wearables.START_WEARABLE_SYNC"/>
             </intent-filter>
             <intent-filter>
@@ -4340,6 +4362,7 @@
                 <action android:name="com.google.android.gms.auth.ACCOUNT_SERVICES_CHANGED"/>
                 <action android:name="com.google.android.gms.auth.account.visibility.WHITELIST_APPLICATION"/>
                 <action android:name="com.google.android.gms.auth.authzen.DEVICE_SYNC_FINISHED"/>
+                <action android:name="com.google.android.gms.auth.authzen.GCM_DEVICE_PROXIMITY"/>
                 <action android:name="com.google.android.gms.auth.folsom.START_RECOVERY"/>
                 <action android:name="com.google.android.gms.backup.ACTION_BACKUP_NETWORK_SETTINGS_CHANGED"/>
                 <action android:name="com.google.android.gms.backup.ACTION_TRANSPORT_FULL_BACKUP"/>
@@ -4388,15 +4411,22 @@
         <service android:directBootAware="false" android:exported="true" android:name="com.google.android.gms.chimera.GmsApiService" android:visibleToInstantApps="true">
             <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
             <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.credentials.service.START"/>
                 <action android:name="com.google.android.gms.auth.authzen.api.service.internaldata.START"/>
                 <action android:name="com.google.android.gms.auth.authzen.api.service.key.START"/>
+                <action android:name="com.google.android.gms.backup.G1_BACKUP"/>
+                <action android:name="com.google.android.gms.backup.G1_RESTORE"/>
+                <action android:name="com.google.android.gms.chromesync.service.START"/>
+                <action android:name="com.google.android.gms.kids.service.START"/>
                 <action android:name="com.google.android.gms.learning.examplecollection.START"/>
                 <action android:name="com.google.android.gms.learning.internal.dynamitesupport.START"/>
                 <action android:name="com.google.android.gms.learning.predictor.START"/>
                 <action android:name="com.google.android.gms.learning.trainer.START"/>
+                <action android:name="com.google.android.gms.panorama.service.START"/>
                 <action android:name="com.google.android.gms.reminders.service.START"/>
                 <action android:name="com.google.android.gms.signin.service.START"/>
-                <action android:name="com.google.android.gms.subscriptions_restore.service.START"/>
+                <action android:name="com.google.android.gms.vehicle.cabin.service.START"/>
+                <action android:name="com.google.android.gms.vehicle.hvac.service.START"/>
                 <action android:name="com.google.android.gms.walletp2p.service.firstparty.BIND"/>
                 <action android:name="com.google.android.gms.walletp2p.service.secondparty.BIND"/>
             </intent-filter>
@@ -4414,11 +4444,19 @@
                 <action android:name="com.google.android.gms.udc.service.START"/>
             </intent-filter>
         </service>
+        <service android:directBootAware="false" android:exported="true" android:name="com.google.android.gms.chimera.PersistentDirectBootAwareApiService" android:process="@string/common_persistent_process" android:visibleToInstantApps="true">
+            <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.clearcut.service.START"/>
+                <action android:name="com.google.android.gms.phenotype.service.START"/>
+            </intent-filter>
+        </service>
         <service android:directBootAware="false" android:exported="true" android:name="com.google.android.gms.chimera.GmsBoundBrokerService" android:visibleToInstantApps="true">
             <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
             <intent-filter>
                 <action android:name="com.google.android.finsky.BIND_PLAY_CLIENT_SERVICE"/>
                 <action android:name="com.google.android.gms.accounts.ACCOUNT_SERVICE"/>
+                <action android:name="com.google.android.gms.ads.service.CONSENT_LOOKUP"/>
                 <action android:name="com.google.android.gms.ads.service.HTTP"/>
                 <action android:name="com.google.android.gms.apppreviewmessaging.service.START"/>
                 <action android:name="com.google.android.gms.audit.service.START"/>
@@ -4430,6 +4468,7 @@
                 <action android:name="com.google.android.gms.cast.remote_display.service.START"/>
                 <action android:name="com.google.android.gms.cast.service.BIND_CAST_DEVICE_CONTROLLER_SERVICE"/>
                 <action android:name="com.google.android.gms.cast_mirroring.service.START"/>
+                <action android:name="com.google.android.gms.chimera.test.START_SERVICE"/>
                 <action android:name="com.google.android.gms.common.download.START"/>
                 <action android:name="com.google.android.gms.common.service.START"/>
                 <action android:name="com.google.android.gms.constellation.service.START"/>
@@ -4439,6 +4478,7 @@
                 <action android:name="com.google.android.gms.feedback.internal.IFeedbackService"/>
                 <action android:name="com.google.android.gms.fido.fido2.privileged.START"/>
                 <action android:name="com.google.android.gms.fido.fido2.regular.START"/>
+                <action android:name="com.google.android.gms.fido.fido2.zeroparty.START"/>
                 <action android:name="com.google.android.gms.fonts.service.START"/>
                 <action android:name="com.google.android.gms.growth.service.START"/>
                 <action android:name="com.google.android.gms.ipa.service.START"/>
@@ -4459,7 +4499,6 @@
                 <action android:name="com.google.android.gms.telephonyspam.service.START"/>
                 <action android:name="com.google.android.gms.testsupport.service.START"/>
                 <action android:name="com.google.android.gms.update.START_API_SERVICE"/>
-                <action android:name="com.google.android.gms.vehicle.hvac.service.START"/>
                 <action android:name="com.google.android.mdd.service.START"/>
                 <action android:name="com.google.android.mdh.service.START"/>
                 <action android:name="com.google.android.mdh.service.listener.START"/>
@@ -4471,10 +4510,11 @@
         <service android:directBootAware="false" android:exported="false" android:name="com.google.android.gms.chimera.GmsInternalBoundBrokerService">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.google.android.gms.auth.api.credentials.internal_service.START"/>
+                <action android:name="com.google.android.gms.auth.managed.START_EMM_SERVICE"/>
                 <action android:name="com.google.android.gms.backup.RESTORE"/>
                 <action android:name="com.google.android.gms.common.service.START_ACCOUNT_SERVICE"/>
                 <action android:name="com.google.android.gms.common.BIND_SHARED_PREFS"/>
-                <action android:name="com.google.android.gms.auth.managed.START_EMM_SERVICE"/>
                 <action android:name="com.google.android.gms.learning.intservice.START"/>
                 <action android:name="com.google.android.gms.signin.service.INTERNAL_START"/>
                 <action android:name="com.google.android.gms.smartdevice.wifi.START_WIFI_HELPER_SERVICE"/>
@@ -4546,8 +4586,6 @@
                 <action android:name="com.google.android.gms.common.SET_GMS_ACCOUNT"/>
             </intent-filter>
         </receiver>
-        <service android:exported="true" android:name="com.google.android.gms.common.internal.service.EmptyService" android:process="com.google.android.gms.empty"/>
-        <service android:exported="true" android:name="com.google.android.gms.common.internal.service.EmptyService_Gms" android:process="com.google.android.gms"/>
         <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.common.ui.ErrorDialogActivity" android:process="com.google.android.gms.ui" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <activity android:exported="false" android:name="com.google.android.gms.common.activity.WhitelistWebViewActivity" android:process="com.google.android.gms.ui" android:theme="@style/common.Activity.Light.NoTitleBar"/>
         <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
