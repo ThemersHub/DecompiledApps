@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/sendkit_ui_autocomplete_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <FrameLayout android:layout_width="@dimen/sendkit_ui_autocomplete_avatar_size" android:layout_height="@dimen/sendkit_ui_autocomplete_avatar_size">
+    <RelativeLayout android:id="@id/sendkit_ui_autocomplete_avatar_wrapper" android:layout_width="@dimen/sendkit_ui_autocomplete_avatar_size" android:layout_height="@dimen/sendkit_ui_autocomplete_avatar_size">
         <com.google.android.libraries.social.sendkit.ui.avatars.AvatarView android:layout_gravity="center_vertical" android:id="@id/sendkit_ui_autocomplete_avatar" android:layout_width="@dimen/sendkit_ui_autocomplete_avatar_size" android:layout_height="@dimen/sendkit_ui_autocomplete_avatar_size" android:contentDescription="@null" selectable="false" shape="round" size="small" />
-    </FrameLayout>
+    </RelativeLayout>
     <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/sendkit_ui_autocomplete_text_padding_pre_v17" android:layout_weight="1.0" android:layout_marginStart="@dimen/sendkit_ui_autocomplete_text_padding_v17">
         <TextView android:id="@id/sendkit_ui_autocomplete_display_name" style="@style/sendkit_ui_autocomplete_display_name" />
         <TextView android:id="@id/sendkit_ui_autocomplete_destination" style="@style/sendkit_ui_autocomplete_destination" />
