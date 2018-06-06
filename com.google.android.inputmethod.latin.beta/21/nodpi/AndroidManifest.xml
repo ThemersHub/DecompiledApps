@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="27" android:compileSdkVersionCodename="P" coreApp="true" package="com.google.android.inputmethod.latin" platformBuildVersionCode="27" platformBuildVersionName="P">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" coreApp="true" package="com.google.android.inputmethod.latin" platformBuildVersionCode="28" platformBuildVersionName="9">
     <original-package android:name="com.android.inputmethod.latin"/>
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -18,6 +18,7 @@
     <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission-sdk-23 android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission-sdk-23 android:name="android.permission.CAMERA"/>
     <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-feature android:name="android.hardware.camera" android:required="false"/>
@@ -75,14 +76,16 @@
             </intent-filter>
             <meta-data android:name="android.hardware.input.metadata.KEYBOARD_LAYOUTS" android:resource="@xml/keyboard_layouts_ja"/>
         </receiver>
+        <meta-data android:name="module:com.google.android.apps.inputmethod.libs.contextstore.IConversationContextProcessor" android:value="@xml/context_processor"/>
         <service android:exported="false" android:name="com.google.android.libraries.micore.superpacks.scheduling.FirebaseTaskService"/>
         <meta-data android:name="module:com.google.android.apps.inputmethod.libs.contextual.IContextualPredictionExtension" android:value="@xml/extension_contextual_prediction"/>
         <activity android:name="com.google.android.apps.inputmethod.libs.crash.UserFeedbackActivity"/>
-        <service android:exported="false" android:name="com.google.android.apps.inputmethod.libs.dataservice.superpacks.SuperpacksTaskService">
+        <service android:exported="false" android:name="com.google.android.apps.inputmethod.libs.dataservice.superpacks.SuperpacksBackgroundTaskService">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
             </intent-filter>
         </service>
+        <service android:exported="false" android:name="com.google.android.apps.inputmethod.libs.dataservice.superpacks.SuperpacksForegroundTaskService"/>
         <activity android:label="@string/android_account_title" android:name="com.google.android.apps.inputmethod.libs.dataservice.auth.AndroidAccountActivity" android:theme="@style/SettingsTheme"/>
         <receiver android:name="com.google.android.apps.inputmethod.libs.dataservice.download.DownloadBroadcastReceiver">
             <intent-filter>

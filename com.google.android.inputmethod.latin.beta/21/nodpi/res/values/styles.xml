@@ -941,6 +941,10 @@
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">@dimen/fullscreen_body_height</item>
     </style>
+    <style name="Body.HandwritingFullscreen.Buttons" parent="@style/Body.HandwritingFullscreen">
+        <item name="android:paddingLeft">?KeyboardInnerPadding</item>
+        <item name="android:paddingRight">?KeyboardInnerPadding</item>
+    </style>
     <style name="Body.HandwritingHalfscreen" parent="@style/Body">
         <item name="android:background">?BgKeyboardBody</item>
     </style>
@@ -1412,6 +1416,7 @@
         <item name="android:layout_marginEnd">@dimen/header_icon_margin_horizontal</item>
     </style>
     <style name="GalleryTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorEdgeEffect">@color/accent_color</item>
         <item name="searchViewStyle">@style/StickerSearchViewStyle</item>
     </style>
     <style name="GestureBorderedMaterialDarkTheme" />
@@ -2208,7 +2213,7 @@
         <item name="android:paddingBottom">5.0dip</item>
     </style>
     <style name="Label.MorseBuffer" parent="@style/Label">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">0.0dip</item>
         <item name="android:layout_height">fill_parent</item>
     </style>
     <style name="Label.PhoneText" parent="@style/Label">
@@ -2908,7 +2913,9 @@
         <item name="MaxPageableCandidatesPerRow">@integer/one_handed_max_pageable_candidates_per_row</item>
         <item name="OneHandedKeyboardBodyHeight">?OneHandedKeyboardBodyHeightNormal</item>
     </style>
-    <style name="PackDetailsTheme" parent="@style/Theme.AppCompat.Light.NoActionBar" />
+    <style name="PackDetailsTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorEdgeEffect">@color/accent_color</item>
+    </style>
     <style name="Platform.AppCompat" parent="@android:style/Theme.Holo">
         <item name="android:colorForeground">@color/foreground_material_dark</item>
         <item name="android:colorBackground">@color/background_material_dark</item>
@@ -3131,11 +3138,17 @@
     <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.InternalGroup" parent="@android:style/Widget">
         <item name="android:layout_marginLeft">16.0dip</item>
     </style>
+    <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.Shortcut" parent="@android:style/Widget">
+        <item name="android:layout_marginLeft">16.0dip</item>
+    </style>
     <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.SubmenuArrow" parent="@android:style/Widget">
         <item name="android:layout_marginLeft">8.0dip</item>
     </style>
     <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.Text" parent="@android:style/Widget">
         <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.Title" parent="@android:style/Widget">
+        <item name="android:layout_marginLeft">16.0dip</item>
     </style>
     <style name="RtlOverlay.Widget.AppCompat.Search.DropDown" parent="@android:style/Widget">
         <item name="android:paddingLeft">@dimen/abc_dropdownitem_text_padding_left</item>
@@ -3215,7 +3228,6 @@
         <item name="android:showDividers">middle</item>
     </style>
     <style name="SearchMaterialDarkTheme" parent="@style/CommonElements">
-        <item name="AddIcon">@drawable/quantum_ic_add_white_18</item>
         <item name="CategoryTextLabelColor">@color/gif_category_text_color_material_dark</item>
         <item name="CategoryTextLabelSelectorDrawable">@drawable/category_text_label_selector_material_dark</item>
         <item name="CloseIcon">@drawable/quantum_ic_close_grey600_24</item>
@@ -3235,8 +3247,6 @@
         <item name="IconTabUniversalMedia">@drawable/ic_universal_search_black_24dp</item>
         <item name="IconTabUniversalMediaDisabled">@drawable/ic_universal_search_disabled_black_24dp</item>
         <item name="NoConnectionIcon">@drawable/quantum_ic_cloud_off_white_48</item>
-        <item name="NoStickerPackIcon">@drawable/ic_sticker_sad</item>
-        <item name="RecentImagesIcon">@drawable/quantum_ic_query_builder_white_18</item>
     </style>
     <style name="SearchResultQueryTextView">
         <item name="android:textSize">@dimen/search_box_font_size</item>
@@ -3608,8 +3618,7 @@
         <item name="android:tag">.sticker-accent-btn.for-sticker-keyboard</item>
     </style>
     <style name="StickerButton">
-        <item name="android:tag">.icon.sticker-btn-background.for-sticker-keyboard</item>
-        <item name="android:background">#ff000000</item>
+        <item name="android:background">@android:color/white</item>
         <item name="android:layout_width">@dimen/sticker_category_item_size</item>
         <item name="android:layout_height">@dimen/sticker_category_item_size</item>
         <item name="android:scaleType">center</item>
@@ -3623,6 +3632,9 @@
         <item name="cardMaxElevation">0.0dip</item>
         <item name="cardUseCompatPadding">false</item>
         <item name="cardPreventCornerOverlap">false</item>
+    </style>
+    <style name="StickerDetailsToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20.0dip</item>
     </style>
     <style name="StickerErrorCard">
         <item name="android:gravity">center</item>
@@ -3639,14 +3651,17 @@
         <item name="android:textSize">14.0dip</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:layout_width">150.0dip</item>
+        <item name="android:layout_width">200.0dip</item>
         <item name="android:layout_height">36.0dip</item>
         <item name="android:layout_marginStart">10.0dip</item>
         <item name="android:layout_marginEnd">10.0dip</item>
     </style>
     <style name="StickerGalleryTabTextAppearance" parent="@style/TextAppearance.Design.Tab">
-        <item name="android:textSize">14.0sp</item>
+        <item name="android:textSize">16.0sp</item>
         <item name="textAllCaps">true</item>
+    </style>
+    <style name="StickerGalleryToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20.0dip</item>
     </style>
     <style name="StickerSearchViewStyle" parent="@style/Widget.AppCompat.SearchView">
         <item name="closeIcon">@drawable/quantum_ic_close_black_24</item>
@@ -4383,8 +4398,8 @@
         <item name="rippleColor">@color/mtrl_btn_ripple_color</item>
         <item name="iconPadding">@dimen/mtrl_btn_icon_padding</item>
         <item name="iconTint">@color/mtrl_btn_text_color_selector</item>
-        <item name="additionalPaddingLeftForIcon">@dimen/mtrl_btn_additional_padding_left_for_icon</item>
-        <item name="additionalPaddingRightForIcon">@dimen/mtrl_btn_additional_padding_right_for_icon</item>
+        <item name="additionalPaddingStartForIcon">@dimen/mtrl_btn_additional_padding_start_for_icon</item>
+        <item name="additionalPaddingEndForIcon">@dimen/mtrl_btn_additional_padding_end_for_icon</item>
         <item name="cornerRadius">@dimen/mtrl_btn_corner_radius</item>
         <item name="backgroundTint">@color/mtrl_btn_bg_color_selector</item>
     </style>
@@ -4460,26 +4475,25 @@
     <item type="style" name="APKTOOL_DUMMY_6f">false</item>
     <item type="style" name="APKTOOL_DUMMY_70">false</item>
     <item type="style" name="APKTOOL_DUMMY_71">false</item>
+    <item type="style" name="APKTOOL_DUMMY_72">false</item>
     <item type="style" name="APKTOOL_DUMMY_73">false</item>
     <item type="style" name="APKTOOL_DUMMY_75">false</item>
-    <item type="style" name="APKTOOL_DUMMY_89">false</item>
-    <item type="style" name="APKTOOL_DUMMY_99">false</item>
-    <item type="style" name="APKTOOL_DUMMY_a4">false</item>
-    <item type="style" name="APKTOOL_DUMMY_a5">false</item>
+    <item type="style" name="APKTOOL_DUMMY_77">false</item>
+    <item type="style" name="APKTOOL_DUMMY_8b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_9b">false</item>
     <item type="style" name="APKTOOL_DUMMY_a6">false</item>
-    <item type="style" name="APKTOOL_DUMMY_ad">false</item>
+    <item type="style" name="APKTOOL_DUMMY_a7">false</item>
+    <item type="style" name="APKTOOL_DUMMY_a8">false</item>
     <item type="style" name="APKTOOL_DUMMY_af">false</item>
-    <item type="style" name="APKTOOL_DUMMY_b4">false</item>
-    <item type="style" name="APKTOOL_DUMMY_b5">false</item>
-    <item type="style" name="APKTOOL_DUMMY_c4">false</item>
-    <item type="style" name="APKTOOL_DUMMY_d5">false</item>
-    <item type="style" name="APKTOOL_DUMMY_d6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_b1">false</item>
+    <item type="style" name="APKTOOL_DUMMY_b6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_b7">false</item>
+    <item type="style" name="APKTOOL_DUMMY_b8">false</item>
+    <item type="style" name="APKTOOL_DUMMY_c8">false</item>
+    <item type="style" name="APKTOOL_DUMMY_d9">false</item>
     <item type="style" name="APKTOOL_DUMMY_da">false</item>
-    <item type="style" name="APKTOOL_DUMMY_e0">false</item>
-    <item type="style" name="APKTOOL_DUMMY_f0">false</item>
-    <item type="style" name="APKTOOL_DUMMY_f1">false</item>
-    <item type="style" name="APKTOOL_DUMMY_f2">false</item>
-    <item type="style" name="APKTOOL_DUMMY_f3">false</item>
+    <item type="style" name="APKTOOL_DUMMY_de">false</item>
+    <item type="style" name="APKTOOL_DUMMY_e4">false</item>
     <item type="style" name="APKTOOL_DUMMY_f4">false</item>
     <item type="style" name="APKTOOL_DUMMY_f5">false</item>
     <item type="style" name="APKTOOL_DUMMY_f6">false</item>
@@ -4512,92 +4526,88 @@
     <item type="style" name="APKTOOL_DUMMY_111">false</item>
     <item type="style" name="APKTOOL_DUMMY_112">false</item>
     <item type="style" name="APKTOOL_DUMMY_113">false</item>
+    <item type="style" name="APKTOOL_DUMMY_114">false</item>
+    <item type="style" name="APKTOOL_DUMMY_115">false</item>
     <item type="style" name="APKTOOL_DUMMY_116">false</item>
     <item type="style" name="APKTOOL_DUMMY_117">false</item>
-    <item type="style" name="APKTOOL_DUMMY_118">false</item>
-    <item type="style" name="APKTOOL_DUMMY_119">false</item>
     <item type="style" name="APKTOOL_DUMMY_11a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_11b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_11c">false</item>
     <item type="style" name="APKTOOL_DUMMY_11d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_11e">false</item>
     <item type="style" name="APKTOOL_DUMMY_121">false</item>
-    <item type="style" name="APKTOOL_DUMMY_122">false</item>
-    <item type="style" name="APKTOOL_DUMMY_12a">false</item>
-    <item type="style" name="APKTOOL_DUMMY_12c">false</item>
-    <item type="style" name="APKTOOL_DUMMY_13c">false</item>
-    <item type="style" name="APKTOOL_DUMMY_13e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_149">false</item>
-    <item type="style" name="APKTOOL_DUMMY_14a">false</item>
-    <item type="style" name="APKTOOL_DUMMY_150">false</item>
-    <item type="style" name="APKTOOL_DUMMY_153">false</item>
-    <item type="style" name="APKTOOL_DUMMY_15a">false</item>
-    <item type="style" name="APKTOOL_DUMMY_15b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_16c">false</item>
-    <item type="style" name="APKTOOL_DUMMY_172">false</item>
+    <item type="style" name="APKTOOL_DUMMY_125">false</item>
+    <item type="style" name="APKTOOL_DUMMY_126">false</item>
+    <item type="style" name="APKTOOL_DUMMY_12e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_130">false</item>
+    <item type="style" name="APKTOOL_DUMMY_140">false</item>
+    <item type="style" name="APKTOOL_DUMMY_142">false</item>
+    <item type="style" name="APKTOOL_DUMMY_14d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_14e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_154">false</item>
+    <item type="style" name="APKTOOL_DUMMY_157">false</item>
+    <item type="style" name="APKTOOL_DUMMY_15e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_15f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_170">false</item>
     <item type="style" name="APKTOOL_DUMMY_176">false</item>
-    <item type="style" name="APKTOOL_DUMMY_17d">false</item>
-    <item type="style" name="APKTOOL_DUMMY_193">false</item>
-    <item type="style" name="APKTOOL_DUMMY_194">false</item>
-    <item type="style" name="APKTOOL_DUMMY_195">false</item>
-    <item type="style" name="APKTOOL_DUMMY_196">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1c6">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1e3">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1ea">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1f4">false</item>
-    <item type="style" name="APKTOOL_DUMMY_1fe">false</item>
-    <item type="style" name="APKTOOL_DUMMY_205">false</item>
-    <item type="style" name="APKTOOL_DUMMY_206">false</item>
-    <item type="style" name="APKTOOL_DUMMY_208">false</item>
-    <item type="style" name="APKTOOL_DUMMY_213">false</item>
-    <item type="style" name="APKTOOL_DUMMY_224">false</item>
-    <item type="style" name="APKTOOL_DUMMY_22b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_239">false</item>
-    <item type="style" name="APKTOOL_DUMMY_23a">false</item>
-    <item type="style" name="APKTOOL_DUMMY_23b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_23c">false</item>
-    <item type="style" name="APKTOOL_DUMMY_23d">false</item>
-    <item type="style" name="APKTOOL_DUMMY_23e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_248">false</item>
-    <item type="style" name="APKTOOL_DUMMY_24a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_17a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_180">false</item>
+    <item type="style" name="APKTOOL_DUMMY_181">false</item>
+    <item type="style" name="APKTOOL_DUMMY_183">false</item>
+    <item type="style" name="APKTOOL_DUMMY_199">false</item>
+    <item type="style" name="APKTOOL_DUMMY_19a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_19b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_19c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1cc">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1e9">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1f0">false</item>
+    <item type="style" name="APKTOOL_DUMMY_1fa">false</item>
+    <item type="style" name="APKTOOL_DUMMY_204">false</item>
+    <item type="style" name="APKTOOL_DUMMY_20b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_20c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_20e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_219">false</item>
+    <item type="style" name="APKTOOL_DUMMY_22a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_231">false</item>
+    <item type="style" name="APKTOOL_DUMMY_23f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_240">false</item>
+    <item type="style" name="APKTOOL_DUMMY_241">false</item>
+    <item type="style" name="APKTOOL_DUMMY_242">false</item>
+    <item type="style" name="APKTOOL_DUMMY_243">false</item>
+    <item type="style" name="APKTOOL_DUMMY_244">false</item>
+    <item type="style" name="APKTOOL_DUMMY_24e">false</item>
     <item type="style" name="APKTOOL_DUMMY_250">false</item>
-    <item type="style" name="APKTOOL_DUMMY_251">false</item>
-    <item type="style" name="APKTOOL_DUMMY_252">false</item>
-    <item type="style" name="APKTOOL_DUMMY_253">false</item>
-    <item type="style" name="APKTOOL_DUMMY_255">false</item>
     <item type="style" name="APKTOOL_DUMMY_256">false</item>
-    <item type="style" name="APKTOOL_DUMMY_25a">false</item>
-    <item type="style" name="APKTOOL_DUMMY_26a">false</item>
-    <item type="style" name="APKTOOL_DUMMY_26e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_298">false</item>
-    <item type="style" name="APKTOOL_DUMMY_29a">false</item>
-    <item type="style" name="APKTOOL_DUMMY_29d">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2c8">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2cd">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2dd">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2ec">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2ed">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2ee">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2ef">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2f0">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2f1">false</item>
-    <item type="style" name="APKTOOL_DUMMY_2f5">false</item>
+    <item type="style" name="APKTOOL_DUMMY_257">false</item>
+    <item type="style" name="APKTOOL_DUMMY_258">false</item>
+    <item type="style" name="APKTOOL_DUMMY_259">false</item>
+    <item type="style" name="APKTOOL_DUMMY_25b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_25c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_260">false</item>
+    <item type="style" name="APKTOOL_DUMMY_270">false</item>
+    <item type="style" name="APKTOOL_DUMMY_274">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2a0">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2a2">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2a5">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2d0">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2d5">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2e7">false</item>
     <item type="style" name="APKTOOL_DUMMY_2f6">false</item>
-    <item type="style" name="APKTOOL_DUMMY_301">false</item>
-    <item type="style" name="APKTOOL_DUMMY_303">false</item>
-    <item type="style" name="APKTOOL_DUMMY_307">false</item>
-    <item type="style" name="APKTOOL_DUMMY_309">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2f7">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2f8">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2f9">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2fa">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2fb">false</item>
+    <item type="style" name="APKTOOL_DUMMY_2ff">false</item>
+    <item type="style" name="APKTOOL_DUMMY_300">false</item>
     <item type="style" name="APKTOOL_DUMMY_30b">false</item>
     <item type="style" name="APKTOOL_DUMMY_30d">false</item>
-    <item type="style" name="APKTOOL_DUMMY_310">false</item>
     <item type="style" name="APKTOOL_DUMMY_311">false</item>
-    <item type="style" name="APKTOOL_DUMMY_318">false</item>
-    <item type="style" name="APKTOOL_DUMMY_319">false</item>
+    <item type="style" name="APKTOOL_DUMMY_313">false</item>
+    <item type="style" name="APKTOOL_DUMMY_315">false</item>
+    <item type="style" name="APKTOOL_DUMMY_317">false</item>
     <item type="style" name="APKTOOL_DUMMY_31a">false</item>
     <item type="style" name="APKTOOL_DUMMY_31b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_31c">false</item>
-    <item type="style" name="APKTOOL_DUMMY_31d">false</item>
-    <item type="style" name="APKTOOL_DUMMY_31e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_31f">false</item>
-    <item type="style" name="APKTOOL_DUMMY_320">false</item>
-    <item type="style" name="APKTOOL_DUMMY_321">false</item>
     <item type="style" name="APKTOOL_DUMMY_322">false</item>
     <item type="style" name="APKTOOL_DUMMY_323">false</item>
     <item type="style" name="APKTOOL_DUMMY_324">false</item>
@@ -4605,6 +4615,7 @@
     <item type="style" name="APKTOOL_DUMMY_326">false</item>
     <item type="style" name="APKTOOL_DUMMY_327">false</item>
     <item type="style" name="APKTOOL_DUMMY_328">false</item>
+    <item type="style" name="APKTOOL_DUMMY_329">false</item>
     <item type="style" name="APKTOOL_DUMMY_32a">false</item>
     <item type="style" name="APKTOOL_DUMMY_32b">false</item>
     <item type="style" name="APKTOOL_DUMMY_32c">false</item>
@@ -4614,12 +4625,12 @@
     <item type="style" name="APKTOOL_DUMMY_330">false</item>
     <item type="style" name="APKTOOL_DUMMY_331">false</item>
     <item type="style" name="APKTOOL_DUMMY_332">false</item>
-    <item type="style" name="APKTOOL_DUMMY_333">false</item>
     <item type="style" name="APKTOOL_DUMMY_334">false</item>
     <item type="style" name="APKTOOL_DUMMY_335">false</item>
     <item type="style" name="APKTOOL_DUMMY_336">false</item>
     <item type="style" name="APKTOOL_DUMMY_337">false</item>
     <item type="style" name="APKTOOL_DUMMY_338">false</item>
+    <item type="style" name="APKTOOL_DUMMY_339">false</item>
     <item type="style" name="APKTOOL_DUMMY_33a">false</item>
     <item type="style" name="APKTOOL_DUMMY_33b">false</item>
     <item type="style" name="APKTOOL_DUMMY_33c">false</item>
@@ -4627,34 +4638,33 @@
     <item type="style" name="APKTOOL_DUMMY_33e">false</item>
     <item type="style" name="APKTOOL_DUMMY_33f">false</item>
     <item type="style" name="APKTOOL_DUMMY_340">false</item>
+    <item type="style" name="APKTOOL_DUMMY_341">false</item>
+    <item type="style" name="APKTOOL_DUMMY_342">false</item>
+    <item type="style" name="APKTOOL_DUMMY_344">false</item>
     <item type="style" name="APKTOOL_DUMMY_345">false</item>
-    <item type="style" name="APKTOOL_DUMMY_351">false</item>
-    <item type="style" name="APKTOOL_DUMMY_361">false</item>
-    <item type="style" name="APKTOOL_DUMMY_362">false</item>
-    <item type="style" name="APKTOOL_DUMMY_363">false</item>
-    <item type="style" name="APKTOOL_DUMMY_364">false</item>
-    <item type="style" name="APKTOOL_DUMMY_365">false</item>
-    <item type="style" name="APKTOOL_DUMMY_366">false</item>
-    <item type="style" name="APKTOOL_DUMMY_367">false</item>
-    <item type="style" name="APKTOOL_DUMMY_368">false</item>
-    <item type="style" name="APKTOOL_DUMMY_369">false</item>
-    <item type="style" name="APKTOOL_DUMMY_36a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_346">false</item>
+    <item type="style" name="APKTOOL_DUMMY_347">false</item>
+    <item type="style" name="APKTOOL_DUMMY_348">false</item>
+    <item type="style" name="APKTOOL_DUMMY_349">false</item>
+    <item type="style" name="APKTOOL_DUMMY_34a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_34f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_35b">false</item>
     <item type="style" name="APKTOOL_DUMMY_36b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_36c">false</item>
     <item type="style" name="APKTOOL_DUMMY_36d">false</item>
     <item type="style" name="APKTOOL_DUMMY_36e">false</item>
     <item type="style" name="APKTOOL_DUMMY_36f">false</item>
     <item type="style" name="APKTOOL_DUMMY_370">false</item>
     <item type="style" name="APKTOOL_DUMMY_371">false</item>
+    <item type="style" name="APKTOOL_DUMMY_372">false</item>
     <item type="style" name="APKTOOL_DUMMY_373">false</item>
     <item type="style" name="APKTOOL_DUMMY_374">false</item>
     <item type="style" name="APKTOOL_DUMMY_375">false</item>
-    <item type="style" name="APKTOOL_DUMMY_376">false</item>
     <item type="style" name="APKTOOL_DUMMY_377">false</item>
     <item type="style" name="APKTOOL_DUMMY_378">false</item>
     <item type="style" name="APKTOOL_DUMMY_379">false</item>
     <item type="style" name="APKTOOL_DUMMY_37a">false</item>
     <item type="style" name="APKTOOL_DUMMY_37b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_37c">false</item>
     <item type="style" name="APKTOOL_DUMMY_37d">false</item>
     <item type="style" name="APKTOOL_DUMMY_37e">false</item>
     <item type="style" name="APKTOOL_DUMMY_37f">false</item>
@@ -4668,64 +4678,66 @@
     <item type="style" name="APKTOOL_DUMMY_387">false</item>
     <item type="style" name="APKTOOL_DUMMY_388">false</item>
     <item type="style" name="APKTOOL_DUMMY_389">false</item>
-    <item type="style" name="APKTOOL_DUMMY_397">false</item>
-    <item type="style" name="APKTOOL_DUMMY_399">false</item>
-    <item type="style" name="APKTOOL_DUMMY_39b">false</item>
-    <item type="style" name="APKTOOL_DUMMY_39c">false</item>
-    <item type="style" name="APKTOOL_DUMMY_39f">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3a0">false</item>
+    <item type="style" name="APKTOOL_DUMMY_38a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_38b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_38c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_38d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_38e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_38f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_390">false</item>
+    <item type="style" name="APKTOOL_DUMMY_391">false</item>
+    <item type="style" name="APKTOOL_DUMMY_392">false</item>
+    <item type="style" name="APKTOOL_DUMMY_393">false</item>
     <item type="style" name="APKTOOL_DUMMY_3a1">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3a2">false</item>
     <item type="style" name="APKTOOL_DUMMY_3a3">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3a4">false</item>
     <item type="style" name="APKTOOL_DUMMY_3a5">false</item>
     <item type="style" name="APKTOOL_DUMMY_3a6">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3a9">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3aa">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3ab">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3ac">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3ad">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3ae">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3af">false</item>
     <item type="style" name="APKTOOL_DUMMY_3b0">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3c1">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3c2">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3c3">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3c4">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3c5">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3c6">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3c7">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3c8">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3c9">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3b1">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3b2">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3b3">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3b4">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3b5">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3bf">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3d0">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3d1">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3d2">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3d3">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3d4">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3d5">false</item>
     <item type="style" name="APKTOOL_DUMMY_3d6">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3d9">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3d7">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3d8">false</item>
+    <item type="style" name="APKTOOL_DUMMY_3e5">false</item>
     <item type="style" name="APKTOOL_DUMMY_3e8">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3f3">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3f5">false</item>
     <item type="style" name="APKTOOL_DUMMY_3f7">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3f9">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3fb">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3fd">false</item>
-    <item type="style" name="APKTOOL_DUMMY_3ff">false</item>
-    <item type="style" name="APKTOOL_DUMMY_400">false</item>
-    <item type="style" name="APKTOOL_DUMMY_401">false</item>
     <item type="style" name="APKTOOL_DUMMY_402">false</item>
-    <item type="style" name="APKTOOL_DUMMY_403">false</item>
     <item type="style" name="APKTOOL_DUMMY_404">false</item>
+    <item type="style" name="APKTOOL_DUMMY_406">false</item>
+    <item type="style" name="APKTOOL_DUMMY_408">false</item>
+    <item type="style" name="APKTOOL_DUMMY_40a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_40c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_40e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_40f">false</item>
     <item type="style" name="APKTOOL_DUMMY_410">false</item>
     <item type="style" name="APKTOOL_DUMMY_411">false</item>
     <item type="style" name="APKTOOL_DUMMY_412">false</item>
-    <item type="style" name="APKTOOL_DUMMY_419">false</item>
-    <item type="style" name="APKTOOL_DUMMY_41d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_413">false</item>
+    <item type="style" name="APKTOOL_DUMMY_41f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_420">false</item>
     <item type="style" name="APKTOOL_DUMMY_421">false</item>
-    <item type="style" name="APKTOOL_DUMMY_422">false</item>
-    <item type="style" name="APKTOOL_DUMMY_423">false</item>
-    <item type="style" name="APKTOOL_DUMMY_424">false</item>
-    <item type="style" name="APKTOOL_DUMMY_425">false</item>
-    <item type="style" name="APKTOOL_DUMMY_426">false</item>
-    <item type="style" name="APKTOOL_DUMMY_427">false</item>
     <item type="style" name="APKTOOL_DUMMY_428">false</item>
-    <item type="style" name="APKTOOL_DUMMY_429">false</item>
-    <item type="style" name="APKTOOL_DUMMY_42a">false</item>
     <item type="style" name="APKTOOL_DUMMY_42c">false</item>
-    <item type="style" name="APKTOOL_DUMMY_42d">false</item>
-    <item type="style" name="APKTOOL_DUMMY_42e">false</item>
-    <item type="style" name="APKTOOL_DUMMY_42f">false</item>
     <item type="style" name="APKTOOL_DUMMY_430">false</item>
     <item type="style" name="APKTOOL_DUMMY_431">false</item>
+    <item type="style" name="APKTOOL_DUMMY_432">false</item>
     <item type="style" name="APKTOOL_DUMMY_433">false</item>
     <item type="style" name="APKTOOL_DUMMY_434">false</item>
     <item type="style" name="APKTOOL_DUMMY_435">false</item>
@@ -4733,18 +4745,36 @@
     <item type="style" name="APKTOOL_DUMMY_437">false</item>
     <item type="style" name="APKTOOL_DUMMY_438">false</item>
     <item type="style" name="APKTOOL_DUMMY_439">false</item>
-    <item type="style" name="APKTOOL_DUMMY_43a">false</item>
     <item type="style" name="APKTOOL_DUMMY_43b">false</item>
     <item type="style" name="APKTOOL_DUMMY_43c">false</item>
     <item type="style" name="APKTOOL_DUMMY_43d">false</item>
     <item type="style" name="APKTOOL_DUMMY_43e">false</item>
     <item type="style" name="APKTOOL_DUMMY_43f">false</item>
     <item type="style" name="APKTOOL_DUMMY_440">false</item>
-    <item type="style" name="APKTOOL_DUMMY_441">false</item>
     <item type="style" name="APKTOOL_DUMMY_442">false</item>
     <item type="style" name="APKTOOL_DUMMY_443">false</item>
+    <item type="style" name="APKTOOL_DUMMY_444">false</item>
+    <item type="style" name="APKTOOL_DUMMY_445">false</item>
+    <item type="style" name="APKTOOL_DUMMY_446">false</item>
     <item type="style" name="APKTOOL_DUMMY_447">false</item>
     <item type="style" name="APKTOOL_DUMMY_448">false</item>
+    <item type="style" name="APKTOOL_DUMMY_449">false</item>
     <item type="style" name="APKTOOL_DUMMY_44a">false</item>
+    <item type="style" name="APKTOOL_DUMMY_44b">false</item>
     <item type="style" name="APKTOOL_DUMMY_44c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_44d">false</item>
+    <item type="style" name="APKTOOL_DUMMY_44e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_44f">false</item>
+    <item type="style" name="APKTOOL_DUMMY_450">false</item>
+    <item type="style" name="APKTOOL_DUMMY_451">false</item>
+    <item type="style" name="APKTOOL_DUMMY_452">false</item>
+    <item type="style" name="APKTOOL_DUMMY_453">false</item>
+    <item type="style" name="APKTOOL_DUMMY_454">false</item>
+    <item type="style" name="APKTOOL_DUMMY_455">false</item>
+    <item type="style" name="APKTOOL_DUMMY_456">false</item>
+    <item type="style" name="APKTOOL_DUMMY_457">false</item>
+    <item type="style" name="APKTOOL_DUMMY_45b">false</item>
+    <item type="style" name="APKTOOL_DUMMY_45c">false</item>
+    <item type="style" name="APKTOOL_DUMMY_45e">false</item>
+    <item type="style" name="APKTOOL_DUMMY_460">false</item>
 </resources>
