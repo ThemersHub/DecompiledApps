@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.libraries.material.progress.MaterialProgressBar android:id="@id/progress_bar" android:visibility="invisible" app:mtrlLinearGrowFrom="top" style="@style/Widget.GoogleLib.Progress.Linear.Indeterminate" />
+    <TextView android:textAppearance="?textAppearanceSubhead1" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/input_text_dialog_title_margin_top_bottom" android:layout_marginBottom="@dimen/input_text_dialog_title_margin_top_bottom" android:layout_marginStart="?dialogPreferredPadding" android:layout_marginEnd="?dialogPreferredPadding" />
+    <com.google.android.libraries.docs.view.ImeAwareEditText android:id="@id/edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="text" android:imeOptions="actionDone" android:layout_marginStart="?dialogPreferredPadding" android:layout_marginEnd="?dialogPreferredPadding">
+        <requestFocus />
+    </com.google.android.libraries.docs.view.ImeAwareEditText>
+    <LinearLayout android:gravity="end|bottom|center" android:orientation="horizontal" android:id="@id/button_bar_layout" android:paddingTop="@dimen/input_text_dialog_button_bar_padding_top_bottom" android:paddingBottom="@dimen/input_text_dialog_button_bar_padding_top_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" android:paddingStart="?dialogPreferredPadding" android:paddingEnd="?dialogPreferredPadding">
+        <Button android:id="@id/negative_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/cancel" style="?attr/buttonBarNegativeButtonStyle" />
+        <Button android:id="@id/positive_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/input_text_dialog_create_button" style="?attr/buttonBarPositiveButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

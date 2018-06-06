@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ViewStub android:id="@id/empty_view_stub" android:layout="@layout/empty_workspace_list" android:inflatedId="@id/empty_state_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.docs.view.emptystate.EmptyStateView android:id="@id/empty_state_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="240.0dip" android:layout_height="190.0dip" android:layout_marginBottom="20.0dip" android:scaleType="centerCrop" android:importantForAccessibility="no" app:srcCompat="@drawable/workspace_empty_state" />
+    </com.google.android.apps.docs.view.emptystate.EmptyStateView>
     <com.google.android.apps.docs.view.MaterialSwipeRefreshLayout android:id="@id/swipe_to_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <android.support.v7.widget.RecyclerView android:id="@id/recyclerview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     </com.google.android.apps.docs.view.MaterialSwipeRefreshLayout>
