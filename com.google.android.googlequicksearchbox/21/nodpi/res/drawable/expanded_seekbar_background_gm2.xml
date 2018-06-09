@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@android:id/background" android:drawable="@color/google_blue100" />
+    <item android:id="@android:id/background">
+        <scale android:drawable="@color/google_grey200" android:scaleWidth="100%" />
+    </item>
     <item android:id="@android:id/secondaryProgress">
-        <scale android:drawable="@color/google_blue500" android:scaleWidth="100%" />
+        <shape android:shape="rectangle">
+            <solid android:color="#404284f4" />
+        </shape>
     </item>
     <item android:id="@android:id/progress">
         <scale android:drawable="@color/google_blue600" android:scaleWidth="100%" />

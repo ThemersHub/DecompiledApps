@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/agenda_hub_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:id="@id/agenda_hub_container" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/AgendaHubTheme"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/loading_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:layout_gravity="center_horizontal" android:id="@id/empty_agenda" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/empty_agenda" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/empty_agenda" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/empty_agenda_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/empty_agenda_image_description" />
+        <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/empty_agenda" style="@style/ZeroStateAgendaEmptyStateText" />
+    </LinearLayout>
 </LinearLayout>
