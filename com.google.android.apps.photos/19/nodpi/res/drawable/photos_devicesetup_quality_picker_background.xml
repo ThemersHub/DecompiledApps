@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector
+<layer-list
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_selected="true" android:drawable="@drawable/photos_devicesetup_quality_picker_selected_background" />
     <item android:drawable="@drawable/photos_devicesetup_quality_picker_default_background" />
-</selector>
+    <item>
+        <selector android:enterFadeDuration="70">
+            <item android:state_selected="true" android:drawable="@drawable/photos_devicesetup_quality_picker_selected_background" />
+        </selector>
+    </item>
+</layer-list>

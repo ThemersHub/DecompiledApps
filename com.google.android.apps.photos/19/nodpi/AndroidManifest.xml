@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="28" android:installLocation="auto" package="com.google.android.apps.photos" platformBuildVersionCode="28" platformBuildVersionName="28">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="auto" package="com.google.android.apps.photos" platformBuildVersionCode="28" platformBuildVersionName="9">
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
@@ -159,6 +159,7 @@
             <meta-data android:name="gcoreclient.cast.GcoreCastRemoteDisplayLocalService" android:value="com.google.android.apps.photos.cast.impl.CastPresentationService"/>
         </service>
         <activity android:exported="false" android:launchMode="singleTop" android:name="com.google.android.apps.photos.cloudstorage.buystorage.guno.GunoBuyFlowActivity" android:resizeableActivity="true" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="false" android:name="com.google.android.apps.photos.cloudstorage.ui.backupoptions.BackupOptionsActivity" android:parentActivityName="com.google.android.apps.photos.home.HomeActivity" android:theme="@style/Theme.Photos.NoTitle"/>
         <provider android:authorities="com.google.android.apps.photos.contentprovider" android:exported="false" android:grantUriPermissions="true" android:label="@string/media_content_provider_label" android:name="com.google.android.apps.photos.contentprovider.impl.MediaContentProvider" android:syncable="false"/>
         <activity android:exported="false" android:label="@string/photos_create_label_create_menu" android:name="com.google.android.apps.photos.create.CreateActivity" android:theme="@style/Theme.Photos.Expander"/>
         <activity android:exported="false" android:name="com.google.android.apps.photos.create.movie.concept.CreateConceptMovieIntroductionActivity" android:resizeableActivity="true" android:theme="@style/Theme.Photos.NoTitle"/>
@@ -498,6 +499,7 @@
             </intent-filter>
         </service>
         <service android:exported="false" android:name="com.google.android.apps.photos.registration.ReachabilityJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.photos.restore.notification.RestoreNotificationConfirmationDialog" android:noHistory="true" android:theme="@style/Theme.Photos.Translucent.NoTitleBar.NoActionBar"/>
         <service android:exported="false" android:name="com.google.android.apps.photos.restore.service.RestoreServiceInternal"/>
         <activity android:exported="false" android:launchMode="singleTop" android:name="com.google.android.apps.photos.retentiveactions.DesktopUploaderActionActivity" android:parentActivityName="com.google.android.apps.photos.home.HomeActivity" android:screenOrientation="portrait"/>
         <activity android:exported="false" android:launchMode="singleTop" android:name="com.google.android.apps.photos.retentiveactions.RetentiveActionNotificationRedirectActivity" android:parentActivityName="com.google.android.apps.photos.home.HomeActivity"/>
