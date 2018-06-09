@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+<com.google.android.apps.gsa.shared.ui.TouchInterceptingFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.google.android.apps.gsa.staticplugins.quartz.framework.main.impl.renderer.CanvasFeaturesView android:id="@id/quartz_canvas_features_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-</FrameLayout>
+    <com.google.android.apps.gsa.staticplugins.quartz.framework.main.impl.renderer.CanvasFeaturesView android:id="@id/quartz_canvas_features_view" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" app:edgeSwipeWidth="@dimen/quartz_left_edge_swipe_max_width" app:edgeSwipeThreshold="@dimen/quartz_edge_swipe_threshold" app:edgeSwipeDismissThreshold="@dimen/quartz_left_edge_swipe_dismiss_threshold" app:edgeSwipeTranslationX="@dimen/quartz_100sdp" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/quartz_canvas_latency_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/quartz_canvas_muted_mic_plate" android:background="@android:color/black" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/quartz_muted_mic_plate_height" android:src="@drawable/quartz_canvas_v2_ic_mic_muted" android:scaleType="centerInside" android:contentDescription="@string/quartz_muted_mic_plate_description_v2" />
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:id="@id/quartz_canvas_voice_plate" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.google.android.libraries.gsa.monet.tools.childstub.ui.ChildStub android:layout_gravity="bottom" android:id="@id/quartz_canvas_closed_captions_child" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.google.android.apps.gsa.shared.ui.TouchInterceptingFrameLayout>

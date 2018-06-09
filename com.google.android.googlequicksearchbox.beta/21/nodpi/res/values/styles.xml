@@ -128,11 +128,6 @@
         <item name="android:activityCloseEnterAnimation">@anim/suw_slide_back_in</item>
         <item name="android:activityCloseExitAnimation">@anim/suw_slide_back_out</item>
     </style>
-    <style name="AppbarHeaderText" parent="@style/TextAppearance.MaterialComponents.Headline6">
-        <item name="android:textSize">16.0sp</item>
-        <item name="android:textColor">@color/eames_black</item>
-        <item name="android:fontFamily">sans-serif</item>
-    </style>
     <style name="ArcComposite">
         <item name="android:minWidth">@dimen/arc_slider_min_size</item>
         <item name="android:minHeight">@dimen/arc_slider_min_size</item>
@@ -735,6 +730,7 @@
         <item name="materialCardViewStyle">@style/Widget.GoogleMaterial.CardView.Dark</item>
         <item name="navigationViewStyle">@style/Widget.GoogleMaterial.NavigationView</item>
         <item name="openSearchBarStyle">@style/Widget.GoogleMaterial.OpenSearchBar</item>
+        <item name="openSearchViewPrefixStyle">@style/Widget.GoogleMaterial.OpenSearchView.Prefix</item>
         <item name="openSearchViewStyle">@style/Widget.GoogleMaterial.OpenSearchView</item>
         <item name="productLockupViewStyle">@style/Widget.GoogleMaterial.ProductLockupView.Dark</item>
         <item name="scrimBackground">@color/google_scrim</item>
@@ -760,7 +756,6 @@
         <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
         <item name="alertDialogTheme">@style/ThemeOverlay.GoogleMaterial.Dialog.Alert</item>
         <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
-        <item name="editTextStyle">@style/Widget.AppCompat.EditText</item>
         <item name="colorPrimaryLight">@color/google_grey900</item>
         <item name="colorSecondaryLight">@color/google_dark_blue500</item>
         <item name="colorSecondaryDark">@color/google_dark_blue900</item>
@@ -801,6 +796,7 @@
         <item name="materialCardViewStyle">@style/Widget.GoogleMaterial.CardView.Dark</item>
         <item name="navigationViewStyle">@style/Widget.GoogleMaterial.NavigationView</item>
         <item name="openSearchBarStyle">@style/Widget.GoogleMaterial.OpenSearchBar</item>
+        <item name="openSearchViewPrefixStyle">@style/Widget.GoogleMaterial.OpenSearchView.Prefix</item>
         <item name="openSearchViewStyle">@style/Widget.GoogleMaterial.OpenSearchView</item>
         <item name="productLockupViewStyle">@style/Widget.GoogleMaterial.ProductLockupView.Dark</item>
         <item name="scrimBackground">@color/google_scrim</item>
@@ -826,7 +822,6 @@
         <item name="colorPrimaryDark">@color/google_grey900</item>
         <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
         <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
-        <item name="editTextStyle">@style/Widget.AppCompat.EditText</item>
         <item name="colorPrimaryLight">@color/google_grey900</item>
         <item name="colorSecondaryLight">@color/google_dark_blue500</item>
         <item name="colorSecondaryDark">@color/google_dark_blue900</item>
@@ -869,6 +864,7 @@
         <item name="materialCardViewStyle">@style/Widget.GoogleMaterial.CardView.Light</item>
         <item name="navigationViewStyle">@style/Widget.GoogleMaterial.NavigationView</item>
         <item name="openSearchBarStyle">@style/Widget.GoogleMaterial.OpenSearchBar</item>
+        <item name="openSearchViewPrefixStyle">@style/Widget.GoogleMaterial.OpenSearchView.Prefix</item>
         <item name="openSearchViewStyle">@style/Widget.GoogleMaterial.OpenSearchView</item>
         <item name="productLockupViewStyle">@style/Widget.GoogleMaterial.ProductLockupView</item>
         <item name="scrimBackground">@color/google_scrim</item>
@@ -894,7 +890,6 @@
         <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
         <item name="alertDialogTheme">@style/ThemeOverlay.GoogleMaterial.Dialog.Alert</item>
         <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
-        <item name="editTextStyle">@style/Widget.AppCompat.EditText</item>
         <item name="colorPrimaryLight">@color/google_white</item>
         <item name="colorSecondaryLight">@color/google_blue500</item>
         <item name="colorSecondaryDark">@color/google_blue900</item>
@@ -935,6 +930,7 @@
         <item name="materialCardViewStyle">@style/Widget.GoogleMaterial.CardView.Light</item>
         <item name="navigationViewStyle">@style/Widget.GoogleMaterial.NavigationView</item>
         <item name="openSearchBarStyle">@style/Widget.GoogleMaterial.OpenSearchBar</item>
+        <item name="openSearchViewPrefixStyle">@style/Widget.GoogleMaterial.OpenSearchView.Prefix</item>
         <item name="openSearchViewStyle">@style/Widget.GoogleMaterial.OpenSearchView</item>
         <item name="productLockupViewStyle">@style/Widget.GoogleMaterial.ProductLockupView</item>
         <item name="scrimBackground">@color/google_scrim</item>
@@ -960,7 +956,6 @@
         <item name="colorPrimaryDark">@color/google_white</item>
         <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
         <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
-        <item name="editTextStyle">@style/Widget.AppCompat.EditText</item>
         <item name="colorPrimaryLight">@color/google_white</item>
         <item name="colorSecondaryLight">@color/google_blue500</item>
         <item name="colorSecondaryDark">@color/google_blue900</item>
@@ -1015,14 +1010,13 @@
         <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
         <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle1</item>
         <item name="textAppearanceSubtitle2">@style/TextAppearance.MaterialComponents.Subtitle2</item>
-        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
+        <item name="textInputStyle">@style/Widget.Design.TextInputLayout</item>
         <item name="borderlessButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
         <item name="colorPrimary">@color/design_default_color_primary</item>
         <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
         <item name="colorAccent">?colorSecondary</item>
         <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
         <item name="alertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
-        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.FilledBox</item>
         <item name="viewInflaterClass">android.support.design.theme.MaterialComponentsViewInflater</item>
         <item name="snackbarButtonStyle">?borderlessButtonStyle</item>
     </style>
@@ -1052,7 +1046,7 @@
         <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
         <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle1</item>
         <item name="textAppearanceSubtitle2">@style/TextAppearance.MaterialComponents.Subtitle2</item>
-        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
+        <item name="textInputStyle">@style/Widget.Design.TextInputLayout</item>
         <item name="buttonBarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
         <item name="borderlessButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
         <item name="colorPrimary">@color/design_default_color_primary</item>
@@ -1089,14 +1083,13 @@
         <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
         <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle1</item>
         <item name="textAppearanceSubtitle2">@style/TextAppearance.MaterialComponents.Subtitle2</item>
-        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
+        <item name="textInputStyle">@style/Widget.Design.TextInputLayout</item>
         <item name="borderlessButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
         <item name="colorPrimary">@color/design_default_color_primary</item>
         <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
         <item name="colorAccent">?colorSecondary</item>
         <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
         <item name="alertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
-        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.FilledBox</item>
         <item name="viewInflaterClass">android.support.design.theme.MaterialComponentsViewInflater</item>
         <item name="snackbarButtonStyle">?borderlessButtonStyle</item>
     </style>
@@ -1126,7 +1119,7 @@
         <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
         <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle1</item>
         <item name="textAppearanceSubtitle2">@style/TextAppearance.MaterialComponents.Subtitle2</item>
-        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
+        <item name="textInputStyle">@style/Widget.Design.TextInputLayout</item>
         <item name="buttonBarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
         <item name="borderlessButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
         <item name="colorPrimary">@color/design_default_color_primary</item>
@@ -2520,15 +2513,6 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:maxLines">1</item>
     </style>
-    <style name="EpisodeListTitle">
-        <item name="android:textAppearance">?textAppearanceHeadline6</item>
-        <item name="android:textColor">@color/google_grey900</item>
-    </style>
-    <style name="EpisodeListTitleBackwardOverride">
-        <item name="android:textSize">18.0dip</item>
-        <item name="android:textColor">@color/eames_black</item>
-        <item name="android:fontFamily">sans-serif</item>
-    </style>
     <style name="EpisodeSubtitle">
         <item name="android:textAppearance">?textAppearanceCaption</item>
         <item name="android:textColor">@color/google_grey700</item>
@@ -2579,15 +2563,6 @@
         <item name="android:scaleType">center</item>
         <item name="android:elevation">2.0dip</item>
     </style>
-    <style name="Eyes.ChatUi.Suggestion" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textSize">@dimen/chatui_font_size_regular</item>
-        <item name="android:textColor">@color/quantum_white_text</item>
-        <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/eyes_chatui_suggestion_background</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:drawablePadding">4.0dip</item>
-        <item name="android:textAlignment">gravity</item>
-    </style>
     <style name="FeedbackText">
         <item name="android:textSize">@dimen/feedback_text_size</item>
         <item name="android:textColor">@color/feedback_text_color</item>
@@ -2629,6 +2604,22 @@
         <item name="layout_flmFlowWidth">auto</item>
         <item name="layout_flmFlowHeight">auto</item>
         <item name="layout_flmLineWrap">auto</item>
+    </style>
+    <style name="FollowWorldCupPromoActionText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ff4285f4</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">roboto-regular-medium-caps</item>
+    </style>
+    <style name="FollowWorldCupPromoSnippetText" parent="@style/LineTwoText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#8a000000</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="FollowWorldCupPromoText" parent="@style/LineOneText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#de000000</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
     <style name="FooterElement.Description" parent="@style/RegularFontFamilyBase">
         <item name="android:textSize">12.0sp</item>
@@ -2939,6 +2930,13 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Headline6">
+        <item name="android:textAppearance">?textAppearanceHeadline6</item>
+    </style>
+    <style name="Headline6BackwardOverride">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
     <style name="Holo.ActionBar" parent="@android:style/Widget.Holo.ActionBar">
         <item name="android:background">@drawable/actionbar_translucent</item>
@@ -3499,6 +3497,63 @@
     <style name="MediumFontFamilyBase">
         <item name="android:textStyle">normal</item>
     </style>
+    <style name="MessageNotificationButtonText">
+        <item name="android:textSize">@dimen/message_notification_card_button_text</item>
+        <item name="android:textColor">@color/message_notification_button_text_color</item>
+        <item name="android:fontFamily">google-sans-medium</item>
+    </style>
+    <style name="MessageNotificationCardSenderNameText">
+        <item name="android:textSize">@dimen/message_notification_card_sender_name_text_size</item>
+        <item name="android:textColor">@color/message_notification_sender_name_text_color</item>
+        <item name="android:fontFamily">google-sans-medium</item>
+    </style>
+    <style name="MessageNotificationCardSmallText">
+        <item name="android:textSize">@dimen/message_notification_card_small_text_size</item>
+        <item name="android:textColor">@color/message_notification_message_text_color</item>
+        <item name="android:fontFamily">roboto</item>
+    </style>
+    <style name="MessageNotificationMessageEditText">
+        <item name="android:textSize">@dimen/message_notification_card_message_text_size</item>
+        <item name="android:textColor">@color/message_notification_message_text_color</item>
+        <item name="android:fontFamily">google-sans-medium</item>
+    </style>
+    <style name="MessageNotificationMessageHintText">
+        <item name="android:textSize">@dimen/message_notification_card_message_hint_text_size</item>
+        <item name="android:textColor">@color/quantum_googblue</item>
+        <item name="android:fontFamily">google-sans-medium</item>
+    </style>
+    <style name="MessageNotificationMessageSentToNameText">
+        <item name="android:textSize">@dimen/message_notification_card_message_sent_to_name_text_size</item>
+        <item name="android:textColor">@color/message_notification_sent_to_name_text_color</item>
+        <item name="android:fontFamily">google-sans-regular</item>
+    </style>
+    <style name="MessageNotificationMessageText">
+        <item name="android:textSize">@dimen/message_notification_card_message_text_size</item>
+        <item name="android:textColor">@color/message_notification_message_text_color</item>
+        <item name="android:fontFamily">google-sans-medium</item>
+    </style>
+    <style name="MessageNotificationMessageTextInputLayout">
+        <item name="android:textColorHint">@color/quantum_googblue</item>
+        <item name="colorAccent">@color/quantum_googblue</item>
+        <item name="colorControlNormal">@color/quantum_googblue</item>
+        <item name="colorControlActivated">@color/quantum_googblue</item>
+    </style>
+    <style name="MessageNotificationPrimaryActionButtonText">
+        <item name="android:textSize">@dimen/message_notification_card_button_text</item>
+        <item name="android:textColor">@color/message_notification_primary_action_button_text_color</item>
+        <item name="android:fontFamily">google-sans-medium</item>
+    </style>
+    <style name="MessageNotificationSenderInitialText">
+        <item name="android:textSize">@dimen/message_notification_card_sender_initial_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/quantum_googgreen</item>
+        <item name="android:fontFamily">google-sans</item>
+    </style>
+    <style name="MessageNotificationSmallMessageHintText" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/message_notification_card_small_message_hint_text_size</item>
+        <item name="android:textColor">@color/quantum_googblue</item>
+        <item name="android:fontFamily">roboto</item>
+    </style>
     <style name="MessageSenderFromOthersText">
         <item name="android:textSize">12.0sp</item>
         <item name="android:textColor">#ffa7a7a7</item>
@@ -3515,6 +3570,16 @@
         <item name="android:textColor">#ff6f6f6f</item>
         <item name="android:lineSpacingExtra">4.0sp</item>
         <item name="android:fontFamily">@string/message_snippet_font</item>
+    </style>
+    <style name="MetadataBadge" parent="@style/Quartz.Text.T14">
+        <item name="android:background">@drawable/quartz_image_search_card_label</item>
+        <item name="android:paddingTop">@dimen/quartz_image_search_label_padding_top</item>
+        <item name="android:paddingBottom">@dimen/quartz_image_search_label_padding_bottom</item>
+        <item name="android:drawablePadding">@dimen/quartz_image_search_label_drawable_padding</item>
+        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="android:paddingStart">@dimen/quartz_image_search_label_padding_start</item>
+        <item name="android:paddingEnd">@dimen/quartz_image_search_label_padding_end</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
     </style>
     <style name="MoreOrLessIcon">
         <item name="android:layout_gravity">center|right|top</item>
@@ -4039,7 +4104,7 @@
         <item name="android:background">@color/playback_panel_expanded_content</item>
     </style>
     <style name="PlaybackPanelExpandedFastForward">
-        <item name="android:src">@drawable/quantum_gm_ic_forward_30_white_36</item>
+        <item name="android:src">@drawable/forward_30_32dp</item>
         <item name="android:tint">@color/google_grey800</item>
     </style>
     <style name="PlaybackPanelExpandedFastForwardBackwardOverride">
@@ -4113,7 +4178,7 @@
     <style name="PlaybackPanelShowLink">
         <item name="android:layout_width">24.0dip</item>
         <item name="android:layout_height">24.0dip</item>
-        <item name="android:src">@drawable/quantum_gm_ic_list_black_24</item>
+        <item name="android:src">@drawable/quantum_gm_ic_info_outline_black_24</item>
         <item name="android:tint">@color/google_grey700</item>
     </style>
     <style name="PlaybackPanelShowLinkBackwardOverride">
@@ -4522,30 +4587,6 @@
         <item name="android:ellipsize">end</item>
         <item name="android:maxLines">1</item>
     </style>
-    <style name="Quartz.HomeSuggestion.Footer" parent="@style/Quartz.Text.T12">
-        <item name="android:textColor">@color/quartz_text_color_secondary</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:fontFamily">@font/google_sans_medium</item>
-        <item name="fontFamily">@font/google_sans_medium</item>
-    </style>
-    <style name="Quartz.HomeSuggestion.Title" parent="@style/Quartz.Text.T6">
-        <item name="android:ellipsize">end</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:fontFamily">@font/google_sans_medium</item>
-        <item name="fontFamily">@font/google_sans_medium</item>
-    </style>
-    <style name="Quartz.HomeSuggestion.Title.Explore" parent="@style/Quartz.HomeSuggestion.Title">
-        <item name="android:textColor">@color/quartz_home_suggestion_explore_foreground</item>
-    </style>
-    <style name="Quartz.HomeSuggestion.Title.Intent" parent="@style/Quartz.HomeSuggestion.Title">
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:maxLines">2</item>
-    </style>
-    <style name="Quartz.HomeSuggestion.Title.Query" parent="@style/Quartz.HomeSuggestion.Title">
-        <item name="android:textColor">@color/quartz_text_color_primary</item>
-        <item name="android:maxLines">3</item>
-    </style>
     <style name="Quartz.KnowledgeListItem.Title" parent="@style/Quartz.Text.T6">
         <item name="android:textColor">@color/quartz_text_color_primary</item>
     </style>
@@ -4602,6 +4643,17 @@
         <item name="android:fontFamily">@font/google_sans_medium</item>
         <item name="fontFamily">@font/google_sans_medium</item>
     </style>
+    <style name="Quartz.Slideshow.Chip" parent="@style/Widget.MaterialComponents.Chip.Action">
+        <item name="android:textAppearance">@style/Quartz.Slideshow.Chip.Text</item>
+        <item name="android:paddingLeft">@dimen/quartz_32sdp</item>
+        <item name="android:paddingTop">@dimen/quartz_16sdp</item>
+        <item name="android:paddingRight">@dimen/quartz_32sdp</item>
+        <item name="android:paddingBottom">@dimen/quartz_16sdp</item>
+        <item name="android:singleLine">true</item>
+        <item name="chipCornerRadius">@dimen/quartz_40sdp</item>
+        <item name="chipStrokeWidth">@dimen/quartz_2sdp</item>
+    </style>
+    <style name="Quartz.Slideshow.Chip.Text" parent="@style/Quartz.Text.T8" />
     <style name="Quartz.Suggestions.Suggestion.Photos" parent="@style/Widget.MaterialComponents.Chip.Action">
         <item name="android:textAppearance">@style/Quartz.Suggestions.Suggestion.Photos.Text</item>
         <item name="android:paddingTop">@dimen/quartz_16sdp</item>
@@ -4653,9 +4705,6 @@
     </style>
     <style name="Quartz.Text.Ambient.Primary" parent="@style/Quartz.Text.Ambient">
         <item name="android:textSize">@dimen/quartz_text_display_size_5</item>
-    </style>
-    <style name="Quartz.Text.Ambient.Primary.Reduced" parent="@style/Quartz.Text.Ambient.Primary">
-        <item name="android:textSize">@dimen/quartz_text_size_2</item>
     </style>
     <style name="Quartz.Text.Ambient.Secondary" parent="@style/Quartz.Text.Ambient">
         <item name="android:textSize">@dimen/quartz_48sdp</item>
@@ -4797,6 +4846,11 @@
         <item name="android:layout_width">@dimen/quartz_photo_list_slideshow_button_size</item>
         <item name="android:layout_height">@dimen/quartz_photo_list_slideshow_button_size</item>
         <item name="android:tint">@android:color/white</item>
+    </style>
+    <style name="QuartzPhotoListSlideshowText" parent="@style/Quartz.Text.T10">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:alpha">0.7</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
     </style>
     <style name="RaisedButtonTextAppearance" parent="@style/ButtonTextAppearance">
         <item name="android:textColor">@android:color/white</item>
@@ -5859,6 +5913,10 @@
     <style name="TextAppearance.GoogleMaterial.MaterialButton.Secondary" parent="@style/TextAppearance.GoogleMaterial.MaterialButton">
         <item name="android:textColor">@color/google_btn_text_color_selector_secondary</item>
     </style>
+    <style name="TextAppearance.GoogleMaterial.OpenSearchView.Prefix" parent="@style/TextAppearance.AppCompat.Small">
+        <item name="android:textSize">@dimen/google_opensearchbar_text_size</item>
+        <item name="fontFamily">@font/google_sans</item>
+    </style>
     <style name="TextAppearance.GoogleMaterial.Overline" parent="@style/TextAppearance.MaterialComponents.Overline">
         <item name="android:textSize">11.0sp</item>
         <item name="android:textStyle">bold</item>
@@ -6208,9 +6266,9 @@
     <style name="Theme.GoogleMaterial.Light.Podcast" parent="@style/Theme.GoogleMaterial.Light">
         <item name="styleCardFooterText">@style/CardFooterText</item>
         <item name="styleDonateButton">@style/DonateButton</item>
-        <item name="styleEpisodeListTitle">@style/EpisodeListTitle</item>
         <item name="styleEpisodeSubtitle">@style/EpisodeSubtitle</item>
         <item name="styleEpisodeTitle">@style/EpisodeTitle</item>
+        <item name="styleHeadline6">@style/Headline6</item>
         <item name="stylePodcastDescription">@style/PodcastDescription</item>
         <item name="stylePodcastShowSubtitle">@style/PodcastShowSubtitle</item>
         <item name="stylePodcastShowTitle">@style/PodcastShowTitle</item>
@@ -6235,9 +6293,9 @@
     <style name="Theme.GoogleMaterial.Light.Podcast.BackwardOverride" parent="@style/Theme.GoogleMaterial.Light.Podcast">
         <item name="styleCardFooterText">@style/CardFooterTextBackwardOverride</item>
         <item name="styleDonateButton">@style/DonateButtonBackwardOverride</item>
-        <item name="styleEpisodeListTitle">@style/EpisodeListTitleBackwardOverride</item>
         <item name="styleEpisodeSubtitle">@style/EpisodeSubtitleBackwardOverride</item>
         <item name="styleEpisodeTitle">@style/EpisodeTitleBackwardOverride</item>
+        <item name="styleHeadline6">@style/Headline6BackwardOverride</item>
         <item name="stylePodcastDescription">@style/PodcastDescriptionBackwardOverride</item>
         <item name="stylePodcastShowSubtitle">@style/PodcastShowSubtitleBackwardOverride</item>
         <item name="stylePodcastShowTitle">@style/PodcastShowTitleBackwardOverride</item>
@@ -6614,11 +6672,11 @@
     <style name="ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox.Dense" parent="@style/ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox">
         <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.FilledBox.Dense</item>
     </style>
-    <style name="ThemeOverlay.MaterialComponents.TextInputEditText.OutlineBox" parent="@style/ThemeOverlay.MaterialComponents.TextInputEditText">
-        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlineBox</item>
+    <style name="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox" parent="@style/ThemeOverlay.MaterialComponents.TextInputEditText">
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox</item>
     </style>
-    <style name="ThemeOverlay.MaterialComponents.TextInputEditText.OutlineBox.Dense" parent="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlineBox">
-        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlineBox.Dense</item>
+    <style name="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox.Dense" parent="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense</item>
     </style>
     <style name="ThemeOverlay.MediaRouter.Dark" parent="@style/ThemeOverlay.AppCompat.Dark">
         <item name="mediaRouteAudioTrackDrawable">@drawable/mr_vol_type_audiotrack_dark</item>
@@ -7190,6 +7248,13 @@
         <item name="android:textColorHint">@color/google_opensearchbar_hint_text_color</item>
         <item name="android:elevation">@dimen/google_opensearchbar_elevation</item>
     </style>
+    <style name="Widget.GoogleMaterial.OpenSearchView.Prefix" parent="@android:style/Widget.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.GoogleMaterial.OpenSearchView.Prefix</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingRight">16.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:paddingEnd">16.0dip</item>
+    </style>
     <style name="Widget.GoogleMaterial.ProductLockupView" parent="@android:style/Widget">
         <item name="productNameTextColor">@color/google_grey700</item>
         <item name="logoColor">standard</item>
@@ -7248,11 +7313,11 @@
     </style>
     <style name="Widget.GoogleMaterial.TextInputLayout.FilledBox" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox" />
     <style name="Widget.GoogleMaterial.TextInputLayout.FilledBox.Dense" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense" />
-    <style name="Widget.GoogleMaterial.TextInputLayout.OutlineBox" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox">
+    <style name="Widget.GoogleMaterial.TextInputLayout.OutlinedBox" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">?colorSecondaryLight</item>
         <item name="enforceMaterialTheme">true</item>
     </style>
-    <style name="Widget.GoogleMaterial.TextInputLayout.OutlineBox.Dense" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox.Dense" />
+    <style name="Widget.GoogleMaterial.TextInputLayout.OutlinedBox.Dense" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" />
     <style name="Widget.GoogleMaterial.Toolbar" parent="@style/Widget.AppCompat.Toolbar">
         <item name="titleTextAppearance">@style/TextAppearance.GoogleMaterial.Toolbar.Title</item>
         <item name="subtitleTextAppearance">@style/TextAppearance.GoogleMaterial.Toolbar.Subtitle</item>
@@ -7388,8 +7453,8 @@
         <item name="android:paddingTop">16.0dip</item>
         <item name="android:paddingBottom">16.0dip</item>
     </style>
-    <style name="Widget.MaterialComponents.TextInputEditText.OutlineBox" parent="@style/Base.Widget.MaterialComponents.TextInputEditText" />
-    <style name="Widget.MaterialComponents.TextInputEditText.OutlineBox.Dense" parent="@style/Widget.MaterialComponents.TextInputEditText.OutlineBox">
+    <style name="Widget.MaterialComponents.TextInputEditText.OutlinedBox" parent="@style/Base.Widget.MaterialComponents.TextInputEditText" />
+    <style name="Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense" parent="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox">
         <item name="android:paddingTop">12.0dip</item>
         <item name="android:paddingBottom">12.0dip</item>
     </style>
@@ -7405,12 +7470,12 @@
         <item name="android:theme">@style/ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox.Dense</item>
         <item name="boxCollapsedPaddingTop">8.0dip</item>
     </style>
-    <style name="Widget.MaterialComponents.TextInputLayout.OutlineBox" parent="@style/Base.Widget.MaterialComponents.TextInputLayout">
-        <item name="android:theme">@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlineBox</item>
+    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox" parent="@style/Base.Widget.MaterialComponents.TextInputLayout">
+        <item name="android:theme">@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox</item>
         <item name="boxCollapsedPaddingTop">0.0dip</item>
     </style>
-    <style name="Widget.MaterialComponents.TextInputLayout.OutlineBox.Dense" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox">
-        <item name="android:theme">@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlineBox.Dense</item>
+    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:theme">@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox.Dense</item>
     </style>
     <style name="Widget.MediaRouter.Light.MediaRouteButton" parent="@style/Widget.AppCompat.Light.ActionButton">
         <item name="externalRouteEnabledDrawable">@drawable/mr_button_light</item>
@@ -8081,6 +8146,19 @@
     <style name="fuse_ui_progress_bar" parent="@android:style/Widget.ProgressBar.Horizontal">
         <item name="android:progressDrawable">@drawable/gmm_intent_fuse_ui_progress_bar</item>
     </style>
+    <style name="google_podcasts_promotion_card_button" parent="@style/quantum_text_button_black">
+        <item name="android:textColor">@color/google_blue600</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:paddingRight">8.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36.0dip</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="google_podcasts_promotion_card_message">
+        <item name="android:textAppearance">?textAppearanceBody2</item>
+        <item name="android:textColor">@color/google_grey800</item>
+    </style>
     <style name="google_sans_14_20_m" parent="@style/feed">
         <item name="android:textSize">@dimen/text_size_14</item>
         <item name="android:minHeight">@dimen/line_height_20</item>
@@ -8668,7 +8746,6 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/google_blue600</item>
         <item name="android:lineSpacingExtra">2.0dip</item>
-        <item name="android:textAllCaps">true</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:letterSpacing">0.063</item>
     </style>
@@ -9218,88 +9295,6 @@
         <item name="android:textColorHint">@color/quantum_black_hint_text</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
-    <style name="search_queue_activity" parent="@style/Theme.AppCompat.Light.NoActionBar" />
-    <style name="search_queue_blank_page_message">
-        <item name="android:textSize">@dimen/search_queue_blank_page_message_text_size</item>
-        <item name="android:textStyle">italic</item>
-        <item name="android:textColor">@color/search_queue_blank_page_message</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:focusable">true</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">0.0dip</item>
-        <item name="android:layout_weight">1.0</item>
-    </style>
-    <style name="search_queue_card_header">
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:background">@android:color/transparent</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">@dimen/search_queue_header_height</item>
-    </style>
-    <style name="search_queue_card_title">
-        <item name="android:textSize">@dimen/search_queue_card_title_text_size</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/search_queue_card_title_text</item>
-        <item name="android:focusable">true</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">@dimen/search_queue_large_margin</item>
-        <item name="android:layout_marginRight">@dimen/search_queue_large_margin</item>
-        <item name="android:layout_marginStart">@dimen/search_queue_large_margin</item>
-        <item name="android:layout_marginEnd">@dimen/search_queue_large_margin</item>
-    </style>
-    <style name="search_queue_list_item_delete_button">
-        <item name="android:layout_gravity">center</item>
-        <item name="android:focusable">true</item>
-        <item name="android:layout_width">@dimen/search_queue_list_item_delete_tap_target</item>
-        <item name="android:layout_height">@dimen/search_queue_list_item_delete_tap_target</item>
-    </style>
-    <style name="search_queue_list_item_delete_icon">
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_width">@dimen/search_queue_list_item_delete_icon_size</item>
-        <item name="android:layout_height">@dimen/search_queue_list_item_delete_icon_size</item>
-        <item name="android:scaleType">center</item>
-    </style>
-    <style name="search_queue_list_item_divider">
-        <item name="android:background">@color/search_queue_list_divider_grey</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">@dimen/search_queue_list_divider_height</item>
-    </style>
-    <style name="search_queue_list_item_text" parent="@android:style/TextAppearance.Small">
-        <item name="android:textColor">@color/search_queue_completed_query</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:focusable">true</item>
-        <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">@dimen/search_queue_large_margin</item>
-        <item name="android:minHeight">@dimen/search_queue_list_item_min_height</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:layout_weight">1.0</item>
-        <item name="android:layout_marginStart">@dimen/search_queue_large_margin</item>
-    </style>
-    <style name="search_queue_toolbar" parent="@style/search_queue_toolbar_base">
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:orientation">horizontal</item>
-        <item name="android:background">@color/search_queue_toolbar_background</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">@dimen/search_queue_toolbar_height</item>
-    </style>
-    <style name="search_queue_toolbar_base" />
-    <style name="search_queue_toolbar_button" parent="@style/search_queue_toolbar_button_base">
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:layout_width">@dimen/search_queue_toolbar_button_size</item>
-        <item name="android:layout_height">@dimen/search_queue_toolbar_button_size</item>
-        <item name="android:scaleType">center</item>
-    </style>
-    <style name="search_queue_toolbar_button_base" />
-    <style name="search_queue_toolbar_title" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
     <style name="search_result_podcasts">
         <item name="android:textSize">12.0sp</item>
         <item name="android:textColor">@color/quantum_googblue500</item>
@@ -9441,6 +9436,7 @@
         <item name="scmPaddingTop">8.0dip</item>
     </style>
     <style name="small_content_generic_tray_gestalt" parent="@style/small_content_generic_tray">
+        <item name="scmGutterStartMargin">1.0dip</item>
         <item name="scmImageHeight">64.0dip</item>
         <item name="scmImageMarginTop">19.0dip</item>
         <item name="scmImageStartMargin">8.0dip</item>
