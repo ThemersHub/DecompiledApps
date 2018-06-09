@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/upload_edit_video_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/reel_edit_video_preview" />
+    <FrameLayout android:id="@id/reel_edit_ui_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_gravity="top" android:layout_width="fill_parent" android:layout_height="@dimen/reel_edit_top_bar_height" android:layout_margin="@dimen/reel_edit_top_bar_margin" layout="@layout/reel_edit_top_bar" />
+        <include android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="@dimen/reel_edit_bottom_toolbar_height" layout="@layout/reel_edit_bottom_bar" />
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/reel_edit_vod_link" />
+        <include android:layout_gravity="bottom" android:id="@id/reel_saved_stories_picker" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/reel_saved_stories_picker" />
+        <com.google.android.libraries.youtube.edit.preview.EditableVideoControllerView android:gravity="bottom" android:id="@id/editable_video_controller" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:translationY="@dimen/reel_edit_video_controller_view_translateY" />
+        <include android:layout_gravity="bottom" android:id="@id/reel_edit_choose_filter_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/reel_edit_choose_filter_height" android:translationY="@dimen/reel_edit_choose_filter_height" layout="@layout/reel_edit_choose_filter" />
+        <include android:layout_gravity="bottom" android:id="@id/audio_edit_panel" android:background="@color/reel_edit_panel_background_color" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/reel_edit_audio_panel_height" android:translationY="@dimen/reel_edit_audio_panel_translationY" layout="@layout/reel_edit_audio_panel" />
+        <include android:layout_gravity="bottom" android:id="@id/reel_edit_video_trim_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/reel_edit_video_trim_height" android:translationY="@dimen/reel_edit_video_trim_height" layout="@layout/reel_edit_video_trim" />
+    </FrameLayout>
+</FrameLayout>
